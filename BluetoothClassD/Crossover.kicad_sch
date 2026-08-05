@@ -1031,18 +1031,6 @@
 		(uuid "45164039-e3b9-4320-8b3e-d0298ab0d1fa")
 	)
 	(junction
-		(at 165.1 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4a5a375f-73aa-4824-9abd-e92b48528401")
-	)
-	(junction
-		(at 177.8 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4ea03a3b-7f2b-46cc-bb31-32fcba18b2e3")
-	)
-	(junction
 		(at 101.6 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1336,16 +1324,6 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 54.61) (xy 165.1 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "348067cd-ecc1-44e5-915e-575ef2b82625")
-	)
-	(wire
-		(pts
 			(xy 105.41 177.8) (xy 109.22 177.8)
 		)
 		(stroke
@@ -1353,16 +1331,6 @@
 			(type default)
 		)
 		(uuid "352e7229-fbf9-4b2b-81ba-9a5d09edba4a")
-	)
-	(wire
-		(pts
-			(xy 177.8 44.45) (xy 189.23 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "36468fbb-01cc-45cf-81c9-e39aa5036fd2")
 	)
 	(wire
 		(pts
@@ -1656,16 +1624,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 44.45) (xy 165.1 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "87c21802-66f8-42df-a21e-3c1e05d9ae66")
-	)
-	(wire
-		(pts
 			(xy 105.41 170.18) (xy 105.41 177.8)
 		)
 		(stroke
@@ -1713,26 +1671,6 @@
 			(type default)
 		)
 		(uuid "8f048470-67f6-4519-ae5e-c85084d92360")
-	)
-	(wire
-		(pts
-			(xy 177.8 44.45) (xy 177.8 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f979e46-a1bd-4a14-be84-95cc4462ec4c")
-	)
-	(wire
-		(pts
-			(xy 165.1 44.45) (xy 177.8 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "902c2c35-70f1-4962-8a4e-3ca984686df1")
 	)
 	(wire
 		(pts
@@ -1856,16 +1794,6 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 44.45) (xy 165.1 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2e6fc99-54f4-408c-ad5a-b029f8ef1a9d")
-	)
-	(wire
-		(pts
 			(xy 140.97 180.34) (xy 146.05 180.34)
 		)
 		(stroke
@@ -1963,16 +1891,6 @@
 			(type default)
 		)
 		(uuid "d4601d6d-b169-42fc-8f79-5313562fd840")
-	)
-	(wire
-		(pts
-			(xy 177.8 54.61) (xy 177.8 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d598a6e6-c90f-422a-acfc-536116de9ae1")
 	)
 	(wire
 		(pts
@@ -2194,6 +2112,16 @@
 		)
 		(uuid "2de74cf4-ce2a-4c76-8dd6-0063a5b646ea")
 	)
+	(label "VREF"
+		(at 151.13 44.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3930799a-4e58-4704-9112-63ccee45851f")
+	)
 	(label "XOVERPOWER"
 		(at 119.38 24.13 0)
 		(effects
@@ -2223,16 +2151,6 @@
 			(justify left bottom)
 		)
 		(uuid "b7a4a82e-77fa-4a8f-8839-2a97720273ea")
-	)
-	(label "VREF"
-		(at 189.23 44.45 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bf93dd2e-470b-4c76-8af0-9c091488f8c4")
 	)
 	(label "VREF"
 		(at 62.23 104.14 90)
@@ -2359,72 +2277,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 177.8 55.88 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "059a9272-a4aa-4b9e-aa3c-2d156f79628a")
-		(property "Reference" "#PWR095"
-			(at 177.8 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 177.8 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 177.8 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 177.8 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 177.8 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "146e51c9-c501-4004-ba71-0b0a24e79938")
-		)
-		(instances
-			(project "BluetoothClassD"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/9d063cb6-947e-4d60-91f3-9ec53470d426"
-					(reference "#PWR095")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 123.19 96.52 0)
 		(unit 1)
@@ -2489,72 +2341,6 @@
 			(project "BluetoothClassD"
 				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/9d063cb6-947e-4d60-91f3-9ec53470d426"
 					(reference "C22")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 165.1 55.88 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "097cafab-ec90-4a91-aaf9-e057987206f0")
-		(property "Reference" "#PWR097"
-			(at 165.1 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 165.1 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 165.1 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 165.1 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "616a6796-fb03-46c2-8592-9942d3db0f66")
-		)
-		(instances
-			(project "BluetoothClassD"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/9d063cb6-947e-4d60-91f3-9ec53470d426"
-					(reference "#PWR097")
 					(unit 1)
 				)
 			)
@@ -3451,73 +3237,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 154.94 44.45 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "678ce56b-1a09-4dfe-a1ca-5e01ba790c29")
-		(property "Reference" "R46"
-			(at 154.94 42.164 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100R"
-			(at 154.94 44.45 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 154.94 46.228 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 154.94 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 154.94 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "15384579-d513-4db2-afe7-098b1ffadd4e")
-		)
-		(pin "2"
-			(uuid "27a38326-eb9d-4767-9d56-5aa5b5592355")
-		)
-		(instances
-			(project "BluetoothClassD"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/9d063cb6-947e-4d60-91f3-9ec53470d426"
-					(reference "R46")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 234.95 63.5 0)
 		(unit 1)
@@ -4204,76 +3923,6 @@
 			(project "BluetoothClassD"
 				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/9d063cb6-947e-4d60-91f3-9ec53470d426"
 					(reference "C45")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 165.1 50.8 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9ca3dc40-f82d-4705-9894-11e4a1aeec7b")
-		(property "Reference" "C72"
-			(at 170.18 48.6409 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10uF"
-			(at 170.18 51.1809 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P1.50mm"
-			(at 166.0652 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 165.1 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Polarized capacitor"
-			(at 165.1 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "08f7358a-e4a4-4c73-a866-3c869520b165")
-		)
-		(pin "2"
-			(uuid "a8a11dae-f5d6-4510-8f8f-00fd929c802c")
-		)
-		(instances
-			(project "BluetoothClassD"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/9d063cb6-947e-4d60-91f3-9ec53470d426"
-					(reference "C72")
 					(unit 1)
 				)
 			)
@@ -5033,76 +4682,6 @@
 			(project "BluetoothClassD"
 				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/9d063cb6-947e-4d60-91f3-9ec53470d426"
 					(reference "C15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 177.8 50.8 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d3558091-273d-4f90-9ef5-1a376e8e3e24")
-		(property "Reference" "C44"
-			(at 181.61 49.5299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100nF"
-			(at 181.61 52.0699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
-			(at 178.7652 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 177.8 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 177.8 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8ee987a4-9359-473c-a374-f50fa3d78065")
-		)
-		(pin "2"
-			(uuid "64d0f7b6-074e-4db4-bd7c-fc877fc5391e")
-		)
-		(instances
-			(project "BluetoothClassD"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/9d063cb6-947e-4d60-91f3-9ec53470d426"
-					(reference "C44")
 					(unit 1)
 				)
 			)

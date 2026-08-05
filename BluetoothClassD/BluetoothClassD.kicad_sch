@@ -90,6 +90,12 @@
 		)
 	)
 	(junction
+		(at 54.61 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9596f789-8e97-4cb3-bbcd-b6527b6580c7")
+	)
+	(junction
 		(at 101.6 24.13)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -247,6 +253,16 @@
 	)
 	(wire
 		(pts
+			(xy 81.28 96.52) (xy 81.28 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a9426e2-3ffa-4cd6-b784-083853396df1")
+	)
+	(wire
+		(pts
 			(xy 107.95 41.91) (xy 99.06 41.91)
 		)
 		(stroke
@@ -294,6 +310,16 @@
 			(type default)
 		)
 		(uuid "b4f39ef0-e8a0-43e2-8c76-cf9115deb0be")
+	)
+	(wire
+		(pts
+			(xy 81.28 66.04) (xy 54.61 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfab8a80-2716-43c3-bad4-f0934b96edfc")
 	)
 	(wire
 		(pts
@@ -394,6 +420,16 @@
 			(type default)
 		)
 		(uuid "f97e5d7e-fc40-4a4c-9099-ffd98d3c0afb")
+	)
+	(wire
+		(pts
+			(xy 93.98 96.52) (xy 81.28 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe5b9d9b-6b7c-4307-869c-a170bd00d39b")
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
@@ -994,6 +1030,16 @@
 		(pin "LOW-AUDIO" output
 			(at 93.98 120.65 180)
 			(uuid "e3cc551a-93d2-4a39-a285-dec4af336ffa")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "AMP-POWER" input
+			(at 93.98 96.52 180)
+			(uuid "0ba5a4da-fa6b-4e35-9b6a-7616e7890eb9")
 			(effects
 				(font
 					(size 1.27 1.27)
