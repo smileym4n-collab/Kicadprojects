@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.3,
-          "height": 0.5,
-          "width": 0.5
+          "drill": 0.8,
+          "height": 1.27,
+          "width": 2.54
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.2
+          "min_clearance": 0.3
         }
       },
       "diff_pair_dimensions": [
@@ -58,16 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "courtyards_overlap|99535000|106749000|095b14af-5d0e-45d4-b1b0-3f92facb0f0b|69a6e75a-9f89-4833-bca4-8573ec062131",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|95913500|127605000|98e7794b-863b-4190-a3a4-b3e528b2e305|00000000-0000-0000-0000-000000000000",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -142,7 +133,7 @@
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
         "min_text_height": 0.5,
-        "min_text_thickness": 0.05,
+        "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.0,
         "min_via_annular_width": 0.1,
@@ -196,7 +187,6 @@
       ],
       "track_widths": [
         0.0,
-        0.4,
         1.0
       ],
       "tuning_pattern_settings": {
@@ -473,7 +463,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "BluetoothClassD.kicad_pro",
+    "filename": "MOSFETAmp.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -633,28 +623,8 @@
   },
   "sheets": [
     [
-      "bcb626db-c25e-435d-8cfd-e1479e305623",
+      "0cb824bb-09bf-44ed-90d8-4358b6c89abe",
       "Root"
-    ],
-    [
-      "3c82bad6-7de3-40db-ac45-c595c9c4a4de",
-      "ESP32"
-    ],
-    [
-      "96a03bc1-4e85-4d14-90b2-e6f1632422bd",
-      "Power"
-    ],
-    [
-      "9d063cb6-947e-4d60-91f3-9ec53470d426",
-      "Crossover"
-    ],
-    [
-      "fcc78613-031c-44a1-b9a8-8b548e5b5a17",
-      "Amp"
-    ],
-    [
-      "0af9e09c-e4bf-4b5c-99ca-ec864b44cf80",
-      "DAC"
     ]
   ],
   "text_variables": {}
