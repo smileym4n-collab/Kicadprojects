@@ -90,16 +90,16 @@
 		)
 	)
 	(junction
-		(at 101.6 25.4)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "58015b70-5a7c-4a53-bfe5-5939d2463a18")
-	)
-	(junction
 		(at 54.61 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9596f789-8e97-4cb3-bbcd-b6527b6580c7")
+	)
+	(junction
+		(at 101.6 24.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9cd55c2a-f957-47e4-bde4-0ef66cfca3dd")
 	)
 	(wire
 		(pts
@@ -200,16 +200,6 @@
 			(type default)
 		)
 		(uuid "34fe013e-5f1d-442d-94d3-fa0e112b0473")
-	)
-	(wire
-		(pts
-			(xy 101.6 13.97) (xy 101.6 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c1e6dfc-bd93-4fa1-af22-65065aedc171")
 	)
 	(wire
 		(pts
@@ -423,6 +413,16 @@
 	)
 	(wire
 		(pts
+			(xy 101.6 25.4) (xy 101.6 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5657ee7-7f45-4eaa-b060-ccc1a2c4f5fb")
+	)
+	(wire
+		(pts
 			(xy 52.07 36.83) (xy 107.95 36.83)
 		)
 		(stroke
@@ -473,7 +473,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 25.4) (xy 107.95 25.4)
+			(xy 101.6 24.13) (xy 107.95 24.13)
 		)
 		(stroke
 			(width 0)
@@ -490,6 +490,16 @@
 			(type default)
 		)
 		(uuid "f7113fdd-64c4-45e7-9bd5-157c7e945a64")
+	)
+	(wire
+		(pts
+			(xy 101.6 13.97) (xy 101.6 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f97e5d7e-fc40-4a4c-9099-ffd98d3c0afb")
 	)
 	(wire
 		(pts
@@ -759,7 +769,7 @@
 	)
 	(sheet
 		(at 167.64 85.09)
-		(size 42.545 38.1)
+		(size 58.42 41.91)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -783,7 +793,7 @@
 			)
 		)
 		(property "Sheetfile" "dac.kicad_sch"
-			(at 167.64 123.7746 0)
+			(at 167.64 127.5846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -904,7 +914,7 @@
 			)
 		)
 		(pin "5V" input
-			(at 107.95 25.4 180)
+			(at 107.95 24.13 180)
 			(uuid "4ef0017b-75f3-4410-9a62-89bca77f98fd")
 			(effects
 				(font
