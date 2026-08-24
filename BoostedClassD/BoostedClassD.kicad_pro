@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.27,
-          "width": 1.27
+          "drill": 0.0,
+          "height": 0.329115,
+          "width": 0.329115
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -69,7 +69,13 @@
           "thermal_relief_spoke_width": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -203,7 +209,10 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.4
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -230,7 +239,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -661,7 +675,7 @@
         "uuid": "61c6698c-087a-4ce7-8548-fc907c1fccfd"
       }
     ],
-    "used_designators": "SW1,R1-9,J1-5,L1-2,H1-4,#PWR1-16,C1-6,Q1,U1-5,IC1-4",
+    "used_designators": "L1-2,TP1,TH1,F1-2,U1-5,SW1,C1-27,#PWR1-38,Q1,R1-15,H1-4,J1-5,J7,J10,IC1-5",
     "variants": []
   },
   "sheets": [
@@ -671,7 +685,7 @@
     ],
     [
       "5028545b-9c5d-4ac4-b811-ff97518ff25d",
-      "ESP32"
+      "ESP32-ATTINY"
     ],
     [
       "b51f6800-4f2e-4389-95b5-28165e5e4a09",

@@ -1,0 +1,252 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "2d28c68d-56c4-4741-9a6a-addc853f62c3")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 80.01 47.625)
+		(size 42.545 31.115)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "4ba27b83-2308-490d-84d6-f80db0a3c95c")
+		(property "Sheetname" "ESP32"
+			(at 80.01 46.9134 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ESP32.kicad_sch"
+			(at 80.01 79.3246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "BCK" output
+			(at 122.555 52.07 0)
+			(uuid "d7de4c1a-f414-46ee-aef1-6276701f5ad9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DATA" output
+			(at 122.555 54.61 0)
+			(uuid "75b62867-70dd-44a1-bfbe-f6452de06ad6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FAULT" output
+			(at 122.555 57.15 0)
+			(uuid "9b1b4185-c139-433d-acf7-57f56578458c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "LRCK" output
+			(at 122.555 59.69 0)
+			(uuid "45f324c6-25bd-48f5-87df-5b57314aa3ce")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SCL" bidirectional
+			(at 122.555 66.04 0)
+			(uuid "4e949101-7902-416f-8f83-9ca5af3bd08f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SDA" bidirectional
+			(at 122.555 68.58 0)
+			(uuid "cdcc7e0c-74fe-4d39-848d-923c84171575")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SDZ" output
+			(at 122.555 71.12 0)
+			(uuid "24a943ba-80cd-4b25-89a5-495a190e0281")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "TPA3220"
+				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 153.035 46.99)
+		(size 43.18 33.02)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "943be2e2-92ad-4344-a732-c8333bc6627c")
+		(property "Sheetname" "DAC"
+			(at 153.035 46.2784 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "DAC.kicad_sch"
+			(at 153.035 80.5946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "BCK" input
+			(at 153.035 52.07 180)
+			(uuid "dfc84140-defd-4c1b-859a-12f8acd95b92")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DATA" input
+			(at 153.035 54.61 180)
+			(uuid "9179a385-a618-45d7-9d85-68da6b8d6c5b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "LRCK" input
+			(at 153.035 59.69 180)
+			(uuid "7f172095-5680-40d1-9e87-f116699327a5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "TPA3220"
+				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 215.9 46.355)
+		(size 43.815 33.655)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ed6a9e5d-2e37-4710-8314-5ad0c926fdf2")
+		(property "Sheetname" "AMP"
+			(at 215.9 45.6434 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Amp.kicad_sch"
+			(at 215.9 80.5946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "TPA3220"
+				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
