@@ -1,0 +1,2388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/tomwatson/Documents/GitHub/Kicadprojects/7377new/7377new/DiscreteClassD/DiscreteClassD.kicad_sch</source>
+    <date>2026-09-07T14:11:21</date>
+    <tool>Eeschema 10.0.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>DiscreteClassD.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/">
+      <title_block>
+        <title>24 V / 30 W mono BTL - power and output stage</title>
+        <company/>
+        <rev>PS1</rev>
+        <date/>
+        <source>PowerOutput.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="IC1">
+      <value>TLV3602DGKR</value>
+      <footprint>Package_SO:VSSOP-8_3x3mm_P0.65mm</footprint>
+      <datasheet>https://www.mouser.de/ProductDetail/Texas-Instruments/TLV3602DGKR?qs=IPgv5n7u5QZ693tOyGXgLw%3D%3D</datasheet>
+      <description>Analog Comparators 2.5-ns, dual-channel high-speed rail-to-rail comparator with push-pull outputs</description>
+      <fields>
+        <field name="Height">1.1</field>
+        <field name="Mouser Part Number">595-TLV3602DGKR</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TLV3602DGKR?qs=IPgv5n7u5QZ693tOyGXgLw%3D%3D</field>
+        <field name="Manufacturer_Name">Texas Instruments</field>
+        <field name="Manufacturer_Part_Number">TLV3602DGKR</field>
+        <field name="Footprint">Package_SO:VSSOP-8_3x3mm_P0.65mm</field>
+        <field name="Datasheet">https://www.mouser.de/ProductDetail/Texas-Instruments/TLV3602DGKR?qs=IPgv5n7u5QZ693tOyGXgLw%3D%3D</field>
+        <field name="Description">Analog Comparators 2.5-ns, dual-channel high-speed rail-to-rail comparator with push-pull outputs</field>
+      </fields>
+      <libsource lib="Custom" part="TLV3602DGKR" description="Analog Comparators 2.5-ns, dual-channel high-speed rail-to-rail comparator with push-pull outputs"/>
+      <property name="Height" value="1.1"/>
+      <property name="Mouser Part Number" value="595-TLV3602DGKR"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TLV3602DGKR?qs=IPgv5n7u5QZ693tOyGXgLw%3D%3D"/>
+      <property name="Manufacturer_Name" value="Texas Instruments"/>
+      <property name="Manufacturer_Part_Number" value="TLV3602DGKR"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="DiscreteClassD.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9ba7710b-67ea-4736-8a2a-acaea7b838ee</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="8"/>
+            <pin num="7"/>
+            <pin num="6"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>OPA1656ID</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/opa1656.pdf</datasheet>
+      <description>Dual Ultra-Low-Noise, Low-Distortion, FET-Input, Burr-Brown Audio Operational Amplifiers, SOIC-8</description>
+      <fields>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/opa1656.pdf</field>
+        <field name="Description">Dual Ultra-Low-Noise, Low-Distortion, FET-Input, Burr-Brown Audio Operational Amplifiers, SOIC-8</field>
+      </fields>
+      <libsource lib="Amplifier_Operational" part="OPA1656ID" description="Dual Ultra-Low-Noise, Low-Distortion, FET-Input, Burr-Brown Audio Operational Amplifiers, SOIC-8"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="DiscreteClassD.kicad_sch"/>
+      <property name="ki_keywords" value="dual opamp"/>
+      <property name="ki_fp_filters" value="SOIC*3.9x4.9mm*P1.27mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>54c0d1db-ee91-4b77-a675-56c7785b6ab5 2658a6b8-ae9c-47d7-bf1b-c03b43abc91b 074d42c4-177b-4049-9b86-7efb05787969</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="8"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>OPA1656ID</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/opa1656.pdf</datasheet>
+      <description>Dual Ultra-Low-Noise, Low-Distortion, FET-Input, Burr-Brown Audio Operational Amplifiers, SOIC-8</description>
+      <fields>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/opa1656.pdf</field>
+        <field name="Description">Dual Ultra-Low-Noise, Low-Distortion, FET-Input, Burr-Brown Audio Operational Amplifiers, SOIC-8</field>
+      </fields>
+      <libsource lib="Amplifier_Operational" part="OPA1656ID" description="Dual Ultra-Low-Noise, Low-Distortion, FET-Input, Burr-Brown Audio Operational Amplifiers, SOIC-8"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="DiscreteClassD.kicad_sch"/>
+      <property name="ki_keywords" value="dual opamp"/>
+      <property name="ki_fp_filters" value="SOIC*3.9x4.9mm*P1.27mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b2fa29fc-a1a6-4155-b98e-4934324c3203 c5f1938b-83ab-4d02-9443-200b1c5388ea 274e984a-feb0-47d1-9149-0e80be00a2c9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="8"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U4">
+      <value>SN74LVC1G04DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-553</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74lvc1g14.pdf</datasheet>
+      <description>Single Schmitt NOT Gate, Low-Voltage CMOS, SOT-553</description>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-553</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc1g14.pdf</field>
+        <field name="Description">Single Schmitt NOT Gate, Low-Voltage CMOS, SOT-553</field>
+      </fields>
+      <libsource lib="74xGxx" part="SN74LVC1G14DRL" description="Single Schmitt NOT Gate, Low-Voltage CMOS, SOT-553"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="DiscreteClassD.kicad_sch"/>
+      <property name="ki_keywords" value="Single Gate NOT Schmitt LVC CMOS"/>
+      <property name="ki_fp_filters" value="SOT*553*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d700d869-9383-410d-86a5-c3710930b9b1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="5"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U5">
+      <value>SN74LVC2G17DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74lvc2g14.pdf</datasheet>
+      <description>Dual schmitt inverter, VCC from 1.65 to 5.5 V, SOT-23</description>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc2g14.pdf</field>
+        <field name="Description">Dual schmitt inverter, VCC from 1.65 to 5.5 V, SOT-23</field>
+      </fields>
+      <libsource lib="74xGxx" part="SN74LVC2G14DBV" description="Dual schmitt inverter, VCC from 1.65 to 5.5 V, SOT-23"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="DiscreteClassD.kicad_sch"/>
+      <property name="ki_keywords" value="dual schmitt inverter"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6c4ee4ae-66da-4307-a0c1-82a59598528c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="2"/>
+            <pin num="6"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C1">
+      <value>100n / 25V</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Dielectric">X7R</field>
+        <field name="Function">Bootstrap HB-HS</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Dielectric" value="X7R"/>
+      <property name="Function" value="Bootstrap HB-HS"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>ae8d2fc6-6c91-4b6d-a565-02b9fbe609e4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>100n / 25V</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Dielectric">X7R</field>
+        <field name="Layout">Adjacent to U2</field>
+        <field name="Requirement">Verify effective capacitance under DC bias</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Dielectric" value="X7R"/>
+      <property name="Layout" value="Adjacent to U2"/>
+      <property name="Requirement" value="Verify effective capacitance under DC bias"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>d7c4af22-ffaa-4960-9a8e-4e6c8777eacd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>4u7 / 25V</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Dielectric">X7R</field>
+        <field name="Layout">Adjacent to U2</field>
+        <field name="Requirement">Verify effective capacitance under DC bias</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Dielectric" value="X7R"/>
+      <property name="Layout" value="Adjacent to U2"/>
+      <property name="Requirement" value="Verify effective capacitance under DC bias"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>8ce7bf81-a597-4c3a-9baa-f15f4b5aee20</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>100n / 50V</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Dielectric">X7R</field>
+        <field name="Layout">Small local +24V / MOSFET / PGND loop</field>
+        <field name="Requirement">Verify effective capacitance under DC bias</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Dielectric" value="X7R"/>
+      <property name="Layout" value="Small local +24V / MOSFET / PGND loop"/>
+      <property name="Requirement" value="Verify effective capacitance under DC bias"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>4bde86b1-79ef-4aaa-a85c-5b4585f6a0f8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>1u / 50V</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Dielectric">X7R</field>
+        <field name="Layout">Small local +24V / MOSFET / PGND loop</field>
+        <field name="Requirement">Verify effective capacitance under DC bias</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Dielectric" value="X7R"/>
+      <property name="Layout" value="Small local +24V / MOSFET / PGND loop"/>
+      <property name="Requirement" value="Verify effective capacitance under DC bias"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>b4645955-ef06-478a-bd01-657934e7f5bf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>10u / 50V</value>
+      <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <fields>
+        <field name="Dielectric">X7R</field>
+        <field name="Layout">Small local +24V / MOSFET / PGND loop</field>
+        <field name="Requirement">Verify effective capacitance under DC bias</field>
+        <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Dielectric" value="X7R"/>
+      <property name="Layout" value="Small local +24V / MOSFET / PGND loop"/>
+      <property name="Requirement" value="Verify effective capacitance under DC bias"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>14d6cb69-a501-409e-8f71-91ece673fd24</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C7">
+      <value>100n / 25V</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Dielectric">X7R</field>
+        <field name="Function">Bootstrap HB-HS</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Dielectric" value="X7R"/>
+      <property name="Function" value="Bootstrap HB-HS"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>b891e215-6999-4719-8e53-1a55c258bdbc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C8">
+      <value>100n / 25V</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Dielectric">X7R</field>
+        <field name="Layout">Adjacent to U6</field>
+        <field name="Requirement">Verify effective capacitance under DC bias</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Dielectric" value="X7R"/>
+      <property name="Layout" value="Adjacent to U6"/>
+      <property name="Requirement" value="Verify effective capacitance under DC bias"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>94ea1bf0-6e0b-4dca-8464-81f38d25a7fb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C9">
+      <value>4u7 / 25V</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Dielectric">X7R</field>
+        <field name="Layout">Adjacent to U6</field>
+        <field name="Requirement">Verify effective capacitance under DC bias</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Dielectric" value="X7R"/>
+      <property name="Layout" value="Adjacent to U6"/>
+      <property name="Requirement" value="Verify effective capacitance under DC bias"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>d7dded68-99e4-4f7d-889e-65f1219d55c5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>100n / 50V</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Dielectric">X7R</field>
+        <field name="Layout">Small local +24V / MOSFET / PGND loop</field>
+        <field name="Requirement">Verify effective capacitance under DC bias</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Dielectric" value="X7R"/>
+      <property name="Layout" value="Small local +24V / MOSFET / PGND loop"/>
+      <property name="Requirement" value="Verify effective capacitance under DC bias"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>913b6d7f-440a-405f-a06a-443ad63429cb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C11">
+      <value>1u / 50V</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Dielectric">X7R</field>
+        <field name="Layout">Small local +24V / MOSFET / PGND loop</field>
+        <field name="Requirement">Verify effective capacitance under DC bias</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Dielectric" value="X7R"/>
+      <property name="Layout" value="Small local +24V / MOSFET / PGND loop"/>
+      <property name="Requirement" value="Verify effective capacitance under DC bias"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>22085eb3-a753-4d10-8d94-1ec9ebaaff9f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C12">
+      <value>10u / 50V</value>
+      <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <fields>
+        <field name="Dielectric">X7R</field>
+        <field name="Layout">Small local +24V / MOSFET / PGND loop</field>
+        <field name="Requirement">Verify effective capacitance under DC bias</field>
+        <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Dielectric" value="X7R"/>
+      <property name="Layout" value="Small local +24V / MOSFET / PGND loop"/>
+      <property name="Requirement" value="Verify effective capacitance under DC bias"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>a6af39f2-32e8-442c-b7af-b4b9c8f9e5bb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C13">
+      <value>330p DNP</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Voltage">100V</field>
+        <field name="Dielectric">C0G</field>
+        <field name="Requirement">Tune after ringing measurement</field>
+        <field name="Population">DNP - omit from default assembly</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="100V"/>
+      <property name="Dielectric" value="C0G"/>
+      <property name="Requirement" value="Tune after ringing measurement"/>
+      <property name="Population" value="DNP - omit from default assembly"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="dnp"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>a0fe5138-f4d5-4555-84d0-64002da442d0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C14">
+      <value>330p DNP</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Voltage">100V</field>
+        <field name="Dielectric">C0G</field>
+        <field name="Requirement">Tune after ringing measurement</field>
+        <field name="Population">DNP - omit from default assembly</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="100V"/>
+      <property name="Dielectric" value="C0G"/>
+      <property name="Requirement" value="Tune after ringing measurement"/>
+      <property name="Population" value="DNP - omit from default assembly"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="dnp"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>3d09de7b-f896-4f8f-9720-1bbd5e0ee008</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C15">
+      <value>330n</value>
+      <footprint>Capacitor_SMD:C_2220_5750Metric</footprint>
+      <fields>
+        <field name="Voltage">100V</field>
+        <field name="Dielectric">Low-loss C0G / SMD film only</field>
+        <field name="Requirement">Provisional 5750 metric land pattern; exact stock/parallel realization and ripple rating to be selected</field>
+        <field name="Footprint">Capacitor_SMD:C_2220_5750Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="100V"/>
+      <property name="Dielectric" value="Low-loss C0G / SMD film only"/>
+      <property name="Requirement" value="Provisional 5750 metric land pattern; exact stock/parallel realization and ripple rating to be selected"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>f78291ff-9680-4403-aa05-f5cd4548e0cc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C16">
+      <value>100n / 100V</value>
+      <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <fields>
+        <field name="Dielectric">C0G or SMD film</field>
+        <field name="Requirement">Exact low-loss part to be selected</field>
+        <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Dielectric" value="C0G or SMD film"/>
+      <property name="Requirement" value="Exact low-loss part to be selected"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>aa3e2784-9aec-432a-8e61-229d40af1be5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C17">
+      <value>1000u / 35V FR</value>
+      <footprint>Capacitor_THT:CP_Radial_D12.5mm_P5.00mm</footprint>
+      <datasheet>https://na.industrial.panasonic.com/products/capacitors/aluminum-electrolytic-capacitors/series/83367/model/83808</datasheet>
+      <fields>
+        <field name="MPN">EEUFR1V102</field>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="Footprint">Capacitor_THT:CP_Radial_D12.5mm_P5.00mm</field>
+        <field name="Datasheet">https://na.industrial.panasonic.com/products/capacitors/aluminum-electrolytic-capacitors/series/83367/model/83808</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="MPN" value="EEUFR1V102"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>f12f9e94-060f-4547-aae5-fa5289210e26</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1">
+      <value>DNP diode</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <fields>
+        <field name="Requirement">Fast diode &gt;=30V; pulse-current rating to be selected; cathode faces driver</field>
+        <field name="Population">DNP - omit from default assembly</field>
+        <field name="Footprint">Diode_SMD:D_SOD-123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Requirement" value="Fast diode &gt;=30V; pulse-current rating to be selected; cathode faces driver"/>
+      <property name="Population" value="DNP - omit from default assembly"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="dnp"/>
+      <property name="ki_keywords" value="diode"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>e76c2642-15c2-47a8-bb5a-f8d8d5370b02</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D2">
+      <value>DNP diode</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <fields>
+        <field name="Requirement">Fast diode &gt;=30V; pulse-current rating to be selected; cathode faces driver</field>
+        <field name="Population">DNP - omit from default assembly</field>
+        <field name="Footprint">Diode_SMD:D_SOD-123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Requirement" value="Fast diode &gt;=30V; pulse-current rating to be selected; cathode faces driver"/>
+      <property name="Population" value="DNP - omit from default assembly"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="dnp"/>
+      <property name="ki_keywords" value="diode"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>10750d15-9009-415d-a0ff-9e5146875919</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D3">
+      <value>DNP diode</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <fields>
+        <field name="Requirement">Fast diode &gt;=30V; pulse-current rating to be selected; cathode faces driver</field>
+        <field name="Population">DNP - omit from default assembly</field>
+        <field name="Footprint">Diode_SMD:D_SOD-123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Requirement" value="Fast diode &gt;=30V; pulse-current rating to be selected; cathode faces driver"/>
+      <property name="Population" value="DNP - omit from default assembly"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="dnp"/>
+      <property name="ki_keywords" value="diode"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>08f6294a-fd72-4c6e-beda-60f7c02031ba</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D4">
+      <value>DNP diode</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <fields>
+        <field name="Requirement">Fast diode &gt;=30V; pulse-current rating to be selected; cathode faces driver</field>
+        <field name="Population">DNP - omit from default assembly</field>
+        <field name="Footprint">Diode_SMD:D_SOD-123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Requirement" value="Fast diode &gt;=30V; pulse-current rating to be selected; cathode faces driver"/>
+      <property name="Population" value="DNP - omit from default assembly"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="dnp"/>
+      <property name="ki_keywords" value="diode"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>1fc024a0-07c2-4d57-901b-8d7718ef444d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J14">
+      <value>24V INPUT</value>
+      <footprint>DiscreteClassD:Power_Input_2_SMD</footprint>
+      <fields>
+        <field name="Footprint">DiscreteClassD:Power_Input_2_SMD</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x02_Socket" description="Generic connector, single row, 01x02, script generated"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>e963ed61-027b-43e5-a927-4e9889ccca96</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J15">
+      <value>SPEAKER OUT</value>
+      <footprint>DiscreteClassD:Power_Input_2_SMD</footprint>
+      <fields>
+        <field name="Footprint">DiscreteClassD:Power_Input_2_SMD</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x02_Socket" description="Generic connector, single row, 01x02, script generated"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>b2efa164-e0f6-4a2f-9453-f46952c1ef64</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J16">
+      <value>12V GD INPUT</value>
+      <footprint>DiscreteClassD:Power_Input_2_SMD</footprint>
+      <fields>
+        <field name="Footprint">DiscreteClassD:Power_Input_2_SMD</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x02_Socket" description="Generic connector, single row, 01x02, script generated"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>a20c6a5f-841c-4702-85aa-d4b9fd710123</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L6">
+      <value>CSAD0660-100M</value>
+      <footprint>DiscreteClassD:CSAD0660-100M</footprint>
+      <datasheet>https://www.codaca.com/Private/pdf/CSAD0660.pdf</datasheet>
+      <fields>
+        <field name="Inductance">2 x 10uH</field>
+        <field name="Verification">Verified: Codaca CSAD0660.pdf page 1, revised 2020-07-14; windings 1-2 and 4-3</field>
+        <field name="Footprint">DiscreteClassD:CSAD0660-100M</field>
+        <field name="Datasheet">https://www.codaca.com/Private/pdf/CSAD0660.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="L_Coupled_1243" description="Coupled inductor"/>
+      <property name="Inductance" value="2 x 10uH"/>
+      <property name="Verification" value="Verified: Codaca CSAD0660.pdf page 1, revised 2020-07-14; windings 1-2 and 4-3"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic coupled"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>b8635b88-6088-41a8-97ae-ac779ddcc481</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="4"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q1">
+      <value>DMTH6016LPS</value>
+      <footprint>DiscreteClassD:DMTH6016LPS_PowerDI5060-8</footprint>
+      <datasheet>https://www.diodes.com/datasheet/download/DMTH6016LPS.pdf</datasheet>
+      <fields>
+        <field name="Footprint">DiscreteClassD:DMTH6016LPS_PowerDI5060-8</field>
+        <field name="Datasheet">https://www.diodes.com/datasheet/download/DMTH6016LPS.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DiscreteClassD" part="DMTH6016LPS" description="N-MOSFET transistor, gate/drain/source"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="transistor NMOS N-MOS N-MOSFET"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>270bbad3-1dd8-415b-bac1-e1bde6613dfe</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q2">
+      <value>DMTH6016LPS</value>
+      <footprint>DiscreteClassD:DMTH6016LPS_PowerDI5060-8</footprint>
+      <datasheet>https://www.diodes.com/datasheet/download/DMTH6016LPS.pdf</datasheet>
+      <fields>
+        <field name="Footprint">DiscreteClassD:DMTH6016LPS_PowerDI5060-8</field>
+        <field name="Datasheet">https://www.diodes.com/datasheet/download/DMTH6016LPS.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DiscreteClassD" part="DMTH6016LPS" description="N-MOSFET transistor, gate/drain/source"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="transistor NMOS N-MOS N-MOSFET"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>7c00293a-9cfd-4354-8a1f-e239ec0171b7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q3">
+      <value>DMTH6016LPS</value>
+      <footprint>DiscreteClassD:DMTH6016LPS_PowerDI5060-8</footprint>
+      <datasheet>https://www.diodes.com/datasheet/download/DMTH6016LPS.pdf</datasheet>
+      <fields>
+        <field name="Footprint">DiscreteClassD:DMTH6016LPS_PowerDI5060-8</field>
+        <field name="Datasheet">https://www.diodes.com/datasheet/download/DMTH6016LPS.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DiscreteClassD" part="DMTH6016LPS" description="N-MOSFET transistor, gate/drain/source"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="transistor NMOS N-MOS N-MOSFET"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>d8e2ea29-f145-4568-ae6d-873e78e78789</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q4">
+      <value>DMTH6016LPS</value>
+      <footprint>DiscreteClassD:DMTH6016LPS_PowerDI5060-8</footprint>
+      <datasheet>https://www.diodes.com/datasheet/download/DMTH6016LPS.pdf</datasheet>
+      <fields>
+        <field name="Footprint">DiscreteClassD:DMTH6016LPS_PowerDI5060-8</field>
+        <field name="Datasheet">https://www.diodes.com/datasheet/download/DMTH6016LPS.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DiscreteClassD" part="DMTH6016LPS" description="N-MOSFET transistor, gate/drain/source"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="transistor NMOS N-MOS N-MOSFET"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>48341ed8-1926-43e1-8ee9-5db7ba16b8d6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>10R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>4f910967-395c-45ba-b574-dac68666660d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>47k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>3166d9a2-8342-4385-b538-53c6eea647a1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>10R DNP</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Population">DNP - omit from default assembly</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Population" value="DNP - omit from default assembly"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="dnp"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>12adce0d-84dd-47cc-a1f0-f22ba5b1df2a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>10R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>7c634895-6b9c-4a15-8714-6792a3f7e4c5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>47k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>a339803b-2853-46b6-aa67-59b5a96fa8f4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>10R DNP</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Population">DNP - omit from default assembly</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Population" value="DNP - omit from default assembly"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="dnp"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>78ae90ad-52e0-43d6-8c0f-09ac7276e2e3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>10R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>a460c765-bf16-4799-897f-f94864f5fd04</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>47k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>77b24966-4486-402c-abdd-d5a97279fb61</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>10R DNP</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Population">DNP - omit from default assembly</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Population" value="DNP - omit from default assembly"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="dnp"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>9237b984-b27d-41ff-98ca-27144c2d70c5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>10R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>f49ea893-8b5a-42e2-9265-b29fe3e1032a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R11">
+      <value>47k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>f99b1da3-8c91-4ae4-89d4-b861e5d738c5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R12">
+      <value>10R DNP</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Population">DNP - omit from default assembly</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Population" value="DNP - omit from default assembly"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="dnp"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>fcec211a-d4b9-4ddf-8572-1cb987753145</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R13">
+      <value>10R DNP</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Population">DNP - omit from default assembly</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Population" value="DNP - omit from default assembly"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="dnp"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>5fcb6594-108b-402a-9d1b-7d1861c3ff87</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R14">
+      <value>10R DNP</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Population">DNP - omit from default assembly</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Population" value="DNP - omit from default assembly"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="dnp"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>2599050e-4d34-4603-bfd2-ea7f35a05f1e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R15">
+      <value>10R / 1W</value>
+      <footprint>Resistor_SMD:R_2512_6332Metric</footprint>
+      <fields>
+        <field name="Requirement">Non-inductive; verify heating at switching residual and full output</field>
+        <field name="Footprint">Resistor_SMD:R_2512_6332Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Requirement" value="Non-inductive; verify heating at switching residual and full output"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>7948d39f-42a5-4d01-a6d7-1210c2efe8e8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP1">
+      <value>SW_A</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>694a40cd-095d-48be-a6fe-aee04d68997d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>HO_A</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>e94b318d-e3f2-4896-a052-11470572edd2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP3">
+      <value>LO_A</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>ab29825a-f169-4bf6-82a7-809192e0abe1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP4">
+      <value>SW_B</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>79a1fd97-0a70-44e9-8b74-cc30856c4f30</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP5">
+      <value>HO_B</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>561316bc-fb19-4354-a381-3dd3f99258fb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP6">
+      <value>LO_B</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>cc2f3dcd-73b5-4c08-8121-1a0e5f40e7bf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP7">
+      <value>OUT_A</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>bf489aaa-1d25-436d-9069-fd70dfce848f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP8">
+      <value>OUT_B</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>8bcf5e0f-22ce-4bc8-a345-795581fa689d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP9">
+      <value>+24V</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>a71b9ee4-cc2c-44cf-a17a-d868d63569f9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP10">
+      <value>+12V_GD</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>3904558d-d0d8-4792-888d-7ce8eca2cfda</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP11">
+      <value>PGND</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>3b2692f3-dd57-4a23-b7a9-a9bf4c355bfc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>UCC27301ADRCR</value>
+      <footprint>Package_SON:VSON-10-1EP_3x3mm_P0.5mm_EP1.65x2.4mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/ucc27301a.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_SON:VSON-10-1EP_3x3mm_P0.5mm_EP1.65x2.4mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/ucc27301a.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DiscreteClassD" part="UCC27301ADRCR" description=""/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>44e7da9b-77f7-4633-bf5a-2e06bc6bbee0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="6"/>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="9"/>
+            <pin num="11"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="10"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U6">
+      <value>UCC27301ADRCR</value>
+      <footprint>Package_SON:VSON-10-1EP_3x3mm_P0.5mm_EP1.65x2.4mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/ucc27301a.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Package_SON:VSON-10-1EP_3x3mm_P0.5mm_EP1.65x2.4mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/ucc27301a.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DiscreteClassD" part="UCC27301ADRCR" description=""/>
+      <property name="Sheetname" value="Power output stage"/>
+      <property name="Sheetfile" value="PowerOutput.kicad_sch"/>
+      <sheetpath names="/Power output stage/" tstamps="/99d915ba-7acf-4db8-8201-984b0c5ab123/"/>
+      <tstamps>f230a84e-f13e-474e-9187-f02924b4dbb0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="6"/>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="9"/>
+            <pin num="11"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="10"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="74xGxx" part="SN74LVC1G14DRL">
+      <description>Single Schmitt NOT Gate, Low-Voltage CMOS, SOT-553</description>
+      <docs>https://www.ti.com/lit/ds/symlink/sn74lvc1g14.pdf</docs>
+      <footprints>
+        <fp>SOT*553*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SN74LVC1G14DRL</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-553</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc1g14.pdf</field>
+        <field name="Description">Single Schmitt NOT Gate, Low-Voltage CMOS, SOT-553</field>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="no_connect"/>
+        <pin num="2" name="" type="input"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="" type="output"/>
+        <pin num="5" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xGxx" part="SN74LVC2G14DBV">
+      <description>Dual schmitt inverter, VCC from 1.65 to 5.5 V, SOT-23</description>
+      <docs>https://www.ti.com/lit/ds/symlink/sn74lvc2g14.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SN74LVC2G14DBV</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc2g14.pdf</field>
+        <field name="Description">Dual schmitt inverter, VCC from 1.65 to 5.5 V, SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1A" type="input"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="2A" type="input"/>
+        <pin num="4" name="2Y" type="output"/>
+        <pin num="5" name="V_{CC}" type="power_in"/>
+        <pin num="6" name="1Y" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="Amplifier_Operational" part="OPA1656ID">
+      <description>Dual Ultra-Low-Noise, Low-Distortion, FET-Input, Burr-Brown Audio Operational Amplifiers, SOIC-8</description>
+      <docs>https://www.ti.com/lit/ds/symlink/opa1656.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">OPA1656ID</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/opa1656.pdf</field>
+        <field name="Description">Dual Ultra-Low-Noise, Low-Distortion, FET-Input, Burr-Brown Audio Operational Amplifiers, SOIC-8</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="output"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V-" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="" type="output"/>
+        <pin num="8" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x02_Socket">
+      <description>Generic connector, single row, 01x02, script generated</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02_Socket</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x02, script generated</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Custom" part="TLV3602DGKR">
+      <description>Analog Comparators 2.5-ns, dual-channel high-speed rail-to-rail comparator with push-pull outputs</description>
+      <docs>https://www.mouser.de/ProductDetail/Texas-Instruments/TLV3602DGKR?qs=IPgv5n7u5QZ693tOyGXgLw%3D%3D</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">TLV3602DGKR</field>
+        <field name="Footprint">SOP65P490X110-8N</field>
+        <field name="Datasheet">https://www.mouser.de/ProductDetail/Texas-Instruments/TLV3602DGKR?qs=IPgv5n7u5QZ693tOyGXgLw%3D%3D</field>
+        <field name="Description">Analog Comparators 2.5-ns, dual-channel high-speed rail-to-rail comparator with push-pull outputs</field>
+        <field name="Height">1.1</field>
+        <field name="Mouser Part Number">595-TLV3602DGKR</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TLV3602DGKR?qs=IPgv5n7u5QZ693tOyGXgLw%3D%3D</field>
+        <field name="Manufacturer_Name">Texas Instruments</field>
+        <field name="Manufacturer_Part_Number">TLV3602DGKR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN1+" type="passive"/>
+        <pin num="2" name="IN1-" type="passive"/>
+        <pin num="3" name="IN2-" type="passive"/>
+        <pin num="4" name="IN2+" type="passive"/>
+        <pin num="5" name="V-" type="passive"/>
+        <pin num="6" name="OUT2" type="passive"/>
+        <pin num="7" name="OUT1" type="passive"/>
+        <pin num="8" name="V+" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Polarized">
+      <description>Polarized capacitor</description>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Polarized</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Polarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D">
+      <description>Diode</description>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Diode</field>
+        <field name="Sim.Device">D</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="L_Coupled_1243">
+      <description>Coupled inductor</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L_Coupled_1243</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Coupled inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="DiscreteClassD" part="DMTH6016LPS">
+      <description>N-MOSFET transistor, gate/drain/source</description>
+      <docs>https://www.diodes.com/datasheet/download/DMTH6016LPS.pdf</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">DMTH6016LPS</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.diodes.com/datasheet/download/DMTH6016LPS.pdf</field>
+        <field name="Description">N-MOSFET transistor, gate/drain/source</field>
+      </fields>
+      <pins>
+        <pin num="1" name="S_(1-3)" type="passive"/>
+        <pin num="2" name="S_(1-3)" type="passive"/>
+        <pin num="3" name="S_(1-3)" type="passive"/>
+        <pin num="4" name="G" type="input"/>
+        <pin num="5" name="D_(5-8)" type="passive"/>
+        <pin num="6" name="D_(5-8)" type="passive"/>
+        <pin num="7" name="D_(5-8)" type="passive"/>
+        <pin num="8" name="D_(5-8)" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="DiscreteClassD" part="UCC27301ADRCR">
+      <docs>https://www.ti.com/lit/ds/symlink/ucc27301a.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">UCC27301ADRCR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/ucc27301a.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="NC" type="no_connect"/>
+        <pin num="3" name="HB" type="power_in"/>
+        <pin num="4" name="HO" type="output"/>
+        <pin num="5" name="HS" type="passive"/>
+        <pin num="6" name="EN" type="input"/>
+        <pin num="7" name="HI" type="input"/>
+        <pin num="8" name="LI" type="input"/>
+        <pin num="9" name="VSS" type="power_in"/>
+        <pin num="10" name="LO" type="output"/>
+        <pin num="11" name="EP" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="74xGxx">
+      <uri>${KICAD10_SYMBOL_DIR}/74xGxx.kicad_sym</uri>
+    </library>
+    <library logical="Amplifier_Operational">
+      <uri>${KICAD10_SYMBOL_DIR}/Amplifier_Operational.kicad_sym</uri>
+    </library>
+    <library logical="Connector">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Custom">
+      <uri>/Users/tomwatson/Documents/KiCad/9.0/symbols/Custom.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+    <library logical="DiscreteClassD">
+      <uri>${KIPRJMOD}/DiscreteClassD.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/Power output stage/+12V_GD" class="Default">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="J16" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="TP10" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="VDD_1" pintype="power_in"/>
+      <node ref="U6" pin="1" pinfunction="VDD_1" pintype="power_in"/>
+    </net>
+    <net code="2" name="/Power output stage/+24V" class="Default">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="C17" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="J14" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="Q1" pin="5" pinfunction="D_(5-8)_5" pintype="passive"/>
+      <node ref="Q1" pin="6" pinfunction="D_(5-8)_6" pintype="passive"/>
+      <node ref="Q1" pin="7" pinfunction="D_(5-8)_7" pintype="passive"/>
+      <node ref="Q1" pin="8" pinfunction="D_(5-8)_8" pintype="passive"/>
+      <node ref="Q3" pin="5" pinfunction="D_(5-8)_5" pintype="passive"/>
+      <node ref="Q3" pin="6" pinfunction="D_(5-8)_6" pintype="passive"/>
+      <node ref="Q3" pin="7" pinfunction="D_(5-8)_7" pintype="passive"/>
+      <node ref="Q3" pin="8" pinfunction="D_(5-8)_8" pintype="passive"/>
+      <node ref="TP9" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="3" name="/Power output stage/EN_A" class="Default">
+      <node ref="U2" pin="6" pinfunction="EN_6" pintype="input"/>
+    </net>
+    <net code="4" name="/Power output stage/EN_B" class="Default">
+      <node ref="U6" pin="6" pinfunction="EN_6" pintype="input"/>
+    </net>
+    <net code="5" name="/Power output stage/GH_A" class="Default">
+      <node ref="Q1" pin="4" pinfunction="G_4" pintype="input"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+    </net>
+    <net code="6" name="/Power output stage/GH_B" class="Default">
+      <node ref="Q3" pin="4" pinfunction="G_4" pintype="input"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="7" name="/Power output stage/GL_A" class="Default">
+      <node ref="Q2" pin="4" pinfunction="G_4" pintype="input"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+    </net>
+    <net code="8" name="/Power output stage/GL_B" class="Default">
+      <node ref="Q4" pin="4" pinfunction="G_4" pintype="input"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+    </net>
+    <net code="9" name="/Power output stage/HB_A" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="HB_3" pintype="power_in"/>
+    </net>
+    <net code="10" name="/Power output stage/HB_B" class="Default">
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="U6" pin="3" pinfunction="HB_3" pintype="power_in"/>
+    </net>
+    <net code="11" name="/Power output stage/HI_A" class="Default">
+      <node ref="U2" pin="7" pinfunction="HI_7" pintype="input"/>
+    </net>
+    <net code="12" name="/Power output stage/HI_B" class="Default">
+      <node ref="U6" pin="7" pinfunction="HI_7" pintype="input"/>
+    </net>
+    <net code="13" name="/Power output stage/HO_A" class="Default">
+      <node ref="D1" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="HO_4" pintype="output"/>
+    </net>
+    <net code="14" name="/Power output stage/HO_B" class="Default">
+      <node ref="D3" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="TP5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U6" pin="4" pinfunction="HO_4" pintype="output"/>
+    </net>
+    <net code="15" name="/Power output stage/LI_A" class="Default">
+      <node ref="U2" pin="8" pinfunction="LI_8" pintype="input"/>
+    </net>
+    <net code="16" name="/Power output stage/LI_B" class="Default">
+      <node ref="U6" pin="8" pinfunction="LI_8" pintype="input"/>
+    </net>
+    <net code="17" name="/Power output stage/LO_A" class="Default">
+      <node ref="D2" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="TP3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="10" pinfunction="LO_10" pintype="output"/>
+    </net>
+    <net code="18" name="/Power output stage/LO_B" class="Default">
+      <node ref="D4" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="TP6" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U6" pin="10" pinfunction="LO_10" pintype="output"/>
+    </net>
+    <net code="19" name="/Power output stage/OUT_A" class="Default">
+      <node ref="C15" pin="1" pintype="passive"/>
+      <node ref="J15" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="L6" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="TP7" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="20" name="/Power output stage/OUT_B" class="Default">
+      <node ref="C15" pin="2" pintype="passive"/>
+      <node ref="C16" pin="2" pintype="passive"/>
+      <node ref="J15" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="L6" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="TP8" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="21" name="/Power output stage/PGND" class="Default">
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="C14" pin="2" pintype="passive"/>
+      <node ref="C17" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="J14" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J16" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="Q2" pin="1" pinfunction="S_(1-3)_1" pintype="passive"/>
+      <node ref="Q2" pin="2" pinfunction="S_(1-3)_2" pintype="passive"/>
+      <node ref="Q2" pin="3" pinfunction="S_(1-3)_3" pintype="passive"/>
+      <node ref="Q4" pin="1" pinfunction="S_(1-3)_1" pintype="passive"/>
+      <node ref="Q4" pin="2" pinfunction="S_(1-3)_2" pintype="passive"/>
+      <node ref="Q4" pin="3" pinfunction="S_(1-3)_3" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="TP11" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="11" pinfunction="EP_11" pintype="power_in"/>
+      <node ref="U2" pin="9" pinfunction="VSS_9" pintype="power_in"/>
+      <node ref="U6" pin="11" pinfunction="EP_11" pintype="power_in"/>
+      <node ref="U6" pin="9" pinfunction="VSS_9" pintype="power_in"/>
+    </net>
+    <net code="22" name="/Power output stage/SW_A" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="L6" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="Q1" pin="1" pinfunction="S_(1-3)_1" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="S_(1-3)_2" pintype="passive"/>
+      <node ref="Q1" pin="3" pinfunction="S_(1-3)_3" pintype="passive"/>
+      <node ref="Q2" pin="5" pinfunction="D_(5-8)_5" pintype="passive"/>
+      <node ref="Q2" pin="6" pinfunction="D_(5-8)_6" pintype="passive"/>
+      <node ref="Q2" pin="7" pinfunction="D_(5-8)_7" pintype="passive"/>
+      <node ref="Q2" pin="8" pinfunction="D_(5-8)_8" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="HS_5" pintype="passive"/>
+    </net>
+    <net code="23" name="/Power output stage/SW_B" class="Default">
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="L6" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="Q3" pin="1" pinfunction="S_(1-3)_1" pintype="passive"/>
+      <node ref="Q3" pin="2" pinfunction="S_(1-3)_2" pintype="passive"/>
+      <node ref="Q3" pin="3" pinfunction="S_(1-3)_3" pintype="passive"/>
+      <node ref="Q4" pin="5" pinfunction="D_(5-8)_5" pintype="passive"/>
+      <node ref="Q4" pin="6" pinfunction="D_(5-8)_6" pintype="passive"/>
+      <node ref="Q4" pin="7" pinfunction="D_(5-8)_7" pintype="passive"/>
+      <node ref="Q4" pin="8" pinfunction="D_(5-8)_8" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="TP4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U6" pin="5" pinfunction="HS_5" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(C13-Pad1)" class="Default">
+      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+    </net>
+    <net code="25" name="Net-(C14-Pad1)" class="Default">
+      <node ref="C14" pin="1" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+    </net>
+    <net code="26" name="Net-(C16-Pad1)" class="Default">
+      <node ref="C16" pin="1" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(D1-A)" class="Default">
+      <node ref="D1" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+    </net>
+    <net code="28" name="Net-(D2-A)" class="Default">
+      <node ref="D2" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="29" name="Net-(D3-A)" class="Default">
+      <node ref="D3" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(D4-A)" class="Default">
+      <node ref="D4" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+    </net>
+    <net code="31" name="unconnected-(IC1-IN1+-Pad1)" class="Default">
+      <node ref="IC1" pin="1" pinfunction="IN1+_1" pintype="passive"/>
+    </net>
+    <net code="32" name="unconnected-(IC1-IN1--Pad2)" class="Default">
+      <node ref="IC1" pin="2" pinfunction="IN1-_2" pintype="passive"/>
+    </net>
+    <net code="33" name="unconnected-(IC1-IN2+-Pad4)" class="Default">
+      <node ref="IC1" pin="4" pinfunction="IN2+_4" pintype="passive"/>
+    </net>
+    <net code="34" name="unconnected-(IC1-IN2--Pad3)" class="Default">
+      <node ref="IC1" pin="3" pinfunction="IN2-_3" pintype="passive"/>
+    </net>
+    <net code="35" name="unconnected-(IC1-OUT1-Pad7)" class="Default">
+      <node ref="IC1" pin="7" pinfunction="OUT1_7" pintype="passive"/>
+    </net>
+    <net code="36" name="unconnected-(IC1-OUT2-Pad6)" class="Default">
+      <node ref="IC1" pin="6" pinfunction="OUT2_6" pintype="passive"/>
+    </net>
+    <net code="37" name="unconnected-(IC1-V+-Pad8)" class="Default">
+      <node ref="IC1" pin="8" pinfunction="V+_8" pintype="passive"/>
+    </net>
+    <net code="38" name="unconnected-(IC1-V--Pad5)" class="Default">
+      <node ref="IC1" pin="5" pinfunction="V-_5" pintype="passive"/>
+    </net>
+    <net code="39" name="unconnected-(U1-Pad1)" class="Default">
+      <node ref="U1" pin="1" pintype="output"/>
+    </net>
+    <net code="40" name="unconnected-(U1-Pad7)" class="Default">
+      <node ref="U1" pin="7" pintype="output"/>
+    </net>
+    <net code="41" name="unconnected-(U1A-+-Pad3)" class="Default">
+      <node ref="U1" pin="3" pinfunction="+_3" pintype="input"/>
+    </net>
+    <net code="42" name="unconnected-(U1A---Pad2)" class="Default">
+      <node ref="U1" pin="2" pinfunction="-_2" pintype="input"/>
+    </net>
+    <net code="43" name="unconnected-(U1B-+-Pad5)" class="Default">
+      <node ref="U1" pin="5" pinfunction="+_5" pintype="input"/>
+    </net>
+    <net code="44" name="unconnected-(U1B---Pad6)" class="Default">
+      <node ref="U1" pin="6" pinfunction="-_6" pintype="input"/>
+    </net>
+    <net code="45" name="unconnected-(U1C-V+-Pad8)" class="Default">
+      <node ref="U1" pin="8" pinfunction="V+_8" pintype="power_in"/>
+    </net>
+    <net code="46" name="unconnected-(U1C-V--Pad4)" class="Default">
+      <node ref="U1" pin="4" pinfunction="V-_4" pintype="power_in"/>
+    </net>
+    <net code="47" name="unconnected-(U2-NC-Pad2)" class="Default">
+      <node ref="U2" pin="2" pinfunction="NC_2" pintype="no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(U3-Pad1)" class="Default">
+      <node ref="U3" pin="1" pintype="output"/>
+    </net>
+    <net code="49" name="unconnected-(U3-Pad7)" class="Default">
+      <node ref="U3" pin="7" pintype="output"/>
+    </net>
+    <net code="50" name="unconnected-(U3A-+-Pad3)" class="Default">
+      <node ref="U3" pin="3" pinfunction="+_3" pintype="input"/>
+    </net>
+    <net code="51" name="unconnected-(U3A---Pad2)" class="Default">
+      <node ref="U3" pin="2" pinfunction="-_2" pintype="input"/>
+    </net>
+    <net code="52" name="unconnected-(U3B-+-Pad5)" class="Default">
+      <node ref="U3" pin="5" pinfunction="+_5" pintype="input"/>
+    </net>
+    <net code="53" name="unconnected-(U3B---Pad6)" class="Default">
+      <node ref="U3" pin="6" pinfunction="-_6" pintype="input"/>
+    </net>
+    <net code="54" name="unconnected-(U3C-V+-Pad8)" class="Default">
+      <node ref="U3" pin="8" pinfunction="V+_8" pintype="power_in"/>
+    </net>
+    <net code="55" name="unconnected-(U3C-V--Pad4)" class="Default">
+      <node ref="U3" pin="4" pinfunction="V-_4" pintype="power_in"/>
+    </net>
+    <net code="56" name="unconnected-(U4-GND-Pad3)" class="Default">
+      <node ref="U4" pin="3" pinfunction="GND_3" pintype="power_in"/>
+    </net>
+    <net code="57" name="unconnected-(U4-NC-Pad1)" class="Default">
+      <node ref="U4" pin="1" pinfunction="NC_1" pintype="no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(U4-Pad2)" class="Default">
+      <node ref="U4" pin="2" pintype="input"/>
+    </net>
+    <net code="59" name="unconnected-(U4-Pad4)" class="Default">
+      <node ref="U4" pin="4" pintype="output"/>
+    </net>
+    <net code="60" name="unconnected-(U4-VCC-Pad5)" class="Default">
+      <node ref="U4" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+    </net>
+    <net code="61" name="unconnected-(U5-1A-Pad1)" class="Default">
+      <node ref="U5" pin="1" pinfunction="1A_1" pintype="input"/>
+    </net>
+    <net code="62" name="unconnected-(U5-1Y-Pad6)" class="Default">
+      <node ref="U5" pin="6" pinfunction="1Y_6" pintype="output"/>
+    </net>
+    <net code="63" name="unconnected-(U5-2A-Pad3)" class="Default">
+      <node ref="U5" pin="3" pinfunction="2A_3" pintype="input"/>
+    </net>
+    <net code="64" name="unconnected-(U5-2Y-Pad4)" class="Default">
+      <node ref="U5" pin="4" pinfunction="2Y_4" pintype="output"/>
+    </net>
+    <net code="65" name="unconnected-(U5-GND-Pad2)" class="Default">
+      <node ref="U5" pin="2" pinfunction="GND_2" pintype="power_in"/>
+    </net>
+    <net code="66" name="unconnected-(U5-V_{CC}-Pad5)" class="Default">
+      <node ref="U5" pin="5" pinfunction="V_{CC}_5" pintype="power_in"/>
+    </net>
+    <net code="67" name="unconnected-(U6-NC-Pad2)" class="Default">
+      <node ref="U6" pin="2" pinfunction="NC_2" pintype="no_connect"/>
+    </net>
+  </nets>
+</export>

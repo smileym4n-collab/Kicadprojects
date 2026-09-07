@@ -1,0 +1,1624 @@
+UCC27301A 120V, 3.7A/4.5A Half-Bridge Driver with 8V UVLO, Interlock and Enable
+1 Features
+• Drives two N-channel MOSFETs in half-bridge 
+configuration
+• –40°C to +150°C junction temperature range
+• 120V abs max voltage on HB pin
+• 3.7A source, 4.5A sink output currents
+• 8V to 17V VDD operating range (20V abs max) 
+with UVLO
+• –(28–VDD)V abs max negative transient tolerance 
+on HS pin (<100ns pulse)
+• –10V to +20V abs max input pins tolerance, 
+independent of supply voltage range (TTL 
+compatible)
+• Switching parameters:
+– 20ns typical propagation delay times
+– 7.2ns rise and 5.5ns fall time with 1000pF load
+– 4ns typical delay matching
+• Integrated bootstrap diode
+• Input interlock
+• Enable/disable functionality with low current 
+consumption (3μA typical) when disabled (DRC 
+package only)
+2 Applications
+• Solar power optimizers and micro inverters
+• Telecom and merchant power supplies
+• Online and offline UPS
+• Energy storage systems
+• Battery test equipment
+HI
+LI
+EN
+VDD
+HB
+CONTROL
+VSS
+DRIVE 
+LO
+HO
+HS
+LO
+CBOOT
+PWM 
+CONTROLLER
+12 V
+48V
+DRC 
+Package only
+DRIVE 
+HI SECONDARY
+SIDE
+CIRCUIT
+ISOLATION AND 
+FEEDBACK
+Typical Application Diagram
+3 Description
+The UCC27301A is a robust gate driver designed 
+to drive two N-channel MOSFETs in a half-bridge 
+or synchronous buck configuration with an absolute 
+maximum bootstrap voltage of 120V. Its 3.7A peak 
+source and 4.5A peak sink current capability allows 
+the UCC27301A to drive large power MOSFETs 
+with minimized switching losses during the transition 
+through the Miller Plateau. The switching node 
+(HS pin) can handle negative transient voltage, 
+which allows the high-side channel to be protected 
+from inherent negative voltages caused by parasitic 
+inductance and stray capacitance.
+The inputs are independent of supply voltage and are 
+able to withstand -10V and +20V absolute maximum 
+ratings. The low-side and high-side gate drivers are 
+matched to 4ns between the turn on and turn off of 
+each other and are controlled throught the LI and HI 
+input pins respectively. However, the input interlock 
+logic will turn both driver outputs low whenever both LI 
+and HI inputs are high at the same time. An on-chip 
+120V rated bootstrap diode eliminates the need to 
+add discrete bootstrap diodes. Undervoltage lockout 
+(UVLO) is provided for both the high-side and the 
+low-side drivers which provides symmetric turn on and 
+turn off behavior and forces the outputs low if the 
+drive voltage is below the specified threshold.
+Package Information
+PART NUMBER PACKAGE(1) ENABLE 
+PIN
+BODY SIZE 
+(NOM)
+UCC27301A-Q1
+DDA (PowerPAD™ 
+SOIC, 8) No 4.9mm × 
+3.9mm
+DRC (VSON, 10) Yes 3mm × 3mm
+D (SOIC, 8) No 4.9mm × 
+3.9mm
+(1) For all available packages, see Section 12.
+UCC27301A
+SLUSEY5 – JULY 2024
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications, 
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+Table of Contents
+1 Features............................................................................1
+2 Applications.....................................................................1
+3 Description.......................................................................1
+4 Pin Configuration and Functions...................................3
+5 Specifications.................................................................. 5
+5.1 Absolute Maximum Ratings........................................ 5
+5.2 ESD Ratings............................................................... 5
+5.3 Recommended Operating Conditions.........................5
+5.4 Thermal Information....................................................5
+5.5 Electrical Characteristics.............................................6
+5.6 Switching Characteristics............................................7
+5.7 Timing Diagrams ........................................................8
+5.8 Typical Characteristics................................................9
+6 Detailed Description......................................................12
+6.1 Overview...................................................................12
+6.2 Functional Block Diagram.........................................13
+6.3 Feature Description...................................................13
+6.4 Device Functional Modes..........................................15
+7 Application and Implementation..................................17
+7.1 Application Information............................................. 17
+7.2 Typical Application.................................................... 17
+8 Power Supply Recommendations................................21
+9 Layout.............................................................................21
+9.1 Layout Guidelines..................................................... 21
+9.2 Layout Example........................................................ 22
+9.3 Thermal Considerations............................................23
+10 Device and Documentation Support..........................24
+10.1 Device Support....................................................... 24
+10.2 Documentation Support.......................................... 24
+10.3 Receiving Notification of Documentation Updates..24
+10.4 Support Resources................................................. 24
+10.5 Trademarks.............................................................24
+10.6 Electrostatic Discharge Caution..............................24
+10.7 Glossary..................................................................24
+11 Revision History.......................................................... 24
+12 Mechanical, Packaging, and Orderable 
+Information.................................................................... 25
+UCC27301A
+SLUSEY5 – JULY 2024
+ www.ti.com
+2 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: UCC27301A
+4 Pin Configuration and Functions
+1VDD 8 LO
+2HB 7 VSS
+3HO 6 LI
+4HS 5 HI
+Not to scale
+Figure 4-1. D Package 8-Pin SOIC Top View 
+1VDD 8 LO
+2HB 7 VSS
+3HO 6 LI
+4HS 5 HI
+Not to scale
+Figure 4-2. D Package 8-Pin SOIC Top View 
+1VDD 10 LO
+2NC 9 VSS
+3HB 8 LI
+4HO 7 HI
+5HS 6 EN
+Not to scale
+ThermalPad
+Figure 4-3. DRC Package 10-Pin SON Top View 
+Table 4-1. Pin Functions
+PIN
+TYPE(3) DESCRIPTION
+NAME DDA/D DRC
+EN N/A 6 I
+Enable input. When this pin is pulled high, it will enable the driver. If left floating or 
+pulled low, it will disable the driver. A filter capacitor, typically 1-10nF, is recommended 
+to be placed from EN to VSS to increase noise immunity in sensitive applications.
+HB 2 3 P
+High-side bootstrap supply. The bootstrap diode is on-chip but the external bootstrap 
+capacitor is required. Connect positive side of the bootstrap capacitor to this pin. Typical 
+range of HB bypass capacitor is 0.022µF to 0.1µF. The capacitor value is dependant on 
+the gate charge of the high-side MOSFET and must also be selected based on speed 
+and ripple criteria.
+HI 5 7 I High-side input.(1)
+HO 3 4 O High-side output. Connect to the gate of the high-side power MOSFET.
+HS 4 5 P High-side source connection. Connect to source of high-side power MOSFET. Connect 
+the negative side of bootstrap capacitor to this pin.
+LI 6 8 I Low-side input.(1)
+LO 8 10 O Low-side output. Connect to the gate of the low-side power MOSFET.
+VDD 1 1 P Positive supply to the lower-gate driver. Decouple this pin to VSS (GND). Typical 
+decoupling capacitor range is 0.22µF to 4.7µF (see (2)).
+VSS 7 9 G Negative supply terminal for the device that is generally grounded.
+Thermal 
+pad(4) Pad — Connect to a large thermal mass trace and GND plane to dramatically improve thermal 
+performance.
+(1) HI, LI, and EN inputs are assumed to connect to a low impedance source signal. The source output impedance is assumed less than 
+100Ω. If the source impedance is greater than 100Ω, add a bypassing capacitor, each, between HI to VSS, LI to VSS, and EN to 
+VSS. The added capacitor value depends on the noise levels presented on the pins, typically from 1nF to 10nF should be effective to 
+eliminate the possible noise effect. When noise is present on two pins, HI or LI, the effect is to cause HO and LO malfunctions to have 
+wrong logic outputs.
+(2) For cold temperature applications TI recommends the upper capacitance range. Follow the Layout Guidelines for PCB layout.
+(3) G = Ground, I = Input, O = Output, and P = Power.
+www.ti.com
+UCC27301A
+SLUSEY5 – JULY 2024
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 3
+Product Folder Links: UCC27301A
+(4) Pin VSS and the exposed thermal pad are internally connected on the DRC package only. On the DDA package, the thermal pad is not 
+directly connected to any leads of the package; however, it is electrically and thermally connected to the substrate which is the ground 
+of the device.
+UCC27301A
+SLUSEY5 – JULY 2024
+ www.ti.com
+4 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: UCC27301A
+5 Specifications
+5.1 Absolute Maximum Ratings
+Over operating free-air temperature range and all voltages are with respect to Vss (unless otherwise noted).(1)
+MIN MAX UNIT
+VDD Supply voltage –0.3 20 V
+VHI, VLI Input voltages on HI and LI -10 20 V
+VEN Input voltages on EN (DRC package only) Input voltages on EN -10 20 V
+VLO Output voltage on LO
+DC –0.3 VDD + 0.3
+V
+Repetitive pulse < 100 ns(2) –2 VDD + 0.3
+VHO Output voltage on HO
+DC VHS – 0.3 VHB + 0.3
+V
+Repetitive pulse < 100 ns(2) VHS – 2 VHB + 0.3
+VHS Voltage on HS
+DC –1 120
+V
+Repetitive pulse < 100 ns(2) –(28 – VDD) 120
+VHB Voltage on HB –0.3 120 V
+Voltage on HB-HS –0.3 20 V
+TJ Operating junction temperature –40 150 °C
+Tstg Storage temperature –65 150 °C
+(1) Operation outside the Absolute Maximum Ratings may cause permanent device damage. Absolute Maximum Ratings do not imply 
+functional operation of the device at these or any other conditions beyond those listed under Recommended Operating Conditions. 
+If used outside the Recommended Operating Conditions but within the Absolute Maximum Ratings, the device may not be fully 
+functional, and this may affect device reliability, functionality, performance, and shorten the device lifetime.
+(2) Values are verified by characterization and are not production tested.
+5.2 ESD Ratings
+VALUE UNIT
+V(ESD) Electrostatic discharge
+Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001(1) ±2000
+VCharged-device model (CDM), per JEDEC specification 
+JESD22-C101(2) ±1500
+(1)  JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+(2) JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process.
+5.3 Recommended Operating Conditions
+Over operating free-air temperature range and all voltages are with respect to Vss (unless otherwise noted).
+MIN NOM MAX UNIT
+VDD Supply voltage 8 12 17 V
+VHS Voltage on HS –1 105 V
+VHB Voltage on HB VHS + 8, 
+VDD – 1
+VHS + 17,
+115 V
+SRHS Voltage slew rate on HS 50 V/ns
+TJ Operating junction temperature –40 150 °C
+5.4 Thermal Information
+THERMAL METRIC(1)
+UCC27301A
+UNITD (SOIC) DRC (VSON)
+8 Pins 10 Pins
+RθJA Junction-to-ambient thermal resistance 112.5 51.9 °C/W
+RθJC(top) Junction-to-case (top) thermal resistance 52.1 58.3 °C/W
+RθJB Junction-to-board thermal resistance 59.6 24.6 °C/W
+ψJT Junction-to-top characterization parameter 7 1.7 °C/W
+www.ti.com
+UCC27301A
+SLUSEY5 – JULY 2024
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 5
+Product Folder Links: UCC27301A
+5.4 Thermal Information (continued)
+THERMAL METRIC(1)
+UCC27301A
+UNITD (SOIC) DRC (VSON)
+8 Pins 10 Pins
+ψJB Junction-to-board characterization parameter 58.7 24.6 °C/W
+RθJC(bot) Junction-to-case (bottom) thermal resistance - 9.2 °C/W
+(1) For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application 
+report, SPRA953.
+5.5 Electrical Characteristics
+VDD = VHB =12 V, VHS = VSS = 0 V, No load on LO or HO, TA = TJ = –40°C to +150°C (unless otherwise noted).
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+SUPPLY CURRENTS 
+IDD VDD quiescent current VLI = VHI = 0 V, VEN = 3V 0.11 0.19 mA
+IDDO VDD operating current f = 500 kHz, CLOAD = 0, VEN = 3V 1.4 3 mA
+IHB Boot voltage quiescent current VLI = VHI = 0 V, VEN = 3V 0.065 0.12 mA
+IHBO Boot voltage operating current f = 500 kHz, CLOAD = 0, VEN = 3V 1.3 3 mA
+IHBS HB to VSS quiescent current VHS = VHB = 105 V, VEN = 3V 0.0005 1 μA
+IHBSO HB to VSS operating current f = 500 kHz, CLOAD = 0, VEN = 3V 0.03 1 mA
+IDD_DIS
+Driver Current when EN pin is pulled low 
+(Disabled) DRC package only, VEN = 0 3 μA
+INPUT 
+VHIT_HI Input voltage high threshold 1.7 2.3 2.55 V
+VHIT_LI Input voltage high threshold 1.7 2.3 2.55 V
+VLIT_HI Input voltage low threshold 1.2 1.6 1.9 V
+VLIT_LI Input voltage low threshold 1.2 1.6 1.9 V
+VIHYS  HI Input voltage Hysteresis 0.7 V
+VIHYS  LI Input voltage Hysteresis 0.7 V
+RIN_HI Input pulldown resistance VIN = 3V 68 kΩ
+RIN_LI Input pulldown resistance VIN = 3V 68 kΩ
+ENABLE 
+VEN
+Voltage threshold on EN pin to enable the 
+driver DRC package only 1.7 2.3 2.55 V
+VDIS
+Voltage threshold on EN pin to disable the 
+driver DRC package only 1.2 1.6 1.9 V
+VENHYS Enable pin Hysteresis DRC package only 0.7 V
+REN EN pin internal pull-down resistance DRC package only, VEN = 3V 80 kΩ
+TEN
+Time to enable the driver once the EN pin 
+is pulled high DRC package only, VEN = 3V 10 μs
+TDIS
+Time to disable the driver once the EN pin 
+is pulled low DRC package only, VEN = 0V 0.1 μs
+UNDERVOLTAGE PROTECTION (UVLO) 
+VDDR VDD rising threshold 6.2 7 7.8 V
+VDDHYS VDD threshold hysteresis 0.5 V
+VHBR VHB rising threshold 5.6 6.7 7.9 V
+VHBHYS VHB threshold hysteresis 1.1 V
+BOOTSTRAP DIODE
+VF Low-current forward voltage I VDD - HB = 100 μA 0.65 0.85 V
+VFI High-current forward voltage I VDD - HB = 100 mA 0.9 1.05 V
+RD Dynamic resistance, ΔVF/ΔI I VDD - HB = 160 mA and 180 mA 0.3 0.55 0.85 Ω
+LO GATE DRIVER
+VLOL Low level output voltage ILO = 100 mA 0.07 0.19 V
+UCC27301A
+SLUSEY5 – JULY 2024
+ www.ti.com
+6 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: UCC27301A
+5.5 Electrical Characteristics (continued)
+VDD = VHB =12 V, VHS = VSS = 0 V, No load on LO or HO, TA = TJ = –40°C to +150°C (unless otherwise noted).
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+VLOH High level output voltage ILO = -100 mA, VLOH = VDD – VLO 0.11 0.29 V
+Peak pullup current(1) VLO = 0 V 3.7 A
+Peak pulldown current(1) VLO = 12 V 4.5 A
+HO GATE DRIVER 
+VHOL Low level output voltage IHO = 100 mA 0.07 0.19 V
+VHOH High level output voltage IHO = –100 mA, VHOH = VHB- VHO 0.11 0.29 V
+Peak pullup current(1) VHO = 0 V 3.7 A
+Peak pulldown current(1) VHO = 12 V 4.5 A
+(1) Parameter not tested in production.
+5.6 Switching Characteristics
+VDD = VHB = 12 V, VHS = VSS = 0 V, No load on LO or HO, TA = TJ = –40°C to +150°C (unless otherwise noted).
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+PROPAGATION DELAYS
+tDLFF VLI falling to VLO falling CLOAD = 0 pF, from VLIT of LI to 90% of LO 
+falling 10 19 30 ns
+tDHFF VHI falling to VHO falling CLOAD = 0 pF,  from VLIT of HI to 90% of 
+HO falling 10 19 30 ns
+tDLRR VLI rising to VLO rising CLOAD = 0 pF, from VHIT of LI to 10% of LO 
+rising 10 20 42 ns
+tDHRR VHI rising to VHO rising CLOAD = 0 pF, CLOAD = 0 pF, from VHIT of 
+HI to 10% of HO rising 10 20 42 ns
+DELAY MATCHING
+tMON LI ON, HI OFF TJ = 25°C, from 10% of LO rising to 90% 
+of HO falling 4 9.5 ns
+tMON LI ON, HI OFF TJ = -40°C to 150°C, from 10% of LO 
+rising to 90% of HO falling 4 17 ns
+tMOFF LI OFF, HI ON TJ = 25°C, from 90% of LO falling to 10% 
+of HO rising 4 9.5 ns
+tMOFF LI OFF, HI ON TJ = -40°C to 150°C, from 90% of LO 
+falling to 10% of HO rising 4 17 ns
+OUTPUT RISE AND FALL TIME
+tR_LO LO rise time CLOAD = 1000 pF, from 10% to 90% 7.2 ns
+tR_HO HO rise time CLOAD = 1000 pF, from 10% to 90% 7.2 ns
+tF_LO LO fall time CLOAD = 1000 pF, from 90% to 10% 5.5 ns
+tF_HO HO fall time CLOAD = 1000 pF, from 90% to 10% 5.5 ns
+tR_LO_p1 LO rise time (3 V to 9 V) CLOAD = 0.1 μF, (3V to 9V) 0.27 0.6 μs
+tR_HO_p1 HO rise time (3 V to 9 V) CLOAD = 0.1 μF, (3V to 9V) 0.27 0.6 μs
+tF_LO_p1 LO fall time (9 V to 3 V) CLOAD = 0.1 μF, (9V to 3V) 0.16 0.4 μs
+tF_HO_p1 HO fall time (9 V to 3 V) CLOAD = 0.1 μF, (9V to 3V) 0.16 0.4 μs
+MISCELLANEOUS
+tIN_PW
+Minimum input pulse width that changes 
+the output  LO 40 ns
+tIN_PW
+Minimum input pulse width that changes 
+the output  HO 40 ns
+tOFF_BSD Bootstrap diode turnoff time(1) (2) IF = 20 mA, IREV = 0.5 A(3) 20 ns
+(1) Parameter not tested in production.
+(2) Typical values for TA = 25°C.
+(3) IF: Forward current applied to bootstrap diode, IREV: Reverse current applied to bootstrap diode.
+www.ti.com
+UCC27301A
+SLUSEY5 – JULY 2024
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 7
+Product Folder Links: UCC27301A
+5.7 Timing Diagrams 
+Input
+(HI, LI)
+Output
+(HO, LO)
+TDLRR, 
+TDHRR
+TDLFF, 
+TDHFF
+HI
+LO
+HO
+LI
+TMON TMOFF
+Time (s)Time (s)
+Voltage (V)
+Voltage (V)
+VHIT VLIT
+0.1×VDD/HB
+0.9×VDD/HB
+Figure 5-1. Timing Diagrams
+UCC27301A
+SLUSEY5 – JULY 2024
+ www.ti.com
+8 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: UCC27301A
+5.8 Typical Characteristics
+T = 25°C
+Figure 5-2. Quiescent Current vs Supply Voltage
+F r e q u e n c y  ( k H z )
+IDD Operating Current (mA)
+1 0 2 0 3 0 4 0 5 0 7 0 1 0 0 2 0 0 3 0 0 5 0 0 7 0 0 1 0 0 0
+0 . 1
+0 . 2
+0 . 3
+0 . 5
+1
+2
+3
+5
+1 0
+2 0
+3 0
+5 0
+1 0 0
+0 p F  C L ,  - 4 0 ° C
+0 p F  C L ,  2 5 ° C
+0 p F  C L ,  1 5 0 ° C
+1 n F  C L ,  2 5 ° C
+1 n F  C L ,  1 5 0 ° C
+4 . 7 n F  C L ,  1 5 0 ° C
+VDD = 12 V
+Figure 5-3. IDD Operating Current vs Frequency
+F r e q u e n c y  ( k H z )
+Boot Operating Current (mA)
+1 0 2 0 3 0 4 0 5 0 7 0 1 0 0 2 0 0 3 0 0 5 0 0 7 0 0 1 0 0 0
+0 . 0 50 . 0 5
+0 . 1
+0 . 2
+0 . 5
+1
+2
+5
+1 0
+2 0
+5 0
+1 0 0
+0 p F  C L ,  - 4 0 ° C
+0 p F  C L ,  2 5 ° C
+0 p F  C L ,  1 5 0 ° C
+1 n F  C L ,  2 5 ° C
+1 n F  C L ,  1 5 0 ° C
+4 . 7 n F  C L ,  1 5 0 ° C
+VHB – VHS = 12 V
+Figure 5-4. Boot Voltage Operating Current vs Frequency (HB 
+To HS)
+S u p p l y  V o l t a g e  ( V )
+Input Threshold Voltage (V)
+8 1 0 1 2 1 4 1 6 1 8 2 0
+0 . 5
+1
+1 . 5
+2
+2 . 5
+3
+R i s i n g
+F a l l i n g
+T = 25°C
+Figure 5-5. Input Threshold vs Supply Voltage
+T e m p e r a t u r e  ( ° C )
+Input Threshold Voltage (V)
+- 4 0 - 1 5 1 0 3 5 6 0 8 5 1 1 0 1 3 5 1 5 0
+0 . 5
+1
+1 . 5
+2
+2 . 5
+3
+R i s i n g
+F a l l i n g
+VDD = 12 V
+Figure 5-6. Input Thresholds vs Temperature
+T e m p e r a t u r e  ( ° C )
+Enable Pin Threshold (V)
+- 4 0 - 1 5 1 0 3 5 6 0 8 5 1 1 0 1 3 5 1 5 0
+1 . 4
+1 . 6
+1 . 8
+2
+2 . 2
+2 . 4
+2 . 6
+E n a b l e  T h r e s h o l d
+D i s a b l e  T h r e s h o l d
+VDD = 12 V
+Figure 5-7. Enable Thresholds vs Temperature
+www.ti.com
+UCC27301A
+SLUSEY5 – JULY 2024
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 9
+Product Folder Links: UCC27301A
+5.8 Typical Characteristics (continued)
+T e m p e r a t u r e  ( ° C )
+VOL- LO/HO Output Voltage (V)
+- 4 0 - 1 5 1 0 3 5 6 0 8 5 1 1 0 1 3 5 1 5 0
+0 . 0 2
+0 . 0 3
+0 . 0 4
+0 . 0 5
+0 . 0 6
+0 . 0 7
+0 . 0 8
+0 . 0 9
+0 . 1
+V D D =  V H B =  8 V
+V D D =  V H B =  1 2 V
+V D D =  V H B =  1 6 V
+V D D =  V H B =  2 0 V
+IHO = ILO = 100 mA
+Figure 5-8. LO and HO Low-Level Output Voltage vs 
+Temperature
+T e m p e r a t u r e  ( ° C )
+VOH- LO/HO Output Voltage (V)
+- 4 0 - 1 5 1 0 3 5 6 0 8 5 1 1 0 1 3 5 1 5 0
+0 . 0 6
+0 . 0 8
+0 . 1
+0 . 1 2
+0 . 1 4
+0 . 1 6
+V D D =  V H B =  8 V
+V D D =  V H B =  1 2 V
+V D D =  V H B =  1 6 V
+V D D =  V H B =  2 0 V
+IHO = ILO = 100 mA
+Figure 5-9. LO and HO High-Level Output Voltage vs 
+Temperature
+T e m p e r a t u r e  ( ° C )
+Threshold (V)
+- 4 0 - 1 5 1 0 3 5 6 0 8 5 1 1 0 1 3 5 1 5 0
+5 . 2
+5 . 4
+5 . 6
+5 . 8
+6
+6 . 2
+6 . 4
+6 . 6
+6 . 8
+7
+7 . 2
+7 . 4
+7 . 6
+7 . 8
+8
+H B  r i s i n g  t h r e s h o l d
+V D D  r i s i n g  t h r e s h o l d
+Figure 5-10. Undervoltage Lockout Threshold vs Temperature
+T e m p e r a t u r e  ( ° C )
+Hysteresis (V)
+- 4 0 - 1 5 1 0 3 5 6 0 8 5 1 1 0 1 3 5 1 5 0
+0
+0 . 3
+0 . 6
+0 . 9
+1 . 2
+1 . 5
+V D D  U V L O  H y s t e r e s i s
+H B  U V L O  H y s t e r e s i s Figure 5-11. Undervoltage Lockout Threshold Hysteresis vs 
+Temperature
+T e m p e r a t u r e  ( ° C )
+Propagation Delay (ns)
+- 4 0 - 1 5 1 0 3 5 6 0 8 5 1 1 0 1 3 5 1 5 0
+1 5
+1 7 . 5
+2 0
+2 2 . 5
+2 5
+2 7 . 5
+3 0
+T D L F F
+T D H F F
+T D L R R
+T D H R R
+VDD = VHB = 12 V
+Figure 5-12. Propagation Delays vs Temperature
+S u p p l y  V o l t a g e  ( V )
+Propagation Delay (ns)
+8 1 2 1 6 2 0
+8
+1 2
+1 6
+2 0
+2 4
+2 8
+3 2
+T D L F F
+T D H F F
+T D L R R
+T D H R R
+T = 25°C
+Figure 5-13. Propagation Delays vs Supply Voltage (VDD = VHB)
+UCC27301A
+SLUSEY5 – JULY 2024
+ www.ti.com
+10 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: UCC27301A
+5.8 Typical Characteristics (continued)
+T e m p e r a t u r e  ( ° C )
+Delay Matching (ns)
+- 4 0 - 1 5 1 0 3 5 6 0 8 5 1 1 0 1 3 5 1 5 0
+0
+1
+2
+3
+4
+5
+6
+T M O N
+T M O F F
+VDD = VHB = 12 V
+Figure 5-14. Delay Matching vs Temperature
+T e m p e r a t u r e  ( ° C )
+Enable delay (us)
+- 4 0 - 1 5 1 0 3 5 6 0 8 5 1 1 0 1 3 5 1 5 0
+7
+7 . 5
+8
+8 . 5
+9
+9 . 5
+1 0
+1 0 . 5
+1 1
+VDD = VHB = 12 V
+Figure 5-15. Enable delay vs Temperature
+T e m p e r a t u r e  ( ° C )
+Disable delay (us)
+- 4 0 - 1 5 1 0 3 5 6 0 8 5 1 1 0 1 3 5 1 5 0
+0
+0 . 0 2 5
+0 . 0 5
+0 . 0 7 5
+0 . 1
+0 . 1 2 5
+0 . 1 5
+0 . 1 7 5
+0 . 2
+VDD = VHB = 12 V
+Figure 5-16. Disable delay vs Temperature
+O u t p u t  V o l t a g e  ( V )
+Output Current (A)
+0 2 4 6 8 1 0 1 2
+0
+1
+2
+3
+4
+5
+P u l l d o w n  C u r r e n t
+P u l l u p  C u r r e n t VDD = VHB = 12 V
+Figure 5-17. Output Current vs Output Voltage
+D i o d e  V o l t a g e  ( V )
+Diode Current (mA)
+0 . 5 0 . 5 5 0 . 6 0 . 6 5 0 . 7 0 . 7 5 0 . 8 0 . 8 5 0 . 9 0 . 9 5
+0 . 0 0 5
+0 . 0 1
+0 . 0 2
+0 . 0 5
+0 . 1
+0 . 2
+0 . 5
+1
+2
+5
+1 0
+2 0
+5 0
+1 0 0
+2 0 0
+Figure 5-18. Diode Current vs Diode Voltage
+www.ti.com
+UCC27301A
+SLUSEY5 – JULY 2024
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 11
+Product Folder Links: UCC27301A
+6 Detailed Description
+6.1 Overview
+The UCC27301A is a high-voltage gate driver designed to drive both the high-side and the low-side N-channel 
+MOSFETs in a synchronous buck or a half-bridge configurations. The two outputs are independently controlled 
+with two TTL-compatible input signals. The device can also work with CMOS type control signals at its inputs 
+as long as the signals meet the turn-on and turn-off threshold specifications of the device. The floating high-side 
+driver is capable of operating with an HB voltage up to 115V with respect to VSS. A 120V bootstrap diode is 
+integrated in the UCC27301A device to charge the high-side gate drive bootstrap capacitor. A robust level shifter 
+operates at high speed while consuming low power and provides clean level transitions from the control logic 
+to the high-side gate driver. Undervoltage lockout (UVLO) is provided on both the low-side and the high-side 
+power rails. EN pin is provided (in DRC packaged parts) to enable or disable the driver. The driver also has input 
+interlock functionality, which shuts off both the outputs when the two inputs overlap.
+In the UCC27301A device, the high side and low side have seperate , interlocked inputs that allow maximum 
+flexibility of input control signals in the application. The boot diode for the high-side driver bias supply is internal 
+to the UCC27301A.The high-side driver is referenced to the switch node (HS), which is typically the source pin of 
+the high-side MOSFET and drain pin of the low-side MOSFET. The low-side driver is referenced to V SS, which is 
+typically ground. The UCC27301A functions are divided into the input stages, UVLO protection, level shift, boot 
+diode, and output driver stages.
+Table 6-1. UCC27301A Highlights
+FEATURE BENEFIT
+3.7A source and 4.5A sink current High peak current ideal for driving large power MOSFETs with 
+minimal power loss (fast-drive capability at Miller plateau)
+Input pins (HI and LI) can directly handle –10VDC up to 20VDC
+Increased robustness and ability to handle undershoot and 
+overshoot can interface directly to gate-drive transformers without 
+having to use rectification diodes
+120V internal boot diode Provides voltage margin to meet surge requirements
+Switch node (HS pin) able to handle –(28–VDD)V absolute maximum 
+for 100ns
+Allows the high-side channel to have extra protection from 
+inherent negative voltages caused by parasitic inductance and stray 
+capacitance
+Robust ESD circuitry to handle voltage spikes Excellent immunity to large dV/dT conditions
+20ns propagation delay with 7.2ns rise time and 5.5ns fall time Best-in-class switching characteristics and extremely low-pulse 
+transmission distortion
+Cross-conduction protection Interlocks inputs to prevent shoot-through
+Enable/disable functionality
+Offers additional control over the driver for different system states 
+(such as powerup sequencing) and a low quiescent current 
+consumption when disabled
+4ns (typical) delay matching between channels Avoids transformer volt-second offset in bridge
+TTL optimized thresholds with increased hysteresis Complementary to analog or digital PWM controllers; increased 
+hysteresis offers added noise immunity
+UCC27301A
+SLUSEY5 – JULY 2024
+ www.ti.com
+12 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: UCC27301A
+6.2 Functional Block Diagram
+LEVEL 
+SHIFT
+UVLO
+UVLO
+HI
+LI
+VDD
+HB
+HO
+HS
+LO
+VSS
+Copyright © 2018, Texas Instruments Incorporated
+Interlock Logic
+EN
+DRIVER
+STAGE
+DRIVER
+STAGE
+6.3 Feature Description
+6.3.1 Input Stages and Interlock 
+The two inputs operate independently , with an exception that both outputs will be pulled low when both inputs 
+are high or overlap . The independence allows for full control of two outputs compared to the gate drivers that 
+have a single input. The device has input interlock or cross-conduction protection. Whenever both the inputs are 
+high, the internal logic turns both the outputs off. Once the device is in this mode, when one of the inputs goes 
+low, the outputs follow the input logic. There is no other fixed time de-glitch filter implemented in the device and 
+therefore propagation delay and delay matching are not sacrificed. In other words, there is no built-in dead-time 
+due to the interlock feature. Any noise on the input that could cause the output to shoot-through will be filtered by 
+this feature and the system stays protected.
+The inputs are TTL-logic compatible. The device can also work with CMOS type control signals at its inputs as 
+long as the signals meet the turn-on and turn-off threshold specifications of the device. Because the inputs are 
+independent of supply voltage, they can be connected to outputs of either digital controller or analog controller. 
+Inputs can accept wide slew rate signals and input can withstand negative voltage to increase the robustness. 
+Small filter at the inputs of the driver further improves system robustness in noise prone applications. The inputs 
+have internal pull down resistors with typical value of 68k Ω. Thus, when the inputs are floating, the outputs are 
+held low.
+www.ti.com
+UCC27301A
+SLUSEY5 – JULY 2024
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 13
+Product Folder Links: UCC27301A
+HI
+LI
+LO
+HO
+Time
+Interlock
+Figure 6-1. Interlock or Input Shoot-Through Protection
+6.3.2 Enable
+The device in DRC package has an enable (EN) pin. The outputs will be active only if the EN pin voltage is 
+above the threshold voltage. Outputs will be held low if EN pin is left floating or pulled-down to ground. An 
+internal 80-kΩ resistor pulls the EN pin to VSS. Thus, leaving the EN pin floating disables the device. Externally 
+pulling EN pin to ground shall also disable the device. If the EN pin is not used, then it is recommended to tie it 
+to VDD pin. If a pull-up resistor needs to be used then a strong pull-up resistor is recommended. For 12V supply 
+voltage, a 10kΩ pull-up is suggested. In noise prone application, a small filter capacitor, 1nF to 10nF, should be 
+connected from the EN pin to VSS pin as close to the device as possible. An analog or a digital controller output 
+pin could be connected to EN pin to enable or disable the device. Built-in hysteresis helps prevent any nuisance 
+tripping or chattering of the outputs.
+6.3.3 Undervoltage Lockout (UVLO)
+Both the high-side and the low-side driver stages include UVLO protection circuitry which monitors the supply 
+voltage (VDD) and the bootstrap capacitor voltage (V HBto V HS). The UVLO circuit inhibits each output until 
+sufficient supply voltage is available to turn on the external MOSFETs. The built-in UVLO hysteresis prevents 
+chattering during supply voltage variations. When the supply voltage is applied to the VDD pin of the device, 
+both the outputs are held low until VDD exceeds the UVLO threshold. Any UVLO condition on the bootstrap 
+capacitor (VHB–HS) disables only the high-side output (HO).
+6.3.4 Level Shifter
+The level shift circuit is the interface from the high-side input, which is a VSS referenced signal, to the high-side 
+driver stage which is referenced to the switch node (HS pin). The level shift allows control of the HO output 
+UCC27301A
+SLUSEY5 – JULY 2024
+ www.ti.com
+14 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: UCC27301A
+which is referenced to the HS pin. The delay introduced by the level shifter is kept as low as possible and 
+therefore the device provides excellent propagation delay characteristic and delay matching with the low-side 
+driver output. Low delay matching allows power stages to operate with less dead time. The reduction in dead 
+time is very important in applications where high efficiency is required.
+6.3.5 Boot Diode
+The boot diode necessary to generate the high-side bias is included in the UCC27301A family of drivers. The 
+diode anode is connected to V DD and cathode connected to V HB. With the V HB capacitor connected to HB and 
+the HS pins, the V HB capacitor charge is refreshed every switching cycle when HS transitions to ground. The 
+boot diode provides fast recovery times, low diode resistance, and voltage rating margin to allow for efficient and 
+reliable operation.
+6.3.6 Output Stages
+The output stages are the interface to the power MOSFETs in the power train. High slew rate, low resistance 
+and high peak current capability of both output drivers allow for efficient switching of the power MOSFETs. The 
+low-side output stage is referenced from VDD to VSS and the high side is referenced from VHB to VHS. The device 
+output stages feature a pull-up structure which delivers the highest peak source current when it is most needed, 
+during the Miller plateau region of the power switch turn on transition. The output pull-up and pull-down structure 
+of the device is totem pole NMOS-PMOS structure.
+6.3.7 Negative Voltage Transients
+In most applications, the body diode of the external low-side power MOSFET clamps the HS node to ground. 
+In some situations, board capacitance and inductance can cause the HS node to transiently swing several volts 
+below ground, before the body diode of the external low-side MOSFET clamps this swing. The HS pin in the 
+device is allowed to swing below ground as long as specifications are not violated and conditions mentioned in 
+this section are followed.
+Ensure that the HB to HS operating voltage is within the recommended operating conditions. Hence, if the HS 
+pin transient voltage is –5V, then VDD (and thus HB) is ideally limited to 12V to keep the HB to HS voltage below 
+17V. Generally when HS swings negative, HB follows HS instantaneously and therefore the HB to HS voltage 
+does not significantly overshoot.
+HS must always be at a lower potential than HO. Pulling HO more negative than specified conditions can 
+activate parasitic transistors which may result in excessive current flow from the HB supply. This may result in 
+damage to the device. The same relationship is true with LO and VSS. If necessary, a Schottky diode can be 
+placed externally between HO and HS or LO and VSS to protect the device from this type of transient. The diode 
+must be placed as close to the device pins as possible in order to be effective.
+Low ESR bypass capacitors from HB to HS and from VDD to VSS are essential for proper operation of the 
+gate driver device. The capacitor should be located at the leads of the device to minimize series inductance. 
+The peak currents from LO and HO can be quite large. Any series inductance with the bypass capacitor causes 
+voltage ringing at the leads of the device which must be avoided for reliable operation.
+Based on application board design and other operating parameters, along with HS pin, other pins such as HI and 
+LI input pins might also transiently swing below ground. To accommodate such operating conditions, the input 
+pins of the device are capable of handling absolute maximum of –10V. Based on the layout and other design 
+constraints, sometimes the outputs, HO and LO, might also see transient voltages for short durations. Therefore, 
+the device can also handle –2V transients with less than 100ns duration on the HO and LO output pins.
+6.4 Device Functional Modes
+When the device is enabled, the device operates in normal mode and UVLO mode. See Section 6.3.3 for more 
+information on UVLO operation mode. In normal mode when the VDD and VHB–HS are above UVLO threshold, 
+the output stage is dependent on the states of the EN, HI and LI pins. The output HO and LO will be low if input 
+state is floating.
+www.ti.com
+UCC27301A
+SLUSEY5 – JULY 2024
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 15
+Product Folder Links: UCC27301A
+Table 6-2. Device Logic Table
+EN(1) HI LI HO2 LO3
+L X X L L
+H L L L L
+H L H L H
+H H L H L
+H H H L L
+(1) EN pin is available only in DRC package.
+(2) HO is measured with respect to HS.
+(3) LO is measured with respect to VSS.
+UCC27301A
+SLUSEY5 – JULY 2024
+ www.ti.com
+16 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: UCC27301A
+7 Application and Implementation
+Note
+Information in the following applications sections is not part of the TI component specification, 
+and TI does not warrant its accuracy or completeness. TI’s customers are responsible for 
+determining suitability of components for their purposes, as well as validating and testing their design 
+implementation to confirm system functionality.
+7.1 Application Information
+To enable fast switching of power devices and reduce associated switching power losses, a powerful gate 
+driver is employed between the PWM output of controllers and the gates of the power semiconductor devices. 
+Also, gate drivers are indispensable when it is impossible for the PWM controller to directly drive the gates of 
+the switching devices. With the advent of digital power, this situation will be often encountered because the 
+PWM signal from the digital controller is often a 3.3V logic signal which cannot effectively turn on a power 
+switch. Level shifting circuitry is needed to boost the 3.3V signal to the gate-drive voltage (such as 12V) 
+in order to fully turn on the power device and minimize conduction losses. Traditional buffer drive circuits 
+based on NPN/PNP bipolar transistors in totem-pole arrangement, being emitter follower configurations, prove 
+inadequate with digital power because they lack level-shifting capability. Gate drivers effectively combine both 
+the level-shifting and buffer-drive functions. Gate drivers also find other needs such as minimizing the effect of 
+high-frequency switching noise by locating the high-current driver physically close to the power switch, driving 
+gate-drive transformers, and controlling floating power-device gates, reducing power dissipation and thermal 
+stress in controllers by moving gate charge power losses from the controller into the driver.
+7.2 Typical Application
+HI
+LI
+EN
+VDD
+HB
+CONTROL
+VSS
+DRIVE HI
+DRIVE LO
+HO
+HS
+LO
+CBOOT
+SECONDARY
+SIDE
+CIRCUIT
+ISOLATION AND 
+FEEDBACK
+PWM 
+CONTROLLER
+12 V12 V
+100V
+UCC27301A
+DRC 
+Package only
+Figure 7-1. UCC27301A Typical Application Diagram 1
+7.2.1 Design Requirements
+For this design example, use the parameters listed in Table 7-1.
+Table 7-1. Design Specifications
+DESIGN PARAMETER EXAMPLE VALUE
+Supply voltage, VDD 12 V
+Voltage on HS, VHS 0 V to 100 V
+Voltage on HB, VHB 12 V to 112 V
+Output current rating, IO –4.5 A to 3.7A
+www.ti.com
+UCC27301A
+SLUSEY5 – JULY 2024
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 17
+Product Folder Links: UCC27301A
+Table 7-1. Design Specifications (continued)
+DESIGN PARAMETER EXAMPLE VALUE
+Operating frequency 500 kHz
+7.2.2 Detailed Design Procedure
+7.2.2.1 Input Threshold Type
+The UCC27301A device has an input absolute maximum voltage range from –10V to 20V. This increased 
+robustness means that both parts can be directly interfaced to gate drive transformers. The device features 
+TTL compatible input threshold logic with wide hysteresis. The threshold voltage levels are low voltage and 
+independent of the VDD supply voltage, which allows compatibility with both logic-level input signals from 
+microcontrollers as well as higher-voltage input signals from analog controllers. See the Electrical Characteristics 
+section for the actual input threshold voltage levels and hysteresis specifications of the device.
+7.2.2.2 VDD Bias Supply Voltage
+The bias supply voltage to be applied to the VDD pin of the device should never exceed the values listed in the 
+Electrical Characteristics table. However, different power switches demand different voltage levels to be applied 
+at the gate terminals for effective turnon and turnoff. With certain power switches, a positive gate voltage may be 
+required for turnon and a negative gate voltage may be required for turnoff, in which case the VDD bias supply 
+equals the voltage differential. With a wide operating range from 8V to 17V, the device can be used to drive a 
+variety of power switches, such as Si MOSFETs, IGBTs, and wide-bandgap power semiconductors.
+7.2.2.3 Peak Source and Sink Currents
+Generally, the switching speed of the power switch during turnon and turnoff should be as fast as possible in 
+order to minimize switching power losses. The gate driver device must be able to provide the required peak 
+current for achieving the targeted switching speeds with the targeted power MOSFET. The system requirement 
+for the switching speed is typically described in terms of the slew rate of the drain-to-source voltage of the 
+power MOSFET (such as dV DS/dt). For example, the system requirement might state that a SPP20N60C3 
+power MOSFET must be turned-on with a dV DS/dt of 20V/ns or higher with a DC bus voltage of 400V in a 
+continuous-conduction-mode (CCM) boost PFC-converter application. This type of application is an inductive 
+hard-switching application and reducing switching power losses is critical. This requirement means that the 
+entire drain-to-source voltage swing during power MOSFET turnon event (from 400V in the OFF state to V DS(on) 
+in on state) must be completed in approximately 20ns or less. When the drain-to-source voltage swing occurs, 
+the Miller charge of the power MOSFET (Q GD parameter in the SPP20N60C3 data sheet is 33nC typical) is 
+supplied by the peak current of gate driver. According to power MOSFET inductive switching mechanism, the 
+gate-to-source voltage of the power MOSFET at this time is the Miller plateau voltage, which is typically a few 
+volts higher than the threshold voltage of the power MOSFET, VGS(TH).
+To achieve the targeted dV DS/dt, the gate driver must be capable of providing the Q GD charge in 20ns or 
+less. In other words a peak current of 1.65A (= 33nC/20ns) or higher must be provided by the gate driver. 
+The UCC27301A gate driver is capable of providing 3.7A peak sourcing current which clearly exceeds the 
+design requirement and has the capability to meet the switching speed needed. The overdrive capability 
+provides an extra margin against part-to-part variations in the Q GD parameter of the power MOSFET along 
+with additional flexibility to insert external gate resistors and fine tune the switching speed for efficiency versus 
+EMI optimizations. However, in practical designs the parasitic trace inductance in the gate drive circuit of the 
+PCB will have a definitive role to play on the power MOSFET switching speed. The effect of this trace inductance 
+is to limit the dI/dt of the output current pulse of the gate driver. In order to illustrate this, consider output current 
+pulse waveform from the gate driver to be approximated to a triangular profile, where the area under the triangle
+(½ × I PEAK × time) would equal the total gate charge of the power MOSFET (Q G parameter in SPP20N60C3 
+power MOSFET datasheet = 87nC typical). If the parasitic trace inductance limits the dI/dt then a situation may 
+occur in which the full peak current capability of the gate driver is not fully achieved in the time required to deliver 
+the Q G required for the power MOSFET switching. In other words the time parameter in the equation would 
+dominate and the IPEAK value of the current pulse would be much less than the true peak current capability of the 
+device, while the required QG is still delivered. Because of this, the desired switching speed may not be realized, 
+even when theoretical calculations indicate the gate driver is capable of achieving the targeted switching speed. 
+UCC27301A
+SLUSEY5 – JULY 2024
+ www.ti.com
+18 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: UCC27301A
+Thus, placing the gate driver device very close to the power MOSFET and designing a tight gate drive-loop with 
+minimal PCB trace inductance is important to realize the full peak-current capability of the gate driver.
+7.2.2.4 Propagation Delay
+The acceptable propagation delay from the gate driver is dependent on the switching frequency at which it is 
+used and the acceptable level of pulse distortion to the system. The UCC27301A device features 20ns (typical) 
+propagation delays, which ensures very little pulse distortion and allows operation at very high-frequencies. See 
+the Switching Characteristics table for the propagation and switching characteristics of the device.
+7.2.2.5 Power Dissipation
+Power dissipation of the gate driver has two portions as shown in Equation 1.
+PDISS = PDC + PSW (1)
+Use Equation 2 to calculate the DC portion of the power dissipation (PDC).
+PDC = IQ × VDD (2)
+where
+• IQ is the quiescent current for the driver.
+The quiescent current is the current consumed by the device to bias all internal circuits such as input stage, 
+reference voltage, logic circuits, protections, and also any current associated with switching of internal devices 
+when the driver output changes state (such as charging and discharging of parasitic capacitances, parasitic 
+shoot-through, and so forth). The UCC27301A features very low quiescent currents and contains internal logic to 
+eliminate any shoot-through in the output driver stage. Thus the effect of the PDC on the total power dissipation 
+within the gate driver can be safely assumed to be negligible. The power dissipated in the gate-driver package 
+during switching (PSW) depends on the following factors:
+• Gate charge required of the power device (usually a function of the drive voltage VG, which is very close to 
+input bias supply voltage VDD)
+• Switching frequency
+• Use of external gate resistors. When a driver device is tested with a discrete, capacitive load calculating the 
+power that is required from the bias supply is fairly simple. The energy that must be transferred from the bias 
+supply to charge the capacitor is given by Equation 3.
+EG = ½CLOAD × VDD 2 (3)
+– where
+– CLOAD is load capacitor
+– VDD is bias voltage feeding the driver
+There is an equal amount of energy dissipated when the capacitor is charged and when it is discharged. This 
+leads to a total power loss given by Equation 4.
+PG = CLOAD × VDD 2 × fSW (4)
+where
+• fSW is the switching frequency
+The switching load presented by a power MOSFET/IGBT is converted to an equivalent capacitance by 
+examining the gate charge required to switch the device. This gate charge includes the effects of the input 
+capacitance plus the added charge needed to swing the drain voltage of the power device as it switches 
+between the ON and OFF states. Most manufacturers provide specifications of typical and maximum gate 
+charge, in nC, to switch the device under specified conditions. Using the gate charge Qg, determine the power 
+that must be dissipated when switching a capacitor which is calculated using the equation Q G = CLOAD × VDD to 
+provide Equation 5 for power.
+www.ti.com
+UCC27301A
+SLUSEY5 – JULY 2024
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 19
+Product Folder Links: UCC27301A
+PG = CLOAD × VDD 2 × fSW = QG × VDD × fSW (5)
+This power P G is dissipated in the resistive elements of the circuit when the MOSFET/IGBT is being turned on 
+and off. Half of the total power is dissipated when the load capacitor is charged during turnon, and the other half 
+is dissipated when the load capacitor is discharged during turnoff. When no external gate resistor is employed 
+between the driver and MOSFET/IGBT, this power is completely dissipated inside the driver package. With the 
+use of external gate-drive resistors, the power dissipation is shared between the internal resistance of driver and 
+external gate resistor.
+7.2.3 Application Curves
+CL = 1 nF VDD = 12 V
+Figure 7-2. LO Rise Time and LI to LO Turn-on 
+Propagation Delay
+CL = 1 nF VDD = 12 V
+Figure 7-3. LO Fall Time and LI to LO Turn-off 
+Propagation Delay
+CL = 1 nF VDD = 12 V
+Figure 7-4. HO Rise Time and HI to HO Turn-on 
+Propagation Delay
+CL = 1 nF VDD = 12 V
+Figure 7-5. HO Fall Time and HI to HO Turn-off 
+Propagation Delay
+UCC27301A
+SLUSEY5 – JULY 2024
+ www.ti.com
+20 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: UCC27301A
+8 Power Supply Recommendations
+The bias supply voltage range for which the device is recommended to operate is from 8V to 17V. The lower 
+end of this range is governed by the internal undervoltage-lockout (UVLO) protection feature on the V DD pin 
+supply circuit blocks. Whenever the driver is in UVLO condition when the V DD pin voltage is below the V (ON) 
+supply start threshold, this feature holds the output low, regardless of the status of the inputs. The upper end 
+of this range is driven by the 20V absolute maximum voltage rating of the V DD pin of the device (which is a 
+stress rating). Keeping a 3V margin to allow for transient voltage spikes, the maximum recommended voltage 
+for the VDD pin is 17V. The UVLO protection feature also involves a hysteresis function, which means that when 
+the VDD pin bias voltage has exceeded the threshold voltage and device begins to operate, and if the voltage 
+drops, then the device continues to deliver normal functionality unless the voltage drop exceeds the hysteresis 
+specification V DD(hys). Therefore, ensuring that, while operating at or near the 8V range, the voltage ripple on 
+the auxiliary power supply output is smaller than the hysteresis specification of the device is important to avoid 
+triggering device shutdown. During system shutdown, the device operation continues until the V DD pin voltage 
+has dropped below the V (OFF) threshold, which must be accounted for while evaluating system shutdown timing 
+design requirements. Likewise, at system start-up the device does not begin operation until the V DD pin voltage 
+has exceeded the V(ON) threshold.
+The quiescent current consumed by the internal circuit blocks of the device is supplied through the V DD pin. 
+Although this fact is well known, it is important to recognize that the charge for source current pulses delivered 
+by the LO pin is also supplied through the same V DD pin. As a result, every time a current is sourced out of the 
+LO pin, a corresponding current pulse is delivered into the device through the V DD pin. Thus, ensure that a local 
+bypass capacitor is provided between the V DD and GND pins and located as close to the device as possible for 
+the purpose of decoupling is important. A low-ESR, ceramic surface-mount capacitor is required. TI recommends 
+using a capacitor in the range 0.22µF to 4.7µF between V DD and GND. In a similar manner, the current pulses 
+delivered by the HO pin are sourced from the HB pin. Therefore a 0.022µF to 0.1µF local decoupling capacitor is 
+recommended between the HB and HS pins.
+9 Layout
+9.1 Layout Guidelines
+To improve the switching characteristics and efficiency of a design, the following layout rules must be followed.
+• Locate the driver as close as possible to the MOSFETs.
+• Locate the VDD – VSS and VHB-VHS (bootstrap) capacitors as close as possible to the device.
+• Pay close attention to the GND trace. Use the thermal pad of the DRM package as GND by connecting it to 
+the VSS pin (GND). The GND trace from the driver goes directly to the source of the MOSFET, but must not 
+be in the high current path of the MOSFET drain or source current.
+• Use similar rules for the HS node as for GND for the high-side driver.
+• For systems using multiple UCC27301A devices, TI recommends that dedicated decoupling capacitors be 
+located at VDD-VSS for each device.
+• Care must be taken to avoid placing VDD traces close to LO, HS, and HO signals.
+• Use wide traces for LO and HO closely following the associated GND or HS traces. A width of 60 to 100mils 
+is preferable where possible.
+• Use as least two or more vias if the driver outputs or SW node must be routed from one layer to another. 
+For GND, the number of vias must be a consideration of the thermal pad requirements as well as parasitic 
+inductance.
+• Avoid LI and HI (driver input) going close to the HS node or any other high dV/dT traces that can induce 
+significant noise into the relatively high impedance leads.
+A poor layout can cause a significant drop in efficiency or system malfunction, and it can even lead to decreased 
+reliability of the whole system.
+www.ti.com
+UCC27301A
+SLUSEY5 – JULY 2024
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 21
+Product Folder Links: UCC27301A
+9.2 Layout Example
+Ground plane
+(Bottom Layer)
+VDD Bypassing Cap
+Ext. Gate
+Resistance
+(HO)
+To LO
+Load
+Ext. Gate
+Resistance
+(LO)
+HB Bypassing Cap
+(Bottom Layer)
+To HO
+Load
+Figure 9-1. UCC27301A PCB Layout Example for SOIC package
+UCC27301A
+SLUSEY5 – JULY 2024
+ www.ti.com
+22 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: UCC27301A
+Input Filters
+(Top Layer)
+VDD Capacitors
+(Top Layer)
+To High Side MOSFET
+VSS Plane
+(Top and Bottom Layer)
+Input PWMs
+Boot Diode & Capacitor
+(Bottom Layer)
+To Low Side
+MOSFET
+Figure 9-2. UCC27301A PCB Layout Example for VSON package
+9.3 Thermal Considerations
+The useful range of a driver is greatly affected by the drive-power requirements of the load and the thermal 
+characteristics of the package. For a gate driver to be useful over a particular temperature range, the package 
+must allow for efficient removal of the heat produced while keeping the junction temperature within rated limits. 
+The thermal metrics for the driver package are listed in Thermal Information section. For detailed information 
+regarding the table, refer to the Application Note from Texas Instruments entitled Semiconductor and IC Package 
+Thermal Metrics (SPRA953). The UCC27301A device is offered in a 10-pin VSON package (DRC).
+www.ti.com
+UCC27301A
+SLUSEY5 – JULY 2024
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 23
+Product Folder Links: UCC27301A
+10 Device and Documentation Support
+10.1 Device Support
+10.1.1 Third-Party Products Disclaimer
+TI'S PUBLICATION OF INFORMATION REGARDING THIRD-PARTY PRODUCTS OR SERVICES DOES NOT 
+CONSTITUTE AN ENDORSEMENT REGARDING THE SUITABILITY OF SUCH PRODUCTS OR SERVICES 
+OR A WARRANTY, REPRESENTATION OR ENDORSEMENT OF SUCH PRODUCTS OR SERVICES, EITHER 
+ALONE OR IN COMBINATION WITH ANY TI PRODUCT OR SERVICE.
+10.2 Documentation Support
+10.2.1 Related Documentation
+PowerPAD™ Thermally Enhanced Package, Application Report (SLMA002)
+PowerPAD™ Made Easy, Application Report (SLMA004)
+10.3 Receiving Notification of Documentation Updates
+To receive notification of documentation updates, navigate to the device product folder on ti.com. Click on 
+Notifications to register and receive a weekly digest of any product information that has changed. For change 
+details, review the revision history included in any revised document.
+10.4 Support Resources
+TI E2E ™ support forums  are an engineer's go-to source for fast, verified answers and design help — straight 
+from the experts. Search existing answers or ask your own question to get the quick design help you need.
+Linked content is provided "AS IS" by the respective contributors. They do not constitute TI specifications and do 
+not necessarily reflect TI's views; see TI's Terms of Use.
+10.5 Trademarks
+PowerPAD™ is a trademark of Texas Instruments.
+TI E2E™ is a trademark of Texas Instruments.
+All trademarks are the property of their respective owners.
+10.6 Electrostatic Discharge Caution
+This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled 
+with appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.
+ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may 
+be more susceptible to damage because very small parametric changes could cause the device not to meet its published 
+specifications.
+10.7 Glossary
+TI Glossary This glossary lists and explains terms, acronyms, and definitions.
+11 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+DATE REVISION NOTES
+July 2024 * Initial Release
+UCC27301A
+SLUSEY5 – JULY 2024
+ www.ti.com
+24 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: UCC27301A
+12 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most 
+current data available for the designated devices. This data is subject to change without notice and revision of 
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+www.ti.com
+UCC27301A
+SLUSEY5 – JULY 2024
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 25
+Product Folder Links: UCC27301A
+PACKAGE OPTION ADDENDUM
+www.ti.com 8-Nov-2025
+PACKAGING INFORMATION
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+UCC27301ADR Active Production SOIC (D) | 8 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 150 27301A
+UCC27301ADR.B Active Production SOIC (D) | 8 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 150 27301A
+UCC27301ADRCR Active Production VSON (DRC) | 10 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 150 27301A
+UCC27301ADRCR.B Active Production VSON (DRC) | 10 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 150 27301A
+ 
+(1) Status:  For more details on status, see our product life cycle.
+ 
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+ 
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+ 
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+ 
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+ 
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+ 
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+ 
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+ 
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+ 
+ OTHER QUALIFIED VERSIONS OF UCC27301A :
+Addendum-Page 1
+PACKAGE OPTION ADDENDUM
+www.ti.com 8-Nov-2025
+• Automotive : UCC27301A-Q1
+ NOTE: Qualified Version Definitions:
+• Automotive - Q100 devices qualified for high-reliability automotive applications targeting zero defects
+Addendum-Page 2
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 3-Sep-2026
+TAPE AND REEL INFORMATION
+Reel Width (W1)
+REEL DIMENSIONS
+A0B0K0WDimension designed to accommodate the component lengthDimension designed to accommodate the component thicknessOverall width of the carrier tapePitch between successive cavity centersDimension designed to accommodate the component width
+TAPE DIMENSIONSK0 P1B0WA0Cavity
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Pocket QuadrantsSprocket HolesQ1Q1Q2Q2Q3Q3Q4Q4User Direction of Feed
+P1ReelDiameter
+ 
+*All dimensions are nominal
+Device Package
+Type
+Package
+Drawing
+Pins SPQ Reel
+Diameter
+(mm)
+Reel
+Width
+W1 (mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+UCC27301ADR SOIC D 8 3000 330.0 12.5 6.4 5.2 2.1 8.0 12.0 Q1
+UCC27301ADRCR VSON DRC 10 3000 330.0 12.4 3.3 3.3 1.1 8.0 12.0 Q2
+Pack Materials-Page 1
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 3-Sep-2026
+TAPE AND REEL BOX DIMENSIONS
+Width (mm)
+W LH
+ 
+*All dimensions are nominal
+Device Package Type Package Drawing Pins SPQ Length (mm) Width (mm) Height (mm)
+UCC27301ADR SOIC D 8 3000 340.5 336.1 25.0
+UCC27301ADRCR VSON DRC 10 3000 360.0 360.0 36.0
+Pack Materials-Page 2
+www.ti.com
+PACKAGE OUTLINE
+C
+.228-.244  TYP
+[5.80-6.19]
+.069 MAX
+[1.75]     
+6X .050
+[1.27]
+8X .012-.020
+     [0.31-0.51]
+2X
+.150
+[3.81]
+.005-.010  TYP
+[0.13-0.25]
+0 - 8 .004-.010
+[0.11-0.25]
+.010
+[0.25].016-.050
+[0.41-1.27]
+4X (0 -15 )
+A
+.189-.197
+[4.81-5.00]
+NOTE 3
+B .150-.157
+[3.81-3.98]
+NOTE 4
+4X (0 -15 )
+(.041)
+[1.04]
+SOIC - 1.75 mm max heightD0008A
+SMALL OUTLINE INTEGRATED CIRCUIT
+4214825/C   02/2019
+NOTES: 
+ 
+1. Linear dimensions are in inches [millimeters]. Dimensions in parenthesis are for reference only. Controlling dimensions are in inches.
+    Dimensioning and tolerancing per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed .006 [0.15] per side. 
+4. This dimension does not include interlead flash.
+5. Reference JEDEC registration MS-012, variation AA.
+ 
+1 8
+.010 [0.25] C A B
+5
+4
+PIN 1 ID AREA
+SEATING PLANE
+.004 [0.1] C
+ SEE DETAIL A
+DETAIL A
+TYPICAL
+SCALE  2.800
+www.ti.com
+EXAMPLE BOARD LAYOUT
+.0028 MAX
+[0.07]
+ALL AROUND
+.0028 MIN
+[0.07]
+ALL AROUND
+ 
+(.213)
+[5.4]
+6X (.050 )
+[1.27]
+8X (.061 )
+[1.55]
+8X (.024)
+[0.6]
+(R.002 ) TYP
+[0.05]
+SOIC - 1.75 mm max heightD0008A
+SMALL OUTLINE INTEGRATED CIRCUIT
+4214825/C   02/2019
+NOTES: (continued)
+ 
+6. Publication IPC-7351 may have alternate designs. 
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+ 
+METAL SOLDER MASK
+OPENING
+NON SOLDER MASK
+DEFINED
+SOLDER MASK DETAILS
+EXPOSED
+METAL
+OPENING
+SOLDER MASK METAL UNDER
+SOLDER MASK
+SOLDER MASK
+DEFINED
+EXPOSED
+METAL
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE:8X
+SYMM
+1
+4 5
+8
+SEE
+DETAILS
+SYMM
+www.ti.com
+EXAMPLE STENCIL DESIGN
+8X (.061 )
+[1.55]
+8X (.024)
+[0.6]
+6X (.050 )
+[1.27]
+(.213)
+[5.4]
+(R.002 ) TYP
+[0.05]
+SOIC - 1.75 mm max heightD0008A
+SMALL OUTLINE INTEGRATED CIRCUIT
+4214825/C   02/2019
+NOTES: (continued)
+ 
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.   
+9. Board assembly site may have different recommendations for stencil design.
+ 
+SOLDER PASTE EXAMPLE
+BASED ON .005 INCH [0.125 MM] THICK STENCIL
+SCALE:8X
+SYMM
+SYMM
+1
+4 5
+8
+www.ti.com
+GENERIC PACKAGE VIEW
+This image is a representation of the package family, actual package may vary.
+Refer to the product data sheet for package details.
+VSON - 1 mm max heightDRC 10
+PLASTIC SMALL OUTLINE - NO LEAD3 x 3, 0.5 mm pitch
+4226193/A
+www.ti.com
+PACKAGE OUTLINE
+C
+10X 0.30
+0.18
+2.4 0.1
+2X
+2
+1.65 0.1
+8X 0.5
+1.0
+0.8
+10X 0.5
+0.3
+0.05
+0.00
+A 3.1
+2.9
+B
+3.1
+2.9
+(0.2) TYP
+4X (0.25)
+2X (0.5)
+VSON - 1 mm max heightDRC0010J
+PLASTIC SMALL OUTLINE - NO LEAD
+4218878/B   07/2018
+PIN 1 INDEX AREA
+SEATING PLANE
+0.08 C
+1
+5 6
+10
+(OPTIONAL)
+PIN 1 ID 0.1 C A B
+0.05 C
+THERMAL PAD
+EXPOSED
+SYMM
+SYMM11
+NOTES:
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. The package thermal pad must be soldered to the printed circuit board for optimal thermal and mechanical performance.
+SCALE  4.000
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.07 MIN
+ALL AROUND0.07 MAX
+ALL AROUND
+10X (0.24)
+(2.4)
+(2.8)
+8X (0.5)
+(1.65)
+( 0.2) VIA
+TYP
+(0.575)
+(0.95)
+10X (0.6)
+(R0.05) TYP
+(3.4)
+(0.25)
+(0.5)
+VSON - 1 mm max heightDRC0010J
+PLASTIC SMALL OUTLINE - NO LEAD
+4218878/B   07/2018
+SYMM
+1
+5 6
+10
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE:20X
+11
+SYMM
+NOTES: (continued)
+ 
+4. This package is designed to be soldered to a thermal pad on the board. For more information, see Texas Instruments literature
+    number SLUA271 (www.ti.com/lit/slua271).
+5. Vias are optional depending on application, refer to device data sheet. If any vias are implemented, refer to their locations shown
+    on this view. It is recommended that vias under paste be filled, plugged or tented.
+SOLDER MASK
+OPENING
+SOLDER MASK
+METAL UNDER
+SOLDER MASK
+DEFINED
+EXPOSED METAL
+METALSOLDER MASK
+OPENING
+SOLDER MASK DETAILS
+NON SOLDER MASK
+DEFINED
+(PREFERRED)
+EXPOSED METAL
+www.ti.com
+EXAMPLE STENCIL DESIGN
+(R0.05) TYP
+10X (0.24)
+10X (0.6)
+2X (1.5)
+2X
+(1.06)
+(2.8)
+(0.63)
+8X (0.5)
+(0.5)
+4X (0.34)
+4X (0.25)
+(1.53)
+VSON - 1 mm max heightDRC0010J
+PLASTIC SMALL OUTLINE - NO LEAD
+4218878/B   07/2018
+NOTES: (continued)
+ 
+6. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations. 
+ 
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+ 
+EXPOSED PAD 11:
+ 80% PRINTED SOLDER COVERAGE BY AREA
+SCALE:25X
+SYMM
+1
+5 6
+10
+EXPOSED METAL
+TYP11
+SYMM
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully 
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on 
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable 
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products 
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025

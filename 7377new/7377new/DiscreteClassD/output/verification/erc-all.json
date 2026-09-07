@@ -1,0 +1,1079 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-07T14:12:59",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.5",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/2b60aebe-c5b2-4e4d-b036-db142af9304f",
+            "violations": [
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol IC1 Pin 1 [IN1+, Passive, Line]",
+                            "pos": {
+                                "x": 0.7239,
+                                "y": 1.0922
+                            },
+                            "uuid": "ee25618e-fd59-4725-9a75-6254a41fe262"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol IC1 Pin 2 [IN1-, Passive, Line]",
+                            "pos": {
+                                "x": 0.7239,
+                                "y": 1.1176
+                            },
+                            "uuid": "527aebd1-3565-49c5-9f49-2cabe5c573b1"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol IC1 Pin 3 [IN2-, Passive, Line]",
+                            "pos": {
+                                "x": 0.7239,
+                                "y": 1.143
+                            },
+                            "uuid": "1623a2d2-118b-4a76-95e6-8d40c93433c1"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol IC1 Pin 4 [IN2+, Passive, Line]",
+                            "pos": {
+                                "x": 0.7239,
+                                "y": 1.1684
+                            },
+                            "uuid": "b6edb8c1-5ef6-4d05-a114-aaa72f84dcbd"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol IC1 Pin 8 [V+, Passive, Line]",
+                            "pos": {
+                                "x": 1.0287,
+                                "y": 1.0922
+                            },
+                            "uuid": "43e5ef3e-37d5-497c-8e7e-2515b6e9a074"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol IC1 Pin 7 [OUT1, Passive, Line]",
+                            "pos": {
+                                "x": 1.0287,
+                                "y": 1.1176
+                            },
+                            "uuid": "c74e2ebf-85fb-4bde-b3b6-b0b8afa91c2b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol IC1 Pin 6 [OUT2, Passive, Line]",
+                            "pos": {
+                                "x": 1.0287,
+                                "y": 1.143
+                            },
+                            "uuid": "4c911ac8-e089-4de6-8c4a-f5621572ba6a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol IC1 Pin 5 [V-, Passive, Line]",
+                            "pos": {
+                                "x": 1.0287,
+                                "y": 1.1684
+                            },
+                            "uuid": "725204dc-b399-483a-910b-a9c8d3d1bca1"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U4 Pin 2 [Input, Line]",
+                            "pos": {
+                                "x": 1.3081,
+                                "y": 1.3716
+                            },
+                            "uuid": "7dff026f-8e8d-4c67-8ab5-fc47af191f21"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U4 Pin 2 [Input, Line]",
+                            "pos": {
+                                "x": 1.3081,
+                                "y": 1.3716
+                            },
+                            "uuid": "7dff026f-8e8d-4c67-8ab5-fc47af191f21"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U4 Pin 5 [VCC, Power input, Line]",
+                            "pos": {
+                                "x": 1.4097,
+                                "y": 1.27
+                            },
+                            "uuid": "7c7280dd-0acd-4105-bc11-1c1fee7b1751"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U4 Pin 5 [VCC, Power input, Line]",
+                            "pos": {
+                                "x": 1.4097,
+                                "y": 1.27
+                            },
+                            "uuid": "7c7280dd-0acd-4105-bc11-1c1fee7b1751"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U4 Pin 3 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.4097,
+                                "y": 1.4732
+                            },
+                            "uuid": "65ec6bb7-2959-4a27-afe9-fa1154a1e557"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U4 Pin 3 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.4097,
+                                "y": 1.4732
+                            },
+                            "uuid": "65ec6bb7-2959-4a27-afe9-fa1154a1e557"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U4 Pin 4 [Output, Inverted]",
+                            "pos": {
+                                "x": 1.5875,
+                                "y": 1.3716
+                            },
+                            "uuid": "a93a100f-0d09-43f7-a490-60a223faed07"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U5 Pin 1 [1A, Input, Line]",
+                            "pos": {
+                                "x": 2.0066,
+                                "y": 1.3462
+                            },
+                            "uuid": "ba1c125f-22f3-44c5-b1e0-32d10b111924"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U5 Pin 1 [1A, Input, Line]",
+                            "pos": {
+                                "x": 2.0066,
+                                "y": 1.3462
+                            },
+                            "uuid": "ba1c125f-22f3-44c5-b1e0-32d10b111924"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U5 Pin 3 [2A, Input, Line]",
+                            "pos": {
+                                "x": 2.0066,
+                                "y": 1.397
+                            },
+                            "uuid": "f85f5bde-7295-4001-a0d2-d0f845763681"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U5 Pin 3 [2A, Input, Line]",
+                            "pos": {
+                                "x": 2.0066,
+                                "y": 1.397
+                            },
+                            "uuid": "f85f5bde-7295-4001-a0d2-d0f845763681"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U5 Pin 5 [V_{CC}, Power input, Line]",
+                            "pos": {
+                                "x": 2.1082,
+                                "y": 1.27
+                            },
+                            "uuid": "64a0c325-a999-4d4f-8dbf-29a46b562604"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U5 Pin 5 [V_{CC}, Power input, Line]",
+                            "pos": {
+                                "x": 2.1082,
+                                "y": 1.27
+                            },
+                            "uuid": "64a0c325-a999-4d4f-8dbf-29a46b562604"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U5 Pin 2 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 2.1082,
+                                "y": 1.4732
+                            },
+                            "uuid": "99a3fbe8-ecc1-4c97-91c6-d0d5d552d8fb"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U5 Pin 2 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 2.1082,
+                                "y": 1.4732
+                            },
+                            "uuid": "99a3fbe8-ecc1-4c97-91c6-d0d5d552d8fb"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U5 Pin 6 [1Y, Output, Line]",
+                            "pos": {
+                                "x": 2.2098,
+                                "y": 1.3462
+                            },
+                            "uuid": "20eab570-ca92-4135-baeb-bbf5ea204b9b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U5 Pin 4 [2Y, Output, Line]",
+                            "pos": {
+                                "x": 2.2098,
+                                "y": 1.397
+                            },
+                            "uuid": "41ccb2b0-2c0a-4758-916f-15dae3c59361"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 3 [+, Input, Line]",
+                            "pos": {
+                                "x": 3.3909,
+                                "y": -0.0381
+                            },
+                            "uuid": "33274888-526c-4a5c-87bc-a086e3a901d1"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 3 [+, Input, Line]",
+                            "pos": {
+                                "x": 3.3909,
+                                "y": -0.0381
+                            },
+                            "uuid": "33274888-526c-4a5c-87bc-a086e3a901d1"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 2 [-, Input, Line]",
+                            "pos": {
+                                "x": 3.3909,
+                                "y": 0.0127
+                            },
+                            "uuid": "a485bbc3-e988-4c8e-939a-ac5fc2a5b2a4"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 2 [-, Input, Line]",
+                            "pos": {
+                                "x": 3.3909,
+                                "y": 0.0127
+                            },
+                            "uuid": "a485bbc3-e988-4c8e-939a-ac5fc2a5b2a4"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 5 [+, Input, Line]",
+                            "pos": {
+                                "x": 3.3909,
+                                "y": 0.1524
+                            },
+                            "uuid": "25a27ece-8473-45e9-9cea-7bcac3e0b592"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 5 [+, Input, Line]",
+                            "pos": {
+                                "x": 3.3909,
+                                "y": 0.1524
+                            },
+                            "uuid": "25a27ece-8473-45e9-9cea-7bcac3e0b592"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 6 [-, Input, Line]",
+                            "pos": {
+                                "x": 3.3909,
+                                "y": 0.2032
+                            },
+                            "uuid": "3d2015a7-dd92-41f0-9ab1-0f1d07bc4e98"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 6 [-, Input, Line]",
+                            "pos": {
+                                "x": 3.3909,
+                                "y": 0.2032
+                            },
+                            "uuid": "3d2015a7-dd92-41f0-9ab1-0f1d07bc4e98"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 1 [Output, Line]",
+                            "pos": {
+                                "x": 3.5433,
+                                "y": -0.0127
+                            },
+                            "uuid": "c98c2507-a7db-4620-a6c5-4ff00ae30543"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 7 [Output, Line]",
+                            "pos": {
+                                "x": 3.5433,
+                                "y": 0.1778
+                            },
+                            "uuid": "caf01b23-e2d3-4ca1-ab39-298986731fe4"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 8 [V+, Power input, Line]",
+                            "pos": {
+                                "x": 3.6957,
+                                "y": 0.0127
+                            },
+                            "uuid": "1acc32b9-aa94-4aaf-939e-70abc34b2e05"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 8 [V+, Power input, Line]",
+                            "pos": {
+                                "x": 3.6957,
+                                "y": 0.0127
+                            },
+                            "uuid": "1acc32b9-aa94-4aaf-939e-70abc34b2e05"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 4 [V-, Power input, Line]",
+                            "pos": {
+                                "x": 3.6957,
+                                "y": 0.1651
+                            },
+                            "uuid": "acef3c91-0afe-4e9a-b439-0ff6868b946b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 4 [V-, Power input, Line]",
+                            "pos": {
+                                "x": 3.6957,
+                                "y": 0.1651
+                            },
+                            "uuid": "acef3c91-0afe-4e9a-b439-0ff6868b946b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 3 [+, Input, Line]",
+                            "pos": {
+                                "x": 4.0005,
+                                "y": -0.0508
+                            },
+                            "uuid": "64953cc9-b496-43fd-90ca-09df21037f86"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 3 [+, Input, Line]",
+                            "pos": {
+                                "x": 4.0005,
+                                "y": -0.0508
+                            },
+                            "uuid": "64953cc9-b496-43fd-90ca-09df21037f86"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 2 [-, Input, Line]",
+                            "pos": {
+                                "x": 4.0005,
+                                "y": 0.0
+                            },
+                            "uuid": "d5cd52e8-6764-4a62-9fef-af76775ca24a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 2 [-, Input, Line]",
+                            "pos": {
+                                "x": 4.0005,
+                                "y": 0.0
+                            },
+                            "uuid": "d5cd52e8-6764-4a62-9fef-af76775ca24a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 5 [+, Input, Line]",
+                            "pos": {
+                                "x": 4.0005,
+                                "y": 0.1397
+                            },
+                            "uuid": "1faa8af6-849e-4a89-8be0-e44ef9d8f6e1"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 5 [+, Input, Line]",
+                            "pos": {
+                                "x": 4.0005,
+                                "y": 0.1397
+                            },
+                            "uuid": "1faa8af6-849e-4a89-8be0-e44ef9d8f6e1"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 6 [-, Input, Line]",
+                            "pos": {
+                                "x": 4.0005,
+                                "y": 0.1905
+                            },
+                            "uuid": "aa6b860d-0540-4d40-8c9e-53986146ca9d"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 6 [-, Input, Line]",
+                            "pos": {
+                                "x": 4.0005,
+                                "y": 0.1905
+                            },
+                            "uuid": "aa6b860d-0540-4d40-8c9e-53986146ca9d"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 1 [Output, Line]",
+                            "pos": {
+                                "x": 4.1529,
+                                "y": -0.0254
+                            },
+                            "uuid": "438c445f-7243-4ee6-bed7-bfc3ea919d6b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 7 [Output, Line]",
+                            "pos": {
+                                "x": 4.1529,
+                                "y": 0.1651
+                            },
+                            "uuid": "20bf7bc2-92b9-4fe0-b745-359e19859650"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 8 [V+, Power input, Line]",
+                            "pos": {
+                                "x": 4.3053,
+                                "y": 0.0
+                            },
+                            "uuid": "95fadd5e-6938-4600-a36a-a4545118a8d1"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 8 [V+, Power input, Line]",
+                            "pos": {
+                                "x": 4.3053,
+                                "y": 0.0
+                            },
+                            "uuid": "95fadd5e-6938-4600-a36a-a4545118a8d1"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 4 [V-, Power input, Line]",
+                            "pos": {
+                                "x": 4.3053,
+                                "y": 0.1524
+                            },
+                            "uuid": "ff680ed3-1d7c-42ea-bc18-c7bb329f8166"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 4 [V-, Power input, Line]",
+                            "pos": {
+                                "x": 4.3053,
+                                "y": 0.1524
+                            },
+                            "uuid": "ff680ed3-1d7c-42ea-bc18-c7bb329f8166"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'HI_A'",
+                            "pos": {
+                                "x": 0.2794,
+                                "y": 0.6604
+                            },
+                            "uuid": "46177580-b4da-4e01-9e6a-c61cb02f944f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'LI_A'",
+                            "pos": {
+                                "x": 0.2794,
+                                "y": 0.7112
+                            },
+                            "uuid": "be0307dd-1dcc-4215-8446-03041030799b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'EN_A'",
+                            "pos": {
+                                "x": 0.2794,
+                                "y": 0.762
+                            },
+                            "uuid": "6ca4b477-05e7-4987-a82d-254c3f939cef"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'HI_B'",
+                            "pos": {
+                                "x": 2.286,
+                                "y": 0.6604
+                            },
+                            "uuid": "fdf1207e-caf2-496e-91e6-3ce9e6b739f5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'LI_B'",
+                            "pos": {
+                                "x": 2.286,
+                                "y": 0.7112
+                            },
+                            "uuid": "64f45cac-92a0-4fa4-b9ff-deef156c0517"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'EN_B'",
+                            "pos": {
+                                "x": 2.286,
+                                "y": 0.762
+                            },
+                            "uuid": "21145c9f-1971-468d-a8b1-6aaaba1e838b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                }
+            ]
+        },
+        {
+            "path": "/Power output stage/",
+            "uuid_path": "/2b60aebe-c5b2-4e4d-b036-db142af9304f/99d915ba-7acf-4db8-8201-984b0c5ab123",
+            "violations": [
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 7 [HI, Input, Line]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 0.6604
+                            },
+                            "uuid": "3af02757-aaec-4f7d-876f-a1d0063280c5"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 8 [LI, Input, Line]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 0.7112
+                            },
+                            "uuid": "377046d3-8487-42be-9f56-f36f1efdaf13"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 6 [EN, Input, Line]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 0.762
+                            },
+                            "uuid": "6446f0cd-f317-44e6-a8af-18fc5a6c34e9"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 1 [VDD, Power input, Line]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.5588
+                            },
+                            "uuid": "c470d397-a1d5-4655-9834-15cbee3ff42c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 9 [VSS, Power input, Line]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.8636
+                            },
+                            "uuid": "ea572568-72aa-46a6-bf54-0a9b8f644acf"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 3 [HB, Power input, Line]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 0.6096
+                            },
+                            "uuid": "91a5194f-03b6-4e58-a18b-8c9a63450e06"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U6 Pin 7 [HI, Input, Line]",
+                            "pos": {
+                                "x": 2.3876,
+                                "y": 0.6604
+                            },
+                            "uuid": "d4712090-abaf-4822-9a91-b241e4b1de69"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U6 Pin 8 [LI, Input, Line]",
+                            "pos": {
+                                "x": 2.3876,
+                                "y": 0.7112
+                            },
+                            "uuid": "d1e626bc-a900-4c73-8715-8435b92e5851"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U6 Pin 6 [EN, Input, Line]",
+                            "pos": {
+                                "x": 2.3876,
+                                "y": 0.762
+                            },
+                            "uuid": "83b124e5-9a37-47d3-8daa-6e4e5ec334b8"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U6 Pin 3 [HB, Power input, Line]",
+                            "pos": {
+                                "x": 2.6416,
+                                "y": 0.6096
+                            },
+                            "uuid": "1065a44a-e344-4dfa-9032-14d4d23df210"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                }
+            ]
+        }
+    ],
+    "source": "DiscreteClassD.kicad_sch"
+}
