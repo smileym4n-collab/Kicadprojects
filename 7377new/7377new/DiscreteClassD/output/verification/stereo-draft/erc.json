@@ -1,0 +1,63 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-08T19:39:43",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.5",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/2b60aebe-c5b2-4e4d-b036-db142af9304f",
+            "violations": [
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 8 [V+, Power input, Line]",
+                            "pos": {
+                                "x": 0.3302,
+                                "y": 2.5146
+                            },
+                            "uuid": "1cfcfefe-a733-4753-bb07-1565df905169"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                }
+            ]
+        },
+        {
+            "path": "/LEFT OUTPUT/",
+            "uuid_path": "/2b60aebe-c5b2-4e4d-b036-db142af9304f/3f338588-f57a-43a2-8af9-8ea2b89633ec",
+            "violations": []
+        },
+        {
+            "path": "/RIGHT OUTPUT/",
+            "uuid_path": "/2b60aebe-c5b2-4e4d-b036-db142af9304f/59380f38-bb88-4547-8184-7df26ee0ebdc",
+            "violations": []
+        }
+    ],
+    "source": "DiscreteClassD.kicad_sch"
+}

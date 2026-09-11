@@ -14,8 +14,9 @@ Target switching frequency: approximately 400 kHz.\
 \
 Power stage:\
 - UCC27301ADRCR gate drivers\
-- DMTH6016LPS MOSFETs\
-- two BTL half bridges\
+- DMN6070SY MOSFETs\
+- stereo: four half bridges, two per BTL channel\
+- Both OPA1656 packages use +12V_GD; VREF is 2.5 V and logic/comparators use +5V_A\
 \
 Important:\
 - Never swap datasheet pin numbers.\

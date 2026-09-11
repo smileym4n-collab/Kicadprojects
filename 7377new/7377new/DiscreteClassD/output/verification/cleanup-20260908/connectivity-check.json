@@ -1,0 +1,140 @@
+{
+  "passed": true,
+  "baseline_physical_components": 190,
+  "final_physical_components": 194,
+  "expected_connectivity_matches": true,
+  "unexpected_net_groups": [],
+  "missing_net_groups": [],
+  "original_symbols_and_footprints_preserved": true,
+  "existing_value_changes": [
+    [
+      "R36",
+      "47k",
+      "51k"
+    ],
+    [
+      "R29",
+      "47k",
+      "51k"
+    ]
+  ],
+  "new_components": [
+    "R43",
+    "C50",
+    "C51",
+    "TP34"
+  ],
+  "ground_symbol_counts": {
+    "DiscreteClassD.kicad_sch": 45,
+    "PowerOutput_L.kicad_sch": 12,
+    "PowerOutput_R.kicad_sch": 12
+  },
+  "no_PGND_or_AGND_in_any_root_schematic": true,
+  "legacy_sheet_only_ground_cleanup": true,
+  "preserved_files_byte_for_byte": {
+    "DiscreteClassD.kicad_pcb": true,
+    "DiscreteClassD.kicad_pro": true,
+    "DiscreteClassD.kicad_prl": true,
+    "fp-lib-table": true,
+    "DiscreteClassD.kicad_sym": true,
+    "sym-lib-table": true
+  },
+  "ERC_violations": [],
+  "preexisting_ignored_checks_unchanged": [
+    {
+      "description": "Global label only appears once in the schematic",
+      "key": "single_global_label"
+    },
+    {
+      "description": "Four connection points are joined together",
+      "key": "four_way_junction"
+    },
+    {
+      "description": "SPICE model issue",
+      "key": "simulation_model_issue"
+    },
+    {
+      "description": "Assigned footprint doesn't match footprint filters",
+      "key": "footprint_filter"
+    }
+  ],
+  "remaining_local_and_hierarchical_labels": {
+    "DiscreteClassD.kicad_sch": [
+      "AUDIO_L",
+      "AUDIO_R",
+      "ENABLE_L",
+      "ENABLE_R",
+      "LEFT_IN",
+      "L_DRIVE_N",
+      "L_DRIVE_P",
+      "OSC_SQUARE",
+      "PWM_L",
+      "PWM_R",
+      "RIGHT_IN",
+      "R_DRIVE_N",
+      "R_DRIVE_P",
+      "TRIANGLE_400K",
+      "VREF_2V5"
+    ],
+    "PowerOutput_L.kicad_sch": [
+      "DRIVE_N",
+      "DRIVE_P",
+      "ENABLE",
+      "OUT_A",
+      "OUT_B",
+      "SW_A",
+      "SW_B"
+    ],
+    "PowerOutput_R.kicad_sch": [
+      "DRIVE_N",
+      "DRIVE_P",
+      "ENABLE",
+      "OUT_A",
+      "OUT_B",
+      "SW_A",
+      "SW_B"
+    ]
+  },
+  "TPS7A4901": {
+    "U11": {
+      "value": "TPS7A4901DGNR",
+      "library_id": "DiscreteClassD:TPS7A4901DGNR",
+      "footprint": "Custom:TPS7A4901DRBR",
+      "pins": {
+        "1": "OUT",
+        "2": "FB",
+        "3": "NC",
+        "4": "GND",
+        "5": "EN",
+        "6": "NR/SS",
+        "7": "DNC",
+        "8": "IN",
+        "9": "EP"
+      }
+    },
+    "U12": {
+      "value": "TPS7A4901DGNR",
+      "library_id": "DiscreteClassD:TPS7A4901DGNR",
+      "footprint": "Custom:TPS7A4901DRBR",
+      "pins": {
+        "1": "OUT",
+        "2": "FB",
+        "3": "NC",
+        "4": "GND",
+        "5": "EN",
+        "6": "NR/SS",
+        "7": "DNC",
+        "8": "IN",
+        "9": "EP"
+      }
+    }
+  },
+  "nominal_attenuation": 0.16393442622950818,
+  "nominal_output_Vrms_for_2Vrms": 0.32786885245901637,
+  "nominal_output_Vpk_for_2Vrms": 0.46367657782724425,
+  "nominal_attenuation_dB": -15.706596700215341,
+  "additional_electrical_repairs": [
+    "R39.2 and U10.1 reconnected to D22.2 and C47.1",
+    "R40.2 and U10.3 reconnected to D23.2 and C48.1"
+  ]
+}
