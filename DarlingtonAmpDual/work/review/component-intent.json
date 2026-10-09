@@ -1,0 +1,1086 @@
+{
+  "J1": {
+    "lib": "Connector_Generic:Conn_01x02",
+    "value": "INPUT / SIGNAL RETURN",
+    "pins": {
+      "1": [
+        24.0,
+        75.0
+      ],
+      "2": [
+        24.0,
+        77.0
+      ]
+    },
+    "fp": "",
+    "role": "",
+    "dnp": false
+  },
+  "C1": {
+    "lib": "Device:C",
+    "value": "2u2 / 63V FILM DNP",
+    "pins": {
+      "1": [
+        37.0,
+        75.0
+      ],
+      "2": [
+        43.0,
+        75.0
+      ]
+    },
+    "fp": "Capacitor_THT:C_Rect_L18.0mm_W6.0mm_P15.00mm_FKS3_FKP3",
+    "role": "Optional coupling; populate C1 only after removing R1; exact film MPN and body TBC",
+    "dnp": true
+  },
+  "R1": {
+    "lib": "Device:R",
+    "value": "0R / DC LINK",
+    "pins": {
+      "1": [
+        37.0,
+        65.0
+      ],
+      "2": [
+        43.0,
+        65.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "Fitted by default; remove to use C1",
+    "dnp": false
+  },
+  "R2": {
+    "lib": "Device:R",
+    "value": "22k / 1%",
+    "pins": {
+      "1": [
+        51.0,
+        88.0
+      ],
+      "2": [
+        51.0,
+        94.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "Input DC return; thin film preferred",
+    "dnp": false
+  },
+  "#PWR001": {
+    "lib": "power:GND",
+    "value": "GND",
+    "pins": {
+      "1": [
+        51.0,
+        106.0
+      ]
+    },
+    "fp": "",
+    "role": "",
+    "dnp": false
+  },
+  "R3": {
+    "lib": "Device:R",
+    "value": "100R",
+    "pins": {
+      "1": [
+        59.0,
+        75.0
+      ],
+      "2": [
+        65.0,
+        75.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "Input base stopper",
+    "dnp": false
+  },
+  "Q1": {
+    "lib": "DarlingtonAmp:KSC1845",
+    "value": "KSC1845",
+    "pins": {
+      "1": [
+        80.0,
+        79.0
+      ],
+      "2": [
+        80.0,
+        71.0
+      ],
+      "3": [
+        74.0,
+        75.0
+      ]
+    },
+    "fp": "",
+    "role": "Non-inverting input; match VBE/hFE to Q2 at ~0.9mA",
+    "dnp": false
+  },
+  "Q2": {
+    "lib": "DarlingtonAmp:KSC1845",
+    "value": "KSC1845",
+    "pins": {
+      "1": [
+        105.0,
+        79.0
+      ],
+      "2": [
+        105.0,
+        71.0
+      ],
+      "3": [
+        111.0,
+        75.0
+      ]
+    },
+    "fp": "",
+    "role": "Inverting feedback input",
+    "dnp": false
+  },
+  "Q3": {
+    "lib": "DarlingtonAmp:KSA992",
+    "value": "KSA992",
+    "pins": {
+      "1": [
+        80.0,
+        46.0
+      ],
+      "2": [
+        80.0,
+        54.0
+      ],
+      "3": [
+        74.0,
+        50.0
+      ]
+    },
+    "fp": "",
+    "role": "Mirror output",
+    "dnp": false
+  },
+  "Q4": {
+    "lib": "DarlingtonAmp:KSA992",
+    "value": "KSA992",
+    "pins": {
+      "1": [
+        105.0,
+        46.0
+      ],
+      "2": [
+        105.0,
+        54.0
+      ],
+      "3": [
+        111.0,
+        50.0
+      ]
+    },
+    "fp": "",
+    "role": "Diode-connected mirror reference; match Q3/Q4",
+    "dnp": false
+  },
+  "R4": {
+    "lib": "Device:R",
+    "value": "100R",
+    "pins": {
+      "1": [
+        80.0,
+        38.0
+      ],
+      "2": [
+        80.0,
+        44.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "",
+    "dnp": false
+  },
+  "R5": {
+    "lib": "Device:R",
+    "value": "100R",
+    "pins": {
+      "1": [
+        105.0,
+        38.0
+      ],
+      "2": [
+        105.0,
+        44.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "",
+    "dnp": false
+  },
+  "R6": {
+    "lib": "Device:R",
+    "value": "100R",
+    "pins": {
+      "1": [
+        80.0,
+        85.0
+      ],
+      "2": [
+        80.0,
+        91.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "",
+    "dnp": false
+  },
+  "R7": {
+    "lib": "Device:R",
+    "value": "100R",
+    "pins": {
+      "1": [
+        105.0,
+        85.0
+      ],
+      "2": [
+        105.0,
+        91.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "",
+    "dnp": false
+  },
+  "Q5": {
+    "lib": "DarlingtonAmp:KSC1845",
+    "value": "KSC1845",
+    "pins": {
+      "1": [
+        93.0,
+        114.0
+      ],
+      "2": [
+        93.0,
+        106.0
+      ],
+      "3": [
+        87.0,
+        110.0
+      ]
+    },
+    "fp": "",
+    "role": "Tail sink ~1.8mA; ~60mW at idle",
+    "dnp": false
+  },
+  "R8": {
+    "lib": "Device:R",
+    "value": "330R / TUNE",
+    "pins": {
+      "1": [
+        93.0,
+        120.0
+      ],
+      "2": [
+        93.0,
+        126.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "Sets ~1.8mA tail; verify current on bench",
+    "dnp": false
+  },
+  "R10": {
+    "lib": "Device:R",
+    "value": "22k",
+    "pins": {
+      "1": [
+        111.0,
+        117.0
+      ],
+      "2": [
+        117.0,
+        117.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "Thin film 1%; feedback from AMP_OUT before L1",
+    "dnp": false
+  },
+  "R11": {
+    "lib": "Device:R",
+    "value": "1k15",
+    "pins": {
+      "1": [
+        108.0,
+        138.0
+      ],
+      "2": [
+        108.0,
+        144.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "Thin film 1%; audio gain = 1 + 22k/1k15 = 20.13",
+    "dnp": false
+  },
+  "C2": {
+    "lib": "Device:C",
+    "value": "220u / 50V BIPOLAR",
+    "pins": {
+      "1": [
+        108.0,
+        153.0
+      ],
+      "2": [
+        108.0,
+        159.0
+      ]
+    },
+    "fp": "",
+    "role": "DC gain unity; audio highpass corner ~0.63Hz; exact package TBC",
+    "dnp": false
+  },
+  "#PWR002": {
+    "lib": "power:GND",
+    "value": "GND",
+    "pins": {
+      "1": [
+        108.0,
+        166.0
+      ]
+    },
+    "fp": "",
+    "role": "",
+    "dnp": false
+  },
+  "C3": {
+    "lib": "Device:C",
+    "value": "10p C0G / 100V DNP",
+    "pins": {
+      "1": [
+        111.0,
+        127.0
+      ],
+      "2": [
+        117.0,
+        127.0
+      ]
+    },
+    "fp": "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm",
+    "role": "Optional feedback lead compensation; TUNE only after stability testing",
+    "dnp": true
+  },
+  "Q8": {
+    "lib": "DarlingtonAmp:2SA1837",
+    "value": "2SA1837",
+    "pins": {
+      "1": [
+        149.0,
+        58.0
+      ],
+      "2": [
+        155.0,
+        62.0
+      ],
+      "3": [
+        155.0,
+        54.0
+      ]
+    },
+    "fp": "Package_TO_SOT_THT:TO-220-3_Vertical",
+    "role": "PNP common-emitter VAS ~6mA; ~0.2W idle / <0.45W excursion estimate",
+    "dnp": false
+  },
+  "R12": {
+    "lib": "Device:R",
+    "value": "100R",
+    "pins": {
+      "1": [
+        155.0,
+        40.0
+      ],
+      "2": [
+        155.0,
+        46.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "",
+    "dnp": false
+  },
+  "C4": {
+    "lib": "Device:C",
+    "value": "100p C0G / 100V",
+    "pins": {
+      "1": [
+        136.0,
+        86.0
+      ],
+      "2": [
+        142.0,
+        86.0
+      ]
+    },
+    "fp": "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm",
+    "role": "Dominant Miller compensation; TUNE 68-100pF initial range",
+    "dnp": false
+  },
+  "Q10": {
+    "lib": "DarlingtonAmp:2SC4793",
+    "value": "2SC4793",
+    "pins": {
+      "1": [
+        149.0,
+        120.0
+      ],
+      "2": [
+        155.0,
+        116.0
+      ],
+      "3": [
+        155.0,
+        124.0
+      ]
+    },
+    "fp": "Package_TO_SOT_THT:TO-220-3_Vertical",
+    "role": "~6mA VAS current sink; ~0.2W idle / <0.45W at excursion",
+    "dnp": false
+  },
+  "R13": {
+    "lib": "Device:R",
+    "value": "100R / TUNE",
+    "pins": {
+      "1": [
+        155.0,
+        125.0
+      ],
+      "2": [
+        155.0,
+        131.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "Sets ~6mA VAS/sink current; verify 5-7mA bench",
+    "dnp": false
+  },
+  "Q9": {
+    "lib": "DarlingtonAmp:BD139",
+    "value": "BD139",
+    "pins": {
+      "1": [
+        215.0,
+        99.0
+      ],
+      "2": [
+        215.0,
+        91.0
+      ],
+      "3": [
+        209.0,
+        95.0
+      ]
+    },
+    "fp": "Package_TO_SOT_THT:TO-126-3_Vertical",
+    "role": "Thermally couple to output heatsink; insulate collector tab. Manufacturer onsemi",
+    "dnp": false
+  },
+  "R14": {
+    "lib": "Device:R",
+    "value": "2k2",
+    "pins": {
+      "1": [
+        194.0,
+        82.0
+      ],
+      "2": [
+        194.0,
+        88.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "Fixed collector-base multiplier resistor",
+    "dnp": false
+  },
+  "R15": {
+    "lib": "Device:R",
+    "value": "2k2",
+    "pins": {
+      "1": [
+        194.0,
+        100.0
+      ],
+      "2": [
+        194.0,
+        106.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "Permanent base-emitter path; defines low bias with shunt absent",
+    "dnp": false
+  },
+  "R16": {
+    "lib": "Device:R",
+    "value": "680R",
+    "pins": {
+      "1": [
+        181.0,
+        96.0
+      ],
+      "2": [
+        181.0,
+        102.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "Limits maximum bias when RV1 is at zero resistance",
+    "dnp": false
+  },
+  "RV1": {
+    "lib": "Device:R_Potentiometer",
+    "value": "5k / 25 TURN",
+    "pins": {
+      "1": [
+        181.0,
+        105.0
+      ],
+      "2": [
+        184.0,
+        108.0
+      ],
+      "3": [
+        181.0,
+        111.0
+      ]
+    },
+    "fp": "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical",
+    "role": "Bourns 3296W-1-502LF; wiper 2 tied to end 3; open wiper -> full 5k -> minimum bias",
+    "dnp": false
+  },
+  "Q11": {
+    "lib": "DarlingtonAmp:2SD2390",
+    "value": "2SD2390",
+    "pins": {
+      "1": [
+        251.0,
+        76.0
+      ],
+      "2": [
+        257.0,
+        72.0
+      ],
+      "3": [
+        257.0,
+        80.0
+      ]
+    },
+    "fp": "Package_TO_SOT_THT:TO-3P-3_Vertical",
+    "role": "QOUT_N; internal Darlington + 70R; external base stopper close to base",
+    "dnp": false
+  },
+  "Q12": {
+    "lib": "DarlingtonAmp:2SB1560",
+    "value": "2SB1560",
+    "pins": {
+      "1": [
+        251.0,
+        112.0
+      ],
+      "2": [
+        257.0,
+        116.0
+      ],
+      "3": [
+        257.0,
+        108.0
+      ]
+    },
+    "fp": "Package_TO_SOT_THT:TO-3P-3_Vertical",
+    "role": "QOUT_P; internal Darlington + 70R; external base stopper close to base",
+    "dnp": false
+  },
+  "R17": {
+    "lib": "Device:R",
+    "value": "33R",
+    "pins": {
+      "1": [
+        241.0,
+        76.0
+      ],
+      "2": [
+        247.0,
+        76.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "",
+    "dnp": false
+  },
+  "R18": {
+    "lib": "Device:R",
+    "value": "33R",
+    "pins": {
+      "1": [
+        241.0,
+        112.0
+      ],
+      "2": [
+        247.0,
+        112.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "",
+    "dnp": false
+  },
+  "R19": {
+    "lib": "Device:R",
+    "value": "0R22 / 5W",
+    "pins": {
+      "1": [
+        257.0,
+        85.0
+      ],
+      "2": [
+        257.0,
+        91.0
+      ]
+    },
+    "fp": "",
+    "role": "Low-inductance power resistor; exact MPN/package TBC",
+    "dnp": false
+  },
+  "R20": {
+    "lib": "Device:R",
+    "value": "0R22 / 5W",
+    "pins": {
+      "1": [
+        257.0,
+        98.0
+      ],
+      "2": [
+        257.0,
+        104.0
+      ]
+    },
+    "fp": "",
+    "role": "Low-inductance power resistor; exact MPN/package TBC",
+    "dnp": false
+  },
+  "TP1": {
+    "lib": "Connector:TestPoint",
+    "value": "BIAS_TEST_N",
+    "pins": {
+      "1": [
+        268.0,
+        81.0
+      ]
+    },
+    "fp": "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
+    "role": "",
+    "dnp": false
+  },
+  "TP2": {
+    "lib": "Connector:TestPoint",
+    "value": "BIAS_TEST_P",
+    "pins": {
+      "1": [
+        268.0,
+        107.0
+      ]
+    },
+    "fp": "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
+    "role": "",
+    "dnp": false
+  },
+  "TP3": {
+    "lib": "Connector:TestPoint",
+    "value": "AMP_OUT",
+    "pins": {
+      "1": [
+        274.0,
+        92.0
+      ]
+    },
+    "fp": "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
+    "role": "",
+    "dnp": false
+  },
+  "C5": {
+    "lib": "Device:C",
+    "value": "100n / 100V FILM",
+    "pins": {
+      "1": [
+        282.0,
+        106.0
+      ],
+      "2": [
+        282.0,
+        112.0
+      ]
+    },
+    "fp": "Capacitor_THT:C_Rect_L10.0mm_W4.0mm_P7.50mm_FKS3_FKP3",
+    "role": "Zobel film capacitor; exact package TBC",
+    "dnp": false
+  },
+  "R21": {
+    "lib": "Device:R",
+    "value": "10R / 2W",
+    "pins": {
+      "1": [
+        282.0,
+        120.0
+      ],
+      "2": [
+        282.0,
+        126.0
+      ]
+    },
+    "fp": "",
+    "role": "Zobel resistor, low inductance; pulse/thermal load TBC",
+    "dnp": false
+  },
+  "#PWR003": {
+    "lib": "power:GND",
+    "value": "GND",
+    "pins": {
+      "1": [
+        282.0,
+        134.0
+      ]
+    },
+    "fp": "",
+    "role": "",
+    "dnp": false
+  },
+  "L1": {
+    "lib": "Device:L",
+    "value": "0.82u / >=8A TBC",
+    "pins": {
+      "1": [
+        296.0,
+        96.0
+      ],
+      "2": [
+        302.0,
+        96.0
+      ]
+    },
+    "fp": "",
+    "role": "Output stability air-core inductor; low DCR, exact coil footprint TBC",
+    "dnp": false
+  },
+  "R22": {
+    "lib": "Device:R",
+    "value": "10R / 2W",
+    "pins": {
+      "1": [
+        296.0,
+        108.0
+      ],
+      "2": [
+        302.0,
+        108.0
+      ]
+    },
+    "fp": "",
+    "role": "Output inductor damping resistor, low inductance",
+    "dnp": false
+  },
+  "J3": {
+    "lib": "Connector_Generic:Conn_01x02",
+    "value": "SPEAKER",
+    "pins": {
+      "1": [
+        311.0,
+        96.0
+      ],
+      "2": [
+        311.0,
+        98.0
+      ]
+    },
+    "fp": "",
+    "role": "",
+    "dnp": false
+  },
+  "#PWR004": {
+    "lib": "power:GND",
+    "value": "GND",
+    "pins": {
+      "1": [
+        313.0,
+        134.0
+      ]
+    },
+    "fp": "",
+    "role": "",
+    "dnp": false
+  },
+  "TP4": {
+    "lib": "Connector:TestPoint",
+    "value": "SPK_OUT",
+    "pins": {
+      "1": [
+        310.0,
+        88.0
+      ]
+    },
+    "fp": "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
+    "role": "",
+    "dnp": false
+  },
+  "J2": {
+    "lib": "Connector_Generic:Conn_01x03",
+    "value": "EXTERNAL +/-35V",
+    "pins": {
+      "1": [
+        27.0,
+        189.0
+      ],
+      "2": [
+        27.0,
+        191.0
+      ],
+      "3": [
+        27.0,
+        193.0
+      ]
+    },
+    "fp": "",
+    "role": "",
+    "dnp": false
+  },
+  "#PWR005": {
+    "lib": "power:GND",
+    "value": "GND",
+    "pins": {
+      "1": [
+        33.0,
+        204.0
+      ]
+    },
+    "fp": "",
+    "role": "",
+    "dnp": false
+  },
+  "C6": {
+    "lib": "Device:C_Polarized",
+    "value": "220u / 63V",
+    "pins": {
+      "1": [
+        48.0,
+        194.0
+      ],
+      "2": [
+        48.0,
+        200.0
+      ]
+    },
+    "fp": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+    "role": "Positive rail local electrolytic; exact MPN/package TBC",
+    "dnp": false
+  },
+  "C7": {
+    "lib": "Device:C",
+    "value": "100n / 100V",
+    "pins": {
+      "1": [
+        76.0,
+        194.0
+      ],
+      "2": [
+        76.0,
+        200.0
+      ]
+    },
+    "fp": "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm",
+    "role": "Rail HF bypass close to Q11 collector; X7R acceptable",
+    "dnp": false
+  },
+  "C8": {
+    "lib": "Device:C_Polarized",
+    "value": "220u / 63V",
+    "pins": {
+      "1": [
+        48.0,
+        208.0
+      ],
+      "2": [
+        48.0,
+        214.0
+      ]
+    },
+    "fp": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+    "role": "Negative rail local electrolytic: positive terminal to GND",
+    "dnp": false
+  },
+  "C9": {
+    "lib": "Device:C",
+    "value": "100n / 100V",
+    "pins": {
+      "1": [
+        76.0,
+        208.0
+      ],
+      "2": [
+        76.0,
+        214.0
+      ]
+    },
+    "fp": "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm",
+    "role": "Rail HF bypass close to Q12 collector",
+    "dnp": false
+  },
+  "TP5": {
+    "lib": "Connector:TestPoint",
+    "value": "+35V",
+    "pins": {
+      "1": [
+        100.0,
+        189.0
+      ]
+    },
+    "fp": "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
+    "role": "",
+    "dnp": false
+  },
+  "TP6": {
+    "lib": "Connector:TestPoint",
+    "value": "GND",
+    "pins": {
+      "1": [
+        100.0,
+        204.0
+      ]
+    },
+    "fp": "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
+    "role": "",
+    "dnp": false
+  },
+  "TP7": {
+    "lib": "Connector:TestPoint",
+    "value": "-35V",
+    "pins": {
+      "1": [
+        100.0,
+        219.0
+      ]
+    },
+    "fp": "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
+    "role": "",
+    "dnp": false
+  },
+  "#FLG001": {
+    "lib": "power:PWR_FLAG",
+    "value": "PWR_FLAG",
+    "pins": {
+      "1": [
+        42.0,
+        189.0
+      ]
+    },
+    "fp": "",
+    "role": "",
+    "dnp": false
+  },
+  "#FLG002": {
+    "lib": "power:PWR_FLAG",
+    "value": "PWR_FLAG",
+    "pins": {
+      "1": [
+        42.0,
+        204.0
+      ]
+    },
+    "fp": "",
+    "role": "",
+    "dnp": false
+  },
+  "#FLG003": {
+    "lib": "power:PWR_FLAG",
+    "value": "PWR_FLAG",
+    "pins": {
+      "1": [
+        42.0,
+        219.0
+      ]
+    },
+    "fp": "",
+    "role": "",
+    "dnp": false
+  },
+  "R9": {
+    "lib": "Device:R",
+    "value": "68k / 0.5W",
+    "pins": {
+      "1": [
+        139.0,
+        187.0
+      ],
+      "2": [
+        139.0,
+        193.0
+      ]
+    },
+    "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+    "role": "~1mA reference from full 70V rail span; ~70mW / >=100V working rating",
+    "dnp": false
+  },
+  "Q6": {
+    "lib": "DarlingtonAmp:KSC1845",
+    "value": "KSC1845",
+    "pins": {
+      "1": [
+        139.0,
+        207.0
+      ],
+      "2": [
+        139.0,
+        199.0
+      ],
+      "3": [
+        133.0,
+        203.0
+      ]
+    },
+    "fp": "",
+    "role": "Diode-connected reference; thermal proximity to Q5",
+    "dnp": false
+  },
+  "Q7": {
+    "lib": "DarlingtonAmp:KSC1845",
+    "value": "KSC1845",
+    "pins": {
+      "1": [
+        139.0,
+        221.0
+      ],
+      "2": [
+        139.0,
+        213.0
+      ],
+      "3": [
+        133.0,
+        217.0
+      ]
+    },
+    "fp": "",
+    "role": "Diode-connected reference ~1.2V above -35V",
+    "dnp": false
+  },
+  "C10": {
+    "lib": "Device:C",
+    "value": "100n / 50V",
+    "pins": {
+      "1": [
+        157.0,
+        208.0
+      ],
+      "2": [
+        157.0,
+        214.0
+      ]
+    },
+    "fp": "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm",
+    "role": "Current-reference filtering",
+    "dnp": false
+  }
+}

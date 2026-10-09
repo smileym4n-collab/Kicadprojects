@@ -986,6 +986,184 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:L"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "L"
+				(at -1.27 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "L"
+				(at 1.905 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Inductor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "inductor choke coil reactor magnetic"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "L_0_1"
+				(arc
+					(start 0 2.54)
+					(mid 0.6323 1.905)
+					(end 0 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 1.27)
+					(mid 0.6323 0.635)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0)
+					(mid 0.6323 -0.635)
+					(end 0 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -1.27)
+					(mid 0.6323 -1.905)
+					(end 0 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "L_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "InputSwitch:R78B5"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1340,6 +1518,17 @@
 		)
 		(uuid "2901c07c-aa87-453f-b9af-5f752d7e4943")
 	)
+	(text "RECOM single-stage input EMI filter (nominal Class-A reference values).\nL1: Murata 1239AS-H-4R7M=P2; C2/C11: Samsung CL31A226KAHNNNE.\nKeep C11 directly at U1 VIN/GND; short loop. C1 retained upstream.\nMLCC DC bias, startup/ringing and system EMC remain unqualified.\nFilter feeds U1 only; relay/trigger +12V stays upstream."
+		(exclude_from_sim no)
+		(at 87.63 127 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left top)
+		)
+		(uuid "62b835a2-4532-4fbc-9d66-2ac86ed8c229")
+	)
 	(text "NO PCB MAINS. Do not update the old PCB from this schematic until layout work is authorised."
 		(exclude_from_sim no)
 		(at 20.32 254 0)
@@ -1409,6 +1598,12 @@
 		(uuid "3a24f40b-a371-48cb-910b-39da6031f8ed")
 	)
 	(junction
+		(at 147.32 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6af26d1b-ab82-4c85-81f2-ec70b578f4cc")
+	)
+	(junction
 		(at 182.88 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1462,6 +1657,16 @@
 	)
 	(wire
 		(pts
+			(xy 124.46 96.52) (xy 134.62 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30cdd5ec-d0db-4af1-a7a0-2fabf77eb7c8")
+	)
+	(wire
+		(pts
 			(xy 215.9 96.52) (xy 215.9 101.6)
 		)
 		(stroke
@@ -1479,6 +1684,16 @@
 			(type default)
 		)
 		(uuid "32debb30-cb8a-45c8-b90d-8dbc11c29d83")
+	)
+	(wire
+		(pts
+			(xy 147.32 111.76) (xy 147.32 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35750d07-ef1f-44a6-b13f-af03b8944651")
 	)
 	(wire
 		(pts
@@ -1532,16 +1747,6 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 96.52) (xy 152.4 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5e0a8115-1eba-4ed4-ac13-171874d4713f")
-	)
-	(wire
-		(pts
 			(xy 172.72 96.52) (xy 182.88 96.52)
 		)
 		(stroke
@@ -1572,6 +1777,26 @@
 	)
 	(wire
 		(pts
+			(xy 147.32 96.52) (xy 147.32 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "761f2f37-6c28-466b-95da-13760749568f")
+	)
+	(wire
+		(pts
+			(xy 142.24 96.52) (xy 147.32 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8300a1e1-736f-44e6-a287-45f6d2b82c0b")
+	)
+	(wire
+		(pts
 			(xy 40.64 93.98) (xy 50.8 93.98)
 		)
 		(stroke
@@ -1599,6 +1824,16 @@
 			(type default)
 		)
 		(uuid "9ddcfd0c-8a2a-403b-bb07-784c4cf3a577")
+	)
+	(wire
+		(pts
+			(xy 147.32 96.52) (xy 152.4 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f5ca969-03c3-4704-91ec-15ec98c7d9a8")
 	)
 	(wire
 		(pts
@@ -1670,6 +1905,16 @@
 		)
 		(uuid "f570ad15-f7eb-413a-9ff8-c5dfc5efe107")
 	)
+	(label "BUCK_VIN_FILTERED"
+		(at 147.32 96.52 90)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "a4a39512-c30c-4677-be48-5f7eb9f53eb1")
+	)
 	(global_label "+5V"
 		(shape bidirectional)
 		(at 224.79 96.52 0)
@@ -1694,7 +1939,7 @@
 	)
 	(global_label "+12V"
 		(shape bidirectional)
-		(at 140.97 96.52 90)
+		(at 115.57 96.52 90)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -1789,6 +2034,97 @@
 			(project "InputSwitch"
 				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1/8981c1c3-ff50-5488-808f-726a0ebb5885"
 					(reference "F2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 147.32 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "03f5c2e6-08eb-43f5-9b1c-2651b5849b79")
+		(property "Reference" "C11"
+			(at 151.13 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22uF"
+			(at 151.13 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 147.32 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 147.32 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL31A226KAHNNNE"
+			(at 147.32 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "db730d3d-f84f-4f56-a08f-a3ab8bec9071")
+		)
+		(pin "2"
+			(uuid "0287d218-3d93-498a-ae2e-9fd617aee1f7")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1/8981c1c3-ff50-5488-808f-726a0ebb5885"
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -2736,7 +3072,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF"
+		(property "Value" "22uF"
 			(at 128.27 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2771,6 +3107,17 @@
 		)
 		(property "Description" ""
 			(at 124.46 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL31A226KAHNNNE"
+			(at 124.46 107.95 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3024,6 +3371,173 @@
 			(project "InputSwitch"
 				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1/8981c1c3-ff50-5488-808f-726a0ebb5885"
 					(reference "#PWR20028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 138.43 96.52 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d2c78067-f799-4212-ae45-c0e3c7c60dbc")
+		(property "Reference" "L1"
+			(at 138.43 88.9 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7uH"
+			(at 138.43 91.44 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_1008_2520Metric"
+			(at 138.43 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/~/media/webrenewal/products/inductor/chip/tokoproducts/wirewoundmetalalloychiptype/m_dfe252012c.ashx"
+			(at 138.43 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 138.43 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "1239AS-H-4R7M=P2"
+			(at 138.43 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0506114f-53e7-4868-96b0-846f95fc89c2")
+		)
+		(pin "2"
+			(uuid "64d94f14-4042-4667-9aca-7b9184af3cf1")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1/8981c1c3-ff50-5488-808f-726a0ebb5885"
+					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 147.32 119.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d3442a26-a14b-4316-91f6-e78bbb6d7bd0")
+		(property "Reference" "#PWR20990"
+			(at 147.32 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 147.32 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 147.32 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f48cf51f-2374-4b5d-81bc-677d62ba9b56")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1/8981c1c3-ff50-5488-808f-726a0ebb5885"
+					(reference "#PWR20990")
 					(unit 1)
 				)
 			)

@@ -1,0 +1,1910 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/tomwatson/Documents/GitHub/Kicadprojects/DarlingtonAmp/DarlingtonAmp.kicad_sch</source>
+    <date>2026-10-05T19:22:01</date>
+    <tool>Eeschema 10.0.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>DarlingtonAmp - Mono Class AB</title>
+        <company/>
+        <rev>A - REVIEW</rev>
+        <date>2026-10-05</date>
+        <source>DarlingtonAmp.kicad_sch</source>
+        <comment number="1" value="Schematic only. Stability, bias and 4 ohm SOA require bench review."/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>2u2 / 63V FILM DNP</value>
+      <footprint>Capacitor_THT:C_Rect_L18.0mm_W6.0mm_P15.00mm_FKS3_FKP3</footprint>
+      <fields>
+        <field name="Engineering">Optional coupling; populate C1 only after removing R1; exact film MPN and body TBC</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L18.0mm_W6.0mm_P15.00mm_FKS3_FKP3</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Engineering" value="Optional coupling; populate C1 only after removing R1; exact film MPN and body TBC"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="dnp"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>31701a25-d4d0-43ce-a2c9-140fd0d03a1b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>220u / 50V BIPOLAR</value>
+      <fields>
+        <field name="Engineering">DC gain unity; audio highpass corner ~0.63Hz; exact package TBC</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Engineering" value="DC gain unity; audio highpass corner ~0.63Hz; exact package TBC"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8081c0b6-ae10-4435-8106-5171b1c16f26</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>10p C0G / 100V DNP</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <fields>
+        <field name="Engineering">Optional feedback lead compensation; TUNE only after stability testing</field>
+        <field name="Footprint">Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Engineering" value="Optional feedback lead compensation; TUNE only after stability testing"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="dnp"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>95f41c3c-7d07-4ddf-9948-c51fcc7b88ae</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>100p C0G / 100V</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <fields>
+        <field name="Engineering">Dominant Miller compensation; TUNE 68-100pF initial range</field>
+        <field name="Footprint">Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Engineering" value="Dominant Miller compensation; TUNE 68-100pF initial range"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>46b1335c-b433-486b-a011-199d80103614</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>100n / 100V FILM</value>
+      <footprint>Capacitor_THT:C_Rect_L10.0mm_W4.0mm_P7.50mm_FKS3_FKP3</footprint>
+      <fields>
+        <field name="Engineering">Zobel film capacitor; exact package TBC</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L10.0mm_W4.0mm_P7.50mm_FKS3_FKP3</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Engineering" value="Zobel film capacitor; exact package TBC"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>745ce2b3-692e-4f01-9312-e32a645af317</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>220u / 63V</value>
+      <footprint>Capacitor_THT:CP_Radial_D10.0mm_P5.00mm</footprint>
+      <fields>
+        <field name="Engineering">Positive rail local electrolytic; exact MPN/package TBC</field>
+        <field name="Footprint">Capacitor_THT:CP_Radial_D10.0mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Engineering" value="Positive rail local electrolytic; exact MPN/package TBC"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>652e7047-b325-4332-ae76-dc17ceecb64a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C7">
+      <value>100n / 100V</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <fields>
+        <field name="Engineering">Rail HF bypass close to Q11 collector; X7R acceptable</field>
+        <field name="Footprint">Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Engineering" value="Rail HF bypass close to Q11 collector; X7R acceptable"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a7861a97-63d5-4a06-8003-f670dbca8920</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C8">
+      <value>220u / 63V</value>
+      <footprint>Capacitor_THT:CP_Radial_D10.0mm_P5.00mm</footprint>
+      <fields>
+        <field name="Engineering">Negative rail local electrolytic: positive terminal to GND</field>
+        <field name="Footprint">Capacitor_THT:CP_Radial_D10.0mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Engineering" value="Negative rail local electrolytic: positive terminal to GND"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f77592e4-8fc8-4d2c-865b-d44d6236166a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C9">
+      <value>100n / 100V</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <fields>
+        <field name="Engineering">Rail HF bypass close to Q12 collector</field>
+        <field name="Footprint">Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Engineering" value="Rail HF bypass close to Q12 collector"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dda14782-f014-4083-9e0e-213325c09a6d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>100n / 50V</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <fields>
+        <field name="Engineering">Current-reference filtering</field>
+        <field name="Footprint">Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Engineering" value="Current-reference filtering"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b9f50fa5-c574-445d-be9c-5e5b026d5a77</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>INPUT / SIGNAL RETURN</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>42ebea14-bf38-43d6-9598-1a808c9dcfcf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>EXTERNAL +/-35V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bf00b390-0f4d-40dc-94f4-9707bdd815d2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J3">
+      <value>SPEAKER</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>968f0858-642f-4e4d-9d5c-5c1b8f728e44</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L1">
+      <value>0.82u / &gt;=8A TBC</value>
+      <fields>
+        <field name="Engineering">Output stability air-core inductor; low DCR, exact coil footprint TBC</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="Engineering" value="Output stability air-core inductor; low DCR, exact coil footprint TBC"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>21c51c62-df22-4ce1-88e5-24655ac42c94</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q1">
+      <value>KSC1845</value>
+      <datasheet>https://www.onsemi.com/download/data-sheet/pdf/ksc1845-d.pdf</datasheet>
+      <fields>
+        <field name="Engineering">Non-inverting input; match VBE/hFE to Q2 at ~0.9mA</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.onsemi.com/download/data-sheet/pdf/ksc1845-d.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DarlingtonAmp" part="KSC1845" description="120V NPN, pins 1 E / 2 C / 3 B; leadform TBC before footprint"/>
+      <property name="Engineering" value="Non-inverting input; match VBE/hFE to Q2 at ~0.9mA"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="BJT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>338b6973-c911-4c51-bbf7-d50b0d7f3330</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q2">
+      <value>KSC1845</value>
+      <datasheet>https://www.onsemi.com/download/data-sheet/pdf/ksc1845-d.pdf</datasheet>
+      <fields>
+        <field name="Engineering">Inverting feedback input</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.onsemi.com/download/data-sheet/pdf/ksc1845-d.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DarlingtonAmp" part="KSC1845" description="120V NPN, pins 1 E / 2 C / 3 B; leadform TBC before footprint"/>
+      <property name="Engineering" value="Inverting feedback input"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="BJT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ef7adb59-1440-438a-a0a8-f14ffa289095</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q3">
+      <value>KSA992</value>
+      <datasheet>https://www.onsemi.com/download/data-sheet/pdf/ksa992-d.pdf</datasheet>
+      <fields>
+        <field name="Engineering">Mirror output</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.onsemi.com/download/data-sheet/pdf/ksa992-d.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DarlingtonAmp" part="KSA992" description="120V PNP, pins 1 E / 2 C / 3 B; leadform TBC before footprint"/>
+      <property name="Engineering" value="Mirror output"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="BJT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2e1ec77f-5f6c-4acd-9adc-026363c18a81</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q4">
+      <value>KSA992</value>
+      <datasheet>https://www.onsemi.com/download/data-sheet/pdf/ksa992-d.pdf</datasheet>
+      <fields>
+        <field name="Engineering">Diode-connected mirror reference; match Q3/Q4</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.onsemi.com/download/data-sheet/pdf/ksa992-d.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DarlingtonAmp" part="KSA992" description="120V PNP, pins 1 E / 2 C / 3 B; leadform TBC before footprint"/>
+      <property name="Engineering" value="Diode-connected mirror reference; match Q3/Q4"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="BJT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2c62be69-e89d-45d0-8cec-6ac4f7ee484b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q5">
+      <value>KSC1845</value>
+      <datasheet>https://www.onsemi.com/download/data-sheet/pdf/ksc1845-d.pdf</datasheet>
+      <fields>
+        <field name="Engineering">Tail sink ~1.8mA; ~60mW at idle</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.onsemi.com/download/data-sheet/pdf/ksc1845-d.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DarlingtonAmp" part="KSC1845" description="120V NPN, pins 1 E / 2 C / 3 B; leadform TBC before footprint"/>
+      <property name="Engineering" value="Tail sink ~1.8mA; ~60mW at idle"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="BJT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>964e9cee-7d4b-40e6-b473-fbea4c504752</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q6">
+      <value>KSC1845</value>
+      <datasheet>https://www.onsemi.com/download/data-sheet/pdf/ksc1845-d.pdf</datasheet>
+      <fields>
+        <field name="Engineering">Diode-connected reference; thermal proximity to Q5</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.onsemi.com/download/data-sheet/pdf/ksc1845-d.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DarlingtonAmp" part="KSC1845" description="120V NPN, pins 1 E / 2 C / 3 B; leadform TBC before footprint"/>
+      <property name="Engineering" value="Diode-connected reference; thermal proximity to Q5"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="BJT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>18f83a13-9adf-4dc4-8af8-a1212a90bcdd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q7">
+      <value>KSC1845</value>
+      <datasheet>https://www.onsemi.com/download/data-sheet/pdf/ksc1845-d.pdf</datasheet>
+      <fields>
+        <field name="Engineering">Diode-connected reference ~1.2V above -35V</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.onsemi.com/download/data-sheet/pdf/ksc1845-d.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DarlingtonAmp" part="KSC1845" description="120V NPN, pins 1 E / 2 C / 3 B; leadform TBC before footprint"/>
+      <property name="Engineering" value="Diode-connected reference ~1.2V above -35V"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="BJT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>16c595b0-22f4-404c-bc8c-68964a5405e2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q8">
+      <value>2SA1837</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SA1837.pdf</datasheet>
+      <fields>
+        <field name="Engineering">PNP common-emitter VAS ~6mA; ~0.2W idle / &lt;0.45W excursion estimate</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-220-3_Vertical</field>
+        <field name="Datasheet">https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SA1837.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DarlingtonAmp" part="2SA1837" description="230V PNP, Toshiba 2-10R1A, pins 1 B / 2 C / 3 E"/>
+      <property name="Engineering" value="PNP common-emitter VAS ~6mA; ~0.2W idle / &lt;0.45W excursion estimate"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="BJT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0e5746bf-9e35-4a6d-b3d1-d7cccc944b29</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q9">
+      <value>BD139</value>
+      <footprint>Package_TO_SOT_THT:TO-126-3_Vertical</footprint>
+      <datasheet>https://www.onsemi.com/download/data-sheet/pdf/bd139-d.pdf</datasheet>
+      <fields>
+        <field name="Engineering">Thermally couple to output heatsink; insulate collector tab. Manufacturer onsemi</field>
+        <field name="Manufacturer">onsemi BD13916STU</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-126-3_Vertical</field>
+        <field name="Datasheet">https://www.onsemi.com/download/data-sheet/pdf/bd139-d.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DarlingtonAmp" part="BD139" description="onsemi BD13916STU, 80V NPN; 1 E / 2 C / 3 B. Heatsink sensor"/>
+      <property name="Engineering" value="Thermally couple to output heatsink; insulate collector tab. Manufacturer onsemi"/>
+      <property name="Manufacturer" value="onsemi BD13916STU"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="BJT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bd95227d-cc09-48da-9bef-1de96105114b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q10">
+      <value>2SC4793</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>https://www.mouser.com/datasheet/2/408/toshiba_2SC4793-587292.pdf</datasheet>
+      <fields>
+        <field name="Engineering">~6mA VAS current sink; ~0.2W idle / &lt;0.45W at excursion</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-220-3_Vertical</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/2/408/toshiba_2SC4793-587292.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DarlingtonAmp" part="2SC4793" description="230V NPN, Toshiba 2-10R1A, pins 1 B / 2 C / 3 E"/>
+      <property name="Engineering" value="~6mA VAS current sink; ~0.2W idle / &lt;0.45W at excursion"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="BJT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>137104e1-8ba7-4587-a6c6-68cf77200020</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q11">
+      <value>2SD2390</value>
+      <footprint>Package_TO_SOT_THT:TO-3P-3_Vertical</footprint>
+      <datasheet>https://www.semicon.sanken-ele.co.jp/sk_content/2sd2390_ds_jp.pdf</datasheet>
+      <fields>
+        <field name="Engineering">QOUT_N; internal Darlington + 70R; external base stopper close to base</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-3P-3_Vertical</field>
+        <field name="Datasheet">https://www.semicon.sanken-ele.co.jp/sk_content/2sd2390_ds_jp.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DarlingtonAmp" part="2SD2390" description="Sanken 150V 10A NPN Darlington, 1 B / 2 C / 3 E, internal 70R"/>
+      <property name="Engineering" value="QOUT_N; internal Darlington + 70R; external base stopper close to base"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="BJT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ad653d91-3088-487d-b4a4-ab0f064a6f46</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q12">
+      <value>2SB1560</value>
+      <footprint>Package_TO_SOT_THT:TO-3P-3_Vertical</footprint>
+      <datasheet>https://www.semicon.sanken-ele.co.jp/sk_content/2sb1560_ds_jp.pdf</datasheet>
+      <fields>
+        <field name="Engineering">QOUT_P; internal Darlington + 70R; external base stopper close to base</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-3P-3_Vertical</field>
+        <field name="Datasheet">https://www.semicon.sanken-ele.co.jp/sk_content/2sb1560_ds_jp.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="DarlingtonAmp" part="2SB1560" description="Sanken 150V 10A PNP Darlington, 1 B / 2 C / 3 E, internal 70R"/>
+      <property name="Engineering" value="QOUT_P; internal Darlington + 70R; external base stopper close to base"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="BJT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3e371284-fbea-4056-90d7-857fdebb8ab5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>0R / DC LINK</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Engineering">Fitted by default; remove to use C1</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Engineering" value="Fitted by default; remove to use C1"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1355f00a-7b73-4a0a-9f64-97eb7a8cbf7f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>22k / 1%</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Engineering">Input DC return; thin film preferred</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Engineering" value="Input DC return; thin film preferred"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dd9b8cf8-9432-4e91-b4a5-3016554c96d9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>100R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Engineering">Input base stopper</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Engineering" value="Input base stopper"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1e276f4c-de25-49b5-a52b-d1df7250192f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>100R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a2aaaa2b-cb67-433c-b455-024838a877f8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>100R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f8e88b3b-eec4-45d9-bdb8-070d3f494726</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>100R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5411a5a6-0db1-41ce-9567-5cc13e6f4437</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>100R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c632073a-bb2d-4dae-aedf-71c8f44d4b13</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>330R / TUNE</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Engineering">Sets ~1.8mA tail; verify current on bench</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Engineering" value="Sets ~1.8mA tail; verify current on bench"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>68a9c55e-f4a9-4e21-9c32-213cc1320d1d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>68k / 0.5W</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Engineering">~1mA reference from full 70V rail span; ~70mW / &gt;=100V working rating</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Engineering" value="~1mA reference from full 70V rail span; ~70mW / &gt;=100V working rating"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>34de5bf5-219e-4c34-9eb4-66bd712e3c94</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>22k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Engineering">Thin film 1%; feedback from AMP_OUT before L1</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Engineering" value="Thin film 1%; feedback from AMP_OUT before L1"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>39ebf442-5fad-4d1d-b220-760d3c23f64b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R11">
+      <value>1k15</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Engineering">Thin film 1%; audio gain = 1 + 22k/1k15 = 20.13</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Engineering" value="Thin film 1%; audio gain = 1 + 22k/1k15 = 20.13"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>11f78c89-8664-4e1b-89f9-f0a72b091c73</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R12">
+      <value>100R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b84e4ea4-dc75-4692-a0cf-2674ab2352d8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R13">
+      <value>100R / TUNE</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Engineering">Sets ~6mA VAS/sink current; verify 5-7mA bench</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Engineering" value="Sets ~6mA VAS/sink current; verify 5-7mA bench"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>684ce6fe-1427-4423-9052-67d95bd03059</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R14">
+      <value>2k2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Engineering">Fixed collector-base multiplier resistor</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Engineering" value="Fixed collector-base multiplier resistor"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cd760e66-b032-4f7a-bb62-4d5f5b34e9de</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R15">
+      <value>2k2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Engineering">Permanent base-emitter path; defines low bias with shunt absent</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Engineering" value="Permanent base-emitter path; defines low bias with shunt absent"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f8322ff9-7a7b-4b11-beec-9a141b3e77f5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R16">
+      <value>680R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Engineering">Limits maximum bias when RV1 is at zero resistance</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Engineering" value="Limits maximum bias when RV1 is at zero resistance"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>afb13f4a-3c61-4bc5-8d4b-55077e541dfb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R17">
+      <value>33R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3249663c-5b0e-4ad4-8deb-6c9795ac68c8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R18">
+      <value>33R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d98da8fd-e2cf-49d4-b0a2-ef12b3597e14</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R19">
+      <value>0R22 / 5W</value>
+      <fields>
+        <field name="Engineering">Low-inductance power resistor; exact MPN/package TBC</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Engineering" value="Low-inductance power resistor; exact MPN/package TBC"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3a566a6e-748f-453f-9564-5698351cd286</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R20">
+      <value>0R22 / 5W</value>
+      <fields>
+        <field name="Engineering">Low-inductance power resistor; exact MPN/package TBC</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Engineering" value="Low-inductance power resistor; exact MPN/package TBC"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7e13213c-b0b9-4d40-abb5-b81c3ce26d11</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R21">
+      <value>10R / 2W</value>
+      <fields>
+        <field name="Engineering">Zobel resistor, low inductance; pulse/thermal load TBC</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Engineering" value="Zobel resistor, low inductance; pulse/thermal load TBC"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0a491c41-7e4f-421c-92c2-e6311909fb8d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R22">
+      <value>10R / 2W</value>
+      <fields>
+        <field name="Engineering">Output inductor damping resistor, low inductance</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Engineering" value="Output inductor damping resistor, low inductance"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>43ff0154-c828-4dea-984b-a29e34409f9f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="RV1">
+      <value>5k / 25 TURN</value>
+      <footprint>Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical</footprint>
+      <fields>
+        <field name="Engineering">Bourns 3296W-1-502LF; wiper 2 tied to end 3; open wiper -&gt; full 5k -&gt; minimum bias</field>
+        <field name="Footprint">Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Engineering" value="Bourns 3296W-1-502LF; wiper 2 tied to end 3; open wiper -&gt; full 5k -&gt; minimum bias"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="resistor variable"/>
+      <property name="ki_fp_filters" value="Potentiometer*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2f71b145-6032-4515-9038-9b4b6f129654</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP1">
+      <value>BIAS_TEST_N</value>
+      <footprint>TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e63e0104-6984-440a-8064-39aed6df4673</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>BIAS_TEST_P</value>
+      <footprint>TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5bc731d1-8e6a-44d9-a039-c50aa0ad8e44</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP3">
+      <value>AMP_OUT</value>
+      <footprint>TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a036c5f1-a7c8-4c18-96bd-9db2ec94d9d4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP4">
+      <value>SPK_OUT</value>
+      <footprint>TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4622dbf6-b169-4f81-a2a9-72dde9c6e167</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP5">
+      <value>+35V</value>
+      <footprint>TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d7bfc05b-3102-4a6d-ab0e-35744fd46ce5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP6">
+      <value>GND</value>
+      <footprint>TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>14ed4195-a7f8-4f7e-a36a-dc3881a87e94</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP7">
+      <value>-35V</value>
+      <footprint>TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="DarlingtonAmp"/>
+      <property name="Sheetfile" value="DarlingtonAmp.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>da794f3c-7714-40f1-b553-5fa4e4bd9287</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="DarlingtonAmp" part="2SA1837">
+      <description>230V PNP, Toshiba 2-10R1A, pins 1 B / 2 C / 3 E</description>
+      <docs>https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SA1837.pdf</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">2SA1837</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-220-3_Vertical</field>
+        <field name="Datasheet">https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SA1837.pdf</field>
+        <field name="Description">230V PNP, Toshiba 2-10R1A, pins 1 B / 2 C / 3 E</field>
+        <field name="Sim.Device">PNP</field>
+        <field name="Sim.Pins">1=B 2=C 3=E</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="DarlingtonAmp" part="2SB1560">
+      <description>Sanken 150V 10A PNP Darlington, 1 B / 2 C / 3 E, internal 70R</description>
+      <docs>https://www.semicon.sanken-ele.co.jp/sk_content/2sb1560_ds_jp.pdf</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">2SB1560</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-3P-3_Vertical</field>
+        <field name="Datasheet">https://www.semicon.sanken-ele.co.jp/sk_content/2sb1560_ds_jp.pdf</field>
+        <field name="Description">Sanken 150V 10A PNP Darlington, 1 B / 2 C / 3 E, internal 70R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="DarlingtonAmp" part="2SC4793">
+      <description>230V NPN, Toshiba 2-10R1A, pins 1 B / 2 C / 3 E</description>
+      <docs>https://www.mouser.com/datasheet/2/408/toshiba_2SC4793-587292.pdf</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">2SC4793</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-220-3_Vertical</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/2/408/toshiba_2SC4793-587292.pdf</field>
+        <field name="Description">230V NPN, Toshiba 2-10R1A, pins 1 B / 2 C / 3 E</field>
+        <field name="Sim.Device">NPN</field>
+        <field name="Sim.Pins">1=B 2=C 3=E</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="DarlingtonAmp" part="2SD2390">
+      <description>Sanken 150V 10A NPN Darlington, 1 B / 2 C / 3 E, internal 70R</description>
+      <docs>https://www.semicon.sanken-ele.co.jp/sk_content/2sd2390_ds_jp.pdf</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">2SD2390</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-3P-3_Vertical</field>
+        <field name="Datasheet">https://www.semicon.sanken-ele.co.jp/sk_content/2sd2390_ds_jp.pdf</field>
+        <field name="Description">Sanken 150V 10A NPN Darlington, 1 B / 2 C / 3 E, internal 70R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="DarlingtonAmp" part="BD139">
+      <description>onsemi BD13916STU, 80V NPN; 1 E / 2 C / 3 B. Heatsink sensor</description>
+      <docs>https://www.onsemi.com/download/data-sheet/pdf/bd139-d.pdf</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BD139</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-126-3_Vertical</field>
+        <field name="Datasheet">https://www.onsemi.com/download/data-sheet/pdf/bd139-d.pdf</field>
+        <field name="Description">onsemi BD13916STU, 80V NPN; 1 E / 2 C / 3 B. Heatsink sensor</field>
+        <field name="Sim.Device">NPN</field>
+        <field name="Sim.Pins">1=E 2=C 3=B</field>
+      </fields>
+      <pins>
+        <pin num="1" name="E" type="passive"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="B" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="DarlingtonAmp" part="KSA992">
+      <description>120V PNP, pins 1 E / 2 C / 3 B; leadform TBC before footprint</description>
+      <docs>https://www.onsemi.com/download/data-sheet/pdf/ksa992-d.pdf</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">KSA992</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.onsemi.com/download/data-sheet/pdf/ksa992-d.pdf</field>
+        <field name="Description">120V PNP, pins 1 E / 2 C / 3 B; leadform TBC before footprint</field>
+        <field name="Sim.Device">PNP</field>
+        <field name="Sim.Pins">1=E 2=C 3=B</field>
+      </fields>
+      <pins>
+        <pin num="1" name="E" type="passive"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="B" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="DarlingtonAmp" part="KSC1845">
+      <description>120V NPN, pins 1 E / 2 C / 3 B; leadform TBC before footprint</description>
+      <docs>https://www.onsemi.com/download/data-sheet/pdf/ksc1845-d.pdf</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">KSC1845</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.onsemi.com/download/data-sheet/pdf/ksc1845-d.pdf</field>
+        <field name="Description">120V NPN, pins 1 E / 2 C / 3 B; leadform TBC before footprint</field>
+        <field name="Sim.Device">NPN</field>
+        <field name="Sim.Pins">1=E 2=C 3=B</field>
+      </fields>
+      <pins>
+        <pin num="1" name="E" type="passive"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="B" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Polarized">
+      <description>Polarized capacitor</description>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Polarized</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Polarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="L">
+      <description>Inductor</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Potentiometer">
+      <description>Potentiometer</description>
+      <footprints>
+        <fp>Potentiometer*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">R_Potentiometer</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Potentiometer</field>
+        <field name="Sim.Device">R</field>
+        <field name="Sim.Type">POT</field>
+        <field name="Sim.Pins">1=r0 2=wiper 3=r1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="DarlingtonAmp">
+      <uri>${KIPRJMOD}/DarlingtonAmp.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/+35V" class="Default">
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="Q11" pin="2" pinfunction="C_2" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="TP5" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="2" name="/-35V" class="Default">
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="J2" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="Q12" pin="2" pinfunction="C_2" pintype="passive"/>
+      <node ref="Q7" pin="1" pinfunction="E_1" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="TP7" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="3" name="/AMP_OUT" class="Default">
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="L1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="R19" pin="2" pintype="passive"/>
+      <node ref="R20" pin="1" pintype="passive"/>
+      <node ref="R22" pin="1" pintype="passive"/>
+      <node ref="TP3" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="4" name="/BIAS_TEST_N" class="Default">
+      <node ref="Q11" pin="3" pinfunction="E_3" pintype="passive"/>
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="5" name="/BIAS_TEST_P" class="Default">
+      <node ref="Q12" pin="3" pinfunction="E_3" pintype="passive"/>
+      <node ref="R20" pin="2" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="6" name="/DRIVE_N" class="Default">
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="Q8" pin="2" pinfunction="C_2" pintype="passive"/>
+      <node ref="Q9" pin="2" pinfunction="C_2" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+    </net>
+    <net code="7" name="/DRIVE_P" class="Default">
+      <node ref="Q10" pin="2" pinfunction="C_2" pintype="passive"/>
+      <node ref="Q9" pin="1" pinfunction="E_1" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="R18" pin="1" pintype="passive"/>
+      <node ref="RV1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="RV1" pin="3" pinfunction="3_3" pintype="passive"/>
+    </net>
+    <net code="8" name="/INPUT" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="9" name="/IREF" class="Default">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="Q10" pin="1" pinfunction="B_1" pintype="input"/>
+      <node ref="Q5" pin="3" pinfunction="B_3" pintype="input"/>
+      <node ref="Q6" pin="2" pinfunction="C_2" pintype="passive"/>
+      <node ref="Q6" pin="3" pinfunction="B_3" pintype="input"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="10" name="/MIRROR_REF" class="Default">
+      <node ref="Q2" pin="2" pinfunction="C_2" pintype="passive"/>
+      <node ref="Q3" pin="3" pinfunction="B_3" pintype="input"/>
+      <node ref="Q4" pin="2" pinfunction="C_2" pintype="passive"/>
+      <node ref="Q4" pin="3" pinfunction="B_3" pintype="input"/>
+    </net>
+    <net code="11" name="/NFB" class="Default">
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="Q2" pin="3" pinfunction="B_3" pintype="input"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+    </net>
+    <net code="12" name="/SPK_OUT" class="Default">
+      <node ref="J3" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="L1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R22" pin="2" pintype="passive"/>
+      <node ref="TP4" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="13" name="/VAS_IN" class="Default">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="C_2" pintype="passive"/>
+      <node ref="Q3" pin="2" pinfunction="C_2" pintype="passive"/>
+      <node ref="Q8" pin="1" pinfunction="B_1" pintype="input"/>
+    </net>
+    <net code="14" name="GND" class="Default">
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R21" pin="2" pintype="passive"/>
+      <node ref="TP6" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="15" name="Net-(C1-Pad2)" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+    </net>
+    <net code="16" name="Net-(C2-Pad1)" class="Default">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+    </net>
+    <net code="17" name="Net-(C5-Pad2)" class="Default">
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="R21" pin="1" pintype="passive"/>
+    </net>
+    <net code="18" name="Net-(Q1-B)" class="Default">
+      <node ref="Q1" pin="3" pinfunction="B_3" pintype="input"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+    </net>
+    <net code="19" name="Net-(Q1-E)" class="Default">
+      <node ref="Q1" pin="1" pinfunction="E_1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(Q2-E)" class="Default">
+      <node ref="Q2" pin="1" pinfunction="E_1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+    </net>
+    <net code="21" name="Net-(Q3-E)" class="Default">
+      <node ref="Q3" pin="1" pinfunction="E_1" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="22" name="Net-(Q4-E)" class="Default">
+      <node ref="Q4" pin="1" pinfunction="E_1" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+    </net>
+    <net code="23" name="Net-(Q5-C)" class="Default">
+      <node ref="Q5" pin="2" pinfunction="C_2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(Q5-E)" class="Default">
+      <node ref="Q5" pin="1" pinfunction="E_1" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+    </net>
+    <net code="25" name="Net-(Q6-E)" class="Default">
+      <node ref="Q6" pin="1" pinfunction="E_1" pintype="passive"/>
+      <node ref="Q7" pin="2" pinfunction="C_2" pintype="passive"/>
+      <node ref="Q7" pin="3" pinfunction="B_3" pintype="input"/>
+    </net>
+    <net code="26" name="Net-(Q8-E)" class="Default">
+      <node ref="Q8" pin="3" pinfunction="E_3" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(Q9-B)" class="Default">
+      <node ref="Q9" pin="3" pinfunction="B_3" pintype="input"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="passive"/>
+    </net>
+    <net code="28" name="Net-(Q10-E)" class="Default">
+      <node ref="Q10" pin="3" pinfunction="E_3" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+    </net>
+    <net code="29" name="Net-(Q11-B)" class="Default">
+      <node ref="Q11" pin="1" pinfunction="B_1" pintype="input"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(Q12-B)" class="Default">
+      <node ref="Q12" pin="1" pinfunction="B_1" pintype="input"/>
+      <node ref="R18" pin="2" pintype="passive"/>
+    </net>
+    <net code="31" name="Net-(R16-Pad2)" class="Default">
+      <node ref="R16" pin="2" pintype="passive"/>
+      <node ref="RV1" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+  </nets>
+</export>

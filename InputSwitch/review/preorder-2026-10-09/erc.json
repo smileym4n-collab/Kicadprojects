@@ -1,0 +1,104 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-09T22:07:27",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.5",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1",
+            "violations": []
+        },
+        {
+            "path": "/12V input and 5V buck supply/",
+            "uuid_path": "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1/8981c1c3-ff50-5488-808f-726a0ebb5885",
+            "violations": [
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR20009 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 1.1938
+                            },
+                            "uuid": "09c9c650-6e2b-4555-b18f-5c076470d031"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 1 [VIN, Power input, Line]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.9652
+                            },
+                            "uuid": "eacee000-6b19-4f4b-9735-55da323b893d"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                }
+            ]
+        },
+        {
+            "path": "/ATtiny412 and relay drivers/",
+            "uuid_path": "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1/dabaaf26-2532-5494-8858-09ead4931d51",
+            "violations": []
+        },
+        {
+            "path": "/Isolated left detector/",
+            "uuid_path": "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1/8bffe459-45b3-5ad5-9758-aa42451eb6e6",
+            "violations": [
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U5 Pin 8 [V+, Power input, Line]",
+                            "pos": {
+                                "x": 2.7178,
+                                "y": 0.7239
+                            },
+                            "uuid": "f406a109-ee67-4175-8911-66ef8e0aae4b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                }
+            ]
+        },
+        {
+            "path": "/Isolated right detector/",
+            "uuid_path": "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1/b7179806-ed8b-58f5-b8da-abd218f72adb",
+            "violations": []
+        }
+    ],
+    "source": "InputSwitch.kicad_sch"
+}
