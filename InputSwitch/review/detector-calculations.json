@@ -1,0 +1,88 @@
+{
+  "passed": 42,
+  "checks": [
+    "R20 matches reviewed value 30R / 3W / 1%",
+    "R21 matches reviewed value 100R",
+    "R22 matches reviewed value 3k3",
+    "R23 matches reviewed value 470k",
+    "R24 matches reviewed value 100k",
+    "R25 matches reviewed value 100k",
+    "R26 matches reviewed value 1k",
+    "R27 matches reviewed value 10k",
+    "R28 matches reviewed value 100k",
+    "R29 matches reviewed value 2M2",
+    "R30 matches reviewed value 4k7",
+    "R31 matches reviewed value 100k",
+    "R32 matches reviewed value 390R",
+    "R34 matches reviewed value 1k",
+    "U10 is 5V-in/5V-out module",
+    "U5 remains LM358 DIP-8",
+    "R40 matches reviewed value 30R / 3W / 1%",
+    "R41 matches reviewed value 100R",
+    "R42 matches reviewed value 3k3",
+    "R43 matches reviewed value 470k",
+    "R44 matches reviewed value 100k",
+    "R45 matches reviewed value 100k",
+    "R46 matches reviewed value 1k",
+    "R47 matches reviewed value 10k",
+    "R48 matches reviewed value 100k",
+    "R49 matches reviewed value 2M2",
+    "R50 matches reviewed value 4k7",
+    "R51 matches reviewed value 100k",
+    "R52 matches reviewed value 390R",
+    "R54 matches reviewed value 1k",
+    "U11 is 5V-in/5V-out module",
+    "U7 remains LM358 DIP-8",
+    "Buck is 2A model",
+    "Input fuse updated for load budget",
+    "Amplifier input retains upper common-mode margin at 2Vrms, min supply",
+    "Amplifier input remains above return at 2Vrms, min supply",
+    "Comparator cannot statically latch after audio: tolerance/offset release margin positive",
+    "Comparator threshold always within conservative common-mode range",
+    "Preload exceeds 20% of 600mA through stated voltage/tolerance/temperature screen",
+    "Preload screen remains below half 3W rating",
+    "5V planning load below 60% of new 2A buck capacity",
+    "12V planning input below 80% of 1A adapter/fuse rating"
+  ],
+  "scope": "DC/tolerance calculations only; no transient or circuit simulation",
+  "design_acceptance_envelope": {
+    "raw_isolated_V": [
+      4,
+      6
+    ],
+    "quiet_isolated_V": [
+      3.6,
+      6
+    ],
+    "max_audio_sine_Vrms": 2,
+    "LM358_ambient_C": [
+      0,
+      70
+    ]
+  },
+  "results": {
+    "input_min_V": 0.25435438262523674,
+    "input_max_V": 1.4135805453645671,
+    "input_upper_cm_margin_V": 0.18641945463543297,
+    "comparator_cm_margin_V": 0.8186203534988142,
+    "comparator_release_margin_V": 0.021909851648637554,
+    "bias_nominal_V": 1.1082353276515693,
+    "nominal_threshold_mVrms": 4.182646278250038,
+    "threshold_DC_corner_mVrms": [
+      1.4567756902914308,
+      6.982559435946151
+    ],
+    "preload_min_mA": 128.79336714159223,
+    "preload_max_W": 1.2432012432012431,
+    "preload_nominal_pair_W": 1.6666666666666667,
+    "estimated_5V_budget_A": 1.0592554305597786,
+    "estimated_12V_budget_A": 0.7867624946548455
+  },
+  "limits": [
+    "4-6V raw isolated output is a design/bench acceptance window, not a guaranteed datasheet limit",
+    "Power estimates assume 60mA fixed input loss plus 70% incremental efficiency; verify actual draw and startup",
+    "LM358 legacy DC specifications are mainly measured at >=5V; TI low-VCC guidance supports operation but sensitivity below 5V needs measurement",
+    "Tolerance screen omits long-term drift; includes resistor 1%, LM358 offset/bias allowance; not Monte Carlo/SPICE",
+    "Bench check detection across frequency, startup/saturation recovery, module ripple and hot preload temperatures"
+  ]
+}

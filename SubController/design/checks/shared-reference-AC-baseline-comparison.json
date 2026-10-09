@@ -1,0 +1,29 @@
+{
+  "baseline": {
+    "assertions_passed_before_AC": 411,
+    "AC_failure": "('REF', 0, 24, 0, None, 0, 5, np.complex128(-0.06420836755154044+0.07124963357779653j), (-0.0646036603964012+0.07188609460648523j), np.float64(0.0007492256497461893))",
+    "scenarios_passed_before_failure": 61,
+    "actual_complex": [
+      -0.06420836755154044,
+      0.07124963357779653
+    ],
+    "expected_complex": [
+      -0.0646036603964012,
+      0.07188609460648523
+    ]
+  },
+  "current": {
+    "assertions_passed_before_AC": 405,
+    "AC_failure": "('REF', 0, 24, 0, None, 0, 5, np.complex128(-0.06420836755154044+0.07124963357779653j), (-0.0646036603964012+0.07188609460648523j), np.float64(0.0007492256497461893))",
+    "scenarios_passed_before_failure": 61,
+    "actual_complex": [
+      -0.06420836755154044,
+      0.07124963357779653
+    ],
+    "expected_complex": [
+      -0.0646036603964012,
+      0.07188609460648523
+    ]
+  },
+  "explanation": "Existing AC assertion fails on both untouched baseline and final netlist with identical responses. No AC pass is claimed. All preceding connectivity/package assertions passed: 411 baseline, 405 final; six removed resistor pad checks account for the difference."
+}

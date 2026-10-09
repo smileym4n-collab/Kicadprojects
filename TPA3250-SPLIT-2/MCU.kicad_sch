@@ -1194,6 +1194,12 @@
 		(uuid "2354a5d5-1e5e-4413-9a8f-74cf8c6c015c")
 	)
 	(junction
+		(at 27.94 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "283744c8-9754-4a06-9b05-1404a3fda5a2")
+	)
+	(junction
 		(at 156.21 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1244,6 +1250,16 @@
 			(type default)
 		)
 		(uuid "02a5edf4-01be-46e9-874c-e4019f50e334")
+	)
+	(wire
+		(pts
+			(xy 27.94 86.36) (xy 57.15 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0706c59d-4c82-4879-bd80-d2782416925d")
 	)
 	(wire
 		(pts
@@ -1367,7 +1383,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 86.36) (xy 57.15 86.36)
+			(xy 24.13 86.36) (xy 27.94 86.36)
 		)
 		(stroke
 			(width 0)
@@ -1514,6 +1530,16 @@
 			(type default)
 		)
 		(uuid "70bcc520-07c8-4722-97a3-b6e8f96ac5f8")
+	)
+	(wire
+		(pts
+			(xy 27.94 64.77) (xy 27.94 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72dbdf38-0b71-4ed8-9bf9-22a029a10d4a")
 	)
 	(wire
 		(pts
@@ -1707,6 +1733,16 @@
 	)
 	(wire
 		(pts
+			(xy 27.94 80.01) (xy 27.94 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1c76005-dc1b-437d-a02d-c543d263a3e3")
+	)
+	(wire
+		(pts
 			(xy 143.51 128.27) (xy 158.75 128.27)
 		)
 		(stroke
@@ -1805,6 +1841,16 @@
 		)
 		(uuid "77a1bf3a-f70f-4ba3-ad42-1933678d8d01")
 	)
+	(label "MCU-3V3"
+		(at 27.94 64.77 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e1912d7e-5901-4c4a-b50c-195852f08a01")
+	)
 	(label "POT_WIPER"
 		(at 107.95 88.9 0)
 		(effects
@@ -1860,7 +1906,7 @@
 	)
 	(hierarchical_label "TPA_FAULT"
 		(shape input)
-		(at 50.8 86.36 180)
+		(at 24.13 86.36 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2495,6 +2541,88 @@
 			(project "TPA3250-SPLIT-2"
 				(path "/d0eeeeda-311a-416d-b9f7-ac3b9875c0a9/ed79208c-20ac-4652-a801-6cd46992a6c8"
 					(reference "#PWR0110")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 27.94 76.2 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5e4d6982-ec85-4b2b-845a-65b7ea5e9afa")
+		(property "Reference" "R59"
+			(at 30.48 74.9299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10K"
+			(at 30.48 77.4699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 29.718 76.2 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 27.94 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 27.94 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "696d8a58-ff1b-4bf9-a62d-942623466bc1")
+		)
+		(pin "2"
+			(uuid "484790e4-86b1-4d28-9791-e9840251d17e")
+		)
+		(instances
+			(project "TPA3250-SPLIT-2"
+				(path "/d0eeeeda-311a-416d-b9f7-ac3b9875c0a9/ed79208c-20ac-4652-a801-6cd46992a6c8"
+					(reference "R59")
 					(unit 1)
 				)
 			)

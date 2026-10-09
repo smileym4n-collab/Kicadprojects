@@ -1,0 +1,391 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "b4d45b7b-ad9d-4a36-949e-5b2f0775370b")
+	(paper "A3")
+	(title_block
+		(title "SUBCONTROLLER - ANALOGUE SIGNAL PROCESSING")
+		(date "2026-10-08")
+		(rev "B")
+		(comment 1 "No PCB layout. Separate P68 amplifier unchanged.")
+	)
+	(lib_symbols)
+	(text "REF L/R or LFE -> relay signal/return selection -> buffered mono -> REF LP / AV bypass\n-> analogue level -> phase -> HP / AV bypass -> polarity -> output mute -> separate P68"
+		(exclude_from_sim no)
+		(at 20.32 208.28 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left top)
+		)
+		(uuid "e05151db-39a6-59b7-b850-ac39330b6925")
+	)
+	(sheet
+		(at 154.94 73.66)
+		(size 114.3 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "04bed1de-3c71-514a-92ad-4e710305ebcc")
+		(property "Sheetname" "Subsonic, polarity and output"
+			(at 154.94 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Sheetfile" "04_protection_output.kicad_sch"
+			(at 154.94 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "SubController"
+				(path "/b4d45b7b-ad9d-4a36-949e-5b2f0775370b"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 109.22)
+		(size 114.3 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "04e7ff04-284e-5f77-bf0c-3e6a93382953")
+		(property "Sheetname" "Control and isolated trigger"
+			(at 25.4 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Sheetfile" "05_control.kicad_sch"
+			(at 25.4 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "SubController"
+				(path "/b4d45b7b-ad9d-4a36-949e-5b2f0775370b"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 154.94 38.1)
+		(size 114.3 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "12cb09c5-c24b-52d0-bd65-4f3525240b52")
+		(property "Sheetname" "Reference low-pass crossover"
+			(at 154.94 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Sheetfile" "02_crossover.kicad_sch"
+			(at 154.94 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "SubController"
+				(path "/b4d45b7b-ad9d-4a36-949e-5b2f0775370b"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 144.78)
+		(size 114.3 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "5afdffee-03e9-5707-af97-95d274beb85b")
+		(property "Sheetname" "Relay drivers and PSU interlock"
+			(at 25.4 142.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Sheetfile" "07_drivers.kicad_sch"
+			(at 25.4 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "SubController"
+				(path "/b4d45b7b-ad9d-4a36-949e-5b2f0775370b"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 154.94 144.78)
+		(size 114.3 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "b53eb50f-8fbc-581b-aaca-33e8bb11fce9")
+		(property "Sheetname" "HARDWARE RAIL-FAULT INTERLOCK"
+			(at 154.94 142.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Sheetfile" "08_rail_interlock.kicad_sch"
+			(at 154.94 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "SubController"
+				(path "/b4d45b7b-ad9d-4a36-949e-5b2f0775370b"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 73.66)
+		(size 114.3 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "d84a107c-2533-508d-b98f-93c2c2b4fd68")
+		(property "Sheetname" "Level and phase"
+			(at 25.4 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Sheetfile" "03_level_phase.kicad_sch"
+			(at 25.4 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "SubController"
+				(path "/b4d45b7b-ad9d-4a36-949e-5b2f0775370b"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 154.94 109.22)
+		(size 114.3 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "facce694-c9d1-5135-8990-0d15976c4b91")
+		(property "Sheetname" "Power and rail supervision"
+			(at 154.94 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Sheetfile" "06_power_mute.kicad_sch"
+			(at 154.94 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "SubController"
+				(path "/b4d45b7b-ad9d-4a36-949e-5b2f0775370b"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 38.1)
+		(size 114.3 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "fc61e8ce-dd34-532f-86c0-5802251f16fe")
+		(property "Sheetname" "Inputs and source isolation"
+			(at 25.4 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Sheetfile" "01_inputs.kicad_sch"
+			(at 25.4 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "SubController"
+				(path "/b4d45b7b-ad9d-4a36-949e-5b2f0775370b"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

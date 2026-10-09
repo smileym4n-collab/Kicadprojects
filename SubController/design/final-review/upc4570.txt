@@ -1,0 +1,557 @@
+R03DS0135EJ0200  Rev.2.00  Page 1 of 11 
+Feb.27.25  
+ Datasheet 
+UPC4570 
+Ultra Low-Noise, High Speed, Wide Band,  
+Dual Operational Amplifier 
+DESCRIPTION 
+UPC4570 is a high performance version of general-purpose low-noise operational amplifier UPC258, 4558. 
+Various characteristics such as band, slew rate, including input equivalent noise were greatly improve in 
+comparison to UPC258 and 4558. It is also possible to operate the amplifier with stability for gain of 1 (total  
+feedback or unity gain)  
+Therefore, it is ideal for application circuits such as audio preamplifiers, equalizers, tone controls, active filters.  
+Under this product series, there is also a quad type UPC4574 with equivalent characteristics  
+ 
+FEATURES 
+• Input Equivalent Noise Voltage (f = 1 kHz )  4.5 nV/ Hz ( TYP.)   
+• Total Harmonic Distortion Rate (f = 20 Hz ~ 20 kHz)  0.002 % (TYP.) 
+• Slew Rate       7 V/μs (TYP.) 
+• Gain Bandwidth Product GBW (f = 100 kHz)   15 MHz (TYP.) 
+• Input Offset Voltage      ±0.3 mV (TYP.) 
+• Operating Ambient Temperature    UPC4570G2 : -20 ~ +80 °C 
+        UPC4570GR : -40 ~ +85 °C 
+• Internal Frequency Compensation 
+ 
+PRODUCT LINEUP 
+Package Standard SOP TSSOP 
+Subject Part Number UPC4570G2 UPC4570GR-9LG 
+ 
+Outline Comparison 
+Unit : mm 
+ 
+Unit : mm 
+ 
+(Mounting Area Ratio) ( 100 %) ( 60 %) 
+ 
+ORDERING INFORMATION 
+Order Name (1) Selected Grade Package 
+UPC4570G2-AP Standard 8-pin plastic SOP ( 5.72 mm ( 225 )) 
+UPC4570GR-9LG-A Standard 8-pin plastic TSSOP ( 5.72 mm ( 225 )) 
+(1) Order names containing E1 or E2 indicate that the packaging format is embossed taping.  
+Pin 1 of E1 is on draw-out side, and pin 1 of E2 is at take-up side. 
+ 
+  
+5.2
+6.5
+3.15
+6.44.4
+UPC4570 
+R03DS0135EJ0200  Rev.2.00  Page 2 of 11 
+Feb.27.25  
+PIN CONFIGURATION (Top View) 
+ 
+ 
+ 
+EQUIVALENT CIRCUIT (1/2 Circuit) 
+ 
+ 
+ 
+  
+1
++-
+1OUT1 8 V +
+2II1
+3IN1
+4V -
+7 OUT2
+6 II2
+5 IN2
+2
+-+
+
+UPC4570 
+R03DS0135EJ0200  Rev.2.00  Page 3 of 11 
+Feb.27.25  
+ABSOLUTE MAXIMUM RATINGS 
+(TA = 25 °C) 
+Parameter Symbol UPC4570G2 UPC4570GR-9LG Unit 
+Power Supply Voltage Note 1  V + - V - -0.3 ~ +36 V 
+Differential Input Voltage  VID ±30 V 
+Input Voltage Note 2  VI V - -0.3 ~ V + +0.3 V 
+Output Applied Voltage Note 3  VO V - -0.3 ~ V + +0.3 V 
+Total Power Dissipation Note 4  PT 440 mW 
+Output Short Circuit Duration Note 5  tS 10 s 
+Operating Ambient Temperature  TA -20 ~ +80 -40 ~ +85 °C 
+Storage Temperature  Tstg -55 ~ +125 °C 
+【Note】1. Note that reverse connections of the power supply may damage the ICs. 
+2. The input terminal must be applied within the input voltage range to avoid deteriorating or damaging the device 
+characteristic. Do not exceed the ratings including during transition state such as  ON/OFF, etc. The Op-Amp 
+input voltage must operates within the electrical characteristics range of input common-mode voltage.  
+3. The output terminal must be applied within the output voltage range to avoid deteriorating or damaging the 
+device characteristic. Do not exceed the ratings including during transition state such as ON/OFF, etc. The Op-
+Amp output voltage must operates within the electrical characteristics range of maximum output voltage.  
+4. This is the value when the glass epoxy substrate (size: 100 mm x 100 mm, thickness: 1 mm, 15% of the  
+substrate area where only one side is copper foiled is filling wired) is mounted.  
+Note that restrictions will be made to the following conditions for each product, and the de-rating ratio  
+depending on the operating ambient temperature.  
+UPC4570G2 : This is the value at TA ≤ 25 °C. Derate at -4.4 mW/°C when TA >  25 °C 
+UPC4570GR : This is the value at TA ≤ 44 °C. Derate at -5.5 mW/°C when TA >  44 °C 
+5. A short circuit at the V + side may destroy the IC. Please use below the total loss and the de-rating of Note 4.  
+ 
+  
+UPC4570 
+R03DS0135EJ0200  Rev.2.00  Page 4 of 11 
+Feb.27.25  
+RECOMMENDED OPERATING CONDITIONS 
+Parameter Symbol MIN. TYP. MAX. Unit 
+Power Supply Voltage  V ± ±4  ±16 V 
+Output Current  IO   ±10 mA 
+Source Resistance  RS   50 kΩ 
+Capacitive Load (AV = +1)  CL   100 pF 
+ 
+ELECTRICAL CHARACTERISTICS 
+(TA = 25 °C, V ± = ±15 V) 
+Parameter Symbol MIN. TYP. MAX. Unit Test Condition 
+Input Offset Voltage VIO  ±0.3 ±5 mV RS ≤ 50 Ω 
+Input Offset Current IIO  ±10 ±100 nA  
+Input Bias Current Note 6  IB  100 400 nA  
+Large Signal Voltage Gain  AV 30000 300000   RL ≥ 2 kΩ, VO = ±10 V 
+Circuit Current Note 7  ICC  5 8 mA  
+Common Mode Rejection Ratio  CMR 80 100  dB  
+Supply Voltage Rejection Ratio  SVR 80 100  dB  
+Output Voltage Swing Vom ±12 ±13.4  V RL ≥ 10 kΩ 
+Output Voltage Swing Vom ±10 ±12.8  V RL ≥ 2 kΩ 
+Common Mode Input Voltage  
+Range 
+VICM ±12 ±14  V  
+Slew Rate SR 5 7  V/μs RL ≥ 2 kΩ 
+Gain Bandwidth Product GBW 10 15  MHz fO = 100 kHz 
+Unity Gain Frequency funity  7  MHz open loop 
+Phase Margin φ unity  50  Deg open loop 
+Total Harmonic Distortion THD 
+  0.002  % 
+VO = 3 Vr.m.s.,  
+f = 20 Hz ~ 20 kHz 
+(Figure 1 )  
+Input Equivalent Noise Voltage Vn  0.9  μVr.m.s RIAA (Figure 2 ) 
+Input Equivalent Noise Voltage Vn 
+  0.53 0.65 μVr.m.s FLAT + JIS A,  
+RS = 100 Ω (Figure 3 ) 
+Input Equivalent Noise Voltage 
+Density 
+en  5.5  nV/ Hz  fO = 10 Hz, RS = 100 Ω 
+Input Equivalent Noise Voltage 
+Density 
+en  4.5  nV/ Hz  fO = 1 kHz, RS = 100 Ω 
+Input Equivalent Noise Current 
+Density 
+in  0.7  pA/ Hz  fO = 1 kHz 
+Channel Separation   120  dB f = 20 Hz ~ 20 kHz 
+【Note】 6.  The current flow direction of the input bias is out from the IC because the first stage of the IC composed  
+of PNP transistor.   
+  7. Current flowing through the internal circuit. This current flow regardless of the channel used. 
+ 
+  
+UPC4570 
+R03DS0135EJ0200  Rev.2.00  Page 5 of 11 
+Feb.27.25  
+MEASUREMENT CIRCUIT 
+Figure 1: Total Harmonic Distortion Measurement Circuit 
+ 
+ 
+Figure 2: Noise Measurement Circuit (RIAA) 
+ 
+ 
+Figure 3: Noise Measurement Circuit (FLAT+JIS A) 
+ 
+  
++
+-
+VO = 3 Vr.m.s
+2 kΩ
++
+-
+VO = ( 36.5 dB + 40 dB ) × Vn
+100 kΩ56 kΩ
+2400 pF 8200 pF
+40 dB Amp.
+∴Vn = VO
+76.5 dB
+LPF
+(fO = 30 kHz )
++
++
+33 μF
+47 μF
+2.2 kΩ
+610 Ω 30 kΩ 330 kΩ
++
+1.5 μF
++
+-
+VO = 40 dB × VnJIS A
+∴Vn = VO
+40 dB
+100 Ω
+RS = 100 Ω
+10 kΩ
+UPC4570 
+R03DS0135EJ0200  Rev.2.00  Page 6 of 11 
+Feb.27.25  
+ELECTRICAL CHARACTERISTICS  
+   
+ 
+   
+0
+100
+200
+300
+400
+500
+600
+0 20 40 60 80 100
+Total Power Dissipation, PT [mW]
+Operating Ambient Temperature, TA [°C]
+PT vs. TA
+With 100 mm x 100 mm,
+thickness 1 mm glass
+epoxy substrate (refer to
+"ABSOLUTE MAXIMUM
+RATINGS Note4")
+0
+20
+40
+60
+80
+100
+120
+140
+1 10 100 1k 10k 100k 1M 10M
+Open Loop Voltage Gain, AV [dB]
+Frequency, f [Hz]
+AV vs. f 
+V ± = ±15 V
+RL = 2 kΩ
+0
+10
+20
+30
+100 1k 10k 100k 1M 10M
+Output Voltage Swing, Vom [Vp-p]
+Frequency, f [Hz]
+Vom vs. f 
+V ± = ±15 V
+RL = 10 kΩ
+VO
+- , IO SINK
+VO
++ , IO SOURCE
+0
+±5
+±10
+±15
+0 20 40 60 80 100 120
+Output Voltage, VO 
+± [V]
+Output Current, IO [mA]
+VO
+± vs. IO
+V ± = ±15 V
+UPC4570 
+R03DS0135EJ0200  Rev.2.00  Page 7 of 11 
+Feb.27.25  
+ 
+  
+  
+-20
+-10
+0
+10
+20
+±0 ±10 ±20
+Common Mode Input Voltage Range, VICM
+[V]
+Power Supply Voltage, V ± [V]
+VICM vs. V ±
+-10
+-5
+0
+5
+10
+0 1 2 3 4 5 6 7 8
+Output Voltage, VO [V]
+Time, t [μs]
+Voltage Follower Pulse Response
+V ± = ±15 V
+AV = 1
+RL = 2 kΩ
+0.1
+1
+10
+100
+10 100 1k 10k 100k
+Input Equivalent NoiseVoltage, Vn [μVr.m.s.]
+Source Resistance, RS [Ω]
+Vn vs. RS (FLAT + JIS A)
+V ± = ±15 V
+0
+2
+4
+6
+8
+10
+12
+10 100 1k 10k 100k
+Frequency, f [Hz]
+e
+n vs. f 
+V ± = ±15 V
+RS = 100Ω
+Input Equivalent NoiseVoltage Density, en
+[nV/ Hz]
+UPC4570 
+R03DS0135EJ0200  Rev.2.00  Page 8 of 11 
+Feb.27.25  
+  
+ 
+ 
+  
+0.0001
+0.001
+0.01
+0.1
+1
+10 100 1k 10k 100k
+Total Harmonic Distortion, THD [%]
+Frequency, f [Hz]
+THD vs. f
+V ± = ±15 V
+VO = 3 Vr.m.s.
+AV = 1
+RL = 2 kΩ
+UPC4570 
+R03DS0135EJ0200  Rev.2.00  Page 9 of 11 
+Feb.27.25  
+USE WITH PRECAUTIONS 
+• Managing unused circuits  
+If there is an unused circuit, the following connection is recommended. 
+ 
+ 
+ 
+• Power Supply (Dual Power Supply / Single Power Supply) 
+The op amp operates when a predetermine voltage is applied between V + - V – . Therefore, while it operates  from a 
+single power supply (V - = GND), it is not possible to operate the input and output near GND. So please be careful of 
+the common-mode input voltage range and maximum output voltage. 
+ 
+• Ratings of input/output pin voltage 
+When the voltage of input/output pin exceeds the absolute maximum rating, the parasitic diode within the IC may conduct, 
+causing characteristics degradation or damage. In addition, if the input pin is lower than V −, or the output pin exceeds 
+the power supply voltage, it is recommended to make a clamping circuit using a diode with low forward voltage (e.g.: 
+Schottky diode) as protection. 
+ 
+• Range of common-mode input voltage 
+When the supply voltage does not meet the condition of electrical characteristics, the range of common-mode input 
+voltage is as follows.  
+V
+ICM (TYP.) : V - +1 ~ V + -1 [V] (TA = 25°C).  
+During designing, do include some tolerance by considering temperature characteristics etc. 
+ 
+• Maximum output voltage 
+The TYP. value range of the maximum output voltage when the supply voltage does not meet the condition of electrical 
+characteristics is as follows: 
+Vom+ (TYP.): V+ - 1.6 [V] (TA = 25°C),  Vom− (TYP.): V - + 1.6 [V] (TA = 25°C) 
+During designing, do include some tolerance by considering characteristics variation, temperature characteristics and 
+so on. In addition, also note that the output voltage range (V om+ - V om−) will become  narrow when the output current 
+increases. 
+ 
+• Handling of ICs 
+When stress is added to ICs due to warpage or bending of a board, the characteristic may fluctuates due to piezoelectric 
+(piezo) effect. Therefore, pay attention to warpage or bending of a board. 
+  
+V -
++
+-
+V -
+V +V +
+R
+R
+同相入力電圧範囲
+(VICM) 内の電位へ
+Example of unused circuit process 
+To potentials within 
+the range of 
+common-mode input 
+voltage (VICM) 
+Remark: In this example, an intermediate potential between V + and V - is applied. 
+UPC4570 
+R03DS0135EJ0200  Rev.2.00  Page 10 of 11 
+Feb.27.25  
+PACKAGE DRAWINGS  
+8-PIN PLASTIC SOP 
+JEITA Package code RENESAS code MASS (TYP.) [g] 
+P-LSOP8-4.4×5.2-1.27 PLSP0008DE-A 0.09[g] 
+ 
+  
+
+UPC4570 
+R03DS0135EJ0200  Rev.2.00  Page 11 of 11 
+Feb.27.25  
+8-PIN PLASTIC TSSOP 
+JEITA Package code RENESAS code Previous code MASS(TYP.) [g] 
+P-TSSOP8-0225-0.65 PTSP0008JD-A P8GR-65-9LG － 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ZD 0.60
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+detail of lead end 
+NOTE 
+Each lead centerline is located within 0.10 mm of 
+its true position at maximum material condition. 
+ITEM
+D
+D1
+E
+HE
+A
+A1
+A2
+A3 0.25
++0.06
+-0.05
+c
+L 0.5
+Lp
+L1
++5°
+-3°
+e 0.65
+x 0.10
+y 0.10
+ZD 0.60
+θ 3°
+0.60 ±0.15
+1.00 ±0.20
+MILLIMETERS
+3.15 ±0.15
+3.00 ±0.10
+4.40 ±0.10
+1.20 MAX.
+6.40 ±0.20
+0.10 ±0.05
+1.00 ±0.05
+b 0.24
+0.145 ±0.055
+(Unit : mm) 
+© 2024 Renesas Electronics Corporation. All rights reserved. 
+Notice 
+1. Descriptions of circuits, software and other related information in this document are provided only to illustrate the operation of semiconductor products 
+and application examples. You are fully responsible for the incorporation or any other use of the circuits, software, and information in the design of your 
+product or system. Renesas Electronics disclaims any and all liability for any losses and damages incurred by you or third parties arising from the use 
+of these circuits, software, or information. 
+2. Renesas Electronics hereby expressly disclaims any warranties against and liability for infringement or any other claims involving patents, copyrights, 
+or other intellectual property rights of third parties, by or arising from the use of Renesas Electronics products or technical information described in this 
+document, including but not limited to, the product data, drawings, charts, programs, algorithms, and application examples. 
+3. No license, express, implied or otherwise, is granted hereby under any patents, copyrights or other intellectual property rights of Renesas Electronics 
+or others. 
+4. You shall be responsible for determining what licenses are required from any third parties, and obtaining such licenses for the lawful import, export, 
+manufacture, sales, utilization, distribution or other disposal of any products incorporating Renesas Electronics products, if required. 
+5. You shall not alter, modify, copy, or reverse engineer any Renesas Electronics product, whether in whole or in part. Renesas Electronics disclaims any 
+and all liability for any losses or damages incurred by you or third parties arising from such alteration, modification, copying or reverse engineering. 
+6. Renesas Electronics products are classified according to the following two quality grades: “Standard” and “High Quality”. The intended applications for 
+each Renesas Electronics product depends on the product’s quality grade, as indicated below. 
+ "Standard": Computers; office equipment; communications equipment; test and measurement equipment; audio and visual equipment; home 
+electronic appliances; machine tools; personal electronic equipment; industrial robots; etc. 
+ "High Quality": Transportation equipment (automobiles, trains, ships, etc.); traffic control (traffic lights); large-scale communication equipment; key 
+financial terminal systems; safety control equipment; etc. 
+Unless expressly designated as a high reliability product or a product for harsh environments in a Renesas Electronics data sheet or other Renesas 
+Electronics document, Renesas Electronics products are not intended or authorized for use in products or systems that may pose a direct threat to 
+human life or bodily injury (artificial life support devices or systems; surgical implantations; etc.), or may cause serious property damage (space 
+system; undersea repeaters; nuclear power control systems; aircraft control systems; key plant systems; military equipment; etc.). Renesas Electronics 
+disclaims any and all liability for any damages or losses incurred by you or any third parties arising from the use of any Renesas Electronics product 
+that is inconsistent with any Renesas Electronics data sheet, user’s manual or other Renesas Electronics document. 
+7. No semiconductor product is absolutely secure. Notwithstanding any security measures or features that may be implemented in Renesas Electronics 
+hardware or software products, Renesas Electronics shall have absolutely no liability arising out of any vulnerability or security breach, including but 
+not limited to any unauthorized access to or use of a Renesas Electronics product or a system that uses a Renesas Electronics product. RENESAS 
+ELECTRONICS DOES NOT WARRANT OR GUARANTEE THAT RENESAS ELECTRONICS PRODUCTS, OR ANY SYSTEMS CREATED USING 
+RENESAS ELECTRONICS PRODUCTS WILL BE INVULNERABLE OR FREE FROM CORRUPTION, ATTACK, VIRUSES, INTERFERENCE, 
+HACKING, DATA LOSS OR THEFT, OR OTHER SECURITY INTRUSION (“Vulnerability Issues”). RENESAS ELECTRONICS DISCLAIMS ANY AND 
+ALL RESPONSIBILITY OR LIABILITY ARISING FROM OR RELATED TO ANY VULNERABILITY ISSUES. FURTHERMORE, TO THE EXTENT 
+PERMITTED BY APPLICABLE LAW, RENESAS ELECTRONICS DISCLAIMS ANY AND ALL WARRANTIES, EXPRESS OR IMPLIED, WITH 
+RESPECT TO THIS DOCUMENT AND ANY RELATED OR ACCOMPANYING SOFTWARE OR HARDWARE, INCLUDING BUT NOT LIMITED TO 
+THE IMPLIED WARRANTIES OF MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. 
+8. When using Renesas Electronics products, refer to the latest product information (data sheets, user’s manuals, application notes, “General Notes for 
+Handling and Using Semiconductor Devices” in the reliability handbook, etc.), and ensure that usage conditions are within the ranges specified by 
+Renesas Electronics with respect to maximum ratings, operating power supply voltage range, heat dissipation characteristics, installation, etc. Renesas 
+Electronics disclaims any and all liability for any malfunctions, failure or accident arising out of the use of Renesas Electronics products outside of such 
+specified ranges. 
+9. Although Renesas Electronics endeavors to improve the quality and reliability of Renesas Electronics products, semiconductor products have specific 
+characteristics, such as the occurrence of failure at a certain rate and malfunctions under certain use conditions. Unless designated as a high reliability 
+product or a product for harsh environments in a Renesas Electronics data sheet or other Renesas Electronics document, Renesas Electronics 
+products are not subject to radiation resistance design. You are responsible for implementing safety measures to guard against the possibility of bodily 
+injury, injury or damage caused by fire, and/or danger to the public in the event of a failure or malfunction of Renesas Electronics products, such as 
+safety design for hardware and software, including but not limited to redundancy, fire control and malfunction prevention, appropriate treatment for 
+aging degradation or any other appropriate measures. Because the evaluation of microcomputer software alone is very difficult and impractical, you are 
+responsible for evaluating the safety of the final products or systems manufactured by you. 
+10. Please contact a Renesas Electronics sales office for details as to environmental matters such as the environmental compatibility of each Renesas 
+Electronics product. You are responsible for carefully and sufficiently investigating applicable laws and regulations that regulate the inclusion or use of 
+controlled substances, including without limitation, the EU RoHS Directive, and using Renesas Electronics products in compliance with all these 
+applicable laws and regulations. Renesas Electronics disclaims any and all liability for damages or losses occurring as a result of your noncompliance 
+with applicable laws and regulations. 
+11. Renesas Electronics products and technologies shall not be used for or incorporated into any products or systems whose manufacture, use, or sale is 
+prohibited under any applicable domestic or foreign laws or regulations. You shall comply with any applicable export control laws and regulations 
+promulgated and administered by the governments of any countries asserting jurisdiction over the parties or transactions. 
+12. It is the responsibility of the buyer or distributor of Renesas Electronics products, or any other party who distributes, disposes of, or otherwise sells or 
+transfers the product to a third party, to notify such third party in advance of the contents and conditions set forth in this document. 
+13. This document shall not be reprinted, reproduced or duplicated in any form, in whole or in part, without prior written consent of Renesas Electronics. 
+14. Please contact a Renesas Electronics sales office if you have any questions regarding the information contained in this document or Renesas 
+Electronics products. 
+(Note1) “Renesas Electronics” as used in this document means Renesas Electronics Corporation and also includes its directly or indirectly controlled 
+subsidiaries. 
+(Note2) “Renesas Electronics product(s)” means any product developed or manufactured by or for Renesas Electronics. 
+ 
+(Rev.5.0-1  October 2020) 
+ 
+Corporate Headquarters  Contact information 
+TOYOSU FORESIA, 3-2-24 Toyosu, 
+Koto-ku, Tokyo 135-0061, Japan 
+www.renesas.com 
+ For further information on a product, technology, the most up-to-date 
+version of a document, or your nearest sales office, please visit: 
+www.renesas.com/contact/. 
+Trademarks   
+Renesas and the Renesas logo are trademarks of Renesas Electronics 
+Corporation. All trademarks and registered trademarks are the property 
+of their respective owners. 
+  
+ 

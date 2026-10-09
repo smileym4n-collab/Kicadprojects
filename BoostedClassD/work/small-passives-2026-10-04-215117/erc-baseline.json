@@ -1,0 +1,68 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-05T17:19:37",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.5",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/61c6698c-087a-4ce7-8548-fc907c1fccfd",
+            "violations": []
+        },
+        {
+            "path": "/ESP32-ATTINY/",
+            "uuid_path": "/61c6698c-087a-4ce7-8548-fc907c1fccfd/5028545b-9c5d-4ac4-b811-ff97518ff25d",
+            "violations": [
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol C32 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 0.5334,
+                                "y": 0.4064
+                            },
+                            "uuid": "e5e3d94e-6131-4b67-af4e-0aac4452cc72"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                }
+            ]
+        },
+        {
+            "path": "/Amplifiers/",
+            "uuid_path": "/61c6698c-087a-4ce7-8548-fc907c1fccfd/b51f6800-4f2e-4389-95b5-28165e5e4a09",
+            "violations": []
+        },
+        {
+            "path": "/CHGPOWER/",
+            "uuid_path": "/61c6698c-087a-4ce7-8548-fc907c1fccfd/be373871-6fed-4303-8b9a-5dff02b6880d",
+            "violations": []
+        }
+    ],
+    "source": "BoostedClassD.kicad_sch"
+}

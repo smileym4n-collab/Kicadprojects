@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/tomwatson/Documents/GitHub/Kicadprojects/InputSwitch/review/layout-2026-10-03/autosave-check/InputSwitch.kicad_sch</source>
+    <date>2026-10-03T22:17:52</date>
+    <tool>Eeschema 10.0.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Audio source selector and output mute</title>
+        <company/>
+        <rev>A</rev>
+        <date>2026-10-01</date>
+        <source>InputSwitch.kicad_sch</source>
+        <comment number="1" value="Low-voltage controller only. No mains on this PCB."/>
+        <comment number="2" value="ULN2003A/G6K pickup margin requires bench validation."/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/12V input and 5V buck supply/" tstamps="/8981c1c3-ff50-5488-808f-726a0ebb5885/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Power.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/ATtiny412 and relay drivers/" tstamps="/dabaaf26-2532-5494-8858-09ead4931d51/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Control.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/Isolated left detector/" tstamps="/8bffe459-45b3-5ad5-9758-aa42451eb6e6/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Detector_L.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/Isolated right detector/" tstamps="/b7179806-ed8b-58f5-b8da-abd218f72adb/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Detector_R.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J1">
+      <value>PreAmp L</value>
+      <footprint>Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="review/layout-2026-10-03/autosave-check/InputSwitch.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d4fd0c2b-1404-4d35-809c-894e44dd2fd3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>Marantz L</value>
+      <footprint>Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="review/layout-2026-10-03/autosave-check/InputSwitch.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>80b13f11-ced2-470d-a913-7e2e92a14886</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J3">
+      <value>PreAmp R</value>
+      <footprint>Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="review/layout-2026-10-03/autosave-check/InputSwitch.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a1c695f1-1e6d-421b-a3ee-e4ae5f8d0d30</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J4">
+      <value>Marantz R</value>
+      <footprint>Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="review/layout-2026-10-03/autosave-check/InputSwitch.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d37c4f4e-2938-42f5-bc6a-97034cd2efb5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J5">
+      <value>Out L</value>
+      <footprint>Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="review/layout-2026-10-03/autosave-check/InputSwitch.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1661ea5c-33db-4b19-a53c-87ad435d9505</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J6">
+      <value>Out R</value>
+      <footprint>Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="review/layout-2026-10-03/autosave-check/InputSwitch.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>439cbcd8-74c0-44a7-983a-ef3321a1ae50</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="K1">
+      <value>G6K</value>
+      <footprint>Relay_THT:Relay_DPDT_Omron_G6K-2P-Y</footprint>
+      <datasheet>https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Relay_THT:Relay_DPDT_Omron_G6K-2P-Y</field>
+        <field name="Datasheet">https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="InputSwitch" part="G6K_5V" description="G6K-2P-Y DC5; coil 1+,8-; NC 2/7; COM 3/6; NO 4/5. Pin numbering preserved."/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="review/layout-2026-10-03/autosave-check/InputSwitch.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f76f881d-42a1-4101-a2d4-6e7aaaa29cd6 0d6f0000-8491-492f-bc5d-5821caa889d5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="7"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="1"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="K2">
+      <value>G6K</value>
+      <footprint>Relay_THT:Relay_DPDT_Omron_G6K-2P-Y</footprint>
+      <datasheet>https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Relay_THT:Relay_DPDT_Omron_G6K-2P-Y</field>
+        <field name="Datasheet">https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="InputSwitch" part="G6K_5V" description="G6K-2P-Y DC5; coil 1+,8-; NC 2/7; COM 3/6; NO 4/5. Pin numbering preserved."/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="review/layout-2026-10-03/autosave-check/InputSwitch.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>69e683fc-5e9c-4065-bb89-8ed466ac84b3 0ccf70f7-de78-4c9e-b861-201ca4551d2e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="7"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="1"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="K3">
+      <value>G6K</value>
+      <footprint>Relay_THT:Relay_DPDT_Omron_G6K-2P-Y</footprint>
+      <datasheet>https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Relay_THT:Relay_DPDT_Omron_G6K-2P-Y</field>
+        <field name="Datasheet">https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="InputSwitch" part="G6K_5V" description="G6K-2P-Y DC5; coil 1+,8-; NC 2/7; COM 3/6; NO 4/5. Pin numbering preserved."/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="review/layout-2026-10-03/autosave-check/InputSwitch.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>98e57e5c-615e-42a2-b885-b2c1f081ae17 40254965-245b-43c3-b9fb-0a852eaf1e3e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="7"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="1"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>100K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="review/layout-2026-10-03/autosave-check/InputSwitch.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7adad56b-eeec-4d23-ab4d-88c5741c03bc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>100K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="review/layout-2026-10-03/autosave-check/InputSwitch.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>21bb1ac6-152e-41cc-91d0-4353adb10218</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R11">
+      <value>100K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="review/layout-2026-10-03/autosave-check/InputSwitch.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0847819e-1e26-46d1-8c35-e6797c8598b5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R12">
+      <value>100K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="review/layout-2026-10-03/autosave-check/InputSwitch.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>285b681b-c9ff-4529-abeb-43d273bb9980</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="InputSwitch" part="G6K_5V">
+      <description>G6K-2P-Y DC5; coil 1+,8-; NC 2/7; COM 3/6; NO 4/5. Pin numbering preserved.</description>
+      <docs>https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf</docs>
+      <fields>
+        <field name="Reference">K</field>
+        <field name="Value">G6K_5V</field>
+        <field name="Footprint">Relay_THT:Relay_DPDT_Omron_G6K-2P-Y</field>
+        <field name="Datasheet">https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf</field>
+        <field name="Description">G6K-2P-Y DC5; coil 1+,8-; NC 2/7; COM 3/6; NO 4/5. Pin numbering preserved.</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="NC" type="passive"/>
+        <pin num="3" name="COM" type="passive"/>
+        <pin num="4" name="NO" type="passive"/>
+        <pin num="5" name="NO" type="passive"/>
+        <pin num="6" name="COM" type="passive"/>
+        <pin num="7" name="NC" type="passive"/>
+        <pin num="8" name="-" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/AV_L_RETURN" class="Default">
+      <node ref="J2" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="K1" pin="5" pinfunction="NO_5" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="2" name="/AV_L_SIGNAL" class="Default">
+      <node ref="J2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="K1" pin="4" pinfunction="NO_4" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+    </net>
+    <net code="3" name="/AV_R_RETURN" class="Default">
+      <node ref="J4" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="K2" pin="5" pinfunction="NO_5" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+    </net>
+    <net code="4" name="/AV_R_SIGNAL" class="Default">
+      <node ref="J4" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="K2" pin="4" pinfunction="NO_4" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+    </net>
+    <net code="5" name="/P3A_L_SIGNAL" class="Default">
+      <node ref="J5" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="K3" pin="3" pinfunction="COM_3" pintype="passive"/>
+    </net>
+    <net code="6" name="/P3A_R_SIGNAL" class="Default">
+      <node ref="J6" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="K3" pin="6" pinfunction="COM_6" pintype="passive"/>
+    </net>
+    <net code="7" name="/REF_L_RETURN" class="Default">
+      <node ref="J1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="K1" pin="7" pinfunction="NC_7" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="8" name="/REF_L_SIGNAL" class="Default">
+      <node ref="J1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="K1" pin="2" pinfunction="NC_2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+    </net>
+    <net code="9" name="/REF_R_RETURN" class="Default">
+      <node ref="J3" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="K2" pin="7" pinfunction="NC_7" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+    </net>
+    <net code="10" name="/REF_R_SIGNAL" class="Default">
+      <node ref="J3" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="K2" pin="2" pinfunction="NC_2" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="SEL_L_RETURN" class="Default">
+      <node ref="J5" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="K1" pin="6" pinfunction="COM_6" pintype="passive"/>
+      <node ref="K3" pin="4" pinfunction="NO_4" pintype="passive"/>
+    </net>
+    <net code="12" name="SEL_L_SIGNAL" class="Default">
+      <node ref="K1" pin="3" pinfunction="COM_3" pintype="passive"/>
+      <node ref="K3" pin="2" pinfunction="NC_2" pintype="passive"/>
+    </net>
+    <net code="13" name="SEL_R_RETURN" class="Default">
+      <node ref="J6" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="K2" pin="6" pinfunction="COM_6" pintype="passive"/>
+      <node ref="K3" pin="5" pinfunction="NO_5" pintype="passive"/>
+    </net>
+    <net code="14" name="SEL_R_SIGNAL" class="Default">
+      <node ref="K2" pin="3" pinfunction="COM_3" pintype="passive"/>
+      <node ref="K3" pin="7" pinfunction="NC_7" pintype="passive"/>
+    </net>
+  </nets>
+</export>

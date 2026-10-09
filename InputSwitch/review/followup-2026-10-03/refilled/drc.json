@@ -1,0 +1,183 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-03T23:30:30",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.5",
+    "schematic_parity": [],
+    "source": "InputSwitch.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "The current configuration does not include the footprint library 'InputSwitch'",
+            "items": [
+                {
+                    "description": "Footprint U1",
+                    "pos": {
+                        "x": 77.597,
+                        "y": 120.267
+                    },
+                    "uuid": "0167dabc-9378-444d-abf4-85fad23d331f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'InputSwitch'",
+            "items": [
+                {
+                    "description": "Footprint U10",
+                    "pos": {
+                        "x": 98.3742,
+                        "y": 157.413527
+                    },
+                    "uuid": "9279d682-0573-45ed-af44-8cc0df61fb1c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'InputSwitch'",
+            "items": [
+                {
+                    "description": "Footprint U11",
+                    "pos": {
+                        "x": 130.213856,
+                        "y": 157.386061
+                    },
+                    "uuid": "f85933b1-3d40-4043-9ce5-7da70aa96047"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "comment": "",
+            "description": "Silkscreen clipped by solder mask",
+            "excluded": true,
+            "items": [
+                {
+                    "description": "Segment of F2 on F.Silkscreen",
+                    "pos": {
+                        "x": 64.798,
+                        "y": 152.7132
+                    },
+                    "uuid": "fca09e24-3e8c-4aac-b884-f5766b74806f"
+                },
+                {
+                    "description": "PTH pad 1 [Net-(J7-Pin_1)] of F2",
+                    "pos": {
+                        "x": 66.548,
+                        "y": 152.6032
+                    },
+                    "uuid": "415ca849-04b7-457f-8b3d-8e32faf57004"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "comment": "",
+            "description": "Silkscreen clipped by solder mask",
+            "excluded": true,
+            "items": [
+                {
+                    "description": "Segment of F2 on F.Silkscreen",
+                    "pos": {
+                        "x": 71.458,
+                        "y": 152.7132
+                    },
+                    "uuid": "62501c66-4fbf-4b8c-85e0-229a524136bc"
+                },
+                {
+                    "description": "PTH pad 1 [Net-(J7-Pin_1)] of F2",
+                    "pos": {
+                        "x": 66.548,
+                        "y": 152.6032
+                    },
+                    "uuid": "415ca849-04b7-457f-8b3d-8e32faf57004"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "comment": "",
+            "description": "Silkscreen clipped by solder mask",
+            "excluded": true,
+            "items": [
+                {
+                    "description": "Segment of F2 on F.Silkscreen",
+                    "pos": {
+                        "x": 64.798,
+                        "y": 129.9932
+                    },
+                    "uuid": "8c856a7c-8ea7-46d5-8e8e-0bb531b4d5cd"
+                },
+                {
+                    "description": "PTH pad 2 [Net-(D1-A)] of F2",
+                    "pos": {
+                        "x": 66.548,
+                        "y": 130.1032
+                    },
+                    "uuid": "ae036cc8-1503-4163-a097-03c0f02efd2c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "comment": "",
+            "description": "Silkscreen clipped by solder mask",
+            "excluded": true,
+            "items": [
+                {
+                    "description": "Segment of F2 on F.Silkscreen",
+                    "pos": {
+                        "x": 71.458,
+                        "y": 129.9932
+                    },
+                    "uuid": "c9039be5-085b-4d8d-9ab0-dd4579138f0d"
+                },
+                {
+                    "description": "PTH pad 2 [Net-(D1-A)] of F2",
+                    "pos": {
+                        "x": 66.548,
+                        "y": 130.1032
+                    },
+                    "uuid": "ae036cc8-1503-4163-a097-03c0f02efd2c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+{
+  "part": "TPS7A3901",
+  "positive_nominal_V": 4.9896,
+  "negative_nominal_V_ignoring_FB_offset": -4.998,
+  "positive_bounds_V": [
+    4.896987032967034,
+    5.08279081081081
+  ],
+  "negative_magnitude_bounds_V": [
+    4.828225874125875,
+    5.169043143143142
+  ],
+  "bounds_basis": "TI +/-1.5% positive and +/-3% negative plus owned resistor corners; independent bounds, not simulation.",
+  "feedback_parts": {
+    "R105": {
+      "value": "22k / 0.5%",
+      "foot": "Resistor_SMD:R_0805_2012Metric"
+    },
+    "R106": {
+      "value": "10k / 0.1%",
+      "foot": "Resistor_SMD:R_0805_2012Metric"
+    },
+    "R107": {
+      "value": "10k / 0.1%",
+      "foot": "Resistor_SMD:R_0805_2012Metric"
+    },
+    "R108": {
+      "value": "22k / 0.5%",
+      "foot": "Resistor_SMD:R_0805_2012Metric"
+    },
+    "R109": {
+      "value": "10k / 0.1%",
+      "foot": "Resistor_SMD:R_0805_2012Metric"
+    },
+    "R110": {
+      "value": "10k / 0.1%",
+      "foot": "Resistor_SMD:R_0805_2012Metric"
+    },
+    "R111": {
+      "value": "10k / 0.1%",
+      "foot": "Resistor_SMD:R_0805_2012Metric"
+    }
+  },
+  "BUF_load_uA": 118.99999999999999,
+  "max_allowed_BUF_uA": 1000,
+  "estimated_input_effective_uF_at_15V75": 3.2890220086161883,
+  "estimated_output_effective_uF_at_5V25": 4.860527627441728,
+  "capacitance_basis": "Samsung typical bias curve, -10% tolerance, -15% temperature, additional -10% aging estimate; bench validation still required.",
+  "soft_start_typ_ms": 17.87889683180967,
+  "feedback_time_constants_ms": [
+    0.32,
+    0.42000000000000004
+  ],
+  "nominal_dissipation_budget_W": 0.27,
+  "max_input_dissipation_budget_W": 0.30025,
+  "TI_theta_JA_C_per_W": 44.4,
+  "thermal_limitations": "Datasheet test-board theta only. Solder EP11 to GND copper; thermal vias at PCB stage; bench test enclosure.",
+  "pin_map": {
+    "10": "+5A",
+    "1": "+15V",
+    "2": "+15V",
+    "6": "-5A",
+    "5": "-15V",
+    "11": "GND",
+    "4": "GND",
+    "8": "Net-(U11-BUF)",
+    "7": "Net-(U11-FBN)",
+    "9": "Net-(U11-FBP)",
+    "3": "Net-(U11-NR{slash}SS)"
+  },
+  "package_review": "TI DSC0010J drawing4221826/E03/2026, datasheet pages50-52. 0.5mm pitch, 0.6x0.24 pads at +/-1.4; EP1.65x2.4 plus fingers, segmented stencil.",
+  "VO617A": {
+    "part": "VO617A-3",
+    "package": "DIP4, 7.62mm rows, 2.54mm pitch",
+    "pin_map": {
+      "3": "GND",
+      "4": "TRIGGER_RAW",
+      "1": "TRIG_LED_A",
+      "2": "TRIG_MINUS"
+    },
+    "trigger_LED_current_typ_mA": 4.954545454545454,
+    "pullup_current_approx_mA": 0.5,
+    "CTR_bin_percent_at_5mA": [
+      100,
+      200
+    ],
+    "trigger_polarity_and_isolation_unchanged": true,
+    "stock": "No positive connected inventory VO617 search result; user-selected common part, purchase/check availability."
+  },
+  "limitations": "Datasheet calculations and connectivity review; no regulator SPICE, prototype, thermal or trigger bench validation."
+}

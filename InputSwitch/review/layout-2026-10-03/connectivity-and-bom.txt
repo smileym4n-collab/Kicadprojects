@@ -1,0 +1,66 @@
+DIST C22 U5 5.58
+DIST C42 U7 5.58
+DIST C9 U9 38.39
+DIST C20 U10 4.75
+DIST C40 U11 39.93
+DIST C9 U11 4.89
+DIST C4 U1 10.65
+SCHEMATIC NET GROUP MISMATCHES []
+U1 [('1', '+12V', (77.597, 120.267)), ('2', 'GND', (80.137, 120.267)), ('3', '+5V', (82.67699999999999, 120.267))]
+U5 [('1', 'Net-(U5B--)', (121.563236, 136.752109)), ('2', 'Net-(U5A--)', (121.563236, 134.212109)), ('3', '/Isolated left detector/SENSE_INPUT', (121.563236, 131.67210899999998)), ('4', 'SEL_L_RETURN', (121.563236, 129.13210899999999)), ('5', 'Net-(U5B-+)', (113.943236, 129.13210899999999)), ('6', 'Net-(U5B--)', (113.943236, 131.67210899999998)), ('7', '/Isolated left detector/DETECT_PULSE', (113.943236, 134.212109)), ('8', 'ISO_L_QUIET', (113.943236, 136.752109))]
+U7 [('1', 'Net-(U7B--)', (149.646517, 136.780383)), ('2', 'Net-(U7A--)', (149.646517, 134.240383)), ('3', '/Isolated right detector/SENSE_INPUT', (149.646517, 131.700383)), ('4', 'SEL_R_RETURN', (149.646517, 129.160383)), ('5', 'Net-(U7B-+)', (142.02651699999998, 129.160383)), ('6', 'Net-(U7B--)', (142.02651699999998, 131.700383)), ('7', '/Isolated right detector/DETECT_PULSE', (142.02651699999998, 134.240383)), ('8', 'ISO_R_QUIET', (142.02651699999998, 136.780383))]
+U6 [('1', 'Net-(R32-Pad2)', (123.063, 146.236235)), ('2', 'Net-(Q2-C)', (123.063, 148.77623499999999)), ('3', 'GND', (130.683, 148.77623499999999)), ('4', 'Net-(R33-Pad1)', (130.683, 146.236235))]
+U8 [('1', 'Net-(R52-Pad2)', (151.117708, 146.304)), ('2', 'Net-(Q3-C)', (151.117708, 148.844)), ('3', 'GND', (158.737708, 148.844)), ('4', 'Net-(R53-Pad1)', (158.737708, 146.304))]
+U9 [('1', 'unconnected-(U9-NC-Pad1)', (91.0645, 142.179)), ('2', 'SOURCE_AV', (91.0645, 143.129)), ('3', 'GND', (91.0645, 144.07899999999998)), ('4', 'REFERENCE_LED', (93.3395, 144.07899999999998)), ('5', '+5V', (93.3395, 142.179))]
+C22 [('1', 'ISO_L_QUIET', (116.063736, 140.943109)), ('2', 'SEL_L_RETURN', (119.188736, 140.943109))]
+C42 [('1', 'ISO_R_QUIET', (144.147017, 140.971383)), ('2', 'SEL_R_RETURN', (147.272017, 140.971383))]
+C9 [('1', '+5V', (125.591056, 157.408361)), ('2', 'GND', (125.591056, 160.533361))]
+D1 [('1', '+12V', (78.0984, 131.318)), ('2', 'Net-(D1-A)', (74.0984, 131.318))]
+D2 [('1', '+12V', (81.66999999999999, 131.2926)), ('2', 'GND', (85.97, 131.2926))]
+Q2 [('1', 'Net-(Q2-C)', (118.388236, 149.325109)), ('2', 'Net-(Q2-B)', (115.848236, 146.785109)), ('3', 'SEL_L_RETURN', (118.388236, 144.24510899999999))]
+BOM
+1 PreAmp L J1 Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical
+1 Marantz L J2 Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical
+1 PreAmp R J3 Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical
+1 Marantz R J4 Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical
+1 Out L J5 Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical
+1 Out R J6 Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical
+3 G6K K1,K2,K3 Relay_THT:Relay_DPDT_Omron_G6K-2P-Y
+12 100K R6,R9,R11,R12,R24,R25,R28,R31,R44,R45,R48,R51 Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder
+1 100uF C1 Capacitor_THT:CP_Radial_D6.3mm_P2.50mm
+3 10uF C2,C20,C40 Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder
+3 47uF C3,C21,C41 Capacitor_THT:CP_Radial_D5.0mm_P2.50mm
+6 100nF C4,C5,C7,C9,C22,C42 Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder
+1 SS14 D1 Diode_SMD:D_SMA
+1 SMBJ13A D2 Diode_SMD:D_SMB
+1 1A F2 Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open
+4 M4 H1,H2,H3,H4 MountingHole:MountingHole_4.3mm_M4
+1 12V POWER J7 Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical
+1 R-78K5.0-2.0 U1 InputSwitch:R78B_2A_SIP3
+1 1uF C6 Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder
+1 2.2uF C8 Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder
+1 UPDI / +5V / GND J8 Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical
+1 PRE / COM / MTZ J9 Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical
+1 POWER RLY J10 Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical
+1 Marantz LED J11 Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical
+1 PreAmp LED J12 Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical
+7 1K R1,R26,R33,R34,R46,R53,R54 Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder
+5 47K R2,R3,R4,R5,R10 Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder
+4 4K7 R7,R8,R30,R50 Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder
+1 ATtiny412 U2 Package_SO:SOIC-8_3.9x4.9mm_P1.27mm
+2 ULN2003A U3,U4 Package_SO:SOIC-16_3.9x9.9mm_P1.27mm
+1 SN74LVC1G04 U9 Package_TO_SOT_SMD:SOT-23-5
+4 33uF C23,C25,C43,C45 Capacitor_THT:CP_Radial_D5.0mm_P2.50mm
+2 100nF C24,C44 Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm
+4 1N4148 D21,D22,D41,D42 Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal
+2 BC549 Q2,Q3 Package_TO_SOT_THT:TO-92_Wide
+2 2M2 R13,R49 Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder
+2 30R R20,R40 Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P25.40mm_Horizontal
+2 100R R21,R41 Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder
+2 3K3 R22,R42 Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder
+2 470K R23,R43 Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder
+2 10K R27,R47 Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder
+2 390R R32,R52 Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder
+2 LM358N U5,U7 Package_DIP:DIP-8_W7.62mm
+2 VO617A-3 U6,U8 Package_DIP:DIP-4_W7.62mm
+2 SPU03L-05 U10,U11 InputSwitch:SPU03L_05_SIP7

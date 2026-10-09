@@ -52,8 +52,8 @@
         "zones": {
           "border_display_style": 2,
           "border_hatch_pitch": 0.5,
-          "corner_radius": 0.0,
-          "corner_smoothing": 0,
+          "corner_radius": 2.0,
+          "corner_smoothing": 2,
           "fill_mode": 0,
           "hatch_gap": 1.5,
           "hatch_orientation": 0.0,
@@ -69,7 +69,13 @@
           "thermal_relief_spoke_width": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -203,7 +209,11 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        1.0,
+        3.5
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -230,7 +240,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -524,7 +539,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "/Users/tomwatson/Desktop/Gerber files/SubAmp/",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
@@ -661,7 +676,7 @@
         "uuid": "e53bd334-5190-489b-b6a0-f34afa33d35d"
       }
     ],
-    "used_designators": "Q2SA1-2,RV1,R1-33,2SA1,2SA1944-1945,Q1-20,#PWR1-6,D1-4,C1-10,J1-6,C\\-1-2,C+1-2",
+    "used_designators": "Q2SA1-2,RV1,R1-33,2SA1,2SA1944-1945,Q1-20,#PWR1-13,D1-4,C1-11,J1-6,C\\-1-2,C+1-2",
     "variants": []
   },
   "sheets": [

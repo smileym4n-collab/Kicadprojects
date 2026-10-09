@@ -1,0 +1,130 @@
+549 connectivity/package assertions, 1740 AC scenarios passed; max complex error 1.09e-13
+Noise estimates saved.
+{
+  "stage_2Vrms": {
+    "REF_12_70Hz": {
+      "BUF_L": 1.999996,
+      "BUF_R": 1.999996,
+      "SUM_INV": 1.818178,
+      "MONO": 1.818178,
+      "LP12": 1.285646,
+      "LP24": 0.909089,
+      "LEVEL_IN": 1.285646,
+      "ATT_IN": 0.642823,
+      "ATT_DRIVE": 0.925665,
+      "ATT_OUT": 0.642823,
+      "ATT_BUFFER": 0.642823,
+      "PHASE_OUT": 0.642823,
+      "HP_OUT": 0.640855,
+      "HP_FINAL": 0.640855,
+      "POLARITY_OUT": 0.640855,
+      "AMP_DRIVE": 1.28171,
+      "AMP_AC": 1.270035,
+      "AMP_OUT": 1.270035
+    },
+    "REF_24_70Hz": {
+      "BUF_L": 1.999996,
+      "BUF_R": 1.999996,
+      "SUM_INV": 1.818178,
+      "MONO": 1.818178,
+      "LP12": 1.285646,
+      "LP24": 0.909089,
+      "LEVEL_IN": 0.909089,
+      "ATT_IN": 0.454544,
+      "ATT_DRIVE": 0.654544,
+      "ATT_OUT": 0.454544,
+      "ATT_BUFFER": 0.454544,
+      "PHASE_OUT": 0.454544,
+      "HP_OUT": 0.453153,
+      "HP_FINAL": 0.453153,
+      "POLARITY_OUT": 0.453153,
+      "AMP_DRIVE": 0.906306,
+      "AMP_AC": 0.89805,
+      "AMP_OUT": 0.89805
+    },
+    "AV_24_70Hz": {
+      "BUF_L": 1.999996,
+      "BUF_R": 1.999996,
+      "SUM_INV": 1.818178,
+      "MONO": 1.818178,
+      "LP12": 1.285646,
+      "LP24": 0.909089,
+      "LEVEL_IN": 1.818178,
+      "ATT_IN": 0.909089,
+      "ATT_DRIVE": 1.309088,
+      "ATT_OUT": 0.909089,
+      "ATT_BUFFER": 0.909089,
+      "PHASE_OUT": 0.909089,
+      "HP_OUT": 0.906306,
+      "HP_FINAL": 0.909089,
+      "POLARITY_OUT": 0.909089,
+      "AMP_DRIVE": 1.818178,
+      "AMP_AC": 1.801617,
+      "AMP_OUT": 1.801617
+    }
+  },
+  "U4A_feedback_model": {
+    "model_limit": "Illustrative two-pole fit, not manufacturer macromodel or PCB stability qualification",
+    "unity_loop_Hz": 6954118.903571887,
+    "phase_margin_deg": 51.375918382596296,
+    "CS_source_ohms": {
+      "100": 1.4184535262858748,
+      "120": 1.7022173906730633,
+      "1000": 14.182060417556453,
+      "20000": 280.4035419365166
+    }
+  },
+  "supply": {
+    "REF": {
+      "coils": 2,
+      "coil_typ_mA": 66.89655172413792,
+      "coil_cold_upper_mA": 80.45977011494253,
+      "plus15_typ_mA": 129.89655172413794,
+      "minus15_typ_mA": 38.0,
+      "plus15_budget_mA": 190.45977011494253,
+      "minus15_budget_mA": 68.0,
+      "board_typ_W": 2.5184482758620694,
+      "board_budget_W": 4.070741379310345,
+      "U13_typ_W": 0.9239655172413792,
+      "U13_budget_W": 1.3410574712643677
+    },
+    "AV": {
+      "coils": 5,
+      "coil_typ_mA": 167.24137931034483,
+      "coil_cold_upper_mA": 201.14942528735634,
+      "plus15_typ_mA": 230.24137931034483,
+      "minus15_typ_mA": 38.0,
+      "plus15_budget_mA": 311.14942528735634,
+      "minus15_budget_mA": 68.0,
+      "board_typ_W": 4.023620689655172,
+      "board_budget_W": 5.971603448275863,
+      "U13_typ_W": 1.927413793103448,
+      "U13_budget_W": 2.6686436781609193
+    }
+  },
+  "rail_trip_25C_V_magnitudes": {
+    "pos15": [
+      13.396723898514853,
+      14.142564451565649
+    ],
+    "pos5": [
+      4.159514685643565,
+      4.3537164145757545
+    ],
+    "neg15": [
+      13.200705955239767,
+      13.92027149024023
+    ],
+    "neg5": [
+      3.9146488343365147,
+      4.232554174186685
+    ]
+  },
+  "DC_block": {
+    "C63_nominal_uF": 10,
+    "charging_tau_s": 0.22100000000000003,
+    "worst_tau_with_C20pct_R1pct_s": 0.26785200000000003,
+    "residual_fraction_after_2s_worst": 0.0005717492542338875,
+    "loaded_pole_Hz_approx": 1.4029328969902624
+  }
+}

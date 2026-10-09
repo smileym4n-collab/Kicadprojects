@@ -2059,6 +2059,121 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:Heatsink"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "HS"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Heatsink"
+				(at 0 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.3048 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0.3048 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Heatsink"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "thermal heat temperature"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Heatsink_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Heatsink_0_1"
+				(polyline
+					(pts
+						(xy -0.3302 1.27) (xy -0.9652 1.27) (xy -0.9652 3.81) (xy -1.6002 3.81) (xy -1.6002 1.27) (xy -2.2352 1.27)
+						(xy -2.2352 3.81) (xy -2.8702 3.81) (xy -2.8702 0) (xy -0.9652 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3302 1.27) (xy -0.3302 3.81) (xy 0.3048 3.81) (xy 0.3048 1.27) (xy 0.9398 1.27) (xy 0.9398 3.81)
+						(xy 1.5748 3.81) (xy 1.5748 1.27) (xy 2.2098 1.27) (xy 2.2098 3.81) (xy 2.8448 3.81) (xy 2.8448 0)
+						(xy -0.9652 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Mechanical:MountingHole"
 			(pin_names
 				(offset 1.016)
@@ -4838,6 +4953,12 @@
 		(uuid "2e530a21-903a-48e2-a216-833db254f925")
 	)
 	(junction
+		(at 304.8 228.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2fc62a63-2374-4828-bad3-4491211b3a7e")
+	)
+	(junction
 		(at 273.05 228.6)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5273,7 +5394,7 @@
 	)
 	(wire
 		(pts
-			(xy 292.1 228.6) (xy 313.69 228.6)
+			(xy 292.1 228.6) (xy 304.8 228.6)
 		)
 		(stroke
 			(width 0)
@@ -6283,6 +6404,16 @@
 	)
 	(wire
 		(pts
+			(xy 304.8 228.6) (xy 313.69 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b7bc418-29ac-4b93-84bb-d7270a411166")
+	)
+	(wire
+		(pts
 			(xy 228.6 45.72) (xy 228.6 132.08)
 		)
 		(stroke
@@ -6953,6 +7084,26 @@
 	)
 	(wire
 		(pts
+			(xy 304.8 228.6) (xy 304.8 240.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63ac0973-ec05-4004-a2d7-1f01c953178e")
+	)
+	(wire
+		(pts
+			(xy 125.73 31.75) (xy 120.65 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63dfc85d-b81c-4094-8736-f6c52e4ae07f")
+	)
+	(wire
+		(pts
 			(xy 482.6 139.7) (xy 482.6 157.48)
 		)
 		(stroke
@@ -7110,6 +7261,16 @@
 			(type default)
 		)
 		(uuid "71386430-90d8-41b7-bfa4-3d93658d483c")
+	)
+	(wire
+		(pts
+			(xy 304.8 247.65) (xy 304.8 256.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "718b62aa-1b9b-40c5-a77e-52bd16b86460")
 	)
 	(wire
 		(pts
@@ -8193,6 +8354,16 @@
 	)
 	(wire
 		(pts
+			(xy 111.76 26.67) (xy 125.73 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac642f46-0f6f-4222-b4e3-91f4b37340db")
+	)
+	(wire
+		(pts
 			(xy 431.8 266.7) (xy 431.8 261.62)
 		)
 		(stroke
@@ -8943,6 +9114,16 @@
 	)
 	(wire
 		(pts
+			(xy 111.76 29.21) (xy 125.73 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d622a6d4-48c9-4546-bf9a-d30282c63bd6")
+	)
+	(wire
+		(pts
 			(xy 266.7 228.6) (xy 273.05 228.6)
 		)
 		(stroke
@@ -9280,6 +9461,16 @@
 			(type default)
 		)
 		(uuid "e6e0fc5b-b22b-4e21-9fc2-378d3b056311")
+	)
+	(wire
+		(pts
+			(xy 120.65 31.75) (xy 120.65 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8f817b8-b552-4db6-a6ec-cff47d115c62")
 	)
 	(wire
 		(pts
@@ -9901,6 +10092,16 @@
 		)
 		(uuid "3aee9681-2c71-469c-8628-863dd7af81f5")
 	)
+	(label "+5VDF"
+		(at 111.76 26.67 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3df7f100-b374-456b-80f3-a709b428f852")
+	)
 	(label "PRE_P_ADJ"
 		(at 256.54 330.2 0)
 		(effects
@@ -9951,7 +10152,7 @@
 		)
 		(uuid "4e6a3373-2752-4b42-9ef9-a353c6215aac")
 	)
-	(label "OUT_L"
+	(label "OUT_R"
 		(at 546.1 50.8 0)
 		(effects
 			(font
@@ -10001,7 +10202,7 @@
 		)
 		(uuid "5f6ac428-7207-44ec-aae8-4b975c23fba3")
 	)
-	(label "OUT_R"
+	(label "OUT_L"
 		(at 546.1 137.16 0)
 		(effects
 			(font
@@ -10340,6 +10541,16 @@
 			(justify left bottom)
 		)
 		(uuid "9d8ac5fa-f824-4656-9c4a-3a54937190bc")
+	)
+	(label "PROG"
+		(at 111.76 29.21 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a305d98f-403f-438a-9867-2260e1ecd320")
 	)
 	(label "-5V"
 		(at 248.92 200.66 0)
@@ -10802,12 +11013,108 @@
 		(uuid "fff7edc6-b554-4ea2-a213-2e5719b97db8")
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x03_Socket")
+		(at 130.81 29.21 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "00b0efe4-52be-4624-8fff-27400b0032ac")
+		(property "Reference" "J3"
+			(at 132.08 27.9399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PROG"
+			(at 132.08 30.4799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical"
+			(at 130.81 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 130.81 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated"
+			(at 130.81 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 130.81 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a22ae32c-6918-4ace-aa34-5b6bb20cf11e")
+		)
+		(pin "2"
+			(uuid "ac486c85-5bd3-4be8-b4fa-f9ed94564b46")
+		)
+		(pin "3"
+			(uuid "6cf4b64c-a9fc-49af-abff-856aba009bac")
+		)
+		(instances
+			(project "PCM1704"
+				(path "/4c6b43b3-6de1-4a08-8cc0-9a6dc221981c"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 311.15 71.12 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -10856,6 +11163,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 311.15 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 311.15 71.12 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11012,6 +11330,17 @@
 			)
 		)
 		(property "Description" "Low-noise bipolar audio operational amplifier"
+			(at 502.92 321.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C94590"
 			(at 502.92 321.31 0)
 			(hide yes)
 			(show_name no)
@@ -11217,7 +11546,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -11268,6 +11597,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 407.67 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 407.67 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -11455,7 +11795,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -11513,6 +11853,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 457.2 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "02005671-4281-4e6e-8f9f-2e793c71c00b")
 		)
@@ -11534,7 +11885,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -11586,6 +11937,17 @@
 			)
 		)
 		(property "Description" "20MHz, 16kB Flash, 2kB SRAM, 256B EEPROM, SOIC-14"
+			(at 55.88 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 55.88 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -11653,7 +12015,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -11704,6 +12066,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 518.16 321.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 518.16 321.31 0)
 			(hide yes)
 			(show_name no)
@@ -11886,12 +12259,90 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 120.65 40.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "12b403aa-4b90-4b8a-af8d-d7da1dd6518e")
+		(property "Reference" "#PWR015"
+			(at 120.65 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 120.65 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 120.65 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 120.65 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a12cca1a-0f27-42c1-8a31-0b4f08954716")
+		)
+		(instances
+			(project "PCM1704"
+				(path "/4c6b43b3-6de1-4a08-8cc0-9a6dc221981c"
+					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Polarized")
 		(at 186.69 190.5 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -11952,6 +12403,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 186.69 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "20e9f2fa-c19f-4a9f-8246-52b3d75eb35b")
 		)
@@ -11968,12 +12430,90 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 304.8 256.54 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "156c5577-f8e2-4592-ae4e-94d712e92cd2")
+		(property "Reference" "#PWR070"
+			(at 304.8 262.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 304.8 261.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 304.8 256.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 304.8 256.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 304.8 256.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a75852bc-3d05-4916-941d-5d8590f94772")
+		)
+		(instances
+			(project "PCM1704"
+				(path "/4c6b43b3-6de1-4a08-8cc0-9a6dc221981c"
+					(reference "#PWR070")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 384.81 48.26 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -12031,6 +12571,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 384.81 48.26 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b1fd623f-a2e7-42d7-967a-17c0c53b04ad")
 		)
@@ -12052,7 +12603,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -12109,6 +12660,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 203.2 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a1cc5e16-fad0-465c-8bff-fb974df5ea55")
 		)
@@ -12130,7 +12692,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -12179,6 +12741,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 311.15 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 311.15 167.64 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12287,7 +12860,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -12348,6 +12921,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 111.76 250.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4245ee4f-595f-4803-95a7-a8d375e8e548")
 		)
@@ -12369,7 +12953,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -12427,6 +13011,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 396.24 30.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7b3cbeec-4b63-47e3-8f37-6d3492eb719e")
 		)
@@ -12443,12 +13038,99 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:Heatsink")
+		(at 445.77 367.03 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1c7a2271-a529-4617-b1a3-4486b7c61cc6")
+		(property "Reference" "HS1"
+			(at 449.58 363.8549 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Heatsink"
+			(at 449.58 366.3949 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Custom:Tiny heatsink"
+			(at 446.0748 367.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 446.0748 367.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Heatsink"
+			(at 445.77 367.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 445.77 367.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "PCM1704"
+				(path "/4c6b43b3-6de1-4a08-8cc0-9a6dc221981c"
+					(reference "HS1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 506.73 234.95 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -12499,6 +13181,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 506.73 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 506.73 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -12667,6 +13360,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C94590"
+			(at 410.21 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9b591d2d-4add-4dfb-9747-73df8bad34ac")
 		)
@@ -12784,7 +13488,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -12845,6 +13549,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 369.57 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ab2507a2-c010-48fb-aa23-ab669dbc4d50")
 		)
@@ -12866,7 +13581,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -12927,6 +13642,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 292.1 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a6acfb90-e86a-47b7-bfc3-e454935baae1")
 		)
@@ -12948,7 +13674,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -13009,6 +13735,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 157.48 299.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "194de3c2-73f3-4b48-8727-cfd74be645ca")
 		)
@@ -13030,7 +13767,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -13046,7 +13783,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "590R"
+		(property "Value" "1K3"
 			(at 133.35 307.34 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13108,6 +13845,17 @@
 			(effects
 				(font
 					(size 1 1)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 129.54 306.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
@@ -13366,7 +14114,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -13414,6 +14162,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 247.65 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 247.65 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -13655,7 +14414,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -13706,6 +14465,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 474.98 321.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 474.98 321.31 0)
 			(hide yes)
 			(show_name no)
@@ -13815,7 +14585,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -13866,6 +14636,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 457.2 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 457.2 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -14131,7 +14912,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -14202,6 +14983,17 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
+			(at 195.58 330.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 195.58 330.2 0)
 			(hide yes)
 			(show_name no)
@@ -14360,6 +15152,17 @@
 			)
 		)
 		(property "Description" "Low-noise bipolar audio operational amplifier"
+			(at 410.21 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C94590"
 			(at 410.21 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -14643,7 +15446,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -14701,6 +15504,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 353.06 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3d36f601-a98b-4718-a95a-d395ae5a2075")
 		)
@@ -14722,7 +15536,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -14773,6 +15587,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 45.72 247.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 45.72 247.65 0)
 			(hide yes)
 			(show_name no)
@@ -14960,7 +15785,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -15011,6 +15836,17 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
+			(at 208.28 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 208.28 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -15091,6 +15927,17 @@
 			)
 		)
 		(property "Description" "Low-noise bipolar audio operational amplifier"
+			(at 311.15 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C86723"
 			(at 311.15 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -15346,6 +16193,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C86723"
+			(at 311.15 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "376990c1-cb17-469c-91ce-6c7d168ae81b")
 		)
@@ -15376,7 +16234,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -15427,6 +16285,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 391.16 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 391.16 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -15614,7 +16483,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -15675,6 +16544,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 452.12 321.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e991bebd-e5a9-49f5-92c5-ec5da52acdc8")
 		)
@@ -15696,7 +16576,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -15745,6 +16625,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 311.15 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 311.15 81.28 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16068,6 +16959,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C94590"
+			(at 495.3 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "28ee26ab-01d1-4844-a62d-7b4ba682c414")
 		)
@@ -16107,7 +17009,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -16157,6 +17059,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 407.67 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 407.67 157.48 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16343,7 +17256,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -16414,6 +17327,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 68.58 303.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "9a896119-2b92-4a0f-a3dd-08f1fb3950cc")
 		)
@@ -16435,7 +17359,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -16496,6 +17420,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 374.65 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6a9835eb-b776-4efb-85ff-269ef215b678")
 		)
@@ -16517,7 +17452,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -16577,6 +17512,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 115.57 351.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "adec62c1-c401-44fc-903b-cb21daac1c06")
 		)
@@ -16602,7 +17548,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -16673,6 +17619,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 115.57 335.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b7594305-d4cd-4edc-abba-9470919b60f2")
 		)
@@ -16694,7 +17651,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -16765,6 +17722,17 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
+			(at 195.58 350.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 195.58 350.52 0)
 			(hide yes)
 			(show_name no)
@@ -16933,6 +17901,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C94590"
+			(at 495.3 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "84b0dd7e-ffb0-4104-99f7-40f4a3d8537a")
 		)
@@ -17031,6 +18010,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C670493"
+			(at 256.54 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "83974819-340c-4f7e-b5cd-860cb6844697")
 		)
@@ -17085,7 +18075,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -17146,6 +18136,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 469.9 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3e5b44d4-c1a3-41a5-8cfc-6831347d10b1")
 		)
@@ -17167,7 +18168,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -17195,7 +18196,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 126.6952 247.65 0)
 			(hide yes)
 			(show_name no)
@@ -17228,6 +18229,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 125.73 243.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "cf522fe0-df81-40ff-b1bc-8f19596e7c2a")
 		)
@@ -17249,7 +18261,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -17299,6 +18311,17 @@
 		)
 		(property "Description" ""
 			(at 482.6 270.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 482.6 270.51 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17718,7 +18741,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -17769,6 +18792,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 228.6 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 228.6 248.92 0)
 			(hide yes)
 			(show_name no)
@@ -17878,7 +18912,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -17929,6 +18963,17 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
+			(at 270.51 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 270.51 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -18116,7 +19161,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -18177,6 +19222,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 240.03 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1368799d-cf7e-4984-acdf-2909a5a4bb32")
 		)
@@ -18198,7 +19254,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -18256,6 +19312,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 93.98 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e8b3abb5-ab0a-45cc-90ac-716cee2d0aa0")
 		)
@@ -18277,7 +19344,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -18335,6 +19402,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 116.84 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8a76499d-69a4-409b-9789-3ed7b67b4eb2")
 		)
@@ -18356,7 +19434,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -18417,6 +19495,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 473.71 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9b4b64a5-0fa1-47fe-98c7-074b0ee7928b")
 		)
@@ -18438,7 +19527,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -18499,6 +19588,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 111.76 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "27d28725-acab-4718-a7cf-3d93c2d12197")
 		)
@@ -18520,7 +19620,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -18578,6 +19678,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 529.59 137.16 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "367a43a2-02a4-436e-ad4c-4acd775a30f3")
 		)
@@ -18599,7 +19710,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -18650,6 +19761,17 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated"
+			(at 283.21 311.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 283.21 311.15 0)
 			(hide yes)
 			(show_name no)
@@ -18762,7 +19884,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -18823,6 +19945,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 101.6 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ba84293f-d542-4f78-b2c7-7de67655e0d4")
 		)
@@ -18844,7 +19977,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -18905,6 +20038,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 541.02 321.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "75767957-f6d2-4b32-957c-c6c678aef70e")
 		)
@@ -18926,7 +20070,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -18985,6 +20129,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 407.67 71.12 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6b9ed2eb-7c7a-48fd-976d-5498166fa340")
 		)
@@ -19006,7 +20161,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -19077,6 +20232,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 105.41 299.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c673f0f2-cedc-44ce-8623-eb5c6b8295ab")
 		)
@@ -19098,7 +20264,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -19149,6 +20315,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 469.9 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 469.9 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -19336,7 +20513,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -19387,6 +20564,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 215.9 243.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 215.9 243.84 0)
 			(hide yes)
 			(show_name no)
@@ -19539,6 +20727,17 @@
 				(justify left top)
 			)
 		)
+		(property "LCSC Part #" "C666563"
+			(at 73.66 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "8"
 			(uuid "80049023-20a7-4f08-98d0-11fffeb1b5ee")
 		)
@@ -19665,7 +20864,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -19716,6 +20915,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 101.6 250.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 101.6 250.19 0)
 			(hide yes)
 			(show_name no)
@@ -19903,7 +21113,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -19953,6 +21163,17 @@
 		)
 		(property "Description" ""
 			(at 508 270.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 508 270.51 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20060,7 +21281,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -20110,6 +21331,17 @@
 		)
 		(property "Description" ""
 			(at 381 270.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 381 270.51 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20295,7 +21527,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -20363,6 +21595,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 62.23 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "034b00f7-860d-47b7-b8a0-61c14ac0bf23")
 		)
@@ -20384,7 +21627,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -20445,6 +21688,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 165.1 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "95ed6c9e-58d6-476c-b653-7158cf4a0be0")
 		)
@@ -20466,7 +21720,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -20526,6 +21780,17 @@
 		)
 		(property "Sim.Pins" ""
 			(at 62.23 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 62.23 132.08 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20606,6 +21871,17 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
+			(at 547.37 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 547.37 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -20865,7 +22141,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -20893,7 +22169,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 126.6952 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -20926,6 +22202,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 125.73 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b6830d2e-2228-495f-9754-760635a122a3")
 		)
@@ -20948,7 +22235,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -21011,6 +22298,17 @@
 		)
 		(property "Sim.Pins" ""
 			(at 105.41 341.63 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 105.41 341.63 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21098,6 +22396,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C94590"
+			(at 436.88 321.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9b591d2d-4add-4dfb-9747-73df8bad34ad")
 		)
@@ -21137,7 +22446,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -21195,6 +22504,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 533.4 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2c822f7d-dc61-4db9-83c1-d1491908dd2a")
 		)
@@ -21216,7 +22536,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -21274,6 +22594,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 128.27 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e28fa4bf-5e2e-4953-ae1f-0af075d59c14")
 		)
@@ -21295,7 +22626,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -21356,6 +22687,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 248.92 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b5f71535-55e0-4d73-acca-4f12f2d5e84c")
 		)
@@ -21377,7 +22719,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -21458,6 +22800,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 246.38 330.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "23c38dea-b2da-48ed-b2ee-79ef7f1b922e")
 		)
@@ -21479,7 +22832,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -21540,6 +22893,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 45.72 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e2d3517b-6a44-48bb-a80a-2ac938bedd0f")
 		)
@@ -21562,7 +22926,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -21578,7 +22942,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "110R"
+		(property "Value" "240R"
 			(at 133.35 346.71 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21640,6 +23004,17 @@
 			(effects
 				(font
 					(size 1 1)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 129.54 345.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
@@ -21742,7 +23117,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -21803,6 +23178,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 57.15 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "cb462485-e1af-48d5-b959-3ec06bc64fdd")
 		)
@@ -21824,7 +23210,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -21882,6 +23268,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 355.6 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f3da35ed-b624-47c9-8e3e-3ce3bc5f4f64")
 		)
@@ -21903,7 +23300,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -21952,6 +23349,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 384.81 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 384.81 134.62 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22060,7 +23468,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -22109,6 +23517,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 452.12 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 452.12 134.62 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22217,7 +23636,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -22266,6 +23685,17 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated"
+			(at 565.15 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 565.15 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -22371,12 +23801,99 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:Heatsink")
+		(at 445.77 374.65 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9722d9ec-b542-49b9-92b2-c3860c38572c")
+		(property "Reference" "HS2"
+			(at 449.58 371.4749 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Heatsink"
+			(at 449.58 374.0149 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Custom:Tiny heatsink"
+			(at 446.0748 374.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 446.0748 374.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Heatsink"
+			(at 445.77 374.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 445.77 374.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "PCM1704"
+				(path "/4c6b43b3-6de1-4a08-8cc0-9a6dc221981c"
+					(reference "HS2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Polarized")
 		(at 68.58 295.91 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -22447,6 +23964,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 68.58 295.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "4b278d15-fb90-427e-8062-718a5d324983")
 		)
@@ -22468,7 +23996,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -22529,6 +24057,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 165.1 341.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "bbc90577-9540-4006-ba67-87edbe0a5e53")
 		)
@@ -22550,7 +24089,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -22611,6 +24150,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 57.15 247.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "cf7173e8-20dc-4d5b-9cea-f80b8ee420ac")
 		)
@@ -22632,7 +24182,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -22693,6 +24243,17 @@
 		)
 		(property "Sim.Pins" ""
 			(at 49.53 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 49.53 134.62 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22812,7 +24373,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -22863,6 +24424,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 320.04 321.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 320.04 321.31 0)
 			(hide yes)
 			(show_name no)
@@ -22972,7 +24544,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -23033,6 +24605,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 342.9 321.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "65905938-a4b3-474e-a783-ce507d5b1616")
 		)
@@ -23055,7 +24638,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -23071,7 +24654,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "590R"
+		(property "Value" "1K3"
 			(at 133.35 336.55 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23136,6 +24719,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 129.54 335.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "56ff346f-eed7-49fa-9534-9856c415ea33")
 		)
@@ -23158,7 +24752,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -23221,6 +24815,17 @@
 		)
 		(property "Sim.Pins" ""
 			(at 143.51 341.63 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 143.51 341.63 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23328,7 +24933,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -23386,6 +24991,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 406.4 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f25a6de2-d3a7-466a-bd1d-d18802c02119")
 		)
@@ -23407,7 +25023,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -23455,6 +25071,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 247.65 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 247.65 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -23696,7 +25323,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -23764,6 +25391,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 62.23 139.7 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "ba4b975c-e4e5-4443-a6ff-d1a954908dbc")
 		)
@@ -23785,7 +25423,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -23835,6 +25473,17 @@
 		)
 		(property "Description" ""
 			(at 431.8 270.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 431.8 270.51 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23915,6 +25564,17 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
+			(at 547.37 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 547.37 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -24096,7 +25756,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -24146,6 +25806,17 @@
 		)
 		(property "Description" ""
 			(at 203.2 86.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 203.2 86.36 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24296,6 +25967,17 @@
 				(justify left top)
 			)
 		)
+		(property "LCSC Part #" "C666563"
+			(at 73.66 232.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "8"
 			(uuid "7730eb1a-8ee6-481a-b130-4dfbdd84cb22")
 		)
@@ -24344,7 +26026,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -24395,6 +26077,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 204.47 243.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 204.47 243.84 0)
 			(hide yes)
 			(show_name no)
@@ -24799,6 +26492,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 547.37 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(instances
 			(project "PCM1704"
 				(path "/4c6b43b3-6de1-4a08-8cc0-9a6dc221981c"
@@ -24892,7 +26596,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -24942,6 +26646,17 @@
 		)
 		(property "Description" ""
 			(at 105.41 83.82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 105.41 83.82 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25127,7 +26842,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -25175,6 +26890,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 180.34 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 180.34 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -25284,7 +27010,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -25342,6 +27068,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 529.59 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3ddcae66-d204-48c3-a58a-b15473fce098")
 		)
@@ -25363,7 +27100,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -25426,6 +27163,17 @@
 		)
 		(property "Sim.Pins" ""
 			(at 52.705 303.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 52.705 303.53 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25767,7 +27515,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -25818,6 +27566,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 386.08 321.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 386.08 321.31 0)
 			(hide yes)
 			(show_name no)
@@ -26005,7 +27764,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -26056,6 +27815,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 440.69 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 440.69 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -26243,7 +28013,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -26259,7 +28029,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "110R"
+		(property "Value" "240R"
 			(at 133.35 297.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26324,6 +28094,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 129.54 295.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "5665b539-7728-430f-8ee4-4d4ab95b92ae")
 		)
@@ -26345,7 +28126,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -26396,6 +28177,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 490.22 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 490.22 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -26505,7 +28297,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -26576,6 +28368,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 143.51 299.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1404cd09-0d14-4ff8-9b48-e88ec05a6128")
 		)
@@ -26597,7 +28400,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -26658,6 +28461,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 292.1 243.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "873ce069-d070-41dc-8d25-439d71dc82c4")
 		)
@@ -26674,12 +28488,105 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 304.8 243.84 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "de394340-aad6-41ea-be29-bc9d1373b1af")
+		(property "Reference" "C30"
+			(at 308.61 242.5699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "22uF"
+			(at 308.61 245.1099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 303.8348 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 304.8 243.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 304.8 243.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 304.8 243.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "86dfe62f-272a-4154-9c5e-864edd0d830c")
+		)
+		(pin "1"
+			(uuid "5d5e8d53-8a59-47bb-ab0b-170147b44237")
+		)
+		(instances
+			(project "PCM1704"
+				(path "/4c6b43b3-6de1-4a08-8cc0-9a6dc221981c"
+					(reference "C30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 452.12 48.26 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -26728,6 +28635,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 452.12 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 452.12 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26836,7 +28754,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -26897,6 +28815,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 369.57 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2d290d10-da46-4dc8-a8bc-baaa0519532e")
 		)
@@ -26918,7 +28847,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -26967,6 +28896,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 311.15 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 311.15 157.48 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -27136,6 +29076,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 547.37 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(instances
 			(project "PCM1704"
 				(path "/4c6b43b3-6de1-4a08-8cc0-9a6dc221981c"
@@ -27151,7 +29102,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -27200,6 +29151,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 353.06 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 353.06 134.62 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -27308,7 +29270,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -27366,6 +29328,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 29.21 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e8284340-d41c-4626-ac8b-368e9365d2cf")
 		)
@@ -27387,7 +29360,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -27448,6 +29421,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 424.18 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "25b6efc6-6f66-48de-93d3-55367eb6729f")
 		)
@@ -27469,7 +29453,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -27537,6 +29521,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 62.23 137.16 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "73b28a3f-6ea7-4321-adb3-1088835c0297")
 		)
@@ -27558,7 +29553,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -27616,6 +29611,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 203.2 83.82 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "df9cfc0a-7153-4254-80ed-2ef852347ee4")
 		)
@@ -27637,7 +29643,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -27688,6 +29694,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 408.94 321.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
 			(at 408.94 321.31 0)
 			(hide yes)
 			(show_name no)
@@ -27797,7 +29814,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -27878,6 +29895,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 246.38 350.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "e91af55a-ec1a-4cd4-993a-9c4f889d6d58")
 		)
@@ -27899,7 +29927,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -27969,6 +29997,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 115.57 289.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "452b8d91-1e52-4b68-ae15-c569054d85a3")
 		)
@@ -27993,7 +30032,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -28064,6 +30103,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 115.57 306.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "99f86006-8be5-414c-9c3a-754c85a77a5a")
 		)
@@ -28085,7 +30135,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -28134,6 +30184,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 396.24 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 396.24 116.84 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28242,7 +30303,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -28292,6 +30353,17 @@
 		)
 		(property "Description" ""
 			(at 203.2 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 203.2 88.9 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -28397,7 +30469,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -28455,6 +30527,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" ""
+			(at 353.06 48.26 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1c454cd6-19cd-4a73-ba17-1d2f384dd1d9")
 		)
@@ -28476,7 +30559,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -28539,6 +30622,17 @@
 		)
 		(property "Sim.Pins" ""
 			(at 52.705 295.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 52.705 295.91 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

@@ -1,0 +1,54 @@
+52 connectivity/pin/preservation checks passed.
+41 exported nets. No simulation or bench validation.
++40V (('J3', '1'), ('QOUT1', '2'), ('QOUT2', '2'), ('Q8', '2'), ('C6', '1'), ('C7', '1'))
+GND (('J3', '2'), ('R21', '2'), ('Q10', '3'), ('R8', '2'), ('R6', '2'), ('R7', '2'), ('C6', '2'), ('C7', '2'), ('C8', '2'), ('C9', '2'), ('R10', '2'), ('J1', '2'), ('J2', '2'), ('R29', '2'), ('R33', '2'), ('R34', '2'))
+VREF_20V (('R1', '2'), ('C4', '2'), ('C8', '1'), ('C9', '1'), ('R32', '2'), ('R33', '1'), ('TP16', '1'))
++40V (('R32', '1'),)
+AMP_OUT (('Q9', '2'), ('QSINK1', '2'), ('QSINK2', '2'), ('R15', '2'), ('R16', '2'), ('R30', '1'), ('L1', '1'), ('C3', '1'))
+PRE_CAP (('L1', '2'), ('R28', '2'), ('C10', '1'))
+SPK_OUT (('J2', '1'), ('C10', '2'), ('R34', '1'), ('TP12', '1'))
+separate (('C10', '1'), ('C10', '2'), ('L1', '1'))
+IN_PLUS (('Q1', '3'), ('R1', '1'), ('C1', '2'))
+NFB (('Q2', '3'), ('R30', '2'), ('R31', '1'))
+VAS_B (('Q1', '2'), ('Q4', '2'), ('Q6', '1'), ('C2', '1'))
+same (('Q2', '2'), ('Q5', '2'), ('Q5', '3'), ('Q4', '3'))
+VAS_OUT (('Q6', '2'), ('Q7', '2'), ('C2', '2'), ('R11', '1'))
+same (('R11', '2'), ('Q8', '1'))
+UPPER_BASE (('Q8', '3'), ('R13', '1'), ('R14', '1'), ('R12', '1'))
+same (('QOUT1', '1'), ('R13', '2'))
+same (('QOUT1', '3'), ('R15', '1'))
+separate (('QOUT1', '1'), ('QOUT1', '2'), ('QOUT1', '3'))
+separate (('R15', '1'), ('R15', '2'))
+same (('QOUT2', '1'), ('R14', '2'))
+same (('QOUT2', '3'), ('R16', '1'))
+separate (('QOUT2', '1'), ('QOUT2', '2'), ('QOUT2', '3'))
+separate (('R16', '1'), ('R16', '2'))
+same (('QSINK1', '1'), ('R17', '2'))
+same (('QSINK1', '3'), ('R19', '1'))
+separate (('QSINK1', '1'), ('QSINK1', '2'), ('QSINK1', '3'))
+separate (('R19', '1'), ('R19', '2'))
+same (('QSINK2', '1'), ('R18', '2'))
+same (('QSINK2', '3'), ('R20', '1'))
+separate (('QSINK2', '1'), ('QSINK2', '2'), ('QSINK2', '3'))
+separate (('R20', '1'), ('R20', '2'))
+SINK_BASE (('Q9', '3'), ('R17', '1'), ('R18', '1'))
+SINK_CTRL (('Q10', '2'), ('Q9', '1'), ('R24', '2'))
+SINK_RETURN (('R19', '2'), ('R20', '2'), ('R21', '1'))
+SENSE_AVG (('R22', '1'), ('R23', '1'), ('RV1', '1'), ('R27', '1'))
+same (('R22', '2'), ('QSINK1', '3'))
+same (('R23', '2'), ('QSINK2', '3'))
+same (('RV1', '2'), ('R26', '1'))
+same (('R26', '2'), ('R27', '2'), ('Q10', '1'))
+same (('RV1', '3'), ('R25', '1'))
+separate (('RV1', '1'), ('RV1', '2'), ('RV1', '3'))
+P_BIAS (('Q3', '3'), ('Q7', '1'), ('D2', '1'), ('R10', '1'))
+same (('D1', '1'), ('D2', '2'))
++40V (('D1', '2'),)
+pins ClassA_Transistors:2SA1837
+pins ClassA_Transistors:2SC4793
+pins ClassA_Transistors:2SC5198
+pins ClassA_Transistors:KSA992
+pins ClassA_Transistors:KSC1845
+existing component UUIDs, placement and footprints preserved except converted J3
+mandatory input coupling; 4700u/50V polarized output cap; two-pin 40V supply
+PCB/project/preferences hashes unchanged

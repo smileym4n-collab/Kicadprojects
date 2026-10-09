@@ -1,0 +1,42 @@
+{
+  "checks": [
+    "101 footprint identities, values, hierarchical paths and numbered-pad nets preserved",
+    "Only C13-C24 footprints and positions changed",
+    "Other component positions and pad geometry preserved",
+    "Board outline and four copper layers preserved",
+    "All hierarchical schematic connections and values unchanged",
+    "All PCB pads match the exported hierarchical netlist",
+    "All added track/via net assignments preserved after refill",
+    "DRC violation identities and unrouted net list match baseline",
+    "Zero schematic parity issues",
+    "ERC identical to baseline: C32 pin 1 unconnected",
+    "Main project source hashes unchanged before applying",
+    "Project rules/settings byte-for-byte preserved"
+  ],
+  "changed_capacitors": [
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19",
+    "C20",
+    "C21",
+    "C22",
+    "C23",
+    "C24"
+  ],
+  "tracks_removed": 73,
+  "tracks_added": 100,
+  "retained_tracks_with_adjusted_endpoints": 4,
+  "DRC": {
+    "violations": 11,
+    "unconnected": 9,
+    "parity": 0
+  },
+  "ERC": {
+    "existing_errors": 1,
+    "new_errors": 0
+  }
+}

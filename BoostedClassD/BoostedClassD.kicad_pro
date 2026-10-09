@@ -65,8 +65,8 @@
           "min_thickness": 0.2,
           "pad_connection": 2,
           "remove_islands": 0,
-          "thermal_relief_gap": 0.5,
-          "thermal_relief_spoke_width": 0.5
+          "thermal_relief_gap": 0.2,
+          "thermal_relief_spoke_width": 0.2
         }
       },
       "diff_pair_dimensions": [
@@ -76,7 +76,32 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "clearance|168235600|83480400|32c220d3-591a-4c55-97d0-663aca719adc|c4278f84-d371-4e2a-9cc6-1e661d8bbee9",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|168005600|84480400|cae84cea-d8cf-4dfe-8ff2-351a7611b891|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "silk_over_copper|167208400|82880400|09145ec7-16ec-4fc9-8549-66a6e407722b|c4278f84-d371-4e2a-9cc6-1e661d8bbee9",
+          ""
+        ],
+        [
+          "silk_over_copper|167208400|86080400|09145ec7-16ec-4fc9-8549-66a6e407722b|67f37874-2bee-42e0-ad29-975e0c37fadf",
+          ""
+        ],
+        [
+          "silk_over_copper|168808400|82880400|09145ec7-16ec-4fc9-8549-66a6e407722b|32c220d3-591a-4c55-97d0-663aca719adc",
+          ""
+        ],
+        [
+          "silk_over_copper|168808400|86080400|09145ec7-16ec-4fc9-8549-66a6e407722b|61065897-bae9-4dd5-b163-1c857c0f8ecc",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -156,8 +181,8 @@
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
-        "min_text_height": 0.8,
-        "min_text_thickness": 0.08,
+        "min_text_height": 0.5,
+        "min_text_thickness": 0.05,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.2,
         "min_via_annular_width": 0.1,
@@ -538,7 +563,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "/Users/tomwatson/Desktop/Gerber files/BoostedClassD/",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
@@ -675,7 +700,7 @@
         "uuid": "61c6698c-087a-4ce7-8548-fc907c1fccfd"
       }
     ],
-    "used_designators": "S1-2,L1-2,TH1,F1-2,U1-5,FB1-4,C1-31,SW1,#PWR1-44,Q1,TP1,R1-21,H1-4,J1-5,J7,J10,IC1-5",
+    "used_designators": "S1-2,L1-2,TH1,F1-2,U1-5,FB1-4,C1-31,SW1,#PWR1-46,Q1,TP1,R1-21,H1-4,J1-5,J7,J10,IC1-5",
     "variants": []
   },
   "sheets": [

@@ -1,0 +1,3193 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1")
+	(paper "A3")
+	(title_block
+		(title "Audio source selector and output mute")
+		(date "2026-10-01")
+		(rev "A")
+		(comment 1 "Low-voltage controller only. No mains on this PCB.")
+		(comment 2 "ULN2003A/G6K pickup margin requires bench validation.")
+	)
+	(lib_symbols
+		(symbol "Connector_Generic:Conn_01x02"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x02_1_1"
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "InputSwitch:G6K_5V"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "K"
+				(at 0 10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "G6K_5V"
+				(at 0 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Relay_THT:Relay_DPDT_Omron_G6K-2P-Y"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "G6K-2P-Y DC5; coil 1+,8-; NC 2/7; COM 3/6; NO 4/5. Pin numbering preserved."
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "G6K_5V_1_1"
+				(polyline
+					(pts
+						(xy -7.62 2.54) (xy -2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 -2.54) (xy -2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 0) (xy 2.54 0) (xy -2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "COM"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "NO"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(symbol "G6K_5V_2_1"
+				(polyline
+					(pts
+						(xy -7.62 2.54) (xy -2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 -2.54) (xy -2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 0) (xy 2.54 0) (xy -2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "NO"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "COM"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(symbol "G6K_5V_3_1"
+				(rectangle
+					(start -2.54 5.08)
+					(end 2.54 -5.08)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -5.08) (xy 2.54 5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "CONTACTS ONLY IN THE THROUGH SIGNAL PATH"
+		(exclude_from_sim no)
+		(at 20.32 17.78 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+			(justify left top)
+		)
+		(uuid "0a9bb2fd-c117-4834-bf33-5caa047e1566")
+	)
+	(text "K1/K2 OFF = REFERENCE. ON = AV. K3 OFF = PASS. ON = output shorted to its own return.\nAll RCA shells must be insulated from the enclosure. Keep each signal with its corresponding return."
+		(exclude_from_sim no)
+		(at 20.32 30.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "2f1670ca-49ca-4f9e-aca1-df413a258ea7")
+	)
+	(text "R channel: no common GND"
+		(exclude_from_sim no)
+		(at 20.32 223.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "33d4258e-bac8-4e96-a13a-34822f1e9d01")
+	)
+	(text "Sensing taps are on SEL_* before K3. No permanent connection exists to inactive inputs.\nThe P3A may join its own L/R returns externally; this board does not join them.\nUnpowered pass-through is intentional: abrupt controller loss is not a guaranteed mute."
+		(exclude_from_sim no)
+		(at 177.8 223.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "46cea88c-79b6-4327-be02-02961a48ada6")
+	)
+	(text "L channel: no common GND"
+		(exclude_from_sim no)
+		(at 20.32 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "ffb50a1b-a87e-4335-9512-a72763cc44ae")
+	)
+	(junction
+		(at 68.58 162.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "01cf6b83-6460-481f-8605-e1e81832fd39")
+	)
+	(junction
+		(at 74.93 180.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "108a154f-beb3-4bfe-a779-e5b83c9f296c")
+	)
+	(junction
+		(at 259.08 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4225189a-d41d-4f80-b308-ab67f2f96abb")
+	)
+	(junction
+		(at 68.58 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "867c9c83-d8c5-49db-b540-f9500c8b85d0")
+	)
+	(junction
+		(at 259.08 182.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "90e40a37-96f4-4214-9338-8f3c253ae930")
+	)
+	(junction
+		(at 74.93 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9e1d4808-367a-4e65-86cd-e48628fa4a85")
+	)
+	(junction
+		(at 74.93 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a69ddbcb-a06f-4e3d-adf4-5244921a2468")
+	)
+	(junction
+		(at 74.93 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e374b97c-b157-42a0-abc8-712b284c00d5")
+	)
+	(junction
+		(at 74.93 208.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e6508506-a26c-4a42-bc14-cdf6488907e8")
+	)
+	(junction
+		(at 74.93 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fe377298-10d1-492d-abe9-8d156b86b284")
+	)
+	(wire
+		(pts
+			(xy 68.58 60.96) (xy 68.58 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "002310f3-e0ad-49e6-90bd-b06c0c833af3")
+	)
+	(wire
+		(pts
+			(xy 289.56 76.2) (xy 358.14 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01f7344b-737d-42ce-ba0e-41e9893b2435")
+	)
+	(wire
+		(pts
+			(xy 269.24 170.18) (xy 259.08 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "028d7bc4-26dc-4395-8233-d9215c41bfc7")
+	)
+	(wire
+		(pts
+			(xy 129.54 167.64) (xy 144.78 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02d3c45c-6687-409e-bac6-a98bc818cee9")
+	)
+	(wire
+		(pts
+			(xy 74.93 101.6) (xy 74.93 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08abe7af-db67-40ef-b43f-894c3d558401")
+	)
+	(wire
+		(pts
+			(xy 74.93 116.84) (xy 96.52 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1925c224-f30e-45ea-b502-4205054d8e96")
+	)
+	(wire
+		(pts
+			(xy 68.58 198.12) (xy 109.22 198.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1af3f14f-7b91-4985-8215-9bf8c53e7bf3")
+	)
+	(wire
+		(pts
+			(xy 68.58 71.12) (xy 68.58 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1cbd2b4a-a442-42bd-9441-9d79cc6f5955")
+	)
+	(wire
+		(pts
+			(xy 259.08 91.44) (xy 259.08 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d661298-368b-43b9-a0e4-3c1b6baa7f0f")
+	)
+	(wire
+		(pts
+			(xy 96.52 208.28) (xy 96.52 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e314991-e08f-43b0-b8c3-e11dfc320ca0")
+	)
+	(wire
+		(pts
+			(xy 259.08 182.88) (xy 347.98 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f873caf-341c-4fe9-9eab-089357c96e51")
+	)
+	(wire
+		(pts
+			(xy 74.93 180.34) (xy 74.93 185.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1fd1cada-df29-4716-9de1-53efefd9dc4b")
+	)
+	(wire
+		(pts
+			(xy 129.54 76.2) (xy 144.78 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23bac2ca-ed82-4dc2-a3c1-ee4bd9db3a77")
+	)
+	(wire
+		(pts
+			(xy 68.58 152.4) (xy 68.58 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23f836c7-94b9-4d03-8034-aaf898b9e326")
+	)
+	(wire
+		(pts
+			(xy 129.54 200.66) (xy 144.78 200.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24eff10c-32ee-4fe3-9977-639542e72308")
+	)
+	(wire
+		(pts
+			(xy 35.56 73.66) (xy 74.93 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "279efb9a-ca92-4590-ab18-04acd0e54631")
+	)
+	(wire
+		(pts
+			(xy 347.98 78.74) (xy 358.14 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2aa7eccf-d9e1-44d9-918d-913850f9a5ab")
+	)
+	(wire
+		(pts
+			(xy 86.36 170.18) (xy 109.22 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2cc6b3dc-09a4-4b55-8890-5db7e9399529")
+	)
+	(wire
+		(pts
+			(xy 347.98 91.44) (xy 347.98 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "355d524c-3a8c-4087-9929-49dc87a5c667")
+	)
+	(wire
+		(pts
+			(xy 74.93 180.34) (xy 86.36 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36dda536-aa36-4c90-ac9c-e48807355ed3")
+	)
+	(wire
+		(pts
+			(xy 289.56 167.64) (xy 358.14 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ced752a-5395-4a60-b347-2fda8d255a54")
+	)
+	(wire
+		(pts
+			(xy 259.08 78.74) (xy 259.08 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d4fb606-b27d-48f4-ac0f-6d76b078af40")
+	)
+	(wire
+		(pts
+			(xy 35.56 86.36) (xy 58.42 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51954de4-606e-4d8f-afb1-1b4ec7b04834")
+	)
+	(wire
+		(pts
+			(xy 74.93 152.4) (xy 68.58 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "532aaef7-8ae7-44d9-bce2-402b20570921")
+	)
+	(wire
+		(pts
+			(xy 74.93 88.9) (xy 86.36 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54b9df7b-0933-4b7c-9097-f51c8416b62e")
+	)
+	(wire
+		(pts
+			(xy 259.08 182.88) (xy 259.08 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e11513f-1ad0-4e92-b8f3-4ed8d9165f86")
+	)
+	(wire
+		(pts
+			(xy 86.36 180.34) (xy 86.36 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60324fe8-6d13-4def-91b8-38d0e1e6d62e")
+	)
+	(wire
+		(pts
+			(xy 74.93 60.96) (xy 68.58 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64c8866a-7bfb-46ce-af26-1b07c92f73ee")
+	)
+	(wire
+		(pts
+			(xy 86.36 88.9) (xy 86.36 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fde4a1b-6c56-4936-a151-34a58d785d83")
+	)
+	(wire
+		(pts
+			(xy 269.24 78.74) (xy 259.08 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "776acc26-c622-43c7-a2b5-5625b45f206e")
+	)
+	(wire
+		(pts
+			(xy 86.36 78.74) (xy 109.22 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79649bd4-d5ad-48ea-9090-96d25dc765e6")
+	)
+	(wire
+		(pts
+			(xy 74.93 193.04) (xy 74.93 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d3cbc2c-c87b-4bf1-a279-5a53073c146a")
+	)
+	(wire
+		(pts
+			(xy 35.56 165.1) (xy 74.93 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e47e0e5-4e33-4306-a44b-d07261bc89e6")
+	)
+	(wire
+		(pts
+			(xy 68.58 162.56) (xy 68.58 198.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7fd5981e-b0e9-42cf-927d-35a5ee18531f")
+	)
+	(wire
+		(pts
+			(xy 96.52 116.84) (xy 96.52 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "847af51e-c2a3-4feb-8836-cc106d76c3a5")
+	)
+	(wire
+		(pts
+			(xy 74.93 71.12) (xy 74.93 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85d3b061-344f-4174-acba-7f2d7be932d4")
+	)
+	(wire
+		(pts
+			(xy 74.93 154.94) (xy 74.93 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a8d5352-c056-47f0-9dca-029a1e787349")
+	)
+	(wire
+		(pts
+			(xy 68.58 106.68) (xy 109.22 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e6fae6e-c991-4df5-8696-78b0689b2308")
+	)
+	(wire
+		(pts
+			(xy 35.56 88.9) (xy 74.93 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97822487-0d09-43e4-8900-a23a58e9fec2")
+	)
+	(wire
+		(pts
+			(xy 35.56 177.8) (xy 58.42 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a1eb614-883a-4ae9-8316-b24c5afbcfde")
+	)
+	(wire
+		(pts
+			(xy 259.08 170.18) (xy 259.08 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1a82a56-73b2-441e-a215-33e5b2be555e")
+	)
+	(wire
+		(pts
+			(xy 35.56 71.12) (xy 68.58 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a579e413-7ea6-4d1a-80fc-9a06684b92db")
+	)
+	(wire
+		(pts
+			(xy 74.93 208.28) (xy 96.52 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a75003d9-49d5-48e0-9fca-3e0263979033")
+	)
+	(wire
+		(pts
+			(xy 96.52 111.76) (xy 109.22 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7955b62-2069-4fad-9ba4-54083650f456")
+	)
+	(wire
+		(pts
+			(xy 74.93 88.9) (xy 74.93 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa0d159c-3e91-49fc-ba0a-3225d217f5d6")
+	)
+	(wire
+		(pts
+			(xy 74.93 63.5) (xy 74.93 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0af6cf0-c846-4cf0-b19e-8abedfd4c220")
+	)
+	(wire
+		(pts
+			(xy 347.98 182.88) (xy 347.98 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba680dc2-bc98-4f43-9605-fcb7ed3443ef")
+	)
+	(wire
+		(pts
+			(xy 58.42 208.28) (xy 74.93 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf0761c6-5681-495a-ab1f-afd08887169b")
+	)
+	(wire
+		(pts
+			(xy 269.24 73.66) (xy 248.92 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfe0b86d-8931-47e7-a0c3-a8ae2178b1dd")
+	)
+	(wire
+		(pts
+			(xy 58.42 177.8) (xy 58.42 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c33e367f-2577-4a48-87f0-24bd7afe1a16")
+	)
+	(wire
+		(pts
+			(xy 74.93 165.1) (xy 109.22 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c50c65c3-2c16-400e-a272-a50c23f1db21")
+	)
+	(wire
+		(pts
+			(xy 347.98 170.18) (xy 358.14 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6f0ae88-dff6-4784-bd1a-e17aa75b560e")
+	)
+	(wire
+		(pts
+			(xy 58.42 86.36) (xy 58.42 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca4867f1-7d7e-420c-b1d1-4e812ddf86d3")
+	)
+	(wire
+		(pts
+			(xy 96.52 203.2) (xy 109.22 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cab76688-c78c-4c15-a421-cbdd3c532f67")
+	)
+	(wire
+		(pts
+			(xy 74.93 73.66) (xy 109.22 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0692c2c-837a-4488-8ed1-e616b059aa7b")
+	)
+	(wire
+		(pts
+			(xy 74.93 162.56) (xy 74.93 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db1bc4ed-50d9-47b8-8f86-f46a5352ab48")
+	)
+	(wire
+		(pts
+			(xy 58.42 116.84) (xy 74.93 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df2afa40-b41c-4e81-a085-1e60926cdecf")
+	)
+	(wire
+		(pts
+			(xy 129.54 109.22) (xy 144.78 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec54dc32-25ea-4145-8d8e-0f49407df3c5")
+	)
+	(wire
+		(pts
+			(xy 35.56 162.56) (xy 68.58 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eed46d65-da57-47ed-8c13-cf4e34bd7c47")
+	)
+	(wire
+		(pts
+			(xy 259.08 91.44) (xy 347.98 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f39c9c49-0908-4cca-a736-de1cddb16ec5")
+	)
+	(wire
+		(pts
+			(xy 35.56 180.34) (xy 74.93 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fabb98d5-cd78-4b9d-940a-3b9a7b45412e")
+	)
+	(wire
+		(pts
+			(xy 269.24 165.1) (xy 248.92 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbfb2d64-f110-400b-88c4-338c440a6cd9")
+	)
+	(label "AV_R_SIGNAL"
+		(at 35.56 180.34 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "127292bf-c463-4949-8153-126a96ea5112")
+	)
+	(label "AV_L_SIGNAL"
+		(at 35.56 88.9 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "14b58441-d4c1-4dbe-81b2-d0028fce78dd")
+	)
+	(label "P3A_L_SIGNAL"
+		(at 317.5 76.2 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "2395fb10-20fa-4fd0-860c-22e9b0e4f01f")
+	)
+	(label "REF_R_SIGNAL"
+		(at 35.56 165.1 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "41b92c8e-bf05-48cc-8510-66b82e627fc6")
+	)
+	(label "REF_L_RETURN"
+		(at 35.56 71.12 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "9048fd4a-ab17-465d-9f4b-00712bb41cca")
+	)
+	(label "REF_R_RETURN"
+		(at 35.56 162.56 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "a8f2f108-fbcb-45ce-b8d5-770e1664edb9")
+	)
+	(label "REF_L_SIGNAL"
+		(at 35.56 73.66 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "c592a1e9-25fd-4ee1-928e-03bf69238029")
+	)
+	(label "AV_R_RETURN"
+		(at 35.56 177.8 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "c76d6291-8fac-46b0-8618-a3c571258fb6")
+	)
+	(label "P3A_R_SIGNAL"
+		(at 317.5 167.64 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "e1b924f4-4f45-463f-bba5-93d961e8d25e")
+	)
+	(label "AV_L_RETURN"
+		(at 35.56 86.36 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "f24de45a-a771-49ce-a265-f5270166550c")
+	)
+	(global_label "SEL_L_RETURN"
+		(shape bidirectional)
+		(at 144.78 109.22 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "079b7283-c2fe-4b2a-9f24-810e1112c05d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 144.78 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "SEL_L_RETURN"
+		(shape bidirectional)
+		(at 259.08 96.52 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "1ace2e58-778e-4ed5-886e-50a93daa0576")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 259.08 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "SEL_R_SIGNAL"
+		(shape bidirectional)
+		(at 248.92 165.1 180)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "2f5860c5-7d63-432a-a74b-4119bdd0211e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 248.92 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "SEL_R_RETURN"
+		(shape bidirectional)
+		(at 259.08 187.96 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "356f4bb3-1fce-46a4-afc8-bb4e480e8770")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 259.08 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "SEL_L_SIGNAL"
+		(shape bidirectional)
+		(at 248.92 73.66 180)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "3a4998e6-439e-4f2b-8d25-bcc3f384a557")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 248.92 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "SEL_R_SIGNAL"
+		(shape bidirectional)
+		(at 144.78 167.64 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "6ff67577-6a3d-46e4-b8e8-b02036ad14ab")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 144.78 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "SEL_R_RETURN"
+		(shape bidirectional)
+		(at 144.78 200.66 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "ba9667d6-5c22-4608-9895-203623d21009")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 144.78 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "SEL_L_SIGNAL"
+		(shape bidirectional)
+		(at 144.78 76.2 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "c47c92c1-e622-400e-941b-857f3a5e2620")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 144.78 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 74.93 158.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0847819e-1e26-46d1-8c35-e6797c8598b5")
+		(property "Reference" "R11"
+			(at 77.47 157.4799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100K"
+			(at 77.47 160.0199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 73.152 158.75 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 74.93 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 74.93 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6b9dbaee-8d85-4313-b7b1-f650fe845f2b")
+		)
+		(pin "2"
+			(uuid "51389b9c-2670-4585-861d-eee05e195aea")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "InputSwitch:G6K_5V")
+		(at 119.38 167.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0ccf70f7-de78-4c9e-b861-201ca4551d2e")
+		(property "Reference" "K2"
+			(at 119.38 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "G6K"
+			(at 119.38 162.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Relay_THT:Relay_DPDT_Omron_G6K-2P-Y"
+			(at 119.38 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf"
+			(at 119.38 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 119.38 167.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "6"
+			(uuid "2f36ebeb-d1b6-4418-9693-521781d7bcd3")
+		)
+		(pin "4"
+			(uuid "94da2f3b-cf1b-411f-b993-98c39e0aa4d6")
+		)
+		(pin "5"
+			(uuid "5bc1d114-1290-4665-a7b8-cabdb25df310")
+		)
+		(pin "8"
+			(uuid "96ed83d8-21f9-41ee-b977-ee558db9b97a")
+		)
+		(pin "7"
+			(uuid "f7513016-0c0b-44ce-bec8-a7cd0836fa46")
+		)
+		(pin "1"
+			(uuid "17266f68-0c87-4bf0-83ab-758e83a00f18")
+		)
+		(pin "2"
+			(uuid "cfe34011-7116-464a-98ba-cd1298856b07")
+		)
+		(pin "3"
+			(uuid "d367f520-a82b-46e5-b6bc-d0f765607cb5")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(reference "K2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "InputSwitch:G6K_5V")
+		(at 119.38 109.22 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0d6f0000-8491-492f-bc5d-5821caa889d5")
+		(property "Reference" "K1"
+			(at 119.38 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "G6K"
+			(at 119.38 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Relay_THT:Relay_DPDT_Omron_G6K-2P-Y"
+			(at 119.38 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf"
+			(at 119.38 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 119.38 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "110a0947-eb75-4758-b634-a281afc29bc4")
+		)
+		(pin "5"
+			(uuid "32b79b88-06b7-49b9-8517-2b0c875df865")
+		)
+		(pin "7"
+			(uuid "98502f57-d846-4ace-8f10-ce86c1b1de1b")
+		)
+		(pin "1"
+			(uuid "d0de67d3-996b-4eb3-ad3f-d1428352a202")
+		)
+		(pin "6"
+			(uuid "3d04ce30-43b3-43f1-b603-84a83b57b7cb")
+		)
+		(pin "8"
+			(uuid "bb439bf0-5e17-4d1a-bd25-dc0a29f7275b")
+		)
+		(pin "3"
+			(uuid "ed8861e3-2bb6-41c1-a12c-40472022be91")
+		)
+		(pin "4"
+			(uuid "ddbb9fb5-ba65-4524-a754-7ac7efd3bd69")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(reference "K1")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 363.22 76.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1661ea5c-33db-4b19-a53c-87ad435d9505")
+		(property "Reference" "J5"
+			(at 363.22 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "Out L"
+			(at 363.22 73.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical"
+			(at 363.22 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 363.22 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 363.22 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "833ba674-9f8b-45eb-8457-e980aa864c46")
+		)
+		(pin "2"
+			(uuid "bd7226b2-a79e-4750-97a6-6cafde7c65a8")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 74.93 97.79 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "21bb1ac6-152e-41cc-91d0-4353adb10218")
+		(property "Reference" "R9"
+			(at 77.47 96.5199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100K"
+			(at 77.47 99.0599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 73.152 97.79 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 74.93 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 74.93 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b516d2aa-45ac-42f5-92e2-9f1c4a8846ba")
+		)
+		(pin "2"
+			(uuid "42df0f41-78db-4b78-9bdf-127ac82a9bd9")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 74.93 189.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "285b681b-c9ff-4529-abeb-43d273bb9980")
+		(property "Reference" "R12"
+			(at 77.47 187.9599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100K"
+			(at 77.47 190.4999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 73.152 189.23 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 74.93 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 74.93 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "24c0a6e1-8797-4b43-8a19-4b5049e868c3")
+		)
+		(pin "2"
+			(uuid "d976a482-c96e-4a44-9703-90d1789a018f")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "InputSwitch:G6K_5V")
+		(at 279.4 76.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "40254965-245b-43c3-b9fb-0a852eaf1e3e")
+		(property "Reference" "K3"
+			(at 279.4 68.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "G6K"
+			(at 279.4 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Relay_THT:Relay_DPDT_Omron_G6K-2P-Y"
+			(at 279.4 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf"
+			(at 279.4 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 279.4 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "8"
+			(uuid "612d0f3c-7d1c-430d-ac86-5bd665a118d6")
+		)
+		(pin "2"
+			(uuid "498f3938-c53f-4bb4-8466-d84b26a6a3bf")
+		)
+		(pin "3"
+			(uuid "fb10bf62-5818-4cce-953d-2a2e4983ac0b")
+		)
+		(pin "1"
+			(uuid "ecb09690-fa54-45af-be68-3b603db6194f")
+		)
+		(pin "5"
+			(uuid "3f487b11-5ddc-48df-aca1-487a86eaad21")
+		)
+		(pin "7"
+			(uuid "18134aef-68e7-470c-81b2-835afbe3fbac")
+		)
+		(pin "6"
+			(uuid "ec4705d7-de49-4787-b9e2-38373a8d52eb")
+		)
+		(pin "4"
+			(uuid "56396b9b-25a5-432a-99c3-392aefcd53be")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(reference "K3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 363.22 167.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "439cbcd8-74c0-44a7-983a-ef3321a1ae50")
+		(property "Reference" "J6"
+			(at 363.22 162.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "Out R"
+			(at 363.22 165.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical"
+			(at 363.22 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 363.22 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 363.22 167.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "eda02205-5506-4bf7-8101-a14a621aa9ef")
+		)
+		(pin "1"
+			(uuid "d762f4a1-ed75-4748-9048-a2e4ae13033f")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "InputSwitch:G6K_5V")
+		(at 119.38 200.66 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "69e683fc-5e9c-4065-bb89-8ed466ac84b3")
+		(property "Reference" "K2"
+			(at 119.38 193.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "G6K"
+			(at 119.38 195.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Relay_THT:Relay_DPDT_Omron_G6K-2P-Y"
+			(at 119.38 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf"
+			(at 119.38 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 119.38 200.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "8"
+			(uuid "e22e6968-d982-4d50-a3af-24f6d1875414")
+		)
+		(pin "1"
+			(uuid "6fdfca51-4a88-43d3-8e17-a01b63d3d877")
+		)
+		(pin "7"
+			(uuid "0b7f38b9-0a51-4fc7-88f5-cb9ff45f3d51")
+		)
+		(pin "3"
+			(uuid "9b30d363-beb8-42b1-92b3-a3ba64e426e4")
+		)
+		(pin "2"
+			(uuid "dec33f93-bc5e-49f2-8668-90ec96df25bc")
+		)
+		(pin "4"
+			(uuid "80917eac-7851-4cbe-9465-7cb19f798550")
+		)
+		(pin "6"
+			(uuid "b8634565-2d31-4ad6-a251-1d5d06c897d3")
+		)
+		(pin "5"
+			(uuid "48fe9361-4a81-4fa8-be53-d35298cd9c3e")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(reference "K2")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 74.93 67.31 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7adad56b-eeec-4d23-ab4d-88c5741c03bc")
+		(property "Reference" "R6"
+			(at 77.47 66.0399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100K"
+			(at 77.47 68.5799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 73.152 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 74.93 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 74.93 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4fb0d52c-fb22-4755-a9f1-a198d3a18016")
+		)
+		(pin "2"
+			(uuid "076bed49-cb23-4670-9198-fd3c16a65c50")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 30.48 88.9 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "80b13f11-ced2-470d-a913-7e2e92a14886")
+		(property "Reference" "J2"
+			(at 30.48 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "Marantz L"
+			(at 30.48 83.82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical"
+			(at 30.48 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b92412d7-821d-4baf-8f8f-7e9a89b892cf")
+		)
+		(pin "2"
+			(uuid "07b5953f-5e58-434f-8730-a49991ab0246")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "InputSwitch:G6K_5V")
+		(at 279.4 167.64 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "98e57e5c-615e-42a2-b885-b2c1f081ae17")
+		(property "Reference" "K3"
+			(at 279.4 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "G6K"
+			(at 279.4 162.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Relay_THT:Relay_DPDT_Omron_G6K-2P-Y"
+			(at 279.4 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf"
+			(at 279.4 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 279.4 167.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "8"
+			(uuid "7c1ff394-4237-449c-942b-f7eeb7e5d7e0")
+		)
+		(pin "6"
+			(uuid "d418d7e5-ce0d-422a-b153-7465071070ca")
+		)
+		(pin "7"
+			(uuid "5de435a1-50b9-47b7-96c0-0ea7bf66a415")
+		)
+		(pin "5"
+			(uuid "e5998f90-4889-4809-84c1-3db1baf172c5")
+		)
+		(pin "3"
+			(uuid "a86b5f63-59ec-492b-b913-b653d7890e77")
+		)
+		(pin "1"
+			(uuid "331f139c-6ad5-4906-a093-5070aa54a077")
+		)
+		(pin "4"
+			(uuid "437f9eb1-3a87-49b4-ad66-ac8041b57234")
+		)
+		(pin "2"
+			(uuid "0388c7ad-3c79-4ad9-943f-b095f00f4add")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(reference "K3")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 30.48 165.1 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a1c695f1-1e6d-421b-a3ee-e4ae5f8d0d30")
+		(property "Reference" "J3"
+			(at 30.48 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "PreAmp R"
+			(at 30.48 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical"
+			(at 30.48 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 165.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6b58a2ab-a9d0-4d1d-927b-f022ce5eec62")
+		)
+		(pin "2"
+			(uuid "8a780b69-c094-40f4-b925-a207d04fca6b")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 30.48 180.34 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d37c4f4e-2938-42f5-bc6a-97034cd2efb5")
+		(property "Reference" "J4"
+			(at 30.48 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "Marantz R"
+			(at 30.48 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical"
+			(at 30.48 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 180.34 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "baff0ed0-e4a1-4c93-9c75-0a8e882467b5")
+		)
+		(pin "1"
+			(uuid "ab07bd54-865d-4cf6-ad2c-be9b65d7ade5")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 30.48 73.66 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d4fd0c2b-1404-4d35-809c-894e44dd2fd3")
+		(property "Reference" "J1"
+			(at 30.48 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "PreAmp L"
+			(at 30.48 68.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical"
+			(at 30.48 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 73.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b1fe4d4e-6900-4370-a1ff-24c651cd24f9")
+		)
+		(pin "2"
+			(uuid "83f155f7-fd49-4915-bf49-f6e7503d5f7d")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "InputSwitch:G6K_5V")
+		(at 119.38 76.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f76f881d-42a1-4101-a2d4-6e7aaaa29cd6")
+		(property "Reference" "K1"
+			(at 119.38 68.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "G6K"
+			(at 119.38 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Relay_THT:Relay_DPDT_Omron_G6K-2P-Y"
+			(at 119.38 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf"
+			(at 119.38 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 119.38 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "7"
+			(uuid "b63e875c-b156-4937-82af-31bc341a182a")
+		)
+		(pin "4"
+			(uuid "01386c88-5a9d-487a-afa2-7e58cf689da8")
+		)
+		(pin "1"
+			(uuid "0fddd734-5b20-48cf-97a9-c433b0e714c3")
+		)
+		(pin "5"
+			(uuid "060b04ed-6eda-4f90-bccb-c173c55f6707")
+		)
+		(pin "8"
+			(uuid "8fa9a94f-e417-4510-89a0-cf3f565597c6")
+		)
+		(pin "3"
+			(uuid "cfe93a5f-a0a6-4cc0-8c7b-8e8dc6224fd2")
+		)
+		(pin "6"
+			(uuid "72d1df14-5d9f-4407-a426-e34c04ae5c1d")
+		)
+		(pin "2"
+			(uuid "290b1d27-1cf9-4d93-b0a4-b074bc992df8")
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(reference "K1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 20.32 233.68)
+		(size 66.04 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "8981c1c3-ff50-5488-808f-726a0ebb5885")
+		(property "Sheetname" "12V input and 5V buck supply"
+			(at 20.32 231.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power.kicad_sch"
+			(at 20.32 251.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 213.36 233.68)
+		(size 66.04 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "8bffe459-45b3-5ad5-9758-aa42451eb6e6")
+		(property "Sheetname" "Isolated left detector"
+			(at 213.36 231.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Detector_L.kicad_sch"
+			(at 213.36 251.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 309.88 233.68)
+		(size 66.04 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "b7179806-ed8b-58f5-b8da-abd218f72adb")
+		(property "Sheetname" "Isolated right detector"
+			(at 309.88 231.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Detector_R.kicad_sch"
+			(at 309.88 251.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 116.84 233.68)
+		(size 66.04 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "dabaaf26-2532-5494-8858-09ead4931d51")
+		(property "Sheetname" "ATtiny412 and relay drivers"
+			(at 116.84 231.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Control.kicad_sch"
+			(at 116.84 251.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "InputSwitch"
+				(path "/6d54ed2e-2ae2-4573-a8b1-3b10bc28f7a1"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

@@ -1,0 +1,17 @@
+Observed in KiCad 10 PCB Editor, 6 October 2026.
+Source: saved root DarlingtonAmp.kicad_pcb, opened as a standalone board.
+Refill all zones before performing DRC: checked.
+GUI run completed: Violations (2), Unconnected Items (0), Schematic Parity (not run), Ignored Tests (5).
+All / Errors / Warnings / Exclusions were selected for display.
+
+Error: Clearance violation (clearance 0.2000 mm; actual 0.1547 mm)
+  Track (arc) [Net-(Q1-E)] on B.Cu, length 1.5708 mm
+  PTH pad 3 [/MIRROR_REF] of Q3
+Error: Clearance violation (clearance 0.2000 mm; actual 0.1570 mm)
+  PTH pad 1 [Net-(Q2-E)] of Q2
+  Track (arc) [Net-(Q4-E)] on B.Cu, length 3.1416 mm
+
+This is a transcription of the tool-observed GUI accessibility result, not a KiCad-exported native report.
+The native report-save attempt did not produce the requested report file.
+The PCB editor was closed with Discard Changes after the in-memory zone refill.
+CLI DRC, both refill+parity and saved-fill simpler mode, aborted (exit 134) without a usable report.

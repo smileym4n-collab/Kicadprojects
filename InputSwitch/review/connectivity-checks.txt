@@ -1,0 +1,167 @@
+PASS: U2.1 belongs to +5V
+PASS: U2.8 belongs to GND
+PASS: U2.6 belongs to UPDI
+PASS: J8.1 belongs to UPDI
+PASS: J8.2 belongs to +5V
+PASS: J8.3 belongs to GND
+PASS: U2.4 belongs to SOURCE_AV
+PASS: U2.5 belongs to MUTE
+PASS: U2.7 belongs to AUDIO_PRESENT_N
+PASS: U2.2 belongs to P3A_ON
+PASS: U2.3 belongs to TOGGLE_AV
+PASS: U3.9 belongs to +5V
+PASS: U4.9 belongs to +12V
+PASS: U3.8 belongs to GND
+PASS: U4.8 belongs to GND
+PASS: U1.1 belongs to +12V
+PASS: U1.2 belongs to GND
+PASS: U1.3 belongs to +5V
+PASS: J10.1 belongs to +12V
+PASS: J10.2 belongs to G7L_LOW
+PASS: J9.1 belongs to GND
+PASS: J9.3 belongs to +5V
+PASS: R2.2 belongs to GND
+PASS: R3.2 belongs to GND
+PASS: R4.2 belongs to GND
+PASS: R5.2 belongs to GND
+PASS: UPDI is reserved and has no load/RC
+PASS: K1.1 belongs to +5V
+PASS: K1 coil has its own ULN channel
+PASS: K1 is labelled DC5
+PASS: K2.1 belongs to +5V
+PASS: K2 coil has its own ULN channel
+PASS: K2 is labelled DC5
+PASS: K3.1 belongs to +5V
+PASS: K3 coil has its own ULN channel
+PASS: K3 is labelled DC5
+PASS: K1/K2 command shared at inputs only
+PASS: K3 command is MUTE
+PASS: G7L command is P3A_ON
+PASS: U3.4 belongs to GND
+PASS: U3.5 belongs to GND
+PASS: U3.6 belongs to GND
+PASS: U3.7 belongs to GND
+PASS: U4.2 belongs to GND
+PASS: U4.3 belongs to GND
+PASS: U4.4 belongs to GND
+PASS: U4.5 belongs to GND
+PASS: U4.6 belongs to GND
+PASS: U4.7 belongs to GND
+PASS: K1.3 belongs to SEL_L_SIGNAL
+PASS: K1.6 belongs to SEL_L_RETURN
+PASS: J5.2 belongs to SEL_L_RETURN
+PASS: U10.1 belongs to +5V
+PASS: U10.2 belongs to GND
+PASS: U10.5 belongs to SEL_L_RETURN
+PASS: U10.7 belongs to ISO_L_5V
+PASS: U5.4 belongs to SEL_L_RETURN
+PASS: U5.8 belongs to ISO_L_QUIET
+PASS: U6.3 belongs to GND
+PASS: Q2.3 belongs to SEL_L_RETURN
+PASS: L REFERENCE on both NC contacts
+PASS: L AV on both NO contacts
+PASS: Detector L taps before mute
+PASS: Detector L optocoupler reaches MCU envelope
+PASS: Detector L amplifier output to comparator inverting input
+PASS: Detector L threshold and positive hysteresis
+PASS: Detector L comparator drives BJT, not MCU directly
+PASS: Detector L opto cathode driven by collector
+PASS: Detector L divider midpoint at bias
+PASS: Detector L bias divider bottom at own return
+PASS: Detector L uses stocked 5V module
+PASS: Detector L preload is across raw isolated output
+PASS: Detector L filter feeds LM358 supply
+PASS: K2.3 belongs to SEL_R_SIGNAL
+PASS: K2.6 belongs to SEL_R_RETURN
+PASS: J6.2 belongs to SEL_R_RETURN
+PASS: U11.1 belongs to +5V
+PASS: U11.2 belongs to GND
+PASS: U11.5 belongs to SEL_R_RETURN
+PASS: U11.7 belongs to ISO_R_5V
+PASS: U7.4 belongs to SEL_R_RETURN
+PASS: U7.8 belongs to ISO_R_QUIET
+PASS: U8.3 belongs to GND
+PASS: Q3.3 belongs to SEL_R_RETURN
+PASS: R REFERENCE on both NC contacts
+PASS: R AV on both NO contacts
+PASS: Detector R taps before mute
+PASS: Detector R optocoupler reaches MCU envelope
+PASS: Detector R amplifier output to comparator inverting input
+PASS: Detector R threshold and positive hysteresis
+PASS: Detector R comparator drives BJT, not MCU directly
+PASS: Detector R opto cathode driven by collector
+PASS: Detector R divider midpoint at bias
+PASS: Detector R bias divider bottom at own return
+PASS: Detector R uses stocked 5V module
+PASS: Detector R preload is across raw isolated output
+PASS: Detector R filter feeds LM358 supply
+PASS: All four input returns, two selected returns and GND are distinct copper nets
+PASS: AV=False, MUTE=False: selected return reaches J5
+PASS: AV=False, MUTE=False: inactive return isolated at J5
+PASS: AV=False, MUTE=False: output short follows mute at J5
+PASS: AV=False, MUTE=False: selected signal passes iff unmuted at J5
+PASS: AV=False, MUTE=False: source output never shorted
+PASS: AV=False, MUTE=False: output return isolated from control
+PASS: AV=False, MUTE=False: selected return reaches J6
+PASS: AV=False, MUTE=False: inactive return isolated at J6
+PASS: AV=False, MUTE=False: output short follows mute at J6
+PASS: AV=False, MUTE=False: selected signal passes iff unmuted at J6
+PASS: AV=False, MUTE=False: source output never shorted
+PASS: AV=False, MUTE=False: output return isolated from control
+PASS: AV=False, MUTE=False: L/R returns not joined on board
+PASS: AV=False, MUTE=True: selected return reaches J5
+PASS: AV=False, MUTE=True: inactive return isolated at J5
+PASS: AV=False, MUTE=True: output short follows mute at J5
+PASS: AV=False, MUTE=True: selected signal passes iff unmuted at J5
+PASS: AV=False, MUTE=True: source output never shorted
+PASS: AV=False, MUTE=True: output return isolated from control
+PASS: AV=False, MUTE=True: selected return reaches J6
+PASS: AV=False, MUTE=True: inactive return isolated at J6
+PASS: AV=False, MUTE=True: output short follows mute at J6
+PASS: AV=False, MUTE=True: selected signal passes iff unmuted at J6
+PASS: AV=False, MUTE=True: source output never shorted
+PASS: AV=False, MUTE=True: output return isolated from control
+PASS: AV=False, MUTE=True: L/R returns not joined on board
+PASS: AV=True, MUTE=False: selected return reaches J5
+PASS: AV=True, MUTE=False: inactive return isolated at J5
+PASS: AV=True, MUTE=False: output short follows mute at J5
+PASS: AV=True, MUTE=False: selected signal passes iff unmuted at J5
+PASS: AV=True, MUTE=False: source output never shorted
+PASS: AV=True, MUTE=False: output return isolated from control
+PASS: AV=True, MUTE=False: selected return reaches J6
+PASS: AV=True, MUTE=False: inactive return isolated at J6
+PASS: AV=True, MUTE=False: output short follows mute at J6
+PASS: AV=True, MUTE=False: selected signal passes iff unmuted at J6
+PASS: AV=True, MUTE=False: source output never shorted
+PASS: AV=True, MUTE=False: output return isolated from control
+PASS: AV=True, MUTE=False: L/R returns not joined on board
+PASS: AV=True, MUTE=True: selected return reaches J5
+PASS: AV=True, MUTE=True: inactive return isolated at J5
+PASS: AV=True, MUTE=True: output short follows mute at J5
+PASS: AV=True, MUTE=True: selected signal passes iff unmuted at J5
+PASS: AV=True, MUTE=True: source output never shorted
+PASS: AV=True, MUTE=True: output return isolated from control
+PASS: AV=True, MUTE=True: selected return reaches J6
+PASS: AV=True, MUTE=True: inactive return isolated at J6
+PASS: AV=True, MUTE=True: output short follows mute at J6
+PASS: AV=True, MUTE=True: selected signal passes iff unmuted at J6
+PASS: AV=True, MUTE=True: source output never shorted
+PASS: AV=True, MUTE=True: output return isolated from control
+PASS: AV=True, MUTE=True: L/R returns not joined on board
+PASS: No conductive/AC component path from L detector to control
+PASS: No conductive/AC component path from R detector to control
+PASS: Independent detector channels have no internal return bridge
+PASS: Known limitation reproduced: staggered K1/K2 + external P3A common returns bridges sources transiently
+PASS: InputSwitch.kicad_pcb unchanged byte for byte
+PASS: InputSwitch.kicad_pro unchanged byte for byte
+PASS: Final ERC: zero errors and warnings
+
+{
+  "midband_gain": 17.719298245614034,
+  "input_ohms": 570000,
+  "input_highpass_hz": 2.7921919840683396,
+  "gain_highpass_hz": 4.822877063390767,
+  "quiet_rail_filter_hz": 33.862753849339434,
+  "envelope_tau_ms": 103.4,
+  "nominal_threshold_rms_mV": 4.189311646171714
+}

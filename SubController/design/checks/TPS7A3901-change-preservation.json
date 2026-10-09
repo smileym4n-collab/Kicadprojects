@@ -1,0 +1,50 @@
+{
+  "baseline_snapshot": "design/backups/before-TPS7A3901-20261007-190058.zip",
+  "unchanged_components_values_footprints": 189,
+  "unchanged_component_pin_maps": 187,
+  "changed_components": [
+    "C46",
+    "C47",
+    "C48",
+    "C49",
+    "U10",
+    "U11"
+  ],
+  "removed_components": [
+    "C56",
+    "U12"
+  ],
+  "added_components": [
+    "C57",
+    "C58",
+    "C59",
+    "C60",
+    "C61",
+    "R105",
+    "R106",
+    "R107",
+    "R108",
+    "R109",
+    "R110",
+    "R111"
+  ],
+  "crossover_geometry_repair": "Four explicit T junctions at X68.58/121.92/256.54/309.88 Y58.42 restore C12/C15 connections after merged-wire saves. Baseline 4 errors+4 warnings; final ERC has zero.",
+  "preserved_files": [
+    "SubController.kicad_sch",
+    "SubController.kicad_pcb",
+    "SubController.kicad_prl",
+    "01_inputs.kicad_sch",
+    "03_level_phase.kicad_sch",
+    "04_protection_output.kicad_sch",
+    "07_drivers.kicad_sch",
+    "08_rail_interlock.kicad_sch",
+    "fp-lib-table",
+    "sym-lib-table"
+  ],
+  "project_bookkeeping_delta": {
+    "old_used_designators": "C29",
+    "new_used_designators": "U12,C29",
+    "explanation": "KiCad bookkeeping records removed U12 as used; all other project settings remain identical."
+  },
+  "existing_user_changes_preserved": "Input sheet already had R5/R6=22k, Panasonic AGN2004H K1/K2 and JST-XH J1/J2/J3. These values/footprints/wiring were not changed. Generic pad parity and AC checks include them; no new relay/connector qualification."
+}

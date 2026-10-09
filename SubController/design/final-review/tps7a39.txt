@@ -1,0 +1,3085 @@
+TPS7A39 Dual, 150mA, Wide VIN Positive and Negative LDO Voltage Regulator
+1 Features
+• Positive and negative LDOs in one package
+• Wide input voltage range: ±3.3V to ±33V
+• Wide output voltage range:
+– Positive range: 1.2V to 30V
+– Negative range: –30V to 0V
+• Output current: 150mA per channel
+• Monotonic start-up tracking
+• High power-supply rejection ratio (PSRR):
+– 69dB (120Hz)
+– ≥ 50dB (10Hz to 2MHz)
+• Output voltage noise: 21µVRMS (10Hz–100kHz)
+• Buffered 1.2V reference output
+• Stable with a 10µF or larger output capacitor
+• Single positive-logic enable
+• Adjustable soft-start in-rush control
+• 3mm × 3mm, 10-pin WSON package
+• Low thermal resistance: RθJA = 44.4°C/W
+• Operating temperature range: –40°C to +125°C
+2 Applications
+• EV charging Infrastructure
+• AC charging stations
+• Industrial automation
+• Medical imaging
+• Energy storage systems
+• PC and notebooks
+3 Description
+The TPS7A39 is a dual, monolithic, high-PSRR, 
+positive and negative low-dropout (LDO) voltage 
+regulator capable of sourcing (and sinking) up to 
+150mA of current. The regulated outputs can be 
+independently and externally adjusted to symmetrical 
+or asymmetrical voltages, making this device a good 
+choice to provide dual, bipolar power supply for signal 
+conditioning.
+Both positive and negative outputs of the TPS7A39 
+ratiometrically track each other during start-up to 
+mitigate floating conditions and other power-supply 
+sequencing issues common in dual-rail systems. The 
+negative output can regulate up to 0V, extending 
+the common-mode range for single-supply amplifiers. 
+The TPS7A39 also features high PSRR to eliminate 
+power-supply noise, such as switching noise, that can 
+compromise signal integrity.
+Package Information
+PART NUMBER PACKAGE(1) PACKAGE SIZE(2)
+TPS7A39 DSC (WSON, 10) 3mm × 3mm
+(1) For more information, see the Mechanical, Packaging, and 
+Orderable Information.
+(2) The package size (length × width) is a nominal value and 
+includes pins, where applicable.
+VS-
+VS+
++
+±   ADC
+Feedback 
+Network
+Signal In
++15 V
++15 V
+-15 V
+-5 V
++5 V
+TPS7A39
+INP
+INN
+EN
+GND
+NR/SS
+OUTP
+OUTN
+BUF
+FBP
+FBN
+Powering the Signal Chain
+Time (ms)
+Voltage (V)
+0 20 40 60 80 100 120 140 160 180 200
+-25
+-20
+-15
+-10
+-5
+0
+5
+10
+15
+20
+25
+EN VINP VOUTP VOUTN VINN
+Monotonic Start-Up Tracking
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications, 
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+Both regulators are controlled with a single positive logic enable pin for interfacing with standard digital logic. 
+A capacitor-programmable soft-start function controls in-rush current and start-up time. The internal reference 
+voltage of the TPS7A39 can be overridden with an external reference to enable precision outputs, output voltage 
+margining, or to track other power supplies. Additionally, the TPS7A39 has a buffered reference output that can 
+be used as a voltage reference for other components in the system.
+These features make the TPS7A39 a robust, simplified solution to power operational amplifiers, digital-to-analog 
+converters (DACs), and other precision analog circuitry.
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+2 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+Table of Contents
+1 Features............................................................................1
+2 Applications.....................................................................1
+3 Description.......................................................................1
+4 Pin Configuration and Functions...................................4
+5 Specifications.................................................................. 5
+5.1 Absolute Maximum Ratings........................................ 5
+5.2 ESD Ratings............................................................... 5
+5.3 Recommended Operating Conditions.........................6
+5.4 Thermal Information....................................................6
+5.5 Electrical Characteristics.............................................7
+5.6 Start-Up Characteristics..............................................8
+5.7 Timing Diagram...........................................................9
+5.8 Typical Characteristics..............................................10
+6 Detailed Description......................................................21
+6.1 Overview...................................................................21
+6.2 Functional Block Diagram.........................................21
+6.3 Feature Description...................................................22
+6.4 Device Functional Modes..........................................26
+7 Application and Implementation..................................27
+7.1 Application Information............................................. 27
+7.2 Typical Applications.................................................. 36
+7.3 Power Supply Recommendations.............................41
+7.4 Layout....................................................................... 41
+8 Device and Documentation Support............................43
+8.1 Device Support......................................................... 43
+8.2 Documentation Support............................................ 43
+8.3 Receiving Notification of Documentation Updates....43
+8.4 Support Resources................................................... 43
+8.5 Trademarks...............................................................43
+8.6 Electrostatic Discharge Caution................................43
+8.7 Glossary....................................................................43
+9 Revision History............................................................ 44
+10 Mechanical, Packaging, and Orderable 
+Information.................................................................... 44
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 3
+Product Folder Links: TPS7A39
+4 Pin Configuration and Functions
+1INP 10  OUTP
+2EN 9  FBP
+3NR/SS 8  BUF
+4GND 7  FBN
+5INN 6  OUTN
+Not to scale
+Thermal Pad
+Figure 4-1. DSC Package, 10-Pin WSON (Top View)
+Table 4-1. Pin Functions
+PIN
+I/O DESCRIPTION
+NO. NAME
+1 INP I
+Positive input. A 10μF(1) or larger capacitor must be tied from this pin to ground to provide stability. 
+Place the input capacitor as close to the input as possible; see the Capacitor Recommendations section 
+for more information.
+2 EN I
+Enable pin. Driving this pin to logic high (VEN ≥ VIH(EN)) enables the device; driving this pin to logic low 
+(VEN ≤ VIL(EN)) disables the device. If enable functionality is not required, this pin must be connected to 
+INP; see the Application and Implementation section for more detail. The enable voltage cannot exceed 
+the input voltage (VEN ≤ VINP).
+3 NR/SS —
+Noise-reduction, soft-start pin. Connecting an external capacitor between this pin and ground reduces 
+reference voltage noise and enables soft-start and start-up tracking. A 10nF or larger capacitor (CNR/SS) 
+is recommended to be connected from NR/SS to GND to maximize or optimize ac performance and 
+to ensure start-up tracking. This pin can also be driven externally to provide greater output voltage 
+accuracy and lower noise, see the User-Settable Buffered Reference section for more information.
+4 GND — Ground pin. This pin must be connected to ground and the thermal pad with a low-impedance 
+connection.
+5 INN I
+Negative input. A 10μF(1) or larger capacitor must be tied from this pin to ground to provide stability. 
+Place the input capacitor as close to the input as possible; see the Capacitor Recommendations section 
+for more information.
+6 OUTN O
+Negative output. A 10μF(1) or larger capacitor must be tied from this pin to ground to ensure stability. 
+Place the output capacitor as close to the output as possible; see the Capacitor Recommendations 
+section for more information.
+7 FBN I
+Negative output feedback pin. This pin is used to set the negative output voltage. Although not required, 
+a 10nF feed-forward capacitor from FBN to OUTN (as close to the device as possible) is recommended 
+to maximize ac performance. Nominally this pin is regulated to VFBN. Do not connect to ground.
+8 BUF O
+Buffered reference output. This pin is connected to FBN through R2 and the voltage at this node is 
+inverted and scaled up by the negative feedback network to provide the desired output voltage. The 
+buffered reference can be used to drive external circuits, and has a 1mA maximum load.
+9 FBP I
+Positive output feedback pin. This pin is used to set the positive output voltage. Although not required, 
+a 10nF feed-forward capacitor from FBP to OUTP (as close to the device as possible) is recommended 
+to maximize ac performance. Nominally this pin is regulated to VFBP. Do not connect this pin directly to 
+ground.
+10 OUTP O
+Positive output. A 10μF(1) or larger capacitor must be tied from this pin to ground to ensure stability. 
+Place the output capacitor as close to the output as possible; see the Capacitor Recommendations 
+section for more information.
+Pad Thermal Pad — Connect the thermal pad to a large-area ground plane. The thermal pad is internally connected to GND.
+(1) The nominal input and output capacitance must be greater than 2.2µF; throughout this document the nominal derating on these 
+capacitors is 80%. Make sure the effective capacitance at the pin is greater than 2.2µF.
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+4 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+5 Specifications
+5.1 Absolute Maximum Ratings
+over operating junction temperature range (unless otherwise noted)(1) (2)
+MIN MAX UNIT
+Voltage
+INP –0.3 36
+V
+INN –36 0.3
+OUTP –0.3 VINP + 0.3(5)
+OUTN VINN – 0.3(4) 0.3
+FBP –0.3 VINP + 0.3(7)
+BUF –1 VINP + 0.3(7)
+NR/SS –0.3 VINP + 0.3(8)
+FBN VINN – 0.3(3) 0.3
+EN –0.3 VINP + 0.3(6)
+Current
+Output current Internally 
+limited
+Buffer current 2 mA
+Temperature
+Operating junction temperature, TJ –55 150
+°C
+Storage, Tstg –65 150
+(1) Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress 
+ratings only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under 
+Recommended Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device 
+reliability.
+(2) All voltages with respect to the ground pin, unless otherwise noted.
+(3) The absolute maximum rating is VINN – 0.3 V or –3 V, whichever is greater.
+(4) The absolute maximum rating is VINN – 0.3 V or –33 V, whichever is greater.
+(5) The absolute maximum rating is VINP + 0.3 V or 33 V, whichever is smaller.
+(6) The absolute maximum rating is VINP + 0.3 V or 36 V, whichever is smaller.
+(7) The absolute maximum rating is VINP + 0.3 V or 3 V, whichever is smaller.
+(8) The absolute maximum rating is VINP + 0.3 V or 2 V, whichever is smaller.
+5.2 ESD Ratings
+VALUE UNIT
+VESD Electrostatic discharge
+Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001(1) ±1000
+V
+Charged-device model (CDM), per JEDEC specification JESD22-C101(2) ±500
+(1) JEDEC document JEP155 states that 500V HBM allows safe manufacturing with a standard ESD control process.
+(2) JEDEC document JEP157 states that 250V CDM allows safe manufacturing with a standard ESD control process.
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 5
+Product Folder Links: TPS7A39
+5.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)
+MIN NOM MAX UNIT
+|VINx| Supply voltage magnitude for either regulator 3.3 33 V
+VEN Enable supply voltage 0 VINP V
+VOUTP Positive regulated output voltage range VFBP 30 V
+VOUTN Negative regulated output voltage range –30 VFBN V
+IOUTx Output current for either regulator 0.005(2) 150 mA
+IBUF Output current from the BUF pin 0 120 1000 µA
+CINx Input capacitor for either regulator 4.7 10(1) µF
+COUTx Output capacitor for either regulator 4.7 10(1) µF
+CNR/SS Noise-reduction and soft-start capacitor 0(3) 10 1000 nF
+CFFP Positive channel feed-forward capacitor; connect from VOUTP to FBP 0 10 100 nF
+CFFN Negative channel feed-forward capacitor; connect from VOUTN to FBN 0 10 100 nF
+R2P Lower positive feedback resistor 10 240 kΩ
+R2N Lower negative feedback resistor (from FBN to BUF) 10 240 kΩ
+TJ Operating junction temperature –40 125 °C
+(1) The nominal input and output capacitor value of 10µF accounts for the derating factors that apply to X5R and X7R ceramic capacitors. 
+The assumed overall derating is 80%.
+(2) Minimum load required when feedback resistors are not used. If feedback resistors are used, keeping R2x below 240kΩ satisfies this 
+requirement.
+(3) For start-up tracking to function correctly a minimum 4.7nF CNR/SS capacitor must be used.
+5.4 Thermal Information
+THERMAL METRIC(1)
+TPS7A39
+UNITDSC (WSON)
+10 PINS
+RθJA Junction-to-ambient thermal resistance 44.4 °C/W
+RθJC(top) Junction-to-case(top) thermal resistance 33.7 °C/W
+RθJB Junction-to-board thermal resistance 19.4 °C/W
+ψJT Junction-to-top characterization parameter 0.4 °C/W
+ψJB Junction-to-board characterization parameter 19.5 °C/W
+RθJC(bot) Junction-to-case(bottom) thermal resistance 2.9 °C/W
+(1) For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application 
+note.
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+6 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+5.5 Electrical Characteristics
+at TJ = –40°C to +125°C, VINP(nom) = VOUTP(nom) + 1V or VIN(nom) = 3.3V (whichever is greater), VINN(nom) = VOUTN(nom) – 1V or 
+VINN(nom) = –3.3V (whichever is less), VEN = VINP, IOUT = 1mA, CINx = 2.2μF, COUTx = 10μF, CFFx = CNR/SS = open, R1N = R2N 
+= 10kΩ, and FBP tied to OUTP (unless otherwise noted); typical values are at TJ = 25°C
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+VINP Input voltage range, positive channel 3.3 33 V
+VINN Input voltage range, negative channel –33 –3.3 V
+VUVLOP(rising)
+Undervoltage lockout threshold,
+positive channel VINP rising, VINN = –3.3V 1.4 3.1 V
+VUVLOP(hys) Undervoltage lockout threshold, positive 
+channel hysteresis
+VINP falling, VINN = –3.3V 120 mV
+VUVLON(falling)
+Undervoltage lockout threshold,
+negative channel VINN falling, VINP = 3.3V –3.1 –1.4 V
+VUVLON(hys) Undervoltage lockout threshold, negative 
+channel, hysteresis
+VINN rising, VINP = 3.3V 70 mV
+VNR/SS Internal reference voltage 1.172 1.19 1.208 V
+VFBP Positive feedback voltage 1.170 1.188 1.206 V
+VFBN Negative feedback voltage –10 3.7 10 mV
+VOUT
+Output voltage range(2)
+Positive channel VFBP 30
+V
+Negative channel –30 VFBN 
+(1)
+VOUTP accuracy VINP(nom) ≤ VINP ≤ 33V, 1mA ≤ IOUTP ≤ 150mA,
+1.2V ≤ VOUTP(nom) ≤ 30V –1.5 1.5 %VOUT
+VOUTN accuracy(3) –33V ≤ VINN ≤ VINN(nom), –150mA ≤ IOUTN ≤ –1mA, 
+–30V ≤ VOUTN(nom) ≤ –1.2V –3 3 %VOUT
+Negative VOUT channel accuracy
+–33V ≤ VINN ≤ VINN(nom) , –150mA ≤ IOUTN ≤ 1mA, 
+–1.2 V < VOUTN(nom) < 0V –36 36
+mV
+–33V ≤ VINN ≤ VINN(nom) , –150mA ≤ IOUTN ≤ 1mA, 
+VOUTN(nom) = 0V –12 12
+ΔVOUT(ΔVIN) / 
+VOUT(NOM)
+Line regulation, positive channel  VINP(nom) ≤ VINP ≤ 33V 0.035
+%VOUT
+Line regulation, negative channel –33V ≤ VINN ≤ VOUT(nom) + 1V 0.125
+ΔVOUT(ΔIOUT) / 
+VOUT(NOM)
+Load regulation, positive channel 1mA ≤ IOUTP ≤ 150mA –0.09
+%VOUT
+Load regulation, negative channel –150mA ≤ IOUTN ≤ –1mA 0.715
+VDO Dropout voltage
+Positive channel
+IOUTP = 50mA, 3.3V ≤ VINP(nom) ≤ 33.0V,
+VFBP = 1.070V 175 300
+mV
+IOUTP = 150mA, 3.3V ≤ VINP(nom) ≤ 33.0V,
+VFBP = 1.070V 300 500
+Negative channel
+IOUTN = –50mA, –3.3V ≤ VINN(nom) ≤ –33.0V,
+VFBN = 0.0695V –250 –145
+IOUTN = –150mA, –3.3V ≤ VINN(nom) ≤ –33.0V,
+VFBN = 0.0695V –400 –275
+VBUF Buffered reference output voltage VNR/SS V
+VBUF/IBUF Buffered reference load regulation IBUF = 100µA to 1mA 1 mV/mA
+VBUF – VNR/SS Output buffer offset voltage VNR/SS = 0.25V to 1.2V –4 3 8 mV
+VOUTP–VOUTN
+DC output voltage difference with a forced 
+REF voltage VNR/SS = 0.25V to 1.2V –10 10 %VNR/SS
+ILIM Current limit
+Positive channel VOUTP = 90% VOUTP(nom) 200 330 500
+mA
+Negative channel VOUTN = 90% VOUTN(nom) –500 –300 –200
+ISUPPLY Supply current
+Positive channel
+IOUTP = 0mA, R2N = open, VINP = 33V 75 150
+µA
+IOUTP = 150mA, R2N = open, VINP = 33V 904
+Negative channel
+IOUTN = 0mA, VOUTN(nom)= 0V, R2N = open, VINN = 
+–33V –150 –60
+IOUTN = 150mA, R2N = open, VINN = –33V –1053
+ISHDN Shutdown supply current
+Positive channel VEN = 0.4V, VINP = 33V 3.75 6.5
+µA
+Negative channel VEN = 0.4V, VINN = –33V –4.5 –2.25
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 7
+Product Folder Links: TPS7A39
+5.5 Electrical Characteristics (continued)
+at TJ = –40°C to +125°C, VINP(nom) = VOUTP(nom) + 1V or VIN(nom) = 3.3V (whichever is greater), VINN(nom) = VOUTN(nom) – 1V or 
+VINN(nom) = –3.3V (whichever is less), VEN = VINP, IOUT = 1mA, CINx = 2.2μF, COUTx = 10μF, CFFx = CNR/SS = open, R1N = R2N 
+= 10kΩ, and FBP tied to OUTP (unless otherwise noted); typical values are at TJ = 25°C
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+IFBx
+Feedback pin leakage 
+current
+Positive channel 5.5 100
+nA
+Negative channel –100 –9.7
+INR/SS Soft-start charging current VNR/SS = 0.9V 3 5.1 6.7 µA
+IEN Enable pin leakage current VEN = VINP = 33V 0.02 1 µA
+VIH(EN) Enable high-level voltage 2.2 VINP V
+VIL(EN) Enable low-level voltage 0 0.4 V
+PSRR Power-supply rejection ratio |VIN| = 6V, |VOUT(nom)| = 5V, COUT = 10μF, CNR/SS = 
+CFF= 10nF, f = 120Hz 69 dB
+Vn Output noise voltage
+Positive channel
+VINP = 3.3V, VOUTP(nom) = VNR/SS, COUTP = 10μF, 
+CNR/SS = 10nF, BW = 10Hz to 100kHz 20.63
+µVRMS
+VINP = 6V, VOUTP(nom) = 5V, COUTP = 10μF, CNR/SS = 
+CFF = 10nF, BW = 10Hz to 100kHz 26.86
+Negative channel
+VINN = –3V, VOUTN(nom) = –VNR/SS, COUTP = 10μF, 
+CNR/SS = 10nF, BW = 10Hz to 100kHz 22.13
+VINN = –6V, VOUTN(nom) = –5V, COUTP = 10μF, 
+CNR/SS = CFF= 10nF, BW = 10Hz to 100kHz 28.68
+RNR/SS Filter resistor from band gap to NR pin 350 kΩ
+Tsd Thermal shutdown temperature
+Shutdown, temperature increasing 175
+°C
+Reset, temperature decreasing 160
+(1) VOUT(target) = 0V, R1N = 10kΩ, R2N = open.
+(2) To make sure VOUT does not drift up while the device is disabled, a minimum load current of 5µA is required.
+(3) The device is not tested under conditions where the power dissipated across the device, PD, exceeds 2W.
+5.6 Start-Up Characteristics
+at TJ = –40°C to +125°C, VINP(nom) = VOUTP(nom) + 1V or VIN(nom) = 3.3V (whichever is greater), VINN(nom) = VOUTN(nom) – 1V or 
+VINN(nom) = –3.3V (whichever is less), VEN = VINP, IOUT = 1mA, CINx = 2.2μF, COUTx = 10μF, CFFx = CNR/SS = 4.7nF, R1N = R2N 
+= 10kΩ, and FBP tied to OUTP (unless otherwise noted); typical values are at TJ = 25°C
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+tEN(delay)
+Delay time from EN low-to-high transition to 2.5% 
+VOUTP
+From EN low-to-high transition to VOUTP = 2.5% × 
+VOUTP(nom)
+300 µs
+tstart-up
+Delay time from EN low-to-high transition to both 
+outputs reaching 95% of final value
+From EN low-to-high transition to VOUTP = 
+VOUTP(nom) × 95% and VOUTN = VOUTN(nom) × 95% 1.1 ms
+tPstart-Nstart
+Delay time from VOUTP leaving a high-impedance 
+state to VOUTN leaving a high-impedance state
+From VOUTP = VOUTP(nom) × 2.5%  to VOUTN = 
+VOUTN(nom) × 2.5% –40 –17 40 µs
+Δ|VOUTP – 
+VOUTN|
+Voltage difference between the positive and 
+negative output
+During tPstart-Nstart 75 300 mV
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+8 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+5.7 Timing Diagram
+VOUTP
+VOUTN
+VEN
+90%
+VIH(EN)
+Ttstart-upt
+tPstart-Nstart
+90%
+tEN(delay)
+Figure 5-1. Start-Up Characteristics
+Note
+Slow ramps (t rise(VINx) > 10ms typically) on V INx with EN tied to V INP does not meet the tracking 
+specification. Use a resistor divider from VINP to EN for these applications.
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 9
+Product Folder Links: TPS7A39
+5.8 Typical Characteristics
+at TJ = 25°C, VINP = VOUTP(nom) + 1.0 V or VIN = 3.3 V (whichever is greater), VINN = VOUTN(nom) – 1 V or –3.3 V (whichever 
+is less), VEN = VIN, IOUT = 1 mA, CIN = 10-μF ceramic, COUT = 10-μF ceramic, and CFFP = CFFN = CNR/SS = 10 nF (unless 
+otherwise noted)
+Frequency (Hz)
+Power Supply Rejection Ratio (dB)
+0
+20
+40
+60
+80
+100
+10 100 1k 10k 100k 1M 10M
+VIN = 5.5 V
+VIN = 5.6 V
+VIN = 5.7 V
+VIN = 5.8 V
+VIN = 5.9 V
+VIN = 6.0 V
+VOUTP = 5 V, IOUTP = 150 mA, VOUTN = –5 V, IOUTN = 0 mA, 
+CNR/SS = CFFx = 10 nF
+Figure 5-2. Positive PSRR vs Frequency and VINP 
+Frequency (Hz)
+Power Supply Rejection Ratio (dB)
+0
+20
+40
+60
+80
+100
+10 100 1k 10k 100k 1M 10M
+VINN = -5.5 V
+VINN = -5.6 V
+VINN = -5.7 V
+VINN = -5.8 V
+VINN = -5.9 V
+VINN = -6.0 V
+VOUTP = 5 V, IOUTP = 0 mA, VOUTN = –5 V, IOUTN = 150 mA, 
+CNR/SS = CFFx = 10 nF
+Figure 5-3. Negative PSRR vs Frequency and VINN 
+Frequency (Hz)
+Power Supply Rejection Ratio (dB)
+0
+20
+40
+60
+80
+100
+10 100 1k 10k 100k 1M 10M
+IOUT = 1 mA
+IOUT = 10 mA
+IOUT = 50 mA
+IOUT = 100 mA
+IOUT = 150 mA
+VOUTP = 5 V, VINP = VEN = 6 V, VOUTN = –5 V, IOUTN = 0 mA, 
+CNR/SS = CFFx = 10 nF
+Figure 5-4. Positive PSRR vs Frequency and IOUTP 
+Frequency (Hz)
+Power Supply Rejection Ratio (dB)
+0
+20
+40
+60
+80
+100
+10 100 1k 10k 100k 1M 10M
+IOUT = 1 mA
+IOUT = 10 mA
+IOUT = 50 mA
+IOUT = 100 mA
+IOUT = 150 mA
+VOUTP = 5 V, IOUTP = 0 mA, VINN = –6 V, VOUTN = –5 V, CNR/SS 
+= CFFx = 10 nF
+Figure 5-5. Negative PSRR vs Frequency and IOUTN 
+Frequency (Hz)
+Power Supply Rejection Ratio (dB)
+0
+20
+40
+60
+80
+100
+10 100 1k 10k 100k 1M 10M
+COUT = 4.7 PF
+COUT = 10 PF
+COUT = 22 PF
+COUT = 47 PF
+VOUTP = 5 V, VINP = VEN = 6 V, VOUTN = –5 V, IOUTN = 0 mA, 
+CNR/SS = CFFx = 10 nF
+Figure 5-6. Positive PSRR vs Frequency and COUTP 
+Frequency (Hz)
+Power Supply Rejection Ratio (dB)
+0
+20
+40
+60
+80
+100
+10 100 1k 10k 100k 1M 10M
+COUT = 4.7 PF
+COUT = 10 PF
+COUT = 22 PF
+COUT = 47 PF
+VOUTP = 5 V, IOUTP = 0 mA, VINN = –6 V, VOUTN = –5 V, CNR/SS 
+= CFFx = 10 nF, COUTP = 10 µF
+Figure 5-7. Negative PSRR vs Frequency and COUTN 
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+10 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+5.8 Typical Characteristics (continued)
+at TJ = 25°C, VINP = VOUTP(nom) + 1.0 V or VIN = 3.3 V (whichever is greater), VINN = VOUTN(nom) – 1 V or –3.3 V (whichever 
+is less), VEN = VIN, IOUT = 1 mA, CIN = 10-μF ceramic, COUT = 10-μF ceramic, and CFFP = CFFN = CNR/SS = 10 nF (unless 
+otherwise noted)
+Frequency (Hz)
+Power Supply Rejection Ratio (dB)
+0
+20
+40
+60
+80
+100
+10 100 1k 10k 100k 1M 10M
+CFF = 0  nF
+CFF = 10  nF
+CFF = 100  nF
+VOUTP = 5 V, VINP = VEN = 6 V, VOUTN = –5 V, IOUTN = 0 mA, 
+CNR/SS = 10 nF
+Figure 5-8. Positive PSRR vs Frequency and CFFP 
+Frequency (Hz)
+Power Supply Rejection Ratio (dB)
+0
+20
+40
+60
+80
+100
+10 100 1k 10k 100k 1M 10M
+CFFN = 0  nF
+CFFN = 10  nF
+CFFN = 100  nF
+VOUTP = 5 V, IOUTP = 0 mA, VINN = –6 V, VOUTN = –5 V, CNR/SS 
+= CFFP = 10 nF
+Figure 5-9. Negative PSRR vs Frequency and CFFN 
+Frequency (Hz)
+Power Supply Rejection Ratio (dB)
+0
+20
+40
+60
+80
+100
+10 100 1k 10k 100k 1M 10M
+CNR/SS = 0  nF
+CNR/SS = 10  nF
+CNR/SS = 100  nF
+CNR/SS = 1000 nF
+VOUTP = 5 V, VINP = VEN = 6 V, VOUTN = –5 V, IOUTN = 0 mA, 
+CFFx = 10 nF
+Figure 5-10. Positive PSRR vs Frequency and CNR/SS 
+Frequency (Hz)
+Power Supply Rejection Ratio (dB)
+0
+20
+40
+60
+80
+100
+10 100 1k 10k 100k 1M 10M
+CNR/SS = 0 nF
+CNR/SS = 10 nF
+CNR/SS = 100 nF
+CNR/SS = 1000 nF
+VOUTP = 5 V, IOUTP = 0 mA, VINN = –6 V, VOUTN = –5 V, CFFx = 
+10 nF
+Figure 5-11. Negative PSRR vs Frequency and CNR/SS 
+Frequency (Hz)
+Power Supply Rejection Ratio (dB)
+0
+20
+40
+60
+80
+100
+10 100 1k 10k 100k 1M 10M
+IOUT = 150 mA
+ 
+Figure 5-12. Crosstalk Positive to Negative
+Frequency (Hz)
+Power Supply Rejection Ratio (dB)
+0
+20
+40
+60
+80
+100
+10 100 1k 10k 100k 1M 10M
+IOUT = 150 mA
+ 
+Figure 5-13. Crosstalk Negative to Positive
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 11
+Product Folder Links: TPS7A39
+5.8 Typical Characteristics (continued)
+at TJ = 25°C, VINP = VOUTP(nom) + 1.0 V or VIN = 3.3 V (whichever is greater), VINN = VOUTN(nom) – 1 V or –3.3 V (whichever 
+is less), VEN = VIN, IOUT = 1 mA, CIN = 10-μF ceramic, COUT = 10-μF ceramic, and CFFP = CFFN = CNR/SS = 10 nF (unless 
+otherwise noted)
+Frequency (Hz)
+Noise (PV/Hz)
+0.001
+0.002
+0.005
+0.01
+0.02
+0.05
+0.1
+0.2
+0.5
+1
+2
+5
+10
+10 100 1k 10k 100k 1M 10M
+VOUT
+1.188 V, 20.63 PVRMS
+5 V, 26.86 PVRMS
+15 V, 63.88 PVRMS
+IOUTP = 150 mA, VINP = VEN, VOUTN = –VOUTP, IOUTN = 0 mA, 
+CNR/SS = CFFx = 10 nF
+Figure 5-14. Positive Spectral Noise Density vs Frequency and 
+VOUTP 
+Frequency (Hz)
+Noise (PV/Hz)
+0.001
+0.002
+0.005
+0.01
+0.02
+0.05
+0.1
+0.2
+0.5
+1
+2
+5
+10
+10 100 1k 10k 100k 1M 10M
+VOUT
+-1.188 V,  22.13 PVRMS
+-5 V, 28.68 PVRMS
+-15 V, 47.10 PVRMS
+IOUTN = –150 mA, VINP = VEN, VOUTN = –VOUTP, IOUTP = 0 mA, 
+CNR/SS = CFFx = 10 nF
+Figure 5-15. Negative Spectral Noise Density vs Frequency and 
+VOUTN 
+Frequency (Hz)
+Noise (PV/Hz)
+0.001
+0.002
+0.005
+0.01
+0.02
+0.05
+0.1
+0.2
+0.5
+1
+2
+5
+10
+10 100 1k 10k 100k 1M 10M
+CNR/SS
+0 nF, 68.08 PVRMS
+10 nF, 26.86 PVRMS
+100 nF, 21.74 PVRMS
+1000 nF, 21.56 PVRMS
+VOUTP = 5 V, IOUTP = 150 mA, VINP = VEN = 6 V, VOUTN = –5 V, 
+IOUTN = 0 mA, CFFx = 10 nF
+Figure 5-16. Positive Spectral Noise Density vs Frequency and 
+CNR/SS 
+Frequency (Hz)
+Noise (PV/Hz)
+0.001
+0.002
+0.005
+0.01
+0.02
+0.05
+0.1
+0.2
+0.5
+1
+2
+5
+10
+10 100 1k 10k 100k 1M 10M
+CNR/SS
+0 nF, 53.32 PVRMS
+10 nF, 26.68 PVRMS
+100 nF, 23.21 PVRMS
+1000 nF, 23.06 PVRMS
+VOUTN = –5 V, IOUTN = –150 mA, VINP = VEN = 6 V, VOUTN = –5 
+V, IOUTP = 0 mA, CFFx = 10 nF
+Figure 5-17. Negative Spectral Noise Density vs Frequency and 
+CNR/SS 
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+12 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+5.8 Typical Characteristics (continued)
+at TJ = 25°C, VINP = VOUTP(nom) + 1.0 V or VIN = 3.3 V (whichever is greater), VINN = VOUTN(nom) – 1 V or –3.3 V (whichever 
+is less), VEN = VIN, IOUT = 1 mA, CIN = 10-μF ceramic, COUT = 10-μF ceramic, and CFFP = CFFN = CNR/SS = 10 nF (unless 
+otherwise noted)
+Frequency (Hz)
+Noise (PV/Hz)
+0.001
+0.002
+0.005
+0.01
+0.02
+0.05
+0.1
+0.2
+0.5
+1
+2
+5
+10
+10 100 1k 10k 100k 1M 10M
+CFF
+0 nF, 37.77 PVRMS
+10 nF, 26.86 PVRMS
+100 nF, 22.95 PVRMS
+VOUTP = 5 V, IOUTP = 150 mA, VINP = VEN = 6 V, VOUTN = –5 V, 
+IOUTN = 0 mA, CNR/SS = 10 nF
+Figure 5-18. Positive Spectral Noise Density vs Frequency and 
+CFF 
+Frequency (Hz)
+Noise (PV/Hz)
+0.001
+0.002
+0.005
+0.01
+0.02
+0.05
+0.1
+0.2
+0.5
+1
+2
+5
+10
+10 100 1k 10k 100k 1M 10M
+CFF
+0 nF, 45.08 PVRMS
+10 nF, 26.68 PVRMS
+100 nF, 23.53 PVRMS
+VOUTN = –5 V, IOUTN = –150 mA, VINP = VEN = 6 V, VOUTN = –5 
+V, IOUTP = 0 mA, CNR/SS = 10 nF
+Figure 5-19. Negative Spectral Noise Density vs Frequency and 
+CFF 
+Frequency (Hz)
+Noise (PV/Hz)
+0.001
+0.002
+0.005
+0.01
+0.02
+0.05
+0.1
+0.2
+0.5
+1
+2
+5
+10
+10 100 1k 10k 100k 1M 10M
+COUT
+4.7 PF, 27.33 PVRMS
+10 PF, 26.86 PVRMS
+22 PF, 27.47 PVRMS
+47 PF, 27.64 PVRMS
+VOUTP = 5 V, IOUTP = 150 mA, VINP = VEN = 6 V, VOUTN = –5 V, 
+IOUTN = 0 mA, CNR/SS = CFFx = 10 nF
+Figure 5-20. Positive Spectral Noise Density vs Frequency and 
+COUT 
+Frequency (Hz)
+Noise (PV/Hz)
+0.001
+0.002
+0.005
+0.01
+0.02
+0.05
+0.1
+0.2
+0.5
+1
+2
+5
+10
+10 100 1k 10k 100k 1M 10M
+COUT
+4.7 PF, 28.43 PVRMS
+10 PF, 26.68 PVRMS
+22 PF, 26.67 PVRMS
+47 PF, 28.70 PVRMS
+VOUTN = –5 V, IOUTN = –150 mA, VINP = VEN = 6 V, VOUTN = –5 
+V, IOUTP = 0 mA, CNR/SS = CFFx = 10 nF
+Figure 5-21. Negative Spectral Noise Density vs Frequency and 
+COUT 
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 13
+Product Folder Links: TPS7A39
+5.8 Typical Characteristics (continued)
+at TJ = 25°C, VINP = VOUTP(nom) + 1.0 V or VIN = 3.3 V (whichever is greater), VINN = VOUTN(nom) – 1 V or –3.3 V (whichever 
+is less), VEN = VIN, IOUT = 1 mA, CIN = 10-μF ceramic, COUT = 10-μF ceramic, and CFFP = CFFN = CNR/SS = 10 nF (unless 
+otherwise noted)
+Frequency (Hz)
+Noise (PV/Hz)
+0.001
+0.002
+0.005
+0.01
+0.02
+0.05
+0.1
+0.2
+0.5
+1
+2
+5
+10
+10 100 1k 10k 100k 1M 10M
+IOUT
+1 mA, 29.88 PVRMS
+10 mA, 27.07 PVRMS
+50 mA, 26.66 PVRMS
+100 mA, 26.77 PVRMS
+150 mA, 26.86 PVRMS
+VOUTP = 5 V, VINP = VEN = 6 V, VOUTN = –5 V, IOUTN = 0 mA, 
+CNR/SS = CFFx = 10 nF
+Figure 5-22. Positive Spectral Noise Density vs Frequency and 
+IOUT 
+Frequency (Hz)
+Noise (PV/Hz)
+0.001
+0.002
+0.005
+0.01
+0.02
+0.05
+0.1
+0.2
+0.5
+1
+2
+5
+10
+10 100 1k 10k 100k 1M 10M
+IOUT
+1 mA, 29.72 PVRMS
+10 mA, 28.42 PVRMS
+50 mA, 28.59 PVRMS
+100 mA, 28.47 PVRMS
+150 mA, 26.68 PVRMS
+VOUTN = –5 V, VINP = VEN = 6 V, VOUTN = –5 V, IOUTP = 0 mA, 
+CNR/SS = CFFx = 10 nF
+Figure 5-23. Negative Spectral Noise Density vs Frequency and 
+IOUT 
+Time (ms)
+Voltage (V)
+0 20 40 60 80 100 120 140 160 180 200
+-20
+-16
+-12
+-8
+-4
+0
+4
+8
+12
+16
+20
+VINP VINN VOUTP VOUTN
+VOUTP = –VOUTN = 5 V, VINP = –VINN = 12 V
+Figure 5-24. Startup (VINP = VEN)
+Time (ms)
+Voltage (V)
+0 20 40 60 80 100 120 140 160 180 200
+-25
+-20
+-15
+-10
+-5
+0
+5
+10
+15
+20
+25
+EN VINP VOUTP VOUTN VINN
+VOUTP = –VOUTN = 5 V, VINP = –VINN = 15 V
+Figure 5-25. Startup With EN
+Time (Ps)
+Input Voltage (V)
+Output Voltage (V)
+0 20 40 60 80 100
+4 5.025
+5 5.03
+6 5.035
+7 5.04
+8 5.045
+9 5.05
+10 5.055
+11 5.06
+12 5.065
+VINP
+VOUTP
+VINP = 5.5 V to 10 V at 1 V/µs, VOUTP = –VOUTN = 5 V, IOUTN = 
+0 mA, IOUTP = 150 mA
+Figure 5-26. Line Transient Positive Regulator
+Time (Ps)
+Input Voltage (V)
+Output Voltage (V)
+0 20 40 60 80 100 120 140 160 180 200
+-12 -5.1
+-11 -5.075
+-10 -5.05
+-9 -5.025
+-8 -5
+-7 -4.975
+-6 -4.95
+-5 -4.925
+-4 -4.9
+VINN
+VOUTN
+VINN = –5.5 V to –10 V at 1 V/µs, VOUTP = –VOUTN = 5 V, IOUTN 
+= –150 mA, IOUTP = 0 mA
+Figure 5-27. Line Transient Negative Regulator
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+14 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+5.8 Typical Characteristics (continued)
+at TJ = 25°C, VINP = VOUTP(nom) + 1.0 V or VIN = 3.3 V (whichever is greater), VINN = VOUTN(nom) – 1 V or –3.3 V (whichever 
+is less), VEN = VIN, IOUT = 1 mA, CIN = 10-μF ceramic, COUT = 10-μF ceramic, and CFFP = CFFN = CNR/SS = 10 nF (unless 
+otherwise noted)
+Time (Ps)
+Input Voltage (V)
+Output Voltage (V)
+0 20 40 60 80 100
+4 4.8
+5 4.85
+6 4.9
+7 4.95
+8 5
+9 5.05
+10 5.1
+11 5.15
+12 5.2
+VINP
+VOUTP
+VINP = 5.5 V to 10 V at 4 V/µs, VOUTP = –VOUTN = 5 V, IOUTN = 
+0 mA, IOUTP = 150 mA
+Figure 5-28. Line Transient Positive Regulator
+Time (Ps)
+Input Voltage (V)
+Output Voltage (V)
+0 20 40 60 80 100 120 140 160 180 200
+-12 -5.1
+-11 -5.075
+-10 -5.05
+-9 -5.025
+-8 -5
+-7 -4.975
+-6 -4.95
+-5 -4.925
+-4 -4.9
+VINN
+VOUTN
+VINN = –5.5 V to –10 V at 4 V/µs, VOUTP = –VOUTN = 5 V, IOUTN 
+= –150 mA, IOUTP = 0 mA
+Figure 5-29. Line Transient Negative Regulator
+Time (Ps)
+Output Voltage (V)
+Output Current (A)
+0 20 40 60 80 100 120 140 160 180 200
+5 0
+5.025 0.05
+5.05 0.1
+5.075 0.15
+5.1 0.2
+VOUTP
+IOUTP
+VINP = 6 V, VOUTP = –VOUTN = 5 V, IOUTN = 0 mA, IOUTP = 1 mA 
+to 150 mA at 1 A/µs
+Figure 5-30. Load Transient Positive Regulator
+Time (Ps)
+Output Voltage (V)
+Output Current (A)
+0 20 40 60 80 100 120 140 160 180 200
+-5.1 -0.2
+-5.075 -0.175
+-5.05 -0.15
+-5.025 -0.125
+-5 -0.1
+-4.975 -0.075
+-4.95 -0.05
+-4.925 -0.025
+-4.9 0
+VOUTP
+IOUTP
+VINN = –6 V, VOUTP = –VOUTN = 5 V, IOUTN = 0 mA, IOUTN = –1 
+mA to –150 mA at 1 A/µs
+Figure 5-31. Load Transient Negative Regulator
+Input Voltage (V)
+Output Voltage (V)
+-33 -30 -27 -24 -21 -18 -15 -12 -9 -6 -3
+0
+0.0015
+0.003
+0.0045
+0.006
+0.0075
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTN = 0 V
+Figure 5-32. Negative Line Regulation
+Output Current (mA)
+Output Voltage (V)
+0 15 30 45 60 75 90 105 120 135 150
+-0.01
+-0.005
+0
+0.005
+0.01
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTN = 0 V, VINN = –3.3 V
+Figure 5-33. Negative Load Regulation
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 15
+Product Folder Links: TPS7A39
+5.8 Typical Characteristics (continued)
+at TJ = 25°C, VINP = VOUTP(nom) + 1.0 V or VIN = 3.3 V (whichever is greater), VINN = VOUTN(nom) – 1 V or –3.3 V (whichever 
+is less), VEN = VIN, IOUT = 1 mA, CIN = 10-μF ceramic, COUT = 10-μF ceramic, and CFFP = CFFN = CNR/SS = 10 nF (unless 
+otherwise noted)
+Input Voltage (V)
+Accuracy (%)
+-33 -30 -27 -24 -21 -18 -15 -12 -9 -6 -3
+-2
+-1.5
+-1
+-0.5
+0
+0.5
+1
+1.5
+2
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTN = –1.19 V
+Figure 5-34. Negative Line Regulation
+Input Voltage (V)
+Accuracy (%)
+-33 -30 -27 -24 -21 -18 -15
+-2
+-1.5
+-1
+-0.5
+0
+0.5
+1
+1.5
+2
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTN = –15 V
+Figure 5-35. Negative Line Regulation
+Input Voltage (V)
+Accuracy (%)
+-33 -31 -29 -27 -25 -23
+-2
+-1.5
+-1
+-0.5
+0
+0.5
+1
+1.5
+2
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTN = –24 V
+Figure 5-36. Negative Line Regulation
+Output Current (mA)
+Accuracy (%)
+0 30 60 90 120 150
+-2
+-1.5
+-1
+-0.5
+0
+0.5
+1
+1.5
+2
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTN = –1.2 V, VINN = –3.3 V
+Figure 5-37. Negative Load Regulation
+Output Current (mA)
+Accuracy (%)
+0 30 60 90 120 150
+-2
+-1.5
+-1
+-0.5
+0
+0.5
+1
+1.5
+2
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTN = –15 V, VINN = –16 V
+Figure 5-38. Negative Load Regulation
+Output Current (mA)
+Accuracy (%)
+0 30 60 90 120 150
+-2
+-1.5
+-1
+-0.5
+0
+0.5
+1
+1.5
+2
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTN = –30 V, VINN = –33 V
+Figure 5-39. Negative Load Regulation
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+16 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+5.8 Typical Characteristics (continued)
+at TJ = 25°C, VINP = VOUTP(nom) + 1.0 V or VIN = 3.3 V (whichever is greater), VINN = VOUTN(nom) – 1 V or –3.3 V (whichever 
+is less), VEN = VIN, IOUT = 1 mA, CIN = 10-μF ceramic, COUT = 10-μF ceramic, and CFFP = CFFN = CNR/SS = 10 nF (unless 
+otherwise noted)
+Output Current (mA)
+Accuracy (%)
+0 30 60 90 120 150
+-2
+-1.5
+-1
+-0.5
+0
+0.5
+1
+1.5
+2
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTP = 1.188 V, VINP = 3.3 V
+Figure 5-40. Positive Load Regulation
+Output Current (mA)
+Accuracy (%)
+0 30 60 90 120 150
+-2
+-1.5
+-1
+-0.5
+0
+0.5
+1
+1.5
+2
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTP = 15 V, VINP = 16 V
+Figure 5-41. Positive Load Regulation
+Output Current (mA)
+Accuracy (%)
+0 30 60 90 120 150
+-2
+-1.5
+-1
+-0.5
+0
+0.5
+1
+1.5
+2
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTP = 30 V, VINP = 33 V
+Figure 5-42. Positive Load Regulation
+Input Voltage (V)
+Accuracy (%)
+3 6 9 12 15 18 21 24 27 30 33
+-1
+-0.5
+0
+0.5
+1
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTP = 1.188 V
+Figure 5-43. Positive Line Regulation
+Input Voltage (V)
+Accuracy (%)
+15 18 21 24 27 30 33
+-1
+-0.5
+0
+0.5
+1
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTP = 15 V
+Figure 5-44. Positive Line Regulation
+Input Voltage (V)
+Accuracy (%)
+23 25.5 28 30.5 33
+-1
+-0.5
+0
+0.5
+1
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTP = 24 V
+Figure 5-45. Positive Line Regulation
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 17
+Product Folder Links: TPS7A39
+5.8 Typical Characteristics (continued)
+at TJ = 25°C, VINP = VOUTP(nom) + 1.0 V or VIN = 3.3 V (whichever is greater), VINN = VOUTN(nom) – 1 V or –3.3 V (whichever 
+is less), VEN = VIN, IOUT = 1 mA, CIN = 10-μF ceramic, COUT = 10-μF ceramic, and CFFP = CFFN = CNR/SS = 10 nF (unless 
+otherwise noted)
+Output Current (mA)
+Output Voltage (V)
+0 50 100 150 200 250 300 350 400 450 500
+0
+0.25
+0.5
+0.75
+1
+1.25
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTP = 1.188 V
+Figure 5-46. Positive Regulator Current Limit
+Output Current (mA)
+Output Voltage (V)
+0 50 100 150 200 250 300 350 400 450 500
+-1.25
+-1
+-0.75
+-0.5
+-0.25
+0
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTN = –1.19 V
+Figure 5-47. Negative Regulator Current Limit
+Input Voltage (V)
+Dropout Voltage (mV)
+3 6 9 12 15 18 21 24 27 30 33
+100
+150
+200
+250
+300
+350
+400
+450
+500
+-40qC
+0qC
+25qC
+85qC
+125qC
+ 
+Figure 5-48. Positive Regulator Dropout Voltage vs Input 
+Voltage
+Input Voltage (V)
+Dropout Voltage (mV)
+3 6 9 12 15 18 21 24 27 30 33
+100
+150
+200
+250
+300
+350
+400
+450
+500
+-40qC
+0qC
+25qC
+85qC
+125qC
+ 
+Figure 5-49. Negative Regulator Dropout Voltage vs Input 
+Voltage
+Output Current (mA)
+Dropout Voltage (mV)
+0 30 60 90 120 150
+0
+50
+100
+150
+200
+250
+300
+350
+400
+450
+500
+550
+-40qC
+0qC
+25qC
+85qC
+125qC
+VINP = 3.3 V
+Figure 5-50. Positive Regulator Dropout Voltage vs Output 
+Current
+Output Current (mA)
+Dropout Voltage (mV)
+0 30 60 90 120 150
+0
+50
+100
+150
+200
+250
+300
+350
+400
+450
+500
+550
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTN = –3.3 V
+Figure 5-51. Negative Regulator Dropout Voltage vs Output 
+Current
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+18 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+5.8 Typical Characteristics (continued)
+at TJ = 25°C, VINP = VOUTP(nom) + 1.0 V or VIN = 3.3 V (whichever is greater), VINN = VOUTN(nom) – 1 V or –3.3 V (whichever 
+is less), VEN = VIN, IOUT = 1 mA, CIN = 10-μF ceramic, COUT = 10-μF ceramic, and CFFP = CFFN = CNR/SS = 10 nF (unless 
+otherwise noted)
+Temperature (qC)
+Enable Threshold (V)
+-50 -25 0 25 50 75 100 125
+1
+1.25
+1.5
+1.75
+2
+Enable Falling Enable Rising
+ 
+Figure 5-52. Enable Threshold vs Temperature
+NR/SS Voltage (V)
+NR/SS Current (PA)
+0 0.15 0.3 0.45 0.6 0.75 0.9 1.05 1.2 1.35 1.5
+0
+2
+4
+6
+8
+10
+-40qC
+0qC
+25qC
+85qC
+125qC
+ 
+Figure 5-53. INR/SS vs VNR/SS 
+Output Voltage (V)
+Discharge Current (mA)
+0 5 10 15 20 25 30 35
+0
+1
+2
+3
+4
+5
+6
+-40qC
+0qC
+25qC
+85qC
+125qC
+ 
+Figure 5-54. Positive Output Discharge Current vs Output 
+Voltage
+Output Voltage (V)
+Discharge Current (mA)
+-35 -30 -25 -20 -15 -10 -5 0
+-5
+-4
+-3
+-2
+-1
+0
+-40qC
+0qC
+25qC
+85qC
+125qC
+ 
+Figure 5-55. Negative Output Discharge Current vs Output 
+Voltage
+Output Current (mA)
+Supply Current (PA)
+0 30 60 90 120 150
+0
+400
+800
+1200
+1600
+2000
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTP = 1.188 V
+Figure 5-56. Positive Supply Current vs Output Current
+Output Current (mA)
+Supply Current (PA)
+0 15 30 45 60 75 90 105 120 135 150
+-2000
+-1600
+-1200
+-800
+-400
+0
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTN = –1.19 V
+Figure 5-57. Negative Supply Current vs Output Current
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 19
+Product Folder Links: TPS7A39
+5.8 Typical Characteristics (continued)
+at TJ = 25°C, VINP = VOUTP(nom) + 1.0 V or VIN = 3.3 V (whichever is greater), VINN = VOUTN(nom) – 1 V or –3.3 V (whichever 
+is less), VEN = VIN, IOUT = 1 mA, CIN = 10-μF ceramic, COUT = 10-μF ceramic, and CFFP = CFFN = CNR/SS = 10 nF (unless 
+otherwise noted)
+Output Current (mA)
+Accuracy (%)
+0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1
+-2
+-1.5
+-1
+-0.5
+0
+0.5
+1
+1.5
+2
+-40qC
+0qC
+25qC
+85qC
+125qC
+VOUTN = –1.19 V
+Figure 5-58. Buffer Accuracy vs Buffer Current
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+20 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+6 Detailed Description
+6.1 Overview
+The TPS7A39 is an innovative linear regulator (LDO) targeted at powering the signal chain, capable of up to 
+±33V on the inputs and regulating up to ±30V on the outputs at up to 150mA of load current. The device uses 
+an LDO topology that, by design, delivers ratiometric start-up tracking in most applications. The TPS7A39 has 
+several other features, as listed in Table 6-1, that simplify using the device in a variety of applications.
+Note
+Throughout this document, x is used to designate that the condition or component applies to both the 
+positive and negative regulators (for example, CFFx means CFFP and CFFN).
+Table 6-1. TPS7A39 Features
+VOLTAGE REGULATION SYSTEM START-UP INTERNAL PROTECTION
+Reference input/output Ratiometric start-up tracking Current limit
+High-PSRR output Programmable soft-start
+Thermal shutdown
+Fast transient response Sequencing controls
+6.2 Functional Block Diagram
+Positive LDO
++
+±
++
+±
+Bandgap
+Reference
+Current 
+Limit
++
+±
++
+±
+Current 
+Limit
+UVLO P
+UVLO N
+Negative LDO
+2.6 V
+- 2.6 V
+INP
+NR/SS
+GND
+INN
+OUTP
+FBP
+FBN
+OUTN
+EN Internal Enable
+350 k
+INP
+BUF
+UVLO N
+UVLO P
+x1
+Thermal 
+Shutdown
+Internal
+Enable
+Internal
+Enable
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 21
+Product Folder Links: TPS7A39
+6.3 Feature Description
+6.3.1 Voltage Regulation
+6.3.1.1 DC Regulation
+An LDO functions as a buffered op-amp in which the input signal is the internal reference voltage (V NR/SS), as 
+shown in Figure 6-1, and in normal regulation V FBP = V NR/SS. Sharing a single reference makes sure that both 
+channels track each other during start-up.
+VNR/SS is designed to have a very low-bandwidth at the input to the error amplifier through the use of a low-pass 
+filter. As such, the reference can be considered as a pure dc input signal.
+As Figure 6-2  shows, the negative LDO on the device regulates with a V FBN = 0V and inverts the positive 
+reference (VBUF). This topology allows the negative regulator to regulate down to 0V.
++
+±
+VINP To Load
+NR/SS
+VOUTP = VNR/SS × (1+R1P/R2P)
+GND
+R1P
+R2P
+VFBP
+Bandgap 
+Reference
+GND
+350 kCNR/SS
+GND
+Figure 6-1. Simplified Positive Regulation Circuit
++
+±
+VINN To Load
+VBUF
+VOUTN = VBUF × (-R1N/R2N)
+GND
+R1N
+R2N
+VFBN
+Figure 6-2. Simplified Negative Regulation Circuit
+6.3.1.2 AC and Transient Response
+Each LDO responds quickly to a transient on the input supply (line transient) or the output current (load 
+transient). This LDO has a high power-supply rejection ratio (PSRR) and, when coupled with a low internal 
+noise-floor (Vn), the LDO approximates an ideal power supply in ac and large-signal conditions.
+The performance and internal layout of the device minimizes the coupling of noise from one channel to the other 
+channel (crosstalk). Good printed circuit board (PCB) layout minimizes the crosstalk.
+The noise-reduction and soft-start capacitor (C NR/SS) and feed-forward capacitor (C FFx) easily reduce the device 
+noise floor and improve PSRR; see the Optimizing Noise and PSRR  section for more information on optimizing 
+the noise and PSRR performance.
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+22 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+6.3.2 User-Settable Buffered Reference
+As Figure 6-3 shows, the device internally generated band-gap voltage outputs at the NR/SS pin. An internal 
+resistor (R NR) and an external capacitor (C NR/SS) control the rise time of the voltage at the V NR/SS pin, setting 
+the soft-start time. This network also filters out noise from the band gap, reducing the overall noise floor of the 
+device.
+Driving the NR/SS pin with an external source can improve the device accuracy and can reduce the device 
+noise floor, along with enabling the device to regulate the positive channel to voltages below the device internal 
+reference.
+VBandgap
+ 
+INR/SS
+RNR/SS
+CNR/SS*
++
+±
+SW
+VFBP
+ 
++
+±
+VBUF
+GND
+x1
+VNR/SS
+VFBN
+R2N*
+Note: * Denotes external components
+* denotes external components.
+Figure 6-3. Simplified Reference Circuit
+6.3.3 Active Discharge
+When either EN or UVLOx are low, the device connects a resistance from V OUTx to GND, discharging the output 
+capacitance. The active discharge circuit requires |V OUTx| ≥ 0.6V (typ) to discharge the output because the NPN 
+pulldown has a minimum VCE requirement.
+Do not rely on the active discharge circuit for discharging large output capacitors when the input voltage drops 
+below the targeted output voltage. The TPS7A39 is a bipolar device, and as such, reverse voltage conditions 
+(|VOUTx| ≥ |VINX| + 0.3V) can breakdown the emitter to base diode and also cause a breakdown of the parasitic 
+bipolar formed in the substrate; see the Reverse Current section for more details.
+When either EN or UVLOx are low, the device outputs a small amount of leakage current. The leakage current is 
+typically handled by the maximum R 2x resistor value of 240kΩ. However, if the device is placed in unity gain (no 
+R2x resistor) this leakage current causes the output to slowly rise until the discharge circuit (as shown in Figure 
+6-4) has enough headroom to clamp the output voltage (typically ±0.6V).
+UVLOP
+EN
+UVLON
+Internal Enable
+10 
+GND
+Figure 6-4. Simplified Active Discharge Circuit
+6.3.4 System Start-Up Controls
+In many different applications, the power-supply output must turn-on within a specific window of time because of 
+sequencing requirements, providing proper operation of the load, or to minimize the loading on the input supply.
+Both LDOs start-up are well-controlled and user-adjustable through the C NR/SS capacitor, solving the demanding 
+requirements faced by many power-supply design engineers in a simple fashion. For start-up tracking to work 
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 23
+Product Folder Links: TPS7A39
+correctly. a minimum 4.7nF C NR/SS capacitor is required. For more information on start-up tracking, see the 
+Noise-Reduction and Soft-Start Capacitor (CNR/SS) section.
+6.3.4.1 Start-Up Tracking
+Figure 6-5  shows how both regulators use a common reference, which enables start-up tracking. Using the 
+same reference voltage for both the positive and negative regulators makes sure that the regulators start-up 
+together in a controlled fashion; see Figure 5-24 and Figure 5-25.
+Ramps on V INx with EN = V INP that are slower than the soft-start time do not have start-up tracking. If ramps 
+slower than the soft-start time are used then enable should be used to start the device to provide start-up 
+tracking. A small mismatch between the positive and negative internal enable thresholds means that one 
+channel turns on at a slightly lower input voltage than the other channel. This mismatch is typically not a problem 
+in most applications and is easily solved by controlling the start-up with enable. The external signal can come 
+from the input power supply power-good indicator, a voltage supervisor output such as the TPS3701, or from 
+another source.
++
+±
+VINP
+VNR/SS
+VOUTP = VNR/SS × (1+R1P/R2P)
+GND
+R1P
+R2P
++
+±
+VINN
+VOUTN = VBUF × (-R1N/R2N)
+GND
+R1N
+R2N
+VBUFx1
+Figure 6-5. Simplified Regulation Circuit
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+24 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+6.3.4.2 Sequencing
+Figure 6-6 and Table 6-2 describe how the turn-on and turn-off times of both LDOs (respectively) are controlled 
+by setting the enable circuit (EN) and undervoltage lockout circuit (UVLOP and UVLON).
+UVLOP
+EN
+UVLON
+Internal 
+Enable
+Figure 6-6. Simplified Turn-On Control
+Table 6-2. Sequencing Functionality Table
+POSITIVE INPUT VOLTAGE 
+(VINP)
+NEGATIVE INPUT VOLTAGE 
+(VINN) ENABLE STATUS LDO 
+STATUS
+ACTIVE 
+DISCHARGE
+VINP ≥ VUVLOP VINN ≤ VUVLON
+EN = 1 On Off
+EN = 0 Off On(1)
+VINP ≥ VUVLOP VINN > VUVLON EN = Don't care Off On(1)
+VINP < VUVLOP VINN ≤ VUVLON EN = Don't care Off On(1)
+VINP < VUVLOP – VUVLOP(hys) VINN > VUVLON – VUVLON(hys) EN = Don't care Off On(1)
+(1) The active discharge remains on as long as VINx and VOUTx provide enough headroom for the discharge circuit to function.
+6.3.4.2.1 Enable (EN)
+The enable signal (V EN) is an active-high digital control that enables the LDO when the enable voltage is past 
+the rising threshold (V EN ≥ VIH(EN)) and disables the LDO when the enable voltage is below the falling threshold 
+(VEN ≤ V IL(EN)). The exact enable threshold is between V IH(EN) and V IL(EN) because EN is a digital control. In 
+applications that do not use the enable control, connect EN to VINP.
+A slow V INx ramp directly connecting EN to V INP can cause the start-up tracking to move out of specification. 
+Under slow ramp conditions, use a resistor divider from VINP to provide start-up tracking.
+6.3.4.2.2 Undervoltage Lockout (UVLO) Control
+The UVLO circuit responds quickly to glitches on the input supplies and attempts to disable the output of the 
+device if either of these rails collapse.
+As a result of the fast response time of the input supply UVLO circuit, fast and short line transients well below 
+the input supply UVLO falling threshold (brownouts) can cause momentary glitches during the edges of the 
+transient. These glitches are typical in most LDOs. The local input capacitance prevents severe brown-outs 
+in most applications; see the Undervoltage Lockout (UVLOx) Control  section in the Application Information for 
+more details. Fast line transients can cause the outputs to momentarily shut off, and can be mitigated through 
+using the recommended 10µF input capacitor. If this becomes a problem in the system, increasing the input 
+capacitance prevents these glitches from occurring.
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 25
+Product Folder Links: TPS7A39
+6.4 Device Functional Modes
+6.4.1 Normal Operation
+The device regulates to the nominal output voltage under the following conditions:
+• The input voltage is at least as high as |VINx(min)|
+• The input voltage is greater than the nominal output voltage added to the dropout voltage
+• The enable voltage has previously exceeded the enable rising threshold voltage and has not decreased 
+below the enable falling threshold
+• The output current is less than the current limit
+• The device junction temperature is less than TSD
+6.4.2 Dropout Operation
+If the input voltage is lower than the nominal output voltage plus the specified dropout voltage, but all other 
+conditions are met for normal operation, the device operates in dropout mode. In this mode of operation, the 
+output voltage is the same as the input voltage minus the dropout voltage. The transient performance of the 
+device is significantly degraded because the pass transistor (as a bipolar junction transistor, or BJT) is in 
+saturation and no longer controls the current through the LDO. Line or load transients in dropout can result in 
+large output voltage deviations.
+6.4.3 Disabled
+The device is disabled under the following conditions:
+• The enable voltage is less than the enable falling threshold voltage or has not yet exceeded the enable rising 
+threshold
+• The device junction temperature is greater than the thermal shutdown temperature
+Table 6-3 shows the conditions that lead to the different modes of operation.
+Table 6-3. Device Functional Mode Comparison
+OPERATING MODE
+PARAMETER
+VIN VEN IOUT TJ
+Normal mode |VINx| > |VOUT(nom)| + |VDOx| and
+|VINx| > |VINx(min)| VEN > VIH |IOUTx| < |ILIMx| TJ < 125°C
+Dropout mode |VINx(min)| < |VINx| < |VOUTx(nom)| + |
+VDOx| VEN > VIH — TJ < 125°C
+Disabled mode
+(any true condition disables the 
+device)
+— VEN < VIL — TJ > TSD
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+26 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+7 Application and Implementation
+Note
+Information in the following applications sections is not part of the TI component specification, 
+and TI does not warrant its accuracy or completeness. TI’s customers are responsible for 
+determining suitability of components for their purposes, as well as validating and testing their design 
+implementation to confirm system functionality.
+7.1 Application Information
+Successfully implementing an LDO in an application depends on the application requirements. This section 
+discusses key device features and how to best implement the LDO to achieve a reliable design.
+7.1.1 Setting the Output Voltages on Adjustable Devices
+Figure 7-1 shows that each LDO resistor feedback network sets the output voltage. The positive LDO output 
+voltage range is VNR/SS to 30V and the negative LDO output voltage range is 0V to –30V.
+INP
+INN
+EN
+GND
+NR/SS
+OUTP
+OUTN
+BUF
+FBP
+FBN
+TPS7A39
+3mm x 3mm
+CINP
+CNR/SS
+CINN
+R1P
+R2P
+R1N
+R2N
+COUTN
+COUTP
+CFFN
+CFFP
+Figure 7-1. Adjustable Operation
+Equation 1  relates the values of R 1P and R 2P to V OUTP(NOM) and V NR/SS to set the positive output voltage. 
+Equation 2 relates the values of R1N and R2N to VOUTN(NOM) and VNR/SS to set the negative output voltage.
+The positive LDO is configured as a noninverting op amp, whereas the negative LDO is an inverting op amp.
+VOUTP = VNR/SS × (1 + R1P / R2P) (1)
+VOUTN = VNR/SS × (–R1N / R2N) (2)
+Substituting V NR/SS with V FBP on the positive channel and V NR/SS with V BUF on the negative channel gives a 
+more accurate relationship.
+Equation 3 and Equation 2 are rearranged versions of Equation 1 and Equation 2, with the above substitutions 
+made.
+R1P = (VOUTP / VFBP – 1) × R2P (3)
+R1N = –(VOUTN × R2P) / VBUF (4)
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 27
+Product Folder Links: TPS7A39
+The minimum bias current through both feedback networks is 5µA to ensure accuracy.
+For even tighter accuracy, take into account the input bias current into the error amplifiers (I FBP and I FBN) and 
+use 0.1% resistors. Overriding the internal reference with a high accuracy external reference can also improve 
+the accuracy of the device.
+Table 7-1 and Table 7-2 show the resistor combinations for several common output voltages using commercially 
+available, 1% tolerance resistors.
+Table 7-1. Recommended Feedback-Resistor Values for the Positive LDO
+TARGETED OUTPUT VOLTAGE 
+(V)
+FEEDBACK RESISTOR VALUES(1)
+CALCULATED OUTPUT 
+VOLTAGE (V)R1P (kΩ) R2P (kΩ)
+1.5 2.67 10.0 1.50
+1.8 5.23 10.0 1.80
+2.5 11.0 10.0 2.49
+3.0 15.4 10.0 3.00
+3.3 17.8 10.0 3.29
+5.0 32.4 10.0 5.02
+9.0 66.5 10.0 9.07
+12.0 90.9 10.0 12.0
+15.0 115 10.0 14.8
+24.0 191 10.0 23.8
+30.0 243 10.0 29.8
+(1) R1P is connected from OUTP to FBP, R2P is connected from FBP to GND; see the Setting the Output Voltages on Adjustable Devices 
+section.
+Table 7-2. Recommended Feedback-Resistor Values for the Negative LDO
+TARGETED OUTPUT VOLTAGE 
+(V)
+FEEDBACK RESISTOR VALUES(1)
+CALCULATED OUTPUT 
+VOLTAGE (V)R1N (kΩ) R2N (kΩ)
+-0.3 2.55 10.0 -0.303
+-1.5 12.7 10.0 -1.51
+-1.8 15.0 10.0 -1.78
+-2.5 21.0 10.0 -2.49
+-3.0 25.5 10.0 -3.03
+-3.3 28.0 10.0 -3.33
+-5.0 42.2 10.0 -5.04
+-9.0 75.0 10.0 -8.91
+-12.0 100 10.0 -11.9
+-15.0 127 10.0 -15.1
+-24.0 200 10.0 -23.8
+-30.0 255 10.0 -30.3
+(1) R1N is connected from OUTN to FBN, R2N is connected from FBN to BUF; see the Setting the Output Voltages on Adjustable Devices 
+section.
+7.1.2 Capacitor Recommendations
+The device is designed to be stable using low equivalent series resistance (ESR) ceramic capacitors at the 
+input and output pins. The device is also designed to be stable with aluminum polymer and tantalum polymer 
+capacitors with ESR < 75mΩ.
+Electrolytic capacitors (along with higher ESR polymer capacitors) can also be used if capacitors (meeting the 
+minimum capacitance and ESR requirements ) are used in parallel.
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+28 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+Take the effective ESR for stability when the impedance of the capacitor is at minimum. At the minimum level, 
+the capacitance and parasitic inductance cancel each other and provides the DC ESR.
+Ceramic capacitors that employ X7R-, X5R-, and COG-rated dielectric materials provide relatively good 
+capacitive stability across temperature, whereas the use of Y5V-rated capacitors is discouraged because of 
+large variations in capacitance.
+Regardless of the ceramic capacitor type selected, ceramic capacitance varies with operating voltage and 
+temperature. As a rule of thumb, derate ceramic capacitors by at least 50%. The input and output capacitors 
+recommended herein account for an effective capacitance derating of approximately 50%, but at higher V IN and 
+VOUT conditions (that is, VIN = 5.5V to VOUT = 5.0V) the derating can be greater than 50% and must be taken into 
+consideration.
+For high performance applications polymer capacitors are ideal as they do not experience the large deratings of 
+ceramic capacitors.
+7.1.3 Input and Output Capacitor (CINx and COUTx)
+The device is designed and characterized for operation with ceramic capacitors of 10µF or greater (2.2µF or 
+greater of effective capacitance) at each input and output.
+Locate the input and output capacitors as near as practical to the respective input and output pins to minimize 
+the trace inductance from the capacitor to the device. If the LDO is used to produce low output voltages (below 
+5V), a 4.7µF output capacitor can be used. If a 4.7µF output capacitor is used, be sure to account for the 
+derating of the capacitors during design.
+Large, fast line transients on the input supplies can cause the device output to momentarily turn off. Typically 
+these transients do not occur in most applications, but when these transients do occur use a larger input 
+capacitor to slow down the line transient. If the system has input line transients that are faster than 0.5V/µs, 
+increase the input capacitance.
+7.1.4 Feed-Forward Capacitor (CFFx)
+Although a feed-forward capacitor (C FFx) from the FBx pin to the OUTx pin is not required to achieve 
+stability, a 10nF external C FFx capacitor optimizes the transient, noise, and PSRR performance. The maximum 
+recommended value for CFFx is 100nF.
+A larger CFFx can dominate the start-up time set by CNR/SS, for more information see the Pros and Cons of Using 
+a Feed-Forward Capacitor with a Low Dropout Regulator application note.
+7.1.5 Noise-Reduction and Soft-Start Capacitor (CNR/SS)
+Although a noise-reduction and soft-start capacitor (C NR/SS) from the NR/SS pin to GND is not required, C NR/SS 
+is highly recommended to control the start-up time and reduce the noise-floor of the device. For start-up tracking 
+to function correctly, a minimum 4.7nF capacitor is required. As the time constant formed by the feedback 
+resistors and feed-forward capacitors increases, the value of the C NR/SS capacitor must also be increased for 
+start-up tracking to work correctly. To figure out how to calculate the time constant of the feedback network see 
+the Pros and Cons of Using a Feed-Forward Capacitor with a Low Dropout Regulator application note.
+7.1.6 Buffered Reference Voltage
+The voltage at the NR/SS pin, whether driven internally or externally, is buffered with a high-bandwidth, low-
+noise op amp. The BUF pin can be used as a voltage reference in many signal chain applications.
+7.1.7 Overriding Internal Reference
+The internal reference of the LDO can be overridden using an external source to increase the accuracy of the 
+LDO and lower the output noise. To override the internal reference connect the external source to the NR/SS 
+pin of the LDO. To overdrive the internal reference the external source must be able to source or sink 100µA or 
+greater.
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 29
+Product Folder Links: TPS7A39
+The internal reference achieves a 2% accuracy from –40°C to +125°C; using an external reference can help 
+achieve better accuracy over temperature.
+7.1.8 Start-Up
+7.1.8.1 Soft-Start Control (NR/SS)
+Each output of the device features a user-adjustable, monotonic, voltage-controlled soft-start that is set with an 
+external capacitor (CNR/SS). This soft-start eliminates power-up initialization problems.
+The output voltage (VOUTx) rises proportionally to VNR/SS during start-up. As such, the time required for V NR/SS to 
+reach the nominal value determines the rise time of VOUTx (start-up time).
+The soft-start ramp time depends on the soft-start charging current (I NR/SS), the soft-start capacitance (C NR/SS), 
+and the internal reference (VNR/SS). Equation 5 calculates the approximate soft-start ramp time (tSS):
+tSS = RNR/SS × CNR/SS × ln [(VNR/SS + INR/SS × RNR/SS) / (INR/SS × RNR/SS)] (5)
+Values for the soft-start charging currents and the device internal R NR/SS are provided in the Electrical 
+Characteristics table.
+7.1.8.1.1 In-Rush Current
+In-rush current is defined as the current into the LDO at the INx pin during start-up. In-rush current then consists 
+primarily of the sum of load current and the current used to charge the output capacitor. This current is difficult 
+to measure because the input capacitor must be removed, which is not recommended. However, the in-rush 
+current can be estimated by Equation 6:
+I =OUTx(t) COUTx OUTx/c180dV (t)
+dt
+VOUTx(t)
+RLOAD
++
+(6)
+where:
+• VOUTx(t) is the instantaneous output voltage of the turn-on ramp
+• dVOUTx(t) / dt is the slope of the VOUTx ramp
+• RLOAD is the resistive load impedance
+7.1.8.2 Undervoltage Lockout (UVLOx) Control
+The UVLOx circuit makes sure that the device stays disabled before the input or bias supplies reach the 
+minimum operational voltage range, and makes sure that the device properly shuts down when the input supply 
+collapses.
+Figure 7-2 and Table 7-3 explain the UVLOx circuit response to various input voltage events, assuming V EN ≥ 
+VIH(EN).
+The positive and negative UVLO circuits are internally ANDed together. As such, if either supply collapses, both 
+outputs turn-off and VNR/SS is pulled low internally.
+C
+tAt
+VINx
+VOUTx
+UVLOx Rising Threshold
+UVLOx Hysteresis
+tBt tDt tEt tFt tGt
+Figure 7-2. Typical UVLOx Operation
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+30 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+Table 7-3. Typical UVLOx Operation Description
+REGION EVENT VOUTx STATUS COMMENT
+A Turn-on, |VINx| ≤ |VUVLOx| 0 Start-up
+B Regulation 1 Regulates to target VOUTx
+C Brownout,|VINx| ≥ |VUVLOx – 
+VHYSx| 1 The output can fall out of regulation but the device is still enabled
+D Regulation 1 Regulates to target VOUTx
+E Brownout, |VINx| < |VUVLOx – 
+VHYSx| 0
+The device is disabled and the output falls because of the load and 
+active discharge circuit. The device is reenabled when the UVLOx 
+rising threshold is reached by the input voltage and a normal start-up 
+then follows.
+F Regulation 1 Regulates to target VOUTx
+G Turn-off, |VINx| < |VUVLOx – VHYSx| 0 The output falls because of the load and active discharge circuit
+Similar to many other LDOs with this feature, the UVLOx circuit takes a few microseconds to fully assert. During 
+this time, a downward line transient below approximately 0.8V causes the UVLOx to assert for a short time; 
+however, the UVLOx circuit does not have enough stored energy to fully discharge the internal circuits inside of 
+the device. When the UVLOx circuit is not given enough time to fully discharge the internal nodes, the outputs 
+are not fully disabled.
+The effect of the downward line transient can be mitigated by using a larger input capacitor to increase the fall 
+time of the input supply when operating near the minimum VINx.
+7.1.9 AC and Transient Performance
+LDO ac performance for a dual-channel device includes power-supply rejection ratio, channel-to-channel output 
+isolation, output current transient response, and output noise. These metrics are primarily a function of open-
+loop gain, bandwidth, and phase margin that control the closed-loop input and output impedance of the LDO. 
+The output noise is primarily a result of the band-gap reference and error amplifier noise.
+7.1.9.1 Power-Supply Rejection Ratio (PSRR)
+PSRR is a measure of how well the LDO control-loop rejects signals from V INx to V OUTx across the frequency 
+spectrum (usually 10Hz to 10MHz). Equation 7 gives the PSRR calculation as a function of frequency for the 
+input signal [VINx(f)] and output signal [VOUTx(f)].
+INx
+10
+OUTx
+V (f )PSRR (dB) 20 Log V (f )
+§ ·  ¨ ¸ 
+© ¹ 
+(7)
+Even though PSRR is a loss in signal amplitude, PSRR is shown as positive values in decibels (dB) for 
+convenience.
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 31
+Product Folder Links: TPS7A39
+Figure 7-3 shows a simplified diagram of PSRR versus frequency.
+Power-Supply Rejection-Ratio (dB)
+Frequency (Hz)
+Bandgap Bandgap RC 
+Filter
+Error Amplifier, Flat-Gain 
+Region
+Error Amplifier, 
+Gain Roll-off
+Output Capacitor 
+|ZCOUT| Decreasing
+Output Capacitor 
+|ZCOUT| Increasing
+Sub 10 Hz 10 Hz ± 1 MHz
+100 kHz +
+Figure 7-3. Power-Supply Rejection Ratio Diagram
+An LDO is often employed not only as a dc/dc regulator, but also to provide exceptionally clean power-supply 
+voltages that exhibit ultra-low noise and ripple to sensitive system components.
+7.1.9.2 Channel-to-Channel Output Isolation and Crosstalk
+Output isolation is a measure of how well the device prevents voltage disturbances on one output from affecting 
+the other output. This attenuation appears in load transient tests on the other output; however, to numerically 
+quantify the rejection, the output channel isolation is expressed in decibels (dB).
+Output isolation performance is a strong function of the PCB layout. See the Layout Guidelines section on how 
+to best optimize the isolation performance.
+7.1.9.3 Output Voltage Noise
+The TPS7A39 is designed for system applications where minimizing noise on the power-supply rail is critical 
+to system performance. For example, the TPS7A39 can be used in a phase-locked loop (PLL)-based clocking 
+circuit that can be used for minimum phase noise, or in test and measurement systems where even small 
+power-supply noise fluctuations reduce system dynamic range.
+LDO noise is defined as the internally-generated intrinsic noise created by the semiconductor circuits alone. This 
+noise is the sum of various types of noise (such as shot noise associated with current-through-pin junctions, 
+thermal noise caused by thermal agitation of charge carriers, flicker noise, or 1/f noise and dominates at 
+lower frequencies as a function of 1/f). Figure 7-4 shows a simplified output voltage noise density plot versus 
+frequency.
+Output Voltage Noise Density (nV/¥+])
+Frequency (Hz)
+Integrated Noise
+From Bandgap and Error Amplifier
+Measurement Noise Floor
+1/f Noise
+Wide-band Noise
+Noise Gain Roll-Off
+Figure 7-4. Output Voltage Noise Diagram
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+32 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+For further details, see the How to Measure LDO Noise white paper.
+7.1.9.4 Optimizing Noise and PSRR
+Table 7-4 describes how the ultra-low noise floor and PSRR of the device can be improved in several ways.
+Table 7-4. Effect of Various Parameters on AC Performance (1) (2) 
+PARAMETER
+NOISE PSRR
+LOW-
+FREQUENCY
+MID-
+FREQUENCY
+HIGH-
+FREQUENCY
+LOW-
+FREQUENCY
+MID-
+FREQUENCY
+HIGH-
+FREQUENCY
+CNR/SS +++ No effect No effect +++ + No effect
+CFFx ++ +++ + ++ +++ +
+COUTx No effect + +++ No effect + +++
+|VINx| – |VOUTx| + + + +++ +++ ++
+PCB layout ++ ++ + + +++ +++
+(1) The number of +s indicates the improvement in noise or PSRR performance by increasing the parameter value.
+(2) Shaded cells indicate the easiest improvement to noise or PSRR performance.
+The noise-reduction capacitor, in conjunction with the noise-reduction resistor, forms a low-pass filter (LPF) 
+that filters out the noise from the reference before being gained up with the error amplifier, thereby minimizing 
+the output voltage noise floor. The LPF is a single-pole filter and the cutoff frequency can be calculated with 
+Equation 8. The effect of the C NR/SS capacitor increases when VOUTx(NOM) increases because the noise from the 
+reference is gained up when the output voltage increases. For low-noise applications, a 10nF to 1µF C NR/SS is 
+recommended.
+fcutoff = 1 / (2 × π × RNR/SS × CNR/SS) (8)
+The feed-forward capacitor reduces output voltage noise by filtering out the mid-band frequency noise. The 
+feed-forward capacitor can be optimized by placing a pole-zero pair near the edge of the loop bandwidth and 
+pushing out the loop bandwidth, thus improving mid-band PSRR.
+A larger COUTx or multiple output capacitors reduces high-frequency output voltage noise and PSRR by reducing 
+the high-frequency output impedance of the power supply.
+Additionally, a higher input voltage improves the noise and PSRR because greater headroom is provided for the 
+internal circuits. However, a high power dissipation across the die increases the output noise because of the 
+increase in junction temperature.
+Good PCB layout improves the PSRR and noise performance by providing heat sinking at low frequencies and 
+isolating VOUTx at high frequencies.
+7.1.9.5 Load Transient Response
+The load-step transient response is the output voltage response by the LDO to a step in load current, whereby 
+output voltage regulation is maintained. There are two key transitions during a load transient response: the 
+transition from a light to a heavy load and the transition from a heavy to a light load. The regions illustrated in 
+Figure 7-5 are broken down in this section and are described in Table 7-5. Regions A, E, and H are where the 
+output voltage is in steady-state. Increasing the output capacitance improves the transient response (less dip); 
+however, the transient takes longer to recover when using a large output capacitor.
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 33
+Product Folder Links: TPS7A39
+FB
+VOUTx
+IOUTx
+HGECA D
+Figure 7-5. Load Transient Waveform
+Table 7-5. Load Transient Waveform Description
+REGION DESCRIPTION COMMENT
+A Regulation Regulation
+B Output current ramping Initial voltage dip is a result of the depletion of the output capacitor charge.
+C LDO responding to transient Recovery from the dip results from the LDO increasing the sourcing current, and leads 
+to output voltage regulation.
+D Reaching thermal equilibrium At high load currents the LDO takes some time to heat up. During this time the output 
+voltage changes slightly.
+E Regulation Regulation
+F Output current ramping Initial voltage rise results from the LDO sourcing a large current, and leads to the 
+output capacitor charge to increase.
+G LDO responding to transient Recovery from the rise results from the LDO decreasing the sourcing current in 
+combination with the load discharging the output capacitor.
+H Regulation Regulation
+7.1.10 DC Performance
+7.1.10.1 Output Voltage Accuracy (VOUT x)
+The device features an output voltage accuracy that includes the errors introduced by the internal reference, 
+load regulation, line regulation, process variation, and operating temperature as specified in the Electrical 
+Characteristics table. Output voltage accuracy specifies minimum and maximum output voltage error, relative to 
+the expected nominal output voltage stated as a percent (for very low output voltages this specification is in mV).
+7.1.10.2 Dropout Voltage (VDO)
+Generally speaking, the dropout voltage often refers to the minimum voltage difference between the input and 
+output voltage (|V DO| = |V INx| – |V OUTx|) that is required for regulation. When V INx drops below the required 
+VDOx for the given load current, the device functions as a resistive switch and does not regulate output voltage. 
+Dropout voltage is proportional to the output current because the device is operating as a resistive switch.
+7.1.11 Reverse Current
+As with most LDOs, this device can be damaged by excessive reverse current.
+Reverse current is current that flows through the substrate of the device instead of the normal conducting 
+channel of the pass transistor. This current flow, at high enough magnitudes, degrades long-term reliability of the 
+device resulting from risks of electromigration and excess heat being dissipated across the device.
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+34 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+Conditions where excessive reverse current can occur are outlined in this section, all of which can exceed the 
+absolute maximum rating of VOUTP > VINP + 0.3V and VOUTN < VINN – 0.3V:
+• If the device has a large COUTx and the input supply collapses quickly with little or no load current
+• The output is biased when the input supply is not established
+• The output is biased above the input supply
+If excessive reverse current flow is expected in the application, then external protection must be used to protect 
+the device. Figure 7-6 shows one approach of protecting the device.
+Device
+INP OUTP
+GND
+ 
+COUTP
+ 
+CINP
+Schottky Diode
+Figure 7-6. Example Circuit for Reverse Current Protection Using a Schottky Diode On Positive Rail
+7.1.12 Power Dissipation (PD)
+Circuit reliability demands that proper consideration is given to device power dissipation, location of the circuit on 
+the printed circuit board (PCB), and correct sizing of the thermal plane. The PCB area around the regulator must 
+be as free as possible of other heat-generating devices that cause added thermal stresses.
+As a first-order approximation, power dissipation in the regulator depends on the input-to-output voltage 
+difference and load conditions. Use Equation 9 to approximate PD:
+PD = (VINP – VOUTP) × IOUTP + (|VINN – VOUTN|) × |IOUTN| (9)
+Careful selection of the system voltage rails minimizes power dissipation and improves system efficiency. Proper 
+selection allows the minimum input-to-output voltage differential to be obtained. The low dropout of the device 
+allows for maximum efficiency across a wide range of output voltages.
+The main heat conduction path for the device is through the thermal pad on the package. As such, the thermal 
+pad must be soldered to a copper pad area under the device. This pad area contains an array of plated vias that 
+conduct heat to any inner plane areas or to a bottom-side copper plane.
+The maximum power dissipation determines the maximum allowable junction temperature (T J) for the device. 
+According to Equation 10, power dissipation and junction temperature are most often related by the junction-to-
+ambient thermal resistance (θJA) of the combined PCB, device package, and the temperature of the ambient air 
+(TA).
+TJ = TA + θJA × PD (10)
+Unfortunately, this thermal resistance ( θJA) is highly dependent on the heat-spreading capability built into the 
+particular PCB design, and therefore varies according to the total copper area, copper weight, and location of 
+the planes. The θJA recorded in the Electrical Characteristics table is determined by the JEDEC standard, PCB, 
+and copper-spreading area, and is only used as a relative measure of package thermal performance. For a 
+well-designed thermal layout, θJA is actually the sum of the WSON package junction-to-case (bottom) thermal 
+resistance (θJCbot) plus the thermal resistance contribution by the PCB copper.
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 35
+Product Folder Links: TPS7A39
+7.1.12.1 Estimating Junction Temperature
+The JEDEC standard recommends the use of psi ( Ψ) thermal metrics to estimate the junction temperatures 
+of the LDO when in-circuit on a typical PCB board application. These metrics are not strictly speaking thermal 
+resistances, but rather offer practical and relative means of estimating junction temperatures. These psi metrics 
+are determined to be significantly independent of the copper-spreading area. The key thermal metrics ( ΨJT and 
+ΨJB) are given in the Electrical Characteristics table and are used in accordance with Equation 11.
+/c89
+/c89 /c89 /c180
+JT J T JT D: T = T + P /c89 /c180
+JB J B JB D: T = T + P
+(11)
+where:
+• PD is the power dissipated as explained in Equation 9
+• TT is the temperature at the center-top of the device package
+• TB is the PCB surface temperature measured 1mm from the device package and centered on the package 
+edge
+7.2 Typical Applications
+7.2.1 Design 1: Single-Ended to Differential Isolated Supply
+10 F
+10 F 0.1 F
+0.1 F
+VINP
+INP
+INN
+EN
+GND
+NR/SS
+OUTP
+OUTN
+BUF
+FBP
+FBN
+TPS7A39
+3mm x 3mm
+COUTN
+R1PR2P
+10 nF
+R1N R2N
+10 nF
+COUTP
+10 nF
+D2 
+D1 
+VCC 
+CLK 
+EN 
+GND 
++5V
+SN6505B
+10 F 0.1 F
+Diode1 Diode2
+Diode3 Diode4
+TP1
+TP2
+To 
+Signal
+Figure 7-7. Single-Ended to Differential Isolated Supply Schematic
+7.2.1.1 Design Requirements
+Table 7-6. Design Requirements
+PARAMETER DESIGN REQUIREMENT DESIGN RESULT
+Input supply Must operate off of 5V input 5V input supply
+Output supply Must have a 5V and –5V output ±5V output, ±2% accuracy
+Positive output 
+current Capable of sourcing 50mA on positive output 50mA (sourcing)
+Negative output 
+current Capable of sinking 50mA on negative output 50mA (sinking)
+Isolation from 5V 
+supply Must be isolated from input supply Isolated through center tapped transformer
+Efficiency Must have > 80% efficiency at 100mA(1) 85% efficiency when IOUTN = –50mA and IOUTP = 
+50mA
+(1) |IOUTN| = IOUTP = 50mA.
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+36 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+7.2.1.2 Detailed Design Procedure
+7.2.1.2.1 Switcher Choice
+This design incorporates a push-pull driver for center-tapped transformers that takes a single-ended supply and 
+converts the supply to an isolated split rail design. The SN6505B provides a simple small-form factor isolated 
+supply. The input voltage of the SN6505B can vary from 2.25V to 5V, which allows for use with a wide range 
+of input supplies. The output voltage can be adjusted through the turns ratio of the transformer. Based on 
+the choice of the transformer this design can be used to create output voltages from ±3.3V to ±15V. In this 
+design the SN6505B was paired with the 750315371 center-tapped transformer from Wurth Electronics®. This 
+transformer has a turns ratio of 1:1.1 and an isolation rating of 2500V RMS (the total system isolation was never 
+tested).
+7.2.1.2.2 Full Bridge Rectifier With Center-Tapped Transformer
+To create the isolated supply, the SN6505B uses a center-tapped transformer. A full bridge rectifier and 
+capacitors are required to regulate the signal before reaching the LDO because of the alternating nature of 
+the input signal. TI recommends having a fast switching and low forward voltage diode to improve efficiency 
+because of how fast the SN6505 switches; Schottky diodes work well. Figure 7-9 shows the switching nodes of 
+the SN6505 D1 and D2 and also shows where the transformer connects to the full bridge rectifier TP1 and TP2. 
+Figure 7-9 shows the switching waveforms across the rectifier diodes.
+n
+VIN VOUT+ = n·VIN
+VOUT- = n·VIN
+Figure 7-8. Bridge Rectifier With Center-Tapped Secondary Enables Bipolar Outputs
+7.2.1.2.3 Total Solution Efficiency
+Equation 12 shows how the efficiency of the system can be measured by taking the output power and dividing 
+by the input power. I OUTP = |I OUTN| = I OUT / 2 because this system has two output rails to simplify the efficiency 
+measurement. When the necessary parameters are measured, and by using Equation 12, the overall system 
+efficiency can be plotted as in Figure 7-10. Figure 7-10 shows the overall system efficiency for this design, at the 
+maximum output current of 100mA (IOUTP = 50mA, IOUTN = –50mA) the efficiency of the system is 85%.
+η = (IOUTP × VOUTP + IOUTN × VOUTN) / (IIN × VIN) (12)
+7.2.1.2.4 Feedback Resistor Selection
+Equation 13 and Equation 14 calculate the values of the feedback resistors.
+VOUTP = VFBP × (1 + R1P / R2P) (13)
+VOUTN = VBUF × (–R1N / R2N) (14)
+For this design the recommended 10k Ω resistors are used for R 2P and R 2N. R1P and R 1N can be calculated by 
+substituting R2P and R2N into Equation 15 and Equation 16 because R2P and R2N are already selected
+R1P = [(VOUTP / VFBP) – 1] × R2P = [(5V / 1.188V) – 1] × 10kΩ = 32.2kΩ (15)
+R1N = –VOUTN × R2N / VBUF = –(–5V) × 10kΩ / 1.19V = 42kΩ (16)
+After solving for Equation 15 and Equation 16, the closest one percent resistors are selected, R 1N = 42.2kΩ and 
+R1P = 32.4kΩ.
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 37
+Product Folder Links: TPS7A39
+7.2.1.3 Application Curves
+Time (Ps)
+Voltage (V)
+0 5 10 15 20 25 30 35 40 45 50
+-20
+-16
+-12
+-8
+-4
+0
+4
+8
+12
+16
+20
+D1 D2 TP1 TP2
+ 
+Figure 7-9. Switching Node of the SN6505B
+IOUT (mA)
+Efficiency (%)
+0 10 20 30 40 50 60 70 80 90 100
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+IOUT = IOUTP + |IOUTN|, IOUTP = |IOUTN|
+Figure 7-10. Efficiency vs Output Current
+Time (ms)
+Voltage (V)
+0 10 20 30 40 50 60 70 80 90 100
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+10
+VCC VINP VOUTP VINN VOUTN
+ 
+Figure 7-11. System Start-Up
+Frequency (Hz)
+Noise (PV/Hz)
+0.001
+0.002
+0.005
+0.01
+0.02
+0.05
+0.1
+0.2
+0.5
+1
+2
+5
+10
+10 100 1k 10k 100k 1M 10M
+IOUT = 50 mA
+ 
+Figure 7-12. OUTP Noise
+Frequency (Hz)
+Noise (PV/Hz)
+0.001
+0.002
+0.005
+0.01
+0.02
+0.05
+0.1
+0.2
+0.5
+1
+2
+5
+10
+10 100 1k 10k 100k 1M 10M
+IOUT = 50 mA
+ 
+Figure 7-13. OUTN Noise
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+38 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+7.2.2 Design 2: Getting the Full Range of a SAR ADC
+ADC
+AINP
+AINNOPA625
++
+±
+OPA625
+±
++
+1 k 
+1 k 
+1 nF 
+10 nF
+1 k 
+2.2  
+2.2  
+10 nF
+10 nF
+OPA625_CM
+1 k 
+1 nF 
+VOUTP
+VOUTN
+VOUTP
+VOUTN
+INP
+INN
+EN
+GND
+NR/SS
+OUTP
+OUTN
+BUF
+FBP
+FBN
+TPS7A39
+3mm x 3mm
+CINP
+CNR/SS
+CINN
+R1P
+R2P
+R1N
+R2N
+COUTN
+COUTP
+CFFN
+CFFP
++
+±
++
+±
+3.3 V
+6 V
+VOUTP = 5.2 V
+VOUTN = -0.2 V
+Positive 
+Differential Input
+Negative 
+Differential Input
++
+±
+Vin
+Figure 7-14. Creating Power Rails for an Analog Front-End of an ADC
+7.2.2.1 Design Requirements
+A common problem in analog-to-digital converters (ADCs) is that as the input signal approaches the edge of the 
+range of the ADC, the signal begins to become distorted. Often times this is not because of a limitation of the 
+ADC, but is a result of the analog front-end (AFE). In the AFE, the signal begins to approach the rails of the op 
+amp and the signal begins to lose linearity and becomes distorted. This distortion is because when the rail-to-rail 
+op amp begins to enter the nonlinear region of operation within 100mV of the rail, the signal-to-noise ratio (SNR) 
+starts to degrade and the total harmonic distortion (THD) of the ADC increases. To prevent the op amp from 
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 39
+Product Folder Links: TPS7A39
+exiting the linear region of operation, the design must use a power supply that can generate rails 200mV above 
+and below the input range of the ADC.
+7.2.2.2 Detailed Design Procedure
+In this design, the ADS8900B is used as the ADC. This ADC features a differential input, so from a 5V reference 
+the ADC is able to encode values between ±5V. In many applications, single-supply op amps are powered with 
+rails from 0V to 5V, which causes the input signal to become distorted when the full range signal is applied. The 
+FFT of a 10VPP (peak-to-peak) sine wave using a single 5V rail to bias the amplifiers is illustrated in Figure 7-15. 
+In this test the SNR was calculated to be 54.89dB and the THD was calculated to be –40.68dB.
+There is a simple solution to improve the SNR and THD of the ADC: bias the amplifiers in the analog front end 
+with a 5.2V rail and a –0.2V rail. Using these rails allows the amplifier to operate in the linear region in the 0V to 
+5V range needed by the ADC. The FFT of a 10V PP sine wave using a 5.2V rail and a –0.2V rail is illustrated in 
+Figure 7-16. In this test the SNR was calculated to be 102.535dB and the THD was calculated to be –121.66dB. 
+Using –0.2V and 5.2V rail voltages still allows for common 5V (5.5V max) op amps to be used in the design.
+7.2.2.3 Detailed Design Description
+7.2.2.3.1 Regulation of –0.2V
+The TPS7A39 has an innovative feature of regulating the negative rail down to zero volts. This regulation is 
+achieved by using an inverting amplifier and using the positive-buffered reference as the input signal to the 
+amplifier. Regulating to –0.2V eliminates the nonlinearity and distortion present when using the full rail range of 
+the amplifiers.
+7.2.2.3.2 Feedback Resistor Selection
+Use Equation 17 and Equation 18 to calculate the values of the feedback resistors:
+VOUTP = VFBP × (1 + R1P / R2P) (17)
+VOUTN = VBUF × (–R1N / R2N) (18)
+For this design the recommended 10k Ω resistors are used for R 2P and R 2N. R1P and R 1N can be calculated by 
+substituting R2P and R2N into Equation 19 and Equation 20 because R2P and R2N are already selected.
+R1P = [(VOUTP / VFBP) – 1] × R2P = [(5.2V / 1.188V) – 1] × 10kΩ = 33.8kΩ (19)
+R1N = –VOUTN × R2N / VBUF = –(–0.2V) × 10kΩ / 1.19V = 1.68kΩ (20)
+After solving for Equation 19 and Equation 20, the closest one percent resistors are selected, R 1N = 1.69kΩ and 
+R1P = 34kΩ.
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+40 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+7.2.2.4 Application Curves
+Frequency (Hz)
+Amplitude (dBC)
+-200
+-180
+-160
+-140
+-120
+-100
+-80
+-60
+-40
+-20
+0
+100 1k 10k 100k
+fIN = 1kHz, VPP = 10.0V
+Figure 7-15. FFT Using 5V and 0V Supply Rails
+Frequency (Hz)
+Amplitude (dBC)
+-200
+-180
+-160
+-140
+-120
+-100
+-80
+-60
+-40
+-20
+0
+100 1k 10k 100k
+fIN = 1kHz, VPP = 10.0V
+Figure 7-16. FFT Using 5.2V and –0.2V Supply 
+Rails
+7.3 Power Supply Recommendations
+The input supply for the LDO must be within the recommended operating conditions. The input voltage must 
+provide adequate headroom in order for the device to have a regulated output. Place the 10-µF input capacitors 
+as close to the device as possible. If the input supply is noisy, additional input capacitors can help improve the 
+output noise performance.
+7.4 Layout
+7.4.1 Layout Guidelines
+Layout is a critical part of good power-supply design. There are several signal paths that conduct fast-changing 
+currents or voltages that can interact with stray inductance or parasitic capacitance to generate noise or degrade 
+the power-supply performance. To help eliminate these problems, bypass the IN pin to ground with capacitors.
+Tie the GND pin directly to the thermal pad under the device. The thermal pad must be connected to any internal 
+PCB ground planes using multiple vias directly under the device.
+Every capacitor must be placed as close as possible to the device and on the same side of the PCB as the 
+regulator.
+Do not place any of the capacitors on the opposite side of the PCB from where the regulator is installed. The 
+use of vias and long traces is strongly discouraged because these circuits can impact system performance 
+negatively, and even cause instability.
+7.4.1.1 Board Layout Recommendations to Improve PSRR and Noise Performance
+To improve ac performance (such as PSRR, output noise, and transient response), TI recommends that the 
+board be designed with separate ground planes for VIN and VOUT, with each ground plane star connected only at 
+the GND pin of the device. In addition, the ground connection for the bypass capacitor must connect directly to 
+the GND pin of the device.
+7.4.1.2 Package Mounting
+Solder pad footprint recommendations for the TPS7A39 are available at the end of this document and at 
+www.ti.com.
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 41
+Product Folder Links: TPS7A39
+7.4.2 Layout Example
+Thermal Pad
+INPENNR/
+SS
+GNDINN
+OUTN FBN BUF FBP OUTP
+Figure 7-17. Layout Example for Adjustable Option
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+42 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+8 Device and Documentation Support
+8.1 Device Support
+8.1.1 Development Support
+8.1.1.1 Evaluation Modules
+An evaluation module (EVM) is available to assist in the initial circuit performance evaluation using the 
+TPS7A39. The TPS7A39EVM-865 evaluation module  (and related user guide ) can be requested at the Texas 
+Instruments website through the product folder or purchased directly from the TI eStore.
+8.1.1.2 Spice Models
+Computer simulation of circuit performance using SPICE is often useful when analyzing the performance of 
+analog circuits and systems. A SPICE model for the TPS7A39 is available through the product folder under 
+Tools & Software.
+8.2 Documentation Support
+8.2.1 Related Documentation
+For related documentation see the following:
+• Texas Instruments, TPS3701 36-V Window Comparator with Internal Reference for Over- and Undervoltage 
+Detection data sheet
+• Texas Instruments, SN6505 Low-Noise 1-A Transformer Drivers for Isolated Power Supplies data sheet
+• Texas Instruments, ADS890xB 20-Bit, High-Speed SAR ADCs With Integrated Reference Buffer, and 
+Enhanced Performance Features data sheet
+• Texas Instruments, Pros and Cons of Using a Feedforward Capacitor with a Low-Dropout Regulator 
+application note
+• Texas Instruments, Using New Thermal Metrics application note
+• Texas Instruments, TPS7A39EVM-865 Evaluation Module EVM user's guide
+8.3 Receiving Notification of Documentation Updates
+To receive notification of documentation updates, navigate to the device product folder on ti.com. Click on 
+Notifications to register and receive a weekly digest of any product information that has changed. For change 
+details, review the revision history included in any revised document.
+8.4 Support Resources
+TI E2E ™ support forums  are an engineer's go-to source for fast, verified answers and design help — straight 
+from the experts. Search existing answers or ask your own question to get the quick design help you need.
+Linked content is provided "AS IS" by the respective contributors. They do not constitute TI specifications and do 
+not necessarily reflect TI's views; see TI's Terms of Use.
+8.5 Trademarks
+TI E2E™ is a trademark of Texas Instruments.
+Wurth Electronics® is a registered trademark of Würth Elektronik GmbH and Co.
+All trademarks are the property of their respective owners.
+8.6 Electrostatic Discharge Caution
+This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled 
+with appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.
+ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may 
+be more susceptible to damage because very small parametric changes could cause the device not to meet its published 
+specifications.
+8.7 Glossary
+TI Glossary This glossary lists and explains terms, acronyms, and definitions.
+www.ti.com
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+Copyright © 2025 Texas Instruments Incorporated Submit Document Feedback 43
+Product Folder Links: TPS7A39
+9 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision A (September 2017) to Revision B (June 2025) Page
+• Added links to Applications section.................................................................................................................... 1
+• Changed last row of Sequencing Functionality Table table..............................................................................25
+• Changed Equation 20 in Feedback Resistor Selection section of Design 2: Getting the Full Range of a SAR 
+ADC .................................................................................................................................................................40
+Changes from Revision * (July 2017) to Revision A (September2017) Page
+• Released to production ......................................................................................................................................1
+10 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most 
+current data available for the designated devices. This data is subject to change without notice and revision of 
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+TPS7A39
+SBVS263B – JULY 2017 – REVISED JUNE 2025
+ www.ti.com
+44 Submit Document Feedback Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TPS7A39
+PACKAGE OPTION ADDENDUM
+www.ti.com 7-Nov-2025
+PACKAGING INFORMATION
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+TPS7A3901DSCR Active Production WSON (DSC) | 10 3000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 125 A3901
+TPS7A3901DSCR.B Active Production WSON (DSC) | 10 3000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 125 A3901
+TPS7A3901DSCT Active Production WSON (DSC) | 10 250 | SMALL T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 125 A3901
+TPS7A3901DSCT.B Active Production WSON (DSC) | 10 250 | SMALL T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 125 A3901
+TPS7A3901DSCTG4 Active Production WSON (DSC) | 10 250 | SMALL T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 125 A3901
+TPS7A3901DSCTG4.B Active Production WSON (DSC) | 10 250 | SMALL T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 125 A3901
+ 
+(1) Status:  For more details on status, see our product life cycle.
+ 
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+ 
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+ 
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+ 
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+ 
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+ 
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+ 
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+ 
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+Addendum-Page 1
+PACKAGE OPTION ADDENDUM
+www.ti.com 7-Nov-2025
+ 
+Addendum-Page 2
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 18-Jun-2025
+TAPE AND REEL INFORMATION
+Reel Width (W1)
+REEL DIMENSIONS
+A0B0K0WDimension designed to accommodate the component lengthDimension designed to accommodate the component thicknessOverall width of the carrier tapePitch between successive cavity centersDimension designed to accommodate the component width
+TAPE DIMENSIONSK0 P1B0WA0Cavity
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Pocket QuadrantsSprocket HolesQ1Q1Q2Q2Q3Q3Q4Q4User Direction of Feed
+P1ReelDiameter
+ 
+*All dimensions are nominal
+Device Package
+Type
+Package
+Drawing
+Pins SPQ Reel
+Diameter
+(mm)
+Reel
+Width
+W1 (mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+TPS7A3901DSCR WSON DSC 10 3000 330.0 12.4 3.3 3.3 1.0 8.0 12.0 Q1
+TPS7A3901DSCT WSON DSC 10 250 180.0 12.4 3.3 3.3 1.0 8.0 12.0 Q1
+TPS7A3901DSCTG4 WSON DSC 10 250 180.0 12.4 3.3 3.3 1.0 8.0 12.0 Q1
+Pack Materials-Page 1
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 18-Jun-2025
+TAPE AND REEL BOX DIMENSIONS
+Width (mm)
+W LH
+ 
+*All dimensions are nominal
+Device Package Type Package Drawing Pins SPQ Length (mm) Width (mm) Height (mm)
+TPS7A3901DSCR WSON DSC 10 3000 367.0 367.0 38.0
+TPS7A3901DSCT WSON DSC 10 250 213.0 191.0 35.0
+TPS7A3901DSCTG4 WSON DSC 10 250 213.0 191.0 35.0
+Pack Materials-Page 2
+
+www.ti.com
+PACKAGE OUTLINE
+C
+10X 0.30
+0.18
+2.4 0.1
+2X
+2
+1.65 0.1
+8X 0.5
+0.8
+0.7
+10X 0.5
+0.3
+0.05
+0.00
+A 3.1
+2.9
+B
+3.1
+2.9
+0.1 MIN
+0.08 MAX
+(0.2) TYP
+4X (0.25)
+2X (0.5)
+WSON - 0.8 mm max heightDSC0010J
+PLASTIC SMALL OUTLINE - NO LEAD
+4221826/E   03/2026
+PIN 1 INDEX AREA
+SEATING PLANE
+0.08 C
+1
+5 6
+10
+(OPTIONAL)
+PIN 1 ID 0.1 C A B
+0.05 C
+THERMAL PAD
+EXPOSED
+SYMM
+SYMM11
+NOTES:
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. The package thermal pad must be soldered to the printed circuit board for optimal thermal and mechanical performance.
+4. Minimum 0.1 mm solder wetting on pin side wall. Available for wettable flank version only.
+SCALE  4.000
+A-A40.000
+OPTIONAL: SIDE WALL PIN DETAIL
+NOTE 4
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.07 MIN
+ALL AROUND0.07 MAX
+ALL AROUND
+10X (0.24)
+(2.4)
+(2.8)
+8X (0.5)
+(1.65)
+( 0.2) VIA
+TYP
+(0.575)
+(0.95)
+10X (0.6)
+(R0.05) TYP
+(3.4)
+(0.25)
+(0.5)
+WSON - 0.8 mm max heightDSC0010J
+PLASTIC SMALL OUTLINE - NO LEAD
+4221826/E   03/2026
+SYMM
+1
+5 6
+10
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE:20X
+11
+SYMM
+NOTES: (continued)
+ 
+5. This package is designed to be soldered to a thermal pad on the board. For more information, see Texas Instruments literature
+    number SLUA271 (www.ti.com/lit/slua271).
+6. Vias are optional depending on application, refer to device data sheet. If any vias are implemented, refer to their locations shown
+    on this view. It is recommended that vias under paste be filled, plugged or tented.
+SOLDER MASK
+OPENING
+SOLDER MASK
+METAL UNDER
+SOLDER MASK
+DEFINED
+EXPOSED METAL
+METALSOLDER MASK
+OPENING
+SOLDER MASK DETAILS
+NON SOLDER MASK
+DEFINED
+(PREFERRED)
+EXPOSED METAL
+www.ti.com
+EXAMPLE STENCIL DESIGN
+(R0.05) TYP
+10X (0.24)
+10X (0.6)
+2X (1.5)
+2X
+(1.06)
+(2.8)
+(0.63)
+8X (0.5)
+(0.5)
+4X (0.34)
+4X (0.25)
+(1.53)
+WSON - 0.8 mm max heightDSC0010J
+PLASTIC SMALL OUTLINE - NO LEAD
+4221826/E   03/2026
+NOTES: (continued)
+ 
+7. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations. 
+ 
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+ 
+EXPOSED PAD 11:
+ 80% PRINTED SOLDER COVERAGE BY AREA
+SCALE:25X
+SYMM
+1
+5 6
+10
+EXPOSED METAL
+TYP11
+SYMM
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully 
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on 
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable 
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products 
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025
