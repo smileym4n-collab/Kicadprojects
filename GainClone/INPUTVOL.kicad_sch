@@ -1628,6 +1628,16 @@
 	)
 	(wire
 		(pts
+			(xy 262.255 28.575) (xy 267.335 28.575)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4041ded3-56b7-452c-86ef-4b6ad02f25ab")
+	)
+	(wire
+		(pts
 			(xy 67.31 107.95) (xy 67.31 110.49)
 		)
 		(stroke
@@ -1748,6 +1758,16 @@
 	)
 	(wire
 		(pts
+			(xy 262.255 33.02) (xy 262.255 28.575)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "698baec6-31a9-45f6-a8b1-291d6588ed0c")
+	)
+	(wire
+		(pts
 			(xy 54.61 110.49) (xy 54.61 83.82)
 		)
 		(stroke
@@ -1845,6 +1865,16 @@
 			(type default)
 		)
 		(uuid "8a36d17a-dd86-4483-aa8a-ebde94d4ee68")
+	)
+	(wire
+		(pts
+			(xy 262.255 40.64) (xy 262.255 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8aba8538-2701-4910-a12a-a6b14d955c69")
 	)
 	(wire
 		(pts
@@ -2175,6 +2205,17 @@
 			(type default)
 		)
 		(uuid "ffaef08b-d796-4139-b5c4-6c053847e6e4")
+	)
+	(hierarchical_label "+5VD"
+		(shape input)
+		(at 267.335 28.575 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "02fc191d-7a6a-4a42-a864-6117740dafd7")
 	)
 	(hierarchical_label "CS_CS"
 		(shape input)
@@ -3271,6 +3312,84 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 262.255 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "47320cf6-b5c9-40c0-876a-d46add4d08d9")
+		(property "Reference" "#PWR057"
+			(at 262.255 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 262.255 48.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 262.255 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 262.255 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 262.255 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "680a0198-1a46-4ebc-9be5-8a670535bebc")
+		)
+		(instances
+			(project "GainClone"
+				(path "/08655295-5783-460d-a904-560b6403a812/67b44205-e610-4be0-b03a-495a138c24e6"
+					(reference "#PWR057")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 91.44 81.915 0)
 		(unit 1)
 		(body_style 1)
@@ -3451,7 +3570,7 @@
 				)
 			)
 		)
-		(property "Value" "OPA1656ID"
+		(property "Value" "OPA1656"
 			(at 115.57 90.17 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4682,6 +4801,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 262.255 36.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b9844cbf-2839-458a-9bd7-d0a5788b7aa9")
+		(property "Reference" "C38"
+			(at 266.065 35.5599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 266.065 38.0999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 263.2202 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 262.255 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 262.255 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "66d831a2-0944-494d-944f-49f3d739ee2d")
+		)
+		(pin "2"
+			(uuid "2bc4dfbd-de19-4c9b-aee1-0960cb86af85")
+		)
+		(instances
+			(project "GainClone"
+				(path "/08655295-5783-460d-a904-560b6403a812/67b44205-e610-4be0-b03a-495a138c24e6"
+					(reference "C38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 156.21 138.43 0)
 		(unit 1)
@@ -4938,7 +5139,7 @@
 				)
 			)
 		)
-		(property "Value" "OPA1656ID"
+		(property "Value" "OPA1656"
 			(at 186.69 30.48 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5036,7 +5237,7 @@
 				)
 			)
 		)
-		(property "Value" "OPA1656ID"
+		(property "Value" "OPA1656"
 			(at 115.57 62.23 0)
 			(show_name no)
 			(do_not_autoplace no)
