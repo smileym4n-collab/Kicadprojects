@@ -1,0 +1,448 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "d270386e-be0f-4547-84de-01e193634fe2")
+	(paper "A4")
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 151.13 48.895) (xy 151.13 57.785)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0047110b-8c73-4d72-8168-636da01df17f")
+	)
+	(wire
+		(pts
+			(xy 92.71 60.325) (xy 114.3 60.325)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "286d7d89-2b6b-45fe-98a0-d6c7746c5d6d")
+	)
+	(wire
+		(pts
+			(xy 92.71 62.865) (xy 114.3 62.865)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32994654-1148-468a-a918-57a509068346")
+	)
+	(wire
+		(pts
+			(xy 92.71 81.28) (xy 114.3 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "375ba41b-fe04-432c-aea9-0af211912287")
+	)
+	(wire
+		(pts
+			(xy 92.71 73.025) (xy 114.3 73.025)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57ed155c-135e-4abc-9d1c-4100024fb4f9")
+	)
+	(wire
+		(pts
+			(xy 153.67 48.895) (xy 153.67 57.785)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ef19ae1-2786-4eac-a962-e8b84af8aabe")
+	)
+	(wire
+		(pts
+			(xy 92.71 67.945) (xy 114.3 67.945)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0c28bc2-97bd-4b33-bf32-ec4727ae66c6")
+	)
+	(wire
+		(pts
+			(xy 92.71 65.405) (xy 114.3 65.405)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0881726-0310-487f-a69c-eedb1f33c81a")
+	)
+	(sheet
+		(at 201.93 81.28)
+		(size 48.26 28.575)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "2c76bf54-ab24-4b31-9776-1c4ab501ad85")
+		(property "Sheetname" "PROTECT"
+			(at 201.93 80.5684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "PROTECT.kicad_sch"
+			(at 201.93 110.4396 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "SubProcessorDigital"
+				(path "/d270386e-be0f-4547-84de-01e193634fe2"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 114.3 57.785)
+		(size 53.975 33.02)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "50ad7d22-f01f-461f-9f52-771d18c82e00")
+		(property "Sheetname" "ADCESPDAC"
+			(at 114.3 57.0734 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ADCESPDAC.kicad_sch"
+			(at 114.3 91.3896 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "3V3_A_ADC" input
+			(at 114.3 60.325 180)
+			(uuid "464ab53b-a491-4811-b096-cd3e0b4471e7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "3V3_DAC" input
+			(at 114.3 62.865 180)
+			(uuid "219879d9-530a-490f-95d1-89e34084f567")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "3V3_D_ADC" input
+			(at 114.3 65.405 180)
+			(uuid "98e2d152-d999-4f4d-9358-1551957c8001")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "3V3_ESP" input
+			(at 114.3 67.945 180)
+			(uuid "3d883369-3e83-4495-9f8f-94c0441032f7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VCC" input
+			(at 114.3 73.025 180)
+			(uuid "84b0f012-72a5-47ff-8d3a-876504c2c59b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "AUDIO-TO-AMP" input
+			(at 168.275 85.09 0)
+			(uuid "e8993bf3-0afd-42e1-b56b-9ee0d7194dcd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "IN-LEFT" input
+			(at 151.13 57.785 90)
+			(uuid "f6ada6f8-0684-476c-85cd-7c7e639da68d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "IN-RIGHT" input
+			(at 153.67 57.785 90)
+			(uuid "ac1b3d02-f1bf-4a41-a537-5a2b2a862e17")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "5V" input
+			(at 114.3 81.28 180)
+			(uuid "032d0357-67d2-4922-9754-209a9eb9858d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "SubProcessorDigital"
+				(path "/d270386e-be0f-4547-84de-01e193634fe2"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 38.735 57.785)
+		(size 53.975 33.02)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "cf640f03-d4f7-4128-a259-a93ffbd3adc2")
+		(property "Sheetname" "POWER"
+			(at 38.735 57.0734 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "POWER.kicad_sch"
+			(at 38.735 91.3896 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "3V3_A_ADC" input
+			(at 92.71 60.325 0)
+			(uuid "f5b8fbba-1a69-4d46-91fe-bf61de67fde7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "3V3_DAC" input
+			(at 92.71 62.865 0)
+			(uuid "0a2cec64-0226-4378-b1ac-05eb1fdb560e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "3V3_D_ADC" input
+			(at 92.71 65.405 0)
+			(uuid "27fae788-069e-4048-9cb0-f50b7e5fc748")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "3V3_ESP" input
+			(at 92.71 67.945 0)
+			(uuid "60ea0f1e-5cd5-4a68-af56-abf315c3e8a2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VCC" input
+			(at 92.71 73.025 0)
+			(uuid "769291cd-b0cf-4308-840c-4d38728a55a3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "5V" input
+			(at 92.71 81.28 0)
+			(uuid "d267f239-61aa-41f2-a4d9-1081f80927c4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "SubProcessorDigital"
+				(path "/d270386e-be0f-4547-84de-01e193634fe2"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 114.935 24.13)
+		(size 53.975 24.765)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "fa8397b4-ea4b-42ad-8298-76ce24d74b80")
+		(property "Sheetname" "AUDIO-IN"
+			(at 114.935 23.4184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "AUDIO-IN.kicad_sch"
+			(at 114.935 49.4796 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN-LEFT" input
+			(at 151.13 48.895 270)
+			(uuid "451422b1-0fd8-4682-a876-62929ebebc2c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IN-RIGHT" input
+			(at 153.67 48.895 270)
+			(uuid "0c331eb0-129c-4b7d-a701-2e94ddd08718")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "SubProcessorDigital"
+				(path "/d270386e-be0f-4547-84de-01e193634fe2"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
