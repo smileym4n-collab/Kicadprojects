@@ -360,3 +360,13 @@ Suggested test points:
 - **Output mute and test points:** not required (the preamp provides muting).
 - **Package check:** PCM1704 lead span measured at about 7.6 mm (body about 5.5 × 13 mm), consistent with the 5.3 mm SOP footprint.
 
+### H2 implemented (Stage 1, 2026-10-17)
+
+- **In2 −5 V trunk:** no longer touches C13–C16. It now runs LT3094 → new via V1 (145.0, 93.75) → short F.Cu stub to U1 pin 20 → In2 along y = 93.75 → new via V2 (117.7, 93.75) → stub to U2 pin 20.
+- **SERVO returns:** C16(−) joins C15(−), and C14(−) joins C13(−), on F.Cu. Each DAC's REF/SERVO returns therefore reach pin 20 via the existing C15→C99→pin 20 (C13→C100→pin 20) track, which carries no supply current.
+- **Verified:**
+  - Copper-connectivity check: neither DAC's supply path passes any REF/SERVO capacitor pad, and all four pads stay connected to their pin 20 node.
+  - Every new item clears other copper by ≥0.49 mm.
+  - DRC after zone refill shows only the pre-existing items.
+- **Not yet verified on the bench:** the expected benefit is lower L→R crosstalk and low-level THD.
+
