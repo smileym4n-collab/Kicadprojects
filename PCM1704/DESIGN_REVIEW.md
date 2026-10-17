@@ -370,3 +370,24 @@ Suggested test points:
   - DRC after zone refill shows only the pre-existing items.
 - **Not yet verified on the bench:** the expected benefit is lower L→R crosstalk and low-level THD.
 
+### H1 implemented (Stage 2, 2026-10-17)
+
+- **New GND pour on In2 and B.Cu** (zone `GND_REF_IN2_BCU`, priority 0, same settings as the F.Cu/In1 GND zone). The existing ±15 V/+8 V B.Cu pours keep priority. The pour fills as one continuous area per layer and is stitched by the existing GND vias.
+- **Reference copper now beside the clock and data tracks.** The share of each track with GND pour on the adjacent layer is:
+  - BCLK (In2): 90%
+  - WCLK (B.Cu): 89%
+  - U1 DATA: 86%
+  - U2 DATA: 93%
+  - DF_BCK/DF_DIN and the MCU lines: 94–96%
+
+  Before, the nearest reference for these tracks was In1, about 1.3 mm away.
+- **U2 DATA:** re-routed on In2 to run 1.17 mm (centre to centre) from BCLK, instead of 0.6 mm. It jogs into its via near U2 to clear the BCLK via, and keeps clear of U2's −V<sub>DD</sub> decoupling GND via (123.44, 105.54).
+- **BCLK U1 branch:** re-routed on In2. It runs 1.48 mm from U1 DATA (was 0.6 mm over about 10 mm) and 1.75 mm from the B.Cu WCLK trunk.
+- **Remaining proximity:**
+  - BCLK–U2 DATA: none within 1 mm (was 19.7 mm).
+  - BCLK–U1 DATA: 1.7 mm within 1 mm, only near the U1 vias (was 15 mm).
+  - WCLK–BCLK: two 45° crossings only.
+- **Not done:** the per-DAC series-resistor split. There's no clean room at R79–R82 without moving C105/C12 and the via row.
+- **Verified:** all new tracks clear other copper by ≥0.27 mm, and DRC after refill shows only the pre-existing items.
+- **Not verified on the bench:** the expected benefit is lower data-correlated jitter. Check BCLK/WCLK at the DAC pins with a scope.
+
