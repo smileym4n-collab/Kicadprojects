@@ -2273,6 +2273,452 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "PCM1704_1"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U1"
+				(at 0 15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PCM1704"
+				(at 0 -14.224 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_SO:SO-20_5.3x12.6mm_P1.27mm"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC Part #" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PCM1704_1_1_1"
+				(rectangle
+					(start -8.89 12.7)
+					(end 8.89 -12.7)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type color)
+						(color 255 255 194 1)
+					)
+				)
+				(pin input line
+					(at -11.43 11.43 0)
+					(length 2.54)
+					(name "DATA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 8.89 0)
+					(length 2.54)
+					(name "BCLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -11.43 6.35 0)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -11.43 3.81 0)
+					(length 2.54)
+					(name "-VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -11.43 1.27 0)
+					(length 2.54)
+					(name "DGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -11.43 -1.27 0)
+					(length 2.54)
+					(name "+VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 -3.81 0)
+					(length 2.54)
+					(name "WCLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -11.43 -6.35 0)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 -8.89 0)
+					(length 2.54)
+					(name "20BIT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 -11.43 0)
+					(length 2.54)
+					(name "INVERT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 11.43 -11.43 180)
+					(length 2.54)
+					(name "+VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 11.43 -8.89 180)
+					(length 2.54)
+					(name "BPO_DC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 11.43 -6.35 180)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 11.43 -3.81 180)
+					(length 2.54)
+					(name "IOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 11.43 -1.27 180)
+					(length 2.54)
+					(name "AGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 11.43 1.27 180)
+					(length 2.54)
+					(name "AGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 11.43 3.81 180)
+					(length 2.54)
+					(name "SERVO_DC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 11.43 6.35 180)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 11.43 8.89 180)
+					(length 2.54)
+					(name "REF_DC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 11.43 11.43 180)
+					(length 2.54)
+					(name "-VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "PCM1704_Support:DF1704"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -4540,7 +4986,7 @@
 	)
 	(text "C107: LM337 stability capacitor.\nPositive terminal to GND. Place at U10 OUT."
 		(exclude_from_sim no)
-		(at 158.75 358.14 0)
+		(at 130.048 355.854 0)
 		(effects
 			(font
 				(size 1 1)
@@ -4595,7 +5041,7 @@
 	)
 	(text "47p: initial compensation; verify settling on PCB"
 		(exclude_from_sim no)
-		(at 289.56 178.562 0)
+		(at 291.592 170.688 0)
 		(effects
 			(font
 				(size 1 1)
@@ -4694,7 +5140,7 @@
 	)
 	(text "PREREGULATORS: 110R / 590R => approximately +/-8V.\nDivider current ~11.4mA maintains regulation with downstream rails off.\nD1/D3: OUT-IN discharge protection; D2/D4: ADJ capacitor protection.\nTO-220 tabs differ: U12 = OUT (+8V), U10 = IN (-15V).\nDo not bolt bare tabs to the same heatsink or grounded metal."
 		(exclude_from_sim no)
-		(at 175.26 375.92 0)
+		(at 196.088 357.886 0)
 		(effects
 			(font
 				(size 1 1)
@@ -4804,7 +5250,7 @@
 	)
 	(text "47p: initial compensation; verify settling on PCB"
 		(exclude_from_sim no)
-		(at 289.56 88.9 0)
+		(at 291.592 84.582 0)
 		(effects
 			(font
 				(size 1 1)
@@ -5263,6 +5709,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "eae7c6bc-2ffb-414c-9274-2ee5d0665dc3")
+	)
+	(junction
+		(at 146.05 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eca2466a-8197-4e40-9706-77ba5266b29f")
 	)
 	(junction
 		(at 326.39 71.12)
@@ -5754,7 +6206,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 91.44) (xy 205.74 91.44)
+			(xy 190.5 91.44) (xy 232.918 91.44)
 		)
 		(stroke
 			(width 0)
@@ -6541,6 +6993,16 @@
 			(type default)
 		)
 		(uuid "4433e6cc-fa8b-466d-90ae-ebd1011047ae")
+	)
+	(wire
+		(pts
+			(xy 71.12 63.5) (xy 92.456 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "462de720-65de-4b0f-b91b-e5f8044e5b5f")
 	)
 	(wire
 		(pts
@@ -7994,6 +8456,16 @@
 	)
 	(wire
 		(pts
+			(xy 146.05 109.22) (xy 144.78 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9dd657c1-642a-40b1-9819-7749772cea83")
+	)
+	(wire
+		(pts
 			(xy 148.59 325.12) (xy 148.59 327.66)
 		)
 		(stroke
@@ -8151,16 +8623,6 @@
 			(type default)
 		)
 		(uuid "a3710841-cd0c-4a92-98a7-5ffa2a97c170")
-	)
-	(wire
-		(pts
-			(xy 71.12 63.5) (xy 83.82 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a4997330-cfef-46c0-ac24-528e5f1dbceb")
 	)
 	(wire
 		(pts
@@ -8864,7 +9326,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 109.22) (xy 157.48 109.22)
+			(xy 168.91 109.22) (xy 146.05 109.22)
 		)
 		(stroke
 			(width 0)
@@ -9104,7 +9566,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 78.74) (xy 193.04 78.74)
+			(xy 190.5 78.74) (xy 194.818 78.74)
 		)
 		(stroke
 			(width 0)
@@ -9184,7 +9646,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 106.68) (xy 128.27 101.6)
+			(xy 146.05 114.3) (xy 146.05 109.22)
 		)
 		(stroke
 			(width 0)
@@ -9454,7 +9916,7 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 55.88) (xy 29.21 60.96)
+			(xy 29.464 68.072) (xy 29.464 73.152)
 		)
 		(stroke
 			(width 0)
@@ -9604,7 +10066,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 114.3) (xy 128.27 118.11)
+			(xy 146.05 121.92) (xy 146.05 125.73)
 		)
 		(stroke
 			(width 0)
@@ -9684,7 +10146,7 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 48.26) (xy 29.21 43.18)
+			(xy 29.464 60.452) (xy 29.464 55.372)
 		)
 		(stroke
 			(width 0)
@@ -10193,7 +10655,7 @@
 		(uuid "57b1db52-5898-41a4-ba20-c0478194473a")
 	)
 	(label "+5VDF"
-		(at 29.21 43.18 0)
+		(at 29.464 55.372 0)
 		(effects
 			(font
 				(size 1 1)
@@ -10363,7 +10825,7 @@
 		(uuid "7b02b37d-9c95-4c9f-ba7f-a835d07e3b3b")
 	)
 	(label "+5VDF"
-		(at 205.74 91.44 0)
+		(at 232.918 91.44 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10693,7 +11155,7 @@
 		(uuid "af34a0f8-643a-487a-b623-ea2a05c7e431")
 	)
 	(label "DF_RST"
-		(at 83.82 63.5 0)
+		(at 92.456 63.5 0)
 		(effects
 			(font
 				(size 1 1)
@@ -10751,16 +11213,6 @@
 			(justify left bottom)
 		)
 		(uuid "c69fb2c8-8215-44f2-aa29-23da60947ec6")
-	)
-	(label "DF_RST"
-		(at 128.27 101.6 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "c7df9c01-05bf-4467-9d69-20ace48b7c07")
 	)
 	(label "BCKIN"
 		(at 69.85 137.16 0)
@@ -10993,12 +11445,12 @@
 		(uuid "fe3f8a8b-6787-46de-8bf9-2da5cf292695")
 	)
 	(label "DF_RST"
-		(at 157.48 109.22 0)
+		(at 144.78 109.22 180)
 		(effects
 			(font
 				(size 1 1)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "ffe1bbed-71be-446e-82cc-d49511dff780")
 	)
@@ -13039,7 +13491,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:Heatsink")
-		(at 445.77 367.03 0)
+		(at 446.532 346.71 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13050,7 +13502,7 @@
 		(fields_autoplaced yes)
 		(uuid "1c7a2271-a529-4617-b1a3-4486b7c61cc6")
 		(property "Reference" "HS1"
-			(at 449.58 363.8549 0)
+			(at 450.342 343.5349 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13061,7 +13513,7 @@
 			)
 		)
 		(property "Value" "Heatsink"
-			(at 449.58 366.3949 0)
+			(at 450.342 346.0749 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13072,7 +13524,7 @@
 			)
 		)
 		(property "Footprint" "Custom:Tiny heatsink"
-			(at 446.0748 367.03 0)
+			(at 446.8368 346.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13083,7 +13535,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 446.0748 367.03 0)
+			(at 446.8368 346.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13094,7 +13546,7 @@
 			)
 		)
 		(property "Description" "Heatsink"
-			(at 445.77 367.03 0)
+			(at 446.532 346.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13105,7 +13557,7 @@
 			)
 		)
 		(property "LCSC Part #" ""
-			(at 445.77 367.03 0)
+			(at 446.532 346.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14109,6 +14561,7 @@
 		)
 	)
 	(symbol
+		(lib_name "PCM1704_1")
 		(lib_id "PCM1704_Support:PCM1704")
 		(at 247.65 46.99 0)
 		(unit 1)
@@ -14332,7 +14785,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 193.04 78.74 270)
+		(at 194.818 78.74 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14342,7 +14795,7 @@
 		(dnp no)
 		(uuid "2c0211ab-726b-4248-a4b5-a0771ee670c3")
 		(property "Reference" "#PWR216"
-			(at 196.04 77.47 270)
+			(at 191.818 80.01 270)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14354,7 +14807,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 196.04 80.01 270)
+			(at 191.818 77.47 270)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14366,7 +14819,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 193.04 78.74 0)
+			(at 194.818 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14377,7 +14830,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 193.04 78.74 0)
+			(at 194.818 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14387,7 +14840,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 193.04 78.74 0)
+			(at 194.818 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20353,7 +20806,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 29.21 60.96 0)
+		(at 29.464 73.152 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -20363,7 +20816,7 @@
 		(dnp no)
 		(uuid "7b78af32-12d4-4b77-8176-a08c434698ec")
 		(property "Reference" "#PWR213"
-			(at 32.21 59.69 0)
+			(at 32.464 71.882 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20375,7 +20828,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 32.21 62.23 0)
+			(at 32.464 74.422 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20387,7 +20840,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 29.21 60.96 0)
+			(at 29.464 73.152 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20398,7 +20851,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 29.21 60.96 0)
+			(at 29.464 73.152 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20408,7 +20861,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 29.21 60.96 0)
+			(at 29.464 73.152 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22532,7 +22985,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 128.27 110.49 0)
+		(at 146.05 118.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -22542,7 +22995,7 @@
 		(dnp no)
 		(uuid "8e330e7d-7fab-4be5-bbc1-2693d3d04c14")
 		(property "Reference" "R75"
-			(at 131.27 109.22 0)
+			(at 141.478 116.586 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22552,8 +23005,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
-			(at 131.27 111.76 0)
+		(property "Value" "10K"
+			(at 141.732 119.38 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22564,7 +23017,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 128.27 110.49 0)
+			(at 146.05 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22575,7 +23028,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 128.27 110.49 0)
+			(at 146.05 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22585,7 +23038,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 128.27 110.49 0)
+			(at 146.05 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22595,7 +23048,7 @@
 			)
 		)
 		(property "LCSC Part #" ""
-			(at 128.27 110.49 0)
+			(at 146.05 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23474,7 +23927,7 @@
 		(dnp no)
 		(uuid "93d7b559-23ed-4b9e-9699-813bf644549e")
 		(property "Reference" "R73"
-			(at 452.12 130.302 90)
+			(at 452.12 129.794 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23484,7 +23937,7 @@
 			)
 		)
 		(property "Value" "1K21"
-			(at 452.12 132.842 90)
+			(at 452.12 132.588 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23802,7 +24255,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:Heatsink")
-		(at 445.77 374.65 0)
+		(at 446.532 354.33 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23813,7 +24266,7 @@
 		(fields_autoplaced yes)
 		(uuid "9722d9ec-b542-49b9-92b2-c3860c38572c")
 		(property "Reference" "HS2"
-			(at 449.58 371.4749 0)
+			(at 450.342 351.1549 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23824,7 +24277,7 @@
 			)
 		)
 		(property "Value" "Heatsink"
-			(at 449.58 374.0149 0)
+			(at 450.342 353.6949 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23835,7 +24288,7 @@
 			)
 		)
 		(property "Footprint" "Custom:Tiny heatsink"
-			(at 446.0748 374.65 0)
+			(at 446.8368 354.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23846,7 +24299,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 446.0748 374.65 0)
+			(at 446.8368 354.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23857,7 +24310,7 @@
 			)
 		)
 		(property "Description" "Heatsink"
-			(at 445.77 374.65 0)
+			(at 446.532 354.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23868,7 +24321,7 @@
 			)
 		)
 		(property "LCSC Part #" ""
-			(at 445.77 374.65 0)
+			(at 446.532 354.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28672,7 +29125,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 128.27 118.11 0)
+		(at 146.05 125.73 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -28682,7 +29135,7 @@
 		(dnp no)
 		(uuid "e1570e03-e49d-477d-afcd-4d6b076cfade")
 		(property "Reference" "#PWR217"
-			(at 131.27 116.84 0)
+			(at 149.05 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28694,7 +29147,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 131.27 119.38 0)
+			(at 149.05 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28706,7 +29159,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 128.27 118.11 0)
+			(at 146.05 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28717,7 +29170,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 128.27 118.11 0)
+			(at 146.05 125.73 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -28727,7 +29180,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 128.27 118.11 0)
+			(at 146.05 125.73 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -29266,7 +29719,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 29.21 52.07 0)
+		(at 29.464 64.262 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -29276,7 +29729,7 @@
 		(dnp no)
 		(uuid "e60c6458-9e95-43d8-9af4-6aabed7641f2")
 		(property "Reference" "C106"
-			(at 32.21 50.8 0)
+			(at 32.464 62.992 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -29287,7 +29740,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 32.21 53.34 0)
+			(at 32.464 65.532 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -29298,7 +29751,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
-			(at 29.21 52.07 0)
+			(at 29.464 64.262 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29309,7 +29762,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 29.21 52.07 0)
+			(at 29.464 64.262 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -29319,7 +29772,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 29.21 52.07 0)
+			(at 29.464 64.262 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -29329,7 +29782,7 @@
 			)
 		)
 		(property "LCSC Part #" ""
-			(at 29.21 52.07 0)
+			(at 29.464 64.262 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
