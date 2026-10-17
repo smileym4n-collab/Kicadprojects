@@ -165,14 +165,14 @@ Problems with this:
   - If the XMOS board is powered (from USB) while this board is off, that breaks the DF1704's −0.3 V … V<sub>DD</sub> + 0.3 V input rating (±10 mA abs max).
   - It can also back-power +5VDF through the input clamps.
 
-**Recommended changes on this board**
+**Recommended changes on this board.** *These are now in the schematic (§6). The PCB is not yet updated.*
 
 1. **Receive buffer beside U3, on a new 3.3 V rail.** The parts were checked against TI/Nexperia datasheets, and all are in inventory.
    - **SCK:** SN74LVC1G17, a Schmitt buffer, 2 in stock. At V<sub>CC</sub> = 3 V its thresholds are V<sub>T+</sub> 1.48–1.92 V and V<sub>T−</sub> 0.89–1.2 V. That suits a 3.3 V input, and the hysteresis rides through ringing on the cable-driven edge.
    - **BCK, LRCK, DATA:** 74LVC125APW, 3 in stock. It is rated for V<sub>CC</sub> 1.65–3.6 V, with V<sub>IH</sub> 2.0 V / V<sub>IL</sub> 0.8 V and no hysteresis. Tie the spare gate's input to GND and its OE pin high (disabled).
    - **3.3 V supply:** TPS7A2033 (V<sub>IN</sub> ≤ 6.0 V, so feed it from +5VDF, not +8 V), 14 in stock. Put a local 100 nF at each buffer.
    - **Outputs:** they drive the DF1704's TTL-level inputs (V<sub>IH</sub> 2.0 V) over a few mm of F.Cu. Provide a 22–33 Ω series footprint at each output.
-   - **Inputs:** add weak pull-downs (about 100 kΩ, provisional) so the inputs are defined when the XMOS board is off or unplugged.
+   - **Inputs:** add 51 kΩ pull-downs (an in-stock value) so the inputs are defined when the XMOS board is off or unplugged. Worst-case leakage of 5 µA × 51 kΩ = 0.26 V, below V<sub>IL</sub>.
    - **Power-off protection:** both LVC parts are I<sub>OFF</sub>-rated (≤10–20 µA with 5.5 V on an input at V<sub>CC</sub> = 0), which removes the back-powering path above.
 2. **Parts not used, and why:**
    - The 74LVC125A is not rated for operation at 5 V.
@@ -295,10 +295,68 @@ Suggested test points:
 
 ## 5. Not verified in this review
 
-- **LT3042 (`Custom:LT3042`, DFN-10) and LT3094 (DFN-12) pin maps and land patterns.** analog.com refused scripted downloads.
-  - The symbols are internally consistent.
-  - The LT3094 PGFB→IN tie matches ADI's eval-board guidance.
-  - Re-check both "Pin Functions" pages and confirm that the parts you have are the DD (DFN) variants.
+- **LT3094: verified 2026-10-17** against ADI datasheet Rev 0 (DD package, drawing 05-08-1725).
+  - The pin map matches the symbol and netlist (EP 13 = IN = −8 V).
+  - The unused-pin ties match the datasheet: EN/UV→IN, PG floating, PGFB→IN, ILIM→GND, VIOC floating.
+  - The footprint matches: 0.45 mm pitch, 0.25 mm pads, 1.65 × 2.38 mm EP. The pads are 0.85 mm long, versus 0.70 mm recommended (longer toe).
+  - C<sub>OUT</sub> ≥ 10 µF ceramic is met.
+- **LT3042 (`Custom:LT3042`):** not re-verified against the datasheet, but the same footprint is proven working on a previous build.
 - **PCM1704 speed grade (U / U-J / U-K) and package width** of the salvaged chips.
 - **PCM1704 output capacitance:** not given in SBAS097, so the I/V phase margin is estimated, not calculated.
 - **The I²S source board's drive strength and termination.**
+
+---
+
+## 6. Changes made (2026-10-17)
+
+- **Backup:** git commit `c331c4b` (PCM1704/ only), plus `PCM1704-backups/manual-pre-xmos-buffer-2026-10-17.zip`.
+- **Scope:** schematic only (`PCM1704.kicad_sch`). The PCB has **not** been updated from the schematic.
+
+**Added**
+
+| Ref | Part | Footprint | Function |
+|---|---|---|---|
+| U11 | SN74LVC1G17 (Schmitt, I<sub>OFF</sub>) | SOT-23-5 | SCKIN → R87 (22 Ω) → DF_SCK → U3 pin 6 (XTI) |
+| U13A/B/C | 74LVC125APW gates 1/2/3 | TSSOP-14 | BCKIN/DATAIN/LRCKIN → R88/R89/R90 (22 Ω) → DF_BCK/DF_DIN/DF_LRCK → U3 pins 2/1/28 |
+| U13D | Spare gate | — | Input to GND, /OE to +3V3 (disabled), output not connected |
+| U14 | TPS7A2033 | SOT-23-5 | +5VDF → +3V3 (buffers only); EN tied to IN |
+| R83–R86 | 51 kΩ | 1608 metric | Input pull-downs (SCK, BCK, DATA, LRCK) |
+| R87–R90 | 22 Ω, **TUNE** | 1608 metric | Series resistors at the buffer outputs |
+| R91 + C112 | 100 Ω + 47 pF C0G, **DNP** | 1608 metric | SCK AC termination; fit only if ringing is measured |
+| C108, C109 | 100 nF | 1608 metric | U11 and U13 decoupling |
+| C110, C111 | 4.7 µF | 2012 metric | U14 input and output (TI allows 1–200 µF; in-stock value) |
+
+**Changed:** the labels at U3 pins 1, 2, 6 and 28 are renamed DATAIN/BCKIN/SCKIN/LRCKIN → DF_DIN/DF_BCK/DF_SCK/DF_LRCK. The J5-side nets keep their old names.
+
+**Verification**
+
+- Every new pin was checked in the exported netlist.
+- Pin maps were checked against TI SCES351Y (LVC1G17), the Nexperia 74LVC125A datasheet and TI SBVS338H (TPS7A20).
+- ERC is identical to before the change: 7 unconnected-MCU-pin errors, 16 off-grid warnings and 2 cosmetic PCM1704 symbol-mismatch warnings. Nothing is new.
+
+**Stock**
+
+- **In inventory:** U11, U13, U14, 22 Ω 1608 metric, 51 kΩ 1608 metric and 4.7 µF 2012 metric.
+- **To buy:** 100 nF 1608 metric (KEMET C0603C104M5RACTU, your standard). The in-stock 3216 metric part is the fallback.
+
+**Layout notes for the PCB update**
+
+- Place U11 and U13 within a few mm of U3, with each decoupler at its VCC pin. R87–R90 go at the buffer outputs, and the pull-downs and R91/C112 at the buffer inputs.
+- Route DF_SCK on F.Cu over In1, as short as possible.
+- U14 can sit anywhere between +5VDF and the buffers.
+- This work shares space with the H1 re-route, so do both in one pass.
+
+**Still open**
+
+- **XU208 MCLK frequency:** confirm it (see the conversation notes; 22.5792/24.576 MHz is expected).
+- **XU208 output limits:** restrict output to ≤96 kHz PCM, with no DSD.
+- **Stale R79–R82 note:** it still says "0R"; the parts are 22 Ω.
+
+### Update (2026-10-17, later)
+
+- **R79–R82 → 68 Ω** (1608 metric, buy). DF1704 SBAS099A suggests 50–100 Ω as a starting point. 68 Ω plus the DF1704's output resistance roughly matches the ~110 Ω In2/B.Cu traces. Tune 47–100 Ω on the scope.
+- **C90 (1 µF)** is now 4.5 mm from U10 OUT. C19 (47 µF aluminium) stays as the LM337's stability capacitor: TI requires 1 µF tantalum or 10 µF aluminium.
+- **R79 clearance:** fixed by the user.
+- **Output mute and test points:** not required (the preamp provides muting).
+- **Package check:** PCM1704 lead span measured at about 7.6 mm (body about 5.5 × 13 mm), consistent with the 5.3 mm SOP footprint.
+
