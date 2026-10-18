@@ -80,8 +80,71 @@ The sheet structure is preserved (root, POWER, AUDIO-IN, ADCESPDAC, PROTECT), an
 - **Only the selected source's hot and ground touch the board.** The unselected source is fully open-circuit, so there is no high-impedance leakage path for Class-II/Y-capacitor ground currents.
 - **R25/R26 4k7 thin-film** sit between relay COM and the ADC input chain. With the PCM1863's 10 kΩ input this gives −3.3 dB (full scale 3.1 Vrms). They also limit ESD-diode current to <2 mA at 10 Vrms; TI's absolute limit is 5 mA. Alternatives: 0 Ω for 2.1 Vrms full scale, or 10 k for 4.2 Vrms.
 - **Bleed resistors R7/R8 (100 k) stay on the ADC side, referenced to board GND,** so no resistor bridges an unselected source to GND. During relay transfer, the COM node is held via R25/R26 → R7/R8.
-- **Drivers:** BC546 (inventory), 1 k base resistor, 16 Ω coil resistor, and a 1N4148W across each coil with correct polarity (pin 1 + on this polarised GN coil).
+- **Drivers:** BC849C (Nexperia, SOT-23; replaced the BC546 on 2026-10-17), 1 k base resistor, 16 Ω coil resistor, and a 1N4148W across each coil with correct polarity (pin 1 + on this polarised GN coil).
 - **R31 100 k** pulls INPUT_SEL low, which keeps ESP32 strap GPIO45 low at reset. If it were high, VDD_SPI would switch to 1.8 V and the flash would not boot.
+
+### AUDIO-IN sheet: high-level (speaker) input, assembly option (added 2026-10-16)
+
+The board is built in **one of two configurations**. There are no extra relays, jumpers or links, because each configuration uses its own PCM1863 input pins.
+
+| Build | Fit | Leave unfitted | ADC input (firmware) |
+|---|---|---|---|
+| **LOW-LEVEL** (switched preamp / Marantz LFE) | J1, J2, K2, K3, Q2, Q3, D2, D3, R25–R30, C1–C4, R3, R4, R7, R8 | Every part with Config = `HIGH-LEVEL build only` | VINL1/VINR1 |
+| **HIGH-LEVEL** (speaker outputs of an amplifier) | J10, U16, R81–R90, C137–C148, D8, and J4 pin 1 wired to −15 V | J1, J2, K2, K3, Q2, Q3, D2, D3, R25–R30, C1–C4, R3, R4, R7, R8 | VINL3/VINR3; firmware sums L+R to mono |
+
+- **Both builds:** R31 (GPIO45 strap pull-down) and TP10 are fitted in both, and are not tagged.
+- **Config field:** every other part in either block carries Config = `LOW-LEVEL build only` or `HIGH-LEVEL build only`. The BOM has a Config column.
+- **Fitting both blocks** is harmless electrically, because they drive different ADC pins.
+
+**Circuit (per channel), on ±15 V:**
+- **Topology:** a difference amplifier referenced to board GND, Vout = (Rf/Rin)·(SPK+ − SPK−), with Rin = 100K and Rf = Rg = 10K.
+- **Input impedance:** 200 kΩ differential, 110 kΩ from each leg to GND.
+- **Grounding:** neither speaker terminal is connected to board GND, so BTL (bridged) and ground-referenced amplifiers both work. The ground loop is broken by the 110 kΩ legs: no low-impedance path exists between the amplifier and board grounds.
+- **Common-mode rejection:** any ground-potential difference is rejected as common mode, at a level set by resistor matching.
+  - With the stocked 0.5 % 100K and 0.1 % 10K, the worst case is ≈35 dB. Typical matching is better.
+  - With 0.1 % 100K, the worst case is ≈49 dB.
+  - Example: 100 mV of ground hum leaves ≈2 mV at the op-amp output in the worst case, about −60 dB relative to full scale.
+- **Level (fitted values, ≤50 W):** 50 W into 8 Ω (20 Vrms) gives 2.0 Vrms at the op-amp. After R85/R90 (1K) into the ADC's ≈10 kΩ input, that is 1.8 Vrms against the 2.1 Vrms ADC full scale. For lower-power amplifiers, use the PCM1863 PGA or DSP gain.
+- **Higher-power amplifiers:** change Rf = Rg (R84/R83 and R89/R88) and Cf = Cg (C138/C137 and C142/C141) together, and leave Rin at 100K. Size by voltage, V<sub>rms</sub> = √(P × R):
+
+  | Amp (into 8 Ω) | Speaker voltage | Rf = Rg | Cf = Cg | Op-amp output |
+  |---|---|---|---|---|
+  | ≤50 W (fitted) | 20 Vrms | 10K | 4.7nF | 2.0 Vrms |
+  | ≤100 W | 28 Vrms | 6K8 | 6.8nF | 1.9 Vrms |
+  | ≤200 W | 40 Vrms | 4K7 | 10nF C0G | 1.9 Vrms |
+
+  - **Op-amp limits:** on ±15 V the op-amp's common-mode range and output swing are not limiting for any row.
+  - **100K resistors:** they see about 57 V peak at 200 W, within a 2012 metric part's rating, and dissipate about 15 mW.
+- **Filtering:** Cf‖Rf and Cg‖Rg give f<sub>c</sub> = 3.4 kHz, which removes Class-D carrier residue and RF. Each pair must match to hold the common-mode rejection at high frequency.
+- **Output:** C139/C143 (10 µF bipolar, same part as C1/C2) block DC. The PCM1863 biases its own inputs at about AVDD/2. R85/R90 (1K) and C140/C144 (10nF C0G) form the ADC input filter.
+  - R85/R90 limit ADC clamp current to <3 mA if the op-amp is overdriven.
+  - **Layout:** place C140/C144 at PCM1863 pins 29/30.
+
+**Op-amp: TI RC4580IDR (SOIC-8, inventory, 9 in stock).**
+- **Why this part:** a dual is all that's needed now that no bias buffer is required. The OPA1656 and NE5532 stay free for other work.
+- **Supply:** ±2 to ±18 V, so ±15 V is within range.
+- **Headroom:** input common-mode range and output swing are about ±12 V or more. The worst case, a 50 W single-ended amplifier, moves the inputs only ±2.6 V, and the output peaks at about ±2.8 V.
+- **Stability:** unity-gain stable; the noise gain here is 1.1.
+- **Noise:** irrelevant at a 2 Vrms output level.
+- **Supply current:** a few mA from each rail.
+- **Pinout:** TI D package, 1 OUT1, 2 IN1−, 3 IN1+, 4 VCC−, 5 IN2+, 6 IN2−, 7 OUT2, 8 VCC+. The KiCad RC4580 symbol matches.
+- **Decoupling:** C146 (100nF) at pin 8 and C145 (100nF) at pin 4, plus C147/C148 (10 µF 25 V) on +15 V and −15 V.
+
+**−15 V supply (POWER sheet):**
+- **Source:** J4 pin 1 now feeds a global `-15V` rail through **D8 (1N4148W, inventory)**. D8 has its cathode to J4 and its anode to the rail.
+- **Protection:** if the harness is plugged in reversed, D8 blocks +15 V from reaching U16's VCC− pin, as D1 already does for the +15 V side.
+- **Drop:** about 0.7 V at a few mA, which is harmless.
+- **If −15 V is missing:** U16 runs single-supply with its inputs at its negative rail and the input does not work. C139/C143 and R85/R90 still protect the ADC.
+- **Low-level build:** −15 V is unused there, so D8 is HIGH-LEVEL only.
+
+**Connector:** J10 is a JST B4B-XH-A: 1 = L+, 2 = L−, 3 = R−, 4 = R+. Use tap wires from the amplifier's speaker terminals and leave the speakers connected. **Do not connect any J10 pin to chassis or signal ground.**
+
+**PCB note:** the first version of this stage (TL074 on a single supply with a VBIAS buffer) was already imported to the PCB. **Update PCB from Schematic** will:
+- delete R91, R92 and TP27 (tick "Delete footprints with no symbol");
+- change U16 from SOIC-14 to SOIC-8 (tick "Replace footprints with those specified");
+- add D8 and C148.
+
+All other high-level footprints keep their placement.
 
 ### ADCESPDAC sheet
 
@@ -106,7 +169,7 @@ The sheet structure is preserved (root, POWER, AUDIO-IN, ADCESPDAC, PROTECT), an
 - Pole A is unchanged: NO = filtered DAC, NC → R19 1 k → GND, COM → J5 with R20 100 k.
 - Pole B is new: relay-state feedback to IO3 (R41 pull-up).
 - The coil now has a flyback diode D4.
-- The coil is now switched by **two BC546 in series**: Q1 driven by the fault latch, Q4 driven by the AUDIO_READY level. This is a hardware AND that also survives a single shorted transistor.
+- The coil is now switched by **two BC849C in series** (BC546 until 2026-10-17): Q1 driven by the fault latch, Q4 driven by the AUDIO_READY level. This is a hardware AND that also survives a single shorted transistor.
 
 **ESP32**
 
@@ -155,6 +218,22 @@ The sheet structure is preserved (root, POWER, AUDIO-IN, ADCESPDAC, PROTECT), an
   - The trigger side has **no** connection to board GND.
 - **Status LED and UART:** status LED on IO46, with a 1 k feed to the front panel via the ribbon. UART0 debug header J8.
 - **Four M3 mounting holes,** unconnected.
+
+### Relay driver transistors (changed 2026-10-17)
+
+**Q1–Q4 changed from BC546 (TO-92) to Nexperia BC849C (SOT-23).** Checks against the circuit:
+
+| Check | Circuit needs | BC849C | Result |
+|---|---|---|---|
+| V<sub>CEO</sub> | ≈5.7 V (coil kick clamped by 1N4148W) | 30 V | Large margin |
+| I<sub>C</sub> | ≈31 mA (Q2, Q3); ≈34 mA in Q4, which also carries Q1's base current | 100 mA | Fine |
+| Saturation | Base drive 2.4–2.5 mA from 3.3 V logic via 1K, so forced β ≈ 13–14 | h<sub>FE</sub> 420–800 | Deep saturation, V<sub>CE(sat)</sub> ≈ 0.1–0.2 V |
+| K1 coil voltage (Q1 + Q4 in series) | ≥3.38 V must-operate | ≈4.1–4.3 V | Fine |
+| Dissipation | ≈7 mW | 250 mW | Negligible |
+
+- **Symbol:** changed to `Transistor_BJT:BC849`. Its pin numbering is 1 = B, 2 = E, 3 = C, where the BC546's was 1 = C, 2 = B, 3 = E.
+- **Netlist check:** every transistor's B/C/E connects to the same net as before.
+- **PCB links:** UUIDs are kept. Update PCB replaces the four TO-92 footprints with SOT-23, which then need placing.
 
 ### Libraries
 
@@ -277,8 +356,8 @@ The signal is summed to mono first, then processed through ≈16 biquads (LR4/LR
 5. **No spares.** The inventory has **one** ESP32-S3-WROOM-1U-N8 and **one** LMR51430XFDDCR. Buy spares, or use the N8R8 as fallback (it fits, but only to 65 °C).
 6. **USB ground loop.** Accepted: USB is for configuration only; run the Mac on battery when connected to avoid any loop.
 7. **BCK-PLL clock quality** (PCM1863 slave) is untested. R32 provides the MCLK fallback.
-8. **Relay release time with a plain diode clamp** has not been measured. If muting needs to be faster, consider a diode + 12 V zener clamp (BC546 V<sub>CEO</sub> = 65 V).
-9. **Through-hole parts** (BC546, AGN2004H, 1N5819, C1/C2/C6, connectors) suit hand assembly; JLCPCB charges extra for through-hole assembly.
+8. **Relay release time with a plain diode clamp** has not been measured. If muting needs to be faster, consider a diode + 12 V zener clamp. That gives ≈18 V at the collector, within the BC849C's V<sub>CEO</sub> of 30 V.
+9. **Through-hole parts** (AGN2004H, 1N5819, C1/C2/C6, connectors) suit hand assembly; JLCPCB charges extra for through-hole assembly.
 10. **Daughterboard display pull-ups:** many OLED modules include their own I²C pull-ups. Combined with R56/R57 the bus is ≈2.4 kΩ, which is fine.
 11. **Stale 3D model paths** in the custom footprints (cosmetic only).
 
@@ -286,7 +365,7 @@ The signal is summed to mono first, then processed through ≈16 biquads (LR4/LR
 
 ## 5. Bill of materials
 
-The full grouped BOM is generated from the schematic: `SubProcessorDigital-BOM.csv` (99 lines, 212 placed parts; R32 is DNP).
+The full grouped BOM is generated from the schematic: `SubProcessorDigital-BOM.csv` (grouped by value, footprint, MPN and Config; the Config column marks LOW-LEVEL-only and HIGH-LEVEL-only parts; R32 is DNP).
 
 ### 5.1 Confirmed in inventory (quantity needed / in stock)
 
@@ -301,7 +380,6 @@ The full grouped BOM is generated from the schematic: `SubProcessorDigital-BOM.c
 | TS1117B (3.3 V, SOT-223) | U6 | 1 / 11 |
 | USBLC6-2SC6 | IC3 | 1 / 7 |
 | Panasonic AGN2004H | K1–K3 | 3 / 6 |
-| ST BC546 | Q1–Q4 | 4 / 36 |
 | onsemi 1N4148W | D2–D5, D7 | 5 / 67 |
 | Diotec 1N5819 | D1 | 1 / 13 |
 | Kingbright KP-2012EC red LED | D6 | 1 / 10 |
@@ -359,6 +437,21 @@ The full grouped BOM is generated from the schematic: `SubProcessorDigital-BOM.c
 
 No values are made from series or parallel combinations.
 
+**High-level input (HIGH-LEVEL build only), all from inventory:**
+
+| Part | Use | Need / stock |
+|---|---|---|
+| TI RC4580 SOIC-8 | U16 | 1 / 9 |
+| 100K thin film 0.5 % 2012 metric | R81, R82, R86, R87 | 4 / 70 |
+| 10K thin film 0.1 % 2012 metric | R83, R84, R88, R89 | 4 / 50 |
+| 1K thin film 0.5 % 2012 metric | R85, R90 | 2 / 42 |
+| Walsin 0805N472J101CT 4.7nF C0G 100 V | C137, C138, C141, C142 | 4 / 9 |
+| Nichicon UES1H100MPM 10 µF bipolar | C139, C143 (C1/C2 not fitted in this build) | 2 / 10 |
+| Walsin 0805N103J500CT 10nF C0G | C140, C144 | 2 / 38 |
+| Taiyo Yuden TMK316B7106KL-TD 10 µF 25 V 3216 metric | C147, C148 | 2 / 50 |
+| 100nF 1608 metric (MC0603B104K500CT, being purchased) | C145, C146 | 2 |
+| onsemi 1N4148W | D8 | 1 |
+
 ### 5.2 To purchase (suggested suppliers: DigiKey UK, Mouser UK, Farnell/CPC)
 
 | Qty | Part | Use |
@@ -369,6 +462,9 @@ No values are made from series or parallel combinations.
 | 3 | TI **TPS3808G33DBVR** | U10–U12 rail monitors |
 | 1 (+1) | TI **SN74AUP1G74DCUR** | U13 fault latch |
 | 1 | Vishay **VO617A-3** (DIP-4, being purchased) | U14 trigger opto |
+| 4 (100 ordered) | Nexperia **BC849C,215** NPN SOT-23 | Q1–Q4 relay drivers (replaces BC546) |
+| 1 | JST **B4B-XH-A** + XHP-4 housing and crimps | J10 speaker input (HIGH-LEVEL build only) |
+| 4 (optional) | Yageo **RT0805BRD07100KL** 100K 0.1 % 2012 metric | R81, R82, R86, R87: raises worst-case CMRR from ≈35 to ≈49 dB (stocked 0.5 % parts are acceptable) |
 | 1 | On Shore **USB-B1HSW6** (unless your stocked USB-B matches) | J3 |
 | 1 | 2×10 2.54 mm shrouded box header, e.g. Würth 61202021621 | J6 |
 | 2 + 3 | JST **B3B-XH-A** (J1, J4) and **B2B-XH-A** (J2, J5, J7), plus XHP-3/XHP-2 housings and SXH-001T-P0.6 crimps | Connectors |
@@ -394,7 +490,7 @@ No values are made from series or parallel combinations.
 | U14 | VO617A-3 | `Package_DIP:DIP-4_W7.62mm` | DIP-4 through-hole |
 | K1–K3 | AGN2004H | `SPD:Relay_DPDT_Panasonic_AGN2004H` | Verified against Panasonic pattern: 3.2 mm rows, 3.2/2.2/2.2 mm pitch |
 | L3 | SRP6030WA-6R8M | `SPD:SRP6030WA-6R8M` | 6.6 × 7.1 mm |
-| Q1–Q4 | BC546 | `Package_TO_SOT_THT:TO-92_Wide` | TO-92 (C-B-E) |
+| Q1–Q4 | BC849C (Nexperia BC849C,215) | `Package_TO_SOT_SMD:SOT-23` | SOT-23 (1 = B, 2 = E, 3 = C), verified against Nexperia BC849/BC850 datasheet pinning |
 | J3 | USB-B | `Connector_USB:USB_B_OST_USB-B1HSxx_Horizontal` | Through-hole |
 | J6 | 2×10 header | `Connector_IDC:IDC-Header_2x10_P2.54mm_Vertical` | Shrouded |
 | Passives | — | 2012 metric (R, small C), 3216 metric (100 nF/1 µF/10–22 µF stock parts) | — |
@@ -410,6 +506,7 @@ No values are made from series or parallel combinations.
 - **Connectivity verification:** the KiCad netlist matches the recorded design intent for all 591 pins in 147 nets. Each net was also reviewed by hand.
 - **Footprint check:** every symbol pin has a matching footprint pad, and there are no orphan pads.
 - **DRC:** not applicable yet (no layout).
+- **Update 2026-10-16 (high-level input added):** ERC shows 0 errors and 9 warnings. All 9 are `endpoint_off_grid` around J9 on the CONTROL sheet: the J9 symbol and its wires sit off the 1.27 mm grid. They were present before this change, and the connections are correct. To clear them, move J9 back onto the grid. The new connections were checked against the netlist. The ±15 V RC4580 revision kept every existing PCB link, so only the removed R91, R92 and TP27 are unlinked.
 
 ---
 
@@ -432,13 +529,21 @@ No values are made from series or parallel combinations.
 5. **Input switching:**
    - Measure the ground isolation: PRE_GND ↔ LFE_GND resistance must be ≥ MΩ in both modes, with the board powered and unpowered.
    - Check mode-change pops at the P68 (should be none: muted).
-6. **ADC/DAC performance:**
+6. **High-level input (HIGH-LEVEL build):**
+   - With J4 fitted with ±15 V, check U16 pin 8 ≈ +15 V and pin 4 ≈ −14.3 V (D8 drop).
+   - Reverse the J4 harness: D1 and D8 must both block, and U16 must survive.
+   - With no input, U16 pins 1/7 should be ≈ 0 V (within a few mV).
+   - Drive J10 L+/L− differentially with 20 Vrms at 50 Hz: about 1.8 Vrms at IC2 pin 29, in phase with L+. Repeat for R.
+   - Common-mode test: J10 L+ and L− tied together and driven at 10 Vrms, 50 Hz, relative to board GND. The output should be ≥30 dB below the differential reading.
+   - Connect a BTL Class-D amplifier and check the switching residue at IC2 pins 29/30 (should be ≈ none above 20 kHz).
+   - Confirm that no J10 pin has a DC path to GND (≥100 kΩ).
+7. **ADC/DAC performance:**
    - Noise floor and THD at 1 kHz and 50 Hz.
    - Confirm BCK-PLL lock (PCM1863 registers 0x72/0x75).
    - Clipping at ≈3.1 Vrms input.
-7. **Latency:** pulse into the preamp input, scope TP11-referenced I²S and the P68 input. Record the fixed latency for N = 16 and N = 32.
-8. **Thermal:** 1 hour at maximum activity (CPU 240 MHz, all relays on). Measure U6, U3, L3 and relay coil temperatures.
-9. **Trigger input:** 0 / 5 / 12 / 15 V and reverse polarity on J7. Check the MODE_TRIG_N thresholds and confirm isolation (≥ MΩ to GND).
+8. **Latency:** pulse into the preamp input, scope TP11-referenced I²S and the P68 input. Record the fixed latency for N = 16 and N = 32.
+9. **Thermal:** 1 hour at maximum activity (CPU 240 MHz, all relays on). Measure U6, U3, L3 and relay coil temperatures.
+10. **Trigger input:** 0 / 5 / 12 / 15 V and reverse polarity on J7. Check the MODE_TRIG_N thresholds and confirm isolation (≥ MΩ to GND).
 
 ---
 
@@ -463,7 +568,7 @@ No values are made from series or parallel combinations.
 
 - **Keep IO45 low at boot** (R31 provides this) and never drive IO46 high during download mode.
 - **Mute/unmute sequences:**
-  - Startup: configure the PCM1863 over I²C: SCK_XI_SEL = SCK only, slave mode, low-latency IIR, inputs VINL1/VINR1, single-ended.
+  - Startup: configure the PCM1863 over I²C: SCK_XI_SEL = SCK only, slave mode, low-latency IIR, inputs VINL1/VINR1 single-ended (LOW-LEVEL build), or VINL3/VINR3 single-ended with an L+R mono sum in the DSP (HIGH-LEVEL build). Make this a stored configuration setting.
   - Start I²S full duplex.
   - Start kicking WDI from the audio task only after verifying DMA timing and sane ADC data.
   - Read FAULT_N (IO42) = 1.

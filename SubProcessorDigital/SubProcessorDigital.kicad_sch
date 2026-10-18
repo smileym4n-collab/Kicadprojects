@@ -467,6 +467,26 @@
 	)
 	(wire
 		(pts
+			(xy 127 53.34) (xy 121.92 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a41ae513-ba22-4d2d-8f6d-e7ae0e6c444a")
+	)
+	(wire
+		(pts
+			(xy 76.2 88.9) (xy 81.28 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a635ef51-00b1-47cc-8467-013016bb731c")
+	)
+	(wire
+		(pts
 			(xy 187.96 88.9) (xy 193.04 88.9)
 		)
 		(stroke
@@ -474,6 +494,16 @@
 			(type default)
 		)
 		(uuid "a8251be5-fc05-4297-85fc-eec1873bd83f")
+	)
+	(wire
+		(pts
+			(xy 127 50.8) (xy 121.92 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd185e0d-6a57-42e3-87fd-2f282d5dd5c3")
 	)
 	(wire
 		(pts
@@ -574,6 +604,16 @@
 			(type default)
 		)
 		(uuid "f0e176fe-44bc-4bd8-8c47-785afaf16ea9")
+	)
+	(wire
+		(pts
+			(xy 76.2 91.44) (xy 81.28 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3a9a4eb-9ed6-4e3a-b575-3ce6e76c0aea")
 	)
 	(wire
 		(pts
@@ -694,6 +734,16 @@
 			(justify right)
 		)
 		(uuid "37e650f8-18bb-4516-8b63-cb29cf9d1454")
+	)
+	(label "HL-RIGHT"
+		(at 121.92 53.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3c6b7696-ef75-44f8-8818-daa2e1a032cb")
 	)
 	(label "IN-LEFT"
 		(at 121.92 43.18 180)
@@ -905,6 +955,16 @@
 		)
 		(uuid "9f879205-53f3-43bd-88c2-3c5f11ac40bd")
 	)
+	(label "HL-RIGHT"
+		(at 81.28 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a0ad4079-07e7-4fe8-9e82-b53122d17a2c")
+	)
 	(label "ENC3_B"
 		(at 193.04 73.66 0)
 		(effects
@@ -924,6 +984,16 @@
 			(justify left)
 		)
 		(uuid "a5a8f681-0122-4259-859c-28d370fa2251")
+	)
+	(label "HL-LEFT"
+		(at 81.28 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a6d8831c-87ee-44d7-b308-06bce970fa4d")
 	)
 	(label "WATCHDOG_HEARTBEAT"
 		(at 193.04 45.72 0)
@@ -994,6 +1064,16 @@
 			(justify right)
 		)
 		(uuid "e35ec15c-48b6-42e2-bd46-49e3f5569fc0")
+	)
+	(label "HL-LEFT"
+		(at 121.92 50.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e9c61438-3f21-464a-badd-a9e5ca93de67")
 	)
 	(label "ENC1_SW"
 		(at 193.04 60.96 0)
@@ -1419,6 +1499,26 @@
 				(justify right)
 			)
 		)
+		(pin "HL-LEFT" input
+			(at 127 50.8 180)
+			(uuid "99cbc786-4895-4f56-b3eb-4f3d73e411f5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "HL-RIGHT" input
+			(at 127 53.34 180)
+			(uuid "2e468060-812d-44bd-8a32-15c65e04e38a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
 			(project "SubProcessorDigital"
 				(path "/d270386e-be0f-4547-84de-01e193634fe2"
@@ -1730,6 +1830,26 @@
 		(pin "INPUT_SEL" input
 			(at 76.2 86.36 0)
 			(uuid "cc1cfbdc-dc7f-4eeb-91b3-4334b1914978")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "HL-LEFT" output
+			(at 76.2 88.9 0)
+			(uuid "2102c98d-86f9-4574-ba83-6836a62ffdc1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "HL-RIGHT" output
+			(at 76.2 91.44 0)
+			(uuid "434ffbdb-3136-4c8c-8814-b7e2635dd001")
 			(effects
 				(font
 					(size 1.27 1.27)

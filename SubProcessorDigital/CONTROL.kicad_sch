@@ -319,193 +319,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Generic:Conn_01x03"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x03"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_01x03_1_1"
-				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector_Generic:Conn_02x10_Odd_Even"
 			(pin_names
 				(offset 1.016)
@@ -2551,17 +2364,6 @@
 		)
 		(uuid "0f155436-1d82-45b2-8060-361c2231baf8")
 	)
-	(text "J8-1 = ESP32 TXD0 (out), J8-2 = ESP32 RXD0 (in)"
-		(exclude_from_sim no)
-		(at 172.72 213.36 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "11e76756-f737-4e4a-b0b1-67a5793ae665")
-	)
 	(text "DAUGHTERBOARD HEADER J6 (2x10 shrouded IDC, short ribbon)"
 		(exclude_from_sim no)
 		(at 241.3 33.02 0)
@@ -2687,18 +2489,6 @@
 			(justify left)
 		)
 		(uuid "d94f147f-b8a6-498c-86dc-eba5975d5c64")
-	)
-	(text "DEBUG UART0 (115200 8N1, 3.3 V)"
-		(exclude_from_sim no)
-		(at 172.72 182.88 0)
-		(effects
-			(font
-				(size 1.6 1.6)
-				(bold yes)
-			)
-			(justify left)
-		)
-		(uuid "df837ca1-03be-4d6a-92d9-23a3233237a7")
 	)
 	(text "Inputs read by ESP32 PCNT (quadrature) + GPIO; firmware debounce on switches.  tau = 100 us."
 		(exclude_from_sim no)
@@ -2986,16 +2776,6 @@
 			(type default)
 		)
 		(uuid "0f214b91-8218-4c91-acbf-a976a275849f")
-	)
-	(wire
-		(pts
-			(xy 190.5 205.74) (xy 187.96 205.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11416ca1-bc7f-43ba-bc5f-7fd0bc1341d7")
 	)
 	(wire
 		(pts
@@ -3419,16 +3199,6 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 200.66) (xy 187.96 200.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "708b7c68-31cf-43b9-81c2-684ce94c5660")
-	)
-	(wire
-		(pts
 			(xy 279.4 86.36) (xy 281.94 86.36)
 		)
 		(stroke
@@ -3456,16 +3226,6 @@
 			(type default)
 		)
 		(uuid "83736bc6-7a92-458f-bb2f-8b23534b8c97")
-	)
-	(wire
-		(pts
-			(xy 190.5 203.2) (xy 187.96 203.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "841a16e7-eaed-4c60-840f-563d8da4f533")
 	)
 	(wire
 		(pts
@@ -4151,17 +3911,6 @@
 		)
 		(uuid "59240e0b-ff9b-4334-ae7e-0921060defbe")
 	)
-	(hierarchical_label "DBG_TX"
-		(shape input)
-		(at 187.96 200.66 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "68c5bf2c-70a5-44a4-9ff7-86700a53ac3b")
-	)
 	(hierarchical_label "ENC2_SW"
 		(shape output)
 		(at 132.08 106.68 0)
@@ -4183,17 +3932,6 @@
 			(justify right)
 		)
 		(uuid "7be4b6cd-7d4d-4644-88ef-0e8e78ec9fa7")
-	)
-	(hierarchical_label "DBG_RX"
-		(shape output)
-		(at 187.96 203.2 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "7d4abb52-dbfa-4714-ba96-7593830154f7")
 	)
 	(hierarchical_label "ENC1_SW"
 		(shape output)
@@ -8092,84 +7830,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 187.96 205.74 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "868864ca-4251-4345-adc5-781b6d3d5fdd")
-		(property "Reference" "#PWRCON031"
-			(at 180.34 205.74 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 182.88 205.74 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 187.96 205.74 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 187.96 205.74 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 187.96 205.74 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f9930ee9-e25f-4aba-8baa-54ef9a6914ca")
-		)
-		(instances
-			(project "SubProcessorDigital"
-				(path "/d270386e-be0f-4547-84de-01e193634fe2/6c1e2f3a-7b4d-4e5f-9a0b-1c2d3e4f5a6b"
-					(reference "#PWRCON031")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 52.07 81.28 90)
 		(unit 1)
@@ -8254,101 +7914,6 @@
 			(project "SubProcessorDigital"
 				(path "/d270386e-be0f-4547-84de-01e193634fe2/6c1e2f3a-7b4d-4e5f-9a0b-1c2d3e4f5a6b"
 					(reference "R61")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x03")
-		(at 195.58 203.2 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8ef8c5bc-e196-4d09-a40c-e1fa8a3a3954")
-		(property "Reference" "J8"
-			(at 193.04 196.85 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "UART0"
-			(at 193.04 209.55 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
-			(at 195.58 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 195.58 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 195.58 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "2.54 mm 1x3 pin header"
-			(at 195.58 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7f8f3795-ff99-4062-b8b6-f2041d9da517")
-		)
-		(pin "2"
-			(uuid "73e78d89-f93e-4bcf-a960-d2699ace94e2")
-		)
-		(pin "3"
-			(uuid "e6c25e62-5705-4b94-8562-41e268d55abc")
-		)
-		(instances
-			(project "SubProcessorDigital"
-				(path "/d270386e-be0f-4547-84de-01e193634fe2/6c1e2f3a-7b4d-4e5f-9a0b-1c2d3e4f5a6b"
-					(reference "J8")
 					(unit 1)
 				)
 			)
