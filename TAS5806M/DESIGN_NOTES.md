@@ -437,7 +437,7 @@ Encoder switch S1 to GND. The node connects directly to BQ25895 /QON (internal 2
 - PowerPAD fully soldered with a via array to L2/L4. RθJA ≈ 24–29 °C/W → about 1.8 W at 2 x 5 W continuous, about +50 °C rise.
 - Copper area on L4 under the IC helps.
 - Place CSAD0660 L601/L602 right at the OUT pins.
-- 0.68 µF caps close to the inductor outputs, returning to GND with short vias. Speaker connectors after the 1 nF caps.
+- 0.68 µF film caps (KEMET R82, through-hole, 5 mm pitch, 9.5 mm tall) close to the inductor outputs. Mount them flush with the shortest possible leads, and give each GND pad its own via to L2: about 7 nH of lead/body inductance makes them self-resonant near 2.3 MHz, and above that the 1 nF C0G caps (C605/C606/C611/C612) do the HF filtering, so place those right at the film caps. Speaker connectors after the 1 nF caps. Check the 9.5 mm height against the enclosure.
 - Keep OUT traces wide enough for 2 A peak; the switch-node copper before the inductors stays compact.
 - Silkscreen: "SPK L+ / L−, BTL – neither terminal is GND".
 
@@ -506,7 +506,7 @@ Plus stocked MLCCs (2012/3216) and resistors (2012/1608): see the BOM `Stock` co
 | 1 | 0451008.MRL | Littelfuse | NANO2 6.1x2.7 | 8 A battery fuse |
 | 2 | XFL4020-102MEB | Coilcraft | 4x4x2.1 | 1 µH for BQ25895 and ISL91127 |
 | 1 | XAL7030-222MEB | Coilcraft | 7.5x7.2x3.1 | 2.2 µH boost |
-| 4 | 0.68 µF 100 V X7R | KEMET C1210C684K1RACTU | 3225 metric | Class-D filter |
+| 4 | 0.68 µF 63 VDC PET film, ±5 % | KEMET R82DC3680Z360J | Radial THT, 5 mm pitch, 7.2 x 4.5 x 9.5 mm | Class-D output filter (film chosen over X7R for linearity; CPC stock). The ±10 % R82DC3680Z360K is an acceptable substitute. |
 | 12 (+10) | 100 nF 50 V X7R | KEMET C0603C104M5RACTU | 1608 metric | Your standard decoupling part (stock 3216 would also work) |
 | 7 (+10) | 1 µF 25 V X7R | Samsung CL21B105KAFNNNG | 2012 metric | Your standard |
 | 1 | 47 nF 50 V X7R | Murata GRM188R71H473KA61D | 1608 | BQ BTST |
@@ -524,9 +524,15 @@ Plus stocked MLCCs (2012/3216) and resistors (2012/1608): see the BOM `Stock` co
    - TI's TPS61088 product page and `symlink/tps61088.pdf` returned 404 on every attempt, and the mirrors were blocked.
    - All calculations use the verified TPS61088-Q1 datasheet (SLVSE52A): same RHL package and pinout.
    - If you fit TPS61088RHLR, re-check RILIM/RFREQ against its own datasheet. The Q1 lists higher RDS(on) (21/24 mΩ) than the search summary quoted for the commercial part (11/13 mΩ), so thermals would be better, not worse.
-2. **Class-D filter capacitor dielectric.**
-   - 0.68 µF / 100 V X7R in 3225 metric: the TI EVM value, used at about 9 % of its rating.
-   - Film (Panasonic ECW-U1684KCV, PEN, 9.8 x 6.3 mm) would avoid X7R in the output path, but its SMD footprint isn't verified and it is large.
+2. **Class-D filter capacitor dielectric — resolved: film.**
+   - KEMET R82DC3680Z360J: 0.68 µF, 63 VDC / 40 VAC, metallised PET, ±5 %, 5 mm pitch, 7.2 x 4.5 x 9.5 mm. Footprint `Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm`. Source: KEMET datasheet F3101_R82.
+   - Datasheet checks:
+     - dV/dt rating 160 V/µs at full rated voltage (higher allowed below it); the filtered node sees about 1 V/µs.
+     - Dissipation factor ≤ 2.5 % at 100 kHz: about 15 mΩ ESR at 384 kHz and well under 1 mW per cap from the ~0.3 A p-p carrier ripple.
+     - Self-inductance about 7 nH.
+   - Chosen over X7R because the TAS5806M feedback is taken before the filter, so capacitor non-linearity would not be corrected.
+   - Polypropylene (e.g. KEMET R76) would have lower loss but is physically larger at 0.68 µF.
+   - Changed 2026-10-19; connectivity was unchanged, verified by netlist comparison.
    - The TAS5806M feedback is taken before the LC filter, so the filter caps' linearity is not corrected. Their audio-band current is small (Xc = 234 Ω at 1 kHz).
 3. **No reverse-polarity FET on the battery (your decision).**
    - Fitted: a polarised KK-396 connector plus F101.
@@ -584,7 +590,7 @@ Plus stocked MLCCs (2012/3216) and resistors (2012/1608): see the BOM `Stock` co
 - [ ] Strapping pins: IO12 floating (low), IO0 pull-up, IO2/IO15/IO5 untouched. IO16 pulled up (PSRAM).
 - [ ] Voltage ratings:
   - [ ] VBUS caps ≥ 25 V
-  - [ ] PVDD caps 25 V (22 µF), 16 V (220 µF FR), 100 V (0.68 µF)
+  - [ ] PVDD caps 25 V (22 µF), 16 V (220 µF FR), 63 V film (0.68 µF)
   - [ ] BST 0.22 µF 25 V
 - [ ] Power ratings: F101 8 A; L201 Irms 10 A; CSAD Irms 3.5 A; 150R/68k signal-level only.
 - [ ] Footprints match the ordered MPNs (§11.9–10). Verify the electrolytic diameter (FR 220 µF/16 V).
