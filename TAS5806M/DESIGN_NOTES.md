@@ -498,7 +498,7 @@ Plus stocked MLCCs (2012/3216) and resistors (2012/1608): see the BOM `Stock` co
 | Qty | Value | MPN | Package | Reason |
 |---|---|---|---|---|
 | 1 (+1 spare) | BQ25895RTWR | TI BQ25895RTWR | WQFN-24 4x4 | Charger/power-path (specified) |
-| 1 (+1) | TPS61088QRHLRQ1 | TI | VQFN-20 RHL | Boost; -Q1 because the TPS61088 commercial datasheet/page was unavailable — see §11 |
+| 1 (+1) | TPS61088QRHLTQ1 | TI | VQFN-20 RHL | Boost (TPS61088-Q1, 250-pc reel; design verified against SLVSE52A) — see §11 |
 | 1 (+1) | TAS5806MDCPR | TI | HTSSOP-38 | Amplifier |
 | 1 | TVS1400DRVR | TI | WSON-6 2x2 | VBUS surge/ESD, 14 V standoff (HVDCP-safe) |
 | 1 | TPD2E2U06DCKR | TI | SC-70-3 | D+/D- ESD (stock USBLC6-2 has a 6 V VBUS pin that HVDCP 9/12 V would overstress) |
@@ -520,10 +520,11 @@ Plus stocked MLCCs (2012/3216) and resistors (2012/1608): see the BOM `Stock` co
 
 ## 11. Decisions taken, deviations and unresolved items
 
-1. **TPS61088 → TPS61088QRHLRQ1 (needs your review).**
-   - TI's TPS61088 product page and `symlink/tps61088.pdf` returned 404 on every attempt, and the mirrors were blocked.
-   - All calculations use the verified TPS61088-Q1 datasheet (SLVSE52A): same RHL package and pinout.
-   - If you fit TPS61088RHLR, re-check RILIM/RFREQ against its own datasheet. The Q1 lists higher RDS(on) (21/24 mΩ) than the search summary quoted for the commercial part (11/13 mΩ), so thermals would be better, not worse.
+1. **Boost IC — resolved: TPS61088QRHLTQ1 (TPS61088-Q1, 250-piece small reel).**
+   - TI's page and datasheet for the standard TPS61088 returned 404 (re-checked 2026-10-19). The -Q1 page is live.
+   - The -Q1 datasheet (SLVSE52A, addendum dated 10 Nov 2025) lists TPS61088QRHLTQ1 and TPS61088QRHLRQ1 as Active. They are the same device; only the reel size differs.
+   - All boost calculations (R206 current limit, R203 frequency, R207/C204 compensation) use the -Q1 datasheet.
+   - Do not swap in the standard TPS61088RHLR without re-checking those three settings against its own datasheet.
 2. **Class-D filter capacitor dielectric — resolved: film.**
    - KEMET R82DC3680Z360J: 0.68 µF, 63 VDC / 40 VAC, metallised PET, ±5 %, 5 mm pitch, 7.2 x 4.5 x 9.5 mm. Footprint `Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm`. Source: KEMET datasheet F3101_R82.
    - Datasheet checks:
