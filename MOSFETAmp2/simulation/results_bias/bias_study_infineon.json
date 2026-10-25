@@ -1,0 +1,663 @@
+{
+ "models": "infineon",
+ "status": "IMPOSED MOSFET THERMAL BEHAVIOUR - DEVELOPMENT EVIDENCE ONLY",
+ "variants": {
+  "A": {
+   "nominal": {
+    "trim_ohm": 31.974647563948448,
+    "trim_pot_ohm": 2000,
+    "select_on_test": {
+     "VZ": 4.3,
+     "TCZ": -0.0016,
+     "RZ": 15
+    },
+    "iq_p_at_trim_ends_mA": [
+     613.2912606060605,
+     0.027915151515151004
+    ],
+    "spread_V": 8.700556,
+    "open_wiper_iq_p_mA": 0.024903030303030125,
+    "thermal": {
+     "-3.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 10.5,
+      "hot_idle_sink+40": 0.1,
+      "lag_after_burst_sink+20_die+9": 22.1,
+      "burst_start_die+15_sensor_cold": 92.0,
+      "ambient+15_all": 20.4,
+      "board_only+15": 65.4
+     },
+     "-4.7mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 34.4,
+      "hot_idle_sink+40": 13.2,
+      "lag_after_burst_sink+20_die+9": 61.6,
+      "burst_start_die+15_sensor_cold": 120.8,
+      "ambient+15_all": 39.1,
+      "board_only+15": 65.4
+     },
+     "-6.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 58.9,
+      "hot_idle_sink+40": 51.7,
+      "lag_after_burst_sink+20_die+9": 99.9,
+      "burst_start_die+15_sensor_cold": 144.2,
+      "ambient+15_all": 56.2,
+      "board_only+15": 65.4
+     }
+    },
+    "rails": {
+     "12.5": 39.3,
+     "15": 50.0,
+     "20.6": 70.0
+    }
+   },
+   "low_2V_2V": {
+    "trim_ohm": null,
+    "trim_pot_ohm": 2000,
+    "select_on_test": {
+     "VZ": 4.3,
+     "TCZ": -0.0016,
+     "RZ": 15
+    },
+    "iq_p_at_trim_ends_mA": [
+     4060.1695,
+     67.30517272727273
+    ]
+   },
+   "high_4V_4V": {
+    "trim_ohm": 3.5051477001366993,
+    "trim_pot_ohm": 2000,
+    "select_on_test": {
+     "VZ": 4.3,
+     "TCZ": -0.0016,
+     "RZ": 15
+    },
+    "iq_p_at_trim_ends_mA": [
+     100.88070303030302,
+     0.027915151515151004
+    ],
+    "spread_V": 9.384572,
+    "open_wiper_iq_p_mA": 0.024903030303030125,
+    "thermal": {
+     "-3.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 2.0,
+      "hot_idle_sink+40": 0.1,
+      "lag_after_burst_sink+20_die+9": 9.3,
+      "burst_start_die+15_sensor_cold": 91.9,
+      "ambient+15_all": 8.6,
+      "board_only+15": 56.9
+     },
+     "-4.7mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 18.4,
+      "hot_idle_sink+40": 0.1,
+      "lag_after_burst_sink+20_die+9": 41.5,
+      "burst_start_die+15_sensor_cold": 120.7,
+      "ambient+15_all": 23.3,
+      "board_only+15": 56.9
+     },
+     "-6.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 38.9,
+      "hot_idle_sink+40": 19.3,
+      "lag_after_burst_sink+20_die+9": 75.9,
+      "burst_start_die+15_sensor_cold": 144.2,
+      "ambient+15_all": 37.8,
+      "board_only+15": 56.9
+     }
+    },
+    "rails": {
+     "12.5": 34.5,
+     "15": 50.0,
+     "20.6": 78.7
+    }
+   },
+   "N2V_P4V": {
+    "trim_ohm": 133.66957647826007,
+    "trim_pot_ohm": 2000,
+    "select_on_test": {
+     "VZ": 4.3,
+     "TCZ": -0.0016,
+     "RZ": 15
+    },
+    "iq_p_at_trim_ends_mA": [
+     1898.1233181818181,
+     0.0478878787878792
+    ],
+    "spread_V": 7.362509,
+    "open_wiper_iq_p_mA": 0.04186363636363744,
+    "thermal": {
+     "-3.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 40.7,
+      "hot_idle_sink+40": 23.0,
+      "lag_after_burst_sink+20_die+9": 58.0,
+      "burst_start_die+15_sensor_cold": 92.0,
+      "ambient+15_all": 49.4,
+      "board_only+15": 72.9
+     },
+     "-4.7mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 75.2,
+      "hot_idle_sink+40": 83.5,
+      "lag_after_burst_sink+20_die+9": 108.4,
+      "burst_start_die+15_sensor_cold": 120.9,
+      "ambient+15_all": 73.7,
+      "board_only+15": 72.9
+     },
+     "-6.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 105.7,
+      "hot_idle_sink+40": 144.0,
+      "lag_after_burst_sink+20_die+9": 152.8,
+      "burst_start_die+15_sensor_cold": 144.4,
+      "ambient+15_all": 94.3,
+      "board_only+15": 72.9
+     }
+    },
+    "rails": {
+     "12.5": 43.4,
+     "15": 50.0,
+     "20.6": 62.5
+    }
+   },
+   "N4V_P2V": {
+    "trim_ohm": 133.5267724260798,
+    "trim_pot_ohm": 2000,
+    "select_on_test": {
+     "VZ": 4.3,
+     "TCZ": -0.0016,
+     "RZ": 15
+    },
+    "iq_p_at_trim_ends_mA": [
+     1891.789327272727,
+     0.027915151515151004
+    ],
+    "spread_V": 7.361919,
+    "open_wiper_iq_p_mA": 0.024903030303030125,
+    "thermal": {
+     "-3.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 40.7,
+      "hot_idle_sink+40": 23.0,
+      "lag_after_burst_sink+20_die+9": 57.8,
+      "burst_start_die+15_sensor_cold": 91.8,
+      "ambient+15_all": 49.3,
+      "board_only+15": 72.7
+     },
+     "-4.7mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 74.9,
+      "hot_idle_sink+40": 83.1,
+      "lag_after_burst_sink+20_die+9": 108.0,
+      "burst_start_die+15_sensor_cold": 120.6,
+      "ambient+15_all": 73.5,
+      "board_only+15": 72.7
+     },
+     "-6.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 105.3,
+      "hot_idle_sink+40": 143.3,
+      "lag_after_burst_sink+20_die+9": 152.2,
+      "burst_start_die+15_sensor_cold": 144.0,
+      "ambient+15_all": 93.9,
+      "board_only+15": 72.7
+     }
+    },
+    "rails": {
+     "12.5": 43.3,
+     "15": 50.0,
+     "20.6": 62.6
+    }
+   }
+  },
+  "P": {
+   "nominal": {
+    "trim_ohm": 1112.2056207695803,
+    "trim_pot_ohm": 2000,
+    "select_on_test": {
+     "VZ": 5.6,
+     "TCZ": 0.0012,
+     "RZ": 15
+    },
+    "iq_p_at_trim_ends_mA": [
+     934.8002303030303,
+     0.0785303030303025
+    ],
+    "spread_V": 8.700512,
+    "open_wiper_iq_p_mA": 0.06628181818181933,
+    "thermal": {
+     "-3.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 39.7,
+      "hot_idle_sink+40": 22.4,
+      "lag_after_burst_sink+20_die+9": 56.8,
+      "burst_start_die+15_sensor_cold": 91.9,
+      "ambient+15_all": 46.2,
+      "board_only+15": 67.3
+     },
+     "-4.7mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 73.8,
+      "hot_idle_sink+40": 82.4,
+      "lag_after_burst_sink+20_die+9": 106.8,
+      "burst_start_die+15_sensor_cold": 120.7,
+      "ambient+15_all": 70.0,
+      "board_only+15": 67.3
+     },
+     "-6.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 104.1,
+      "hot_idle_sink+40": 142.6,
+      "lag_after_burst_sink+20_die+9": 151.0,
+      "burst_start_die+15_sensor_cold": 144.2,
+      "ambient+15_all": 90.2,
+      "board_only+15": 67.3
+     }
+    },
+    "rails": {
+     "12.5": 42.9,
+     "15": 50.0,
+     "20.6": 63.7
+    }
+   },
+   "low_2V_2V": {
+    "trim_ohm": null,
+    "trim_pot_ohm": null,
+    "select_on_test": null,
+    "iq_p_at_trim_ends_mA": null
+   },
+   "high_4V_4V": {
+    "trim_ohm": 863.3585480642612,
+    "trim_pot_ohm": 2000,
+    "select_on_test": {
+     "VZ": 6.2,
+     "TCZ": 0.0023,
+     "RZ": 8
+    },
+    "iq_p_at_trim_ends_mA": [
+     820.3472,
+     0.08142424242424395
+    ],
+    "spread_V": 9.384601,
+    "open_wiper_iq_p_mA": 0.06917272727272859,
+    "thermal": {
+     "-3.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 36.3,
+      "hot_idle_sink+40": 17.4,
+      "lag_after_burst_sink+20_die+9": 53.0,
+      "burst_start_die+15_sensor_cold": 91.9,
+      "ambient+15_all": 43.3,
+      "board_only+15": 66.8
+     },
+     "-4.7mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 69.6,
+      "hot_idle_sink+40": 74.2,
+      "lag_after_burst_sink+20_die+9": 102.2,
+      "burst_start_die+15_sensor_cold": 120.7,
+      "ambient+15_all": 66.6,
+      "board_only+15": 66.8
+     },
+     "-6.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 99.4,
+      "hot_idle_sink+40": 132.9,
+      "lag_after_burst_sink+20_die+9": 145.8,
+      "burst_start_die+15_sensor_cold": 144.2,
+      "ambient+15_all": 86.5,
+      "board_only+15": 66.8
+     }
+    },
+    "rails": {
+     "12.5": 43.3,
+     "15": 50.0,
+     "20.6": 62.8
+    }
+   },
+   "N2V_P4V": {
+    "trim_ohm": 1086.252322255823,
+    "trim_pot_ohm": 2000,
+    "select_on_test": {
+     "VZ": 3.9,
+     "TCZ": -0.002,
+     "RZ": 75
+    },
+    "iq_p_at_trim_ends_mA": [
+     922.7703696969697,
+     0.0837848484848483
+    ],
+    "spread_V": 7.362521,
+    "open_wiper_iq_p_mA": 0.07152424242424398,
+    "thermal": {
+     "-3.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 38.2,
+      "hot_idle_sink+40": 20.7,
+      "lag_after_burst_sink+20_die+9": 55.2,
+      "burst_start_die+15_sensor_cold": 92.0,
+      "ambient+15_all": 43.9,
+      "board_only+15": 64.8
+     },
+     "-4.7mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 72.1,
+      "hot_idle_sink+40": 79.8,
+      "lag_after_burst_sink+20_die+9": 105.0,
+      "burst_start_die+15_sensor_cold": 120.9,
+      "ambient+15_all": 67.5,
+      "board_only+15": 64.8
+     },
+     "-6.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 102.2,
+      "hot_idle_sink+40": 139.7,
+      "lag_after_burst_sink+20_die+9": 149.0,
+      "burst_start_die+15_sensor_cold": 144.4,
+      "ambient+15_all": 87.5,
+      "board_only+15": 64.8
+     }
+    },
+    "rails": {
+     "12.5": 38.1,
+     "15": 50.0,
+     "20.6": 73.8
+    }
+   },
+   "N4V_P2V": {
+    "trim_ohm": 1079.6988450221797,
+    "trim_pot_ohm": 2000,
+    "select_on_test": {
+     "VZ": 3.9,
+     "TCZ": -0.002,
+     "RZ": 75
+    },
+    "iq_p_at_trim_ends_mA": [
+     918.2654181818182,
+     0.15269090909091065
+    ],
+    "spread_V": 7.361921,
+    "open_wiper_iq_p_mA": 0.03971212121212192,
+    "thermal": {
+     "-3.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 38.1,
+      "hot_idle_sink+40": 20.6,
+      "lag_after_burst_sink+20_die+9": 55.0,
+      "burst_start_die+15_sensor_cold": 91.8,
+      "ambient+15_all": 43.8,
+      "board_only+15": 64.7
+     },
+     "-4.7mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 71.8,
+      "hot_idle_sink+40": 79.4,
+      "lag_after_burst_sink+20_die+9": 104.6,
+      "burst_start_die+15_sensor_cold": 120.6,
+      "ambient+15_all": 67.2,
+      "board_only+15": 64.7
+     },
+     "-6.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 101.8,
+      "hot_idle_sink+40": 138.9,
+      "lag_after_burst_sink+20_die+9": 148.4,
+      "burst_start_die+15_sensor_cold": 144.0,
+      "ambient+15_all": 87.1,
+      "board_only+15": 64.7
+     }
+    },
+    "rails": {
+     "12.5": 38.0,
+     "15": 50.0,
+     "20.6": 74.0
+    }
+   }
+  },
+  "B": {
+   "nominal": {
+    "trim_ohm": 128.19205597182324,
+    "trim_pot_ohm": 200,
+    "select_on_test": {
+     "RE": 1000
+    },
+    "iq_p_at_trim_ends_mA": [
+     391.2260515151514,
+     0.0790787878787863
+    ],
+    "spread_V": 8.700215,
+    "multiplier_k_nominal": 4.9,
+    "open_wiper_iq_p_mA": 0.01948787878787975,
+    "thermal": {
+     "-3.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 22.0,
+      "hot_idle_sink+40": 3.6,
+      "lag_after_burst_sink+20_die+9": 36.4,
+      "burst_start_die+15_sensor_cold": 91.9,
+      "ambient+15_all": 21.7,
+      "board_only+15": 41.5
+     },
+     "-4.7mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 51.0,
+      "hot_idle_sink+40": 46.2,
+      "lag_after_burst_sink+20_die+9": 81.1,
+      "burst_start_die+15_sensor_cold": 120.7,
+      "ambient+15_all": 40.7,
+      "board_only+15": 41.5
+     },
+     "-6.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 78.4,
+      "hot_idle_sink+40": 98.4,
+      "lag_after_burst_sink+20_die+9": 122.2,
+      "burst_start_die+15_sensor_cold": 144.1,
+      "ambient+15_all": 58.0,
+      "board_only+15": 41.5
+     }
+    },
+    "rails": {
+     "12.5": 37.8,
+     "15": 50.0,
+     "20.6": 74.8
+    }
+   },
+   "low_2V_2V": {
+    "trim_ohm": 1184.1557378951416,
+    "trim_pot_ohm": 2000,
+    "select_on_test": {
+     "RE": 5100
+    },
+    "iq_p_at_trim_ends_mA": [
+     144.9709696969697,
+     16.862845454545457
+    ],
+    "spread_V": 5.339786,
+    "multiplier_k_nominal": 4.9,
+    "open_wiper_iq_p_mA": 0.031048484848485495,
+    "thermal": {
+     "-3.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 24.3,
+      "hot_idle_sink+40": 5.6,
+      "lag_after_burst_sink+20_die+9": 39.1,
+      "burst_start_die+15_sensor_cold": 91.9,
+      "ambient+15_all": 24.5,
+      "board_only+15": 44.3
+     },
+     "-4.7mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 54.2,
+      "hot_idle_sink+40": 51.4,
+      "lag_after_burst_sink+20_die+9": 84.8,
+      "burst_start_die+15_sensor_cold": 120.7,
+      "ambient+15_all": 44.3,
+      "board_only+15": 44.3
+     },
+     "-6.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 82.0,
+      "hot_idle_sink+40": 105.0,
+      "lag_after_burst_sink+20_die+9": 126.4,
+      "burst_start_die+15_sensor_cold": 144.2,
+      "ambient+15_all": 62.0,
+      "board_only+15": 44.3
+     }
+    },
+    "rails": {
+     "12.5": 41.6,
+     "15": 50.0,
+     "20.6": 66.3
+    }
+   },
+   "high_4V_4V": {
+    "trim_ohm": 144.4131808041174,
+    "trim_pot_ohm": 200,
+    "select_on_test": {
+     "RE": 820
+    },
+    "iq_p_at_trim_ends_mA": [
+     650.2142636363636,
+     0.08429696969697309
+    ],
+    "spread_V": 9.384236000000001,
+    "multiplier_k_nominal": 4.9,
+    "open_wiper_iq_p_mA": 0.01948787878787975,
+    "thermal": {
+     "-3.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 21.4,
+      "hot_idle_sink+40": 3.2,
+      "lag_after_burst_sink+20_die+9": 35.7,
+      "burst_start_die+15_sensor_cold": 91.9,
+      "ambient+15_all": 20.9,
+      "board_only+15": 40.7
+     },
+     "-4.7mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 50.3,
+      "hot_idle_sink+40": 45.0,
+      "lag_after_burst_sink+20_die+9": 80.2,
+      "burst_start_die+15_sensor_cold": 120.6,
+      "ambient+15_all": 39.8,
+      "board_only+15": 40.7
+     },
+     "-6.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 77.5,
+      "hot_idle_sink+40": 96.8,
+      "lag_after_burst_sink+20_die+9": 121.2,
+      "burst_start_die+15_sensor_cold": 144.1,
+      "ambient+15_all": 56.9,
+      "board_only+15": 40.7
+     }
+    },
+    "rails": {
+     "12.5": 36.9,
+     "15": 50.0,
+     "20.6": 76.7
+    }
+   },
+   "N2V_P4V": {
+    "trim_ohm": 183.88836951627178,
+    "trim_pot_ohm": 500,
+    "select_on_test": {
+     "RE": 1500
+    },
+    "iq_p_at_trim_ends_mA": [
+     252.9639393939394,
+     0.08054848484848748
+    ],
+    "spread_V": 7.362323,
+    "multiplier_k_nominal": 4.9,
+    "open_wiper_iq_p_mA": 0.031048484848485495,
+    "thermal": {
+     "-3.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 23.0,
+      "hot_idle_sink+40": 4.4,
+      "lag_after_burst_sink+20_die+9": 37.7,
+      "burst_start_die+15_sensor_cold": 92.0,
+      "ambient+15_all": 23.0,
+      "board_only+15": 43.0
+     },
+     "-4.7mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 52.6,
+      "hot_idle_sink+40": 48.7,
+      "lag_after_burst_sink+20_die+9": 83.0,
+      "burst_start_die+15_sensor_cold": 120.8,
+      "ambient+15_all": 42.5,
+      "board_only+15": 43.0
+     },
+     "-6.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 80.2,
+      "hot_idle_sink+40": 101.7,
+      "lag_after_burst_sink+20_die+9": 124.4,
+      "burst_start_die+15_sensor_cold": 144.3,
+      "ambient+15_all": 60.0,
+      "board_only+15": 43.0
+     }
+    },
+    "rails": {
+     "12.5": 39.3,
+     "15": 50.0,
+     "20.6": 71.3
+    }
+   },
+   "N4V_P2V": {
+    "trim_ohm": 184.0519174514732,
+    "trim_pot_ohm": 500,
+    "select_on_test": {
+     "RE": 1500
+    },
+    "iq_p_at_trim_ends_mA": [
+     252.71195151515153,
+     0.33766666666666667
+    ],
+    "spread_V": 7.361721,
+    "multiplier_k_nominal": 4.9,
+    "open_wiper_iq_p_mA": 0.01948787878787975,
+    "thermal": {
+     "-3.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 23.1,
+      "hot_idle_sink+40": 4.6,
+      "lag_after_burst_sink+20_die+9": 37.7,
+      "burst_start_die+15_sensor_cold": 91.8,
+      "ambient+15_all": 23.1,
+      "board_only+15": 42.9
+     },
+     "-4.7mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 52.5,
+      "hot_idle_sink+40": 48.6,
+      "lag_after_burst_sink+20_die+9": 82.8,
+      "burst_start_die+15_sensor_cold": 120.5,
+      "ambient+15_all": 42.5,
+      "board_only+15": 42.9
+     },
+     "-6.0mV_per_K": {
+      "cold_calibration": 50.0,
+      "warm_idle_sink+20": 80.0,
+      "hot_idle_sink+40": 101.3,
+      "lag_after_burst_sink+20_die+9": 124.0,
+      "burst_start_die+15_sensor_cold": 144.0,
+      "ambient+15_all": 59.9,
+      "board_only+15": 42.9
+     }
+    },
+    "rails": {
+     "12.5": 39.3,
+     "15": 50.0,
+     "20.6": 71.3
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,21 @@
+MOSFETAmp2 startup_symmetric - approximate models
+.include channel.cir
+.param RV=37.69710010189562
+VP VP 0 PWL(0 0 10m 0 60m 15 150m 15 200m 0 250m 0)
+VN VN 0 PWL(0 0 10m 0 60m -15 150m -15 200m 0 250m 0)
+VIN IN 0 DC 0 AC 1
+XA IN OUT VP VN 0 AMP
+LOUT OUT SPK 0.7u
+RLDCR OUT SPK 10
+RL SPK 0 8
+
+.options reltol=1e-5 abstol=1e-10 vntol=1e-7
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+tran 10u 250m 0 10u uic
+wrdata results/startup_symmetric.txt v(spk) v(vp) v(vn)
+quit
+.endc
+.end

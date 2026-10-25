@@ -1,0 +1,89 @@
+{
+ "status": "INFINEON MODPEX MOSFET MODELS; AUTHORED BD139/140, LED, ZENER MODELS - DEVELOPMENT EVIDENCE ONLY",
+ "k_table_variant_B": {
+  "-3.0": {
+   "R13_ohm": 2068,
+   "k": 2.89,
+   "sensor_mV_per_K_approx": -5.6
+  },
+  "-4.0": {
+   "R13_ohm": 1299,
+   "k": 4.0,
+   "sensor_mV_per_K_approx": -7.7
+  },
+  "-4.7": {
+   "R13_ohm": 1032,
+   "k": 4.78,
+   "sensor_mV_per_K_approx": -9.2
+  },
+  "-5.5": {
+   "R13_ohm": 834,
+   "k": 5.68,
+   "sensor_mV_per_K_approx": -11.0
+  },
+  "-6.0": {
+   "R13_ohm": 745,
+   "k": 6.23,
+   "sensor_mV_per_K_approx": -12.0
+  },
+  "-7.0": {
+   "R13_ohm": 613,
+   "k": 7.36,
+   "sensor_mV_per_K_approx": -14.2
+  }
+ },
+ "A": {
+  "sine_1k_0.5Vpk": {
+   "vpk": 5.260664948867268,
+   "thd_2_10_percent": 0.008293483735197348
+  },
+  "sine_20k_0.5Vpk": {
+   "vpk": 5.255509073222296,
+   "thd_2_10_percent": 0.1729904395229618
+  },
+  "clipping_burst": {
+   "quiescent_spread_V": 8.700556,
+   "spread_min_V": 4.5537323,
+   "spread_max_V": 8.70945363,
+   "max_spread_deviation_first_500us_after_clipping_mV": 2.513280000000506,
+   "n_current_min_during_clip_A": -0.0005175815151515146
+  },
+  "loop": {
+   "8R": {
+    "crossover_hz": 301980.0266582614,
+    "phase_margin_deg": 78.64487422075925
+   },
+   "reactive": {
+    "crossover_hz": 319813.44013126515,
+    "phase_margin_deg": 70.5219326977856
+   }
+  }
+ },
+ "B": {
+  "sine_1k_0.5Vpk": {
+   "vpk": 5.260680302502809,
+   "thd_2_10_percent": 0.008555245250040217
+  },
+  "sine_20k_0.5Vpk": {
+   "vpk": 5.255645855717121,
+   "thd_2_10_percent": 0.1755111222855196
+  },
+  "clipping_burst": {
+   "quiescent_spread_V": 8.700215,
+   "spread_min_V": 6.865788719999999,
+   "spread_max_V": 8.70339678,
+   "max_spread_deviation_first_500us_after_clipping_mV": 1.2024400000001378,
+   "n_current_min_during_clip_A": 7.990909091059812e-05
+  },
+  "loop": {
+   "8R": {
+    "crossover_hz": 301839.35693946976,
+    "phase_margin_deg": 78.52361098978224
+   },
+   "reactive": {
+    "crossover_hz": 319710.8576141187,
+    "phase_margin_deg": 70.3859689569216
+   }
+  }
+ }
+}

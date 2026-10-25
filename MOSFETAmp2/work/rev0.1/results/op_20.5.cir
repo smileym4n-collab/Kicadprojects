@@ -1,0 +1,21 @@
+MOSFETAmp2 op_20.5 - approximate models
+.include channel.cir
+.param RV=37.69710010189562 VS=20.5
+VP VP 0 {VS}
+VN VN 0 {-VS}
+VIN IN 0 DC 0 AC 1
+XA IN OUT VP VN 0 AMP
+LOUT OUT SPK 0.7u
+RLDCR OUT SPK 10
+RL SPK 0 8
+
+.options reltol=1e-5 abstol=1e-10 vntol=1e-7
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+op
+print v(out) v(xa.sn) v(xa.sp) v(xa.gn) v(xa.gp) v(xa.bp) v(xa.bn) i(vp) i(vn) v(xa.tail) v(xa.ve)
+quit
+.endc
+.end

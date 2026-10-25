@@ -1,0 +1,24 @@
+* Rev 0.1 author-created Level-1 approximations (see README.md), renamed MOSN/MOSP for comparison runs.
+* Select with environment variable MOSFET_MODELS=authored. KP scaled by {KPS}; threshold shifts via DVN/DVP.
+.subckt MOSN D G S
+M1 DI GI SI SI NAP L=1u W=1u TEMP=27
+RG G GI 2
+RD D DI 0.025
+RS SI S 0.02
+CGS GI SI 1.92n
+CGD GI DI 40p
+DB SI DI DNAP
+.model NAP NMOS(LEVEL=1 VTO=3.4 KP={20*KPS} LAMBDA=0.003)
+.model DNAP D(IS=10n RS=0.02 CJO=250p VJ=0.7 M=0.5 TT=120n BV=100)
+.ends
+.subckt MOSP D G S
+M1 DI GI SI SI PAP L=1u W=1u TEMP=27
+RG G GI 7
+RD D DI 0.046
+RS SI S 0.043
+CGS GI SI 1.06n
+CGD GI DI 240p
+DB DI SI DPAP
+.model PAP PMOS(LEVEL=1 VTO=-3.77 KP={7.07*KPS} LAMBDA=0.003)
+.model DPAP D(IS=1n N=1.5 RS=0.03 CJO=400p VJ=0.7 M=0.5 TT=160n BV=100)
+.ends

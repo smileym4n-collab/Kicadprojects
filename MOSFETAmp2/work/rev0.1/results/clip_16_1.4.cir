@@ -1,0 +1,21 @@
+MOSFETAmp2 clip_16_1.4 - approximate models
+.include channel.cir
+.param RV=37.69710010189562 VS=16
+VP VP 0 {VS}
+VN VN 0 {-VS}
+VIN IN 0 SIN(0 1.4 1000)
+XA IN OUT VP VN 0 AMP
+LOUT OUT SPK 0.7u
+RLDCR OUT SPK 10
+RL SPK 0 8
+
+.options reltol=1e-5 abstol=1e-10 vntol=1e-7
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+tran 1e-06 0.007 0 1e-06
+wrdata results/clip_16_1.4.txt v(in) v(spk) v(out) v(xa.sn) v(xa.sp) v(xa.gn) v(xa.gp) i(vp) i(vn)
+quit
+.endc
+.end
