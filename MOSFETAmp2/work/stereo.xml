@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/tomwatson/Documents/GitHub/Kicadprojects/MOSFETAmp2/MOSFETAmp2.kicad_sch</source>
-    <date>2026-10-25T12:13:14</date>
+    <date>2026-10-25T13:42:37</date>
     <tool>Eeschema 10.0.5</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -4325,44 +4325,27 @@
       <node ref="Q107" pin="1" pinfunction="C_1" pintype="passive"/>
       <node ref="Q109" pin="3" pinfunction="B_3" pintype="passive"/>
     </net>
-    <net code="4" name="/LEFT/BREF" class="Default">
-      <node ref="D113" pin="2" pinfunction="A_2" pintype="passive"/>
-      <node ref="Q116" pin="2" pinfunction="B_2" pintype="passive"/>
-      <node ref="Q117" pin="1" pinfunction="C_1" pintype="passive"/>
-    </net>
-    <net code="5" name="/LEFT/C2N" class="Default">
+    <net code="4" name="/LEFT/C2N" class="Default">
       <node ref="C102" pin="2" pinfunction="~_2" pintype="passive"/>
       <node ref="D107" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="Q102" pin="1" pinfunction="C_1" pintype="passive"/>
       <node ref="Q104" pin="1" pinfunction="C_1" pintype="passive"/>
       <node ref="Q115" pin="2" pinfunction="B_2" pintype="passive"/>
     </net>
-    <net code="6" name="/LEFT/FB" class="Default">
+    <net code="5" name="/LEFT/FB" class="Default">
       <node ref="D105" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D106" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="Q101" pin="2" pinfunction="B_2" pintype="passive"/>
-      <node ref="R103" pin="1" pinfunction="~_1" pintype="passive"/>
+      <node ref="R103" pin="2" pinfunction="~_2" pintype="passive"/>
       <node ref="R104" pin="1" pinfunction="~_1" pintype="passive"/>
     </net>
-    <net code="7" name="/LEFT/GN" class="Default">
-      <node ref="D110" pin="1" pinfunction="K_1" pintype="passive"/>
-      <node ref="Q111" pin="1" pinfunction="G_1" pintype="passive"/>
-      <node ref="R117" pin="1" pinfunction="~_1" pintype="passive"/>
-      <node ref="R121" pin="1" pinfunction="~_1" pintype="passive"/>
-    </net>
-    <net code="8" name="/LEFT/GP" class="Default">
-      <node ref="D111" pin="2" pinfunction="A_2" pintype="passive"/>
-      <node ref="Q112" pin="1" pinfunction="G_1" pintype="passive"/>
-      <node ref="R118" pin="1" pinfunction="~_1" pintype="passive"/>
-      <node ref="R122" pin="2" pinfunction="~_2" pintype="passive"/>
-    </net>
-    <net code="9" name="/LEFT/IN" class="Default">
+    <net code="6" name="/LEFT/IN" class="Default">
       <node ref="J3" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="R101" pin="2" pinfunction="~_2" pintype="passive"/>
     </net>
-    <net code="10" name="/LEFT/OUT" class="Default">
+    <net code="7" name="/LEFT/OUT" class="Default">
       <node ref="L101" pin="1" pinfunction="~_1" pintype="passive"/>
-      <node ref="R103" pin="2" pinfunction="~_2" pintype="passive"/>
+      <node ref="R103" pin="1" pinfunction="~_1" pintype="passive"/>
       <node ref="R115" pin="2" pinfunction="~_2" pintype="passive"/>
       <node ref="R116" pin="1" pinfunction="~_1" pintype="passive"/>
       <node ref="R119" pin="2" pinfunction="~_2" pintype="passive"/>
@@ -4371,33 +4354,19 @@
       <node ref="R126" pin="2" pinfunction="~_2" pintype="passive"/>
       <node ref="TP102" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="11" name="/LEFT/SN" class="Default">
-      <node ref="D110" pin="2" pinfunction="A_2" pintype="passive"/>
-      <node ref="Q111" pin="3" pinfunction="S_3" pintype="passive"/>
-      <node ref="R119" pin="1" pinfunction="~_1" pintype="passive"/>
-      <node ref="R121" pin="2" pinfunction="~_2" pintype="passive"/>
-      <node ref="TP101" pin="1" pinfunction="1_1" pintype="passive"/>
-    </net>
-    <net code="12" name="/LEFT/SP" class="Default">
-      <node ref="D111" pin="1" pinfunction="K_1" pintype="passive"/>
-      <node ref="Q112" pin="3" pinfunction="S_3" pintype="passive"/>
-      <node ref="R120" pin="2" pinfunction="~_2" pintype="passive"/>
-      <node ref="R122" pin="1" pinfunction="~_1" pintype="passive"/>
-      <node ref="TP103" pin="1" pinfunction="1_1" pintype="passive"/>
-    </net>
-    <net code="13" name="/LEFT/SPK" class="Default">
+    <net code="8" name="/LEFT/SPK" class="Default">
       <node ref="J5" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="L101" pin="2" pinfunction="~_2" pintype="passive"/>
       <node ref="R126" pin="1" pinfunction="~_1" pintype="passive"/>
     </net>
-    <net code="14" name="/LEFT/TREF" class="Default">
+    <net code="9" name="/LEFT/TREF" class="Default">
       <node ref="D101" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="Q105" pin="2" pinfunction="B_2" pintype="passive"/>
       <node ref="Q107" pin="2" pinfunction="B_2" pintype="passive"/>
       <node ref="Q117" pin="2" pinfunction="B_2" pintype="passive"/>
       <node ref="R108" pin="1" pinfunction="~_1" pintype="passive"/>
     </net>
-    <net code="15" name="/RIGHT/B1" class="Default">
+    <net code="10" name="/RIGHT/B1" class="Default">
       <node ref="C201" pin="1" pinfunction="~_1" pintype="passive"/>
       <node ref="D205" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D206" pin="1" pinfunction="K_1" pintype="passive"/>
@@ -4405,7 +4374,7 @@
       <node ref="R201" pin="1" pinfunction="~_1" pintype="passive"/>
       <node ref="R202" pin="1" pinfunction="~_1" pintype="passive"/>
     </net>
-    <net code="16" name="/RIGHT/BN" class="Default">
+    <net code="11" name="/RIGHT/BN" class="Default">
       <node ref="C202" pin="1" pinfunction="~_1" pintype="passive"/>
       <node ref="C203" pin="2" pinfunction="~_2" pintype="passive"/>
       <node ref="D208" pin="1" pinfunction="K_1" pintype="passive"/>
@@ -4415,51 +4384,34 @@
       <node ref="Q210" pin="3" pinfunction="B_3" pintype="passive"/>
       <node ref="R213" pin="2" pinfunction="~_2" pintype="passive"/>
     </net>
-    <net code="17" name="/RIGHT/BP" class="Default">
+    <net code="12" name="/RIGHT/BP" class="Default">
       <node ref="C203" pin="1" pinfunction="~_1" pintype="passive"/>
       <node ref="D209" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="J201" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="Q207" pin="1" pinfunction="C_1" pintype="passive"/>
       <node ref="Q209" pin="3" pinfunction="B_3" pintype="passive"/>
     </net>
-    <net code="18" name="/RIGHT/BREF" class="Default">
-      <node ref="D213" pin="2" pinfunction="A_2" pintype="passive"/>
-      <node ref="Q216" pin="2" pinfunction="B_2" pintype="passive"/>
-      <node ref="Q217" pin="1" pinfunction="C_1" pintype="passive"/>
-    </net>
-    <net code="19" name="/RIGHT/C2N" class="Default">
+    <net code="13" name="/RIGHT/C2N" class="Default">
       <node ref="C202" pin="2" pinfunction="~_2" pintype="passive"/>
       <node ref="D207" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="Q202" pin="1" pinfunction="C_1" pintype="passive"/>
       <node ref="Q204" pin="1" pinfunction="C_1" pintype="passive"/>
       <node ref="Q215" pin="2" pinfunction="B_2" pintype="passive"/>
     </net>
-    <net code="20" name="/RIGHT/FB" class="Default">
+    <net code="14" name="/RIGHT/FB" class="Default">
       <node ref="D205" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D206" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="Q201" pin="2" pinfunction="B_2" pintype="passive"/>
-      <node ref="R203" pin="1" pinfunction="~_1" pintype="passive"/>
+      <node ref="R203" pin="2" pinfunction="~_2" pintype="passive"/>
       <node ref="R204" pin="1" pinfunction="~_1" pintype="passive"/>
     </net>
-    <net code="21" name="/RIGHT/GN" class="Default">
-      <node ref="D210" pin="1" pinfunction="K_1" pintype="passive"/>
-      <node ref="Q211" pin="1" pinfunction="G_1" pintype="passive"/>
-      <node ref="R217" pin="1" pinfunction="~_1" pintype="passive"/>
-      <node ref="R221" pin="1" pinfunction="~_1" pintype="passive"/>
-    </net>
-    <net code="22" name="/RIGHT/GP" class="Default">
-      <node ref="D211" pin="2" pinfunction="A_2" pintype="passive"/>
-      <node ref="Q212" pin="1" pinfunction="G_1" pintype="passive"/>
-      <node ref="R218" pin="1" pinfunction="~_1" pintype="passive"/>
-      <node ref="R222" pin="2" pinfunction="~_2" pintype="passive"/>
-    </net>
-    <net code="23" name="/RIGHT/IN" class="Default">
+    <net code="15" name="/RIGHT/IN" class="Default">
       <node ref="J4" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="R201" pin="2" pinfunction="~_2" pintype="passive"/>
     </net>
-    <net code="24" name="/RIGHT/OUT" class="Default">
+    <net code="16" name="/RIGHT/OUT" class="Default">
       <node ref="L201" pin="1" pinfunction="~_1" pintype="passive"/>
-      <node ref="R203" pin="2" pinfunction="~_2" pintype="passive"/>
+      <node ref="R203" pin="1" pinfunction="~_1" pintype="passive"/>
       <node ref="R215" pin="2" pinfunction="~_2" pintype="passive"/>
       <node ref="R216" pin="1" pinfunction="~_1" pintype="passive"/>
       <node ref="R219" pin="2" pinfunction="~_2" pintype="passive"/>
@@ -4468,33 +4420,19 @@
       <node ref="R226" pin="2" pinfunction="~_2" pintype="passive"/>
       <node ref="TP202" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="25" name="/RIGHT/SN" class="Default">
-      <node ref="D210" pin="2" pinfunction="A_2" pintype="passive"/>
-      <node ref="Q211" pin="3" pinfunction="S_3" pintype="passive"/>
-      <node ref="R219" pin="1" pinfunction="~_1" pintype="passive"/>
-      <node ref="R221" pin="2" pinfunction="~_2" pintype="passive"/>
-      <node ref="TP201" pin="1" pinfunction="1_1" pintype="passive"/>
-    </net>
-    <net code="26" name="/RIGHT/SP" class="Default">
-      <node ref="D211" pin="1" pinfunction="K_1" pintype="passive"/>
-      <node ref="Q212" pin="3" pinfunction="S_3" pintype="passive"/>
-      <node ref="R220" pin="2" pinfunction="~_2" pintype="passive"/>
-      <node ref="R222" pin="1" pinfunction="~_1" pintype="passive"/>
-      <node ref="TP203" pin="1" pinfunction="1_1" pintype="passive"/>
-    </net>
-    <net code="27" name="/RIGHT/SPK" class="Default">
+    <net code="17" name="/RIGHT/SPK" class="Default">
       <node ref="J6" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="L201" pin="2" pinfunction="~_2" pintype="passive"/>
       <node ref="R226" pin="1" pinfunction="~_1" pintype="passive"/>
     </net>
-    <net code="28" name="/RIGHT/TREF" class="Default">
+    <net code="18" name="/RIGHT/TREF" class="Default">
       <node ref="D201" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="Q205" pin="2" pinfunction="B_2" pintype="passive"/>
       <node ref="Q207" pin="2" pinfunction="B_2" pintype="passive"/>
       <node ref="Q217" pin="2" pinfunction="B_2" pintype="passive"/>
       <node ref="R208" pin="1" pinfunction="~_1" pintype="passive"/>
     </net>
-    <net code="29" name="/VLEFTN" class="Default">
+    <net code="19" name="/VLEFTN" class="Default">
       <node ref="C106" pin="2" pinfunction="-_2" pintype="passive"/>
       <node ref="C108" pin="2" pinfunction="~_2" pintype="passive"/>
       <node ref="D113" pin="1" pinfunction="K_1" pintype="passive"/>
@@ -4510,7 +4448,7 @@
       <node ref="RV101" pin="3" pinfunction="3_3" pintype="passive"/>
       <node ref="TP105" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="30" name="/VLEFTP" class="Default">
+    <net code="20" name="/VLEFTP" class="Default">
       <node ref="C105" pin="1" pinfunction="+_1" pintype="passive"/>
       <node ref="C107" pin="1" pinfunction="~_1" pintype="passive"/>
       <node ref="D102" pin="2" pinfunction="A_2" pintype="passive"/>
@@ -4523,7 +4461,7 @@
       <node ref="R127" pin="1" pinfunction="~_1" pintype="passive"/>
       <node ref="TP104" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="31" name="/VRIGHTN" class="Default">
+    <net code="21" name="/VRIGHTN" class="Default">
       <node ref="C206" pin="2" pinfunction="-_2" pintype="passive"/>
       <node ref="C208" pin="2" pinfunction="~_2" pintype="passive"/>
       <node ref="D213" pin="1" pinfunction="K_1" pintype="passive"/>
@@ -4539,7 +4477,7 @@
       <node ref="RV201" pin="3" pinfunction="3_3" pintype="passive"/>
       <node ref="TP205" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="32" name="/VRIGHTP" class="Default">
+    <net code="22" name="/VRIGHTP" class="Default">
       <node ref="C205" pin="1" pinfunction="+_1" pintype="passive"/>
       <node ref="C207" pin="1" pinfunction="~_1" pintype="passive"/>
       <node ref="D202" pin="2" pinfunction="A_2" pintype="passive"/>
@@ -4552,7 +4490,7 @@
       <node ref="R227" pin="1" pinfunction="~_1" pintype="passive"/>
       <node ref="TP204" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="33" name="GND" class="Default">
+    <net code="23" name="GND" class="Default">
       <node ref="C101" pin="2" pinfunction="~_2" pintype="passive"/>
       <node ref="C104" pin="2" pinfunction="~_2" pintype="passive"/>
       <node ref="C105" pin="2" pinfunction="-_2" pintype="passive"/>
@@ -4576,47 +4514,109 @@
       <node ref="R202" pin="2" pinfunction="~_2" pintype="passive"/>
       <node ref="R204" pin="2" pinfunction="~_2" pintype="passive"/>
     </net>
-    <net code="34" name="Net-(C104-~-Pad1)" class="Default">
+    <net code="24" name="Net-(C104-~-Pad1)" class="Default">
       <node ref="C104" pin="1" pinfunction="~_1" pintype="passive"/>
       <node ref="R125" pin="2" pinfunction="~_2" pintype="passive"/>
     </net>
-    <net code="35" name="Net-(C204-~-Pad1)" class="Default">
+    <net code="25" name="Net-(C204-~-Pad1)" class="Default">
       <node ref="C204" pin="1" pinfunction="~_1" pintype="passive"/>
       <node ref="R225" pin="2" pinfunction="~_2" pintype="passive"/>
     </net>
-    <net code="36" name="Net-(D101-A)" class="Default">
+    <net code="26" name="Net-(D101-A)" class="Default">
       <node ref="D101" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D102" pin="1" pinfunction="K_1" pintype="passive"/>
     </net>
-    <net code="37" name="Net-(D107-K)" class="Default">
+    <net code="27" name="Net-(D107-K)" class="Default">
       <node ref="D107" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D108" pin="2" pinfunction="A_2" pintype="passive"/>
     </net>
-    <net code="38" name="Net-(D109-K)" class="Default">
+    <net code="28" name="Net-(D109-K)" class="Default">
       <node ref="D109" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D112" pin="2" pinfunction="A_2" pintype="passive"/>
     </net>
-    <net code="39" name="Net-(D112-K)" class="Default">
+    <net code="29" name="Net-(D110-A)" class="Default">
+      <node ref="D110" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="Q111" pin="3" pinfunction="S_3" pintype="passive"/>
+      <node ref="R119" pin="1" pinfunction="~_1" pintype="passive"/>
+      <node ref="R121" pin="2" pinfunction="~_2" pintype="passive"/>
+      <node ref="TP101" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(D110-K)" class="Default">
+      <node ref="D110" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="Q111" pin="1" pinfunction="G_1" pintype="passive"/>
+      <node ref="R117" pin="1" pinfunction="~_1" pintype="passive"/>
+      <node ref="R121" pin="1" pinfunction="~_1" pintype="passive"/>
+    </net>
+    <net code="31" name="Net-(D111-A)" class="Default">
+      <node ref="D111" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="Q112" pin="1" pinfunction="G_1" pintype="passive"/>
+      <node ref="R118" pin="1" pinfunction="~_1" pintype="passive"/>
+      <node ref="R122" pin="2" pinfunction="~_2" pintype="passive"/>
+    </net>
+    <net code="32" name="Net-(D111-K)" class="Default">
+      <node ref="D111" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="Q112" pin="3" pinfunction="S_3" pintype="passive"/>
+      <node ref="R120" pin="2" pinfunction="~_2" pintype="passive"/>
+      <node ref="R122" pin="1" pinfunction="~_1" pintype="passive"/>
+      <node ref="TP103" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="33" name="Net-(D112-K)" class="Default">
       <node ref="D112" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="Q108" pin="2" pinfunction="C_2" pintype="passive"/>
       <node ref="R112" pin="1" pinfunction="~_1" pintype="passive"/>
     </net>
-    <net code="40" name="Net-(D201-A)" class="Default">
+    <net code="34" name="Net-(D113-A)" class="Default">
+      <node ref="D113" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="Q116" pin="2" pinfunction="B_2" pintype="passive"/>
+      <node ref="Q117" pin="1" pinfunction="C_1" pintype="passive"/>
+    </net>
+    <net code="35" name="Net-(D201-A)" class="Default">
       <node ref="D201" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D202" pin="1" pinfunction="K_1" pintype="passive"/>
     </net>
-    <net code="41" name="Net-(D207-K)" class="Default">
+    <net code="36" name="Net-(D207-K)" class="Default">
       <node ref="D207" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D208" pin="2" pinfunction="A_2" pintype="passive"/>
     </net>
-    <net code="42" name="Net-(D209-K)" class="Default">
+    <net code="37" name="Net-(D209-K)" class="Default">
       <node ref="D209" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D212" pin="2" pinfunction="A_2" pintype="passive"/>
     </net>
-    <net code="43" name="Net-(D212-K)" class="Default">
+    <net code="38" name="Net-(D210-A)" class="Default">
+      <node ref="D210" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="Q211" pin="3" pinfunction="S_3" pintype="passive"/>
+      <node ref="R219" pin="1" pinfunction="~_1" pintype="passive"/>
+      <node ref="R221" pin="2" pinfunction="~_2" pintype="passive"/>
+      <node ref="TP201" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="39" name="Net-(D210-K)" class="Default">
+      <node ref="D210" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="Q211" pin="1" pinfunction="G_1" pintype="passive"/>
+      <node ref="R217" pin="1" pinfunction="~_1" pintype="passive"/>
+      <node ref="R221" pin="1" pinfunction="~_1" pintype="passive"/>
+    </net>
+    <net code="40" name="Net-(D211-A)" class="Default">
+      <node ref="D211" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="Q212" pin="1" pinfunction="G_1" pintype="passive"/>
+      <node ref="R218" pin="1" pinfunction="~_1" pintype="passive"/>
+      <node ref="R222" pin="2" pinfunction="~_2" pintype="passive"/>
+    </net>
+    <net code="41" name="Net-(D211-K)" class="Default">
+      <node ref="D211" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="Q212" pin="3" pinfunction="S_3" pintype="passive"/>
+      <node ref="R220" pin="2" pinfunction="~_2" pintype="passive"/>
+      <node ref="R222" pin="1" pinfunction="~_1" pintype="passive"/>
+      <node ref="TP203" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="42" name="Net-(D212-K)" class="Default">
       <node ref="D212" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="Q208" pin="2" pinfunction="C_2" pintype="passive"/>
       <node ref="R212" pin="1" pinfunction="~_1" pintype="passive"/>
+    </net>
+    <net code="43" name="Net-(D213-A)" class="Default">
+      <node ref="D213" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="Q216" pin="2" pinfunction="B_2" pintype="passive"/>
+      <node ref="Q217" pin="1" pinfunction="C_1" pintype="passive"/>
     </net>
     <net code="44" name="Net-(Q101-C)" class="Default">
       <node ref="Q101" pin="1" pinfunction="C_1" pintype="passive"/>

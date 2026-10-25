@@ -5,12 +5,12 @@
       "value": "1k",
       "pins": {
         "1": [
-          33.81,
-          60.0
+          39.37,
+          134.62
         ],
         "2": [
-          26.19,
-          60.0
+          31.75,
+          134.62
         ]
       },
       "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
@@ -25,12 +25,12 @@
       "value": "22k",
       "pins": {
         "1": [
-          45.0,
-          71.19
+          50.8,
+          143.51
         ],
         "2": [
-          45.0,
-          78.81
+          50.8,
+          151.13
         ]
       },
       "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
@@ -45,12 +45,12 @@
       "value": "220p C0G",
       "pins": {
         "1": [
-          60.0,
-          71.19
+          63.5,
+          143.51
         ],
         "2": [
-          60.0,
-          78.81
+          63.5,
+          151.13
         ]
       },
       "footprint": "Capacitor_SMD:C_0805_2012Metric",
@@ -60,68 +60,36 @@
       "note": "",
       "nets": {}
     },
-    "R103": {
-      "kind": "R",
-      "value": "22k",
+    "#PWR10009": {
+      "kind": "GND",
+      "value": "GND",
       "pins": {
         "1": [
-          33.81,
-          95.0
-        ],
-        "2": [
-          26.19,
-          95.0
+          50.8,
+          157.48
         ]
       },
-      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
-      "mpn": "LR1F22K",
+      "footprint": "",
+      "mpn": "",
       "datasheet": "",
-      "stock_id": 276,
+      "stock_id": "",
       "note": "",
       "nets": {}
     },
-    "R104": {
-      "kind": "R",
-      "value": "2k2",
+    "#PWR10012": {
+      "kind": "GND",
+      "value": "GND",
       "pins": {
         "1": [
-          45.0,
-          111.19
-        ],
-        "2": [
-          45.0,
-          118.81
+          63.5,
+          157.48
         ]
       },
-      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
-      "mpn": "LR1F2K2",
+      "footprint": "",
+      "mpn": "",
       "datasheet": "",
-      "stock_id": 268,
+      "stock_id": "",
       "note": "",
-      "nets": {}
-    },
-    "Q101": {
-      "kind": "Q_P_CBE",
-      "value": "BC556",
-      "pins": {
-        "1": [
-          82.54,
-          100.08
-        ],
-        "2": [
-          74.92,
-          95.0
-        ],
-        "3": [
-          82.54,
-          89.92
-        ]
-      },
-      "footprint": "Package_TO_SOT_THT:TO-92_Inline",
-      "mpn": "BC556",
-      "datasheet": "https://www.onsemi.com/pdf/datasheet/bc556bta-d.pdf",
-      "stock_id": 462,
-      "note": "Select matched VBE and hFE; thermal bond",
       "nets": {}
     },
     "Q102": {
@@ -129,16 +97,16 @@
       "value": "BC556",
       "pins": {
         "1": [
-          132.54,
-          100.08
+          93.98,
+          139.7
         ],
         "2": [
-          124.92,
-          95.0
+          86.36,
+          134.62
         ],
         "3": [
-          132.54,
-          89.92
+          93.98,
+          129.54
         ]
       },
       "footprint": "Package_TO_SOT_THT:TO-92_Inline",
@@ -148,75 +116,47 @@
       "note": "Select matched VBE and hFE; thermal bond",
       "nets": {}
     },
-    "Q103": {
-      "kind": "Q_N_CBE",
-      "value": "BC546",
-      "pins": {
-        "1": [
-          77.46,
-          124.92
-        ],
-        "2": [
-          85.08,
-          130.0
-        ],
-        "3": [
-          77.46,
-          135.08
-        ]
-      },
-      "footprint": "Package_TO_SOT_THT:TO-92_Inline",
-      "mpn": "BC546",
-      "datasheet": "https://www.farnell.com/datasheets/2277528.pdf",
-      "stock_id": 254,
-      "note": "",
-      "nets": {}
-    },
-    "Q104": {
-      "kind": "Q_N_CBE",
-      "value": "BC546",
-      "pins": {
-        "1": [
-          132.54,
-          124.92
-        ],
-        "2": [
-          124.92,
-          130.0
-        ],
-        "3": [
-          132.54,
-          135.08
-        ]
-      },
-      "footprint": "Package_TO_SOT_THT:TO-92_Inline",
-      "mpn": "BC546",
-      "datasheet": "https://www.farnell.com/datasheets/2277528.pdf",
-      "stock_id": 254,
-      "note": "",
-      "nets": {}
-    },
-    "Q105": {
+    "Q101": {
       "kind": "Q_P_CBE",
       "value": "BC556",
       "pins": {
         "1": [
-          102.54,
-          50.08
+          124.46,
+          139.7
         ],
         "2": [
-          94.92,
-          45.0
+          132.08,
+          134.62
         ],
         "3": [
-          102.54,
-          39.92
+          124.46,
+          129.54
         ]
       },
       "footprint": "Package_TO_SOT_THT:TO-92_Inline",
       "mpn": "BC556",
       "datasheet": "https://www.onsemi.com/pdf/datasheet/bc556bta-d.pdf",
       "stock_id": 462,
+      "note": "Select matched VBE and hFE; thermal bond",
+      "nets": {}
+    },
+    "R106": {
+      "kind": "R",
+      "value": "100R",
+      "pins": {
+        "1": [
+          93.98,
+          113.03
+        ],
+        "2": [
+          93.98,
+          120.65
+        ]
+      },
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+      "mpn": "LR1F100R",
+      "datasheet": "",
+      "stock_id": 150,
       "note": "",
       "nets": {}
     },
@@ -225,12 +165,12 @@
       "value": "100R",
       "pins": {
         "1": [
-          82.54,
-          76.19
+          124.46,
+          113.03
         ],
         "2": [
-          82.54,
-          83.81
+          124.46,
+          120.65
         ]
       },
       "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
@@ -240,23 +180,27 @@
       "note": "",
       "nets": {}
     },
-    "R106": {
-      "kind": "R",
-      "value": "100R",
+    "Q105": {
+      "kind": "Q_P_CBE",
+      "value": "BC556",
       "pins": {
         "1": [
-          132.54,
-          76.19
+          109.22,
+          71.12
         ],
         "2": [
-          132.54,
-          83.81
+          101.6,
+          66.04
+        ],
+        "3": [
+          109.22,
+          60.96
         ]
       },
-      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
-      "mpn": "LR1F100R",
-      "datasheet": "",
-      "stock_id": 150,
+      "footprint": "Package_TO_SOT_THT:TO-92_Inline",
+      "mpn": "BC556",
+      "datasheet": "https://www.onsemi.com/pdf/datasheet/bc556bta-d.pdf",
+      "stock_id": 462,
       "note": "",
       "nets": {}
     },
@@ -265,12 +209,12 @@
       "value": "330R",
       "pins": {
         "1": [
-          102.54,
-          26.19
+          109.22,
+          41.91
         ],
         "2": [
-          102.54,
-          33.81
+          109.22,
+          49.53
         ]
       },
       "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
@@ -285,12 +229,12 @@
       "value": "1N4148",
       "pins": {
         "1": [
-          25.0,
-          28.81
+          76.2,
+          46.99
         ],
         "2": [
-          25.0,
-          21.19
+          76.2,
+          39.37
         ]
       },
       "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
@@ -305,12 +249,12 @@
       "value": "1N4148",
       "pins": {
         "1": [
-          25.0,
-          41.81
+          76.2,
+          60.96
         ],
         "2": [
-          25.0,
-          34.19
+          76.2,
+          53.34
         ]
       },
       "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
@@ -325,12 +269,12 @@
       "value": "12k",
       "pins": {
         "1": [
-          25.0,
-          46.19
+          76.2,
+          72.39
         ],
         "2": [
-          25.0,
-          53.81
+          76.2,
+          80.01
         ]
       },
       "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
@@ -340,109 +284,77 @@
       "note": "",
       "nets": {}
     },
-    "#PWR10024": {
-      "kind": "GND",
-      "value": "GND",
+    "R104": {
+      "kind": "R",
+      "value": "2k2",
       "pins": {
         "1": [
-          45.0,
-          90.0
-        ]
-      },
-      "footprint": "",
-      "mpn": "",
-      "datasheet": "",
-      "stock_id": "",
-      "note": "",
-      "nets": {}
-    },
-    "#PWR10027": {
-      "kind": "GND",
-      "value": "GND",
-      "pins": {
-        "1": [
-          60.0,
-          90.0
-        ]
-      },
-      "footprint": "",
-      "mpn": "",
-      "datasheet": "",
-      "stock_id": "",
-      "note": "",
-      "nets": {}
-    },
-    "#PWR10033": {
-      "kind": "GND",
-      "value": "GND",
-      "pins": {
-        "1": [
-          45.0,
-          125.0
-        ]
-      },
-      "footprint": "",
-      "mpn": "",
-      "datasheet": "",
-      "stock_id": "",
-      "note": "",
-      "nets": {}
-    },
-    "D105": {
-      "kind": "D",
-      "value": "1N4148",
-      "pins": {
-        "1": [
-          26.19,
-          162.0
+          139.7,
+          143.51
         ],
         "2": [
-          33.81,
-          162.0
+          139.7,
+          151.13
         ]
       },
-      "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
-      "mpn": "1N4148",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+      "mpn": "LR1F2K2",
       "datasheet": "",
-      "stock_id": 138,
+      "stock_id": 268,
       "note": "",
       "nets": {}
     },
-    "D106": {
-      "kind": "D",
-      "value": "1N4148",
+    "R103": {
+      "kind": "R",
+      "value": "22k",
       "pins": {
         "1": [
-          33.81,
-          174.0
+          153.67,
+          134.62
         ],
         "2": [
-          26.19,
-          174.0
+          146.05,
+          134.62
         ]
       },
-      "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
-      "mpn": "1N4148",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+      "mpn": "LR1F22K",
       "datasheet": "",
-      "stock_id": 138,
+      "stock_id": 276,
       "note": "",
       "nets": {}
     },
-    "Q115": {
+    "#PWR10044": {
+      "kind": "GND",
+      "value": "GND",
+      "pins": {
+        "1": [
+          139.7,
+          157.48
+        ]
+      },
+      "footprint": "",
+      "mpn": "",
+      "datasheet": "",
+      "stock_id": "",
+      "note": "",
+      "nets": {}
+    },
+    "Q104": {
       "kind": "Q_N_CBE",
       "value": "BC546",
       "pins": {
         "1": [
-          177.54,
-          89.92
+          93.98,
+          198.12
         ],
         "2": [
-          169.92,
-          95.0
+          101.6,
+          203.2
         ],
         "3": [
-          177.54,
-          100.08
+          93.98,
+          208.28
         ]
       },
       "footprint": "Package_TO_SOT_THT:TO-92_Inline",
@@ -452,67 +364,27 @@
       "note": "",
       "nets": {}
     },
-    "Q106": {
-      "kind": "Q_N_ECB",
-      "value": "BD139",
+    "Q103": {
+      "kind": "Q_N_CBE",
+      "value": "BC546",
       "pins": {
         "1": [
-          207.54,
-          125.08
+          124.46,
+          198.12
         ],
         "2": [
-          207.54,
-          114.92
+          116.84,
+          203.2
         ],
         "3": [
-          199.92,
-          120.0
+          124.46,
+          208.28
         ]
       },
-      "footprint": "Package_TO_SOT_THT:TO-126-3_Vertical",
-      "mpn": "BD139",
-      "datasheet": "https://www.st.com/resource/en/datasheet/bd135.pdf",
-      "stock_id": 148,
-      "note": "",
-      "nets": {}
-    },
-    "R109": {
-      "kind": "R",
-      "value": "100R",
-      "pins": {
-        "1": [
-          207.54,
-          141.19
-        ],
-        "2": [
-          207.54,
-          148.81
-        ]
-      },
-      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
-      "mpn": "LR1F100R",
-      "datasheet": "",
-      "stock_id": 150,
-      "note": "",
-      "nets": {}
-    },
-    "R110": {
-      "kind": "R",
-      "value": "10k",
-      "pins": {
-        "1": [
-          185.0,
-          141.19
-        ],
-        "2": [
-          185.0,
-          148.81
-        ]
-      },
-      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
-      "mpn": "LR1F10K",
-      "datasheet": "",
-      "stock_id": 272,
+      "footprint": "Package_TO_SOT_THT:TO-92_Inline",
+      "mpn": "BC546",
+      "datasheet": "https://www.farnell.com/datasheets/2277528.pdf",
+      "stock_id": 254,
       "note": "",
       "nets": {}
     },
@@ -521,12 +393,12 @@
       "value": "330p C0G",
       "pins": {
         "1": [
-          200.81,
-          65.0
+          173.99,
+          147.32
         ],
         "2": [
-          193.19,
-          65.0
+          166.37,
+          147.32
         ]
       },
       "footprint": "MOSFETAmp2:C_Radial_Kemet_C315_P2.54",
@@ -536,61 +408,17 @@
       "note": "",
       "nets": {}
     },
-    "Q107": {
-      "kind": "Q_P_CBE",
-      "value": "BC556",
-      "pins": {
-        "1": [
-          247.54,
-          50.08
-        ],
-        "2": [
-          239.92,
-          45.0
-        ],
-        "3": [
-          247.54,
-          39.92
-        ]
-      },
-      "footprint": "Package_TO_SOT_THT:TO-92_Inline",
-      "mpn": "BC556",
-      "datasheet": "https://www.onsemi.com/pdf/datasheet/bc556bta-d.pdf",
-      "stock_id": 462,
-      "note": "",
-      "nets": {}
-    },
-    "R111": {
-      "kind": "R",
-      "value": "100R",
-      "pins": {
-        "1": [
-          247.54,
-          26.19
-        ],
-        "2": [
-          247.54,
-          33.81
-        ]
-      },
-      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
-      "mpn": "LR1F100R",
-      "datasheet": "",
-      "stock_id": 150,
-      "note": "",
-      "nets": {}
-    },
     "D107": {
       "kind": "D",
       "value": "1N4148",
       "pins": {
         "1": [
-          177.81,
-          78.0
+          163.83,
+          157.48
         ],
         "2": [
-          170.19,
-          78.0
+          156.21,
+          157.48
         ]
       },
       "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
@@ -605,12 +433,12 @@
       "value": "BAT46",
       "pins": {
         "1": [
-          194.81,
-          78.0
+          179.07,
+          157.48
         ],
         "2": [
-          187.19,
-          78.0
+          171.45,
+          157.48
         ]
       },
       "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
@@ -620,21 +448,45 @@
       "note": "",
       "nets": {}
     },
-    "Q109": {
+    "Q115": {
+      "kind": "Q_N_CBE",
+      "value": "BC546",
+      "pins": {
+        "1": [
+          167.64,
+          172.72
+        ],
+        "2": [
+          160.02,
+          177.8
+        ],
+        "3": [
+          167.64,
+          182.88
+        ]
+      },
+      "footprint": "Package_TO_SOT_THT:TO-92_Inline",
+      "mpn": "BC546",
+      "datasheet": "https://www.farnell.com/datasheets/2277528.pdf",
+      "stock_id": 254,
+      "note": "",
+      "nets": {}
+    },
+    "Q106": {
       "kind": "Q_N_ECB",
       "value": "BD139",
       "pins": {
         "1": [
-          277.54,
-          90.08
+          187.96,
+          198.12
         ],
         "2": [
-          277.54,
-          79.92
+          187.96,
+          187.96
         ],
         "3": [
-          269.92,
-          85.0
+          180.34,
+          193.04
         ]
       },
       "footprint": "Package_TO_SOT_THT:TO-126-3_Vertical",
@@ -644,89 +496,37 @@
       "note": "",
       "nets": {}
     },
-    "Q110": {
-      "kind": "Q_P_ECB",
-      "value": "BD140",
+    "R110": {
+      "kind": "R",
+      "value": "10k",
       "pins": {
         "1": [
-          277.54,
-          169.92
+          167.64,
+          204.47
         ],
         "2": [
-          277.54,
-          180.08
-        ],
-        "3": [
-          269.92,
-          175.0
+          167.64,
+          212.09
         ]
       },
-      "footprint": "Package_TO_SOT_THT:TO-126-3_Vertical",
-      "mpn": "BD140",
-      "datasheet": "https://www.st.com/resource/en/datasheet/bd135.pdf",
-      "stock_id": 149,
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+      "mpn": "LR1F10K",
+      "datasheet": "",
+      "stock_id": 272,
       "note": "",
       "nets": {}
     },
-    "Q111": {
-      "kind": "MOS_N",
-      "value": "IRF540N",
-      "pins": {
-        "1": [
-          326.92,
-          100.0
-        ],
-        "2": [
-          334.54,
-          94.92
-        ],
-        "3": [
-          334.54,
-          105.08
-        ]
-      },
-      "footprint": "Package_TO_SOT_THT:TO-220-3_Vertical",
-      "mpn": "IRF540NPbF",
-      "datasheet": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-irf540n-datasheet-en.pdf",
-      "stock_id": "",
-      "note": "INSULATE live drain tab",
-      "nets": {}
-    },
-    "Q112": {
-      "kind": "MOS_P",
-      "value": "IRF9540N",
-      "pins": {
-        "1": [
-          326.92,
-          160.0
-        ],
-        "2": [
-          334.54,
-          165.08
-        ],
-        "3": [
-          334.54,
-          154.92
-        ]
-      },
-      "footprint": "Package_TO_SOT_THT:TO-220-3_Vertical",
-      "mpn": "IRF9540NPbF",
-      "datasheet": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-irf9540n-datasheet-en.pdf",
-      "stock_id": 257,
-      "note": "INSULATE live drain tab",
-      "nets": {}
-    },
-    "R117": {
+    "R109": {
       "kind": "R",
       "value": "100R",
       "pins": {
         "1": [
-          303.81,
-          100.0
+          187.96,
+          209.55
         ],
         "2": [
-          296.19,
-          100.0
+          187.96,
+          217.17
         ]
       },
       "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
@@ -736,359 +536,47 @@
       "note": "",
       "nets": {}
     },
-    "R118": {
+    "Q107": {
+      "kind": "Q_P_CBE",
+      "value": "BC556",
+      "pins": {
+        "1": [
+          187.96,
+          60.96
+        ],
+        "2": [
+          180.34,
+          55.88
+        ],
+        "3": [
+          187.96,
+          50.8
+        ]
+      },
+      "footprint": "Package_TO_SOT_THT:TO-92_Inline",
+      "mpn": "BC556",
+      "datasheet": "https://www.onsemi.com/pdf/datasheet/bc556bta-d.pdf",
+      "stock_id": 462,
+      "note": "",
+      "nets": {}
+    },
+    "R111": {
       "kind": "R",
       "value": "100R",
       "pins": {
         "1": [
-          303.81,
-          160.0
+          187.96,
+          36.83
         ],
         "2": [
-          296.19,
-          160.0
+          187.96,
+          44.45
         ]
       },
       "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
       "mpn": "LR1F100R",
       "datasheet": "",
       "stock_id": 150,
-      "note": "",
-      "nets": {}
-    },
-    "R119": {
-      "kind": "R",
-      "value": "0R33 / 5W",
-      "pins": {
-        "1": [
-          334.54,
-          114.19
-        ],
-        "2": [
-          334.54,
-          121.81
-        ]
-      },
-      "footprint": "Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P30.48mm_Horizontal",
-      "mpn": "MCKNP05SJ033KAA9",
-      "datasheet": "",
-      "stock_id": 288,
-      "note": "",
-      "nets": {}
-    },
-    "R120": {
-      "kind": "R",
-      "value": "0R33 / 5W",
-      "pins": {
-        "1": [
-          334.54,
-          138.19
-        ],
-        "2": [
-          334.54,
-          145.81
-        ]
-      },
-      "footprint": "Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P30.48mm_Horizontal",
-      "mpn": "MCKNP05SJ033KAA9",
-      "datasheet": "",
-      "stock_id": 288,
-      "note": "",
-      "nets": {}
-    },
-    "R115": {
-      "kind": "R",
-      "value": "2k2",
-      "pins": {
-        "1": [
-          285.0,
-          116.19
-        ],
-        "2": [
-          285.0,
-          123.81
-        ]
-      },
-      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
-      "mpn": "LR1F2K2",
-      "datasheet": "",
-      "stock_id": 268,
-      "note": "",
-      "nets": {}
-    },
-    "R116": {
-      "kind": "R",
-      "value": "2k2",
-      "pins": {
-        "1": [
-          285.0,
-          138.19
-        ],
-        "2": [
-          285.0,
-          145.81
-        ]
-      },
-      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
-      "mpn": "LR1F2K2",
-      "datasheet": "",
-      "stock_id": 268,
-      "note": "",
-      "nets": {}
-    },
-    "L101": {
-      "kind": "L",
-      "value": "0.7uH AIR / 3A",
-      "pins": {
-        "1": [
-          360.92,
-          130.0
-        ],
-        "2": [
-          371.08,
-          130.0
-        ]
-      },
-      "footprint": "MOSFETAmp2:L_Air_0u7_12T",
-      "mpn": "",
-      "datasheet": "",
-      "stock_id": "",
-      "note": "12 turns 1mm enamelled copper on 8mm mandrel; measure L and DCR",
-      "nets": {}
-    },
-    "R126": {
-      "kind": "R",
-      "value": "10R / 2W",
-      "pins": {
-        "1": [
-          369.81,
-          145.0
-        ],
-        "2": [
-          362.19,
-          145.0
-        ]
-      },
-      "footprint": "Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P30.48mm_Horizontal",
-      "mpn": "ROX2SJ10R",
-      "datasheet": "https://www.te.com/en/product-1625890-6.html",
-      "stock_id": "",
-      "note": "Noninductive flameproof metal oxide; purchase",
-      "nets": {}
-    },
-    "R125": {
-      "kind": "R",
-      "value": "10R / 2W",
-      "pins": {
-        "1": [
-          350.0,
-          166.19
-        ],
-        "2": [
-          350.0,
-          173.81
-        ]
-      },
-      "footprint": "Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P30.48mm_Horizontal",
-      "mpn": "ROX2SJ10R",
-      "datasheet": "https://www.te.com/en/product-1625890-6.html",
-      "stock_id": "",
-      "note": "Noninductive flameproof metal oxide; purchase",
-      "nets": {}
-    },
-    "C104": {
-      "kind": "C",
-      "value": "100n FILM / 63V",
-      "pins": {
-        "1": [
-          350.0,
-          181.19
-        ],
-        "2": [
-          350.0,
-          188.81
-        ]
-      },
-      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm",
-      "mpn": "R82DC3100DQ50J",
-      "datasheet": "",
-      "stock_id": 406,
-      "note": "",
-      "nets": {}
-    },
-    "#PWR10153": {
-      "kind": "GND",
-      "value": "GND",
-      "pins": {
-        "1": [
-          350.0,
-          197.0
-        ]
-      },
-      "footprint": "",
-      "mpn": "",
-      "datasheet": "",
-      "stock_id": "",
-      "note": "",
-      "nets": {}
-    },
-    "TP101": {
-      "kind": "TP",
-      "value": "SN",
-      "pins": {
-        "1": [
-          345.0,
-          109.54
-        ]
-      },
-      "footprint": "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
-      "mpn": "",
-      "datasheet": "",
-      "stock_id": "",
-      "note": "",
-      "nets": {}
-    },
-    "TP102": {
-      "kind": "TP",
-      "value": "OUT",
-      "pins": {
-        "1": [
-          372.0,
-          113.54
-        ]
-      },
-      "footprint": "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
-      "mpn": "",
-      "datasheet": "",
-      "stock_id": "",
-      "note": "",
-      "nets": {}
-    },
-    "TP103": {
-      "kind": "TP",
-      "value": "SP",
-      "pins": {
-        "1": [
-          345.0,
-          156.54
-        ]
-      },
-      "footprint": "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
-      "mpn": "",
-      "datasheet": "",
-      "stock_id": "",
-      "note": "",
-      "nets": {}
-    },
-    "TP104": {
-      "kind": "TP",
-      "value": "VP",
-      "pins": {
-        "1": [
-          375.0,
-          37.54
-        ]
-      },
-      "footprint": "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
-      "mpn": "",
-      "datasheet": "",
-      "stock_id": "",
-      "note": "",
-      "nets": {}
-    },
-    "TP105": {
-      "kind": "TP",
-      "value": "VN",
-      "pins": {
-        "1": [
-          395.0,
-          37.54
-        ]
-      },
-      "footprint": "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
-      "mpn": "",
-      "datasheet": "",
-      "stock_id": "",
-      "note": "",
-      "nets": {}
-    },
-    "R121": {
-      "kind": "R",
-      "value": "47k",
-      "pins": {
-        "1": [
-          285.0,
-          228.19
-        ],
-        "2": [
-          285.0,
-          235.81
-        ]
-      },
-      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
-      "mpn": "LR1F47K",
-      "datasheet": "",
-      "stock_id": 277,
-      "note": "",
-      "nets": {}
-    },
-    "D110": {
-      "kind": "DZ",
-      "value": "BZX85C10",
-      "pins": {
-        "1": [
-          300.0,
-          228.19
-        ],
-        "2": [
-          300.0,
-          235.81
-        ]
-      },
-      "footprint": "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal",
-      "mpn": "BZX85C10",
-      "datasheet": "",
-      "stock_id": 251,
-      "note": "",
-      "nets": {}
-    },
-    "R122": {
-      "kind": "R",
-      "value": "47k",
-      "pins": {
-        "1": [
-          325.0,
-          228.19
-        ],
-        "2": [
-          325.0,
-          235.81
-        ]
-      },
-      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
-      "mpn": "LR1F47K",
-      "datasheet": "",
-      "stock_id": 277,
-      "note": "",
-      "nets": {}
-    },
-    "D111": {
-      "kind": "DZ",
-      "value": "BZX85C10",
-      "pins": {
-        "1": [
-          340.0,
-          228.19
-        ],
-        "2": [
-          340.0,
-          235.81
-        ]
-      },
-      "footprint": "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal",
-      "mpn": "BZX85C10",
-      "datasheet": "",
-      "stock_id": 251,
       "note": "",
       "nets": {}
     },
@@ -1097,12 +585,12 @@
       "value": "1N4148",
       "pins": {
         "1": [
-          237.54,
-          206.81
+          187.96,
+          80.01
         ],
         "2": [
-          237.54,
-          199.19
+          187.96,
+          72.39
         ]
       },
       "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
@@ -1117,12 +605,12 @@
       "value": "1N4148",
       "pins": {
         "1": [
-          237.54,
-          216.81
+          187.96,
+          92.71
         ],
         "2": [
-          237.54,
-          209.19
+          187.96,
+          85.09
         ]
       },
       "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
@@ -1137,16 +625,16 @@
       "value": "BD139",
       "pins": {
         "1": [
-          237.54,
-          233.08
+          187.96,
+          111.76
         ],
         "2": [
-          237.54,
-          222.92
+          187.96,
+          101.6
         ],
         "3": [
-          229.92,
-          228.0
+          195.58,
+          106.68
         ]
       },
       "footprint": "Package_TO_SOT_THT:TO-126-3_Vertical",
@@ -1156,17 +644,37 @@
       "note": "Clamp to output heatsink; insulate collector tab",
       "nets": {}
     },
+    "C103": {
+      "kind": "C",
+      "value": "100n / 63V",
+      "pins": {
+        "1": [
+          170.18,
+          92.71
+        ],
+        "2": [
+          170.18,
+          100.33
+        ]
+      },
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm",
+      "mpn": "R82DC3100DQ50J",
+      "datasheet": "",
+      "stock_id": 406,
+      "note": "",
+      "nets": {}
+    },
     "R112": {
       "kind": "R",
       "value": "3k9",
       "pins": {
         "1": [
-          222.0,
-          222.19
+          203.2,
+          100.33
         ],
         "2": [
-          222.0,
-          229.81
+          203.2,
+          107.95
         ]
       },
       "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
@@ -1181,12 +689,12 @@
       "value": "1k SLOPE SEL",
       "pins": {
         "1": [
-          222.0,
-          235.19
+          203.2,
+          119.38
         ],
         "2": [
-          222.0,
-          242.81
+          203.2,
+          127.0
         ]
       },
       "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
@@ -1201,16 +709,16 @@
       "value": "BC546",
       "pins": {
         "1": [
-          202.54,
-          236.92
+          218.44,
+          116.84
         ],
         "2": [
-          194.92,
-          242.0
+          226.06,
+          121.92
         ],
         "3": [
-          202.54,
-          247.08
+          218.44,
+          127.0
         ]
       },
       "footprint": "Package_TO_SOT_THT:TO-92_Inline",
@@ -1225,12 +733,12 @@
       "value": "1k SOT",
       "pins": {
         "1": [
-          202.54,
-          250.19
+          218.44,
+          140.97
         ],
         "2": [
-          202.54,
-          257.81
+          218.44,
+          148.59
         ]
       },
       "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
@@ -1240,21 +748,45 @@
       "note": "SELECT ON TEST (RE): leave UNFITTED for first bias power-up (zero offset); fit one E24 step above the calculated value (docs/BIAS_STUDY.md). 1k0 is the nominal-model value.",
       "nets": {}
     },
+    "Q117": {
+      "kind": "Q_P_CBE",
+      "value": "BC556",
+      "pins": {
+        "1": [
+          233.68,
+          106.68
+        ],
+        "2": [
+          241.3,
+          101.6
+        ],
+        "3": [
+          233.68,
+          96.52
+        ]
+      },
+      "footprint": "Package_TO_SOT_THT:TO-92_Inline",
+      "mpn": "BC556",
+      "datasheet": "https://www.onsemi.com/pdf/datasheet/bc556bta-d.pdf",
+      "stock_id": 462,
+      "note": "LED reference feed; PCB",
+      "nets": {}
+    },
     "RV101": {
       "kind": "RV",
       "value": "200R MULTITURN",
       "pins": {
         "1": [
-          202.54,
-          262.19
+          218.44,
+          156.21
         ],
         "2": [
-          207.62,
-          266.0
+          223.52,
+          160.02
         ],
         "3": [
-          202.54,
-          269.81
+          218.44,
+          163.83
         ]
       },
       "footprint": "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical",
@@ -1269,12 +801,12 @@
       "value": "LED RED",
       "pins": {
         "1": [
-          185.0,
-          255.81
+          233.68,
+          151.13
         ],
         "2": [
-          185.0,
-          248.19
+          233.68,
+          143.51
         ]
       },
       "footprint": "LED_SMD:LED_0805_2012Metric",
@@ -1284,41 +816,17 @@
       "note": "Bias offset reference, about 1 mA. Stocked Kingbright KP-2012EC, 2012 metric SMD; verify cathode mark against pad 1.",
       "nets": {}
     },
-    "Q117": {
-      "kind": "Q_P_CBE",
-      "value": "BC556",
-      "pins": {
-        "1": [
-          185.0,
-          235.08
-        ],
-        "2": [
-          177.38,
-          230.0
-        ],
-        "3": [
-          185.0,
-          224.92
-        ]
-      },
-      "footprint": "Package_TO_SOT_THT:TO-92_Inline",
-      "mpn": "BC556",
-      "datasheet": "https://www.onsemi.com/pdf/datasheet/bc556bta-d.pdf",
-      "stock_id": 462,
-      "note": "LED reference feed; PCB",
-      "nets": {}
-    },
     "R127": {
       "kind": "R",
       "value": "680R",
       "pins": {
         "1": [
-          185.0,
-          209.19
+          233.68,
+          80.01
         ],
         "2": [
-          185.0,
-          216.81
+          233.68,
+          87.63
         ]
       },
       "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
@@ -1328,37 +836,17 @@
       "note": "LED reference feed, about 1 mA from TREF.",
       "nets": {}
     },
-    "C103": {
-      "kind": "C",
-      "value": "100n / 63V",
-      "pins": {
-        "1": [
-          255.0,
-          233.19
-        ],
-        "2": [
-          255.0,
-          240.81
-        ]
-      },
-      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm",
-      "mpn": "R82DC3100DQ50J",
-      "datasheet": "",
-      "stock_id": 406,
-      "note": "",
-      "nets": {}
-    },
     "J101": {
       "kind": "J2",
       "value": "BIAS SHORT - FIT FIRST",
       "pins": {
         "1": [
-          159.92,
-          197.0
+          157.48,
+          116.84
         ],
         "2": [
-          159.92,
-          199.54
+          157.48,
+          119.38
         ]
       },
       "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
@@ -1368,33 +856,397 @@
       "note": "",
       "nets": {}
     },
-    "C105": {
-      "kind": "CP",
-      "value": "220u / 35V",
+    "Q109": {
+      "kind": "Q_N_ECB",
+      "value": "BD139",
       "pins": {
         "1": [
-          370.0,
-          74.19
+          274.32,
+          71.12
         ],
         "2": [
-          370.0,
-          81.81
+          274.32,
+          60.96
+        ],
+        "3": [
+          266.7,
+          66.04
         ]
       },
-      "footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
-      "mpn": "35ZLH220MEFC8X11.5",
-      "datasheet": "",
-      "stock_id": 366,
+      "footprint": "Package_TO_SOT_THT:TO-126-3_Vertical",
+      "mpn": "BD139",
+      "datasheet": "https://www.st.com/resource/en/datasheet/bd135.pdf",
+      "stock_id": 148,
       "note": "",
       "nets": {}
     },
-    "#PWR10224": {
+    "Q110": {
+      "kind": "Q_P_ECB",
+      "value": "BD140",
+      "pins": {
+        "1": [
+          274.32,
+          198.12
+        ],
+        "2": [
+          274.32,
+          208.28
+        ],
+        "3": [
+          266.7,
+          203.2
+        ]
+      },
+      "footprint": "Package_TO_SOT_THT:TO-126-3_Vertical",
+      "mpn": "BD140",
+      "datasheet": "https://www.st.com/resource/en/datasheet/bd135.pdf",
+      "stock_id": 149,
+      "note": "",
+      "nets": {}
+    },
+    "R115": {
+      "kind": "R",
+      "value": "2k2",
+      "pins": {
+        "1": [
+          274.32,
+          88.9
+        ],
+        "2": [
+          274.32,
+          96.52
+        ]
+      },
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+      "mpn": "LR1F2K2",
+      "datasheet": "",
+      "stock_id": 268,
+      "note": "",
+      "nets": {}
+    },
+    "R116": {
+      "kind": "R",
+      "value": "2k2",
+      "pins": {
+        "1": [
+          274.32,
+          172.72
+        ],
+        "2": [
+          274.32,
+          180.34
+        ]
+      },
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+      "mpn": "LR1F2K2",
+      "datasheet": "",
+      "stock_id": 268,
+      "note": "",
+      "nets": {}
+    },
+    "R117": {
+      "kind": "R",
+      "value": "100R",
+      "pins": {
+        "1": [
+          295.91,
+          78.74
+        ],
+        "2": [
+          288.29,
+          78.74
+        ]
+      },
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+      "mpn": "LR1F100R",
+      "datasheet": "",
+      "stock_id": 150,
+      "note": "",
+      "nets": {}
+    },
+    "R118": {
+      "kind": "R",
+      "value": "100R",
+      "pins": {
+        "1": [
+          295.91,
+          190.5
+        ],
+        "2": [
+          288.29,
+          190.5
+        ]
+      },
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+      "mpn": "LR1F100R",
+      "datasheet": "",
+      "stock_id": 150,
+      "note": "",
+      "nets": {}
+    },
+    "Q111": {
+      "kind": "MOS_N",
+      "value": "IRF540N",
+      "pins": {
+        "1": [
+          317.5,
+          78.74
+        ],
+        "2": [
+          325.12,
+          73.66
+        ],
+        "3": [
+          325.12,
+          83.82
+        ]
+      },
+      "footprint": "Package_TO_SOT_THT:TO-220-3_Vertical",
+      "mpn": "IRF540NPbF",
+      "datasheet": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-irf540n-datasheet-en.pdf",
+      "stock_id": "",
+      "note": "INSULATE live drain tab",
+      "nets": {}
+    },
+    "Q112": {
+      "kind": "MOS_P",
+      "value": "IRF9540N",
+      "pins": {
+        "1": [
+          317.5,
+          190.5
+        ],
+        "2": [
+          325.12,
+          195.58
+        ],
+        "3": [
+          325.12,
+          185.42
+        ]
+      },
+      "footprint": "Package_TO_SOT_THT:TO-220-3_Vertical",
+      "mpn": "IRF9540NPbF",
+      "datasheet": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-irf9540n-datasheet-en.pdf",
+      "stock_id": 257,
+      "note": "INSULATE live drain tab",
+      "nets": {}
+    },
+    "R119": {
+      "kind": "R",
+      "value": "0R33 / 5W",
+      "pins": {
+        "1": [
+          325.12,
+          105.41
+        ],
+        "2": [
+          325.12,
+          113.03
+        ]
+      },
+      "footprint": "Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P30.48mm_Horizontal",
+      "mpn": "MCKNP05SJ033KAA9",
+      "datasheet": "",
+      "stock_id": 288,
+      "note": "",
+      "nets": {}
+    },
+    "R120": {
+      "kind": "R",
+      "value": "0R33 / 5W",
+      "pins": {
+        "1": [
+          325.12,
+          154.94
+        ],
+        "2": [
+          325.12,
+          162.56
+        ]
+      },
+      "footprint": "Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P30.48mm_Horizontal",
+      "mpn": "MCKNP05SJ033KAA9",
+      "datasheet": "",
+      "stock_id": 288,
+      "note": "",
+      "nets": {}
+    },
+    "R121": {
+      "kind": "R",
+      "value": "47k",
+      "pins": {
+        "1": [
+          304.8,
+          86.36
+        ],
+        "2": [
+          304.8,
+          93.98
+        ]
+      },
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+      "mpn": "LR1F47K",
+      "datasheet": "",
+      "stock_id": 277,
+      "note": "",
+      "nets": {}
+    },
+    "D110": {
+      "kind": "DZ",
+      "value": "BZX85C10",
+      "pins": {
+        "1": [
+          312.42,
+          86.36
+        ],
+        "2": [
+          312.42,
+          93.98
+        ]
+      },
+      "footprint": "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal",
+      "mpn": "BZX85C10",
+      "datasheet": "",
+      "stock_id": 251,
+      "note": "",
+      "nets": {}
+    },
+    "R122": {
+      "kind": "R",
+      "value": "47k",
+      "pins": {
+        "1": [
+          304.8,
+          176.53
+        ],
+        "2": [
+          304.8,
+          184.15
+        ]
+      },
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+      "mpn": "LR1F47K",
+      "datasheet": "",
+      "stock_id": 277,
+      "note": "",
+      "nets": {}
+    },
+    "D111": {
+      "kind": "DZ",
+      "value": "BZX85C10",
+      "pins": {
+        "1": [
+          312.42,
+          176.53
+        ],
+        "2": [
+          312.42,
+          184.15
+        ]
+      },
+      "footprint": "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal",
+      "mpn": "BZX85C10",
+      "datasheet": "",
+      "stock_id": 251,
+      "note": "",
+      "nets": {}
+    },
+    "TP101": {
+      "kind": "TP",
+      "value": "SN",
+      "pins": {
+        "1": [
+          335.28,
+          101.6
+        ]
+      },
+      "footprint": "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
+      "mpn": "",
+      "datasheet": "",
+      "stock_id": "",
+      "note": "",
+      "nets": {}
+    },
+    "TP102": {
+      "kind": "TP",
+      "value": "OUT",
+      "pins": {
+        "1": [
+          335.28,
+          129.54
+        ]
+      },
+      "footprint": "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
+      "mpn": "",
+      "datasheet": "",
+      "stock_id": "",
+      "note": "",
+      "nets": {}
+    },
+    "TP103": {
+      "kind": "TP",
+      "value": "SP",
+      "pins": {
+        "1": [
+          335.28,
+          177.8
+        ]
+      },
+      "footprint": "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
+      "mpn": "",
+      "datasheet": "",
+      "stock_id": "",
+      "note": "",
+      "nets": {}
+    },
+    "R125": {
+      "kind": "R",
+      "value": "10R / 2W",
+      "pins": {
+        "1": [
+          345.44,
+          144.78
+        ],
+        "2": [
+          345.44,
+          152.4
+        ]
+      },
+      "footprint": "Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P30.48mm_Horizontal",
+      "mpn": "ROX2SJ10R",
+      "datasheet": "https://www.te.com/en/product-1625890-6.html",
+      "stock_id": "",
+      "note": "Noninductive flameproof metal oxide; purchase",
+      "nets": {}
+    },
+    "C104": {
+      "kind": "C",
+      "value": "100n FILM / 63V",
+      "pins": {
+        "1": [
+          345.44,
+          160.02
+        ],
+        "2": [
+          345.44,
+          167.64
+        ]
+      },
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm",
+      "mpn": "R82DC3100DQ50J",
+      "datasheet": "",
+      "stock_id": 406,
+      "note": "",
+      "nets": {}
+    },
+    "#PWR10213": {
       "kind": "GND",
       "value": "GND",
       "pins": {
         "1": [
-          370.0,
-          85.0
+          345.44,
+          175.26
         ]
       },
       "footprint": "",
@@ -1404,17 +1256,57 @@
       "note": "",
       "nets": {}
     },
-    "C106": {
+    "L101": {
+      "kind": "L",
+      "value": "0.7uH AIR / 3A",
+      "pins": {
+        "1": [
+          358.14,
+          134.62
+        ],
+        "2": [
+          368.3,
+          134.62
+        ]
+      },
+      "footprint": "MOSFETAmp2:L_Air_0u7_12T",
+      "mpn": "",
+      "datasheet": "",
+      "stock_id": "",
+      "note": "12 turns 1mm enamelled copper on 8mm mandrel; measure L and DCR",
+      "nets": {}
+    },
+    "R126": {
+      "kind": "R",
+      "value": "10R / 2W",
+      "pins": {
+        "1": [
+          367.03,
+          124.46
+        ],
+        "2": [
+          359.41,
+          124.46
+        ]
+      },
+      "footprint": "Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P30.48mm_Horizontal",
+      "mpn": "ROX2SJ10R",
+      "datasheet": "https://www.te.com/en/product-1625890-6.html",
+      "stock_id": "",
+      "note": "Noninductive flameproof metal oxide; purchase",
+      "nets": {}
+    },
+    "C105": {
       "kind": "CP",
       "value": "220u / 35V",
       "pins": {
         "1": [
-          390.0,
-          74.19
+          355.6,
+          41.91
         ],
         "2": [
-          390.0,
-          81.81
+          355.6,
+          49.53
         ]
       },
       "footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
@@ -1424,13 +1316,13 @@
       "note": "",
       "nets": {}
     },
-    "#PWR10227": {
+    "#PWR10226": {
       "kind": "GND",
       "value": "GND",
       "pins": {
         "1": [
-          390.0,
-          71.0
+          355.6,
+          55.88
         ]
       },
       "footprint": "",
@@ -1445,12 +1337,12 @@
       "value": "100n / 63V",
       "pins": {
         "1": [
-          370.0,
-          99.19
+          370.84,
+          41.91
         ],
         "2": [
-          370.0,
-          106.81
+          370.84,
+          49.53
         ]
       },
       "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm",
@@ -1460,13 +1352,49 @@
       "note": "",
       "nets": {}
     },
-    "#PWR10232": {
+    "#PWR10230": {
       "kind": "GND",
       "value": "GND",
       "pins": {
         "1": [
-          370.0,
-          110.0
+          370.84,
+          55.88
+        ]
+      },
+      "footprint": "",
+      "mpn": "",
+      "datasheet": "",
+      "stock_id": "",
+      "note": "",
+      "nets": {}
+    },
+    "C106": {
+      "kind": "CP",
+      "value": "220u / 35V",
+      "pins": {
+        "1": [
+          355.6,
+          219.71
+        ],
+        "2": [
+          355.6,
+          227.33
+        ]
+      },
+      "footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+      "mpn": "35ZLH220MEFC8X11.5",
+      "datasheet": "",
+      "stock_id": 366,
+      "note": "",
+      "nets": {}
+    },
+    "#PWR10233": {
+      "kind": "GND",
+      "value": "GND",
+      "pins": {
+        "1": [
+          355.6,
+          213.36
         ]
       },
       "footprint": "",
@@ -1481,12 +1409,12 @@
       "value": "100n / 63V",
       "pins": {
         "1": [
-          390.0,
-          99.19
+          370.84,
+          219.71
         ],
         "2": [
-          390.0,
-          106.81
+          370.84,
+          227.33
         ]
       },
       "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm",
@@ -1496,19 +1424,91 @@
       "note": "",
       "nets": {}
     },
-    "#PWR10235": {
+    "#PWR10237": {
       "kind": "GND",
       "value": "GND",
       "pins": {
         "1": [
-          390.0,
-          96.0
+          370.84,
+          213.36
         ]
       },
       "footprint": "",
       "mpn": "",
       "datasheet": "",
       "stock_id": "",
+      "note": "",
+      "nets": {}
+    },
+    "TP104": {
+      "kind": "TP",
+      "value": "VP",
+      "pins": {
+        "1": [
+          383.54,
+          22.86
+        ]
+      },
+      "footprint": "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
+      "mpn": "",
+      "datasheet": "",
+      "stock_id": "",
+      "note": "",
+      "nets": {}
+    },
+    "TP105": {
+      "kind": "TP",
+      "value": "VN",
+      "pins": {
+        "1": [
+          383.54,
+          248.92
+        ]
+      },
+      "footprint": "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm",
+      "mpn": "",
+      "datasheet": "",
+      "stock_id": "",
+      "note": "",
+      "nets": {}
+    },
+    "D105": {
+      "kind": "D",
+      "value": "1N4148",
+      "pins": {
+        "1": [
+          36.83,
+          187.96
+        ],
+        "2": [
+          44.45,
+          187.96
+        ]
+      },
+      "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+      "mpn": "1N4148",
+      "datasheet": "",
+      "stock_id": 138,
+      "note": "",
+      "nets": {}
+    },
+    "D106": {
+      "kind": "D",
+      "value": "1N4148",
+      "pins": {
+        "1": [
+          44.45,
+          200.66
+        ],
+        "2": [
+          36.83,
+          200.66
+        ]
+      },
+      "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+      "mpn": "1N4148",
+      "datasheet": "",
+      "stock_id": 138,
       "note": "",
       "nets": {}
     }
