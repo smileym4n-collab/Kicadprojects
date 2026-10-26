@@ -2,7 +2,7 @@
 	(version "E")
 	(design
 		(source "/Users/tomwatson/Documents/GitHub/Kicadprojects/ClassA2/ClassA2.kicad_sch")
-		(date "2026-10-26T19:36:43")
+		(date "2026-10-26T20:10:23")
 		(tool "Eeschema 10.0.5")
 		(sheet
 			(number "1")
@@ -67,9 +67,9 @@
 				(field
 					(name "Rating") "63V PET")
 				(field
-					(name "Inventory") "IN STOCK (inv 417, 3 pcs; 2 needed)")
+					(name "Inventory") "BUY 2 (stocked inv 417 reserved for DarlingtonAmpDual)")
 				(field
-					(name "Notes") "Input DC block. With R1 = 47k: 1.54 Hz. PP film is an optional like-for-like upgrade.")
+					(name "Notes") "Input DC block. With R1 = 47k: 1.54 Hz. Stock alternative: 2 x KEMET R82DC4100AA60J 1u in parallel. PP film is an optional like-for-like upgrade.")
 				(field
 					(name "Footprint") "Capacitor_THT:C_Rect_L7.2mm_W7.2mm_P5.00mm_FKS2_FKP2_MKS2_MKP2")
 				(field
@@ -97,11 +97,11 @@
 			)
 			(property
 				(name "Inventory")
-				(value "IN STOCK (inv 417, 3 pcs; 2 needed)")
+				(value "BUY 2 (stocked inv 417 reserved for DarlingtonAmpDual)")
 			)
 			(property
 				(name "Notes")
-				(value "Input DC block. With R1 = 47k: 1.54 Hz. PP film is an optional like-for-like upgrade.")
+				(value "Input DC block. With R1 = 47k: 1.54 Hz. Stock alternative: 2 x KEMET R82DC4100AA60J 1u in parallel. PP film is an optional like-for-like upgrade.")
 			)
 			(property
 				(name "Sheetname")
@@ -744,7 +744,7 @@
 				(field
 					(name "Rating") "50V bipolar ES series")
 				(field
-					(name "Inventory") "ON ORDER (inv 501, 2 incoming)")
+					(name "Inventory") "BUY 2 (inv 501 on-order pair reserved for DarlingtonAmpDual)")
 				(field
 					(name "Notes") "Feedback DC block: DC gain = 1. 3k x 220u = 0.24 Hz. Bipolar; ~15 mV across it.")
 				(field
@@ -774,7 +774,7 @@
 			)
 			(property
 				(name "Inventory")
-				(value "ON ORDER (inv 501, 2 incoming)")
+				(value "BUY 2 (inv 501 on-order pair reserved for DarlingtonAmpDual)")
 			)
 			(property
 				(name "Notes")
@@ -1921,24 +1921,24 @@
 		)
 		(comp
 			(ref "Q1")
-			(value "2SC2240-GR")
+			(value "2SC1815-GR")
 			(footprint "Package_TO_SOT_THT:TO-92_Inline")
-			(datasheet "https://www.micros.com.pl/mediaserver/info-t2sa9702sc2240.pdf")
+			(datasheet "https://akizukidenshi.com/goodsaffix/2sc1815-gr.pdf")
 			(fields
 				(field
 					(name "Manufacturer") "Toshiba")
 				(field
-					(name "MPN") "2SC2240-GR")
+					(name "MPN") "2SC1815-GR")
 				(field
-					(name "Rating") "120V 100mA 300mW, hFE 200-400")
+					(name "Rating") "50V 150mA 400mW, hFE 200-400, Cob 2pF")
 				(field
-					(name "Inventory") "IN STOCK (inv 609, 7 pcs; 4 needed)")
+					(name "Inventory") "IN STOCK (inv 386, 6 pcs; 4 needed)")
 				(field
-					(name "Notes") "Pins 1E 2C 3B (2-5F1B). Match Q1/Q2 VBE and hFE; thermally couple.")
+					(name "Notes") "Pins 1E 2C 3B (2-5F1B, same as 2SC2240). Replaces 2SC2240-GR (stock kept for DarlingtonAmpDual). Match Q1/Q2 VBE and hFE; thermally couple.")
 				(field
 					(name "Footprint") "Package_TO_SOT_THT:TO-92_Inline")
 				(field
-					(name "Datasheet") "https://www.micros.com.pl/mediaserver/info-t2sa9702sc2240.pdf")
+					(name "Datasheet") "https://akizukidenshi.com/goodsaffix/2sc1815-gr.pdf")
 				(field
 					(name "Description")
 				)
@@ -1954,19 +1954,19 @@
 			)
 			(property
 				(name "MPN")
-				(value "2SC2240-GR")
+				(value "2SC1815-GR")
 			)
 			(property
 				(name "Rating")
-				(value "120V 100mA 300mW, hFE 200-400")
+				(value "50V 150mA 400mW, hFE 200-400, Cob 2pF")
 			)
 			(property
 				(name "Inventory")
-				(value "IN STOCK (inv 609, 7 pcs; 4 needed)")
+				(value "IN STOCK (inv 386, 6 pcs; 4 needed)")
 			)
 			(property
 				(name "Notes")
-				(value "Pins 1E 2C 3B (2-5F1B). Match Q1/Q2 VBE and hFE; thermally couple.")
+				(value "Pins 1E 2C 3B (2-5F1B, same as 2SC2240). Replaces 2SC2240-GR (stock kept for DarlingtonAmpDual). Match Q1/Q2 VBE and hFE; thermally couple.")
 			)
 			(property
 				(name "Sheetname")
@@ -2004,24 +2004,24 @@
 		)
 		(comp
 			(ref "Q2")
-			(value "2SC2240-GR")
+			(value "2SC1815-GR")
 			(footprint "Package_TO_SOT_THT:TO-92_Inline")
-			(datasheet "https://www.micros.com.pl/mediaserver/info-t2sa9702sc2240.pdf")
+			(datasheet "https://akizukidenshi.com/goodsaffix/2sc1815-gr.pdf")
 			(fields
 				(field
 					(name "Manufacturer") "Toshiba")
 				(field
-					(name "MPN") "2SC2240-GR")
+					(name "MPN") "2SC1815-GR")
 				(field
-					(name "Rating") "120V 100mA 300mW")
+					(name "Rating") "50V 150mA 400mW")
 				(field
-					(name "Inventory") "IN STOCK (inv 609)")
+					(name "Inventory") "IN STOCK (inv 386)")
 				(field
-					(name "Notes") "Feedback side. Collector straight to +VF.")
+					(name "Notes") "Feedback side. Collector straight to +VF. Max VCE in circuit ~21 V.")
 				(field
 					(name "Footprint") "Package_TO_SOT_THT:TO-92_Inline")
 				(field
-					(name "Datasheet") "https://www.micros.com.pl/mediaserver/info-t2sa9702sc2240.pdf")
+					(name "Datasheet") "https://akizukidenshi.com/goodsaffix/2sc1815-gr.pdf")
 				(field
 					(name "Description")
 				)
@@ -2037,19 +2037,19 @@
 			)
 			(property
 				(name "MPN")
-				(value "2SC2240-GR")
+				(value "2SC1815-GR")
 			)
 			(property
 				(name "Rating")
-				(value "120V 100mA 300mW")
+				(value "50V 150mA 400mW")
 			)
 			(property
 				(name "Inventory")
-				(value "IN STOCK (inv 609)")
+				(value "IN STOCK (inv 386)")
 			)
 			(property
 				(name "Notes")
-				(value "Feedback side. Collector straight to +VF.")
+				(value "Feedback side. Collector straight to +VF. Max VCE in circuit ~21 V.")
 			)
 			(property
 				(name "Sheetname")

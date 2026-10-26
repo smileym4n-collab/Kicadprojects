@@ -37,7 +37,7 @@ diss = {
     'Q11 BD140': abs(d['@q.xa.q11[ic]']) * (d['v(xa.en)'] - d['v(xa.bon)']),
     'Q7 2SA1145': abs(d['@q.xa.q7[ic]']) * (d['v(xa.e7)'] - d['v(xa.vbp)']),
     'Q8 2SC2705': abs(d['@q.xa.q8[ic]']) * (d['v(xa.vbn)'] - d['v(xa.e8)']),
-    'Q1 2SC2240': abs(d['@q.xa.q1[ic]']) * (d['v(xa.c1n)'] - d['v(xa.e1)']),
+    'Q1 2SC1815': abs(d['@q.xa.q1[ic]']) * (d['v(xa.c1n)'] - d['v(xa.e1)']),
     'Q3 2SA970': abs(d['@q.xa.q3[ic]']) * (d['v(xa.e3)'] - d['v(xa.c3p)']),
     'Q9 BD139': abs(d['@q.xa.q9[ic]']) * d['V_bias'],
     'R22/R25 each': d['Iq_top'] ** 2 * 0.33,
@@ -164,8 +164,8 @@ S['power_cycle'] = pc
 cases = {'nominal': {}, 'outputs hFE 55': dict(Q2SC5198=55, Q2SA1941=55), 'outputs hFE 160': dict(Q2SC5198=160, Q2SA1941=160),
          'outputs NPN 160 / PNP 55': dict(Q2SC5198=160, Q2SA1941=55), 'drivers hFE 40': dict(QBD139=40, QBD140=40),
          'drivers hFE 250': dict(QBD139=250, QBD140=250), 'VAS hFE 80': dict(Q2SC2705=80, Q2SA1145=80),
-         'input GR200 / BL700': dict(Q2SC2240GR=200, Q2SA970BL=700), 'input GR400 / BL350': dict(Q2SC2240GR=400, Q2SA970BL=350),
-         'everything at minimum': dict(Q2SC5198=55, Q2SA1941=55, QBD139=40, QBD140=40, Q2SC2705=80, Q2SA1145=80, Q2SC2240GR=200, Q2SA970BL=350)}
+         'input GR200 / BL700': dict(Q2SC1815GR=200, Q2SA970BL=700), 'input GR400 / BL350': dict(Q2SC1815GR=400, Q2SA970BL=350),
+         'everything at minimum': dict(Q2SC5198=55, Q2SA1941=55, QBD139=40, QBD140=40, Q2SC2705=80, Q2SA1145=80, Q2SC1815GR=200, Q2SA970BL=350)}
 bs = {}
 for k, bf in cases.items():
     lib = run.lib_beta(**bf) if bf else run.LIB

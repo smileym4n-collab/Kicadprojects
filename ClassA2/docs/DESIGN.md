@@ -56,7 +56,7 @@ Reference designators match `ClassA2.kicad_sch` and `simulation/amp.cir`.
 - R2 (1k) and C2 (470p C0G) form a 339 kHz RF filter (−0.016 dB at 20 kHz).
 - R1 equals the feedback resistor R26, so the residual base currents of the two input pairs (about 1 µA) give almost no offset.
 
-**Input stage (Q1/Q2 2SC2240-GR, Q3/Q4 2SA970-BL).**
+**Input stage (Q1/Q2 2SC1815-GR, Q3/Q4 2SA970-BL).**
 - Two complementary long-tailed pairs share the input node and the feedback node (FB).
 - Each pair runs at about 2 mA from a tail current source: Q5 (BC546) or Q6 (BC556). Each source is referenced to two 1N4148s (D1/D2, D3/D4), which are fed in series by one shared resistor, R5 (27k).
 - 220 Ω emitter degeneration (R6/R7, R11/R12) lowers gm and gives about 11 V/µs of slew with 100 pF Miller capacitors.
@@ -112,7 +112,8 @@ Reference designators match `ClassA2.kicad_sch` and `simulation/amp.cir`.
 | Q10/Q11 | BD139/BD140 | Stocked, 80 V, 12.5 W, TO-126 bolts to the heatsink for driver/sensor tracking. 2SC4793/2SA1837 would be faster but only 6 each are stocked and the ClassA project uses them. |
 | Q9 | BD139 | Same package/thermal path as the drivers it tracks. |
 | Q7/Q8 | 2SA1145-Y/2SC2705-Y (salvaged, 12 each) | 150 V, Cob 1.8–2.5 pF: low Early/Cob nonlinearity for a VAS. Obsolete; BC556/BC546 are an electrical fallback (65 V, higher Cob, different pinout). |
-| Q1–Q4 | 2SC2240-GR / 2SA970-BL | Low-noise, 120 V complementary audio pairs, stocked. Obsolete (salvaged). Gain ranks differ (GR 200–400 vs BL 350–700); the offset effect is covered by RV2. |
+| Q1/Q2 | 2SC1815-GR (in stock 6, not allocated elsewhere) | Replaced the 2SC2240-GR on 2026-10-26: all 7 stocked 2SC2240-GR go to DarlingtonAmpDual (5 per board). Same TO-92 2-5F1B package and E-C-B pinout, same GR rank (200–400), Cob 2.0 pF, NF 1 dB, rbb' 50 Ω (Toshiba datasheet 2007-11-01). VCEO 50 V against about 21 V maximum in circuit (no-load high mains); 15 mW of 400 mW. Simulation is unchanged from the 2SC2240 build. Discontinued by Toshiba; stock-only choice. |
+| Q3/Q4 | 2SA970-BL | Low-noise 120 V PNP pair, 17 stocked (DarlingtonAmpDual uses 2 per board). Obsolete (salvaged). Gain ranks differ from Q1/Q2 (BL 350–700 vs GR 200–400); the offset effect is covered by RV2. |
 | Q5/Q6 | BC546/BC556 | Tail CCS only; 65 V. |
 | R22/R25 | Yageo SQP500JB-0R33 | 5 W cement; idle dissipation 0.16 W keeps their drift low. 23 stocked; ClassA uses 4. |
 | Small resistors | TE LR1 0.6 W 1 % metal film | Stocked; every position dissipates below 0.04 W. |
@@ -264,6 +265,6 @@ These are not layout instructions, only the schematic intent.
 3. **The transformer's regulation and temperature rise are unknown.** Measure the rails loaded and unloaded.
 4. **Offset:** −15 mV simulated untrimmed, −12 to −22 mV across the gain spread. Real values depend on VBE matching. RV2 covers ±30 mV around untrimmed. Match Q1/Q2 and Q3/Q4.
 5. **Power-up transient:** about 0.7 V at the output, settling over about 3 s. External speaker protection with a delay of at least 3 s is assumed.
-6. **2SC2240-GR stock:** 7 are in stock and this design needs 4 for stereo. DarlingtonAmp/DarlingtonAmpDual also use 2SC2240, so the allocation is your call.
+6. **Parts shared with DarlingtonAmpDual (which has priority):** Q1/Q2 moved to 2SC1815-GR so all 2SC2240-GR stay with DarlingtonAmpDual. That project also uses one WIMA 2.2 µF (C1 here; 3 in stock) and one Nichicon UES1H221MHM (C9 here; 2 on order) per board. Buy 2 more UES1H221MHM. For C1, either buy WIMA MKS2C042201K00KSSD or fit two stocked KEMET R82 1 µF in parallel per channel.
 7. **L1 is self-wound.** The footprint is a placeholder; fit it to the actual coil at layout.
 8. **Toshiba lifecycle:** the outputs are NRND, and the small-signal Toshiba parts are obsolete. This is fine for a stocked build; not ideal for reproduction.

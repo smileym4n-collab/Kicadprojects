@@ -1,6 +1,6 @@
 # ClassA2 — Hiraga-inspired Class-A amplifier (Rev A, schematic for review)
 
-This is one mono channel of a discrete Class-A amplifier: build two boards for stereo. It keeps the basic shape of Jean Hiraga's *Le Monstre*: complementary push-pull from input to output, one complementary-feedback-pair output stage at about 0.7 A, low rails and moderate global feedback. The bias is set by a heatsink-mounted VBE multiplier, and every stage uses transistors from your inventory.
+This is one mono channel of a discrete Class-A amplifier: build two boards for stereo. It keeps the basic shape of Jean Hiraga's *Le Monstre*: complementary push-pull from input to output, one complementary-feedback-pair output stage at about 0.7 A, low rails and moderate global feedback. The bias is set by a heatsink-mounted VBE multiplier, and every stage uses transistors from your inventory. Q1/Q2 are 2SC1815-GR, leaving the 2SC2240-GR stock for DarlingtonAmpDual.
 
 **Status:**
 - **Schematic:** KiCad ERC 0 errors / 0 warnings, netlist cross-checked against the SPICE deck. Not released for PCB.
@@ -34,9 +34,10 @@ To buy:
 - J2: 2 × Molex 09-65-2038.
 - 14 Keystone 5000-series test points.
 - Enamelled wire for L1.
-- C9 (Nichicon UES1H221MHM) and R28 (Stackpole RSMF2JT10R0) are already on order.
+- R28 (Stackpole RSMF2JT10R0) is already on order.
+- 2 × Nichicon UES1H221MHM for C9: the 2 on order go to DarlingtonAmpDual.
+- C1: 2 × WIMA MKS2C042201K00KSSD, or two stocked KEMET R82 1 µF in parallel per channel (the stocked WIMAs go to DarlingtonAmpDual).
 
 Points to settle before layout:
-- 2SC2240-GR allocation: 7 in stock, this design needs 4 for stereo, and the DarlingtonAmp boards use it too.
 - The 2SC2705/2SA1145 pinout needs confirming with a meter.
 - The L1 footprint is a placeholder.

@@ -70,6 +70,7 @@ def part(ref, lib_id, value, x, y, rot=0, mirror=None, fp='', mpn='', mfr='', ds
          rating='', spice=None, dnp=False, lab=None, inbom=True):
     """Place a symbol. spice = {pin number: SPICE node} for the netlist cross-check. lab = (dx, dy, justify) for Ref/Value."""
     emb, pins, names = load(lib_id)
+    x, y = round(x, 4), round(y, 4)
     P = {n: xf(px, py, x, y, rot, mirror) for n, (px, py) in pins.items()}
     for nm, n in names.items():
         if nm and nm not in P: P[nm] = P[n]
@@ -102,15 +103,17 @@ def part(ref, lib_id, value, x, y, rot=0, mirror=None, fp='', mpn='', mfr='', ds
                       rating=rating, spice=spice or {}, dnp=dnp, pins=P, inbom=inbom)
     return P
 
-def pwr(name, pt, rot=0):
+def pwr(name, pt, rot=0, val_at=None):
     """Power or flag symbol whose pin sits at pt. name: GND, PWR_FLAG, +V, -V, +VF, -VF."""
     lib_id = f'power:{name}' if name in ('GND', 'PWR_FLAG') else f'{PROJ}:{name}'
     load(lib_id)
     PWR_N[0] += 1
     ref = ('#FLG' if name == 'PWR_FLAG' else '#PWR') + f'{PWR_N[0]:03d}'
-    x, y = pt
+    x, y = round(pt[0], 4), round(pt[1], 4)
     vy = y + 5.08 if name in ('GND', '-V', '-VF') else y - 3.81
-    props = prop('Reference', ref, x, y, hide=True) + prop('Value', name, x, vy, hide=(name == 'PWR_FLAG'))
+    vx = x
+    if val_at: vx, vy = round(x + val_at[0], 4), round(y + val_at[1], 4)
+    props = prop('Reference', ref, x, y, hide=True) + prop('Value', name, vx, vy, hide=(name == 'PWR_FLAG'))
     props += prop('Footprint', '', x, y, hide=True) + prop('Datasheet', '', x, y, hide=True) + prop('Description', '', x, y, hide=True)
     uid = U('pwr/' + ref)
     ITEMS.append(f'(symbol (lib_id {q(lib_id)}) (at {x} {y} {rot}) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom no) (on_board yes)'
@@ -157,7 +160,7 @@ FP_TP = 'TestPoint:TestPoint_Keystone_5000-5004_Miniature'
 DS = dict(
     C5198='https://toshiba.semicon-storage.com/info/docget.jsp?did=20663&prodName=2SC5198',
     A1941='https://toshiba.semicon-storage.com/info/docget.jsp?did=20422&prodName=2SA1941',
-    C2240='https://www.micros.com.pl/mediaserver/info-t2sa9702sc2240.pdf',
+    C1815='https://akizukidenshi.com/goodsaffix/2sc1815-gr.pdf',
     A970='https://www.micros.com.pl/mediaserver/info-t2sa9702sc2240.pdf',
     C2705='https://www.ges.cz/2SC2705-2SA1145-Toshiba-par-pro-NF-vykonove-zesilovace-budice-a-rozkmitove-stupne-_a255141_10699.pdf',
     BD139='https://www.st.com/resource/en/datasheet/bd135.pdf',
@@ -230,7 +233,7 @@ J1 = part('J1', 'Connector_Generic:Conn_01x02', 'AUDIO IN', 22.86, Y0, 0, 'y',
           spice={'1': 'IN', '2': '0'}, lab=(-2.54, -3.81, 'right'))
 W(J1['2'], (30.48, J1['2'][1]), (30.48, J1['2'][1] + 2.54)); pwr('GND', (30.48, J1['2'][1] + 2.54))
 C1 = part('C1', 'Device:C', '2u2 FILM', 40.64, Y0, 90, fp=FP_MKS2, mpn='MKS2C042201K00KSSD', mfr='WIMA', rating='63V PET',
-          stock='IN STOCK (inv 417, 3 pcs; 2 needed)', notes='Input DC block. With R1 = 47k: 1.54 Hz. PP film is an optional like-for-like upgrade.',
+          stock='BUY 2 (stocked inv 417 reserved for DarlingtonAmpDual)', notes='Input DC block. With R1 = 47k: 1.54 Hz. Stock alternative: 2 x KEMET R82DC4100AA60J 1u in parallel. PP film is an optional like-for-like upgrade.',
           spice={'1': 'IN', '2': 'INA'}, desc='Film capacitor', lab=(0, -3.3, None))
 W(J1['1'], C1['1']); label('IN', (31.75, Y0))
 R1 = R('R1', '47k', 50.8, 156.21, 0, 'INA', '0', LR1('47K'), 'IN STOCK (inv 277)', notes='Input resistance / DC reference. Equal to R26 to cancel base-current offset.')
@@ -246,11 +249,11 @@ W((71.12, Y0), (XB, Y0))
 # ---------------- input stage
 block('INPUT STAGE (LTPs, TAIL CCS, OFFSET TRIM)', 82.55, TOP, 153.67, BOT)
 YQ = 96.52; XE1, XE2 = 101.6, 139.7
-Q1 = part('Q1', 'Transistor_BJT:Q_NPN_ECB', '2SC2240-GR', XE1 - 2.54, YQ, fp=FP_TO92, mpn='2SC2240-GR', mfr='Toshiba', ds=DS['C2240'],
-          rating='120V 100mA 300mW, hFE 200-400', stock='IN STOCK (inv 609, 7 pcs; 4 needed)', notes='Pins 1E 2C 3B (2-5F1B). Match Q1/Q2 VBE and hFE; thermally couple.',
+Q1 = part('Q1', 'Transistor_BJT:Q_NPN_ECB', '2SC1815-GR', XE1 - 2.54, YQ, fp=FP_TO92, mpn='2SC1815-GR', mfr='Toshiba', ds=DS['C1815'],
+          rating='50V 150mA 400mW, hFE 200-400, Cob 2pF', stock='IN STOCK (inv 386, 6 pcs; 4 needed)', notes='Pins 1E 2C 3B (2-5F1B, same as 2SC2240). Replaces 2SC2240-GR (stock kept for DarlingtonAmpDual). Match Q1/Q2 VBE and hFE; thermally couple.',
           spice={'1': 'E1', '2': 'C1N', '3': 'INB'}, lab=(-5.08, -5.08, 'right'))
-Q2 = part('Q2', 'Transistor_BJT:Q_NPN_ECB', '2SC2240-GR', XE2 + 2.54, YQ, 0, 'y', fp=FP_TO92, mpn='2SC2240-GR', mfr='Toshiba', ds=DS['C2240'],
-          rating='120V 100mA 300mW', stock='IN STOCK (inv 609)', notes='Feedback side. Collector straight to +VF.',
+Q2 = part('Q2', 'Transistor_BJT:Q_NPN_ECB', '2SC1815-GR', XE2 + 2.54, YQ, 0, 'y', fp=FP_TO92, mpn='2SC1815-GR', mfr='Toshiba', ds=DS['C1815'],
+          rating='50V 150mA 400mW', stock='IN STOCK (inv 386)', notes='Feedback side. Collector straight to +VF. Max VCE in circuit ~21 V.',
           spice={'1': 'E2', '2': 'VPF', '3': 'FB'}, lab=(3.81, -6.35, 'left'))
 W((XB, YQ), Q1['B']); pwr('+VF', Q2['C'])
 R9 = R('R9', '1k3', XE1, 76.2, 0, 'VPF', 'C1N', 'MF50 1K3', 'IN STOCK (inv 763, 9 pcs; 4 needed)', mfr='Multicomp Pro', rating='0.5W 1% metal film',
@@ -282,7 +285,9 @@ D3 = part('D3', 'Device:D', '1N4148', XBc, 154.94, 90, fp=FP_DO35, mpn='1N4148',
           notes='Tail reference.', spice={'2': 'RBN', '1': 'X2'}, desc='Signal diode', lab=(2.54, 0, 'left'))
 D4 = part('D4', 'Device:D', '1N4148', XBc, 162.56, 90, fp=FP_DO35, mpn='1N4148', mfr='onsemi', ds=DS['D4148'], stock='IN STOCK (inv 138)',
           notes='Tail reference.', spice={'2': 'X2', '1': 'VNF'}, desc='Signal diode', lab=(2.54, 0, 'left'))
-pwr('+VF', D1['A']); pwr('-VF', D4['K'])
+pwr('+VF', D1['A'])
+YVF_TAIL = 170.18     # user layout edit 2026-10-26: tail -VF symbols aligned below D4 and R8, rotated 180
+W(D4['K'], (XBc, YVF_TAIL)); pwr('-VF', (XBc, YVF_TAIL), 180, val_at=(3.048, 2.032))
 Q6 = part('Q6', 'Transistor_BJT:Q_PNP_CBE', 'BC556', XA + 2.54, D2['K'][1], 180, fp=FP_TO92, mpn='BC556B', mfr='onsemi', ds=DS['BC556'],
           rating='-65V -100mA', stock='IN STOCK (inv 462)', notes='PNP tail CCS ~2.0 mA. Pins 1C 2B 3E (onsemi).',
           spice={'1': 'TP', '2': 'RBP', '3': 'E6'}, lab=(-5.08, 2.54, 'right'))
@@ -292,7 +297,7 @@ Q5 = part('Q5', 'Transistor_BJT:Q_NPN_CBE', 'BC546', XC - 2.54, D3['A'][1], fp=F
           ds=DS['BC546'], rating='65V 100mA', stock='IN STOCK (inv 254)', notes='NPN tail CCS ~1.95 mA. Pins 1C 2B 3E - check the fitted brand.',
           spice={'1': 'TN', '2': 'RBN', '3': 'E5'}, lab=(3.81, -5.08, 'left'))
 R8 = R('R8', '270R', XC, Q5['E'][1] + 5.08, 0, 'E5', 'VNF', LR1('270R'), 'IN STOCK (inv 92)', notes='NPN tail current = (2 x Vf - Vbe)/270R.', lab=(2.54, 0, 'left'))
-W(Q5['E'], R8['1']); pwr('-VF', R8['2']); W(Q5['B'], D3['A'])
+W(Q5['E'], R8['1']); W(R8['2'], (XC, YVF_TAIL)); pwr('-VF', (XC, YVF_TAIL), 180, val_at=(3.556, 1.524)); W(Q5['B'], D3['A'])
 W(Q5['C'], (XC, YTN))
 YTP = M(YTN)
 W(Q6['C'], (XA, YTP))
@@ -320,7 +325,7 @@ label('FB', (XFB, 127.0), 0)
 block('VAS / MILLER COMP. / FEEDBACK', 154.94, TOP, 200.66, BOT)
 R27 = R('R27', '3k', 157.48, 156.21, 0, 'FB', 'FBC', LR1('3K0'), 'IN STOCK (inv 796)', notes='Feedback shunt.', lab=(2.54, 0, 'left'))
 C9 = part('C9', 'Device:C', '220u NP / 50V', 157.48, 168.91, fp=FP_UES, mpn='UES1H221MHM', mfr='Nichicon', rating='50V bipolar ES series',
-          stock='ON ORDER (inv 501, 2 incoming)', notes='Feedback DC block: DC gain = 1. 3k x 220u = 0.24 Hz. Bipolar; ~15 mV across it.',
+          stock='BUY 2 (inv 501 on-order pair reserved for DarlingtonAmpDual)', notes='Feedback DC block: DC gain = 1. 3k x 220u = 0.24 Hz. Bipolar; ~15 mV across it.',
           spice={'1': 'FBC', '2': '0'}, desc='Bipolar electrolytic', lab=(2.54, 0, 'left'))
 R26 = R('R26', '47k', 168.91, Y0, 90, 'FB', 'OUT', LR1('47K'), 'IN STOCK (inv 277)', notes='Feedback; gain = 1 + R26/R27 = 16.7 (24.4 dB).',
         lab=(0, 3.3, None))

@@ -12,6 +12,8 @@ PYTHONPATH=/path/to/numpy+matplotlib python3 simulation/verify_all.py
 
 The run takes about 30 s. Add `python3 simulation/psu.py` for the supply study and `python3 simulation/pdiss.py` for device dissipation. Raw results are in `simulation/results/summary.json`, and the plots are in `docs/plots/`.
 
+Input pair Q1/Q2 is the 2SC1815-GR (from 2026-10-26; it replaced the 2SC2240-GR with no measurable change in any result).
+
 Reference condition, unless stated: ±15.6 V rails, 8 Ω load, RV1 = 78 Ω (0.70 A), heatsink about 45 °C (sensor 46, drivers 48, output junctions 63 °C).
 
 ## DC
@@ -19,8 +21,8 @@ Reference condition, unless stated: ±15.6 V rails, 8 Ω load, RV1 = 78 Ω (0.70
 | Item | Result |
 |---|---|
 | Iq, upper / lower | 0.697 / 0.699 A |
-| Output offset (RV2 centred) | −15.5 mV |
-| Offset, RV2 end to end | +17.2 … −47.5 mV |
+| Output offset (RV2 centred) | −15.4 mV |
+| Offset, RV2 end to end | +17.3 … −47.5 mV |
 | VAS current | 5.49 mA each |
 | Tail currents | 1.93 / 2.01 mA |
 | V(bias spreader) | 1.686 V |
@@ -128,10 +130,10 @@ There is no bias overshoot. The slow power-up excursion comes from C9/C1 chargin
 
 | Case | Iq | Offset | PM | THD 5 W |
 |---|---|---|---|---|
-| nominal | 0.697 A | −15.5 mV | 88.7° | 0.0033 % |
+| nominal | 0.697 A | −15.4 mV | 88.7° | 0.0033 % |
 | outputs hFE 55 / 160 | 0.662 / 0.713 A | −15.5 mV | 88.9 / 88.7° | 0.0061 / 0.0029 % |
 | outputs NPN 160, PNP 55 | 0.687 A | −16.9 mV | 88.8° | 0.017 % |
-| drivers hFE 40 / 250 | 0.756 / 0.687 A | −15.5 mV | 89.0 / 88.7° | 0.0097 / 0.0024 % |
+| drivers hFE 40 / 250 | 0.756 / 0.687 A | −15.4 mV | 89.0 / 88.7° | 0.0097 / 0.0024 % |
 | VAS hFE 80 | 0.684 A | −15.2 mV | 88.8° | 0.0043 % |
 | inputs GR200/BL700 · GR400/BL350 | 0.697 A | −21.6 / −12.1 mV | 88.9° | 0.0034 % |
 | everything at minimum | 0.682 A | −20.3 mV | 90.0° | 0.023 % |

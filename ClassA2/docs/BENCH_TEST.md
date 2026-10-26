@@ -10,13 +10,13 @@ Expected values below come from simulation at ±15.6 V (see [SIMULATION.md](SIMU
 
   | Parts | Package | Pinout |
   |---|---|---|
-  | 2SC2240 / 2SA970 | TO-92 2-5F1B | E-C-B |
+  | 2SC1815 / 2SA970 | TO-92 2-5F1B | E-C-B |
   | **2SC2705 / 2SA1145** | TO-92MOD | E-C-B, from a second-source sheet: **confirm** |
   | BD139 / BD140 | — | E-C-B |
   | BC546 / BC556 | — | C-B-E |
   | 2SC5198 / 2SA1941 | — | B-C-E |
 
-- [ ] Match Q1/Q2 (2SC2240-GR) and Q3/Q4 (2SA970-BL) within about 2 mV VBE at 1 mA, and hFE within 10 %. Mount each pair touching (thermally coupled).
+- [ ] Match Q1/Q2 (2SC1815-GR) and Q3/Q4 (2SA970-BL) within about 2 mV VBE at 1 mA, and hFE within 10 %. Mount each pair touching (thermally coupled).
 - [ ] Check the trimmer direction on the actual part with a meter: which way of turning increases R(pin 1–pin 2)?
 
 ## 2. Before first power
