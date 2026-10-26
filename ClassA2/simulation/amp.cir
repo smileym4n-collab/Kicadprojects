@@ -1,0 +1,81 @@
+* ClassA2 Rev A channel -- one mono board. Reference designators match the
+* KiCad schematic (ClassA2.kicad_sch). Included by run.py; not a stand-alone deck.
+* Ports: IN (input connector), SPK (speaker +), VP/VN (rails at J2), 0 = GND.
+.subckt AMP IN SPK VP VN params: TS=40 TD=45 TO=60 RV=250 CM=100p RTOP=1k RBF=470 CF=1p OS=0.5
+* ---- Input: DC block, input resistance, RF filter --------------------------
+C1   IN  INA 2.2u
+R1   INA 0   47k
+R2   INA INB 1k
+C2   INB 0   470p
+* ---- Front-end supply filters --------------------------------------------
+R3   VP  VPF 10
+C3   VPF 0   220u
+R4   VN  VNF 10
+C4   0   VNF 220u
+* ---- Tail current-source references: two 1N4148 per side, one shared feed
+D1   VPF X1  D4148
+D2   X1  RBP D4148
+R5   RBP RBN 27k
+D3   RBN X2  D4148
+D4   X2  VNF D4148
+* ---- NPN input pair (Q1 signal, Q2 feedback; Q2 collector straight to +VF), tail Q5
+Q1   C1N INB E1  Q2SC2240GR
+Q2   VPF FB  E2  Q2SC2240GR
+R6   E1  TN  220
+R7   E2  TN  220
+* RV2 offset trim (500R multi-turn): track E1-E2, wiper via R30 to the tail.
+* Open wiper leaves R6/R7 in place (untrimmed offset), never an open tail.
+RV2a E1  WP  {max(500*OS,0.01)}
+RV2b WP  E2  {max(500*(1-OS),0.01)}
+R30  WP  TN  220
+Q5   TN  RBN E5  BC546B
+R8   E5  VNF 270
+R9   VPF C1N 1.3k
+* ---- PNP input pair (Q3 signal, Q4 feedback; Q4 collector straight to -VF), tail Q6
+Q3   C3P INB E3  Q2SA970BL
+Q4   VNF FB  E4  Q2SA970BL
+R11  E3  TP  220
+R12  E4  TP  220
+Q6   TP  RBP E6  BC556B
+R13  VPF E6  270
+R14  C3P VNF 1.3k
+* ---- Complementary VAS with Miller compensation ---------------------------
+Q7   VBP C1N E7  Q2SA1145
+R16  VPF E7  100
+C5   VBP C1N {CM}
+Q8   VBN C3P E8  Q2SC2705
+R17  E8  VNF 100
+C6   VBN C3P {CM}
+* ---- Bias spreader, Q9 on heatsink; RV1 rheostat in base-emitter leg ------
+Q9   VBP B9  VBN QBD139 temp={TS}
+R18  VBP B9  {RTOP}
+R19  B9  X9  {RBF}
+RV1  X9  VBN {RV}
+C7   VBP VBN 1u
+* ---- CFP output stage (Le Monstre style complementary feedback pairs) -----
+R20  VBP B10 51
+Q10  BOP B10 EP  QBD139 temp={TD}
+R21  VP  BOP 100
+Q12  EP  BOP VP  Q2SA1941 temp={TO}
+R22  EP  OUT 0.33
+R23  VBN B11 51
+Q11  BON B11 EN  QBD140 temp={TD}
+R24  BON VN  100
+Q13  EN  BON VN  Q2SC5198 temp={TO}
+R25  EN  OUT 0.33
+* ---- Global feedback -------------------------------------------------------
+R26  OUT FB  47k
+C8   OUT FB  {CF}
+R27  FB  FBC 3k
+C9   FBC 0   220u
+* ---- Output networks -------------------------------------------------------
+R28  OUT ZB  10
+C10  ZB  0   100n
+L1   OUT SPK 1.5u
+R29  OUT SPK 2.7
+* ---- Local rail decoupling at the output pair ----------------------------
+C11  VP  0   1000u
+C12  VP  0   100n
+C13  0   VN  1000u
+C14  0   VN  100n
+.ends AMP

@@ -1,0 +1,1307 @@
+{
+ "J2": {
+  "lib_id": "Connector_Generic:Conn_01x03",
+  "value": "POWER",
+  "fp": "Connector_Molex:Molex_KK-396_A-41791-0003_1x03_P3.96mm_Vertical",
+  "mpn": "09-65-2038",
+  "mfr": "Molex",
+  "ds": "",
+  "desc": "KK-396 3-way header, 7 A per contact",
+  "stock": "BUY (2 for stereo)",
+  "notes": "1 = +V, 2 = GND, 3 = -V. External symmetrical DC from the shared PSU.",
+  "rating": "",
+  "spice": {
+   "1": "VP",
+   "2": "0",
+   "3": "VN"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R3": {
+  "lib_id": "Device:R",
+  "value": "10R",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F10R",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 283)",
+  "notes": "Front-end supply filter, ~10 mA.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "VP",
+   "2": "VPF"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R4": {
+  "lib_id": "Device:R",
+  "value": "10R",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F10R",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 283)",
+  "notes": "Front-end supply filter.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "VN",
+   "2": "VNF"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "TP1": {
+  "lib_id": "Connector:TestPoint",
+  "value": "+V",
+  "fp": "TestPoint:TestPoint_Keystone_5000-5004_Miniature",
+  "mpn": "5000",
+  "mfr": "Keystone",
+  "ds": "",
+  "desc": "Test point, red",
+  "stock": "BUY",
+  "notes": "",
+  "rating": "",
+  "spice": {
+   "1": "VP"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "TP3": {
+  "lib_id": "Connector:TestPoint",
+  "value": "GND",
+  "fp": "TestPoint:TestPoint_Keystone_5000-5004_Miniature",
+  "mpn": "5001",
+  "mfr": "Keystone",
+  "ds": "",
+  "desc": "Test point, black",
+  "stock": "BUY",
+  "notes": "",
+  "rating": "",
+  "spice": {
+   "1": "0"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "TP2": {
+  "lib_id": "Connector:TestPoint",
+  "value": "-V",
+  "fp": "TestPoint:TestPoint_Keystone_5000-5004_Miniature",
+  "mpn": "5004",
+  "mfr": "Keystone",
+  "ds": "",
+  "desc": "Test point, yellow",
+  "stock": "BUY",
+  "notes": "",
+  "rating": "",
+  "spice": {
+   "1": "VN"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "C11": {
+  "lib_id": "Device:C_Polarized",
+  "value": "1000u / 35V",
+  "fp": "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm",
+  "mpn": "EEU-FR1V102",
+  "mfr": "Panasonic",
+  "ds": "",
+  "desc": "Electrolytic",
+  "stock": "IN STOCK (inv 338, 8 pcs)",
+  "notes": "Place at Q12 emitter / +V entry. Local reservoir only; main PSU caps are off-board.",
+  "rating": "35V 105C low-ESR FR",
+  "spice": {
+   "1": "VP",
+   "2": "0"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "C12": {
+  "lib_id": "Device:C",
+  "value": "100n FILM",
+  "fp": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2",
+  "mpn": "R82DC3100DQ50J",
+  "mfr": "KEMET",
+  "ds": "",
+  "desc": "Film capacitor",
+  "stock": "IN STOCK (inv 406)",
+  "notes": "At Q12 emitter pin.",
+  "rating": "63V PET",
+  "spice": {
+   "1": "VP",
+   "2": "0"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "C13": {
+  "lib_id": "Device:C_Polarized",
+  "value": "1000u / 35V",
+  "fp": "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm",
+  "mpn": "EEU-FR1V102",
+  "mfr": "Panasonic",
+  "ds": "",
+  "desc": "Electrolytic",
+  "stock": "IN STOCK (inv 338)",
+  "notes": "Place at Q13 emitter / -V entry. + terminal to GND.",
+  "rating": "35V 105C low-ESR FR",
+  "spice": {
+   "1": "0",
+   "2": "VN"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "C14": {
+  "lib_id": "Device:C",
+  "value": "100n FILM",
+  "fp": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2",
+  "mpn": "R82DC3100DQ50J",
+  "mfr": "KEMET",
+  "ds": "",
+  "desc": "Film capacitor",
+  "stock": "IN STOCK (inv 406)",
+  "notes": "At Q13 emitter pin.",
+  "rating": "63V PET",
+  "spice": {
+   "1": "0",
+   "2": "VN"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "C3": {
+  "lib_id": "Device:C_Polarized",
+  "value": "220u / 35V",
+  "fp": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+  "mpn": "35ZLH220MEFC8X11.5",
+  "mfr": "Rubycon",
+  "ds": "",
+  "desc": "Electrolytic",
+  "stock": "IN STOCK (inv 366)",
+  "notes": "Front-end +VF decoupling; at the input-stage/VAS area.",
+  "rating": "35V ZLH",
+  "spice": {
+   "1": "VPF",
+   "2": "0"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "C4": {
+  "lib_id": "Device:C_Polarized",
+  "value": "220u / 35V",
+  "fp": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+  "mpn": "35ZLH220MEFC8X11.5",
+  "mfr": "Rubycon",
+  "ds": "",
+  "desc": "Electrolytic",
+  "stock": "IN STOCK (inv 366)",
+  "notes": "Front-end -VF decoupling. + terminal to GND.",
+  "rating": "35V ZLH",
+  "spice": {
+   "1": "0",
+   "2": "VNF"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "J1": {
+  "lib_id": "Connector_Generic:Conn_01x02",
+  "value": "AUDIO IN",
+  "fp": "ClassA2:Multicomp_MC34629_1x02_P2.54mm",
+  "mpn": "MC34629 (+ MC34481 housing)",
+  "mfr": "Multicomp Pro",
+  "ds": "",
+  "desc": "2.54 mm 2-way header to chassis RCA, screened lead",
+  "stock": "IN STOCK (inv 126 / 128)",
+  "notes": "1 = signal, 2 = signal ground (screen).",
+  "rating": "",
+  "spice": {
+   "1": "IN",
+   "2": "0"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "C1": {
+  "lib_id": "Device:C",
+  "value": "2u2 FILM",
+  "fp": "Capacitor_THT:C_Rect_L7.2mm_W7.2mm_P5.00mm_FKS2_FKP2_MKS2_MKP2",
+  "mpn": "MKS2C042201K00KSSD",
+  "mfr": "WIMA",
+  "ds": "",
+  "desc": "Film capacitor",
+  "stock": "IN STOCK (inv 417, 3 pcs; 2 needed)",
+  "notes": "Input DC block. With R1 = 47k: 1.54 Hz. PP film is an optional like-for-like upgrade.",
+  "rating": "63V PET",
+  "spice": {
+   "1": "IN",
+   "2": "INA"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R1": {
+  "lib_id": "Device:R",
+  "value": "47k",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F47K",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 277)",
+  "notes": "Input resistance / DC reference. Equal to R26 to cancel base-current offset.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "INA",
+   "2": "0"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R2": {
+  "lib_id": "Device:R",
+  "value": "1k",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F1K",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 285)",
+  "notes": "Input stopper; with C2 forms a 339 kHz RF filter.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "INA",
+   "2": "INB"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "C2": {
+  "lib_id": "Device:C",
+  "value": "470p C0G",
+  "fp": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+  "mpn": "0805N471J500CT",
+  "mfr": "Multicomp Pro",
+  "ds": "",
+  "desc": "C0G capacitor",
+  "stock": "IN STOCK (inv 337)",
+  "notes": "RF filter to GND; return to input ground.",
+  "rating": "50V C0G 5% 2012 metric",
+  "spice": {
+   "1": "INB",
+   "2": "0"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "Q1": {
+  "lib_id": "Transistor_BJT:Q_NPN_ECB",
+  "value": "2SC2240-GR",
+  "fp": "Package_TO_SOT_THT:TO-92_Inline",
+  "mpn": "2SC2240-GR",
+  "mfr": "Toshiba",
+  "ds": "https://www.micros.com.pl/mediaserver/info-t2sa9702sc2240.pdf",
+  "desc": "",
+  "stock": "IN STOCK (inv 609, 7 pcs; 4 needed)",
+  "notes": "Pins 1E 2C 3B (2-5F1B). Match Q1/Q2 VBE and hFE; thermally couple.",
+  "rating": "120V 100mA 300mW, hFE 200-400",
+  "spice": {
+   "1": "E1",
+   "2": "C1N",
+   "3": "INB"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "Q2": {
+  "lib_id": "Transistor_BJT:Q_NPN_ECB",
+  "value": "2SC2240-GR",
+  "fp": "Package_TO_SOT_THT:TO-92_Inline",
+  "mpn": "2SC2240-GR",
+  "mfr": "Toshiba",
+  "ds": "https://www.micros.com.pl/mediaserver/info-t2sa9702sc2240.pdf",
+  "desc": "",
+  "stock": "IN STOCK (inv 609)",
+  "notes": "Feedback side. Collector straight to +VF.",
+  "rating": "120V 100mA 300mW",
+  "spice": {
+   "1": "E2",
+   "2": "VPF",
+   "3": "FB"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R9": {
+  "lib_id": "Device:R",
+  "value": "1k3",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "MF50 1K3",
+  "mfr": "Multicomp Pro",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 763, 9 pcs; 4 needed)",
+  "notes": "Q1 load; sets VAS current with R16 (~5.5 mA).",
+  "rating": "0.5W 1% metal film",
+  "spice": {
+   "1": "VPF",
+   "2": "C1N"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "RV2": {
+  "lib_id": "Device:R_Potentiometer_Trim",
+  "value": "500R OFFSET",
+  "fp": "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical",
+  "mpn": "3296W-1-501LF (stocked generic 500R multi-turn)",
+  "mfr": "Bourns / generic",
+  "ds": "",
+  "desc": "Output offset trim",
+  "stock": "IN STOCK (inv 532, 5 pcs; 4 needed incl. RV1)",
+  "notes": "Centre = untrimmed (~-15 mV sim). Open wiper falls back to R6/R7 only (safe). Range ~+17 to -47 mV in sim.",
+  "rating": "multi-turn cermet",
+  "spice": {
+   "3": "E1",
+   "1": "E2",
+   "2": "WP"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R6": {
+  "lib_id": "Device:R",
+  "value": "220R",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F220R",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 152)",
+  "notes": "Emitter degeneration.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "E1",
+   "2": "TN"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R7": {
+  "lib_id": "Device:R",
+  "value": "220R",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F220R",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 152)",
+  "notes": "Emitter degeneration.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "E2",
+   "2": "TN"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R30": {
+  "lib_id": "Device:R",
+  "value": "220R",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F220R",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 152)",
+  "notes": "Trim wiper feed.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "WP",
+   "2": "TN"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "D1": {
+  "lib_id": "Device:D",
+  "value": "1N4148",
+  "fp": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+  "mpn": "1N4148",
+  "mfr": "onsemi",
+  "ds": "https://www.onsemi.com/pdf/datasheet/1n914-d.pdf",
+  "desc": "Signal diode",
+  "stock": "IN STOCK (inv 138)",
+  "notes": "Tail reference.",
+  "rating": "",
+  "spice": {
+   "2": "VPF",
+   "1": "X1"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "D2": {
+  "lib_id": "Device:D",
+  "value": "1N4148",
+  "fp": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+  "mpn": "1N4148",
+  "mfr": "onsemi",
+  "ds": "https://www.onsemi.com/pdf/datasheet/1n914-d.pdf",
+  "desc": "Signal diode",
+  "stock": "IN STOCK (inv 138)",
+  "notes": "Tail reference.",
+  "rating": "",
+  "spice": {
+   "2": "X1",
+   "1": "RBP"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R5": {
+  "lib_id": "Device:R",
+  "value": "27k",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F27K",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 784)",
+  "notes": "Shared feed for both tail references (~1.05 mA).",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "RBP",
+   "2": "RBN"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "D3": {
+  "lib_id": "Device:D",
+  "value": "1N4148",
+  "fp": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+  "mpn": "1N4148",
+  "mfr": "onsemi",
+  "ds": "https://www.onsemi.com/pdf/datasheet/1n914-d.pdf",
+  "desc": "Signal diode",
+  "stock": "IN STOCK (inv 138)",
+  "notes": "Tail reference.",
+  "rating": "",
+  "spice": {
+   "2": "RBN",
+   "1": "X2"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "D4": {
+  "lib_id": "Device:D",
+  "value": "1N4148",
+  "fp": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+  "mpn": "1N4148",
+  "mfr": "onsemi",
+  "ds": "https://www.onsemi.com/pdf/datasheet/1n914-d.pdf",
+  "desc": "Signal diode",
+  "stock": "IN STOCK (inv 138)",
+  "notes": "Tail reference.",
+  "rating": "",
+  "spice": {
+   "2": "X2",
+   "1": "VNF"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "Q6": {
+  "lib_id": "Transistor_BJT:Q_PNP_CBE",
+  "value": "BC556",
+  "fp": "Package_TO_SOT_THT:TO-92_Inline",
+  "mpn": "BC556B",
+  "mfr": "onsemi",
+  "ds": "https://www.onsemi.com/pdf/datasheet/bc556bta-d.pdf",
+  "desc": "",
+  "stock": "IN STOCK (inv 462)",
+  "notes": "PNP tail CCS ~2.0 mA. Pins 1C 2B 3E (onsemi).",
+  "rating": "-65V -100mA",
+  "spice": {
+   "1": "TP",
+   "2": "RBP",
+   "3": "E6"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R13": {
+  "lib_id": "Device:R",
+  "value": "270R",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F270R",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 92)",
+  "notes": "PNP tail current set.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "VPF",
+   "2": "E6"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "Q5": {
+  "lib_id": "Transistor_BJT:Q_NPN_CBE",
+  "value": "BC546",
+  "fp": "Package_TO_SOT_THT:TO-92_Inline",
+  "mpn": "BC546B (ST BC546 stocked)",
+  "mfr": "STMicroelectronics",
+  "ds": "http://www.farnell.com/datasheets/2277528.pdf",
+  "desc": "",
+  "stock": "IN STOCK (inv 254)",
+  "notes": "NPN tail CCS ~1.95 mA. Pins 1C 2B 3E - check the fitted brand.",
+  "rating": "65V 100mA",
+  "spice": {
+   "1": "TN",
+   "2": "RBN",
+   "3": "E5"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R8": {
+  "lib_id": "Device:R",
+  "value": "270R",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F270R",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 92)",
+  "notes": "NPN tail current = (2 x Vf - Vbe)/270R.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "E5",
+   "2": "VNF"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "Q3": {
+  "lib_id": "Transistor_BJT:Q_PNP_ECB",
+  "value": "2SA970-BL",
+  "fp": "Package_TO_SOT_THT:TO-92_Inline",
+  "mpn": "2SA970-BL",
+  "mfr": "Toshiba",
+  "ds": "https://www.micros.com.pl/mediaserver/info-t2sa9702sc2240.pdf",
+  "desc": "",
+  "stock": "IN STOCK (inv 614, 17 pcs; 4 needed)",
+  "notes": "Pins 1E 2C 3B (2-5F1B). Match Q3/Q4.",
+  "rating": "-120V -100mA 300mW, hFE 350-700",
+  "spice": {
+   "1": "E3",
+   "2": "C3P",
+   "3": "INB"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "Q4": {
+  "lib_id": "Transistor_BJT:Q_PNP_ECB",
+  "value": "2SA970-BL",
+  "fp": "Package_TO_SOT_THT:TO-92_Inline",
+  "mpn": "2SA970-BL",
+  "mfr": "Toshiba",
+  "ds": "https://www.micros.com.pl/mediaserver/info-t2sa9702sc2240.pdf",
+  "desc": "",
+  "stock": "IN STOCK (inv 614)",
+  "notes": "Feedback side. Collector straight to -VF.",
+  "rating": "-120V -100mA 300mW",
+  "spice": {
+   "1": "E4",
+   "2": "VNF",
+   "3": "FB"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R14": {
+  "lib_id": "Device:R",
+  "value": "1k3",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "MF50 1K3",
+  "mfr": "Multicomp Pro",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 763)",
+  "notes": "Q3 load; sets VAS current with R17.",
+  "rating": "0.5W 1% metal film",
+  "spice": {
+   "1": "C3P",
+   "2": "VNF"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R11": {
+  "lib_id": "Device:R",
+  "value": "220R",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F220R",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 152)",
+  "notes": "Emitter degeneration.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "TP",
+   "2": "E3"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R12": {
+  "lib_id": "Device:R",
+  "value": "220R",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F220R",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 152)",
+  "notes": "Emitter degeneration.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "TP",
+   "2": "E4"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R27": {
+  "lib_id": "Device:R",
+  "value": "3k",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F3K0",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 796)",
+  "notes": "Feedback shunt.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "FB",
+   "2": "FBC"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "C9": {
+  "lib_id": "Device:C",
+  "value": "220u NP / 50V",
+  "fp": "Capacitor_THT:C_Radial_D16.0mm_H25.0mm_P7.50mm",
+  "mpn": "UES1H221MHM",
+  "mfr": "Nichicon",
+  "ds": "",
+  "desc": "Bipolar electrolytic",
+  "stock": "ON ORDER (inv 501, 2 incoming)",
+  "notes": "Feedback DC block: DC gain = 1. 3k x 220u = 0.24 Hz. Bipolar; ~15 mV across it.",
+  "rating": "50V bipolar ES series",
+  "spice": {
+   "1": "FBC",
+   "2": "0"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R26": {
+  "lib_id": "Device:R",
+  "value": "47k",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F47K",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 277)",
+  "notes": "Feedback; gain = 1 + R26/R27 = 16.7 (24.4 dB).",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "FB",
+   "2": "OUT"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "C8": {
+  "lib_id": "Device:C",
+  "value": "DNP 10p C0G",
+  "fp": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+  "mpn": "(DNP)",
+  "mfr": "",
+  "ds": "",
+  "desc": "C0G capacitor",
+  "stock": "DNP",
+  "notes": "FB LEAD DNP: optional phase-lead across R26 if bench square waves show ringing; not needed in simulation.",
+  "rating": "",
+  "spice": {
+   "1": "FB",
+   "2": "OUT"
+  },
+  "dnp": true,
+  "inbom": true
+ },
+ "C5": {
+  "lib_id": "Device:C",
+  "value": "100p C0G",
+  "fp": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+  "mpn": "CL21C101JBANNNC",
+  "mfr": "Samsung",
+  "ds": "",
+  "desc": "C0G capacitor",
+  "stock": "IN STOCK (inv 197)",
+  "notes": "Miller compensation, VAS collector to base. Do not reduce without a loop re-test.",
+  "rating": "50V C0G 5% 2012 metric",
+  "spice": {
+   "1": "C1N",
+   "2": "VBP"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "Q7": {
+  "lib_id": "Transistor_BJT:Q_PNP_ECB",
+  "value": "2SA1145-Y",
+  "fp": "Package_TO_SOT_THT:TO-92L_Inline",
+  "mpn": "2SA1145-Y",
+  "mfr": "Toshiba",
+  "ds": "https://www.ges.cz/2SC2705-2SA1145-Toshiba-par-pro-NF-vykonove-zesilovace-budice-a-rozkmitove-stupne-_a255141_10699.pdf",
+  "desc": "",
+  "stock": "IN STOCK (inv 612, 12 pcs)",
+  "notes": "PNP VAS ~5.5 mA. Pins 1E 2C 3B (TO-92MOD 2-5J1A, second-source sheet): CONFIRM with a meter before fitting.",
+  "rating": "-150V -50mA 0.8W, Cob 2.5pF",
+  "spice": {
+   "1": "E7",
+   "2": "VBP",
+   "3": "C1N"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R16": {
+  "lib_id": "Device:R",
+  "value": "100R",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F100R",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 150)",
+  "notes": "VAS emitter degeneration.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "VPF",
+   "2": "E7"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "Q8": {
+  "lib_id": "Transistor_BJT:Q_NPN_ECB",
+  "value": "2SC2705-Y",
+  "fp": "Package_TO_SOT_THT:TO-92L_Inline",
+  "mpn": "2SC2705-Y",
+  "mfr": "Toshiba",
+  "ds": "https://www.ges.cz/2SC2705-2SA1145-Toshiba-par-pro-NF-vykonove-zesilovace-budice-a-rozkmitove-stupne-_a255141_10699.pdf",
+  "desc": "",
+  "stock": "IN STOCK (inv 611, 12 pcs)",
+  "notes": "NPN VAS ~5.5 mA. Pins 1E 2C 3B (TO-92MOD): CONFIRM with a meter before fitting.",
+  "rating": "150V 50mA 0.8W, Cob 1.8pF",
+  "spice": {
+   "1": "E8",
+   "2": "VBN",
+   "3": "C3P"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "C6": {
+  "lib_id": "Device:C",
+  "value": "100p C0G",
+  "fp": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+  "mpn": "CL21C101JBANNNC",
+  "mfr": "Samsung",
+  "ds": "",
+  "desc": "C0G capacitor",
+  "stock": "IN STOCK (inv 197)",
+  "notes": "Miller compensation.",
+  "rating": "50V C0G 5% 2012 metric",
+  "spice": {
+   "1": "VBN",
+   "2": "C3P"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R17": {
+  "lib_id": "Device:R",
+  "value": "100R",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F100R",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 150)",
+  "notes": "VAS emitter degeneration.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "E8",
+   "2": "VNF"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "Q9": {
+  "lib_id": "Transistor_BJT:Q_NPN_ECB",
+  "value": "BD139",
+  "fp": "Package_TO_SOT_THT:TO-126-3_Vertical",
+  "mpn": "BD139",
+  "mfr": "STMicroelectronics",
+  "ds": "https://www.st.com/resource/en/datasheet/bd135.pdf",
+  "desc": "",
+  "stock": "IN STOCK (inv 148, 13 pcs)",
+  "notes": "VBE multiplier / thermal sensor. Mount on main heatsink between Q10 and Q11 (insulated). Pins 1E 2C 3B.",
+  "rating": "80V 1.5A 12.5W",
+  "spice": {
+   "1": "VBN",
+   "2": "VBP",
+   "3": "B9"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R18": {
+  "lib_id": "Device:R",
+  "value": "1k",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F1K",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 285)",
+  "notes": "VBE multiplier upper leg.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "VBP",
+   "2": "B9"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R19": {
+  "lib_id": "Device:R",
+  "value": "470R",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F470R",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 153, 9 pcs)",
+  "notes": "Fixed lower leg: limits maximum bias (~0.94 A sim at RV1 = 0).",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "B9",
+   "2": "X9"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "RV1": {
+  "lib_id": "Device:R_Potentiometer_Trim",
+  "value": "500R BIAS",
+  "fp": "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical",
+  "mpn": "3296W-1-501LF (stocked generic 500R multi-turn)",
+  "mfr": "Bourns / generic",
+  "ds": "",
+  "desc": "Bias (quiescent current) trim",
+  "stock": "IN STOCK (inv 532)",
+  "notes": "Rheostat in base-emitter leg: MORE resistance = LESS bias; open wiper = full 500R = minimum bias (safe). Set to 500R before first power.",
+  "rating": "multi-turn cermet",
+  "spice": {
+   "1": "X9",
+   "3": "VBN",
+   "2": "VBN"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "C7": {
+  "lib_id": "Device:C",
+  "value": "1u FILM",
+  "fp": "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2",
+  "mpn": "R82DC4100AA60J",
+  "mfr": "KEMET",
+  "ds": "",
+  "desc": "Film capacitor",
+  "stock": "IN STOCK (inv 132)",
+  "notes": "Ties both driver bases together at AF/HF.",
+  "rating": "63V PET",
+  "spice": {
+   "1": "VBP",
+   "2": "VBN"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R20": {
+  "lib_id": "Device:R",
+  "value": "51R",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F51R",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 292)",
+  "notes": "Driver base stopper, at Q10 base.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "VBP",
+   "2": "B10"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "Q10": {
+  "lib_id": "Transistor_BJT:Q_NPN_ECB",
+  "value": "BD139",
+  "fp": "Package_TO_SOT_THT:TO-126-3_Vertical",
+  "mpn": "BD139",
+  "mfr": "STMicroelectronics",
+  "ds": "https://www.st.com/resource/en/datasheet/bd135.pdf",
+  "desc": "",
+  "stock": "IN STOCK (inv 148)",
+  "notes": "CFP driver, ~0.17 W. Mount on main heatsink (insulated) next to Q9. Pins 1E 2C 3B.",
+  "rating": "80V 1.5A 12.5W",
+  "spice": {
+   "1": "EP",
+   "2": "BOP",
+   "3": "B10"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "Q12": {
+  "lib_id": "Transistor_BJT:Q_PNP_BCE",
+  "value": "2SA1941",
+  "fp": "Package_TO_SOT_THT:TO-3P-3_Vertical",
+  "mpn": "2SA1941-O (R or O rank)",
+  "mfr": "Toshiba",
+  "ds": "https://toshiba.semicon-storage.com/info/docget.jsp?did=20422&prodName=2SA1941",
+  "desc": "",
+  "stock": "IN STOCK (inv 147, 19 pcs)",
+  "notes": "Upper output. Emitter to +V; collector/tab = EP node. Insulate from heatsink. Pins 1B 2C 3E.",
+  "rating": "-140V -10A 100W(Tc25), Rth(j-c) 1.25K/W",
+  "spice": {
+   "1": "BOP",
+   "2": "EP",
+   "3": "VP"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R21": {
+  "lib_id": "Device:R",
+  "value": "100R",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F100R",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 150)",
+  "notes": "Output base-emitter resistor (CFP turn-off / driver current).",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "VP",
+   "2": "BOP"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R22": {
+  "lib_id": "Device:R",
+  "value": "0R33 / 5W",
+  "fp": "ClassA2:Yageo_SQP500_L22.0mm_W9.5mm_P30.48mm",
+  "mpn": "SQP500JB-0R33",
+  "mfr": "Yageo",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 289, 23 pcs)",
+  "notes": "CFP emitter/sense resistor. Iq = V(TP5 - TP4) / 0.33 (231 mV at 0.70 A).",
+  "rating": "5W 5% cement",
+  "spice": {
+   "1": "EP",
+   "2": "OUT"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "TP5": {
+  "lib_id": "Connector:TestPoint",
+  "value": "EP (Iq)",
+  "fp": "TestPoint:TestPoint_Keystone_5000-5004_Miniature",
+  "mpn": "5003",
+  "mfr": "Keystone",
+  "ds": "",
+  "desc": "Test point, orange",
+  "stock": "BUY",
+  "notes": "",
+  "rating": "",
+  "spice": {
+   "1": "EP"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R23": {
+  "lib_id": "Device:R",
+  "value": "51R",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F51R",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 292)",
+  "notes": "Driver base stopper, at Q11 base.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "VBN",
+   "2": "B11"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "Q11": {
+  "lib_id": "Transistor_BJT:Q_PNP_ECB",
+  "value": "BD140",
+  "fp": "Package_TO_SOT_THT:TO-126-3_Vertical",
+  "mpn": "BD140",
+  "mfr": "STMicroelectronics",
+  "ds": "https://www.st.com/resource/en/datasheet/bd135.pdf",
+  "desc": "",
+  "stock": "IN STOCK (inv 149)",
+  "notes": "CFP driver. Mount on main heatsink (insulated) next to Q9. Pins 1E 2C 3B.",
+  "rating": "-80V -1.5A 12.5W",
+  "spice": {
+   "1": "EN",
+   "2": "BON",
+   "3": "B11"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "Q13": {
+  "lib_id": "Transistor_BJT:Q_NPN_BCE",
+  "value": "2SC5198",
+  "fp": "Package_TO_SOT_THT:TO-3P-3_Vertical",
+  "mpn": "2SC5198-O (R or O rank)",
+  "mfr": "Toshiba",
+  "ds": "https://toshiba.semicon-storage.com/info/docget.jsp?did=20663&prodName=2SC5198",
+  "desc": "",
+  "stock": "IN STOCK (inv 141, 20 pcs)",
+  "notes": "Lower output. Emitter to -V; collector/tab = EN node. Insulate from heatsink. Pins 1B 2C 3E.",
+  "rating": "140V 10A 100W(Tc25), Rth(j-c) 1.25K/W",
+  "spice": {
+   "1": "BON",
+   "2": "EN",
+   "3": "VN"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R24": {
+  "lib_id": "Device:R",
+  "value": "100R",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "LR1F100R",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 150)",
+  "notes": "Output base-emitter resistor.",
+  "rating": "0.6W 1% metal film",
+  "spice": {
+   "1": "BON",
+   "2": "VN"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R25": {
+  "lib_id": "Device:R",
+  "value": "0R33 / 5W",
+  "fp": "ClassA2:Yageo_SQP500_L22.0mm_W9.5mm_P30.48mm",
+  "mpn": "SQP500JB-0R33",
+  "mfr": "Yageo",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 289)",
+  "notes": "Iq = V(TP4 - TP6) / 0.33.",
+  "rating": "5W 5% cement",
+  "spice": {
+   "1": "OUT",
+   "2": "EN"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "TP6": {
+  "lib_id": "Connector:TestPoint",
+  "value": "EN (Iq)",
+  "fp": "TestPoint:TestPoint_Keystone_5000-5004_Miniature",
+  "mpn": "5003",
+  "mfr": "Keystone",
+  "ds": "",
+  "desc": "Test point, orange",
+  "stock": "BUY",
+  "notes": "",
+  "rating": "",
+  "spice": {
+   "1": "EN"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "TP4": {
+  "lib_id": "Connector:TestPoint",
+  "value": "OUT (offset)",
+  "fp": "TestPoint:TestPoint_Keystone_5000-5004_Miniature",
+  "mpn": "5002",
+  "mfr": "Keystone",
+  "ds": "",
+  "desc": "Test point, white",
+  "stock": "BUY",
+  "notes": "",
+  "rating": "",
+  "spice": {
+   "1": "OUT"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R28": {
+  "lib_id": "Device:R",
+  "value": "10R / 2W",
+  "fp": "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal",
+  "mpn": "RSMF2JT10R0",
+  "mfr": "Stackpole",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "ON ORDER (inv 707, 25 incoming)",
+  "notes": "Zobel. Do not substitute wirewound.",
+  "rating": "2W 5% metal oxide (non-inductive)",
+  "spice": {
+   "1": "OUT",
+   "2": "ZB"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "C10": {
+  "lib_id": "Device:C",
+  "value": "100n FILM",
+  "fp": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2",
+  "mpn": "R82DC3100DQ50J",
+  "mfr": "KEMET",
+  "ds": "",
+  "desc": "Film capacitor",
+  "stock": "IN STOCK (inv 406)",
+  "notes": "Zobel capacitor; GND return to output/speaker ground.",
+  "rating": "63V PET",
+  "spice": {
+   "1": "ZB",
+   "2": "0"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "TP7": {
+  "lib_id": "Connector:TestPoint",
+  "value": "GND",
+  "fp": "TestPoint:TestPoint_Keystone_5000-5004_Miniature",
+  "mpn": "5001",
+  "mfr": "Keystone",
+  "ds": "",
+  "desc": "Test point, black",
+  "stock": "BUY",
+  "notes": "",
+  "rating": "",
+  "spice": {
+   "1": "0"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "L1": {
+  "lib_id": "Device:L",
+  "value": "1u5 AIR",
+  "fp": "Inductor_THT:L_Axial_L14.5mm_D5.8mm_P20.32mm_Horizontal_Fastron_HBCC",
+  "mpn": "Self-wound: 17 turns 1.0 mm enamelled Cu, 10 mm former (~1.5 uH)",
+  "mfr": "",
+  "ds": "",
+  "desc": "Air-core inductor",
+  "stock": "MAKE",
+  "notes": "Output isolation coil; required for capacitive-load stability (sim: 1.9 MHz oscillation into 100 nF without it). Footprint is a placeholder: match the coil at layout.",
+  "rating": "",
+  "spice": {
+   "1": "OUT",
+   "2": "SPK"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "R29": {
+  "lib_id": "Device:R",
+  "value": "2R7 / 1W",
+  "fp": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+  "mpn": "RR01J2R7TB",
+  "mfr": "TE Connectivity",
+  "ds": "",
+  "desc": "Resistor",
+  "stock": "IN STOCK (inv 499, 5 pcs)",
+  "notes": "Coil damping resistor.",
+  "rating": "1W 5% metal film",
+  "spice": {
+   "1": "OUT",
+   "2": "SPK"
+  },
+  "dnp": false,
+  "inbom": true
+ },
+ "J3": {
+  "lib_id": "Connector_Generic:Conn_01x02",
+  "value": "SPEAKER",
+  "fp": "Connector_Molex:Molex_KK-396_A-41791-0002_1x02_P3.96mm_Vertical",
+  "mpn": "09-65-2028",
+  "mfr": "Molex",
+  "ds": "",
+  "desc": "KK-396 2-way header, 7 A per contact",
+  "stock": "IN STOCK (inv 722, 16 pcs)",
+  "notes": "1 = SPK+ (amplifier output), 2 = speaker return to GND. External speaker protection goes in series here.",
+  "rating": "",
+  "spice": {
+   "1": "SPK",
+   "2": "0"
+  },
+  "dnp": false,
+  "inbom": true
+ }
+}
