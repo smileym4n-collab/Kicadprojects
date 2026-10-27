@@ -960,129 +960,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:TestPoint"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.762)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -3083,12 +2960,6 @@
 		(uuid "d171e1ea-f555-4815-b404-51c2e055a1ad")
 	)
 	(junction
-		(at 180.34 111.76)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ddcbfbe8-9283-4977-857c-dc0b5fa2b191")
-	)
-	(junction
 		(at 96.52 260.35)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3142,7 +3013,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 111.76) (xy 187.96 111.76)
+			(xy 172.72 111.76) (xy 187.96 111.76)
 		)
 		(stroke
 			(width 0)
@@ -3319,16 +3190,6 @@
 			(type default)
 		)
 		(uuid "4f39697b-ea1b-40c1-bfe7-1f1899f34de6")
-	)
-	(wire
-		(pts
-			(xy 172.72 111.76) (xy 180.34 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4fa63b32-e0ae-49ba-be80-6c99e1ecdf07")
 	)
 	(wire
 		(pts
@@ -4533,6 +4394,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "N/A"
+			(at 233.68 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "4580D"
+			(at 233.68 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "3f092b35-fa3d-4913-b3bb-802e61b55823")
 		)
@@ -4562,84 +4445,6 @@
 				(path "/d270386e-be0f-4547-84de-01e193634fe2/fa8397b4-ea4b-42ad-8298-76ce24d74b80"
 					(reference "U16")
 					(unit 3)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 180.34 111.76 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "08469f9a-5642-45a1-bae6-fc31b90ddfa0")
-		(property "Reference" "TP10"
-			(at 181.61 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "INPUT_SEL"
-			(at 181.61 109.22 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 180.34 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 180.34 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 180.34 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "92924b3e-4c12-46b8-9aba-c3b03629aaf2")
-		)
-		(instances
-			(project "SubProcessorDigital"
-				(path "/d270386e-be0f-4547-84de-01e193634fe2/fa8397b4-ea4b-42ad-8298-76ce24d74b80"
-					(reference "TP10")
-					(unit 1)
 				)
 			)
 		)
@@ -4734,6 +4539,28 @@
 			)
 		)
 		(property "Config" "LOW-LEVEL build only"
+			(at 30.48 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Multicomp Pro"
+			(at 30.48 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MC34629"
 			(at 30.48 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -4925,6 +4752,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Samsung"
+			(at 254 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CL21A106KOQNNNF"
+			(at 254 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b0c8fd27-d22b-470e-ac91-7290e917ed58")
 		)
@@ -5018,6 +4867,28 @@
 			)
 		)
 		(property "Notes" "GPIO45 strap low at reset"
+			(at 172.72 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "100KThickFilm"
+			(at 172.72 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Unknown"
 			(at 172.72 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -5140,6 +5011,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Unknown"
+			(at 138.43 210.82 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "1KThickFilm"
+			(at 138.43 210.82 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2b45568a-0396-46b3-bb93-f834152d992d")
 		)
@@ -5231,6 +5124,28 @@
 			)
 		)
 		(property "MPN" "100K thin film 0.5% 2012 (inventory)"
+			(at 90.17 254 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "100KThickFilm"
+			(at 90.17 254 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Unknown"
 			(at 90.17 254 90)
 			(hide yes)
 			(show_name no)
@@ -5434,6 +5349,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Multicomp Pro"
+			(at 30.48 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MC34631"
+			(at 30.48 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "bc4c4a1c-f395-4ab2-b1b4-83949ec14df2")
 		)
@@ -5531,6 +5468,28 @@
 			)
 		)
 		(property "Config" "LOW-LEVEL build only"
+			(at 101.6 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 101.6 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "AGN2004H"
 			(at 101.6 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -5671,6 +5630,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "KOA Speer"
+			(at 109.22 241.3 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "660-RK73B2ATTD103J"
+			(at 109.22 241.3 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "731fdf9e-b44b-4c41-9a60-6617832212f7")
 		)
@@ -5764,6 +5745,28 @@
 			)
 		)
 		(property "MPN" "Walsin 0805N472J101CT C0G 100V (inventory)"
+			(at 88.9 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung"
+			(at 88.9 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CL21B472KDCNNNC"
 			(at 88.9 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -5877,6 +5880,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Samsung"
+			(at 88.9 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CL21B472KDCNNNC"
+			(at 88.9 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "23876d29-c945-4582-ba8f-d6fe62cb109c")
 		)
@@ -5968,6 +5993,28 @@
 			)
 		)
 		(property "MPN" "100K thin film 0.5% 2012 (inventory)"
+			(at 90.17 208.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "100KThickFilm"
+			(at 90.17 208.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Unknown"
 			(at 90.17 208.28 90)
 			(hide yes)
 			(show_name no)
@@ -6071,6 +6118,28 @@
 			)
 		)
 		(property "Config" "LOW-LEVEL build only"
+			(at 284.48 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 284.48 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "AGN2004H"
 			(at 284.48 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -6211,6 +6280,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Unknown"
+			(at 138.43 251.46 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "1KThickFilm"
+			(at 138.43 251.46 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "08ef809e-450a-4f4a-98b7-397def4f5a21")
 		)
@@ -6303,6 +6394,28 @@
 		)
 		(property "Config" "LOW-LEVEL build only"
 			(at 236.22 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "OnSemi"
+			(at 236.22 71.12 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "1N4148W"
+			(at 236.22 71.12 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6416,6 +6529,28 @@
 			)
 		)
 		(property "Config" "LOW-LEVEL build only"
+			(at 284.48 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 284.48 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RMCF0805FT16R0"
 			(at 284.48 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -6540,6 +6675,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "KOA Speer"
+			(at 96.52 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "660-RK73B2ATTD103J"
+			(at 96.52 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f7767c53-cef7-4a41-9f65-edec56a2e914")
 		)
@@ -6643,6 +6800,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Multicomp Pro"
+			(at 243.84 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MC0603B104K500CT"
+			(at 243.84 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e872ba18-fec6-4c7e-bdf9-2c001d071b66")
 		)
@@ -6736,6 +6915,28 @@
 			)
 		)
 		(property "MPN" "Multicomp Pro MC0603B104K500CT (100nF 50V X7R 10% 1608)"
+			(at 264.16 231.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Multicomp Pro"
+			(at 264.16 231.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MC0603B104K500CT"
 			(at 264.16 231.14 0)
 			(hide yes)
 			(show_name no)
@@ -6858,6 +7059,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 124.46 58.42 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RMCF0805FT4K70"
+			(at 124.46 58.42 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "92938025-5040-4da6-85ab-ab05039597a0")
 		)
@@ -6952,6 +7175,28 @@
 			)
 		)
 		(property "MPN" "Texas Instruments RC4580IDR SOIC-8 (inventory)"
+			(at 109.22 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "N/A"
+			(at 109.22 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "4580D"
 			(at 109.22 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -7092,6 +7337,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Nichicon"
+			(at 128.27 251.46 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "UES1H100MPM"
+			(at 128.27 251.46 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9a966cd9-7c8d-424f-b2a1-8cc04c9ef373")
 		)
@@ -7185,6 +7452,28 @@
 			)
 		)
 		(property "Config" "LOW-LEVEL build only"
+			(at 226.06 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "NXP"
+			(at 226.06 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "BC849C"
 			(at 226.06 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -7299,6 +7588,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Unknown"
+			(at 269.24 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "1KThickFilm"
+			(at 269.24 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f6a17e8e-f19b-4c2c-a65c-2b2bd2b07453")
 		)
@@ -7392,6 +7703,28 @@
 			)
 		)
 		(property "MPN" "Taiyo Yuden TMK316B7106KL-TD 25V X7R (inventory)"
+			(at 274.32 231.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung"
+			(at 274.32 231.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CL21A106KOQNNNF"
 			(at 274.32 231.14 0)
 			(hide yes)
 			(show_name no)
@@ -7659,6 +7992,28 @@
 				)
 			)
 		)
+		(property "Manufacturer_Part_Number" "100KThickFilm"
+			(at 90.17 248.92 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Unknown"
+			(at 90.17 248.92 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "214d7098-b96f-4c15-b523-ee528a9d1458")
 		)
@@ -7839,6 +8194,28 @@
 			)
 		)
 		(property "Notes" "Must match Cg: fc = 3.4 kHz"
+			(at 109.22 193.04 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung"
+			(at 109.22 193.04 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CL21B472KDCNNNC"
 			(at 109.22 193.04 90)
 			(hide yes)
 			(show_name no)
@@ -8196,6 +8573,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 124.46 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RMCF0805FT4K70"
+			(at 124.46 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "da83da48-aad5-49cd-a7ec-abb6c29329e4")
 		)
@@ -8387,6 +8786,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "KOA Speer"
+			(at 109.22 200.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "660-RK73B2ATTD103J"
+			(at 109.22 200.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a4b79454-2950-48c5-83cd-10227285c9a8")
 		)
@@ -8481,6 +8902,28 @@
 			)
 		)
 		(property "MPN" "Texas Instruments RC4580IDR SOIC-8 (inventory)"
+			(at 109.22 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "N/A"
+			(at 109.22 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "4580D"
 			(at 109.22 251.46 0)
 			(hide yes)
 			(show_name no)
@@ -8623,6 +9066,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 228.6 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RMCF0805FT16R0"
+			(at 228.6 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f7c91cba-4ae6-477b-91f7-5b16ad78fa21")
 		)
@@ -8715,6 +9180,28 @@
 		)
 		(property "Config" "LOW-LEVEL build only"
 			(at 292.1 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "OnSemi"
+			(at 292.1 71.12 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "1N4148W"
+			(at 292.1 71.12 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8826,6 +9313,28 @@
 			)
 		)
 		(property "Notes" "DC block: ADC input is self-biased at AVDD/2"
+			(at 128.27 210.82 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Nichicon"
+			(at 128.27 210.82 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "UES1H100MPM"
 			(at 128.27 210.82 90)
 			(hide yes)
 			(show_name no)
@@ -9028,6 +9537,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "KOA Speer"
+			(at 96.52 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "660-RK73B2ATTD103J"
+			(at 96.52 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1d9e8cf0-41cd-4f50-857a-6c9652d9f799")
 		)
@@ -9122,6 +9653,28 @@
 			)
 		)
 		(property "Config" "LOW-LEVEL build only"
+			(at 101.6 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 101.6 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "AGN2004H"
 			(at 101.6 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -9498,6 +10051,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Walsin"
+			(at 144.78 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "0805B103K500CT"
+			(at 144.78 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a1b50227-9b59-49d2-a5fb-0ef17f7f9acd")
 		)
@@ -9679,6 +10254,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Panasonic"
+			(at 228.6 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "AGN2004H"
+			(at 228.6 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a60afce2-09c7-4f8c-bc64-629606921f6a")
 		)
@@ -9791,6 +10388,28 @@
 			)
 		)
 		(property "Config" "LOW-LEVEL build only"
+			(at 101.6 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 101.6 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "AGN2004H"
 			(at 101.6 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -9998,6 +10617,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Unknown"
+			(at 213.36 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "1KThickFilm"
+			(at 213.36 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2f97af60-7fe4-4f92-ac15-2fe46d5e56b0")
 		)
@@ -10100,6 +10741,28 @@
 			)
 		)
 		(property "Notes" "Must match Cg: fc = 3.4 kHz"
+			(at 109.22 233.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung"
+			(at 109.22 233.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CL21B472KDCNNNC"
 			(at 109.22 233.68 90)
 			(hide yes)
 			(show_name no)
@@ -10447,6 +11110,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "NXP"
+			(at 281.94 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "BC849C"
+			(at 281.94 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "7718fd09-3415-4e04-aae4-fa1ea8717a37")
 		)
@@ -10554,6 +11239,28 @@
 			)
 		)
 		(property "Notes" "Place at PCM1863 pin"
+			(at 144.78 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Walsin"
+			(at 144.78 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "0805B103K500CT"
 			(at 144.78 257.81 0)
 			(hide yes)
 			(show_name no)
@@ -10679,6 +11386,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Multicomp Pro"
+			(at 30.48 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MC34633"
+			(at 30.48 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "be63f40a-5964-443c-93bb-dd2e6b968cb8")
 		)
@@ -10779,6 +11508,28 @@
 			)
 		)
 		(property "Config" "LOW-LEVEL build only"
+			(at 101.6 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 101.6 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "AGN2004H"
 			(at 101.6 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -10898,6 +11649,28 @@
 			)
 		)
 		(property "MPN" "100K thin film 0.5% 2012 (inventory)"
+			(at 90.17 213.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "100KThickFilm"
+			(at 90.17 213.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Unknown"
 			(at 90.17 213.36 90)
 			(hide yes)
 			(show_name no)

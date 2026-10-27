@@ -258,129 +258,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:TestPoint"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.762)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -1801,7 +1678,7 @@
 		)
 		(uuid "1bdb9a0a-b819-40be-bcb3-c045d6e4959a")
 	)
-	(text "trips if +3V3_DAC < 3.07 V"
+	(text "trips if +3V3_DAC < 2.79 V (TPS3808G30)"
 		(exclude_from_sim no)
 		(at 119.38 180.34 0)
 		(effects
@@ -1911,7 +1788,7 @@
 		)
 		(uuid "8c2e6318-5223-49db-8d67-412339f2bdea")
 	)
-	(text "trips if +3V3_A_ADC < 3.07 V"
+	(text "trips if +3V3_A_ADC < 2.79 V (TPS3808G30)"
 		(exclude_from_sim no)
 		(at 185.42 180.34 0)
 		(effects
@@ -1922,7 +1799,7 @@
 		)
 		(uuid "acb87bf2-06fc-419c-8e9a-3dfc601de6f2")
 	)
-	(text "trips if +3V3_D_ADC < 3.07 V"
+	(text "trips if +3V3_D_ADC < 2.79 V (TPS3808G30)"
 		(exclude_from_sim no)
 		(at 251.46 180.34 0)
 		(effects
@@ -2047,12 +1924,6 @@
 		(uuid "fa75c739-9b20-4f3a-9d1a-2365a1f10279")
 	)
 	(junction
-		(at 200.66 60.96)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "15fdf0c8-cdd7-494c-a5a2-e2a3f3077b95")
-	)
-	(junction
 		(at 160.02 60.96)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2077,22 +1948,10 @@
 		(uuid "7d2dfe6c-201c-42a6-a963-43c1814ba52f")
 	)
 	(junction
-		(at 177.8 99.06)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "82adeddd-48af-4515-9103-0d33e4515094")
-	)
-	(junction
 		(at 40.64 157.48)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8f714796-3a9f-44db-9434-a4a805b2145b")
-	)
-	(junction
-		(at 200.66 81.28)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9730c770-da38-4f65-93c5-2dcb9e2d1751")
 	)
 	(junction
 		(at 182.88 60.96)
@@ -2119,12 +1978,6 @@
 		(uuid "dece8541-35ed-4a86-b55e-ad625b235ca9")
 	)
 	(junction
-		(at 66.04 256.54)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e21b4b66-758d-45ec-86bf-5a950205b3d1")
-	)
-	(junction
 		(at 165.1 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2135,12 +1988,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fcb11747-0d12-49da-97ef-65d8c8b190c9")
-	)
-	(junction
-		(at 124.46 231.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ff1fe25a-f332-4d80-b7db-e172547b4816")
 	)
 	(no_connect
 		(at 254 160.02)
@@ -2264,7 +2111,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 60.96) (xy 200.66 60.96)
+			(xy 182.88 60.96) (xy 213.36 60.96)
 		)
 		(stroke
 			(width 0)
@@ -2334,16 +2181,6 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 60.96) (xy 213.36 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "56e65158-ecea-4642-bc5d-11793034b926")
-	)
-	(wire
-		(pts
 			(xy 124.46 86.36) (xy 127 86.36)
 		)
 		(stroke
@@ -2374,7 +2211,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 256.54) (xy 66.04 256.54)
+			(xy 55.88 256.54) (xy 76.2 256.54)
 		)
 		(stroke
 			(width 0)
@@ -2424,7 +2261,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 99.06) (xy 190.5 99.06)
+			(xy 165.1 99.06) (xy 190.5 99.06)
 		)
 		(stroke
 			(width 0)
@@ -2461,16 +2298,6 @@
 			(type default)
 		)
 		(uuid "78039c60-d1f5-45ac-8c00-3ae9c5c1e3fc")
-	)
-	(wire
-		(pts
-			(xy 165.1 99.06) (xy 177.8 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "824de78b-5473-4c3a-9259-f4e2d9148062")
 	)
 	(wire
 		(pts
@@ -2514,16 +2341,6 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 231.14) (xy 134.62 231.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "986a8cec-02a2-4186-96bc-3f61ed5aef7d")
-	)
-	(wire
-		(pts
 			(xy 78.74 86.36) (xy 71.12 86.36)
 		)
 		(stroke
@@ -2564,7 +2381,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 81.28) (xy 200.66 81.28)
+			(xy 182.88 81.28) (xy 213.36 81.28)
 		)
 		(stroke
 			(width 0)
@@ -2594,16 +2411,6 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 256.54) (xy 76.2 256.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cdfc580e-acdc-4459-986d-e44eb9e3950a")
-	)
-	(wire
-		(pts
 			(xy 208.28 160.02) (xy 210.82 160.02)
 		)
 		(stroke
@@ -2611,16 +2418,6 @@
 			(type default)
 		)
 		(uuid "ce7a9449-bc92-489f-9ec6-0e86639f5a4d")
-	)
-	(wire
-		(pts
-			(xy 200.66 81.28) (xy 213.36 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cea0c515-40cc-44fd-a884-dd576903e172")
 	)
 	(wire
 		(pts
@@ -2714,7 +2511,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 231.14) (xy 124.46 231.14)
+			(xy 114.3 231.14) (xy 134.62 231.14)
 		)
 		(stroke
 			(width 0)
@@ -3017,7 +2814,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TPS3808G33DBVR"
+		(property "Value" "TPS3808G30DBVR"
 			(at 269.24 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3061,7 +2858,7 @@
 				)
 			)
 		)
-		(property "MPN" "TPS3808G33DBVR"
+		(property "MPN" "TPS3808G30DBVR"
 			(at 264.16 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -3073,6 +2870,17 @@
 			)
 		)
 		(property "Manufacturer" "Texas Instruments"
+			(at 264.16 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "TPS3808G30DBVR"
 			(at 264.16 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -3276,6 +3084,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Walsin"
+			(at 48.26 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "0805B103K500CT"
+			(at 48.26 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "66543e5d-cc70-4c13-8df1-112616eb068f")
 		)
@@ -3286,84 +3116,6 @@
 			(project "SubProcessorDigital"
 				(path "/d270386e-be0f-4547-84de-01e193634fe2/2c76bf54-ab24-4b31-9776-1c4ab501ad85"
 					(reference "C119")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 200.66 81.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "080fba8a-ddf7-4aa1-82d9-2ad3f9b8fb76")
-		(property "Reference" "TP18"
-			(at 201.93 76.2 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "FAULT_N"
-			(at 201.93 78.74 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 200.66 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 200.66 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 200.66 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8b897f47-d285-43ca-a229-6b920b363081")
-		)
-		(instances
-			(project "SubProcessorDigital"
-				(path "/d270386e-be0f-4547-84de-01e193634fe2/2c76bf54-ab24-4b31-9776-1c4ab501ad85"
-					(reference "TP18")
 					(unit 1)
 				)
 			)
@@ -3758,6 +3510,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Multicomp Pro"
+			(at 157.48 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MC0603B104K500CT"
+			(at 157.48 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "34c5bda4-e223-4e40-bffc-d59efa1bb206")
 		)
@@ -3851,6 +3625,17 @@
 			)
 		)
 		(property "Manufacturer" "Texas Instruments"
+			(at 66.04 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "TPS3808G01DBVR"
 			(at 66.04 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -4288,6 +4073,17 @@
 				)
 			)
 		)
+		(property "Manufacturer_Part_Number" "SN74AUP1G74DCUR"
+			(at 101.6 236.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fd4fab18-2ad0-4a9b-8755-48c9d6b7fedd")
 		)
@@ -4632,6 +4428,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 71.12 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RMCF0805FT3K30"
+			(at 71.12 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4a17776d-ac58-4dcd-9cc6-4c9f4d328c5f")
 		)
@@ -4714,6 +4532,28 @@
 			)
 		)
 		(property "MPN" "Multicomp Pro MC0603B104K500CT (100nF 50V X7R 10% 1608)"
+			(at 223.52 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Multicomp Pro"
+			(at 223.52 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MC0603B104K500CT"
 			(at 223.52 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -4981,6 +4821,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "OnSemi"
+			(at 182.88 71.12 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "1N4148W"
+			(at 182.88 71.12 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4b0c32f5-9001-4593-8cd1-a3bd619ae091")
 		)
@@ -5018,7 +4880,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TPS3850H01DRCR"
+		(property "Value" "TPS3850H01DRCT"
 			(at 101.6 60.96 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5062,7 +4924,7 @@
 				)
 			)
 		)
-		(property "MPN" "TPS3850H01DRCR"
+		(property "MPN" "TPS3850H01DRCT"
 			(at 101.6 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -5095,7 +4957,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Part_Number" "TPS3850H01DRCR"
+		(property "Manufacturer_Part_Number" "TPS3850H01DRCT"
 			(at 101.6 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -5314,6 +5176,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "KOA Speer"
+			(at 167.64 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "660-RK73B2ATTD103J"
+			(at 167.64 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5c0ac769-c48c-4e50-968c-7de361bbe476")
 		)
@@ -5394,6 +5278,28 @@
 			)
 		)
 		(property "MPN" "Susumu RR1220P-223-D thin film 0.5% (inventory)"
+			(at 64.77 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Unknown"
+			(at 64.77 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "22KThickFilm"
 			(at 64.77 86.36 90)
 			(hide yes)
 			(show_name no)
@@ -5574,6 +5480,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Multicomp Pro"
+			(at 91.44 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MC0603B104K500CT"
+			(at 91.44 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c5c66d63-4ede-4a0f-a2a8-4dd8414ec63a")
 		)
@@ -5584,84 +5512,6 @@
 			(project "SubProcessorDigital"
 				(path "/d270386e-be0f-4547-84de-01e193634fe2/2c76bf54-ab24-4b31-9776-1c4ab501ad85"
 					(reference "C118")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 124.46 231.14 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5ffded45-8e87-46de-abc3-873754837aad")
-		(property "Reference" "TP20"
-			(at 125.73 226.06 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "RLY_EN_LATCH"
-			(at 125.73 228.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 124.46 231.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 124.46 231.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 124.46 231.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "cd15d96e-fdb0-4def-8889-3e92c0f03441")
-		)
-		(instances
-			(project "SubProcessorDigital"
-				(path "/d270386e-be0f-4547-84de-01e193634fe2/2c76bf54-ab24-4b31-9776-1c4ab501ad85"
-					(reference "TP20")
 					(unit 1)
 				)
 			)
@@ -5923,7 +5773,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TPS3808G33DBVR"
+		(property "Value" "TPS3808G30DBVR"
 			(at 203.2 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5967,7 +5817,7 @@
 				)
 			)
 		)
-		(property "MPN" "TPS3808G33DBVR"
+		(property "MPN" "TPS3808G30DBVR"
 			(at 198.12 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -5979,6 +5829,17 @@
 			)
 		)
 		(property "Manufacturer" "Texas Instruments"
+			(at 198.12 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "TPS3808G30DBVR"
 			(at 198.12 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -6095,84 +5956,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 66.04 256.54 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6a900b06-bdfa-4750-9205-8a979c85e282")
-		(property "Reference" "TP21"
-			(at 67.31 251.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "AUDIO_READY"
-			(at 67.31 254 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 66.04 256.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 256.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 66.04 256.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "574f19fc-05e2-4710-9b2c-319275351806")
-		)
-		(instances
-			(project "SubProcessorDigital"
-				(path "/d270386e-be0f-4547-84de-01e193634fe2/2c76bf54-ab24-4b31-9776-1c4ab501ad85"
-					(reference "TP21")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 157.48 149.86 0)
 		(unit 1)
@@ -6245,84 +6028,6 @@
 			(project "SubProcessorDigital"
 				(path "/d270386e-be0f-4547-84de-01e193634fe2/2c76bf54-ab24-4b31-9776-1c4ab501ad85"
 					(reference "#PWRPRO019")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 200.66 60.96 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "757e4f5b-e1e1-47e9-93d8-986750394ffa")
-		(property "Reference" "TP19"
-			(at 201.93 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SUP_RST_N"
-			(at 201.93 58.42 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 200.66 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 200.66 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 200.66 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8f5315ae-3d7d-4e53-a76b-9d69cf0e233e")
-		)
-		(instances
-			(project "SubProcessorDigital"
-				(path "/d270386e-be0f-4547-84de-01e193634fe2/2c76bf54-ab24-4b31-9776-1c4ab501ad85"
-					(reference "TP19")
 					(unit 1)
 				)
 			)
@@ -6650,6 +6355,28 @@
 				)
 			)
 		)
+		(property "Manufacturer_Part_Number" "100KThickFilm"
+			(at 165.1 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Unknown"
+			(at 165.1 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9e5dc2c5-c584-408b-b50d-150f2461e435")
 		)
@@ -6732,6 +6459,28 @@
 			)
 		)
 		(property "MPN" "Multicomp Pro MC0603B104K500CT (100nF 50V X7R 10% 1608)"
+			(at 289.56 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Multicomp Pro"
+			(at 289.56 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MC0603B104K500CT"
 			(at 289.56 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -6834,6 +6583,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Multicomp Pro"
+			(at 119.38 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MC0603B104K500CT"
+			(at 119.38 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2f4cce8e-2589-4d77-aa7a-2ad4d5189c76")
 		)
@@ -6916,6 +6687,28 @@
 			)
 		)
 		(property "MPN" "KOA RK73B2ATTD103J (inventory)"
+			(at 160.02 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KOA Speer"
+			(at 160.02 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "660-RK73B2ATTD103J"
 			(at 160.02 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -7084,6 +6877,28 @@
 			)
 		)
 		(property "MPN" "270k thick film 2012 (inventory)"
+			(at 34.29 157.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Unknown"
+			(at 34.29 157.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "270KThickFilm"
 			(at 34.29 157.48 90)
 			(hide yes)
 			(show_name no)
@@ -7509,6 +7324,28 @@
 				)
 			)
 		)
+		(property "Manufacturer_Part_Number" "100KThickFilm"
+			(at 55.88 260.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Unknown"
+			(at 55.88 260.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "05ed3ccd-97f1-4629-99e6-55ac9df63a03")
 		)
@@ -7600,6 +7437,28 @@
 			)
 		)
 		(property "Notes" "CWD to VDD (9-11k): factory timing"
+			(at 54.61 71.12 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KOA Speer"
+			(at 54.61 71.12 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "660-RK73B2ATTD103J"
 			(at 54.61 71.12 90)
 			(hide yes)
 			(show_name no)
@@ -7803,7 +7662,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TPS3808G33DBVR"
+		(property "Value" "TPS3808G30DBVR"
 			(at 137.16 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7847,7 +7706,7 @@
 				)
 			)
 		)
-		(property "MPN" "TPS3808G33DBVR"
+		(property "MPN" "TPS3808G30DBVR"
 			(at 132.08 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -7859,6 +7718,17 @@
 			)
 		)
 		(property "Manufacturer" "Texas Instruments"
+			(at 132.08 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "TPS3808G30DBVR"
 			(at 132.08 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -7963,6 +7833,28 @@
 			)
 		)
 		(property "MPN" "10k 0.1% thin film 2012 (inventory)"
+			(at 40.64 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KOA Speer"
+			(at 40.64 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "660-RK73B2ATTD103J"
 			(at 40.64 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -8144,6 +8036,28 @@
 			)
 		)
 		(property "Notes" "At U7 VDD"
+			(at 30.48 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Multicomp Pro"
+			(at 30.48 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MC0603B104K500CT"
 			(at 30.48 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -8632,84 +8546,6 @@
 			(project "SubProcessorDigital"
 				(path "/d270386e-be0f-4547-84de-01e193634fe2/2c76bf54-ab24-4b31-9776-1c4ab501ad85"
 					(reference "#PWRPRO004")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 177.8 99.06 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "fcf8d7b6-ebba-4030-b971-4497fae3ba8c")
-		(property "Reference" "TP22"
-			(at 179.07 93.98 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "WDI"
-			(at 179.07 96.52 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 177.8 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 177.8 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 177.8 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ab64bf4d-d3d3-439b-85da-23515118d8c6")
-		)
-		(instances
-			(project "SubProcessorDigital"
-				(path "/d270386e-be0f-4547-84de-01e193634fe2/2c76bf54-ab24-4b31-9776-1c4ab501ad85"
-					(reference "TP22")
 					(unit 1)
 				)
 			)

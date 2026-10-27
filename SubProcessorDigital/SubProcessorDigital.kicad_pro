@@ -76,7 +76,80 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "clearance|175972300|127023300|7aa0a708-c5f2-45eb-a970-92eefda982ce|80e207a3-0072-48bb-8d2d-77209d8cc319",
+          ""
+        ],
+        [
+          "clearance|175972300|127523300|80e207a3-0072-48bb-8d2d-77209d8cc319|c3e522d0-a971-4831-9fd3-14247a3152d4",
+          ""
+        ],
+        [
+          "clearance|175972300|128348300|0bbc8c33-adce-4a54-820e-5eab3881114d|c3e522d0-a971-4831-9fd3-14247a3152d4",
+          ""
+        ],
+        [
+          "clearance|178772300|127848300|6f30362b-8155-4b8a-8855-1ad566977e5a|c108615c-df9c-4d00-9a4c-b57ab46e9417",
+          ""
+        ],
+        [
+          "clearance|178772300|128348300|fd12a908-e15b-4f3a-9274-c7c9bb24a9d9|6f30362b-8155-4b8a-8855-1ad566977e5a",
+          ""
+        ],
+        [
+          "courtyards_overlap|120513000|63692893|36768918-4bc4-4d7f-b12a-4caf9f6a7530|9349a4f7-83bf-4db7-a8b4-235bf57efc8e",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|117602000|158623000|5b0fbd84-9c99-43a4-bf32-b4874c8d8c0f|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|117602000|65532000|9349a4f7-83bf-4db7-a8b4-235bf57efc8e|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|210693000|158623000|b56dcdea-5e37-4b3d-a891-d607e20ccd6b|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|210820000|65532000|9fdc37a4-b1a0-422c-b6cc-1c2c4cc8efea|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "starved_thermal|146840000|119494000|49ed6976-b792-42d8-be0e-3b59161026e4|c8c9e82f-667c-4cf8-af93-6e47216cdfcb|F.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|177087000|121724800|49ed6976-b792-42d8-be0e-3b59161026e4|fdcfcbc5-9f81-42b0-afb8-0c4db9e54367|F.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|187082000|111572000|49ed6976-b792-42d8-be0e-3b59161026e4|fc2f1b82-0650-42b9-bb64-aa510560eb1c|F.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|187082000|116178500|49ed6976-b792-42d8-be0e-3b59161026e4|0fffa4b3-a6e9-4523-affe-3660b16958b3|F.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|203109400|111318000|49ed6976-b792-42d8-be0e-3b59161026e4|2a89010b-befe-4fe9-83b8-b6a1a45b806c|F.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|203180100|117384700|49ed6976-b792-42d8-be0e-3b59161026e4|d08d166b-f1e9-4de7-aac3-d3ef3b8b36df|F.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|203202700|123530552|49ed6976-b792-42d8-be0e-3b59161026e4|9ee60424-f33e-4ac5-a89a-339ee6019ebc|F.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|203222300|129586900|49ed6976-b792-42d8-be0e-3b59161026e4|889e177c-d8c8-409b-9d6a-4200e6210fc7|F.Cu",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -156,8 +229,8 @@
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
-        "min_text_height": 0.8,
-        "min_text_thickness": 0.08,
+        "min_text_height": 0.5,
+        "min_text_thickness": 0.05,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.2,
         "min_via_annular_width": 0.1,
@@ -539,7 +612,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "/Users/tomwatson/Desktop/Gerber files/SubProcessor/",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
@@ -586,34 +659,46 @@
           "show": true
         },
         {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Part_Number",
+          "name": "Manufacturer_Part_Number",
+          "show": true
+        },
+        {
           "group_by": true,
           "label": "DNP",
           "name": "${DNP}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
           "label": "Exclude from BOM",
           "name": "${EXCLUDE_FROM_BOM}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
           "label": "Exclude from Simulation",
           "name": "${EXCLUDE_FROM_SIM}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
           "label": "Exclude from Position Files",
           "name": "${EXCLUDE_FROM_POS_FILES}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
@@ -625,13 +710,55 @@
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
-          "show": true
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Part Number",
+          "name": "Mouser Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Notes",
+          "name": "Notes",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MPN",
+          "name": "MPN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description_1",
+          "name": "Description_1",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Config",
+          "name": "Config",
+          "show": false
         }
       ],
       "filter_string": "",
-      "group_symbols": true,
+      "group_symbols": false,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -676,7 +803,7 @@
         "uuid": "d270386e-be0f-4547-84de-01e193634fe2"
       }
     ],
-    "used_designators": "IC1-5,#PWRCON31,#PWRADC68,TP8,F2,C1-8,C17-21,C23-26,C35-36,C40,C66-77,C101-108,K2,K5,U1-2,U4-7,R1-11,R13-17,R19-22,R44-47,Q1,#PWR1-4,#PWR10,#PWR16-17,#PWR19-40,#PWR46-68,#PWR73-78,J1-6,J9,J11",
+    "used_designators": "IC1-5,#PWRCON31,#PWRADC68,TP8,F2,U1-2,U4-7,K2,K5,C1-8,C17-21,C23-26,C35-36,C40,C66-77,C101-108,#PWR1-4,#PWR10,#PWR16-17,#PWR19-40,#PWR46-68,#PWR73-78,Q1,R1-11,R13-17,R19-22,R44-47,J1-6,J9,J11",
     "variants": []
   },
   "sheets": [
