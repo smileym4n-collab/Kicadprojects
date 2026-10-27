@@ -1,0 +1,80 @@
+{
+  "updates": {
+    "R15": {
+      "Value": "0R33 / 5W",
+      "Footprint": "ClassA_Inventory:Yageo_SQP500_L22.0mm_W9.5mm_P30.48mm",
+      "Datasheet": "https://yageogroup.com/content/datasheet/asset/file/yageo-sqp_nsp_datasheet",
+      "Manufacturer": "Yageo",
+      "MPN": "SQP500JB-0R33",
+      "Inventory_ID": "",
+      "Inventory_Available": "",
+      "Inventory_Location": "",
+      "Assembly_Status": "USER SELECTED",
+      "Assignment_Notes": "User selected SQP500JB-0R33, 0.33 ohm 5W 5% wirewound cement; 22+/-1.5 x 9.5+/-1.0 x 9+/-1.0mm body, 0.8+/-0.05mm leads. Form leads to 30.48mm pitch; 1.2mm drill. Courtyard covers maximum body dimensions plus 0.5mm clearance. Not a non-inductive NSP part. Approx. 0.33W at 1A idle. No inventory quantity claimed.",
+      "Package": "Axial cement 22x9.5x9mm; formed pitch 30.48mm"
+    },
+    "R16": {
+      "Value": "0R33 / 5W",
+      "Footprint": "ClassA_Inventory:Yageo_SQP500_L22.0mm_W9.5mm_P30.48mm",
+      "Datasheet": "https://yageogroup.com/content/datasheet/asset/file/yageo-sqp_nsp_datasheet",
+      "Manufacturer": "Yageo",
+      "MPN": "SQP500JB-0R33",
+      "Inventory_ID": "",
+      "Inventory_Available": "",
+      "Inventory_Location": "",
+      "Assembly_Status": "USER SELECTED",
+      "Assignment_Notes": "User selected SQP500JB-0R33, 0.33 ohm 5W 5% wirewound cement; 22+/-1.5 x 9.5+/-1.0 x 9+/-1.0mm body, 0.8+/-0.05mm leads. Form leads to 30.48mm pitch; 1.2mm drill. Courtyard covers maximum body dimensions plus 0.5mm clearance. Not a non-inductive NSP part. Approx. 0.33W at 1A idle. No inventory quantity claimed.",
+      "Package": "Axial cement 22x9.5x9mm; formed pitch 30.48mm"
+    },
+    "R19": {
+      "Value": "0R33 / 5W",
+      "Footprint": "ClassA_Inventory:Yageo_SQP500_L22.0mm_W9.5mm_P30.48mm",
+      "Datasheet": "https://yageogroup.com/content/datasheet/asset/file/yageo-sqp_nsp_datasheet",
+      "Manufacturer": "Yageo",
+      "MPN": "SQP500JB-0R33",
+      "Inventory_ID": "",
+      "Inventory_Available": "",
+      "Inventory_Location": "",
+      "Assembly_Status": "USER SELECTED",
+      "Assignment_Notes": "User selected SQP500JB-0R33, 0.33 ohm 5W 5% wirewound cement; 22+/-1.5 x 9.5+/-1.0 x 9+/-1.0mm body, 0.8+/-0.05mm leads. Form leads to 30.48mm pitch; 1.2mm drill. Courtyard covers maximum body dimensions plus 0.5mm clearance. Not a non-inductive NSP part. Approx. 0.33W at 1A idle. No inventory quantity claimed.",
+      "Package": "Axial cement 22x9.5x9mm; formed pitch 30.48mm"
+    },
+    "R20": {
+      "Value": "0R33 / 5W",
+      "Footprint": "ClassA_Inventory:Yageo_SQP500_L22.0mm_W9.5mm_P30.48mm",
+      "Datasheet": "https://yageogroup.com/content/datasheet/asset/file/yageo-sqp_nsp_datasheet",
+      "Manufacturer": "Yageo",
+      "MPN": "SQP500JB-0R33",
+      "Inventory_ID": "",
+      "Inventory_Available": "",
+      "Inventory_Location": "",
+      "Assembly_Status": "USER SELECTED",
+      "Assignment_Notes": "User selected SQP500JB-0R33, 0.33 ohm 5W 5% wirewound cement; 22+/-1.5 x 9.5+/-1.0 x 9+/-1.0mm body, 0.8+/-0.05mm leads. Form leads to 30.48mm pitch; 1.2mm drill. Courtyard covers maximum body dimensions plus 0.5mm clearance. Not a non-inductive NSP part. Approx. 0.33W at 1A idle. No inventory quantity claimed.",
+      "Package": "Axial cement 22x9.5x9mm; formed pitch 30.48mm"
+    },
+    "R25": {
+      "Value": "470R",
+      "Manufacturer": "TT Electronics / Welwyn",
+      "MPN": "ASC0805-470RFT5",
+      "Datasheet": "https://www.ttelectronics.com/TTElectronics/media/ProductFiles/Datasheet/ASC.pdf",
+      "Inventory_ID": "218",
+      "Inventory_Available": "86",
+      "Inventory_Location": "SMD Parts",
+      "Assembly_Status": "IN STOCK",
+      "Assignment_Notes": "470R 1%, 0.125W thick-film, 2012 metric; owned stock reused. Replaces 3k3 to retain adjustment through 2A with four 0R33 ballasts. Includes R27/R26 loading: nominal unloaded Q10-base/sense ratio spans about 0.52 to 1. Start with wiper toward SENSE_AVG; maximum trim can exceed 3A cold. Set by measurement, not full travel.",
+      "Package": "2012 metric"
+    }
+  },
+  "old_text": "RV1 wiper toward SENSE_AVG = minimum current. Set unloaded and current limited.\nSet each R19/R20 to 220 mV (1.00 A each); R21 ~540 mV (2.00 A total).\nI = VBE(Q10) / [alpha x (0.27 + 0.22/2)]; alpha ~0.79 to 1.\nNominal range ~1.6-2.2 A; junction temperature/device spread: TBC.\nR27 pulls Q10 base toward full sense on open wiper: current decreases.\nThermally couple Q10 to lower-bank heatsink; hotter Q10 reduces current.\nQOUT1/2 and QSINK1/2 need substantial external heatsinking and\nelectrical isolation: Toshiba 2SC5198 collector tabs are electrically live.\nMatch parallel devices; each has its own non-inductive 0R22 ballast and 10R stopper.",
+  "new_text": "RV1 wiper toward SENSE_AVG = minimum current. Start unloaded/current limited.\nSet each R19/R20 to ~330 mV (1.00 A each); R21 ~540 mV (2 A total).\nR25 = 470R restores adjustment with 0R33 ballasts; R21 stays 0R27.\nSense ~ I x (0.27 + 0.33/2); Q10-base/sense ratio ~0.52 to 1.\nRange depends on Q10 temperature/beta and tolerances; max can exceed 3 A.\nR27 lowers current on open wiper. Thermally couple Q10 to sink heatsink.\nReset/readjust bias after replacement and warm-up; verify each branch.\nPower-device collector tabs are live: substantial heatsinking/isolation required.\nEach parallel device: own SQP500 0R33/5W wirewound ballast and 10R stopper.",
+  "junction_restored": true,
+  "junction": {
+    "junction_uuid": "0fe8f5e4-73d3-4a26-a230-0dc8418f8813",
+    "at": [
+      170.18,
+      154.94
+    ],
+    "reason": "Connect Q5 collector to common Q4/Q5 base net; diode-connected current-mirror reference"
+  },
+  "footprint": "ClassA_Inventory.pretty/Yageo_SQP500_L22.0mm_W9.5mm_P30.48mm.kicad_mod"
+}

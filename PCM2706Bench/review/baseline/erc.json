@@ -1,0 +1,203 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-27T10:53:32",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.5",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/ff8a2362-a8dc-4dab-ad7f-7cfd053a6692",
+            "violations": [
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol IC1 Pin 4 [FUNC3, Passive, Line]",
+                            "pos": {
+                                "x": 1.0033,
+                                "y": 1.143
+                            },
+                            "uuid": "8f934bb3-99a8-4ae0-9be4-bc55b2322efb"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol IC1 Pin 6 [HID0/MS, Passive, Line]",
+                            "pos": {
+                                "x": 1.0033,
+                                "y": 1.1938
+                            },
+                            "uuid": "8bafa24d-05c6-416f-bca0-5969099aaad5"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol IC1 Pin 7 [HID1/MC, Passive, Line]",
+                            "pos": {
+                                "x": 1.0033,
+                                "y": 1.2192
+                            },
+                            "uuid": "12a3911b-e1cf-4637-87c1-14e72b5746e6"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol IC1 Pin 8 [HID2/MD, Passive, Line]",
+                            "pos": {
+                                "x": 1.0033,
+                                "y": 1.2446
+                            },
+                            "uuid": "8a0794f5-ac1e-48e9-aca0-e9c301fafb14"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol IC1 Pin 11 [~{SSPND}, Passive, Line]",
+                            "pos": {
+                                "x": 1.1303,
+                                "y": 1.4224
+                            },
+                            "uuid": "0152057b-d769-44f7-adb5-833d3f8c42e6"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol IC1 Pin 14 [CK, Passive, Line]",
+                            "pos": {
+                                "x": 1.2065,
+                                "y": 1.4224
+                            },
+                            "uuid": "9eff0711-0eb7-499d-8196-9ae9f2202f0f"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol IC1 Pin 15 [DT, Passive, Line]",
+                            "pos": {
+                                "x": 1.2319,
+                                "y": 1.4224
+                            },
+                            "uuid": "ba7c9475-41f2-431d-a9f7-01e79a619313"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR020 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 2.2479,
+                                "y": 1.4986
+                            },
+                            "uuid": "71e0df7a-d599-4bc7-b1c2-5080742b899b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Label 'AMPVCC'",
+                            "pos": {
+                                "x": 3.9878,
+                                "y": 0.2413
+                            },
+                            "uuid": "ee8478c2-6623-44e6-9d9a-967d95240e04"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Symbol 'R_Potentiometer_Dual' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol RV1 [R_Potentiometer_Dual]",
+                            "pos": {
+                                "x": 1.6383,
+                                "y": 0.3048
+                            },
+                            "uuid": "fbaa261c-07c4-445f-9b64-a76ed43fd555"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'USB_B' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J3 [USB_B]",
+                            "pos": {
+                                "x": 2.3622,
+                                "y": 1.1176
+                            },
+                            "uuid": "66b9331f-e956-4ee6-a982-42e80e5fbcd2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                }
+            ]
+        }
+    ],
+    "source": "PCM2706Bench.kicad_sch"
+}

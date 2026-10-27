@@ -1,3 +1,11 @@
+> 0R33 update, 25 October 2026: R15/R16/R19/R20 now use user-selected Yageo SQP500JB-0R33 with a matching axial footprint; R25 is stocked 470R to retain the 2 A adjustment target. Setup voltages and loading calculation corrected. See [current revision](0R33-revision-2026-10-25/README.md). Earlier values/counts below are historical.
+
+> Standard footprint update, 25 October 2026: 20 custom assignments were replaced with standard KiCad footprints; 58 standard and 4 custom assignments remain. See [current footprint choices](standard-footprints-2026-10-25/README.md). Earlier custom-envelope descriptions below are historical.
+
+> ERC repair, 25 October 2026: the Q5 collector/common-base junction is now restored. Current ERC is 0 errors, 0 warnings; inventory/footprint assignments are preserved. See [repair verification](erc-fix-2026-10-25/verification.txt). Earlier baseline-error statements below are historical.
+
+> Inventory update, 2026-10-25: current assignments, changed capacitor ratings and the pre-existing Q4 ERC error are documented in [the inventory report](inventory-2026-10-25/README.md). The historical clean-ERC statements and provisional ratings below describe the earlier conversion, not the current saved schematic.
+
 # Mono Class-A — 40 V single-supply revision, 2026-10-06
 
 The output stage remains two upper 2SC5198 emitter followers over two independently controlled 2SC5198 current sinks. The external supply is now J3 pin 1 +40 V, pin 2 GND. This is an amplifier schematic only; the PCB and project settings were preserved. The live user-edited schematic was backed up in `before-single-supply/`, and its retained component UUIDs, placement and footprints were checked.

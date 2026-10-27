@@ -192,13 +192,13 @@ All other high-level footprints keep their placement.
 
 ### PROTECT sheet (rebuilt)
 
-- **U7 TPS3850H01DRCR**, the adjustable (0.4 V), under-voltage-only variant. The 22 k/3k3 divider trips at **3.07 V**: above the ESP32-S3 minimum of 3.0 V, and 165 mV below TS1117B's worst-case minimum of 3.235 V. A G33 variant would trip at 3.168 V, only ≈66 mV from the rail minimum, so LDO load transients risk false resets.
+- **U7 TPS3850H01DRCT** (250-piece reel of the TPS3850H01DRCR; identical part), the adjustable (0.4 V), under-voltage-only variant. The 22 k/3k3 divider trips at **3.07 V**: above the ESP32-S3 minimum of 3.0 V, and 165 mV below TS1117B's worst-case minimum of 3.235 V. A G33 variant would trip at 3.168 V, only ≈66 mV from the rail minimum, so LDO load transients risk false resets.
   - Watchdog: SET0 = 0, SET1 = 1, CWD = 10 k gives a window of 10.35 ms (max lower) to 165.8 ms (min upper). CRST open gives a 200 ms reset/WDO pulse.
   - WDI has a 100 k pull-down, so no edges occur while the GPIO is high-Z.
   - **RESET → ESP32 EN. WDO → FAULT_N only.** The ESP32 boots for longer than any useful window, so tying WDO to EN would cause a reset loop.
 - **Rail supervisors (TPS3808).** The SENSE input is independent of VDD, so a *dead* rail is still reported as a fault.
   - **U9 G01** monitors +15 V at 11.3 V (270 k/10 k + 10 nF) for early power-fail warning.
-  - **U10–U12 G33** monitor the DAC, ADC-A and ADC-D rails at 3.07 V.
+  - **U10–U12 TPS3808G30** monitor the DAC, ADC-A and ADC-D rails at **2.79 V** (changed 2026-10-23 from the G33's 3.07 V, which was out of stock). They still catch a dead or shorted LDO. A slow sag between 2.79 V and 3.0 V is not flagged; that would come from a drooping +5 V supply, which U9 already catches at the +15 V input.
   - All outputs are open-drain on **FAULT_N** (10 k pull-up). The symbol pin type was corrected to open-collector to match the datasheet.
 - **D5 1N4148W** makes a TPS3850 supply reset also pull FAULT_N low (≈0.6 V, below the 74AUP V<sub>IL</sub> of 0.9 V).
 - **U13 SN74AUP1G74 fault latch** (Schmitt inputs, so slow open-drain edges are fine):
@@ -457,9 +457,9 @@ No values are made from series or parallel combinations.
 | Qty | Part | Use |
 |---|---|---|
 | 1 (+1 spare) | TI **PCM1863QDBTRQ1** (Mouser 595-PCM1863QDBTRQ1), or commercial-grade PCM1863DBTR | IC2 ADC |
-| 1 (+1) | TI **TPS3850H01DRCR** | U7 supervisor/watchdog |
+| 1 (+1) | TI **TPS3850H01DRCT** (DigiKey; DRCR reel not stocked) | U7 supervisor/watchdog |
 | 1 | TI **TPS3808G01DBVR** | U9 +15 V monitor |
-| 3 | TI **TPS3808G33DBVR** | U10–U12 rail monitors |
+| 3 | TI **TPS3808G30DBVR** (DigiKey; G33 unavailable) | U10–U12 rail monitors |
 | 1 (+1) | TI **SN74AUP1G74DCUR** | U13 fault latch |
 | 1 | Vishay **VO617A-3** (DIP-4, being purchased) | U14 trigger opto |
 | 4 (100 ordered) | Nexperia **BC849C,215** NPN SOT-23 | Q1–Q4 relay drivers (replaces BC546) |
@@ -484,7 +484,7 @@ No values are made from series or parallel combinations.
 | U3 | LMR51430XFDDCR | `Package_TO_SOT_SMD:SOT-23-6` | SOT-23-THIN-6 (DDC) |
 | U1/U4/U5/U8 | TPS7A2033PDBVR | `Package_TO_SOT_SMD:SOT-23-5` | SOT-23-5 |
 | U6 | TS1117BCW33 | `Package_TO_SOT_SMD:SOT-223-3_TabPin2` | SOT-223 |
-| U7 | TPS3850H01DRCR | `Package_SON:VSON-10-1EP_3x3mm_P0.5mm_EP1.65x2.4mm` | VSON-10 (DRC0010J) |
+| U7 | TPS3850H01DRCT | `Package_SON:VSON-10-1EP_3x3mm_P0.5mm_EP1.65x2.4mm` | VSON-10 (DRC0010J) |
 | U9–U12 | TPS3808Gxx DBVR | `Package_TO_SOT_SMD:SOT-23-6` | SOT-23-6 |
 | U13 | SN74AUP1G74DCUR | `Package_SO:VSSOP-8_2.3x2mm_P0.5mm` | VSSOP-8 (DCU) |
 | U14 | VO617A-3 | `Package_DIP:DIP-4_W7.62mm` | DIP-4 through-hole |
@@ -518,7 +518,7 @@ No values are made from series or parallel combinations.
    - Reverse the supply: D1 must block.
 2. **Supervisors:**
    - Sweep +15 V down: FAULT_N (TP18) should fall at ≈11.3 V.
-   - Pull each 3.3 V LDO down through a resistor until it trips: FAULT_N ≈3.07 V; for +3V3_ESP, SUP_RST_N/EN (TP19/TP24).
+   - Pull each 3.3 V LDO down through a resistor until it trips: FAULT_N ≈2.79 V (U10–U12); for +3V3_ESP ≈3.07 V, SUP_RST_N/EN (TP19/TP24).
    - Short each LDO output to GND (current-limited): the corresponding monitor must report it.
 3. **Latch logic (ESP32 fitted, test firmware):**
    - AUDIO_READY edge → TP20 high → K1 closes; IO3 reads low.

@@ -31,7 +31,7 @@ Generated 2026-10-19 alongside the KiCad schematic in this folder.
 | `USB_Charger.kicad_sch` | J101 USB-C, D101 TVS1400, U102 TPD2E2U06, U101 BQ25895, J102 battery, F101, J103 NTC |
 | `PVDD_Boost.kicad_sch` | U201 TPS61088-Q1, VSYS -> PVDD 9.3 V |
 | `3V3_BuckBoost.kicad_sch` | U301 ISL91127IRAZ, VSYS -> +3V3 (switched) |
-| `Power_Control.kicad_sch` | U401 TPS7A2033 (+3V3_AON), U402 ATtiny412, SW401 encoder, J401 UPDI |
+| `Power_Control.kicad_sch` | U401 TPS7A2033 (+3V3_AON), U402 ATtiny412, J402 front-panel system connector (encoder + LEDs), J401 UPDI |
 | `ESP32.kicad_sch` | U501 ESP32-WROOM-32UE-N8R2, reset/boot, J501 programming, I2C pull-ups |
 | `Amplifier.kicad_sch` | U601 TAS5806M, L601/L602 CSAD0660-100M, output caps, J601/J602 speakers |
 | `Soundbar.kicad_sym` / `Soundbar.pretty` | Project library: custom symbols built from datasheet pin tables; footprints copied from your `Custom.pretty` (CSAD0660-100M, ESP32WROOM32UEN8R2, TS026650BK100SCRD) |
@@ -129,7 +129,7 @@ RFREQ 270k: fsw at VIN 4.2 V = 572 kHz
 
 RILIM 68k (MODE floating = PFM, TI eq.3): ILIM typ = 8.09 A, worst-case min ~ 6.59 A (typ - 1.5 A), est. max ~ 9.2 A. 2 x 5 W at 3.0 V needs ~5.7 A peak -> OK; the limit caps unlimited overdrive at low battery.
 If MODE is strapped to GND (FPWM, R205 fitted) the limit becomes 550000/R - 1.6 = 6.49 A typ: change RILIM to 56k.
-Inductor Coilcraft XAL7030-222ME: 2.2 uH +/-20%, DCR 15.07 mOhm max, Isat 18 A, Irms 10 A (20 C rise) >> ILIM max; copper loss at 4.5 A avg = 0.31 W.
+Inductor Bourns SRP6060FA-2R2M (replaced Coilcraft XAL7030-222ME, which DigiKey doesn't stock directly): 2.2 uH +/-20%, DCR 7.0 typ / 7.8 max mOhm, Isat 14 A (30% drop), Irms 11 A (20 C rise) / 14 A (40 C). Isat is well above the ~9.2 A worst-case ILIM; normal peak about 5.6 A. Copper loss at 4.5 A avg = 0.16 W. 6.6 x 6.4 x 5.8 mm.
 Soft start CSS 33 nF: tss = 1.204 x 33n / 5 uA = 7.9 ms; inrush to charge 270 uF by 5.8 V in tss: 0.20 A.
 FB divider current 1.204/47k = 25.6 uA (>= 20 uA recommended).
 
@@ -175,7 +175,7 @@ TS cut-off (TCO 44.75%) -> 44.5 C
 NTC open: TS = RT2/(RT1+RT2) = 85.2% > 73.25% -> "cold" -> charging suspended (fail-safe). NTC shorted: TS = 0 -> "hot" -> suspended.
 
 ### 3.6 3.3 V rails
-ISL91127IRAZ: VOUT = 0.8 x (1 + 1M/316k) = 3.332 V (FB 0.783-0.813 V -> 3.26-3.39 V). Inductor XFL4020-102ME 1 uH, Isat 4.5 A(-10%) vs 4.5 A switch limit. Output 2 x 22 uF.
+ISL91127IRAZ: VOUT = 0.8 x (1 + 1M/316k) = 3.332 V (FB 0.783-0.813 V -> 3.26-3.39 V). Inductor Würth 74438356010 (WE-MAPI 4020) 1 uH, Isat 5.3 A (-10%) / 11.5 A (-30%), above the 3.7-5.0 A P-FET peak current limit; DCR 15 mOhm max. Output 2 x 22 uF.
 ISL91127 at 0.5 A burst, VIN 3.0 V: eta ~ 92% -> 0.6 A from VSYS. Shutdown IQ 0.05 uA typ.
 AON LDO TPS7A2033: IQ 6.5 uA typ; ATtiny412 power-down 0.1 uA typ (2 uA max at 25 C).
 
@@ -219,7 +219,7 @@ AON LDO TPS7A2033: IQ 6.5 uA typ; ATtiny412 power-down 0.1 uA typ (2 uA max at 2
 | 12 | GPIO27 | I2S_DOUT | out | 22R series |
 | 13 | GPIO14 | TP501 | – | spare/debug |
 | 14 | GPIO12 | NC | – | strap: must be low at boot |
-| 16 | GPIO13 | status LED (green, 1k) | out | |
+| 16 | GPIO13 | BT_LED | out | R505 1k to J402-7 (off-board Bluetooth status LED) |
 | 23/24 | GPIO15/GPIO2 | NC | – | straps |
 | 25 | GPIO0 | ESP_IO0 | in | BOOT switch, J501-6 |
 | 26 | GPIO4 | BOOST_EN | out | 100k pull-down at TPS61088 |
@@ -227,7 +227,7 @@ AON LDO TPS7A2033: IQ 6.5 uA typ; ATtiny412 power-down 0.1 uA typ (2 uA max at 2
 | 28 | GPIO17 | TP502 | – | spare |
 | 29 | GPIO5 | NC | – | strap |
 | 30 | GPIO18 | AMP_FAULT_N | in | TAS5806M ADR/FAULT (after re-mapping) |
-| 31 | GPIO19 | TP503 | – | spare |
+| 31 | GPIO19 | PWR_LED | out | R509 1k to J402-6 (off-board power LED); input/off until firmware drives it |
 | 33 | GPIO21 | I2C_SDA | bidir | 4k7 to +3V3 |
 | 34/35 | RXD0/TXD0 | ESP_RXD0/TXD0 | – | J501 |
 | 36 | GPIO22 | I2C_SCL | out | 4k7 to +3V3 |
@@ -254,7 +254,7 @@ ADC1 pins are used for CC sensing because ADC2 is unavailable while Bluetooth is
 | TAS5806M (ADR 15k to DVDD) | 0x2D (8-bit write 0x5A) |
 
 ### Button node (BTN_RAW_N)
-Encoder switch S1 to GND. The node connects directly to BQ25895 /QON (internal 200k pull-up to BAT) and to ATtiny PA3 through D401.
+The off-board encoder's push switch (J402 pin 4 to pin 5 = GND) pulls this node low. The node connects directly to BQ25895 /QON (internal 200k pull-up to BAT) and to ATtiny PA3 through D401.
 - Holding the button ≥ 1.25–2.25 s exits BQ ship mode.
 - Holding ≥ 12–18 s with no VBUS gives a BQ25895 full system power cycle (BATFET_RST_EN default = 1). This is the hardware recovery path for a hung ATtiny.
 
@@ -414,7 +414,7 @@ Encoder switch S1 to GND. The node connects directly to BQ25895 /QON (internal 2
 - One short edge: USB-C (J101) and the battery KK-396 (J102). The BQ25895 sits within 15 mm.
 - Centre: TPS61088 next to the BQ SYS output, with the PVDD bus going directly to the TAS5806M.
 - Opposite short edge: TAS5806M with the filters and speaker connectors at the edge.
-- Long edge, away from the boost and Class-D: the ESP32 module with its U.FL. Encoder wherever the enclosure needs it.
+- Long edge, away from the boost and Class-D: the ESP32 module with its U.FL. J402 (system connector) near the ATtiny/ESP32 end, ideally at a board edge facing the front panel, so the lead is short.
 
 **BQ25895:**
 - PMID cap (C103) and the 100n at PMID/PGND get the tightest loop.
@@ -462,7 +462,7 @@ Encoder switch S1 to GND. The node connects directly to BQ25895 /QON (internal 2
 Avoid adding probe pads on SW nodes; use the inductor pads for scope probing (high dV/dt — label them).
 
 **Thermal:**
-- Expected dissipation at 2 x 5 W / 3.3 V: TAS ≈ 1.8 W, TPS61088 ≈ 0.7 W, L201 ≈ 0.3 W, BQ (charging 1.5 A) ≈ 0.6 W.
+- Expected dissipation at 2 x 5 W / 3.3 V: TAS ≈ 1.8 W, TPS61088 ≈ 0.7 W, L201 ≈ 0.16 W, BQ (charging 1.5 A) ≈ 0.6 W.
 - Keep the BQ and TPS61088 apart; they can both be hot while charging + playing.
 - Validate in the enclosure.
 
@@ -489,7 +489,7 @@ The full grouped BOM is in `TAS5806M-BOM.csv` (77 lines). Each line has the inve
 | MC34629/MC34631/MC34635 headers | 126/127/691 | |
 | TS02 switches | 537 | |
 | 1N4148W | 510 | |
-| KP-2012EC / KP-2012LSGC LEDs | 640/639 | |
+| MC34637 header (8-way) | 723 | not used: J402 needs 10 ways |
 
 Plus stocked MLCCs (2012/3216) and resistors (2012/1608): see the BOM `Stock` column.
 
@@ -504,8 +504,8 @@ Plus stocked MLCCs (2012/3216) and resistors (2012/1608): see the BOM `Stock` co
 | 1 | TPD2E2U06DCKR | TI | SC-70-3 | D+/D- ESD (stock USBLC6-2 has a 6 V VBUS pin that HVDCP 9/12 V would overstress) |
 | 1 | USB4105-GF-A | GCT | USB-C 16P | Receptacle, 5 A |
 | 1 | 0451008.MRL | Littelfuse | NANO2 6.1x2.7 | 8 A battery fuse |
-| 2 | XFL4020-102MEB | Coilcraft | 4x4x2.1 | 1 µH for BQ25895 and ISL91127 |
-| 1 | XAL7030-222MEB | Coilcraft | 7.5x7.2x3.1 | 2.2 µH boost |
+| 2 | 74438356010 | Würth Elektronik (WE-MAPI 4020) | 4.1 x 4.1 x 2.1 mm | 1 µH for BQ25895 (L101) and ISL91127 (L301). Replaced Coilcraft XFL4020-102MEB, which DigiKey doesn't stock. Isat 5.3 A (10 %), DCR 15 mΩ max. |
+| 1 | SRP6060FA-2R2M | Bourns | 6.6 x 6.4 x 5.8 mm | 2.2 µH boost (L201). Footprint `Soundbar:L_Bourns_SRP6060FA_BournsLayout` follows Bourns' recommended layout (1.65 x 5.6 mm pads, 2.5 mm gap). KiCad's stock footprint has 1.55 mm pads. |
 | 4 | 0.68 µF 63 VDC PET film, ±5 % | KEMET R82DC3680Z360J | Radial THT, 5 mm pitch, 7.2 x 4.5 x 9.5 mm | Class-D output filter (film chosen over X7R for linearity; CPC stock). The ±10 % R82DC3680Z360K is an acceptable substitute. |
 | 12 (+10) | 100 nF 50 V X7R | KEMET C0603C104M5RACTU | 1608 metric | Your standard decoupling part (stock 3216 would also work) |
 | 7 (+10) | 1 µF 25 V X7R | Samsung CL21B105KAFNNNG | 2012 metric | Your standard |
@@ -514,7 +514,9 @@ Plus stocked MLCCs (2012/3216) and resistors (2012/1608): see the BOM `Stock` co
 | 1 (DNP) | 47 pF C0G | Murata GRM1885C1H470JA01D | 1608 | Boost C8 tuning |
 | 1 | 150 Ω 1 % | Yageo RC0805FR-07150RL | 2012 | BQ ILIM (stock 150R has no recorded tolerance) |
 | 1 | 68 kΩ 1 % | Yageo RC0805FR-0768KL | 2012 | Boost ILIM |
-| 1 | EC11E18244A5 | Alps Alpine | EC11E | Encoder + switch |
+| 1 | EC11E18244A5 | Alps Alpine | EC11E (off-board, wired to J402) | Encoder + switch; panel-mounted with flying leads or on a small daughter board |
+| 1 | 22-27-2101 + 22-01-3107 | Molex | KK-254 10-way (CPC CN09598 / CN25778) | J402 system connector + housing; KK 2759/6459 crimps |
+| 3 | panel LEDs (power, BT, charge) | your choice | off-board | Choose LED, then set R509/R505/R106 (LED TUNE) |
 | 1 (DNP) | NCU18XH103F60RB | Murata | 1608 | Optional on-board NTC |
 | 1 | 10k NTC with leads (if the pack has none) | e.g. TDK/EPCOS B57861S0103F040 (B 3988 — verify; a 103AT/B3435 bead is preferred) | – | Cell-mounted NTC on J103 |
 
@@ -535,6 +537,38 @@ Plus stocked MLCCs (2012/3216) and resistors (2012/1608): see the BOM `Stock` co
    - Polypropylene (e.g. KEMET R76) would have lower loss but is physically larger at 0.68 µF.
    - Changed 2026-10-19; connectivity was unchanged, verified by netlist comparison.
    - The TAS5806M feedback is taken before the LC filter, so the filter caps' linearity is not corrected. Their audio-band current is small (Xc = 234 Ω at 1 kHz).
+2a. **Encoder moved off the board (2026-10-24).**
+   - SW401 (on-board Alps EC11E) replaced by J402, a 6-way 2.54 mm friction-lock header (Multicomp MC34635, housing MC34487, both stocked). Pinout:
+     1. ENC_A
+     2. ENC_C (GND)
+     3. ENC_B
+     4. GND (encoder bushing/shield)
+     5. Switch common (GND)
+     6. Switch (BTN_RAW_N)
+   - The A/B pull-ups and 10k/10n RC filters stay on the main board, so the off-board part is just the bare encoder.
+   - Keep the lead short (≤ 20–30 cm), twisted or ribbon with GND between signals, and tie the encoder bushing to pin 4.
+   - **ESD exposure (not added — your decision):**
+     - ENC_A/ENC_B reach the ESP32 only through 10k series resistors and 10n, which is reasonable protection.
+     - BTN_RAW_N goes straight to BQ25895 /QON, and to ATtiny PA3 through D401, with no series resistance.
+     - If the encoder is touchable (metal shaft/knob) and the bushing can't be grounded, a low-capacitance ESD array on J402 pins 1, 3 and 6 would be prudent. I can add one (DNP footprint or fitted).
+   - **Superseded 2026-10-24 by 2b** (J402 is now the 10-way system connector).
+2b. **Front-panel system connector, no onboard LEDs (2026-10-24).**
+   - J402 is now a 10-way KK-254 header (Molex 22-27-2101, housing 22-01-3107, both from CPC; not in inventory). Pinout:
+     1. ENC_A
+     2. GND (encoder common C, bushing)
+     3. ENC_B
+     4. ENC_SW (BTN_RAW_N)
+     5. GND (switch common)
+     6. PWR_LED anode: ESP32 GPIO19 through R509 1k
+     7. BT_LED anode: ESP32 GPIO13 through R505 1k
+     8. GND (LED cathodes for pins 6 and 7)
+     9. CHG_LED anode: VSYS through R106 1k5
+     10. CHG_LED cathode: BQ25895 STAT (open drain; on = charging, 1 Hz blink = fault)
+   - D102 (charge) and D501 (status) are removed from the board. The charge LED keeps working with the system off because STAT is driven by the BQ25895 itself.
+   - LED current for a 1.8–2.1 V LED: about 1.2–1.5 mA from the GPIOs (1k), and about 1.1–1.6 mA for the charge LED (1k5 from VSYS 3.5–4.2 V). Marked LED TUNE: pick the panel LEDs, then set R509/R505/R106. A blue/white LED (Vf ≈ 2.8–3 V) from 3.3 V gives only about 0.3–0.5 mA with 1k — use a lower value or a high-efficiency part.
+   - GPIO19 and GPIO13 are inputs until firmware configures them, so both panel LEDs stay off through boot.
+   - ESD: the LED lines now also leave the board. GPIO pins see 1k in series, STAT sees the LED and 1k5; BTN_RAW_N still has no series resistance (see 2a).
+   - **PCB:** run *Tools → Update PCB from Schematic* (F8): J402 changes to the 10-way footprint, D102 and D501 are removed, R509 is added.
 3. **No reverse-polarity FET on the battery (your decision).**
    - Fitted: a polarised KK-396 connector plus F101.
    - A low-side N-MOSFET (gate to BAT+) would need Rds(on) ≤ 5 mΩ guaranteed at Vgs = 2.5–3 V. I did not verify a specific part.
@@ -545,7 +579,7 @@ Plus stocked MLCCs (2012/3216) and resistors (2012/1608): see the BOM `Stock` co
 7. **Boost output disconnect.** The TPS61088 has none, so in OFF state PVDD ≈ VSYS − 0.5 V. The amplifier is held in shutdown (7 µA). Add a high-side P-FET only if a true zero is needed.
 8. **ESP32 back-feed via the CC-sense resistors:** ≤ 15 µA when USB is present and the system is OFF. Accepted and documented.
 9. **Inductor footprints:**
-   - XFL4020 uses the KiCad XAL4020 land pattern. Verify against Coilcraft document 745.
+   - L101/L301 (Würth 74438356010) use KiCad `L_Wuerth_MAPI-4020`. It matches land pattern 1 in Würth datasheet rev 003.002 exactly: 0.98 x 3.7 mm pads, 1.39 mm gap. Würth also says no vias or traces under the inductor.
    - CSAD0660 uses your existing footprint, which matches Codaca's 2.6 x 2.65 mm pads, 1–2 / 4–3 windings.
    - Winding-to-winding coupling (k) is not specified. Measure L(1–2) with 4–3 open and shorted.
 10. **Stocked header footprints:** the MC34629/31 friction-lock headers are drawn with the Molex KK-254 footprint. Verify against the Multicomp drawing.
@@ -579,7 +613,7 @@ Plus stocked MLCCs (2012/3216) and resistors (2012/1608): see the BOM `Stock` co
   - [ ] USB-C A/B mapping
 - [ ] Polarities:
   - [ ] D401 anode to PA3
-  - [ ] LEDs D102 (K to STAT) and D501
+  - [ ] J402 pinout on the front-panel board (LED anodes on 6/7/9, cathodes on 8 and 10)
   - [ ] C620 electrolytic + to PVDD
   - [ ] TVS1400 IN to VBUS
 - [ ] Default states with the ESP32 unpowered:
@@ -593,7 +627,7 @@ Plus stocked MLCCs (2012/3216) and resistors (2012/1608): see the BOM `Stock` co
   - [ ] VBUS caps ≥ 25 V
   - [ ] PVDD caps 25 V (22 µF), 16 V (220 µF FR), 63 V film (0.68 µF)
   - [ ] BST 0.22 µF 25 V
-- [ ] Power ratings: F101 8 A; L201 Irms 10 A; CSAD Irms 3.5 A; 150R/68k signal-level only.
+- [ ] Power ratings: F101 8 A; L201 Irms 11 A (20 °C rise), 5.8 mm tall — check enclosure clearance; CSAD Irms 3.5 A; 150R/68k signal-level only.
 - [ ] Footprints match the ordered MPNs (§11.9–10). Verify the electrolytic diameter (FR 220 µF/16 V).
 - [ ] ERC clean (it is at generation time) and DRC clean after layout. Re-run ERC after any edit.
 - [ ] Antenna: U.FL position and coax route; no metal enclosure over the antenna.

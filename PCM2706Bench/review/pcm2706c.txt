@@ -1,0 +1,2681 @@
+PCM2704C/5C/6C/7C
+External ROM
+Line Out
+S/PDIF
+USB
+HID Controls
+VDD
+VCCL
+VCCR
+VCCP
+AGNDR
+AGNDL
+ZGND
+DGND
+PGND
+SPI I2S
+Burr-Brown□Audio
+Product
+Folder
+Sample &
+Buy
+T echnical
+Documents
+Tools &
+Software
+Support &
+Community
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015
+PCM270xCStereoAudioDACWithUSBInterface,Single-EndedHeadphoneOutputand
+S/PDIFOutput
+1 Features 2 Applications
+1• On-Chip USB Interface: • USB Headphones
+• USB Audio Speaker– No Dedicated Device Driver Needed
+• USB CRT/LCD Monitor– Full-Speed Transceivers
+• USB Audio Interface Box– Fully Compliant With USB 2.0 Specification
+• USB-Featured Consumer Audio Product– USB 1.1 Descriptors With USB Audio Class
+Support
+3 Description– Certified by USB-IF
+The PCM270xC are TI's single-chip USB stereo– Partially Programmable Descriptors audio digital-to-analog converters (DACs) with USB– Adaptive Isochronous Transfer for Playback 2.0 compliant full-speed protocol controller and
+S/PDIF. The USB-protocol controller works with no– Bus-Powered or Self-Powered Operation
+software code, but USB descriptors can be modified• Sampling Rates: 32 kHz, 44.1 kHz, and 48 kHz in some areas (for example, vendor ID/product ID)• On-Chip Clock Generator With Single 12-MHz through the use of an external ROM (PCM2704C andClock Source PCM2706C) or serial peripheral interface (SPI)
+• Single Power Supply: (PCM2705C and PCM2707C). The PCM270xC also
+employ SpAct™ architecture, TI's unique system that– Bus-Powered: 5 V, Typical (VBUS) recovers the audio clock from USB packet data. On-– Self-Powered: 3.3 V, Typical chip analog phase-locked loops (PLLs) with SpAct
+• 16-Bit Delta-Sigma Stereo DAC enable playback with low clock jitter.
+– Analog Performance at 5 V (Bus-Powered),
+Device Information(1)
+3.3 V (Self-Powered):
+PART NUMBER PACKAGE BODY SIZE (NOM)– THD + N: 0.006% RL > 10 kΩ, Self-
+PCM2704CPowered SSOP (28) 5.30 mm × 10.20 mm
+PCM2705C– THD + N: 0.025% RL = 32 Ω
+PCM2706C– SNR = 98 dB TQFP (32) 7.00 mm × 7.00 mm
+PCM2707C
+– Dynamic Range: 98 dB
+(1) For all available packages, see the orderable addendum at– PO = 12 mW, RL = 32 Ω the end of the data sheet.
+– Oversampling Digital Filter
+Block Diagram– Passband Ripple = ±0.04 dB
+– Stop-Band Attenuation = –50 dB
+– Single-Ended Voltage Output
+– Analog LPF Included
+• Multiple Functions:
+– Up to Eight Human Interface Device (HID)
+Interfaces (Model and Setting Dependent)
+– Suspend Flag
+– S/PDIF Out With SCMS
+– External ROM Interface (PCM2704C/6C)
+– Serial Programming Interface (PCM2705C/7C)
+– I2S Interface (Selectable on PCM2706C/7C)
+1
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+Table of Contents
+9.1 Overview ................................................................. 181 Features .................................................................. 1
+9.2 Functional Block Diagrams ..................................... 182 Applications ........................................................... 1
+9.3 Feature Description................................................. 203 Description ............................................................. 1
+9.4 Device Functional Modes........................................ 254 Revision History..................................................... 2
+9.5 Programming........................................................... 265 Device Comparison Table..................................... 3 9.6 Register Maps ......................................................... 296 Pin Configuration and Functions ......................... 4 10 Application and Implementation........................ 307 Specifications......................................................... 7 10.1 Application Information.......................................... 307.1 Absolute Maximum Ratings ...................................... 7 10.2 Typical Application ............................................... 307.2 ESD Ratings.............................................................. 7 11 Power Supply Recommendations ..................... 377.3 Recommended Operating Conditions ...................... 8
+12 Layout................................................................... 377.4 Thermal Information: PCM2704C, PCM2705C......... 8
+12.1 Layout Guidelines ................................................. 377.5 Thermal Information: PCM2706C, PCM2707C......... 8
+12.2 Layout Example .................................................... 377.6 Electrical Characteristics: PCM2704CDB,
+13 Device and Documentation Support ................. 40PCM2705CDB, PCM2706CPJT, PCM2707CPJT ..... 9
+13.1 Documentation Support ........................................ 407.7 Audio Interface Timing Characteristics ................... 11
+13.2 Related Links ........................................................ 407.8 Audio Clock Timing Characteristics ........................ 11
+13.3 Community Resources.......................................... 407.9 External ROM Read Interface Timing
+Characteristics ......................................................... 11 13.4 Trademarks ........................................................... 40
+7.10 SPI Timing Characteristics.................................... 12 13.5 Electrostatic Discharge Caution ............................ 40
+7.11 Typical Characteristics .......................................... 14 13.6 Glossary ................................................................ 40
+8 Parameter Measurement Information ................ 17 14 Mechanical, Packaging, and Orderable
+Information ........................................................... 409 Detailed Description ............................................ 18
+4 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision A (July 2012) to Revision B Page
+• Added Handling Ratings table, Feature Description section, Device Functional Modes, Application and
+Implementation section, Power Supply Recommendations section, Layout section, Device and Documentation
+Support section, and Mechanical, Packaging, and Orderable Information section ............................................................... 1
+Changes from Original (August 2011) to Revision A Page
+• Changed product status from Mixed Status to Production Data ............................................................................................ 1
+• Changed Features section to show full compliance with USB2.0 Specification (but still using USB1.1 descriptors) ............ 1
+• Changed Description section to show USB2.0 compliance (USB1.1 was absorbed into 2.0 specification) .......................... 1
+2 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+5 Device Comparison Table
+FEATURE PCM2704C PCM2705C PCM2706C PCM2707C
+Supply Voltage (V) 3.3, 5 3.3, 5 3.3, 5 3.3, 5
+Control Interface HID HID, SPI HID, SPI HID, SPI
+S/PDIF Output S/PDIF OutputS/PDIF Output S/PDIF OutputAdditional Features HP Output HP OutputHP Output HP OutputExt. ROM I/F Ext. ROM I/F
+Package Group SSOP SSOP TQFP TQFP
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 3
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+XTO
+CK
+DT
+PSEL
+DOUT
+DGND
+VDD
+D/c45
+D+
+VBUS
+ZGND
+AGNDL
+VCCL
+V LOUT
+XTI
+SSPND
+TEST0
+TEST1
+HID2/MD
+HID1/MC
+HID0/MS
+HOST
+VCCP
+PGND
+VCOM
+AGNDR
+VCCR
+V ROUT
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+28
+27
+26
+25
+24
+23
+22
+21
+20
+19
+18
+17
+16
+15
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+6 Pin Configuration and Functions
+PCM2704C, PCM2705C DB Package
+28-Pin SSOP
+Top View
+Pin Functions: DB Package (PCM2704C/PCM2705C)
+PIN
+DESCRIPTION
+NAME NO. I/O
+AGNDL 12 — Analog ground for headphone amplifier of L-channel
+AGNDR 17 — Analog ground for headphone amplifier of R-channel
+CK 2 O Clock output for external ROM (PCM2704C). Must be left open (PCM2705C).
+D+ 9 I/O USB differential input/output plus (1)
+D– 8 I/O USB differential input/output minus (1)
+DGND 6 — Digital ground
+DOUT 5 O S/PDIF output
+DT 3 I/O Data input/output for external ROM (PCM2704C). Must be left open with pullup resistor (PCM2705C). (1)
+HID0/MS 22 I HID key state input (mute), active high (PCM2704C). MS input (PCM2705C) (2)
+HID1/MC 23 I HID key state input (volume up), active high (PCM2704C). MC input (PCM2705C) (2)
+HID2/MD 24 I HID key state input (volume down), active high (PCM2704C). MD input (PCM2705C) (2)
+Host detection during self-powered operation (connect to VBUS). Max power select during bus-poweredHOST 21 I operation (low: 100 mA, high: 500 mA). (3)
+PGND 19 — Analog ground for DAC, OSC, and PLL
+PSEL 4 I Power source select (low: self-power, high: bus-power) (1)
+SSPND 27 O Suspend flag, active low (low: suspend, high: operational)
+TEST0 26 I Test pin. Must be set high (1)
+TEST1 25 I Test pin. Must be set high (1)
+VBUS 10 — Connect to USB power (VBUS) for bus-powered operation. Connect to VDD for self-powered operation.
+VCCL 13 — Analog power supply for headphone amplifier of L-channel (4)
+(1) LV-TTL level.
+(2) LV-TTL level with internal pulldown
+(3) LV-TTL level, 5-V tolerant
+(4) Connect decoupling capacitor to GND. Supply 3.3 V for self-powered applications.
+4 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+Pin Functions: DB Package (PCM2704C/PCM2705C) (continued)
+PIN
+DESCRIPTION
+NAME NO. I/O
+VCCP 20 — Analog power supply for DAC, OSC, and PLL (4)
+VCCR 16 — Analog power supply for headphone amplifier of R-channel (4)
+VCOM 18 — Common voltage for DAC (VCCP/2). Connect decoupling capacitor to PGND.
+VDD 7 — Digital power supply (4)
+VOUTL 14 O DAC analog output for L-channel
+VOUTR 15 O DAC analog output for R-channel
+XTI 28 I Crystal oscillator input (1)
+XTO 1 O Crystal oscillator output
+ZGND 11 — Ground for internal regulator
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 5
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PGND
+VCCP
+HOST
+FUNC3
+FUNC0
+HID0/MS
+HID1/MC
+HID2/MD
+VBUS
+D+
+D/c45
+VDD
+DGND
+FUNC1
+FUNC2
+DOUT
+1
+2
+3
+4
+5
+6
+7
+8
+24
+23
+22
+21
+20
+19
+18
+17
+V
+COM
+32
+FSEL
+9
+AGNDR
+31
+TEST
+10
+V
+CCR
+30
+SSPND
+11
+V R
+OUT
+29
+XTI
+12
+V L
+OUT
+28
+XTO
+13
+V
+CCL
+27
+CK
+14
+AGNDL
+26
+DT
+15
+ZGND+
+25
+PSEL
+16
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+PCM2706C, PCM2707C PJT Package
+32-Pin TQFP
+Top View
+Pin Functions: PJT Package (PCM2706C/PCM2707C)
+PIN
+DESCRIPTION
+NAME NO. I/O
+AGNDL 26 — Analog ground for headphone amplifier of L-channel
+AGNDR 31 — Analog ground for headphone amplifier of R-channel
+CK 14 O Clock output for external ROM (PCM2706C). Must be left open (PCM2707C).
+D+ 23 I/O USB differential input/output plus (1)
+D– 22 I/O USB differential input/output minus (1)
+DGND 20 — Digital ground
+DOUT 17 O S/PDIF output/I2S data output
+DT 15 I/O Data input/output for external ROM (PCM2706C). Must be left open with pullup resistor (PCM2707C). (1)
+FSEL 9 I Function select (low: I2S data output, high: S/PDIF output) (2)
+FUNC0 5 I/O HID key state input (next track), active high (FSEL = 1). I2S LR clock output (FSEL = 0). (3)
+FUNC1 19 I/O HID key state input (previous track), active high (FSEL = 1). I2S bit clock output (FSEL = 0). (3)
+FUNC2 18 I/O HID key state input (stop), active high (FSEL = 1). I2S system clock output (FSEL = 0). (3)
+FUNC3 4 I HID key state input (play/pause), active high (FSEL = 1). I2S data input (FSEL = 0). (3)
+HID0/MS 6 I HID key state input (mute), active high (PCM2706C). MS input (PCM2707C). (3)
+HID1/MC 7 I HID key state input (volume up), active high (PCM2706C). MC input (PCM2707C). (3)
+HID2/MD 8 I HID key state input (volume down), active high (PCM2706C). MD input (PCM2707C). (3)
+Host detection during self-powered operation (connect to VBUS). Max power select during bus-poweredHOST 3 I operation. (low: 100 mA, high: 500 mA). (4)
+PGND 1 — Analog ground for DAC, OSC, and PLL
+PSEL 16 I Power source select (low: self-power, high: bus-power) (1)
+SSPND 11 O Suspend flag, active low (low: suspend, high: operational)
+TEST 10 I Test pin. Must be set high (1)
+(1) LV-TTL level
+(2) LV-TTL level.
+(3) LV-TTL level with internal pulldown
+(4) LV-TTL level, 5-V tolerant
+6 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+Pin Functions: PJT Package (PCM2706C/PCM2707C) (continued)
+PIN
+DESCRIPTION
+NAME NO. I/O
+VBUS 24 — Connect to USB power (VBUS) for bus-powered operation. Connect to VDD for self-powered operation.
+VCCL 27 — Analog power supply for headphone amplifier of L-channel (5)
+VCCP 2 — Analog power supply for DAC, OSC, and PLL (5)
+VCCR 30 — Analog power supply for headphone amplifier of R-channel (5)
+VCOM 32 — Common voltage for DAC (VCCP/2). Connect decoupling capacitor to PGND.
+VDD 21 — Digital power supply (5)
+VOUTL 28 O DAC analog output for L-channel
+VOUTR 29 O DAC analog output for R-channel
+XTI 12 I Crystal oscillator input (1)
+XTO 13 O Crystal oscillator output
+ZGND 25 — Ground for internal regulator
+(5) Connect decoupling capacitor to GND. Supply 3.3 V for self-powered applications.
+7 Specifications
+7.1 Absolute Maximum Ratings
+Over operating free-air temperature range unless otherwise noted. (1)
+MIN MAX UNIT
+VBUS –0.3 6.5 V
+Supply voltage
+VCCP, VCCL, VCCR, VDD –0.3 4 V
+Supply voltage VCCP, VCCL, VCCR, VDD ±0.1 Vdifferences
+Ground voltage PGND, AGNDL, AGNDR, DGND, ZGND ±0.1 Vdifferences
+HOST –0.3 6.5 V
+D+, D–, HID0/MS, HID1/MC, HID2/MD, XTI, XTO, DOUT,Digital input voltage
+SSPND, CK, DT, PSEL, FSEL, TEST, TEST0, TEST1, FUNC0, –0.3 (VDD + 0.3) < 4 V
+FUNC1, FUNC2, FUNC3
+VCOM –0.3 (VCCP + 0.3) < 4 V
+Analog input voltage VOUTR –0.3 (VCCR + 0.3) < 4 V
+VOUTL –0.3 (VCCL + 0.3) < 4 V
+Input current (any pins except supplies) ±10 mA
+Ambient temperature under bias –40 125 °C
+Junction temperature 150 °C
+Package temperature (IR reflow, peak) 260 °C
+Storage temperature, Tstg –55 150 °C
+(1) Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress ratings
+only, and functional operation of the device at these or any other conditions beyond those indicated under Recommended Operating
+Conditions is not implied. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+7.2 ESD Ratings
+MAX UNIT
+Human body model (HBM), per ANSI/ESDA/JEDEC JS-001, all pins (1) ±3000ElectrostaticV(ESD) Vdischarge Charged device model (CDM), per JEDEC specification JESD22-C101, all pins (2) ±1500
+(1) JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+(2) JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process.
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 7
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+7.3 Recommended Operating Conditions
+Over operating free-air temperature range.
+MIN NOM MAX UNIT
+VBUS 4.35 5 5.25
+Supply voltage V
+VCCP, VCCL, VCCR, VDD 3 3.3 3.6
+Digital input logic level TTL-compatible
+Digital input clock frequency 11.994 12 12.006 MHz
+Analog output load resistance 16 32 Ω
+Analog output load capacitance 100 pF
+Digital output load capacitance 20 pF
+Operating free-air temperature, TA –25 85 °C
+7.4 Thermal Information: PCM2704C, PCM2705C
+PCM2704C, PCM2705C
+THERMAL METRIC (1) DB (SSOP) UNIT
+28 PINS
+RθJA Junction-to-ambient thermal resistance 68.2 °C/W
+RθJC(top) Junction-to-case (top) thermal resistance 27.2 °C/W
+RθJB Junction-to-board thermal resistance 29.5 °C/W
+ψJT Junction-to-top characterization parameter 2.7 °C/W
+ψJB Junction-to-board characterization parameter 29.1 °C/W
+(1) For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application
+report, SPRA953.
+7.5 Thermal Information: PCM2706C, PCM2707C
+PCM2706C, PCM2707C
+THERMAL METRIC (1) PJT (TQFP) UNIT
+32 PINS
+RθJA Junction-to-ambient thermal resistance 68.2 °C/W
+RθJC(top) Junction-to-case (top) thermal resistance 27.2 °C/W
+RθJB Junction-to-board thermal resistance 29.5 °C/W
+ψJT Junction-to-top characterization parameter 2.7 °C/W
+ψJB Junction-to-board characterization parameter 29.1 °C/W
+(1) For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application
+report, SPRA953.
+8 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+7.6 Electrical Characteristics: PCM2704CDB, PCM2705CDB, PCM2706CPJT, PCM2707CPJT
+All specifications at TA = 25°C, VBUS = 5 V, ƒS = 44.1 kHz, ƒIN = 1 kHz, and 16-bit data (unless otherwise noted). For the Host
+interface, apply USB revision 1.1, full-speed. For audio data format, use USB isochronous data format.
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+INPUT LOGIC
+Input logic high level 2 3.3
+VIH VDC
+Input logic high level (1) 2 5.5
+Input logic low level –0.3 0.8
+VIL VDC
+Input logic low level (1) –0.3 0.8
+Input logic high current (2) VIN = 3.3 V ±10
+IIH μA
+Input logic high current VIN = 3.3 V 65 100
+Input logic low current (2) VIN = 0 V ±10
+IIL μA
+Input logic low current VIN = 0 V ±10
+OUTPUT LOGIC
+Output logic high level (3) IOH = –2 mA 2.8
+VOH VDC
+Output logic high level IOH = –2 mA 2.4
+Output logic low level (3) IOL = 2 mA 0.3
+VOL VDC
+Output logic low level IOL = 2 mA 0.4
+CLOCK FREQUENCY
+Input clock frequency, XTI 11.994 12 12.006 MHz
+32
+ƒS Sampling frequency 44.1 kHz
+48
+DAC CHARACTERISTICS
+Resolution 16 bits
+Audio data channel 1, 2 channel
+DC ACCURACY
+Gain mismatch, channel-to-channel ±2 ±8 % of FSR
+Gain error ±2 ±8 % of FSR
+Bipolar zero error ±3 ±6 % of FSR
+DYNAMIC PERFORMANCE (4)
+RL > 10 kΩ, self-powered, 0.006% 0.01%VOUT = 0 dB
+Line (5)
+THD + Total harmonic RL > 10 kΩ, bus-powered, 0.012% 0.02%N distortion + noise VOUT = 0 dB
+RL = 32 Ω, self- or bus-Headphone 0.025%powered, VOUT = 0 dB
+THD + Total harmonic distortion + noise VOUT = –60 dB 2%N
+Dynamic range EIAJ, A-weighted 90 98 dB
+SNR Signal-to-noise ratio EIAJ, A-weighted 90 98 dB
+Channel separation 60 70 dB
+(1) HOST pin.
+(2) D+, D–, HOST, TEST, TEST0, TEST1, DT, PSEL, FSEL, XTI pins.
+(3) FUNC0, FUNC1, and FUNC2 pins.
+(4) ƒIN = 1 kHz, using the System Two Cascade™ audio measurement system by Audio Precision® in RMS mode with a 20-kHz low-pass
+filter (LPF) and 400-Hz high-pass filter (HPF).
+(5) THD + N performance varies slightly, depending on the effective output load, including dummy load R7 and R8 in Figure 35.
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 9
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+Electrical Characteristics: PCM2704CDB, PCM2705CDB, PCM2706CPJT,
+PCM2707CPJT (continued)
+All specifications at TA = 25°C, VBUS = 5 V, ƒS = 44.1 kHz, ƒIN = 1 kHz, and 16-bit data (unless otherwise noted). For the Host
+interface, apply USB revision 1.1, full-speed. For audio data format, use USB isochronous data format.
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+ANALOG OUTPUT
+0.55 VCCLOutput voltage VPP0.55 VCCR
+Center voltage 0.5 VCCP V
+Line AC-coupling 10 kΩ
+Load impedance
+Headphone AC-coupling 16 32 Ω
+–3 dB 140 kHz
+LPF frequency response
+ƒ = 20 kHz –0.1 dB
+DIGITAL FILTER PERFORMANCE
+Passband 0.454 ƒS Hz
+Stop band 0.546 ƒS Hz
+Passband ripple ±0.04 dB
+Stop band attenuation –50 dB
+Delay time 20 / ƒS s
+POWER SUPPLY REQUIREMENTS
+VBUS Bus-powered 4.35 5 5.25
+Voltage range VDC
+VCCP, VCCL, VCCR, VDD Self-powered 3 3.3 3.6
+Line DAC operation 23 30
+mA
+Supply current Headphone DAC operation (RL = 32 Ω) 35 46
+Line/headphone Suspend mode (6) 150 190 μA
+Line DAC operation 76 108
+mWPower dissipation Headphone DAC operation (RL = 32 Ω) 116 166(self-powered)
+Line/headphone Suspend mode (6) 495 684 μW
+Line DAC operation 115 158
+mWPower dissipation Headphone DAC operation (RL = 32 Ω) 175 242(bus-powered)
+Line/headphone Suspend mode (6) 750 998 μW
+Internal power- VCCP, VCCL, VCCR, VDD Bus-powered 3.2 3.35 3.5 VDCsupply voltage (7)
+TEMPERATURE RANGE
+Operating temperature –25 85 °C
+(6) In USB suspended state
+(7) VDD, VCCP, VCCL, VCCR pins. These pins work as output pins of internal power supply for bus-powered operation.
+10 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+7.7 Audio Interface Timing Characteristics
+Load capacitance of LRCK, BCK, and DOUT is 20 pF. For timing diagrams, see Figure 1 and Figure 2.
+MIN MAX UNIT
+t(BCY) BCK pulse cycle time 300 ns
+t(BCH) BCK pulse duration, high 100 ns
+t(BCL) BCK pulse duration, low 100 ns
+t(BL) LRCK delay time from BCK falling edge –20 40 ns
+t(BD) DOUT delay time from BCK falling edge –20 40 ns
+t(LD) DOUT delay time from LRCK edge –20 40 ns
+t(DS) DIN setup time 20 ns
+t(DH) DIN hold time 20 ns
+7.8 Audio Clock Timing Characteristics
+Load capacitance is 20 pF. For timing diagrams, see Figure 3.
+MIN MAX UNIT
+t(SLL), t(SLH) LRCK delay time from SYSCK rising edge –5 10 ns
+t(SBL), t(SBH) BCK delay time from SYSCK rising edge –5 10 ns
+7.9 External ROM Read Interface Timing Characteristics
+For timing diagrams, see Figure 4.
+MIN MAX UNIT
+ƒ(CK) CK clock frequency 100 kHz
+t(BUF) Bus free time between a STOP and a START condition 4.7 μs
+t(LOW) Low period of the CK clock 4.7 μs
+t(HI) High period of the CK clock 4 μs
+t(RS-SU) Setup time for START/repeated START condition 4.7 μs
+t(S-HD) Hold time for START/repeated START condition 4 μst(RS-HD)
+t(D-SU) Data setup time 250 ns
+t(D-HD) Data hold time 0 900 ns
+t(CK-R) Rise time of CK signal 20 + 0.1 CB 1000 ns
+t(CK-F) Fall time of CK signal 20 + 0.1 CB 1000 ns
+t(DT-R) Rise time of DT signal 20 + 0.1 CB 1000 ns
+t(DT-F) Fall time of DT signal 20 + 0.1 CB 1000 ns
+t(P-SU) Setup time for STOP condition 4 μs
+CB Capacitive load for DT and CK lines 400 pF
+VNH Noise margin at high level for each connected device (including hysteresis) 0.2 VDD V
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 11
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+t(BCH) t(BCL) t(BL)
+t(BD) t(LD)
+t(DH)
+t(DS)
+t(BCY)
+LRCK (Output)
+BCK (Output)
+DOUT (Output)
+DIN (Input)
+50% of VDD
+50% of VDD
+50% of VDD
+50% of VDD
+1 1 1
+1 1 1
+2 2 2
+2 2 2
+3 3
+3 3
+14 14
+14 14
+15 15
+15 15
+16 16
+16 16
+SYSCK
+(256 f )S
+LRCK
+BCK
+(64 f )S
+DOUT
+DIN
+MSB MSB MSBLSB LSB
+L-Channel R-Channel
+1/fS
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+7.10 SPI Timing Characteristics
+For timing diagrams, see Figure 5.
+MIN MAX UNIT
+t(MCY) MC pulse cycle time 100 ns
+t(MCL) MC low-level time 50 ns
+t(MCH) MC high-level time 50 ns
+t(MHH) MS high-level time 100 ns
+t(MLS) MS falling edge to MC rising edge 20 ns
+t(MLH) MS hold time 20 ns
+t(MDH) MD hold time 15 ns
+t(MDS) MD setup time 20 ns
+Figure 1. Audio Data Interface Format
+Figure 2. Audio Interface Timing
+12 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+LSB
+MS
+MC
+MD
+50% of VDD
+50% of VDD
+50% of VDD
+t(MLS)
+t(MCH)
+t(MCL)
+t(MCY)
+t(MDS)
+t(MDH)
+t(MLH)
+t(MHH)
+t(BUF) t(D-SU)
+t(S-HD)
+t(CK-F)
+t(HI) t(RS-SU)
+t(LOW)
+t(CK-R) t(RS-HD)
+t(D-HD)
+t(DT -R)
+t(DT -F)
+t(P-SU)
+Start
+Repeated
+Start Stop
+DT
+CK
+t(SLL)
+t(SBL)
+t(SLH)
+t(SBH)
+LRCK
+(Output)
+SYSCK
+(Output)
+BCK
+(Output)
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+Figure 3. Audio Clock Timing
+Figure 4. External ROM Read Interface Timing Requirements
+Figure 5. SPI Timing Diagram
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 13
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+0.05
+0.04
+0.03
+0.02
+0.01
+0
+Total Harmonic Distortion + Noise (%)
+–50 100
+Free-Air Temperature (°C)
+G005
+–25 0 25 50 75
+10 kΩ
+32 Ω
+0.05
+0.04
+0.03
+0.02
+0.01
+0
+Total Harmonic Distortion + Noise (%)
+–50 100
+Free-Air Temperature (°C)
+G006
+–25 0 25 50 75
+10 kΩ
+32 Ω
+0
+0.5
+1
+1.5
+2/c45
+/c45
+/c45
+/c45
+Amplitude (dB)
+0.01 0.1 1 10 100
+Frequency (kHz)
+G003
+0
+20
+40
+60
+80
+/c45
+/c45
+/c45
+/c45
+Amplitude (dB)
+1 10 100 1k 10k
+Frequency (kHz)
+G004
+0 1 2 3 4
+G001
+0
+20
+40
+60
+80
+100
+/c45
+/c45
+/c45
+/c45
+/c45
+/c45
+/c45
+120
+140
+Amplitude (dB)
+Frequency (× f )S
+Frequency (× f )S
+0 0.1 0.2 0.4 0.3 0.5
+0.05
+0.04
+0.03
+0.02
+0.01
+0
+/c45
+/c45
+/c45
+/c45
+/c45
+0.01
+0.02
+0.03
+0.04
+0.05
+Amplitude (dB)
+G002
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+7.11 Typical Characteristics
+7.11.1 Internal Filter: DAC Digital Interpolation Filter Frequency Response
+All specifications at TA = 25°C, VBUS = 5 V, ƒS = 44.1 kHz, ƒIN = 1 kHz, 16-bit data (unless otherwise noted).
+Figure 7. Passband RippleFigure 6. Frequency Response
+7.11.2 Internal Filter: DAC Analog Low-Pass Filter Frequency Response
+All specifications at TA = 25°C, VBUS = 5 V, ƒS = 44.1 kHz, ƒIN = 1 kHz, 16-bit data (unless otherwise noted).
+Figure 8. Passband Characteristics Figure 9. Stop Band Characteristics
+7.11.3 General Characteristics
+All specifications at TA = 25°C, VBUS = 5 V, ƒS = 44.1 kHz, ƒIN = 1 kHz, 16-bit data (unless otherwise noted).
+Figure 10. Total Harmonic Distortion + Noise vs Free-Air Figure 11. Total Harmonic Distortion + Noise vs Free-Air
+Temperature Temperature
+14 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+105
+103
+101
+99
+97
+95
+Dynamic Range and SNR (dB)
+–50 100
+Free-Air Temperature (°C)
+G011
+–25 0 25 50 75
+SNR
+Dynamic Range
+105
+103
+101
+99
+97
+95
+Dynamic Range and SNR (dB)
+–50 100
+Free-Air Temperature (°C)
+G012
+–25 0 25 50 75
+SNR
+Dynamic Range
+0.05
+0.04
+0.03
+0.02
+0.01
+0
+Total Harmonic Distortion + Noise (%)
+30 35 40 45 50
+Sampling Frequency (kHz)
+G009
+10 kΩ
+32 Ω
+0.05
+0.04
+0.03
+0.02
+0.01
+0
+Total Harmonic Distortion + Noise (%)
+30 35 40 45 50
+Sampling Frequency (kHz)
+G010
+10 kΩ
+32 Ω
+0.05
+0.04
+0.03
+0.02
+0.01
+0
+Total Harmonic Distortion + Noise (%)
+G007
+4 4.5 5 5.5
+Supply Voltage (V)
+10 kΩ
+32 Ω
+3 3.2 3.3 3.5 3.6
+Supply Voltage (V)
+G008
+3.1 3.4
+0.05
+0.04
+0.03
+0.02
+0.01
+0
+Total Harmonic Distortion + Noise (%)
+10 kΩ
+32 Ω
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+General Characteristics (continued)
+All specifications at TA = 25°C, VBUS = 5 V, ƒS = 44.1 kHz, ƒIN = 1 kHz, 16-bit data (unless otherwise noted).
+Figure 12. Total Harmonic Distortion + Noise vs Supply Figure 13. Total Harmonic Distortion + Noise vs Supply
+Voltage Voltage
+Figure 14. Total Harmonic Distortion + Noise vs Sampling Figure 15. Total Harmonic Distortion + Noise vs Sampling
+Frequency Frequency
+Figure 16. Dynamic Range and SNR vs Free-Air Figure 17. Dynamic Range and SNR vs Free-Air
+Temperature Temperature
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 15
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+200
+150
+100
+50
+0
+Suspend Current ( A)
+/c109
+4 4.5 5 5.5
+Supply Voltage (V)
+G017
+/c45 40 0 40 60 100
+Free-Air T emperature (°C)
+G018
+/c45 20 20 80
+200
+150
+100
+50
+0
+Suspend Current ( A)
+/c109
+30 35 40 45 50
+Sampling Frequency (kHz)
+G015
+105
+103
+101
+99
+97
+95
+Dynamic Range and SNR (dB)SNR
+Dynamic Range
+30 35 40 45 50
+Sampling Frequency (kHz)
+G016
+105
+103
+101
+99
+97
+95
+Dynamic Range and SNR (dB)SNR
+Dynamic Range
+105
+103
+101
+99
+97
+95
+Dynamic Range and SNR (dB)
+G013
+4 4.5 5 5.5
+Supply Voltage (V)
+SNR
+Dynamic Range
+3 3.2 3.3 3.5 3.6
+Supply Voltage (V)
+G014
+3.1 3.4
+105
+103
+101
+99
+97
+95
+Dynamic Range and SNR (dB) SNR
+Dynamic Range
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+General Characteristics (continued)
+All specifications at TA = 25°C, VBUS = 5 V, ƒS = 44.1 kHz, ƒIN = 1 kHz, 16-bit data (unless otherwise noted).
+Figure 18. Dynamic Range and SNR vs Supply Voltage Figure 19. Dynamic Range and SNR vs Supply Voltage
+Figure 20. Dynamic Range and SNR vs Sampling Figure 21. Dynamic Range and SNR vs Sampling
+Frequency Frequency
+Figure 23. Suspend Current vs Free-Air TemperatureFigure 22. Suspend Current vs Supply Voltage
+16 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+0 5 10 15 20
+G019
+0
+20
+40
+60
+80
+100
+/c45
+/c45
+/c45
+/c45
+/c45
+/c45
+/c45
+120
+140
+Amplitude (dB)
+Frequency (kHz)
+0 40 60 100 120
+G020
+20 80
+0
+20
+40
+60
+80
+100
+/c45
+/c45
+/c45
+/c45
+/c45
+/c45
+/c45
+120
+140
+Amplitude (dB)
+Frequency (kHz)
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+General Characteristics (continued)
+All specifications at TA = 25°C, VBUS = 5 V, ƒS = 44.1 kHz, ƒIN = 1 kHz, 16-bit data (unless otherwise noted).
+Figure 25. Output Spectrum (–60 dB, N = 8192)Figure 24. Output Spectrum (–60 dB, N = 8192)
+8 Parameter Measurement Information
+All parameters are measured according to the conditions described in Specifications.
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 17
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+ZGNDDGNDAGNDRAGNDLPGNDVCCP VCCL VCCR VDD
+SSPND
+VBUS
+D+
+D/c45
+CK
+DT
+HOST
+HID0/MS
+HID1/MC
+HID2/MD
+XTOXTI 12 MHz
+TEST1
+TEST0
+PSEL
+DOUT
+V ROUT
+V LOUT
+VCOM
+5-V to 3.3-V
+Voltage Regulator
+DAC
+Power
+Manager
+Analog
+PLL
+S/PDIF Encoder
+USB
+Protocol
+Controller
+Control
+Endpoint
+USB SIE XCVR
+FIFO
+Buffer
+ISO-Out
+Endpoint
+HID
+Endpoint
+EEPROM
+Interface
+(1)
+Serial Peripheral
+Interface
+(2)
+Tracker
+(SpAct)PLL (x 8)
+96 MHz
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+9 Detailed Description
+9.1 Overview
+The PCM2704C/5C/6C/7C is a stereo audio digital-to-analog converter (DAC) with USB connection capability
+and a S/PDIF digital interface.
+The PCM2704C/5C/6C/7C can be used in self-powered and bus-powered modes. These devices meet the
+requirements of USB2.0 standard connection. The PCM2704C/5C/6C/7C has digital input from the USB port.
+The PCM2704C/5C provides two different paths for the audio data, one of which goes to the digital S/PDIF
+output, and the other to the analog output through the DAC. The PCM2706C/7C provides three different paths
+for the audio data; to the digital S/PDIF output, to the analog output through the DAC, and leading the audio data
+to the I2S digital output (the I2S path is selectable trough FSEL pin 9).
+The PCM2704C has 3 external interrupts (HID) which control the Mute, Volume Up, and Volume Down; these
+control inputs are active High. The PCM2706C has 7 external interrupts (I2S/HID control is selectable trough
+FSEL pin 9) which control the Mute, Volume Up, Volume Down, Next track, Previous track, Play/Pause, and
+Stop; these control inputs are active High. The PCM2704C/5C/6C/7C requires a 12-MHz clock, which can be
+provided by an external clock or generated by a built-in crystal resonator.
+9.2 Functional Block Diagrams
+(1) Applies to PCM2704CDB
+(2) Applies to PCM2705CDB
+Figure 26. PCM2704C/PCM2705C
+18 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+ZGNDDGNDAGNDRAGNDLPGNDVCCP VCCL VCCR VDD
+SSPND
+VBUS
+D+
+D/c45
+CK
+DT
+HOST
+HID0/MS
+HID1/MC
+HID2/MD
+XTOXTI 12 MHz
+TEST
+PSEL
+FUNC3
+FUNC2
+FUNC1
+FUNC0
+FSEL
+DOUT
+V ROUT
+V LOUT
+VCOM
+5-V to 3.3-V
+Voltage Regulator
+DAC
+Power
+Manager
+Analog
+PLL
+S/PDIF
+Encoder
+USB
+Protocol
+Controller
+Control
+Endpoint
+USB SIE XCVR
+FIFO
+Buffer
+ISO-Out
+Endpoint
+HID
+Endpoint
+EEPROM
+Interface
+(1)
+Serial Peripheral
+Interface
+(2)
+Tracker
+(SpAct)PLL (x 8)
+96 MHz
+I S
+Interface
+2
+HID3: Next Track
+(1)
+HID4: Previous Track
+(1)
+HID5: Stop
+(1)
+HID6: Play/Pause
+(1)
+DOUT
+LRCK
+BCK
+SYSCK
+DIN
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+Functional Block Diagrams (continued)
+(1) Applies to PCM2706CPJT
+(2) Applies to PCM2707CPJT
+Figure 27. PCM2706C/PCM2707C
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 19
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+9.3 Feature Description
+9.3.1 Clock and Reset
+For both USB and audio functions, the PCM2704C/5C/6C/7C require a 12-MHz (±500 ppm) clock that can be
+generated by the onboard oscillator using a 12-MHz crystal resonator. The 12-MHz crystal resonator must be
+connected to the XTI pin (pin 28 for the PCM2704C/5C, pin 12 for the PCM2706C/7C) and the XTO pin (pin 1 for
+the PCM2704C/5C, pin 13 for the PCM2706C/7C) with one large (1-MΩ) resistor and two small capacitors; the
+capacitance of these components depends on the specified load capacitance of the crystal resonator. An
+external clock can be supplied from XTI (pin 28 for the PCM2704C/5C, pin 12 for the PCM2706C/7C). If an
+external clock is supplied, XTO (pin 1 for the PCM2704C/5C, pin 13 for the PCM2706C/7C) must be left open.
+No clock disabling pin is provided; therefore, TI does not recommend to use the external clock supply. SSPND
+(pin 27 for the PCM2704C/5C, pin 11 for the PCM2706C/7C) cannot use clock disabling.
+The PCM2704C/5C/6C/7C have an internal power-on reset circuit, which works automatically when VDD (pin 7 for
+the PCM2704C/5C, pin 21 for the PCM2706C/7C) exceeds 2-V typical (1.6 to 2.4 V), which is equivalent to VBUS
+(pin 10 for the PCM2704C/5C, pin 24 for the PCM2706C/7C) exceeding 3-V typical for bus-powered applications.
+Approximately 700 μs is required until an internal reset release occurs.
+9.3.2 Operation Mode Selection
+The PCM2704C/5C/6C/7C have the following mode-select pins.
+9.3.2.1 Power Configuration Select/Host Detection
+PSEL (pin 4 for the PCM2704C/5C, pin 16 for the PCM2706C/7C) is dedicated to selecting the power source.
+This selection affects the configuration descriptor. While in bus-powered operation, the maximum power
+consumption from VBUS is determined by the HOST pin (pin 21 for the PCM2704C/5C, pin 3 for the
+PCM2706C/7C). For self-powered operation, the HOST pin must be connected to VBUS of the USB bus with a
+pulldown resistor to detect attach and detach. (To avoid excessive suspend current, the pulldown should be a
+high-value resistor.) Table 1 summarizes the power configuration select options.
+Table 1. Power Configuration Select
+PSEL DESCRIPTION
+0 Self-powered
+1 Bus-powered
+HOST DESCRIPTION
+0 Detached from USB (self-powered)/100 mA (bus-powered)
+1 Attached to USB (self-powered)/500 mA (bus-powered)
+9.3.2.2 Function Select (PCM2706C/7C Only)
+FSEL (pin 9) determines the function of the FUNC0 through FUNC3 pins (pins 4, 5, 18, and 19) and DOUT (pin
+17). When the I2S interface is required, FSEL must be low. Otherwise, FSEL must be high. Table 2 lists the
+functionality of the FUNC0 through FUNC3 pins, based on the FSEL pin.
+Table 2. Function Select
+FSEL DOUT FUNC0 FUNC1 FUNC2 FUNC3
+0 Data out (I2S) LRCK (I2S) BCK (I2S) SYSCK (I2S) Data in (I2S)
+1 S/PDIF data Next track (HID) (1) Previous track (HID) (1) Stop (HID) (1) Play/pause (HID) (1)
+(1) Valid on the PCM2706C only; no function assigned on the PCM2707C.
+9.3.3 DAC
+The PCM2704C/5C/6C/7C have a DAC that uses an oversampling technique with 128-ƒS, second-order, multi-bit
+noise shaping. This technique provides extremely-low quantization noise in the audio band, and the built-in
+analog low-pass filter removes the high-frequency components of the noise-shaping signal. The DAC analog
+outputs, VOUTL and VOUTR , are sent through the headphone amplifier and can provide 12 mW at 32 Ω as well as
+1.8 VPP into a 10-kΩ load.
+20 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+9.3.4 Digital Audio Interface: S/PDIF Output
+The PCM2704C/5C/6C/7C employ S/PDIF output. Isochronous-out data from the host are encoded to S/PDIF
+output DOUT, as well as to DAC analog outputs VOUTL and VOUTR. The interface format and timing follow the
+IEC-60958 standard. Monaural data are converted to the stereo format at the same data rate. S/PDIF output is
+not supported in the I2S I/F enable mode. The implementation of this feature is optional.
+NOTE
+It is the responsibility of the user to determine whether or not to implement this feature in
+the end application.
+9.3.4.1 Channel Status Information
+Channel status information is fixed, and includes consumer application, PCM mode, copyright, and digital/digital
+converter data. All other bits are fixed as 0s, except for the sample frequency, which is set automatically
+according to the data received through the USB.
+9.3.4.2 Copyright Management
+Digital audio data output is always encoded as original with SCMS control. Only one generation of digital
+duplication is allowed.
+9.3.5 Digital Audio Interface: I2S Interface Output (PCM2706C/7C)
+The PCM2706C and PCM2707C can support the I2S interface, which is enabled by the FSEL pin (pin 9). In the
+I2S interface-enabled mode, pins 4, 18, 19, 5, and 17 are assigned as DIN, SYSCK, BCK, LRCK, and DOUT,
+respectively. These pins provide digital output/input data in the 16-bit I2S format, which is also accepted by the
+internal DAC. Figure 1, Figure 2, and Figure 3 show the I2S interface format and timing. Audio Interface Timing
+Characteristics and Audio Clock Timing Characteristics list the audio interface timing and audio clock timing
+characteristics, respectively.
+9.3.6 Descriptor Data Modification
+The descriptor data can be modified through the I2C port by external ROM (PCM2704C/6C) or through the SPI
+port by an SPI host such as an MCU (PCM2705C/7C) under a particular configuration of the PSEL and HOST
+pins. Setting both the PSEL and the HOST pins high is necessary to modify the descriptor data; the D+ pin
+pullup resistor must not be activated before programming the descriptor data through the external ROM or SPI
+port is completed. The descriptor data must be sent from an external ROM to the PCM2704C/6C or from the SPI
+host to the PCM2705C/7C in LSB first format, with a specified byte order. Additionally, the power attribute and
+max power contents must be consistent with the PSEL setting and the power usage from the USB VBUS of the
+end application. Therefore, the device does not support descriptor data modification in self-powered configuration
+(PSEL = low).
+9.3.7 External ROM Descriptor (PCM2704C/6C)
+The PCM2704C/6C support an external ROM interface to override internal descriptors. Pin 3 (for the
+PCM2704C) or pin 15 (for the PCM2706C) is assigned as DT (serial data), and pin 2 (for the PCM2704C) or pin
+14 (for the PCM2706C) is assigned as CK (serial clock) of the I2C interface when using the external ROM
+descriptor. Descriptor data are transferred from the external ROM to the PCM2704C/6C through the I2C interface
+the first time when the device is activated after a power-on reset. Before completing a read of the external ROM,
+the PCM2704C/6C reply with NACK for any USB command request from the host to the device itself. The
+descriptor data, which can be in the external ROM, must meet these parameters:
+• String descriptors must be described in ANSI ASCII code (1 byte for each character).
+• String descriptors are converted automatically to unicode strings for transmission to the host.
+• The device address of the external ROM is fixed as 0xA0.
+The data bits must be sent from LSB to MSB on the I2C bus. This condition means that each byte of data must
+be stored with its bits in reverse order. A read operation is performed at a frequency of XTI/384 (approximately
+30 kHz). The power attribute and max power contents must be consistent with the end application circuit
+configuration (the PSEL setting and the actual power usage from VBUS of the USB connector); otherwise, it may
+cause improper or unexpected PCM2704C/6C operation.
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 21
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+S P
+DT
+CK
+Start
+Condition
+Stop
+Condition
+Device Address R/W ACK ACK ACKDATA DATA NACK
+1 7/c45 1 8/c45 1 8/c458 9 9 9 9
+R/ : Read operation if ‘1’; otherwise, Write operation
+ACK: Acknowledgement of a byte if ‘0’
+DATA: 8 bits (1 byte)
+NACK: No acknowledgement if ‘1’
+W
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+The data must be stored from address 0x00 and must consist of 57 bytes, according to these listed parameters:
+• Vendor ID (2 bytes)
+• Product ID (2 bytes)
+• Product string (16 bytes in ANSI ASCII code)
+• Vendor string (32 bytes in ANSI ASCII code)
+• Power attribute (1 byte)
+• Max power (1 byte)
+• Auxiliary HID usage ID in report descriptor (3 bytes)
+Figure 28 shows the timing for an external ROM read operation. Table 3 summarizes the timing characteristics.
+Figure 28. External ROM Read Operation
+Table 3. External ROM Read Operation Characteristics
+M M M S S M S M S M M
+S Device address R/W ACK DATA ACK DATA ACK . . . NACK P
+22 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+MC
+MS
+MD
+MC
+MS
+MD
+16 Bits
+16 Bits FramesN/c63
+N Frames
+(2) Continuous Write Operation
+(1) Single Write Operation
+MSB MSB
+MSBMSB
+LSB
+LSB MSBLSB LSB
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+9.3.8 External ROM Example
+External ROM data (sample set)
+0xBB, 0x08, 0x04, 0x27,
+0x50, 0x72, 0x6F, 0x64, 0x75, 0x63, 0x74, 0x20, 0x73, 0x74, 0x72, 0x69, 0x6E, 0x67, 0x73, 0x2E,
+0x56, 0x65, 0x6E, 0x64, 0x6F, 0x72, 0x20, 0x73, 0x74, 0x72, 0x69, 0x6E, 0x67, 0x73, 0x20, 0x61,
+0x72, 0x65, 0x20, 0x70, 0x6C, 0x61, 0x63, 0x65, 0x64, 0x20, 0x68, 0x65, 0x72, 0x65, 0x2E, 0x20,
+0x80,
+0x7D,
+0x0A, 0x93, 0x01
+Explanation
+Data are stored beginning at address 0x00
+Vendor ID: 0x08BB
+Product ID: 0x2704
+Product string: Product strings (16 bytes)
+Vendor string: Vendor strings are placed here (32 bytes, 31 visible characters are followed by 1 space).
+Power attribute (bmAttribute): 0x80 (bus-powered)
+Max power (maxPower): 0x7D (250 mA)
+Auxiliary HID usage ID: 0x0A, 0x93, 0x01 (AL A/V capture)
+Note that the data bits must be sent from LSB to MSB on the I2C bus. Therefore, each data byte must be stored
+with its bits in reverse order.
+9.3.9 Serial Programming Interface (PCM2705C/7C)
+The PCM2705C/7C supports a SPI to program the descriptor and to set the HID state. External ROM Descriptor
+(PCM2704C/6C) describes descriptor data. Figure 5 shows the SPI timing; SPI Timing Characteristics lists the
+respective timing characteristics.
+Figure 29 shows the SPI write timing sequence.
+Figure 29. SPI Write Operation
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 23
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+Ready for Setup Ready for Playback
+VDD
+0 V
+D+ / D/c45
+SSPND
+V L
+V R
+OUT
+OUT
+2.0 V (typ)
+Bus Idle
+Bus Reset Set Configuration
+SOF
+First Audio Data
+SOF SOF
+Second Audio Data
+3.3 V (typ)
+BPZ
+1 msDevice Setup
+700 s/c109
+Internal Reset
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+9.3.10 USB Host Interface Sequence
+9.3.10.1 Power-On, Attach, and Playback Sequence
+The PCM2704C/5C/6C/7C are ready for setup when the reset sequence has finished and the USB bus is
+attached. After a connection has been established (through the setup process), the PCM2704C/5C/6C/7C are
+ready to accept USB audio data. While waiting for the audio data (that is, the device is in an idle state), the
+analog output is set to bipolar zero (BPZ).
+Upon receiving the audio data, the PCM2704C/5C/6C/7C stores the first audio packet in the internal storage
+buffer. The packet contains 1 ms of audio data. The PCM2704C/5C/6C/7C start playing the audio data after
+detecting the next subsequent start-of-frame (SOF) packet. Figure 30 shows the initial operation sequence for
+the device.
+Figure 30. Initial Sequence
+9.3.10.2 Play, Stop, and Detach Sequence
+When the host finishes or aborts playback, the PCM2704C/5C/6C/7C stop playing after the last audio data output
+is complete. Figure 31 shows the play, stop, and detach sequence.
+24 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+D+ / D/c45
+SSPND
+V L
+V R
+OUT
+OUT
+Idle
+ActiveActive 2.5 ms
+5 ms Suspend
+Detach1 ms
+VBUS
+D+ / D/c45
+V L
+V R
+OUT
+OUT
+SOF SOF SOF SOF SOF
+Audio Data Audio Data Last Audio Data
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+Figure 31. Play, Stop, and Detach Sequence
+9.3.10.3 Suspend and Resume Sequence
+The PCM2704C/5C/6C/7C enter a suspended state after the USB bus has been in a constant idle state for
+approximately 5 ms. While the PCM2704C/5C/6C/7C are in this suspended state, the SSPND flag (pin 27 for the
+PCM2704C/5C, pin 11 for the PCM2706C/7C) is asserted. The PCM2704C/5C/6C/7C wake up immediately
+when detecting a non-idle state on the USB bus. Figure 32 shows the operating sequence for the suspend and
+resume process.
+Figure 32. Suspend and Resume
+9.3.11 Operating Environment
+For current information on the PCM2704C/2705C/2706C/2707C operating environments, see the Updated
+Operating Environments for PCM270X, PCM290X Applications application report, SLAA374, available through
+the TI website at www.ti.com.
+9.4 Device Functional Modes
+The PCM2903C is a USB-controlled device. The PCM2903C is a digital-to-analog converter (DAC), with digital
+input (that goes to a D/A converter) and analog output, alongside the digital path to USB and S/PDIF and I2S
+(only in PCM2706C/7C). A wider explanation of these operational modes is shown in Feature Description.
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 25
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+9.5 Programming
+9.5.1 USB Interface
+Control data and audio data are transferred to the PCM2704C/5C/6C/7C through the D+ pin (pin 9 for the
+PCM2704C/5C, pin 23 for the PCM2706C/7C) and D– pin (pin 8 for the PCM2704C/5C, pin 22 for the
+PCM2706C/7C). D+ should be pulled up with a 1.5-kΩ (±5%) resistor. To avoid back voltage in self-powered
+operation, the device must not provide power to the pullup resistor on D+ while VBUS of the USB port is inactive.
+All data to/from the PCM2704C/5C/6C/7C are transferred at full speed. Table 4 shows the information that is
+provided in the device descriptor. Some parts of the device descriptor can be modified through external ROM
+(PCM2704C/6C) or SPI (PCM2705C/7C).
+Table 4. Device Descriptor
+DEVICE DESCRIPTOR DESCRIPTION
+USB revision 1.1 compliant
+Device class 0x00 (device defined interface level)
+Device subclass 0x00 (not specified)
+Device protocol 0x00 (not specified)
+Max packet size for endpoint 0 8 bytes
+Vendor ID 0x08BB (default value, can be modified)
+0x27C4/0x27C5/0x27C6/0x27C7 (These values correspond to the model number, and the value canProduct ID be modified.)
+Device release number 1.0 (0x0100)
+Number of configurations 1
+Vendor strings BurrBrown from Texas Instruments (default value, can be modified)
+Product strings USB AUDIO DAC (default value, can be modified)
+Serial number Not supported
+Table 5 shows the information contained in the configuration descriptor. Some parts of the configuration
+descriptor can be modified through external ROM (PCM2704C/6C) or SPI (PCM2705C/7C).
+Table 5. Configuration Descriptor
+CONFIGURATION DESCRIPTOR DESCRIPTION
+Interface Three interfaces
+0x80 or 0xC0 (bus-powered or self-powered, depending on PSEL; no remote wake up. This value canPower attribute be modified.)
+0x0A, 0x32, or 0xFA (20 mA for self-powered, 100 mA or 500 mA for bus-powered, depending onMax power PSEL and HOST. This value can be modified.)
+Table 6 shows the information contained in the string descriptor. Some parts of the string descriptor can be
+modified through external ROM (PCM2704C/6C) or SPI (PCM2705C/7C).
+Table 6. String Descriptor
+STRING DESCRIPTOR DESCRIPTION
+0 0x0409
+1 BurrBrown from Texas Instruments (default value, can be modified)
+2 USB AUDIO DAC (default value, can be modified)
+26 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+Analog OutIT
+TID1
+OT
+TID2
+FU
+UID3
+Standard Audio Control Interface (I/F #0)
+Endpoint #0
+Endpoint #2
+(I/F #1)
+Endpoint #5
+(I/F #2)
+Default
+Endpoint
+Audio Streaming
+Interface
+HID Interface
+PCM2704C/5C/6C/7C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+9.5.1.1 Device Configuration
+Figure 33 shows the USB audio function topology. The PCM2704C/5C/6C/7C have three interfaces. Each
+interface is enabled by different alternative settings.
+Figure 33. USB Audio Function Topology
+9.5.1.2 Interface Number 0 (Default/Control Interface)
+Interface number 0 is the control interface. Setting number 0 is the only possible setting for interface number 0.
+Setting number 0 describes the standard audio control interface. The audio control interface consists of a
+terminal. The PCM2704C/5C/6C/7C have three terminals:
+• Input terminal (IT number 1) for isochronous-out stream
+• Output terminal (OT number 2) for audio analog output
+• Feature unit (FU number 3) for DAC digital attenuator
+Input terminal number 1 is defined as a USB stream (terminal type 0x0101). Input terminal number 1 can accept
+two-channel audio streams consisting of left and right channels. Output terminal number 2 is defined as a
+speaker (terminal type 0x0301). Feature unit number 3 supports these sound control features:
+• Volume control
+• Mute control
+The built-in digital volume controller can be manipulated by an audio-class-specific request from 0 to –64 dB in
+steps of 1 dB. Changes are made by incrementing or decrementing one step (that is, 1 dB) for every 1 / ƒS time
+interval, until the volume level reaches the requested value. Each channel can be set to a separate value. The
+master volume control is not supported. A request to the master volume is stalled and ignored. The built-in digital
+mute controller can be manipulated by an audio-class-specific request. A master mute control request is
+acceptable. A mute control request to an individual channel is stalled and ignored. The digital volume control
+does not affect either the S/PDIF or I2S outputs (PCM2706C/7C only).
+9.5.1.3 Interface Number 1 (Isochronous-Out Interface)
+Interface number 1 is for the audio-streaming data-out interface. Interface number 1 has the alternative settings
+described in Table 7. Alternative setting number 0 is the zero-bandwidth setting. All other alternative settings are
+operational settings.
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 27
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+Table 7. Interface Number 1 Parameters
+ALTERNATIVE TRANSFER SAMPLING RATEDATA FORMATSETTING MODE (kHz)
+00 Zero bandwidth
+01 16-bit Stereo 2's complement (PCM) Adaptive 32, 44.1, 48
+02 16-bit Mono 2's complement (PCM) Adaptive 32, 44.1, 48
+9.5.1.4 Interface Number 2 (HID Interface)
+Interface number 2 is the interrupt-data-in interface. The HID consumer control device consists of interface
+number 2. Alternative setting number 0 is the only possible setting for interface number 2.
+On the HID device descriptor, eight HID items are reported for any model, in any configuration.
+9.5.1.4.1 HID Items Reported
+9.5.1.4.1.1 Basic HID Operation
+Interface number 2 can report these three key statuses for any model. These statuses can be set by the HID0
+through HID2 pins (PCM2704C/6C) or the SPI port (PCM2705C/7C).
+• Mute (0xE2)
+• Volume up (0xE9)
+• Volume down (0xEA)
+9.5.1.4.1.2 Extended HID Operation (PCM2705/6/7)
+By using the FUNC0 through FUNC3 pins (PCM2706C) or the SPI port (PCM2705C/7C), these additional
+conditions can be reported to the host.
+• Play/Pause (0xCD)
+• Stop (0xB7)
+• Previous (0xB6)
+• Next (0xB5)
+9.5.1.4.1.3 Auxiliary HID Status Report (PCM2705C/7C)
+One additional HID status can be reported to the host though the SPI port. This status flag is defined by SPI
+command or external ROM. This definition must be described as on the report descriptor with a three-byte usage
+ID. AL A/V Capture (0x0193) is assigned as the default value for this status flag.
+9.5.1.5 Endpoints
+The PCM2704C/5C/6C/7C has three endpoints:
+• Control endpoint (EP number 0)
+• Isochronous-out audio data-stream endpoint (EP number 2)
+• HID endpoint (EP number 5)
+The control endpoint is a default endpoint. The control endpoint controls all functions of the
+PCM2704C/5C/6C/7C by standard USB request and USB audio-class-specific request from the host. The
+isochronous-out audio data-stream endpoint is an audio sink endpoint that receives the PCM audio data. The
+isochronous-out audio data-stream endpoint accepts the adaptive transfer mode. The HID endpoint is an
+interrupt-in endpoint. The HID endpoint reports HID status every 10 ms.
+The HID endpoint is defined as a consumer-control device. The HID function is designed as an independent
+endpoint from the isochronous-out endpoint. This configuration means that the effect of HID operation depends
+on the host software. Typically, the HID function controls the primary audio-out device.
+28 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+9.6 Register Maps
+9.6.1 SPI Register (PCM2705C/7C)
+NOTE
+Contents of the power attribute and max power must be consistent with the actual
+application circuit configuration (the PSEL setting and the actual power usage from VBUS
+of the USB connector); otherwise, it may cause improper or unexpected PCM2705C/7C
+operation.
+Figure 34. SPI Register Description
+15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0
+0 0 0 0 ST 0 ADDR 0 D0 D1 D2 D3 D4 D5 D6 D7
+LEGEND: R/W = Read/Write; R = Read only; -n = value after reset
+Table 8. SPI Register Field Descriptions (1)
+Bit Field Type Reset Description
+Determines the function of the lower 8-bit data. Table 9 summarizes the
+functionality of ST and ADDR bit combinations.11 ST 0: HID status write
+1: Descriptor ROM data write
+Starts write operation for internal descriptor reprogramming (active high)
+This bit resets the descriptor ROM address counter and indicates that subsequent
+words should be ROM data (described in External ROM Example). 456 bits of ROM
+9 ADDR data must be continuously followed after this bit has been asserted. The data bits
+must be sent from LSB (D0) to MSB (D7).
+To set ADDR high, ST must be set low. Note that the lower 8 bits are still active as an
+HID status write when ST is set low.
+ST = 0 (HID status write); Reports extended command status to the host (active high)7 D0 ST = 1 (ROM data write); Internal descriptor ROM data, D0:LSB
+ST = 0 (HID status write); Reports play/pause HID status to the host (active high)6 D1 ST = 1 (ROM data write); Internal descriptor ROM data
+ST = 0 (HID status write); Reports stop HID status to the host (active high)5 D2 ST = 1 (ROM data write); Internal descriptor ROM data
+ST = 0 (HID status write); Reports previous-track HID status to the host (active high)4 D3 ST = 1 (ROM data write); Internal descriptor ROM data
+ST = 0 (HID status write); Reports next-track HID status to the host (active high)3 D4 ST = 1 (ROM data write); Internal descriptor ROM data
+ST = 0 (HID status write); Reports volume-down HID status to the host (active high)2 D5 ST = 1 (ROM data write); Internal descriptor ROM data
+ST = 0 (HID status write); Reports volume-up HID status to the host (active high)1 D6 ST = 1 (ROM data write); Internal descriptor ROM data
+ST = 0 (HID status write); Reports MUTE HID status to the host (active high)0 D7 ST = 1 (ROM data write); Internal descriptor ROM data, D7:MSB
+(1) D[7:0] – Function of the lower 8 bits depends on the value of the ST (B11) bit.
+Table 9. Functionality of ST and ADDR Bit Combinations
+ST ADDR FUNCTION
+0 0 HIS status write
+0 1 HIS status write and descriptor ROM address reset
+1 0 Descriptor ROM data write
+1 1 Reserved
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 29
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+10 Application and Implementation
+NOTE
+Information in the following applications sections is not part of the TI component
+specification, and TI does not warrant its accuracy or completeness. TI’s customers are
+responsible for determining suitability of components for their purposes. Customers should
+validate and test their design implementation to confirm system functionality.
+10.1 Application Information
+The PSEL allows the device to configure for bus-powered mode (High) or self-powered mode (Low). The HOST
+pin configures the maximum current consumption of the device during bus-powered mode (low: 100 mA, high:
+500 mA), or can be used as host detector during self-powered mode. The SSPND flag notifies when the USB
+input is idle for at least 5 ms; this flag can be used to control or notify subsequent circuits. The device descriptor
+can be modified by using an external ROM (PCM2704C/6C) or through the SPI port (PCM2705C/7C); this
+descriptor programming function is only available when PSEL and HOST are high. More functional details can be
+found in USB Interface.
+10.2 Typical Application
+10.2.1 Typical Circuit Connection 1: USB Speaker
+Figure 35 shows a typical circuit connection for an internal-descriptor, bus-powered, 500-mA application.
+30 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+28
+27
+26
+25
+24
+23
+22
+21
+20
+19
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+SCL
+11
+12
+13
+14
+18
+17
+16
+15
+R9
+C4
+GND
+R1
+C2
+X1
+C1
+SDA
+S/PDIF OUT
+C7R2
+C3
+R3
+R4
+C6 C5
++ C8
++
+C9
++
+C10
+C11
+R5
+C12
+R6 R7 R8
+C13
++
+C14
++
+PCM2704CDB
+External ROM
+(Optional)
+(3)
+USB ‘B’
+Connector
+D/c45
+D+
+VBUS
+SUSPEND
+TPA200x
+Power Amp
+MUTE
+VOLUME+
+VOLUME/c45
+XTO XTI
+CK
+DT
+PSEL
+(2)
+DOUT
+DGND
+VDD
+D/c45
+D+
+VBUS
+VCCP
+(3)
+ZGND
+PGND
+AGNDL AGNDR
+VCCL VCCR
+V LOUT
+(1)
+V ROUT
+(1)
+VCOM
+HOST
+(2)
+HID0/MS
+HID1/MC
+HID2/MD
+TEST1
+TEST0
+SSPND
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+Typical Application (continued)
+NOTE: X1: 12-MHz crystal resonator. C1, C2: 10- to 33-pF capacitors (depending on load capacitance of crystal resonator). C3to C7: 1-μF
+ceramic capacitors. C8: 10-μF electrolytic capacitor. C9, C10: 100-μF electrolytic capacitors (depending on tradeoff between required
+frequency response and discharge time for resume). C11, C12: 0.022-μF ceramic capacitors. C13, C14: 1-μF electrolytic capacitors. R1: 1-MΩ
+resistor. R2, R9: 1.5-kΩ resistors. R3, R4: 22-Ω resistors. R5, R6: 16-Ω resistors. R7, R8: 330-Ω resistors (depending on tradeoff between
+required THD performance and pop-noise level for suspend).
+(1) Output impedance of VOUTL and VOUTR during suspended mode or lack of power supply is 26 kΩ ±20%, which is the discharge path for
+C9 and C10.
+(2) Descriptor programming through external ROM is only available when PSEL and HOST are high.
+(3) External ROM power can be supplied from VCCP, but any other active component must not use VCCP, VCCL, VCCR, or VDD as a power
+source.
+Figure 35. Bus-Powered Application
+NOTE
+The circuit shown in Figure 35 is for information only. The entire board design should be
+considered to meet the USB specification as a USB-compliant product.
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 31
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+Typical Application (continued)
+10.2.1.1 Design Requirements
+For this design example, use the parameters listed in Table 10.
+Table 10. Design Parameters
+DESIGN PARAMETER EXAMPLE VALUE
+Input voltage range 4.35 V to 5.25 V (USB power)
+Current 500 mA (Bus-Powered Max power)
+Input clock frequency 11.994 MHz to 12.006 MHz
+10.2.1.2 Detailed Design Procedure
+The PCM2704C/5C/6C/7C is a simple design device that can connect directly to a USB port. Only a 3.3-V
+external regulator is needed (in self-powered mode), and an external ROM for the descriptor programming
+function (PCM2704C/6C). The switches connected to the HID ports must be normally open. TI recommends
+placing an output filter such as the one shown in Figure 35. The PCM2704C/5C/6C/7C requires decoupling
+capacitors on the voltage source pins.
+10.2.1.3 Application Curves
+For the application curves, see the graphs listed in Table 11.
+Table 11. Table of Graphs
+FIGURE
+Frequency Response Figure 6DAC Digital Interpolation Filter
+Frequency Response Passband Ripple Figure 7
+Passband Characteristics Figure 8DAC Analog Low-Pass Filter
+Frequency Response Stop Band Characteristics Figure 9
+32 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+1
+2
+3
+4
+5
+6
+7
+8
+24
+23
+22
+21
+20
+19
+18
+17
+V
+COM
+32
+FSEL
+9
+AGNDR
+31
+TEST
+10
+V
+CCR
+30
+SSPND
+11
+V R
+OUT
+(1)
+29
+XTI
+12
+V L
+OUT
+(1)
+28
+XTO
+13
+V
+CCL
+27
+CK
+14
+AGNDL
+26
+DT
+15
+ZGND+
+25
+PSEL
+(2)
+16
+PGND
+VCCP
+(3)
+HOST
+(2)
+FUNC3
+FUNC0
+HID0/MS
+HID1/MC
+HID2/MD
+VBUS
+D+
+D/c45
+VDD
+DGND
+FUNC1
+FUNC2
+DOUT
+PCM2706CPJT
++
+VOLUME/c45
+VOLUME+
+MUTE
+NEXT TRACK
+PLAY/PAUSE
+C5
+C3 C4C6
+SUSPEND
+R1
+R4
+R3
+R2
+R11
+C2
+C8 C7
+X1
+C1
+SCL
+SDA
+External ROM
+(Optional)
+(3)
+STOP
+PREVIOUS TRACK
+GND
+USB ‘B’
+Connector
+D/c45
+D+
+VBUS
++
+C9
++
+C10
+R9 R10R5
+C12C11
+R6 R7 R8
+Headphone
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+10.2.2 Typical Circuit Connection 2: Remote Headphone
+Figure 36 shows a typical circuit connection for a bus-powered, 100-mA headphone with seven HIDs.
+NOTE: X1: 12-MHz crystal resonator. C1, C2: 10- to 33-pF capacitors (depending on load capacitance of crystal resonator). C3 to C5, C7, C8:
+1-μF ceramic capacitors. C6: 10-μF electrolytic capacitor. C9, C10: 100-μF electrolytic capacitors (depending on required frequency response).
+C11, C12: 0.022-μF ceramic capacitors. R1: 1-MΩ resistor. R2, R11: 1.5-kΩ resistors. R3, R4: 22-Ω resistors. R5, R6: 16-Ω resistors. R7 to R10:
+3.3-kΩ resistors.
+(1) Output impedance of VOUTL and VOUTR during suspend mode or lack of power supply is 26 kΩ ±20%, which is the discharge path for C9
+and C10.
+(2) Descriptor programming through external ROM is only available when PSEL and HOST are high.
+(3) External ROM power can be supplied from VCCP, but any other active component must not use VCCP, VCCL, VCCR, or VDD as a power
+source.
+Figure 36. Bus-Powered Application
+NOTE
+The circuit shown in Figure 36 is for information only. The entire board design should be
+considered to meet the USB specification as a USB-compliant product.
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 33
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+10.2.2.1 Design Requirements
+For this design example, use the parameters listed in Table 12.
+Table 12. Design Parameters
+DESIGN PARAMETER EXAMPLE VALUE
+Input voltage range 4.35 V to 5.25 V (USB power)
+Current 100 mA (Bus-Powered Max power)
+Input clock frequency 11.994 MHz to 12.006 MHz
+10.2.2.2 Detailed Design Procedure
+A general detailed design procedure is explained in Detailed Design Procedure.
+10.2.2.3 Application Curves
+For the application curves, see the graphs listed in Table 11.
+34 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+1
+2
+3
+4
+5
+6
+7
+8
+24
+23
+22
+21
+20
+19
+18
+17
+V
+COM
+32
+FSEL
+9
+AGNDR
+31
+TEST
+10
+V
+CCR
+30
+SSPND
+11
+V R
+OUT
+(1)
+29
+XTI
+12
+V L
+OUT
+(1)
+28
+XTO
+13
+V
+CCL
+27
+CK
+14
+AGNDL
+26
+DT
+15
+ZGND+
+25
+PSEL
+(2)
+16
+PGND
+VCCP
+(3)
+HOST
+(2)
+FUNC3
+FUNC0
+HID0/MS
+HID1/MC
+HID2/MD
+VBUS
+D+
+D/c45
+VDD
+DGND
+FUNC1
+FUNC2
+DOUT
+PCM2707CPJT
++
++
+C5
+C3 C4C6
+SUSPEND
+R1
+R4
+R3
+R12
+R2
+(3)
+R5
+C2
+C7
+X1
+C1
+GND
+USB ‘B’
+Connector
+D/c45
+D+
+VBUS
+(3)
++
+C8
++
+C9
+R10 R11R6
+C11C10
+R7 R8 R9
+Headphone
+Power
+3.3 V
+GND
+TAS300x
+(4)
+2
+I S I/F
+Audio Device
+DIN
+LRCK
+MS
+MC
+MD
+BCK
+SYSTEM CLOCK
+DOUT
+(3)
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+10.2.3 Typical Circuit Connection 3: DSP Surround Processing Amplifier
+Figure 37 shows a typical circuit connection for an I2S- and SPI-enabled self-powered application.
+NOTE: X1: 12-MHz crystal resonator. C1, C2: 10- to 33-pF capacitors (depending on load capacitance of crystal resonator). C3, C4: 1-μF
+ceramic capacitors. C5, C7: 0.1-μF ceramic capacitor and 10-μF electrolytic capacitor. C6: 10-μF electrolytic capacitors. C8, C9: 100-μF
+electrolytic capacitors (depending on required frequency response). C10, C11: 0.022-μF ceramic capacitors. R1, R12: 1-MΩ resistors. R2, R5:
+1.5-kΩ resistors. R3, R4: 22-Ω resistors. R6, R7: 16-Ω resistors. R8to R11: 3.3-kΩ resistors.
+(1) Output impedance of VOUTL and VOUTR during suspend mode or lack of power supply is 26 kΩ ±20%, which is the discharge path for C8
+and C9.
+(2) Descriptor programming through SPI is only available when PSEL and HOST are high.
+(3) D+ pullup must not be activated (high: 3.3 V) while the device is detached from USB or power supply is not applied on VDD and VCCx.
+VBUS of USB (5 V) can be used to detect USB power status.
+(4) MS must be high until the PCM2707C power supply is ready and the SPI host (the DSP) is ready to send data. Also, the SPI host must
+handle the D+ pullup if the descriptor is programmed through the SPI. D+ pullup must not be activated (high = 3.3 V) before programming of
+the PCM2707C through the SPI is complete.
+Figure 37. Self-Powered Application
+NOTE
+The circuit shown in Figure 37 is for information only. The entire board design should be
+considered to meet the USB specification as a USB-compliant product.
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 35
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+10.2.3.1 Design Requirements
+For this design example, use the parameters listed in Table 13.
+Table 13. Design Parameters
+DESIGN PARAMETER EXAMPLE VALUE
+Input voltage range 3 V to 3.6 V
+Current 100 mA
+Input clock frequency 11.994 MHz to 12.006 MHz
+10.2.3.2 Detailed Design Procedure
+A general detailed design procedure is explained in Detailed Design Procedure.
+10.2.3.3 Application Curves
+For the application curves, see the graphs listed in Table 11.
+36 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+12MHz
+1MΩ
+Clock hardware for
+built-in resonator
+10pF-33pF
+10pF-33pF
+USB port
+1uF
+1uF
+1uF
+1uF
+1uF
+10uF 100uF
+100uF
+0.022uF
+0.022uF
+1uF
+1uF
+1.5KΩ
+1.5KΩ 22Ω 22Ω
+16Ω
+330Ω
+330Ω
+16Ω
+D- D+V
+BUS
+GND
+S/PDIF OUT
+SDASCL
+SUSPEND
+V LOUT
+V ROUT
+PCM2704C/5C
+1uF
+Connection to ground plane Connection to power VBUS
+Top layer traces Top layer ground plane
+HID controls
+Decoupling capacitors as
+close as possible to de IC
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+11 Power Supply Recommendations
+The voltage source required to power the PCM2704C/5C/6C/7C must be between 3 V and 3.6 V for proper
+operation (self-powered mode). TI recommends placing a decoupling capacitor in every voltage source pin. This
+helps filter lower frequency power supply noise. Place these decoupling capacitors as close as possible to the
+PCM2704C/5C/6C/7C.
+12 Layout
+12.1 Layout Guidelines
+The decoupling capacitors must be as close as possible to the PCM2704C/5C/6C/7C pins. TI recommends
+placing an output filter such as the one shown in Detailed Design Procedure. The PCM2704C/5C/6C/7C is a low
+power device, so there is no need for a special heat sink PCB design.
+12.2 Layout Example
+Figure 38. Layout Example 1
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 37
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+0.022uF
+16Ω
+0.022uF
+16Ω
+3.3KΩ
+1.5KΩ
+1.5KΩ
+100uF
+100uF
+10uF
+1uF
+22Ω
+22Ω
+D-
+D+
+VBUS
+GND
+1uF
+1MΩ
+10pF-33pF
+12MHz
+10pF-33pF
+SCL
+SDA
+External ROM
+(Optional)
+1uF1uF
+1uF
+3.3KΩ 3.3KΩ
+3.3KΩ
+V ROUT
+V LOUT
+S/PDIF OUT
+SUSPEND
+PLAY/PAUSE
+NEXT TRACK
+MUTE
+VOLUME+
+VOLUME-
+PREVIOUS TRACK
+STOP
+Connection to ground
+Bottom layer
+Top layer
+Decoupling capacitors as
+close as possible to de IC
+Clock hardware for
+built-in resonator
+HID controls
+USB port
+Top layer ground plane
+PCM2706C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+Layout Example (continued)
+Figure 39. Layout Example 2
+38 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2707C
+0.022uF
+16Ω
+0.022uF
+16Ω
+3.3KΩ
+1.5KΩ
+100uF
+100uF
+10uF
+22Ω
+22Ω
+D-
+D+
+VBUS
+GND
+1MΩ
+10pF-33pF
+12MHz
+10pF-33pF
+1uF1uF
+3.3KΩ 3.3KΩ
+3.3KΩ
+V ROUT
+V LOUT
+SUSPEND
+Decoupling capacitors as
+close as possible to de IC
+Clock hardware for
+built-in resonator
+USB port
+10uF
+3.3KΩ
+DIN
+LRCK
+MS
+MC
+MD
+BCKDOUT
+System Clock
+0.1uF
+Connection to power 3.3 V
+Connection to ground
+Bottom layer
+Top layer Top layer ground plane
+I2S I/F Audio
+Device
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+www.ti.com SBFS036B – MAY 2015 – REVISED AUGUST 2015
+Layout Example (continued)
+Figure 40. Layout Example 3
+Copyright © 2015, Texas Instruments Incorporated Submit Documentation Feedback 39
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PCM2704C, PCM2705C, PCM2706C, PCM2707C
+SBFS036B – MAY 2015 – REVISED AUGUST 2015 www.ti.com
+13 Device and Documentation Support
+13.1 Documentation Support
+13.1.1 Related Documentation
+For related documentation, see the Updated Operating Environments for PCM270x, PCM290x Applications,
+SLAA374.
+13.2 Related Links
+The table below lists quick access links. Categories include technical documents, support and community
+resources, tools and software, and quick access to sample or buy.
+Table 14. Related Links
+TECHNICAL TOOLS & SUPPORT &PARTS PRODUCT FOLDER SAMPLE & BUY DOCUMENTS SOFTWARE COMMUNITY
+PCM2704C Click here Click here Click here Click here Click here
+PCM2705C Click here Click here Click here Click here Click here
+PCM2706C Click here Click here Click here Click here Click here
+PCM2707C Click here Click here Click here Click here Click here
+13.3 Community Resources
+The following links connect to TI community resources. Linked contents are provided "AS IS" by the respective
+contributors. They do not constitute TI specifications and do not necessarily reflect TI's views; see TI's Terms of
+Use.
+TI E2E™ Online Community TI's Engineer-to-Engineer (E2E) Community. Created to foster collaboration
+among engineers. At e2e.ti.com, you can ask questions, share knowledge, explore ideas and help
+solve problems with fellow engineers.
+Design Support TI's Design Support Quickly find helpful E2E forums along with design support tools and
+contact information for technical support.
+13.4 Trademarks
+SpAct, E2E are trademarks of Texas Instruments.
+System Two Cascade is a trademark of Audio Precision, Inc.
+Audio Precision is a registered trademark of Audio Precision, Inc.
+All other trademarks are the property of their respective owners.
+13.5 Electrostatic Discharge Caution
+These devices have limited built-in ESD protection. The leads should be shorted together or the device placed in conductive foam
+during storage or handling to prevent electrostatic damage to the MOS gates.
+13.6 Glossary
+SLYZ022 — TI Glossary.
+This glossary lists and explains terms, acronyms, and definitions.
+14 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most
+current data available for the designated devices. This data is subject to change without notice and revision of
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+40 Submit Documentation Feedback Copyright © 2015, Texas Instruments Incorporated
+Product Folder Links: PCM2704C PCM2705C PCM2706C PCM2707C
+PACKAGE OPTION ADDENDUM
+www.ti.com 10-Nov-2025
+PACKAGING INFORMATION
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+PCM2704CDB Active Production SSOP (DB) | 28 50 | BULK Yes NIPDAU Level-1-260C-UNLIM -25 to 85 PCM2704C
+PCM2704CDB.B Active Production SSOP (DB) | 28 50 | BULK Yes NIPDAU Level-1-260C-UNLIM -25 to 85 PCM2704C
+PCM2704CDBR Active Production SSOP (DB) | 28 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -25 to 85 PCM2704C
+PCM2704CDBR.B Active Production SSOP (DB) | 28 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -25 to 85 PCM2704C
+PCM2705CDB Active Production SSOP (DB) | 28 50 | BULK Yes NIPDAU Level-1-260C-UNLIM -25 to 85 PCM2705C
+PCM2705CDB.B Active Production SSOP (DB) | 28 50 | BULK Yes NIPDAU Level-1-260C-UNLIM -25 to 85 PCM2705C
+PCM2705CDBR Active Production SSOP (DB) | 28 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -25 to 85 PCM2705C
+PCM2705CDBR.B Active Production SSOP (DB) | 28 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -25 to 85 PCM2705C
+PCM2705CDBRG4 Active Production SSOP (DB) | 28 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -25 to 85 PCM2705C
+PCM2705CDBRG4.B Active Production SSOP (DB) | 28 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -25 to 85 PCM2705C
+PCM2706CPJT Active Production TQFP (PJT) | 32 250 | JEDEC
+TRAY (5+1)
+Yes NIPDAU Level-1-260C-UNLIM -25 to 85 PCM2706C
+PCM2706CPJT.B Active Production TQFP (PJT) | 32 250 | JEDEC
+TRAY (5+1)
+Yes NIPDAU Level-1-260C-UNLIM -25 to 85 PCM2706C
+PCM2706CPJTR Active Production TQFP (PJT) | 32 1000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -25 to 85 PCM2706C
+PCM2706CPJTR.B Active Production TQFP (PJT) | 32 1000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -25 to 85 PCM2706C
+ 
+(1) Status:  For more details on status, see our product life cycle.
+ 
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+ 
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+ 
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+ 
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+ 
+Addendum-Page 1
+PACKAGE OPTION ADDENDUM
+www.ti.com 10-Nov-2025
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+ 
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+ 
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+ 
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+ 
+Addendum-Page 2
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 3-Oct-2026
+TAPE AND REEL INFORMATION
+Reel Width (W1)
+REEL DIMENSIONS
+A0B0K0WDimension designed to accommodate the component lengthDimension designed to accommodate the component thicknessOverall width of the carrier tapePitch between successive cavity centersDimension designed to accommodate the component width
+TAPE DIMENSIONSK0 P1B0WA0Cavity
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Pocket QuadrantsSprocket HolesQ1Q1Q2Q2Q3Q3Q4Q4User Direction of Feed
+P1ReelDiameter
+ 
+*All dimensions are nominal
+Device Package
+Type
+Package
+Drawing
+Pins SPQ Reel
+Diameter
+(mm)
+Reel
+Width
+W1 (mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+PCM2704CDBR SSOP DB 28 2000 330.0 16.4 8.45 10.55 2.5 12.0 16.2 Q1
+PCM2705CDBR SSOP DB 28 2000 330.0 16.4 8.45 10.55 2.5 12.0 16.2 Q1
+PCM2705CDBRG4 SSOP DB 28 2000 330.0 16.4 8.45 10.55 2.5 12.0 16.2 Q1
+PCM2706CPJTR TQFP PJT 32 1000 330.0 16.4 9.6 9.6 1.5 12.0 16.0 Q2
+Pack Materials-Page 1
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 3-Oct-2026
+TAPE AND REEL BOX DIMENSIONS
+Width (mm)
+W LH
+ 
+*All dimensions are nominal
+Device Package Type Package Drawing Pins SPQ Length (mm) Width (mm) Height (mm)
+PCM2704CDBR SSOP DB 28 2000 353.0 353.0 32.0
+PCM2705CDBR SSOP DB 28 2000 353.0 353.0 32.0
+PCM2705CDBRG4 SSOP DB 28 2000 353.0 353.0 32.0
+PCM2706CPJTR TQFP PJT 32 1000 350.0 350.0 43.0
+Pack Materials-Page 2
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 3-Oct-2026
+TUBE
+ 
+ 
+L - Tube length
+T - Tube  
+height
+W - Tube  
+width
+B - Alignment groove width
+ 
+ 
+*All dimensions are nominal
+Device Package Name Package Type Pins SPQ L (mm) W (mm) T (µm) B (mm)
+PCM2704CDB DB SSOP 28 50 530 10.5 4000 4.1
+PCM2704CDB.B DB SSOP 28 50 530 10.5 4000 4.1
+PCM2705CDB DB SSOP 28 50 530 10.5 4000 4.1
+PCM2705CDB.B DB SSOP 28 50 530 10.5 4000 4.1
+Pack Materials-Page 3
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 3-Oct-2026
+TRAY
+ 
+ 
+L - Outer tray length without tabs KO - 
+Outer 
+tray 
+height
+W - 
+Outer 
+tray 
+width
+P1 - Tray unit pocket pitch
+CW - Measurement for tray edge (Y direction) to corner pocket center
+CL - Measurement for tray edge (X direction) to corner pocket center
+Text
+ 
+ 
+Chamfer on Tray corner indicates Pin 1 orientation of packed units.
+ 
+ 
+*All dimensions are nominal
+Device Package
+Name
+Package
+Type
+Pins SPQ Unit array
+matrix
+Max
+temperature
+(°C)
+L (mm) W
+(mm)
+K0
+(µm)
+P1
+(mm)
+CL
+(mm)
+CW
+(mm)
+PCM2706CPJT PJT TQFP 32 250 10 x 25 150 315 135.9 7620 12.2 11.1 11.25
+PCM2706CPJT PJT TQFP 32 250 10 x 25 150 315 135.9 7620 12.2 11.1 11.25
+PCM2706CPJT.B PJT TQFP 32 250 10 x 25 150 315 135.9 7620 12.2 11.1 11.25
+PCM2706CPJT.B PJT TQFP 32 250 10 x 25 150 315 135.9 7620 12.2 11.1 11.25
+PCM2706CPJTR PJT TQFP 32 1000 10 x 25 150 315 135.9 7620 12.2 11.1 11.25
+PCM2706CPJTR.B PJT TQFP 32 1000 10 x 25 150 315 135.9 7620 12.2 11.1 11.25
+Pack Materials-Page 4
+www.ti.com
+PACKAGE OUTLINE
+C
+26X 0.65
+2X
+8.45
+28X 0.38
+0.22
+8.2
+7.4 TYP
+SEATING
+PLANE
+0.05 MIN
+0.25
+GAGE PLANE
+0 -8
+2 MAX
+B 5.6
+5.0
+NOTE 4
+A
+10.5
+9.9
+NOTE 3
+0.95
+0.55
+(0.15) TYP
+SSOP - 2 mm max heightDB0028A
+SMALL OUTLINE PACKAGE
+4214853/B   03/2018
+1
+14
+15
+28
+0.15 C A B
+PIN 1 INDEX AREA
+SEE DETAIL  A
+0.1 C
+NOTES: 
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm per side. 
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.25 mm per side.
+5. Reference JEDEC registration MO-150.
+ 
+A  15
+DETAIL A
+TYPICAL
+SCALE  1.500
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.07 MAX
+ALL AROUND
+0.07 MIN
+ALL AROUND
+28X (1.85)
+28X (0.45)
+26X (0.65)
+(7)
+(R0.05) TYP
+SSOP - 2 mm max heightDB0028A
+SMALL OUTLINE PACKAGE
+4214853/B   03/2018
+NOTES: (continued)
+ 
+6. Publication IPC-7351 may have alternate designs. 
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+ 
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE: 10X
+SYMM
+SYMM
+1
+14 15
+28
+15.000
+METALSOLDER MASK
+OPENING
+METAL UNDER
+SOLDER MASK
+SOLDER MASK
+OPENING
+EXPOSED METALEXPOSED METAL
+SOLDER MASK DETAILS
+NON-SOLDER MASK
+DEFINED
+(PREFERRED)
+SOLDER MASK
+DEFINED
+www.ti.com
+EXAMPLE STENCIL DESIGN
+28X (1.85)
+28X (0.45)
+26X (0.65)
+(7)
+(R0.05) TYP
+SSOP - 2 mm max heightDB0028A
+SMALL OUTLINE PACKAGE
+4214853/B   03/2018
+NOTES: (continued)
+ 
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.   
+9. Board assembly site may have different recommendations for stencil design.
+ 
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+SCALE: 10X
+SYMM
+SYMM
+1
+14 15
+28
+www.ti.com
+PACKAGE OUTLINE
+C
+32X 0.45
+0.30
+0.2 C A B
+28X 0.8
+PIN 1 ID
+0.09-0.20
+TYP
+0.15
+0.05
+0 -7
+4X 5.6
+9.2
+8.8 TYP
+0.75
+0.45
+0.1 C
+1.2
+1.0
+B7.2
+6.8
+A
+7.2
+6.8
+0.25
+GAGE PLANE (1)
+PLASTIC QUAD FLATPACK
+TQFP - 1.2 mm max heightPJT0032A
+PLASTIC QUAD FLATPACK
+4220861/A   07/2023
+NOTES: 
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice.
+3. Reference JEDEC registration MS-026.
+1
+8
+9 16
+17
+24
+2532
+0.2 C A B
+SEE DETAIL A
+SEATING PLANE
+0.1 C
+DETAIL A
+SCALE: 15
+DETAIL  A
+TYPICAL
+SCALE  1.700
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.05 MAX
+ALL AROUND
+0.05 MIN
+ALL AROUND
+(8.4)
+(8.4)
+28X (0.8)
+32X (1.5)
+32X (0.55)
+(R0.05) TYP
+TQFP - 1.2 mm max heightPJT0032A
+PLASTIC QUAD FLATPACK
+ 4220861/A   07/2023
+NOTES: (continued)
+ 
+4. Publication IPC-7351 may have alternate designs. 
+5. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE:8X
+SYMM
+SYMM
+32 25
+9 16
+17
+24
+1
+8
+SEE DETAILS
+METAL SOLDER MASK
+OPENING
+NON SOLDER MASK
+DEFINED
+SOLDER MASK DETAILS
+EXPOSED
+METAL
+SOLDER MASK METAL UNDER
+SOLDER MASK
+SOLDER MASK
+DEFINED
+EXPOSED
+METAL
+www.ti.com
+EXAMPLE STENCIL DESIGN
+(8.4)
+28X (0.8)
+32X (1.5)
+32X (0.55)
+(8.4)
+(R0.05) TYP
+TQFP - 1.2 mm max heightPJT0032A
+PLASTIC QUAD FLATPACK
+4220861/A   07/2023
+NOTES: (continued)
+ 
+6. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.   
+7. Board assembly site may have different recommendations for stencil design.
+ 
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+SCALE:8X
+SYMM
+SYMM
+32 25
+9 16
+17
+24
+1
+8
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully 
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on 
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable 
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products 
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025

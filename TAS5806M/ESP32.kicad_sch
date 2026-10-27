@@ -14,130 +14,7 @@
 		(comment 3 "N8R2 module: IO16 is the PSRAM chip-select -> 10k pull-up only, never used as GPIO")
 	)
 	(lib_symbols
-		(symbol "Connector:TestPoint"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.762)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Connector_Generic:Conn_01x06"
+		(symbol "Connector:Conn_01x04_Socket"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -148,7 +25,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at 0 7.62 0)
+				(at 0 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -157,8 +34,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x06"
-				(at 0 -10.16 0)
+			(property "Value" "Conn_01x04_Socket"
+				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -189,11 +66,21 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, single row, 01x04, script generated"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -222,21 +109,11 @@
 					)
 				)
 			)
-			(symbol "Conn_01x06_1_1"
-				(rectangle
-					(start -1.27 6.35)
-					(end 1.27 -8.89)
-					(stroke
-						(width 0.254)
-						(type default)
+			(symbol "Conn_01x04_Socket_1_1"
+				(polyline
+					(pts
+						(xy -1.27 2.54) (xy -0.508 2.54)
 					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 5.207)
-					(end 0 4.953)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -245,9 +122,10 @@
 						(type none)
 					)
 				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -0.508 0)
+					)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -256,9 +134,10 @@
 						(type none)
 					)
 				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -0.508 -2.54)
+					)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -267,9 +146,10 @@
 						(type none)
 					)
 				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
+				(polyline
+					(pts
+						(xy -1.27 -5.08) (xy -0.508 -5.08)
+					)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -278,9 +158,10 @@
 						(type none)
 					)
 				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
+				(arc
+					(start 0 2.032)
+					(mid -0.5058 2.54)
+					(end 0 3.048)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -289,9 +170,34 @@
 						(type none)
 					)
 				)
-				(rectangle
-					(start -1.27 -7.493)
-					(end 0 -7.747)
+				(arc
+					(start 0 -0.508)
+					(mid -0.5058 0)
+					(end 0 0.508)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -3.048)
+					(mid -0.5058 -2.54)
+					(end 0 -2.032)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -5.588)
+					(mid -0.5058 -5.08)
+					(end 0 -4.572)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -301,7 +207,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 5.08 0)
+					(at -5.08 2.54 0)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -319,7 +225,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -337,7 +243,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -5.08 -2.54 0)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -355,7 +261,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -2.54 0)
+					(at -5.08 -5.08 0)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -365,42 +271,6 @@
 						)
 					)
 					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -7.62 0)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -549,207 +419,6 @@
 					(at 0 -3.81 90)
 					(length 2.794)
 					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:LED"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "LED"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Light emitting diode"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Pins" "1=K 2=A"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "LED diode"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "LED_0_1"
-				(polyline
-					(pts
-						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "LED_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2372,7 +2041,7 @@
 	)
 	(text "disconnected (ISL91127 off: its 120R output discharge draws ~27 mA - acceptable)."
 		(exclude_from_sim no)
-		(at 55.88 207.01 0)
+		(at 83.312 210.566 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2394,7 +2063,7 @@
 	)
 	(text "J501: 1 GND, 2 +3V3, 3 TXD0 (ESP out), 4 RXD0 (ESP in), 5 EN, 6 IO0."
 		(exclude_from_sim no)
-		(at 55.88 199.39 0)
+		(at 83.312 202.946 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2416,7 +2085,7 @@
 	)
 	(text "Pin 2 may power the 3V3 rail from a 3.3 V adapter for bench flashing with the battery"
 		(exclude_from_sim no)
-		(at 55.88 203.2 0)
+		(at 83.312 206.756 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2573,6 +2242,12 @@
 		(color 0 0 0 0)
 		(uuid "c2f75990-6662-48e6-a6c3-d61fa94b1351")
 	)
+	(junction
+		(at 68.58 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dc60d540-8e80-4465-94bc-5145013b5958")
+	)
 	(no_connect
 		(at 139.7 101.6)
 		(uuid "0addeebf-ef4c-4a0b-a5d7-df2f1510db98")
@@ -2699,6 +2374,16 @@
 	)
 	(wire
 		(pts
+			(xy 41.91 205.74) (xy 53.34 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d5c3846-b166-49f6-aa55-4fb97198d99d")
+	)
+	(wire
+		(pts
 			(xy 139.7 88.9) (xy 137.16 88.9)
 		)
 		(stroke
@@ -2749,16 +2434,6 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 208.28) (xy 53.34 208.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3cfae324-628f-45ee-99f0-baeab2abc571")
-	)
-	(wire
-		(pts
 			(xy 180.34 91.44) (xy 180.34 93.98)
 		)
 		(stroke
@@ -2799,6 +2474,16 @@
 	)
 	(wire
 		(pts
+			(xy 41.91 208.28) (xy 53.34 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "572b5a06-34c8-4004-9c1b-5874838cbc50")
+	)
+	(wire
+		(pts
 			(xy 106.68 78.74) (xy 96.52 78.74)
 		)
 		(stroke
@@ -2819,6 +2504,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 165.1) (xy 76.2 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "665195e6-5914-4c62-9a91-94132647edff")
+	)
+	(wire
+		(pts
 			(xy 139.7 68.58) (xy 96.52 68.58)
 		)
 		(stroke
@@ -2829,13 +2524,13 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 205.74) (xy 53.34 205.74)
+			(xy 41.91 200.66) (xy 71.12 200.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6c704f86-d655-4c14-b412-19d19925eb7e")
+		(uuid "6bbcbb3b-3de2-43ac-b20c-9b04c5f8cd92")
 	)
 	(wire
 		(pts
@@ -2969,13 +2664,13 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 200.66) (xy 53.34 200.66)
+			(xy 41.91 203.2) (xy 53.34 203.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a45f6740-0fc2-4a3b-bf80-eb00dd88a2cb")
+		(uuid "a366766a-1003-4cb9-a52d-e88dde70e22b")
 	)
 	(wire
 		(pts
@@ -3059,7 +2754,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 165.1) (xy 76.2 165.1)
+			(xy 63.5 165.1) (xy 68.58 165.1)
 		)
 		(stroke
 			(width 0)
@@ -3076,16 +2771,6 @@
 			(type default)
 		)
 		(uuid "c1527e1b-9895-4de7-b751-1d35692e8537")
-	)
-	(wire
-		(pts
-			(xy 45.72 213.36) (xy 53.34 213.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c3899415-bb49-4e7d-8bdf-3bd739d09518")
 	)
 	(wire
 		(pts
@@ -3179,16 +2864,6 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 203.2) (xy 53.34 203.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e90958f5-d63e-4439-b58d-f30ea2a4e2ef")
-	)
-	(wire
-		(pts
 			(xy 180.34 104.14) (xy 180.34 106.68)
 		)
 		(stroke
@@ -3257,16 +2932,6 @@
 		)
 		(uuid "fa4cd337-a83c-4025-adf4-b459c721bd91")
 	)
-	(wire
-		(pts
-			(xy 45.72 210.82) (xy 53.34 210.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ff536f52-d3e8-440b-8afd-a26359978a52")
-	)
 	(label "ESP_IO16"
 		(at 220.98 129.54 270)
 		(effects
@@ -3286,16 +2951,6 @@
 			(justify right bottom)
 		)
 		(uuid "10feee8a-57df-4227-b8e8-029468d431cd")
-	)
-	(label "ESP_EN"
-		(at 53.34 210.82 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1a674042-bea6-451a-894c-2a49c9f5f0f0")
 	)
 	(label "ESP_EN"
 		(at 96.52 55.88 180)
@@ -3326,16 +2981,6 @@
 			(justify left bottom)
 		)
 		(uuid "704b9039-4041-4f82-bb1b-df618838fcf0")
-	)
-	(label "ESP_IO0"
-		(at 53.34 213.36 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a22458e9-b63a-49ec-98d3-9e0f4e48ea46")
 	)
 	(label "ESP_RXD0"
 		(at 185.42 73.66 0)
@@ -3651,6 +3296,30 @@
 			)
 		)
 	)
+	(global_label "BT_LED"
+		(shape passive)
+		(at 129.54 88.9 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a5d0e777-c004-45c8-82dd-9394f3cb120e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 129.54 88.9 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "AMP_PDN"
 		(shape output)
 		(at 185.42 81.28 0)
@@ -3771,6 +3440,30 @@
 			)
 		)
 	)
+	(global_label "PWR_LED"
+		(shape passive)
+		(at 193.04 66.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fe8ef56a-81b1-4ef3-88cd-e45f0a5c2dcf")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 193.04 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(symbol
 		(lib_id "Device:R")
 		(at 110.49 78.74 270)
@@ -3783,7 +3476,7 @@
 		(dnp no)
 		(uuid "114452e9-c1fd-45d8-bab3-8083e712ca7b")
 		(property "Reference" "R504"
-			(at 107.29 74.44 90)
+			(at 102.616 77.724 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3794,7 +3487,7 @@
 			)
 		)
 		(property "Value" "22R"
-			(at 107.29 76.74 90)
+			(at 108.712 78.74 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3881,6 +3574,28 @@
 				)
 			)
 		)
+		(property "Manufacturer_Name" ""
+			(at 110.49 78.74 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
+			(at 110.49 78.74 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3c963a67-226f-4a1e-94b0-feca627825f3")
 		)
@@ -3891,6 +3606,85 @@
 			(project "TAS5806M"
 				(path "/5b998f05-1046-4e80-90fb-1a695b42e662/c217db37-29ff-4a50-8c35-d8244be34778"
 					(reference "R504")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 68.58 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "120ead6d-f671-4c9a-89b5-73aadadeea4a")
+		(property "Reference" "#PWR0517"
+			(at 71.12 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 68.58 153.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 68.58 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 68.58 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a5b5ded3-20be-47b0-9334-854f324778ff")
+		)
+		(instances
+			(project "TAS5806M"
+				(path "/5b998f05-1046-4e80-90fb-1a695b42e662/c217db37-29ff-4a50-8c35-d8244be34778"
+					(reference "#PWR0517")
 					(unit 1)
 				)
 			)
@@ -3908,7 +3702,7 @@
 		(dnp no)
 		(uuid "194612ea-36ce-4821-8a25-2fe6a662c864")
 		(property "Reference" "R506"
-			(at 223.18 124.83 0)
+			(at 219.202 122.428 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3918,8 +3712,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
-			(at 223.18 127.33 0)
+		(property "Value" "10K"
+			(at 220.98 124.206 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4006,6 +3800,28 @@
 				)
 			)
 		)
+		(property "Manufacturer_Name" ""
+			(at 220.98 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
+			(at 220.98 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7d874343-82eb-456e-8be3-8d5a0befeb25")
 		)
@@ -4016,6 +3832,114 @@
 			(project "TAS5806M"
 				(path "/5b998f05-1046-4e80-90fb-1a695b42e662/c217db37-29ff-4a50-8c35-d8244be34778"
 					(reference "R506")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x04_Socket")
+		(at 36.83 205.74 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "28529da6-d35e-4fcb-afbb-163510b58282")
+		(property "Reference" "J1"
+			(at 37.465 195.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ESP PROG"
+			(at 37.465 198.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+			(at 36.83 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 36.83 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 36.83 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 36.83 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
+			(at 36.83 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ac1b42d4-4bd0-4bc4-b00d-1e70ffcedf9c")
+		)
+		(pin "1"
+			(uuid "d6cd9ef2-5050-4ff1-9601-635e7e88f03f")
+		)
+		(pin "3"
+			(uuid "6ecb48e8-7caf-496b-a0f6-703bd5d3ee79")
+		)
+		(pin "4"
+			(uuid "41d46d06-084b-44b4-acff-653e0f9e7f2c")
+		)
+		(instances
+			(project "TAS5806M"
+				(path "/5b998f05-1046-4e80-90fb-1a695b42e662/c217db37-29ff-4a50-8c35-d8244be34778"
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -4033,7 +3957,7 @@
 		(dnp no)
 		(uuid "28ed4617-a17f-4a04-a9f3-d3983905cc1e")
 		(property "Reference" "R508"
-			(at 261.28 147.69 0)
+			(at 257.81 145.034 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4043,8 +3967,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4k7"
-			(at 261.28 150.19 0)
+		(property "Value" "4K7"
+			(at 259.08 147.066 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4131,6 +4055,28 @@
 				)
 			)
 		)
+		(property "Manufacturer_Name" ""
+			(at 259.08 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
+			(at 259.08 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e6369c3a-3089-48f0-8994-1ac653d9a16c")
 		)
@@ -4168,7 +4114,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22u"
+		(property "Value" "22uF"
 			(at 256.2 56.21 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4256,6 +4202,28 @@
 				)
 			)
 		)
+		(property "Manufacturer_Name" ""
+			(at 254 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
+			(at 254 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2217c0f9-05b0-440d-8cff-dc48dd29b9b4")
 		)
@@ -4266,131 +4234,6 @@
 			(project "TAS5806M"
 				(path "/5b998f05-1046-4e80-90fb-1a695b42e662/c217db37-29ff-4a50-8c35-d8244be34778"
 					(reference "C502")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 125.73 88.9 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3d8a7aa9-ee88-4ebf-a07e-2e6ecf699e65")
-		(property "Reference" "D501"
-			(at 122.73 91.5 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GREEN"
-			(at 122.73 93.8 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
-			(at 125.73 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 125.73 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 125.73 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Kingbright"
-			(at 125.73 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "KP-2012LSGC"
-			(at 125.73 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Stock" "Inventory id 639 (qty 1)"
-			(at 125.73 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Note" "2 mA low-current type"
-			(at 125.73 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8655e723-93fc-4bba-b622-6b1f39a4aa6b")
-		)
-		(pin "2"
-			(uuid "f371dddd-cb0b-4368-a8a5-166a57e429da")
-		)
-		(instances
-			(project "TAS5806M"
-				(path "/5b998f05-1046-4e80-90fb-1a695b42e662/c217db37-29ff-4a50-8c35-d8244be34778"
-					(reference "D501")
 					(unit 1)
 				)
 			)
@@ -4476,8 +4319,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 132.08 81.28 90)
+		(lib_id "Device:R")
+		(at 189.23 66.04 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4485,9 +4328,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "50d2fb31-dc3c-4c89-abd9-51a612453c03")
-		(property "Reference" "TP501"
-			(at 120.08 80.28 90)
+		(uuid "535f1ac5-da72-43f8-981c-45a3634f50e5")
+		(property "Reference" "R509"
+			(at 196.85 68.58 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4497,8 +4340,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IO14"
-			(at 120.08 82.78 90)
+		(property "Value" "1K"
+			(at 190.5 66.04 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4508,8 +4351,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 132.08 81.28 0)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 189.23 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4520,7 +4363,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 132.08 81.28 0)
+			(at 189.23 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4530,8 +4373,8 @@
 				)
 			)
 		)
-		(property "Description" "test point"
-			(at 132.08 81.28 0)
+		(property "Description" "Resistor"
+			(at 189.23 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4541,8 +4384,8 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
-			(at 132.08 81.28 0)
+		(property "Manufacturer" "(unknown)"
+			(at 189.23 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4552,8 +4395,8 @@
 				)
 			)
 		)
-		(property "MPN" ""
-			(at 132.08 81.28 0)
+		(property "MPN" "1K thick film 2012"
+			(at 189.23 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4563,8 +4406,41 @@
 				)
 			)
 		)
-		(property "Stock" "n/a (bare pad)"
-			(at 132.08 81.28 0)
+		(property "Stock" "Inventory id 223 (qty 75)"
+			(at 189.23 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Note" "5% thick film. Power LED (off-board, J402-6) from GPIO19. LED TUNE: set for the panel LED"
+			(at 189.23 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 189.23 66.04 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
+			(at 189.23 66.04 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4575,12 +4451,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "446d7b27-7feb-4d52-b210-50d41430616c")
+			(uuid "6a90a95e-b128-481c-89e2-5db30ef2cae6")
+		)
+		(pin "2"
+			(uuid "0edfcda8-934f-40bd-87de-f47d99d6e7f5")
 		)
 		(instances
 			(project "TAS5806M"
 				(path "/5b998f05-1046-4e80-90fb-1a695b42e662/c217db37-29ff-4a50-8c35-d8244be34778"
-					(reference "TP501")
+					(reference "R509")
 					(unit 1)
 				)
 			)
@@ -4660,117 +4539,6 @@
 			(project "TAS5806M"
 				(path "/5b998f05-1046-4e80-90fb-1a695b42e662/c217db37-29ff-4a50-8c35-d8244be34778"
 					(reference "#PWR0508")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 185.42 58.42 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "596e9dcf-99bb-43e4-84d3-ac47e518009a")
-		(property "Reference" "TP502"
-			(at 189.92 57.42 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IO17"
-			(at 189.92 59.92 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 185.42 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 185.42 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 185.42 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 185.42 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" ""
-			(at 185.42 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Stock" "n/a (bare pad)"
-			(at 185.42 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dff029aa-357f-49f3-a64b-0d9d1b62a473")
-		)
-		(instances
-			(project "TAS5806M"
-				(path "/5b998f05-1046-4e80-90fb-1a695b42e662/c217db37-29ff-4a50-8c35-d8244be34778"
-					(reference "TP502")
 					(unit 1)
 				)
 			)
@@ -5044,6 +4812,28 @@
 				)
 			)
 		)
+		(property "Manufacturer_Name" "Expressif"
+			(at 139.7 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ESP32-WROOM-32UE-N8R2"
+			(at 139.7 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "73772225-6d3e-4ffc-b673-47831de2e1c5")
 		)
@@ -5275,7 +5065,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 53.34 200.66 0)
+		(at 71.12 200.66 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5285,7 +5075,7 @@
 		(dnp no)
 		(uuid "6ea7b8af-51c4-488c-9ae5-13f1cd6ca176")
 		(property "Reference" "#PWR0511"
-			(at 55.88 199.39 0)
+			(at 73.66 199.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5297,7 +5087,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 53.34 205.26 0)
+			(at 71.12 205.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5308,7 +5098,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 53.34 200.66 0)
+			(at 71.12 200.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5319,7 +5109,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 200.66 0)
+			(at 71.12 200.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5330,7 +5120,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 53.34 200.66 0)
+			(at 71.12 200.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5522,7 +5312,7 @@
 		(dnp no)
 		(uuid "7583eb77-c080-4dd8-8c0a-45c1454c9ae5")
 		(property "Reference" "R507"
-			(at 246.04 147.69 0)
+			(at 242.062 145.796 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5532,8 +5322,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4k7"
-			(at 246.04 150.19 0)
+		(property "Value" "4K7"
+			(at 243.84 146.812 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5610,6 +5400,28 @@
 			)
 		)
 		(property "Note" "1% thick film"
+			(at 243.84 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 243.84 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
 			(at 243.84 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -5734,6 +5546,28 @@
 				)
 			)
 		)
+		(property "Manufacturer_Name" ""
+			(at 81.28 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
+			(at 81.28 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "776e4a0d-7ccc-4684-a3bf-c9357c0133a5")
 		)
@@ -5777,7 +5611,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "1uF"
 			(at 70.78 145.11 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5855,6 +5689,28 @@
 			)
 		)
 		(property "Note" "25 V X7R"
+			(at 68.58 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 68.58 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
 			(at 68.58 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -5981,7 +5837,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "10uF"
 			(at 266.36 56.21 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6059,6 +5915,28 @@
 			)
 		)
 		(property "Note" "16 V X5R"
+			(at 264.16 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 264.16 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
 			(at 264.16 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -6264,8 +6142,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1k"
-			(at 130.15 93.8 90)
+		(property "Value" "1K"
+			(at 132.08 88.9 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6341,8 +6219,30 @@
 				)
 			)
 		)
-		(property "Note" "5% thick film"
+		(property "Note" "5% thick film. BT status LED (off-board, J402-7). LED TUNE: set for the panel LED"
 			(at 133.35 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 133.35 88.9 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
+			(at 133.35 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6624,6 +6524,28 @@
 				)
 			)
 		)
+		(property "Manufacturer_Name" ""
+			(at 81.28 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
+			(at 81.28 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1afae4f9-dd77-4603-b243-0213c2ccbb17")
 		)
@@ -6667,7 +6589,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "100nF"
 			(at 276.52 56.21 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6755,6 +6677,28 @@
 				)
 			)
 		)
+		(property "Manufacturer_Name" ""
+			(at 274.32 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
+			(at 274.32 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f5b74730-8bde-49b5-b174-87b4959d73e0")
 		)
@@ -6772,6 +6716,153 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 68.58 161.29 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c3c840f4-3a84-41f3-b544-120c051c5c5c")
+		(property "Reference" "R510"
+			(at 66.802 156.972 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10K"
+			(at 68.58 159.512 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 68.58 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 68.58 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KOA Speer"
+			(at 68.58 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RK73B2ATTD103J"
+			(at 68.58 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "Inventory id 194 (qty 100)"
+			(at 68.58 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Note" "5% thick film"
+			(at 68.58 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 68.58 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
+			(at 68.58 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0983bb3b-0aa4-4243-bcc1-5922125b0132")
+		)
+		(pin "2"
+			(uuid "b578838a-decf-411e-8eb9-0c884d1ea5d0")
+		)
+		(instances
+			(project "TAS5806M"
+				(path "/5b998f05-1046-4e80-90fb-1a695b42e662/c217db37-29ff-4a50-8c35-d8244be34778"
+					(reference "R510")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 68.58 135.89 180)
 		(unit 1)
 		(body_style 1)
@@ -6782,7 +6873,7 @@
 		(dnp no)
 		(uuid "c556dc04-88a8-433e-a6a7-094a4900b18c")
 		(property "Reference" "R501"
-			(at 70.78 134.99 0)
+			(at 66.802 131.572 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6792,8 +6883,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
-			(at 70.78 137.49 0)
+		(property "Value" "10K"
+			(at 68.58 134.112 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6870,6 +6961,28 @@
 			)
 		)
 		(property "Note" "5% thick film"
+			(at 68.58 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 68.58 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
 			(at 68.58 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -6975,85 +7088,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 121.92 88.9 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d3a01d42-2d67-4048-b69d-6f7c249ae455")
-		(property "Reference" "#PWR0504"
-			(at 124.46 87.63 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 115.92 87.9 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 121.92 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 121.92 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 121.92 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e57d0bd4-2d9c-4f88-8b79-28542e4935ce")
-		)
-		(instances
-			(project "TAS5806M"
-				(path "/5b998f05-1046-4e80-90fb-1a695b42e662/c217db37-29ff-4a50-8c35-d8244be34778"
-					(reference "#PWR0504")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 130.81 73.66 270)
 		(unit 1)
@@ -7065,7 +7099,7 @@
 		(dnp no)
 		(uuid "d83b3270-55c2-4deb-b77a-7e7bc29e3c0b")
 		(property "Reference" "R502"
-			(at 127.61 69.36 90)
+			(at 122.936 72.39 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7076,7 +7110,7 @@
 			)
 		)
 		(property "Value" "22R"
-			(at 127.61 71.66 90)
+			(at 128.778 73.66 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7154,6 +7188,28 @@
 		)
 		(property "Note" "5% thick film"
 			(at 130.81 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 130.81 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
+			(at 130.81 73.66 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7179,117 +7235,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 185.42 66.04 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "da036c1f-b7bf-467e-a9c9-8e6a78e0ca47")
-		(property "Reference" "TP503"
-			(at 189.92 65.04 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IO19"
-			(at 189.92 67.54 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 185.42 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 185.42 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 185.42 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 185.42 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" ""
-			(at 185.42 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Stock" "n/a (bare pad)"
-			(at 185.42 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "24facd0b-c343-4a76-920e-eaa128d45568")
-		)
-		(instances
-			(project "TAS5806M"
-				(path "/5b998f05-1046-4e80-90fb-1a695b42e662/c217db37-29ff-4a50-8c35-d8244be34778"
-					(reference "TP503")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 120.65 76.2 270)
 		(unit 1)
@@ -7301,7 +7246,7 @@
 		(dnp no)
 		(uuid "da30d280-33d6-4735-8cd5-ae9aced58d87")
 		(property "Reference" "R503"
-			(at 117.45 71.9 90)
+			(at 112.776 75.184 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7312,7 +7257,7 @@
 			)
 		)
 		(property "Value" "22R"
-			(at 117.45 74.2 90)
+			(at 118.618 76.2 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7399,6 +7344,28 @@
 				)
 			)
 		)
+		(property "Manufacturer_Name" ""
+			(at 120.65 76.2 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
+			(at 120.65 76.2 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "403e8b28-1921-42e2-9c37-40f06090c313")
 		)
@@ -7409,133 +7376,6 @@
 			(project "TAS5806M"
 				(path "/5b998f05-1046-4e80-90fb-1a695b42e662/c217db37-29ff-4a50-8c35-d8244be34778"
 					(reference "R503")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x06")
-		(at 40.64 205.74 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "dc926806-26cc-4ed4-9b38-f247a8fe49cc")
-		(property "Reference" "J501"
-			(at 36 196 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "ESP PROG"
-			(at 36 218.5 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
-			(at 40.64 205.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 40.64 205.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 40.64 205.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Multicomp Pro"
-			(at 40.64 205.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "MC34635"
-			(at 40.64 205.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Stock" "Inventory id 691 (qty 10)"
-			(at 40.64 205.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "bf0d01bd-133c-43c8-8236-8588da307cb1")
-		)
-		(pin "2"
-			(uuid "029b8f2e-1224-44e1-bf74-911ef1889778")
-		)
-		(pin "3"
-			(uuid "142ebc3f-e6fe-4e54-b132-603127f857a9")
-		)
-		(pin "4"
-			(uuid "f1c396be-32ff-4e6a-a6d4-53e4a25ab84e")
-		)
-		(pin "5"
-			(uuid "b24bff32-bcd2-4194-bb0d-6c17289a1ec9")
-		)
-		(pin "6"
-			(uuid "c0fe5ec8-e372-4551-ae2f-17114d76075a")
-		)
-		(instances
-			(project "TAS5806M"
-				(path "/5b998f05-1046-4e80-90fb-1a695b42e662/c217db37-29ff-4a50-8c35-d8244be34778"
-					(reference "J501")
 					(unit 1)
 				)
 			)

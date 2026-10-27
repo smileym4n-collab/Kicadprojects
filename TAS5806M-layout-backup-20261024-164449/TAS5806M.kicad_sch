@@ -1,0 +1,1005 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "5b998f05-1046-4e80-90fb-1a695b42e662")
+	(paper "A3")
+	(title_block
+		(title "1S Bluetooth stereo soundbar (TAS5806M)")
+		(date "2026-10-19")
+		(rev "A")
+		(company "TAS5806M Bluetooth soundbar")
+		(comment 1 "Rev A schematic - generated 2026-10-19 - NOT yet reviewed on the bench, PCB not laid out")
+		(comment 2 "Engineering notes: DESIGN_NOTES.md in this folder")
+	)
+	(lib_symbols
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "RESET/BOOT, 6-pin programming header"
+		(exclude_from_sim no)
+		(at 160.02 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "03b5b9f3-c9e4-4cc8-81f3-b7e442d51b4c")
+	)
+	(text "TS 103AT window, 8 A fuse, KK-396 battery"
+		(exclude_from_sim no)
+		(at 33.02 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0725ecf4-89a1-4d6b-9d7c-0209a97d841d")
+	)
+	(text "EN_3V3 from ATtiny412 (pull-down)"
+		(exclude_from_sim no)
+		(at 287.02 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1861de79-55ba-4dfe-8776-114cec595306")
+	)
+	(text "ESP32-WROOM-32UE-N8R2, U.FL antenna"
+		(exclude_from_sim no)
+		(at 160.02 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "19bd09e5-6f64-4e1f-9c76-ea8517ce7c16")
+	)
+	(text "EC11E encoder (A/B to ESP32), UPDI header"
+		(exclude_from_sim no)
+		(at 33.02 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2312c6a3-129b-42fc-aca8-2e1e863bdc71")
+	)
+	(text "Single GND everywhere (one plane). Inter-sheet signals are global labels; rails are power symbols."
+		(exclude_from_sim no)
+		(at 30.48 209.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2b1e62e7-89d2-46ab-8efc-be57f108f6c5")
+	)
+	(text "PFM default, FPWM option R205"
+		(exclude_from_sim no)
+		(at 160.02 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "315d501e-a187-4090-ae9b-7ef2e8cff1ec")
+	)
+	(text "Rails: VBUS 5 V (<=12 V) | VSYS 3.0-4.4 V (BQ25895 SYS) | VBAT | PVDD 9.3 V (boost) | +3V3 switched (ISL91127) | +3V3_AON (TPS7A2033)"
+		(exclude_from_sim no)
+		(at 30.48 205.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "35137fbe-00f1-4e1e-8163-4d4814fa560a")
+	)
+	(text "ILIM 8.1 A typ, EN from ESP32 (pull-down)"
+		(exclude_from_sim no)
+		(at 160.02 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "35e72df3-2c6a-4eae-88ed-b4f7e8ad1b5e")
+	)
+	(text "10 uH + 0.68 uF per leg (CSAD0660-100M)"
+		(exclude_from_sim no)
+		(at 287.02 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "39d83f73-5db1-48a6-8f75-546a206e25ec")
+	)
+	(text "USB-C sink (Rd 5k1), TVS1400, TPD2E2U06"
+		(exclude_from_sim no)
+		(at 33.02 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3bcb4035-6ed0-4d14-b1a8-51494fab2c09")
+	)
+	(text "USB-C input, BQ25895 charger / power-path, 1S battery"
+		(exclude_from_sim no)
+		(at 33.02 45.72 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "4cf5f6c8-3527-464e-9678-a8aab37ec1f1")
+	)
+	(text "Speaker L/R connectors, I2S test points"
+		(exclude_from_sim no)
+		(at 287.02 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "51125a05-6e19-4cba-9f26-aecc9e3e00a9")
+	)
+	(text "I2S master (22R), I2C host, CC sense ADC"
+		(exclude_from_sim no)
+		(at 160.02 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5e780665-eb4f-4982-bc36-bc8acbdb8792")
+	)
+	(text "TAS5806M stereo Class-D (BTL), LC output filters, speaker outputs"
+		(exclude_from_sim no)
+		(at 287.02 121.92 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "73d0985d-44cd-4ed6-9ac3-106e45cf6b9d")
+	)
+	(text "BQ25895: ILIM 2.37 A ceiling, OTG disabled in hardware"
+		(exclude_from_sim no)
+		(at 33.02 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "77f5e450-947c-4cef-a6a7-2a1fad5b12cf")
+	)
+	(text "TPS61088-Q1 amplifier supply boost: VSYS (3.0-4.4 V) -> PVDD 9.3 V"
+		(exclude_from_sim no)
+		(at 160.02 45.72 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "8ace38b4-f35e-4229-aa8c-7ff10250dc67")
+	)
+	(text "VSYS -> 3.33 V, 1 uH XFL4020"
+		(exclude_from_sim no)
+		(at 287.02 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9155ec69-5fc4-4d51-8474-5bf3c7fc1756")
+	)
+	(text "TPS7A2033 always-on 3.3 V (6.5 uA)"
+		(exclude_from_sim no)
+		(at 33.02 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "93b6a764-c9a6-4d3f-92fa-99d8e33aa6fe")
+	)
+	(text "Always-on domain: TPS7A2033 LDO, ATtiny412 power latch, encoder, UPDI"
+		(exclude_from_sim no)
+		(at 33.02 121.92 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "abc6ef65-696e-4468-9c20-869181aa0640")
+	)
+	(text "ISL91127IR buck-boost: VSYS (2.5-4.4 V) -> +3V3 switched digital rail"
+		(exclude_from_sim no)
+		(at 287.02 45.72 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "b316c988-9a68-4952-a389-dd94682ad0a7")
+	)
+	(text "Supplies ESP32, TAS5806M DVDD"
+		(exclude_from_sim no)
+		(at 287.02 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b3cb9c20-b7dd-4d63-bf25-951ffd29a45f")
+	)
+	(text "TAS5806M BTL x2, PVDD 9.3 V"
+		(exclude_from_sim no)
+		(at 287.02 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bf1e6b7d-00eb-44a0-8f3f-4c649c05dded")
+	)
+	(text "ESP32-WROOM-32UE: Bluetooth A2DP sink, DSP, I2S master, I2C host"
+		(exclude_from_sim no)
+		(at 160.02 121.92 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "bfd7dd7d-7878-40af-b048-20387a71e73e")
+	)
+	(text "Status: schematic generated and ERC-clean; netlist verified against design intent. NOT simulated, NOT bench tested."
+		(exclude_from_sim no)
+		(at 30.48 213.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c5481655-b55d-44d2-918a-a8d0f6da1c56")
+	)
+	(text "VSYS -> 9.30 V, ~550 kHz, 2.2 uH XAL7030"
+		(exclude_from_sim no)
+		(at 160.02 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cd6ff368-5b49-4fff-ae3f-c10c1d895bdc")
+	)
+	(text "ATtiny412 latch: button, CHG_INT wake, UART to ESP32"
+		(exclude_from_sim no)
+		(at 33.02 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d9d2c46c-662e-457f-98c4-0be12811b6be")
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 227.33 215.265 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "849c233e-1618-4acf-a8ef-3a50e01f4b71")
+		(property "Reference" "H4"
+			(at 229.87 213.9949 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 229.87 216.5349 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 227.33 215.265 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 215.265 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 227.33 215.265 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "TAS5806M"
+				(path "/5b998f05-1046-4e80-90fb-1a695b42e662"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 227.33 200.025 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "88fe5bfa-af2d-4d85-a83c-1d0e510654de")
+		(property "Reference" "H1"
+			(at 229.87 198.7549 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 229.87 201.2949 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 227.33 200.025 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 200.025 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 227.33 200.025 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "TAS5806M"
+				(path "/5b998f05-1046-4e80-90fb-1a695b42e662"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 227.33 205.105 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a65f2c40-9753-43c7-8ed9-3ad69af74c2b")
+		(property "Reference" "H2"
+			(at 229.87 203.8349 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 229.87 206.3749 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 227.33 205.105 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 205.105 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 227.33 205.105 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "TAS5806M"
+				(path "/5b998f05-1046-4e80-90fb-1a695b42e662"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 227.33 210.185 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e316a363-0bf0-4e89-92b3-91c4219312a1")
+		(property "Reference" "H3"
+			(at 229.87 208.9149 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 229.87 211.4549 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 227.33 210.185 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 210.185 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 227.33 210.185 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "TAS5806M"
+				(path "/5b998f05-1046-4e80-90fb-1a695b42e662"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 157.48 40.64)
+		(size 101.6 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "0512c18f-6341-4b0b-9ec6-4388a9005cd7")
+		(property "Sheetname" "PVDD_BOOST"
+			(at 157.48 39.9284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "PVDD_Boost.kicad_sch"
+			(at 157.48 92.0246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "TAS5806M"
+				(path "/5b998f05-1046-4e80-90fb-1a695b42e662"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 284.48 116.84)
+		(size 101.6 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "1933fdf9-2623-406b-a695-e59672083350")
+		(property "Sheetname" "AMPLIFIER"
+			(at 284.48 116.1284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Amplifier.kicad_sch"
+			(at 284.48 168.2246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "TAS5806M"
+				(path "/5b998f05-1046-4e80-90fb-1a695b42e662"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 30.48 116.84)
+		(size 101.6 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "43440d9a-e3cf-4788-9be3-d3f713814c49")
+		(property "Sheetname" "POWER_CTRL"
+			(at 30.48 116.1284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power_Control.kicad_sch"
+			(at 30.48 168.2246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "TAS5806M"
+				(path "/5b998f05-1046-4e80-90fb-1a695b42e662"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 284.48 40.64)
+		(size 101.6 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "9ab74194-9658-4888-aec8-8f4b638a43b6")
+		(property "Sheetname" "3V3_BUCKBOOST"
+			(at 284.48 39.9284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "3V3_BuckBoost.kicad_sch"
+			(at 284.48 92.0246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "TAS5806M"
+				(path "/5b998f05-1046-4e80-90fb-1a695b42e662"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 157.48 116.84)
+		(size 101.6 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c217db37-29ff-4a50-8c35-d8244be34778")
+		(property "Sheetname" "ESP32"
+			(at 157.48 116.1284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ESP32.kicad_sch"
+			(at 157.48 168.2246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "TAS5806M"
+				(path "/5b998f05-1046-4e80-90fb-1a695b42e662"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 30.48 40.64)
+		(size 101.6 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "fc5da695-a1d1-4073-b6dd-b6916aef56e3")
+		(property "Sheetname" "USB_CHARGER"
+			(at 30.48 39.9284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "USB_Charger.kicad_sch"
+			(at 30.48 92.0246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "TAS5806M"
+				(path "/5b998f05-1046-4e80-90fb-1a695b42e662"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

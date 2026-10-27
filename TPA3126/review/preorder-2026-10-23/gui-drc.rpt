@@ -1,0 +1,49 @@
+** Drc report for TPA3126.kicad_pcb **
+** Created on 2026-10-23T22:06:05 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 9 DRC violations **
+[courtyards_overlap]: Courtyards overlap
+    Rule: board setup constraints courtyard; error (excluded)
+    @(152.7290 mm, 84.9270 mm): Footprint IC3
+    @(146.2290 mm, 72.9340 mm): Footprint IC2
+[lib_footprint_mismatch]: Footprint 'MountingHole_3.2mm_M3' does not match copy in library 'MountingHole'
+    Local override; warning (excluded)
+    @(105.4100 mm, 144.9070 mm): Footprint H3
+[lib_footprint_mismatch]: Footprint 'MountingHole_3.2mm_M3' does not match copy in library 'MountingHole'
+    Local override; warning (excluded)
+    @(198.5010 mm, 144.7800 mm): Footprint H4
+[lib_footprint_issues]: Footprint 'Heatsink_ATS_ATS-TI1OP-521-C1-R1_50x13.9mm_H25mm_P40mm' not found in library 'Custom'
+    Local override; warning (excluded)
+    @(142.8030 mm, 121.5410 mm): Footprint HS1
+[lib_footprint_mismatch]: Footprint 'MountingHole_3.2mm_M3' does not match copy in library 'MountingHole'
+    Local override; warning (excluded)
+    @(198.5010 mm, 65.1510 mm): Footprint H1
+[lib_footprint_mismatch]: Footprint 'MountingHole_3.2mm_M3' does not match copy in library 'MountingHole'
+    Local override; warning (excluded)
+    @(105.4100 mm, 65.1510 mm): Footprint H2
+[starved_thermal]: Thermal relief connection to zone incomplete (layer F.Cu; zone min spoke count 2; actual 1)
+    Local override; error (excluded)
+    @(102.4890 mm, 62.3570 mm): Zone [GND] on F.Cu and In1.Cu, priority 0
+    @(146.6850 mm, 123.0710 mm): Pad 22 [GND] of U1 on F.Cu
+[starved_thermal]: Thermal relief connection to zone incomplete (layer F.Cu; zone min spoke count 2; actual 1)
+    Local override; error (excluded)
+    @(102.4890 mm, 62.3570 mm): Zone [GND] on F.Cu and In1.Cu, priority 0
+    @(146.6850 mm, 119.1710 mm): Pad 28 [GND] of U1 on F.Cu
+[starved_thermal]: Thermal relief connection to zone incomplete (layer F.Cu; zone min spoke count 2; actual 1)
+    Local override; error (excluded)
+    @(102.4890 mm, 62.3570 mm): Zone [GND] on F.Cu and In1.Cu, priority 0
+    @(108.7180 mm, 124.9830 mm): Pad 20 [GND] of U2 on F.Cu
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **
