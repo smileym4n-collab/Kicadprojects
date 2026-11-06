@@ -1522,12 +1522,6 @@
 		)
 	)
 	(junction
-		(at 207.01 45.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "084a45e1-b69d-405f-a83e-6a7945b0e609")
-	)
-	(junction
 		(at 153.67 140.97)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1586,12 +1580,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8e0062a5-7a9c-4c99-b9f2-45ec768e4ce1")
-	)
-	(junction
-		(at 255.27 45.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "aaad27cc-fa69-4693-a246-dee88ea5cf9d")
 	)
 	(junction
 		(at 88.9 165.1)
@@ -1789,6 +1777,16 @@
 	)
 	(wire
 		(pts
+			(xy 238.76 33.02) (xy 260.35 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "327c2585-ab1b-4566-aa39-a73148b5712d")
+	)
+	(wire
+		(pts
 			(xy 208.28 137.16) (xy 212.09 137.16)
 		)
 		(stroke
@@ -1886,6 +1884,16 @@
 			(type default)
 		)
 		(uuid "526ee8dd-e69d-41c2-a394-3765957a0c8b")
+	)
+	(wire
+		(pts
+			(xy 238.76 33.02) (xy 238.76 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "530a0961-420f-4ed5-8fa8-c0de95f0d99c")
 	)
 	(wire
 		(pts
@@ -2049,16 +2057,6 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 45.72) (xy 238.76 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ced80c3-c70d-4f5f-b797-049c1d252a88")
-	)
-	(wire
-		(pts
 			(xy 135.89 52.07) (xy 139.7 52.07)
 		)
 		(stroke
@@ -2096,6 +2094,16 @@
 			(type default)
 		)
 		(uuid "836b4857-bdbb-4b20-a819-cbc8da1facfd")
+	)
+	(wire
+		(pts
+			(xy 200.66 34.29) (xy 223.52 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "849dbaf7-7632-4886-b705-a783a7d5f6d0")
 	)
 	(wire
 		(pts
@@ -2299,16 +2307,6 @@
 	)
 	(wire
 		(pts
-			(xy 255.27 45.72) (xy 238.76 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0aacb5a-15fd-4fce-b822-8f78e39de3a6")
-	)
-	(wire
-		(pts
 			(xy 247.65 132.08) (xy 261.62 132.08)
 		)
 		(stroke
@@ -2326,16 +2324,6 @@
 			(type default)
 		)
 		(uuid "c17b3c0a-2a41-40b8-9bdf-7a73b5ebdcd2")
-	)
-	(wire
-		(pts
-			(xy 207.01 45.72) (xy 223.52 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c24fab9b-c2e1-476e-a3b5-227e194eff52")
 	)
 	(wire
 		(pts
@@ -2489,7 +2477,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 45.72) (xy 223.52 53.34)
+			(xy 223.52 34.29) (xy 223.52 53.34)
 		)
 		(stroke
 			(width 0)
@@ -2647,7 +2635,7 @@
 		)
 		(uuid "fb3a6cac-84c2-4e2b-8e14-8a666c1cf4bd")
 	)
-	(hierarchical_label "VEE"
+	(hierarchical_label "VEE-R"
 		(shape input)
 		(at 237.49 115.57 270)
 		(effects
@@ -2658,7 +2646,7 @@
 		)
 		(uuid "01fc2ce0-46da-478b-83b0-774c45c149d2")
 	)
-	(hierarchical_label "VEE"
+	(hierarchical_label "VEE-L"
 		(shape input)
 		(at 236.22 148.59 270)
 		(effects
@@ -2669,7 +2657,7 @@
 		)
 		(uuid "0aeef73b-a5d9-48bb-af7c-53fe986c4a37")
 	)
-	(hierarchical_label "VEE"
+	(hierarchical_label "VEE-L"
 		(shape input)
 		(at 200.66 45.72 180)
 		(effects
@@ -2680,7 +2668,7 @@
 		)
 		(uuid "1d2d3268-a74d-437c-ac54-d2233b1e49fc")
 	)
-	(hierarchical_label "VCC"
+	(hierarchical_label "VCC-L"
 		(shape input)
 		(at 99.06 36.83 90)
 		(effects
@@ -2713,7 +2701,7 @@
 		)
 		(uuid "5c4bd368-9d31-4051-90a7-1951a62d9746")
 	)
-	(hierarchical_label "VCC"
+	(hierarchical_label "VCC-L"
 		(shape input)
 		(at 260.35 45.72 0)
 		(effects
@@ -2757,7 +2745,7 @@
 		)
 		(uuid "7eb28a28-5f5a-4cde-a144-84fafbb230dc")
 	)
-	(hierarchical_label "VEE"
+	(hierarchical_label "VEE-R"
 		(shape input)
 		(at 101.6 154.94 270)
 		(effects
@@ -2768,7 +2756,18 @@
 		)
 		(uuid "aab05249-71b8-46be-89f2-40ff525a5461")
 	)
-	(hierarchical_label "VEE"
+	(hierarchical_label "VCC-R"
+		(shape input)
+		(at 260.35 33.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c6f600de-acdf-4128-9d1d-7ee61e33bdc5")
+	)
+	(hierarchical_label "VEE-L"
 		(shape input)
 		(at 99.06 66.04 270)
 		(effects
@@ -2778,6 +2777,17 @@
 			(justify right)
 		)
 		(uuid "caf8c790-9444-4773-954d-bdad996a540b")
+	)
+	(hierarchical_label "VEE-R"
+		(shape input)
+		(at 200.66 34.29 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "dd1b9920-02e7-4202-8f09-7d211d999fa3")
 	)
 	(hierarchical_label "AMP-MUTE"
 		(shape input)
@@ -2790,7 +2800,7 @@
 		)
 		(uuid "f0037a2f-2582-465c-bd47-cdc5054b85bb")
 	)
-	(hierarchical_label "VCC"
+	(hierarchical_label "VCC-R"
 		(shape input)
 		(at 101.6 125.73 90)
 		(effects

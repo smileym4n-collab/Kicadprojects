@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.0,
-          "height": 1.8,
-          "width": 1.8
+          "drill": 2.0,
+          "height": 4.0,
+          "width": 4.0
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -61,12 +61,12 @@
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
           "min_clearance": 0.2,
-          "min_island_area": 0.0013161349,
+          "min_island_area": 10.0,
           "min_thickness": 0.2,
-          "pad_connection": 1,
+          "pad_connection": 2,
           "remove_islands": 0,
-          "thermal_relief_gap": 0.2,
-          "thermal_relief_spoke_width": 0.2
+          "thermal_relief_gap": 0.5,
+          "thermal_relief_spoke_width": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -676,7 +676,7 @@
         "uuid": "08655295-5783-460d-a904-560b6403a812"
       }
     ],
-    "used_designators": "IC1-2,JP1,J1-22,L1-2,H1-10,R1-63,K1-2,U1-8,C1-26,C34-53,C59,C65,C70,C73,C78-80,D1-6,D10-18,#PWR1-43,#PWR50-69,#PWR75,#PWR80,#PWR83-88,Q1-9,TP1-2,F1-2,HS1",
+    "used_designators": "IC1-2,JP1,J1-22,L1-2,H1-10,R1-63,K1-2,U1-8,C1-26,C34-53,C59,C65,C70,C73,C78-80,D1-6,D10-18,#PWR1-43,#PWR50-69,#PWR75,#PWR80,#PWR83-88,Q1-9,TP1-10,F1-2,HS1",
     "variants": []
   },
   "sheets": [
@@ -703,6 +703,10 @@
     [
       "1ab2f2f0-a40d-449d-b4a9-afde6a533bb0",
       "POWER"
+    ],
+    [
+      "b71e0c3a-2d54-4f8e-a6b9-0c1d2e3f4a55",
+      "BTL"
     ]
   ],
   "text_variables": {},
