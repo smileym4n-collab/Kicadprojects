@@ -1,0 +1,1688 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "2d28c68d-56c4-4741-9a6a-addc853f62c3")
+	(paper "A3")
+	(title_block
+		(title "Bluetooth / Snapcast active speaker")
+		(date "2026-10-23")
+		(rev "Pre-order B")
+		(comment 1 "Schematic completion only - PCB unchanged")
+	)
+	(lib_symbols
+		(symbol "Mechanical:Heatsink"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "HS"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Heatsink"
+				(at 0 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.3048 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0.3048 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Heatsink"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "thermal heat temperature"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Heatsink_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Heatsink_0_1"
+				(polyline
+					(pts
+						(xy -0.3302 1.27) (xy -0.9652 1.27) (xy -0.9652 3.81) (xy -1.6002 3.81) (xy -1.6002 1.27) (xy -2.2352 1.27)
+						(xy -2.2352 3.81) (xy -2.8702 3.81) (xy -2.8702 0) (xy -0.9652 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3302 1.27) (xy -0.3302 3.81) (xy 0.3048 3.81) (xy 0.3048 1.27) (xy 0.9398 1.27) (xy 0.9398 3.81)
+						(xy 1.5748 3.81) (xy 1.5748 1.27) (xy 2.2098 1.27) (xy 2.2098 3.81) (xy 2.8448 3.81) (xy 2.8448 0)
+						(xy -0.9652 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "STARTUP: rails settle -> ESP32 boots (SDZ low, MUTE high, XSMT low).\nConfigure PCM5122 at 0x4C with both channels muted; configure DSP and valid 64fs I2S.\nRelease DAC XSMT with valid muted I2S; enable SDZ, wait >=50 ms, release MUTE; ramp volume.\nSHUTDOWN: ramp down, assert DAC XSMT low >=150/fs +0.2 ms; assert MUTE then SDZ low.\nFAULT: mute and shut down, log fault; deliberate retry only after fault cause is removed.\nReview report and bench validation are required before connecting the real drivers."
+		(exclude_from_sim no)
+		(at 33.02 187.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "0d47ab0c-8b69-4e62-9eab-464ceb73eab6")
+	)
+	(text "ACTIVE SPEAKER - ESP32-WROVER / PCM5122 / TPA3126D2"
+		(exclude_from_sim no)
+		(at 124.46 22.86 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+			(justify left top)
+		)
+		(uuid "a3df961b-bdc2-44c6-9385-a30a6a6bdd27")
+	)
+	(text "12-16 V DC -> protected PVDD -> stereo BTL amplifier.\nPVDD -> 4.30 V FPWM buck -> ESP32 3.3 V LDO + DAC 3.3 V low-noise LDO.\nPCM5122 LEFT = tweeter / J17; RIGHT = woofer / J16. Both speaker returns are active.\nC21: onboard 47u / 50V bipolar Nichicon UES; JP1 shorts it for stereo use.\nNo passive crossover. DSP crossover/EQ/limiting remains a firmware and acoustic task."
+		(exclude_from_sim no)
+		(at 124.46 30.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "b340fd54-c046-4b8c-9a39-f96146a7a45d")
+	)
+	(wire
+		(pts
+			(xy 109.22 134.62) (xy 109.22 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1143d724-7c3a-48d2-8b1c-bdede876020c")
+	)
+	(wire
+		(pts
+			(xy 203.2 166.37) (xy 203.2 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12f5dfee-59b4-4ce9-a6aa-50e4a691df48")
+	)
+	(wire
+		(pts
+			(xy 96.52 109.22) (xy 124.46 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17c2a945-a2cd-4d8e-a2cb-753c4e85b1bc")
+	)
+	(wire
+		(pts
+			(xy 243.84 78.74) (xy 243.84 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "207c2c97-b936-4006-bbef-76d0fb603692")
+	)
+	(wire
+		(pts
+			(xy 96.52 124.46) (xy 124.46 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a74de82-267c-4c5f-9549-6ca46500348c")
+	)
+	(wire
+		(pts
+			(xy 105.41 142.24) (xy 105.41 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36ca8213-69da-4c4c-8c77-2264196c1913")
+	)
+	(wire
+		(pts
+			(xy 109.22 166.37) (xy 203.2 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36de992a-2090-4119-a8bb-c25c50a0b5f0")
+	)
+	(wire
+		(pts
+			(xy 207.01 172.72) (xy 207.01 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39f88cc9-034e-4412-b7bb-6bf3d5454e90")
+	)
+	(wire
+		(pts
+			(xy 182.88 93.98) (xy 223.52 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4642d337-c636-44de-86d9-76ccb593a19e")
+	)
+	(wire
+		(pts
+			(xy 96.52 149.86) (xy 101.6 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56b71a39-77e9-47ca-819b-1c27daf50bcc")
+	)
+	(wire
+		(pts
+			(xy 96.52 86.36) (xy 124.46 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58260513-19c5-436e-9cec-64664df9ff22")
+	)
+	(wire
+		(pts
+			(xy 149.86 78.74) (xy 149.86 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a323d7b-2a2a-47f5-9401-ca6aca3ed666")
+	)
+	(wire
+		(pts
+			(xy 76.2 35.56) (xy 83.82 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "689a9629-7a31-452f-ad83-30381cad7554")
+	)
+	(wire
+		(pts
+			(xy 210.82 179.07) (xy 210.82 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c077835-d6a2-4961-8d01-75bc900ec749")
+	)
+	(wire
+		(pts
+			(xy 33.02 93.98) (xy 25.4 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "772dffd3-9582-45b7-8c3d-c4b99997ac2a")
+	)
+	(wire
+		(pts
+			(xy 96.52 101.6) (xy 124.46 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84e9ccd4-0dc9-4746-abf8-9a946cd0c57a")
+	)
+	(wire
+		(pts
+			(xy 96.52 134.62) (xy 109.22 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85339761-5d52-41ff-8cfe-098c4c06b2b5")
+	)
+	(wire
+		(pts
+			(xy 101.6 179.07) (xy 210.82 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c890f16-b70e-4b71-85db-a45c543723d6")
+	)
+	(wire
+		(pts
+			(xy 105.41 172.72) (xy 207.01 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0755b89-3aac-4275-9055-cd13b599c1fb")
+	)
+	(wire
+		(pts
+			(xy 96.52 93.98) (xy 124.46 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a277744b-d514-49f1-bf9c-05b57220baff")
+	)
+	(wire
+		(pts
+			(xy 182.88 101.6) (xy 223.52 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac346d43-7d52-4a69-be8a-85bf42ccef1f")
+	)
+	(wire
+		(pts
+			(xy 96.52 142.24) (xy 105.41 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5785190-d71a-4c86-b45f-3be8c8768dbb")
+	)
+	(wire
+		(pts
+			(xy 76.2 50.8) (xy 83.82 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd4dff89-bbb2-48af-bf53-d1bb45405193")
+	)
+	(wire
+		(pts
+			(xy 101.6 149.86) (xy 101.6 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c562cca7-9964-4714-b8be-9aa85f2cc29b")
+	)
+	(wire
+		(pts
+			(xy 207.01 142.24) (xy 223.52 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7409a92-80af-4c14-ab18-3f140fd8138c")
+	)
+	(wire
+		(pts
+			(xy 96.52 116.84) (xy 124.46 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7bb9d27-25a9-48ab-b91c-b07bf88fe9bf")
+	)
+	(wire
+		(pts
+			(xy 33.02 86.36) (xy 25.4 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce96e485-b242-4a67-9cf9-02f5e76fa40e")
+	)
+	(wire
+		(pts
+			(xy 266.7 78.74) (xy 266.7 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf882011-dfd1-4c05-b4c6-2b687f88cb11")
+	)
+	(wire
+		(pts
+			(xy 210.82 149.86) (xy 223.52 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3f2d907-648c-481e-9657-c3c12b4155dc")
+	)
+	(wire
+		(pts
+			(xy 203.2 134.62) (xy 223.52 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbbdbc14-6fee-4fd5-929b-002557149af2")
+	)
+	(wire
+		(pts
+			(xy 76.2 43.18) (xy 83.82 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f44d31ac-e922-4036-abf7-0d40802175bd")
+	)
+	(wire
+		(pts
+			(xy 76.2 27.94) (xy 83.82 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdbc3e1f-f0ad-4f5c-b89d-106155aac2b9")
+	)
+	(label "PVDD"
+		(at 243.84 71.12 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1e36eba4-38ef-4c90-b255-d071d045ef70")
+	)
+	(label "3V3-ESP"
+		(at 83.82 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2f66ae21-ee70-4d23-95f5-f97cfddb3e8a")
+	)
+	(label "3V3-ESP"
+		(at 25.4 86.36 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "54b98f8a-c09e-4de8-8cb9-13602d34c69d")
+	)
+	(label "3V3-ESP"
+		(at 266.7 71.12 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "570816f7-97da-401b-a63d-0abe26cd72ca")
+	)
+	(label "4V_PRE"
+		(at 83.82 35.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9cd8595e-dc62-4168-9a8d-faaa62322b73")
+	)
+	(label "4V_PRE"
+		(at 149.86 71.12 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a6fb65dc-06e8-440a-ae3c-c5f9ed558202")
+	)
+	(label "VIN_SENSE"
+		(at 25.4 93.98 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b0844c6f-cdd5-49f1-8401-fb668b0f9f79")
+	)
+	(label "VIN_SENSE"
+		(at 83.82 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b8cf2852-1de9-43f7-bdad-ae9250c7ab8b")
+	)
+	(label "PVDD"
+		(at 83.82 27.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c56d275a-54f7-460f-886c-465768bc7fc2")
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 96.52 25.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "050c2408-4a39-45b2-9dac-acd166cb6119")
+		(property "Reference" "H1"
+			(at 99.06 24.1299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 99.06 26.6699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 96.52 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 96.52 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "TPA3126Single"
+				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 96.52 48.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "54f745bc-c6b7-4444-acce-4fc9917cd594")
+		(property "Reference" "H4"
+			(at 99.06 46.9899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 99.06 49.5299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 96.52 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 96.52 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "TPA3126Single"
+				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:Heatsink")
+		(at 179.07 217.805 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aecb6e6a-21e9-4405-958c-b30f670e8ef4")
+		(property "Reference" "HS1"
+			(at 182.88 214.6299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Heatsink"
+			(at 182.88 217.1699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Custom:Heatsink_ATS_ATS-TI1OP-521-C1-R1_50x13.9mm_H25mm_P40mm"
+			(at 179.3748 217.805 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 179.3748 217.805 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Heatsink"
+			(at 179.07 217.805 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ATS-TI1OP-521-C1-R1"
+			(at 179.07 217.805 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly_Note" "User confirmed heatsink fit/clearance checked on 23 Oct 2026. Retain existing mechanical placement. Bench enclosure thermal qualification remains required."
+			(at 179.07 217.805 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "TPA3126Single"
+				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3"
+					(reference "HS1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 96.52 33.02 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c6a5efa7-e366-4268-beb4-72f6ffb769ec")
+		(property "Reference" "H2"
+			(at 99.06 31.7499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 99.06 34.2899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 96.52 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 96.52 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "TPA3126Single"
+				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 96.52 40.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cb97eea6-ab01-4501-928d-9929adfe0d41")
+		(property "Reference" "H3"
+			(at 99.06 39.3699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 99.06 41.9099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 96.52 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 96.52 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "TPA3126Single"
+				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 33.02 78.74)
+		(size 63.5 78.74)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "4ba27b83-2308-490d-84d6-f80db0a3c95c")
+		(property "Sheetname" "ESP32"
+			(at 33.02 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ESP32.kicad_sch"
+			(at 33.02 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "3V3-ESP" input
+			(at 33.02 86.36 180)
+			(uuid "cfb46397-a5ed-41bb-9f16-fa589532b5b2")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(pin "VIN_SENSE" input
+			(at 33.02 93.98 180)
+			(uuid "98bc0795-c318-4c47-9954-e37b0c88a9c3")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(pin "BCK" output
+			(at 96.52 86.36 0)
+			(uuid "5f8747f9-8a33-4b82-a170-a0107530afcf")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(pin "LRCK" output
+			(at 96.52 93.98 0)
+			(uuid "49aec9d3-84c3-4844-99cc-0b28d0dd249a")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(pin "DATA" output
+			(at 96.52 101.6 0)
+			(uuid "85466616-f85a-4a8c-8b10-f43f52210e31")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(pin "SCL" output
+			(at 96.52 109.22 0)
+			(uuid "62063e4c-deae-411c-9676-a21fc75546b6")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(pin "SDA" bidirectional
+			(at 96.52 116.84 0)
+			(uuid "96acf032-998d-4aec-8d2c-79b0a7829d66")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(pin "DAC_XSMT" output
+			(at 96.52 124.46 0)
+			(uuid "c7394a36-e71a-4f82-8c0a-475a05e93352")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(pin "AMP_ENABLE" output
+			(at 96.52 134.62 0)
+			(uuid "4e46656a-9e61-4938-881e-b2ccc58f2bd9")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(pin "AMP_MUTE_CMD" output
+			(at 96.52 142.24 0)
+			(uuid "8827d54c-addf-4026-be1d-06aac6b2a37e")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(pin "AMP_FAULT_N" input
+			(at 96.52 149.86 0)
+			(uuid "8294e242-1526-4883-a564-c2f5eb5d9eb8")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "TPA3126Single"
+				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 33.02 22.86)
+		(size 43.18 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "6f1f4c2e-5b1a-4d2e-9c61-7a0e3b5d9a10")
+		(property "Sheetname" "POWER"
+			(at 33.02 21.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power.kicad_sch"
+			(at 33.02 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "PVDD" output
+			(at 76.2 27.94 0)
+			(uuid "619f57fb-91bc-4b3c-8858-4599849af317")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(pin "4V_PRE" output
+			(at 76.2 35.56 0)
+			(uuid "7f106eb4-de9f-4e9b-8f2f-ffe1f4918599")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(pin "3V3-ESP" output
+			(at 76.2 43.18 0)
+			(uuid "b9466892-6385-4a1b-977c-28aa11207578")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(pin "VIN_SENSE" output
+			(at 76.2 50.8 0)
+			(uuid "c252a7aa-d4a5-4a5a-8776-781aaa1c0b8f")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "TPA3126Single"
+				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 124.46 78.74)
+		(size 58.42 55.88)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "943be2e2-92ad-4344-a732-c8333bc6627c")
+		(property "Sheetname" "DAC"
+			(at 124.46 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "DAC.kicad_sch"
+			(at 124.46 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "BCK" input
+			(at 124.46 86.36 180)
+			(uuid "e8c58dd2-1d59-4645-b134-36fa4c8e13df")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(pin "LRCK" input
+			(at 124.46 93.98 180)
+			(uuid "663bf41a-6677-468b-b7d1-fac9d6cea05c")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(pin "DATA" input
+			(at 124.46 101.6 180)
+			(uuid "79520ebc-082f-4462-8e02-6b217694a2db")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(pin "SCL" input
+			(at 124.46 109.22 180)
+			(uuid "7ce9ba19-988a-4c38-ac88-5560a8245048")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(pin "SDA" bidirectional
+			(at 124.46 116.84 180)
+			(uuid "daf33538-ef6f-4955-834d-929700f6506c")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(pin "DAC_XSMT" input
+			(at 124.46 124.46 180)
+			(uuid "cb46b3fd-1773-46be-856d-cb06f75824f3")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(pin "WOOFER_AUDIO" output
+			(at 182.88 93.98 0)
+			(uuid "263f56e8-da43-4137-bfd0-b7c74d590b2c")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(pin "TWEETER_AUDIO" output
+			(at 182.88 101.6 0)
+			(uuid "e24576e4-f485-4a52-9f6d-4b5fb7ebfb2a")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(pin "4V_PRE" input
+			(at 149.86 78.74 90)
+			(uuid "01299fe8-8ad8-4f0a-97ca-25f18edc2faf")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "TPA3126Single"
+				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 223.52 78.74)
+		(size 60.96 78.74)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ed6a9e5d-2e37-4710-8314-5ad0c926fdf2")
+		(property "Sheetname" "AMP"
+			(at 223.52 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Amp.kicad_sch"
+			(at 223.52 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "WOOFER_AUDIO" input
+			(at 223.52 93.98 180)
+			(uuid "a788dfdc-96a2-4ad6-b4f6-050d48364c2f")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(pin "TWEETER_AUDIO" input
+			(at 223.52 101.6 180)
+			(uuid "52b152f4-9a21-4bfb-8b17-960b84acfb16")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(pin "AMP_ENABLE" input
+			(at 223.52 134.62 180)
+			(uuid "52534004-f9a4-4e62-a314-0b05ef1ef916")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(pin "AMP_MUTE_CMD" input
+			(at 223.52 142.24 180)
+			(uuid "7772ef36-5cc5-4e5a-be62-43b5027157cf")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(pin "AMP_FAULT_N" output
+			(at 223.52 149.86 180)
+			(uuid "a944e454-78d2-4016-b0fe-8f491b5b1648")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(pin "PVDD" input
+			(at 243.84 78.74 90)
+			(uuid "bad857f4-0616-4bb4-be76-a18d8c767913")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(pin "3V3-ESP" input
+			(at 266.7 78.74 90)
+			(uuid "b2531e4d-a7c7-4100-a5b5-89b8a873f6fb")
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "TPA3126Single"
+				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

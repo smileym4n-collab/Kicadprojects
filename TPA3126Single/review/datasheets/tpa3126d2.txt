@@ -1,0 +1,2140 @@
+
+--- PAGE 1 ---
+Product
+Folder
+Order
+Now
+Technical
+Documents
+Tools &
+Software
+Support &
+Community
+TPA3126D2
+SLOS942 –APRIL 2018
+TPA3126D2 50-W Stereo, Analog-Input, Class-D Audio Amplifier with Low, 15-mA Idle
+Current and AM Avoidance
+1 Features
+1
+• Longer Battery-Operating Time:
+– Ultra-Low Idle Current: 15 mA at 12 V
+• 2 × 50 W Into a 4-Ω Load at 21 V, 10% THD+N
+• Wide Voltage Range: 4.5 V to 26 V
+• Highly Efficient Class-D Operation
+– Hybrid Modulation Scheme Dynamically
+Reduces Power Loss
+– Low Rds(on) of 90-mΩ Enables > 90% Efficiency
+• Pop-and-Click Noise Suppression
+• Supports Stereo, Mono BTL and Mono PBTL
+• Multiple Switching Frequencies:
+– AM Avoidance
+– Master and Slave Synchronization
+– 300-KHz to 1.2-MHz Switching Frequencies
+• Selectable Gains: 20 dB, 26 dB, 32 dB, 36 dB
+• Programmable Power Limit
+• Supports Both Single and Dual Power Supply
+• Integrated Protections with Error Report:
+– Overvoltage, Undervoltage, Overtemperature,
+DC-Detect, and Short Circuit
+• Thermally Enhanced Package
+– DAD (32-Pin HTSSOP PowerPAD™ Up)
+• Performance Upgrade of the TPA3116D2
+– 70% Less Idle Current; Pin-to-Pin Compatible
+SPACER
+TPA3126 and TPA3116 Idle Current
+80
+70
+60
+50
+40
+30
+20
+10
+0
+2 Applications
+• Speaker Docks
+• Bluetooth® and Wi-Fi Speakers
+• Voice Operated Speakers or Smart Speakers
+• Sound Bars
+• Bookshelf Stereo System
+3 Description
+The TPA3126D2 is a 50-W, stereo, low-idle-current
+Class-D amplifier in a thermally enhanced package.
+The TPA3126D2 includes TI's proprietary hybrid
+modulation scheme, which dynamically reduces idle
+current at low power levels to extend the battery life
+of portable audio systems, like bluetooth speakers.
+To further simply the design, the Class-D amplifier
+integrates full protection features including short
+circuit, thermal shutdown, overvoltage, undervoltage,
+and DC speaker protection. Faults are reported back
+to the processor to prevent devices from being
+damaged during overload conditions.
+Device Information(1)
+PART NUMBER PACKAGE BODY SIZE (NOM)
+TPA3126D2 HTSSOP (32) 11.00 mm × 6.20 mm
+(1) For all available packages, see the orderable addendum at
+the end of the data sheet.
+Simplified Application Circuit
+TPA3116 (BD Mode)
+TPA3126 (Hybrid Mode)
+TPA3126D2
+PVcc Idle Current (mA)
+RIGHT
+LEFT
+MONO
+DETECT
+LC
+Filter
+Audio
+Source
+And Control
+PBTL
+DETECT
+LC
+Filter
+Gain = 26dB, TA = 25qC, RL = 8:
+Mode Select
+GAIN control and Master/Slave setting
+Power Limit
+Capable of synchronizaing to other devices
+SDZ
+MUTE
+FAULTZ
+AM2,1,0
+MODSEL
+GAIN/SLV
+PLIMIT
+SYNC
+PVCC AVCC Power Supply
+4.5V t 26V
+AM Avoidance Control Separate Power
+Supply (Optional)
+4.5V-26V
+20 5 15 25 10 20
+Supply Voltage (V)
+D002
+1
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+
+--- PAGE 2 ---
+TPA3126D2
+SLOS942 –APRIL 2018 www.ti.com
+Table of Contents
+1 Features.................................................................. 1
+2 Applications........................................................... 1
+3 Description............................................................. 1
+4 Revision History..................................................... 2
+5 Device Comparison Table..................................... 3
+6 Pin Configuration and Functions......................... 4
+7 Specifications......................................................... 6
+7.1 Absolute Maximum Ratings ...................................... 6
+7.2 ESD Ratings ............................................................ 6
+7.3 Recommended Operating Conditions....................... 6
+7.4 Thermal Information.................................................. 7
+7.5 DC Electrical Characteristics .................................... 7
+7.6 AC Electrical Characteristics..................................... 8
+7.7 Typical Characteristics.............................................. 9
+8 Detailed Description............................................ 13
+8.1 Overview ................................................................. 13
+8.2 Functional Block Diagram ....................................... 13
+8.3 Feature Description................................................. 14
+8.4 Device Functional Modes........................................ 22
+9 Application and Implementation........................ 24
+9.1 Application Information............................................ 24
+10 Power Supply Recommendations..................... 26
+10.1 Power Supply Mode.............................................. 26
+11 Layout................................................................... 27
+11.1 Layout Guidelines ................................................. 27
+11.2 Layout Example .................................................... 28
+11.3 Heat Sink Used on the EVM ................................. 30
+12 Device and Documentation Support................. 31
+12.1 Device Support .................................................... 31
+12.2 Receiving Notification of Documentation Updates 31
+12.3 Related Documentation......................................... 31
+12.4 Community Resources.......................................... 31
+12.5 Trademarks........................................................... 31
+12.6 Electrostatic Discharge Caution............................ 31
+12.7 Glossary................................................................ 31
+13 Mechanical, Packaging, and Orderable
+Information........................................................... 31
+4 Revision History
+DATE REVISION NOTES
+April 2018 * Initial release.
+2
+Submit Documentation Feedback Copyright © 2018, Texas Instruments Incorporated
+Product Folder Links: TPA3126D2
+
+--- PAGE 3 ---
+TPA3126D2
+www.ti.com SLOS942 –APRIL 2018
+5 Device Comparison Table
+PRODUCT DESCRIPTION MODULATION
+SCHEME
+THERMAL
+PAD
+LOCATION
+TPA3126 PIN-
+COMPATIBLE
+TPA3116D2 50-W Stereo, Analog-Input Class D Amplifier BD, 1SPW Top Y
+TPA3118D2 30-W Stereo, Analog-Input Class D Amplifier BD, 1SPW Bottom Y
+TPA3128D2 30-W Stereo, Analog-Input Class D Amplifier with Low Idle Power
+Dissipation BD, 1SPW, Hybrid Bottom Y
+TPA3156D2 70-W Stereo, Analog-Input Class D Amplifier with Low Idle Power
+Dissipation BD, 1SPW, Hybrid Top Y
+Copyright © 2018, Texas Instruments Incorporated
+Submit Documentation Feedback
+3
+Product Folder Links: TPA3126D2
+
+--- PAGE 4 ---
+TPA3126D2
+SLOS942 –APRIL 2018 www.ti.com
+6 Pin Configuration and Functions
+DAD Package
+32-Pin HTSSOP With PowerPAD™ Up
+Top View
+MODSEL 32 PVCC
+1
+SDZ 31 PVCC
+2
+FAULTZ 30 BSPR
+3
+RINP 29 OUTPR
+4
+RINN 28 GND
+5
+PLIMIT 27 OUTNR
+6
+GVDD 26 BSNR
+7
+GAIN/SLV 25 GND
+8
+Thermal
+GND 24 BSPL
+9
+Pad
+LINP 23 OUTPL
+10
+LINN 22 GND
+11
+MUTE 21 OUTNL
+12
+AM2 20 BSNL
+13
+AM1 19 PVCC
+14
+AM0 18 PVCC
+15
+SYNC 17 AVCC
+16
+Not to scale
+Pin Functions
+PIN
+TYPE(1) DESCRIPTION
+NO. NAME
+1 MODSEL I Mode selection logic input (LOW = Hybrid Mode, HIGH = BD Mode). TTL logic levels with compliance to
+AVCC. Refer to: Device Modulation Scheme
+2 SDZ I Shutdown logic input for audio amp (LOW = outputs Hi-Z, HIGH = outputs enabled). TTL logic levels with
+compliance to AVCC. Refer to: Startup and Shutdown Operation
+3 FAULTZ DO
+General fault reporting including Over-temp, DC Detect. Open drain. Refer to: Device Protection System
+FAULTZ = High, normal operation
+FAULTZ = Low (an external 100 kΩ pull-up resistor required), fault condition
+4 RINP I Positive audio input for right channel. Connect to GND for MONO mode.
+5 RINN I Negative audio input for right channel. Connect to GND for MONO mode.
+6 PLIMIT I Power limit level adjust. Connect a resistor divider from GVDD to GND to set power limit. Connect directly
+to GVDD for no power limit. Refer to: PLIMIT Operation
+7 GVDD PO
+Internally generated gate voltage supply. Not to be used as a supply or connected to any component other
+than a 1 µF X7R ceramic decoupling capacitor and the PLIMIT and GAIN/SLV resistor dividers. Refer to:
+GVDD Supply
+8 GAIN/SLV I Selects Gain and selects between Master and Slave mode depending on pin voltage divider. Refer to:
+Gain Setting and Master and Slave
+9 GND G Ground
+(1) DO = Digital Output, I = Analog Input, G = General Ground, PO = Power Output, BST = Boot Strap.
+4
+Submit Documentation Feedback Copyright © 2018, Texas Instruments Incorporated
+Product Folder Links: TPA3126D2
+
+--- PAGE 5 ---
+TPA3126D2
+www.ti.com SLOS942 –APRIL 2018
+Pin Functions (continued)
+PIN
+TYPE(1) DESCRIPTION
+NO. NAME
+10 LINP I Positive audio input for left channel. Connect to GND for PBTL mode.
+11 LINN I Negative audio input for left channel. Connect to GND for PBTL mode.
+12 MUTE I Mute signal for fast disable/enable of outputs (HIGH = outputs Hi-Z, LOW = outputs enabled). TTL logic
+levels with compliance to AVCC.
+13 AM2 I AM Avoidance Frequency Selection
+14 AM1 I AM Avoidance Frequency Selection
+15 AM0 I AM Avoidance Frequency Selection
+16 SYNC DIO Clock input/output for synchronizing multiple Class-D devices. Direction determined by GAIN/SLV terminal.
+Refer to: Gain Setting and Master and Slave
+17 AVCC P Analog Supply
+18 PVCC P Power supply
+19 PVCC P Power supply
+20 BSNL BST Boot strap for negative left channel output, connect to 220 nF X5R, or better ceramic cap to OUTPL
+21 OUTNL PO Negative left channel output
+22 GND G Ground
+23 OUTPL PO Positive left channel output
+24 BSPL BST Boot strap for positive left channel output, connect to 220 nF X5R, or better ceramic cap to OUTNL Refer
+to: BSPx and BSNx Capacitors
+25 GND G Ground
+26 BSNR BST Boot strap for negative right channel output, connect to 220 nF X5R, or better ceramic cap to OUTNR.
+Refer to: BSPx and BSNx Capacitors
+27 OUTNR PO Negative right channel output
+28 GND G Ground
+29 OUTPR PO Positive right channel output
+30 BSPR BST Boot strap for positive right channel output, connect to 220 nF X5R or better ceramic cap to OUTPR. Refer
+to: BSPx and BSNx Capacitors
+31 PVCC P Power supply
+32 PVCC P Power supply
+PowerPAD™ G Connect to GND for best system performance. If not connected to GND, leave floating.
+Copyright © 2018, Texas Instruments Incorporated
+Product Folder Links: TPA3126D2
+Submit Documentation Feedback
+5
+
+--- PAGE 6 ---
+TPA3126D2
+SLOS942 –APRIL 2018 www.ti.com
+7 Specifications
+7.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1)
+MIN MAX UNIT
+Supply voltage, VCC PVCC, AVCC–0.3 30 V
+INPL, INNL, INPR, INNR –0.3 6.3 V
+Input voltage, VI
+PLIMIT, GAIN/SLV, SYNC –0.3 GVDD+0.3 V
+AM0, AM1, AM2, MUTE, SDZ, MODSEL –0.3 PVCC+0.3 V
+Slew rate, maximum(2) AM0, AM1, AM2, MUTE, SDZ, MODSEL 10 V/ms
+Operating free-air temperature, TA–40 85 °C
+Operating junction temperature , TJ–40 150 °C
+Storage temperature, Tstg–40 125 °C
+(1) (2) Stresses beyond those listed under absolute maximum ratings can cause permanent damage to the device. These are stress ratings
+only, and functional operation of the device at these or any other conditions beyond those indicated under recommended operating
+conditions is not implied. Exposure to absolute-maximum-rated conditions for extended periods can affect device reliability.
+100-kΩ series resistor is required if maximum slew rate is exceeded.
+7.2 ESD Ratings
+VALUE UNIT
+Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001(1) ±2000
+V(ESD) Electrostatic discharge
+Charged-device model (CDM), per JEDEC specification JESD22-
+C101(2) V
+±500
+(1) (2) JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process. .
+7.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)
+MIN NOM MAX UNIT
+VCC Supply voltage PVCC, AVCC 4.5 26 V
+VIH High-level input voltage AM0, AM1, AM2, MUTE, SDZ, SYNC, MODSEL 2 V
+VIL Low-level input voltage AM0, AM1, AM2, MUTE, SDZ, SYNC, MODSEL 0.8 V
+VOL Low-level output voltage FAULTZ, RPULL-UP = 100 kΩ, PVCC = 26 V 0.8 V
+IIH High-level input current AM0, AM1, AM2, MUTE, SDZ, MODSEL
+(VI = 2 V, VCC = 18 V) 50 µA
+RL(BTL) RL(PBTL) Minimum load Impedance Output filter: L = 10 µH, C = 680 nF Output filter: L = 10 µH, C = 1 µF 3.2 4
+1.6 2
+Ω
+Lo Output-filter Inductance Minimum output filter inductance under short-
+circuit condition 1 µH
+6
+Submit Documentation Feedback Copyright © 2018, Texas Instruments Incorporated
+Product Folder Links: TPA3126D2
+
+--- PAGE 7 ---
+TPA3126D2
+www.ti.com SLOS942 –APRIL 2018
+7.4 Thermal Information
+TPA3126D2
+THERMAL METRIC(1)
+DAD(2)
+UNIT
+32 PINS
+RθJA Junction-to-ambient thermal resistance N/A °C/W
+RθJC(top) Junction-to-case (top) thermal resistance 1.2 °C/W
+ψJT Junction-to-top characterization parameter 1.2 °C/W
+ψJB Junction-to-board characterization parameter 21 °C/W
+(1) For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application
+report.
+(2) For the PCB layout, see the TPA3126D2EVM user guide.
+7.5 DC Electrical Characteristics
+TA = 25°C, AVCC = PVCC = 12 V to 24 V, RL = 4 Ω, fs
+= 400 kHz, hybrid mode (unless otherwise noted)
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+| VOS | Class-D output offset voltage
+(measured differentially) VI = 0 V 1.5 5 mV
+SDZ = 2 V, With load and filter, PVCC = 12 V 15
+ICC Quiescent supply current
+mA
+SDZ = 2 V, With load and filter, PVCC = 24 V 23
+ICC(SD)
+Quiescent supply current in
+shutdown mode
+SDZ = 0.8 V, With load and filter, PVCC = 12 V 20
+µA
+SDZ = 0.8 V, With load and filter, PVCC = 24 V 30
+rDS(on)
+Drain-source on-state resistance,
+measured pin to pin PVCC = 21 V, Iout = 500 mA, TJ = 25°C 90 mΩ
+R1 = 5.6 kΩ, R2 = Open 19 20 21
+dB
+R1 = 20 kΩ, R2 = 100 kΩ 25 26 27
+G Gain (BTL)
+R1 = 39 kΩ, R2 = 100 kΩ 31 32 33
+dB
+R1 = 47 kΩ, R2 = 75 kΩ 35 36 37
+R1 = 51 kΩ, R2 = 51 kΩ 19 20 21
+dB
+R1 = 75 kΩ, R2 = 47 kΩ 25 26 27
+G Gain (SLV)
+R1 = 100 kΩ, R2 = 39 kΩ 31 32 33
+dB
+R1 = 100 kΩ, R2 = 16 kΩ 35 36 37
+ton Turn-on time SDZ = 2 V 40 ms
+tOFF Turn-off time SDZ = 0.8 V 2 µs
+GVDD Gate drive supply IGVDD < 200 µA 5.1 5.6 6.3 V
+VO
+Output voltage maximum under
+PLIMIT control V(PLIMIT) = 2 V; VI = 1 Vrms 6.75 8.2 8.75 V
+Copyright © 2018, Texas Instruments Incorporated
+Submit Documentation Feedback
+Product Folder Links: TPA3126D2
+7
+
+--- PAGE 8 ---
+TPA3126D2
+SLOS942 –APRIL 2018 www.ti.com
+7.6 AC Electrical Characteristics
+TA = 25°C, AVCC = PVCC = 12 V to 24 V, RL = 4 Ω (unless otherwise noted)
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+KSVR Power supply ripple rejection
+200 mVPP ripple at 1 kHz, Gain = 26 dB,
+Inputs
+AC-coupled to GND
+–70 dB
+THD+N = 10%, f = 1 kHz, PVCC = 14.4 V 25
+PO Continuous output power
+W
+THD+N = 10%, f = 1 kHz, PVCC = 21 V 50
+THD+N Total harmonic distortion + noise VCC = 21 V, f = 1 kHz, PO = 15 W (half-
+power) 0.1%
+Vn Output integrated noise 20 Hz to 22 kHz, A-weighted filter, Gain = 20
+dB
+65 µV
+–80 dBV
+Crosstalk VO = 1 Vrms, Gain = 20 dB, f = 1 kHz –100 dB
+SNR Signal-to-noise ratio Maximum output at THD+N < 1%, f = 1 kHz,
+Gain = 20 dB, A-weighted 102 dB
+AM2=0, AM1=0, AM0=0 376 400 424
+AM2=0, AM1=0, AM0=1 470 500 530
+AM2=0, AM1=1, AM0=0 564 600 636
+AM2=0, AM1=1, AM0=1 940 1000 1060
+fOSC Oscillator frequency
+AM2=1, AM1=0, AM0=0 1128 1200 1278
+kHz
+AM2=1, AM1=0, AM0=1 282 300 318
+AM2=1, AM1=1, AM0=0
+Modulation scheme Fixed in 1SPW Mode 282 300 318
+AM2=1, AM1=1, AM0=1, Reserved
+Thermal trip point ≥150 °C
+Thermal hysteresis 15 °C
+Over current trip point 7.5 A
+8
+Submit Documentation Feedback Copyright © 2018, Texas Instruments Incorporated
+Product Folder Links: TPA3126D2
+
+--- PAGE 9 ---
+TPA3126D2
+www.ti.com SLOS942 –APRIL 2018
+7.7 Typical Characteristics
+fs
+= 400 kHz, Hybrid Mode, TPA3126D2EVM Tested With AP2722. (unless otherwise noted)
+PVDD Idle Current (mA)
+30
+20
+10
+0
+Gain=26dB
+TA=25qC
+RL=4:
+Gain=26dB
+PVcc=12V
+TA=25qC
+RL=8:
+P O=1W
+PO =2.5W
+PO=5W
+THD+N(%)
+10
+1
+0.1
+0.01
+0.001
+20 5 15 25 10 20
+Supply Voltage (V)
+D001
+D002
+20 20k
+100 1k 10k
+Frequency (Hz)
+D005
+FPWM = 400 kHz
+Figure 1. Idle Current vs PVCC Figure 2. Total Harmonic Distortion + Noise (BTL) vs
+Frequency
+THD+N(%)
+10
+1
+0.1
+0.01
+0.001
+Gain=26dB
+PVcc=24V
+TA=25qC
+RL=8:
+P O=1W
+PO =5W
+PO=10W
+THD+N (%)
+10
+1
+0.1
+0.01
+0.001
+Gain=26dB
+PVCC=6V
+TA=25qC
+RL=4:
+f= 20Hz
+f= 1kHz
+f= 6KHz
+20 20k
+100 1k 10k
+Frequency (Hz)
+D006
+0.01 0.1 1 10
+Output Power (W)
+D007
+Figure 3. Total Harmonic Distortion + Noise (BTL) vs
+Frequency
+Figure 4. Total Harmonic Distortion + Noise (BTL) vs Output
+Power
+THD+N (%)
+10
+1
+0.1
+0.01
+0.001
+Gain=26dB
+PVCC=12V
+TA=25qC
+RL=4:
+THD+N (%)
+f= 20Hz
+f= 1kHz
+f= 6KHz
+10
+1
+0.1
+0.01
+0.001
+Gain=26dB
+PVCC=24V
+TA=25qC
+RL=4:
+f= 20Hz
+f= 1kHz
+f= 6KHz
+0.01 0.1 1 10 4040
+Output Power (W)
+D008
+0.01 0.1 1 10 100
+Output Power (W)
+D009
+Figure 5. Total Harmonic Distortion + Noise (BTL) vs Output
+Power
+Figure 6. Total Harmonic Distortion + Noise (BTL) vs Output
+Power
+Copyright © 2018, Texas Instruments Incorporated
+Product Folder Links: TPA3126D2
+Submit Documentation Feedback
+9
+
+--- PAGE 10 ---
+TPA3126D2
+SLOS942 –APRIL 2018 www.ti.com
+Typical Characteristics (continued)
+fs
+= 400 kHz, Hybrid Mode, TPA3126D2EVM Tested With AP2722. (unless otherwise noted)
+THD+N (%)
+10
+1
+0.1
+0.01
+0.001
+Gain=26dB
+PVCC=12V
+TA=25qC
+RL=8:
+THD+N (%)
+f= 20Hz
+f= 1kHz
+f= 6KHz
+10
+1
+0.1
+0.01
+0.001
+Gain=26dB
+PVCC=24V
+TA=25qC
+RL=8:
+f= 20Hz
+f= 1kHz
+f= 6KHz
+0.01 0.1 1 10 50
+Output Power (W)
+D010
+0.01 0.1 1 10 50
+Output Power (W)
+D011
+Figure 7. Total Harmonic Distortion + Noise (BTL) vs Output
+Power
+Figure 8. Total Harmonic Distortion + Noise (BTL) vs Output
+Power
+30 300
+Gain=26dB
+TA=25qC
+PVCC=24V
+RL=4:
+Output Power (W)
+50
+40
+30
+20
+10
+0
+Gain (dB)
+1 2 3 4 5
+PLIMIT Voltage(V)
+D0012
+20 200
+10 100
+0 0
+-10 -100
+-20 -200
+-30 Gain=26dB
+-300
+PVCC=12V
+-40 TA=25qC
+Gain
+-400
+RL=4:
+Phase
+-50 -500
+20 20k
+100 1k 10k 100k
+Frequency (Hz)
+D022D025
+Phase (q)
+Figure 9. Output Power (BTL) vs PLIMIT Voltage Figure 10. Gain/Phase (BTL) vs Frequency
+Maximum Output Power (W)
+50
+45
+40
+35
+30
+25
+20
+15
+10
+5
+0
+Gain=26dB
+TA=25qC
+RL=8:
+Maximum Output Power (W)
+THD+N=1%
+THD+N=10%
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+0
+Gain=26dB
+TA=25qC
+RL=4:
+THD+N=1%
+THD+N=10%
+4 6 8 10 12 14 16 18 20 22 24 26
+Supply Voltage (V)
+D014 D037
+4 6 8 10 12 14 16 18 20 22 24 26
+Supply Voltage (V)
+D015 D037
+Figure 11. Maximum Output Power (BTL) vs Supply Voltage Figure 12. Maximum Output Power (BTL) vs Supply Voltage
+10
+Submit Documentation Feedback Copyright © 2018, Texas Instruments Incorporated
+Product Folder Links: TPA3126D2
+
+--- PAGE 11 ---
+TPA3126D2
+www.ti.com SLOS942 –APRIL 2018
+Typical Characteristics (continued)
+fs
+= 400 kHz, Hybrid Mode, TPA3126D2EVM Tested With AP2722. (unless otherwise noted)
+Power Efficiency (%)
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+0
+0 5 10 15 20 25 30 35 40 45 50
+Output Power (W)
+D016
+Power Efficiency (%)
+Gain=26dB
+TA=25qC
+RL=8:
+PVCC = PVCC = PVCC = 6V
+12 V
+24 V
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+0
+0 5 10 15 20 25 30 35 40 45 50
+Output Power (W)
+D017
+Gain=26dB
+TA=25qC
+RL=4:
+PVCC = 6V
+PVCC = 12 V
+PVCC = 24 V
+Figure 13. Power Efficiency (BTL) vs Output Power Figure 14. Power Efficiency (BTL) vs Output Power
+Crosstalk (dB)
+0
+-20
+-40
+-60
+-80
+-100
+-120
+-140
+Gain=26dB
+PVCC=24V
+TA=25qC
+RL=8:
+Crosstalk (dB)
+Right to Left
+Left to Right
+0
+-20
+-40
+-60
+-80
+-100
+-120
+-140
+Gain=26dB
+PVCC=12V
+TA=25qC
+RL=4:
+Right to Left
+Left to Right
+100 1k 10k
+20 20k
+Frequency (Hz)
+D001
+D003D018
+100 1k 10k
+20 20k
+Frequency (Hz)
+D003D019
+Figure 15. Crosstalk vs Frequency Figure 16. Crosstalk vs Frequency
+kSVR (dB)
+0
+-20
+-40
+-60
+-80
+-100
+Gain=26dB
+PVCC=12VDC+200mVP-P
+TA=25qC
+RL=8:
+THD+N(%)
+Left Channel
+Right Channel
+10
+1
+0.1
+0.01
+0.001
+Gain=26dB
+PVcc=12V
+TA=25qC
+RL=2:
+P O=1W
+PO =5W
+PO=10W
+100 1k 10k
+20 20k
+Frequency (Hz)
+D020
+100 1k 10k
+20 20k
+Frequency (Hz)
+D021
+Figure 17. Supply Ripple Rejection Ratio (BTL) vs
+Frequency
+Figure 18. Total Harmonic Distortion + Noise (PBTL) vs
+Frequency
+Copyright © 2018, Texas Instruments Incorporated
+Submit Documentation Feedback
+Product Folder Links: TPA3126D2
+11
+
+--- PAGE 12 ---
+TPA3126D2
+SLOS942 –APRIL 2018 www.ti.com
+Typical Characteristics (continued)
+fs
+= 400 kHz, Hybrid Mode, TPA3126D2EVM Tested With AP2722. (unless otherwise noted)
+THD+N (%)
+10
+1
+0.1
+0.01
+0.001
+Gain=26dB
+PVCC=12V
+TA=25qC
+RL=2:
+f= 20Hz
+Maximum Output Power (W)
+f= 1kHz
+f= 6KHz
+180
+160
+140
+120
+100
+80
+60
+40
+20
+0
+Gain=26dB
+TA=25qC
+RL=2:
+THD+N=1%
+THD+N=10%
+0.01 0.1 1 10 40
+Output Power (W)
+D022
+4 6 8 10 12 14 16 18 20 22
+Supply Voltage (V)
+D023
+Figure 19. Total Harmonic Distortion + Noise (PBTL) vs
+Output Power
+Figure 20. Maximum Output Power (PBTL) vs Supply
+Voltage
+Power Efficiency (%)
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+0
+0 10 20 30 40 50 60 70 80 90 100
+Output Power (W)
+D001
+kSVR (dB)
+Gain TA = = 26dB
+25qC
+RL = 3:
+PVCC = PVCC = PVCC = 6V
+12 V
+24 V
+0
+-20
+-40
+-60
+-80
+-100
+Gain=26dB
+PVCC=12VDC+200mVP-P
+TA=25qC
+RL=2:
+100 1k 10k
+20 20k
+Frequency (Hz)
+D025
+Figure 21. Power Efficiency (PBTL) vs Output Power Figure 22. Supply Ripple Rejection Ratio (PBTL) vs
+Frequency
+THD+N (%)
+10
+5
+2
+1
+0.5
+0.2
+0.1
+0.05
+0.02
+0.01
+0.005
+0.002
+0.001
+Gain = 26dB
+PVCC = 24V
+TA = 25qC
+RL = 3:
+f = 20Hz
+Maximum Output Power (W)
+f = 1kHz
+f = 6KHz
+140
+130
+120
+110
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+0
+Gain = 26dB
+TA = 25qC
+RL = 3:
+THD+N=1%
+THD+N=10%
+0.01 0.1 1 10 50 100 200
+Output Power (W)
+D002
+4 6 8 10 12 14 16 18 20 22 24 26
+Supply Voltage (V)
+D004
+Figure 23. Total Harmonic Distortion + Noise (PBTL) vs
+Output Power
+Figure 24. Maximum Output Power (PBTL) vs Supply
+Voltage
+12
+Submit Documentation Feedback Copyright © 2018, Texas Instruments Incorporated
+Product Folder Links: TPA3126D2
+
+--- PAGE 13 ---
+TPA3126D2
+www.ti.com SLOS942 –APRIL 2018
+GVDD
+PVCC
+PVCC
+TTL
+Buffer
+Modulation and
+PBTL Select
+Gain
+Control
+OUTPR_FB
+Gate
+Drive
+OUTPR_FB
+8 Detailed Description
+8.1 Overview
+The analog-input Class-D amplifier TPA3126D2 is a performance upgrade to the prior generation TPA3116D2. It
+features a more efficient, 90-mΩ MOSFET, and has an extremely-low idle current of < 23 mA (24 V) in the
+standard LC filter configuration. The device can operate from the ultra-low-idle-loss modulation scheme, which
+enables low power dissipation in both idle condition and while playing music, optimized for battery-powered audio
+systems.
+The TPA3126D2 supports both stereo and mono BTL modes, as well as mono PBTL mode. Comparing to the
+conventional Class-D amplifiers, in the mono BTL mode, the idle channel of the TPA3126D2 is not in the
+switching mode; therefore, it saves nearly half of the power loss, enabling low-power operation in single channel
+applications.
+The device may be configured for either master or slave operation by using the SYNC pin. This configuration
+helps prevent the audible beats noise.
+8.2 Functional Block Diagram
+SDZ
+MUTE
+GAIN
+RINP
+RINN
+FAULTZ
+SYNC
+GAIN/SLV
+AM<2:0>
+PLIMIT
+PVCC
+AVCC
+GVDD
+LINP
+LINN
+GND
+Gain
+Control
++
++
++
+PLIMIT
++
+OUTPNR_FB
++
++
+PWM
+Logic
+GVDD
+PVCC
+PVCC
+OUTNR_
+FB
+Input
+Sense
+MONO
+Select
+SC Detect
+DC Detect
+Ramp
+Generator
+Biases and
+References
+Startup Protection
+Logic
+PLIMIT
+Reference
+UVLO/OVLO
+PVCC
+LDO
+Regulator
+Gate
+Drive
+Thermal
+Detect
+Gate
+Drive
+GVDD PVCC
+OUTNL_FB
+Gain
+Control
+AVDD
+GVDD
++
+PVCC
+OUTNL_
+FB
++
++
+PLIMIT
++
++
+PWM
+Logic
++
+GVDD
+PVCC
+PVCC
+OUTPL_FB
+Gate
+Drive
+Input
+Sense PBTL
+Select
+Modulation and
+PBTL Select OUTPL_FB
+BSPR
+OUTPR
+GND
+BSNR
+OUTNR
+GND
+BSNL
+OUTNL
+GND
+BSPL
+OUTPL
+GND
+Thermal
+Pad
+Copyright © 2018, Texas Instruments Incorporated
+Submit Documentation Feedback
+13
+Product Folder Links: TPA3126D2
+
+--- PAGE 14 ---
+TPA3126D2
+SLOS942 –APRIL 2018 www.ti.com
+8.3 Feature Description
+8.3.1 Gain Setting and Master and Slave
+The gain of the TPA3126D2 is set by the voltage divider connected to the GAIN/SLV control pin. Master or Slave
+mode is also controlled by the same pin. An internal ADC is used to detect the 8 input states. The first four states
+set the GAIN in Master mode with gains of 20, 26, 32, and 36 dB respectively, while the next four states set the
+GAIN in Slave mode with gains of 20, 26, 32, and 36 dB respectively. The gain setting is latched during power-
+up and cannot be changed while the device is powered on. Table 1 lists the recommended resistor values for
+different state settings.
+Table 1. Gain and Master/Slave
+MASTER / SLAVE
+MODE GAIN R1 (to GND)(1) R2 (to GVDD)(1) INPUT IMPEDANCE
+Master 20 dB 5.6 kΩ OPEN 60 kΩ
+Master 26 dB 20 kΩ 100 kΩ 30 kΩ
+Master 32 dB 39 kΩ 100 kΩ 15 kΩ
+Master 36 dB 47 kΩ 75 kΩ 9 kΩ
+Slave 20 dB 51 kΩ 51 kΩ 60 kΩ
+Slave 26 dB 75 kΩ 47 kΩ 30 kΩ
+Slave 32 dB 100 kΩ 39 kΩ 15 kΩ
+Slave 36 dB 100 kΩ 16 kΩ 9 kΩ
+(1) Resistor tolerance should be 5% or better.
+5
+6
+2 1
+C5 1 Fµ
+2 1
+R1
+51 k
+2
+R2
+1
+51 k
+7
+8
+9
+10
+INNR
+PLIMIT
+GVDD
+GAIN/SLV
+GND
+Figure 25. Gain, Master/Slave
+In Master mode, the SYNC terminal is an output, while in Slave mode, the SYNC terminal is an input for a clock.
+TTL logic levels with compliance to GVDD.
+8.3.2 Input Impedance
+The TPA3126D2 input stage is a fully differential input stage and the input impedance changes with the gain
+setting from 7.3 kΩ at 36 dB gain to 50 kΩ at 20 dB gain. Table 1 lists the values from min to max gain. The
+tolerance of the input resistor value is ±20% so that the minimum value will be higher than 5.9 kΩ. The inputs
+must be AC-coupled to minimize the output DC-offset and ensure correct ramping of the output voltages during
+power-ON and power-OFF. The input AC-coupling capacitor along with the input impedance forms a high-pass
+filter with the following cut-off frequency:
+1
+f
+ƒ
+=
+2 Z C p
+i i
+(1)
+If a flat bass response is required down to 20 Hz the recommended cut-off frequency is a tenth of that, 2 Hz.
+Table 2 lists the recommended AC-coupling capacitors for each gain setting. If a –3-dB frequency response is
+accepted at 20 Hz, 10 times lower capacitors (for example, a 1-µF capacitor) can be used.
+14
+Submit Documentation Feedback Copyright © 2018, Texas Instruments Incorporated
+Product Folder Links: TPA3126D2
+
+--- PAGE 15 ---
+TPA3126D2
+www.ti.com SLOS942 –APRIL 2018
+Table 2. Recommended Input AC-Coupling Capacitors
+GAIN INPUT IMPEDANCE INPUT CAPACITANCE HIGH-PASS FILTER
+20 dB 50 kΩ 1.5 µF 2.1 Hz
+26 dB 25 kΩ 3.3 µF 1.9 Hz
+32 dB 12.5 kΩ 5.6 µF 2.3 Hz
+36 dB 7.3 kΩ 10 µF 2.2 Hz
+Zf
+Ci
+IN Zi
+Input
+Signal
+Figure 26. Input Impedance
+The input capacitors should be a type of low leakage, such as quality electrolytic, tantalum, or ceramic
+capacitors. If a polarized type is used the positive connection should face the input pins which are biased to 3
+Vdc.
+8.3.3 Startup and Shutdown Operation
+The TPA3126D2 employs a shutdown mode of operation designed to reduce supply current (ICC) to the absolute
+minimum level during periods of non-use for power conservation. The SDZ input terminal should be held high
+(see specification table for trip point) during normal operation when the amplifier is in use. Pulling SDZ low puts
+the outputs to mute and the amplifier to enter a low-current state. Do not leave SDZ unconnected, because the
+amplifier operation is unpredictable.
+For the best power-off pop performance, place the amplifier in the shutdown mode prior to removing the power
+supply. The gain setting is selected at the end of the start-up cycle, and cannot be changed until the next power-
+up.
+8.3.4 PLIMIT Operation
+The TPA3126D2 has a built-in voltage limiter that can be used to limit the output voltage level below the supply
+rail. The amplifier operates as if it was powered by a lower supply voltage, and thereby, limits the output power.
+Add a resistor divider from GVDD to ground to set the voltage at the PLIMIT pin. An external reference may also
+be used if tighter tolerance is required. Add a 1-µF capacitor from pin PLIMIT to ground to ensure stability.
+Figure 27. Power Limit Example
+Copyright © 2018, Texas Instruments Incorporated
+Submit Documentation Feedback
+15
+Product Folder Links: TPA3126D2
+
+--- PAGE 16 ---
+TPA3126D2
+SLOS942 –APRIL 2018 www.ti.com
+The PLIMIT circuit sets a limit on the output peak-to-peak voltage. This is done by limiting the duty cycle to a
+fixed maximum value. The limit can be considered as a "virtual" voltage rail which is lower than the supply
+connected to PVCC. The "virtual" rail is approximately four times the voltage at the PLIMIT pin. The output
+voltage can be used to calculate the maximum output power for a given maximum input voltage and speaker
+impedance.
+2
+æ ö æ ö
+R V
+L
+P
+´ ç ÷ ç ÷ ç ÷ ´ è ø è ø
+R + 2 R
+L S
+OUT
+P = for unclipped power 2 R
+´
+L
+where
+• POUT (10%THD) = 1.25 × POUT (unclipped)
+• RL is the load resistance.
+• RS is the total series resistance including RDS(on), and output filter resistance.
+• VP is the peak amplitude, which is limited by the "virtual" voltage rail. Table 3. Power Limit Example
+(2)
+PVCC (V) PLIMIT VOLTAGE (V)(1) R to GND R to GVDD OUTPUT VOLTAGE (Vrms)
+24 V GVDD Open Short 17.9
+24 V 3.3 45 kΩ 51 kΩ 12.67
+24 V 2.25 24 kΩ 51 kΩ 9
+12 V GVDD Open Short 10.33
+12 V 2.25 24 kΩ 51 kΩ 9
+12 V 1.5 18 kΩ 68 kΩ 6.3
+(1) PLIMIT measurements taken with EVM gain set to 26 dB and input voltage set to 1 Vrms.
+8.3.5 GVDD Supply
+The GVDD Supply is used to power the gates of the output full bridge transistors. The GVDD supply can also be
+used to supply the PLIMIT and GAIN/SLV voltage dividers. Decouple GVDD with a X5R ceramic 1-µF capacitor
+to GND. The GVDD supply is not intended to be used for external supply. The current consumption should be
+limited by using resistor voltage dividers for GAIN/SLV and PLIMIT of 100 kΩ or more.
+8.3.6 BSPx and BSNx Capacitors
+The full H-bridge output stages use only NMOS transistors. Therefore, they require bootstrap capacitors for the
+high side of each output to turn on correctly. A 220-nF ceramic capacitor of quality X5R or better, rated for at
+least 16 V, must be connected from each output to the corresponding bootstrap input. (See the application circuit
+diagram in Figure 34.) The bootstrap capacitors connected between the BSxx pins and corresponding output
+function as a floating power supply for the high-side N-channel power MOSFET gate drive circuitry. During each
+high-side switching cycle, the bootstrap capacitors hold the gate-to-source voltage high enough to keep the high-
+side MOSFETs turned on.
+8.3.7 Differential Inputs
+The differential input stage of the amplifier cancels any noise that appears on both input lines of the channel. To
+use the TPA3126D2 with a differential source, connect the positive lead of the audio source to the RINP or LINP
+input and the negative lead from the audio source to the RINN or LINN input. To use the TPA3126D2 with a
+single-ended source, AC ground the negative input through a capacitor equal in value to the input capacitor on
+positive and apply the audio source to either input. In a single-ended input application, the unused input should
+be AC grounded at the audio source instead of at the device input for best noise performance. For good transient
+performance, the impedance seen at each of the two differential inputs should be the same.
+The impedance seen at the inputs should be limited to an RC time constant of 1 ms or less if possible to allow
+the input DC blocking capacitors to become completely charged during the 40-ms power-up time. If the input
+capacitors are not allowed to completely charged, there will be some additional sensitivity to the component
+matching which can result in pop if the input components are not well matched.
+16
+Submit Documentation Feedback Copyright © 2018, Texas Instruments Incorporated
+Product Folder Links: TPA3126D2
+
+--- PAGE 17 ---
+TPA3126D2
+www.ti.com SLOS942 –APRIL 2018
+8.3.8 Device Protection System
+The TPA3126D2 contains a complete set of protection circuits carefully designed to make system design efficient
+as well as to protect the device against any kind of permanent failures due to short circuits, overload, over
+temperature, and under-voltage. The FAULTZ pin signals if an error is detected according to Table 4:
+Table 4. Fault Reporting
+FAULT TRIGGERING CONDITION
+(typical value) FAULTZ ACTION LATCHED/SELF-
+CLEARING
+Over Current Output short or short to PVCC or GND Low Output high impedance Latched
+Over Temperature Tj > 150°C Low Output high impedance Latched
+Too High DC Offset DC output voltage Low Output high impedance Latched
+Under Voltage on
+PVCC PVCC < 4.5V – Output high impedance Self-clearing
+Over Voltage on
+PVCC PVCC > 27V – Output high impedance Self-clearing
+8.3.9 DC Detect Protection
+The TPA3126D2 has circuitry which protects the speakers from DC current which might occur due to defective
+capacitors on the input or shorts on the printed circuit board at the inputs. A DC detect fault is reported on the
+FAULT pin as a low state. The DC Detect fault causes the amplifier to shutdown by changing the state of the
+outputs to Hi-Z.
+If automatic recovery from the short circuit protection latch is desired, connect the FAULTZ pin directly to the
+SDZ pin. Connecting the FAULTZ and SDZ pins allows the FAULTZ pin function to automatically drive the SDZ
+pin low which clears the DC Detect protection latch.
+A DC Detect Fault is issued when the output differential voltage of either channel exceeds DC protection
+threshold level for more than 640 ms at the same polarity. Table 5 shows some examples of the typical DC
+Detect Protection threshold for several values of the supply voltage. The Detect Protection Threshold feature
+protects the speaker from large DC currents or AC currents less than 2 Hz. To avoid nuisance faults due to the
+DC detect circuit, hold the SD pin low at power-up until the signals at the inputs are stable. Also, take care to
+match the impedance seen at the positive and negative inputs to avoid nuisance DC detect faults.
+Table 5 lists the minimum output offset voltages required to trigger the DC detect. The outputs must remain at or
+above the voltage listed in the table for more than 640 ms to trigger the DC detect.
+Table 5. DC Detect Threshold
+VOS- OUTPUT OFFSET VOLTAGE (V)
+1.35
+PVCC (V) 4.5 6 1.8
+12 3.6
+18 5.4
+8.3.10 Short-Circuit Protection and Automatic Recovery Feature
+The TPA3126D2 has protection from over current conditions caused by a short circuit on the output stage. The
+short circuit protection fault is reported on the FAULTZ pin as a low state. The amplifier outputs are switched to a
+high impedance state when the short circuit protection latch is engaged. The latch can be cleared by cycling the
+SDZ pin through the low state.
+If automatic recovery from the short circuit protection latch is desired, connect the FAULTZ pin directly to the
+SDZ pin. Connecting the FAULTZ and SDZ pins allows the FAULTZ pin function to automatically drive the SDZ
+pin low which clears the short-circuit protection latch.
+Copyright © 2018, Texas Instruments Incorporated
+Submit Documentation Feedback
+17
+Product Folder Links: TPA3126D2
+
+--- PAGE 18 ---
+TPA3126D2
+SLOS942 –APRIL 2018 www.ti.com
+8.3.11 Thermal Protection
+Thermal protection on the TPA3126D2 prevents damage to the device when the internal die temperature
+exceeds 150°C. This trip point has a ±15°C tolerance from device to device. Once the die temperature exceeds
+the thermal trip point, the device enters into the shutdown state and the outputs are disabled. This is a latched
+fault.
+Thermal protection faults are reported on the FAULTZ terminal as a low state.
+If automatic recovery from the thermal protection latch is desired, connect the FAULTZ pin directly to the SDZ
+pin. This allows the FAULTZ pin function to automatically drive the SDZ pin low which clears the thermal
+protection latch.
+8.3.12 Device Modulation Scheme
+The TPA3126D2 has the option of running in either BD modulation or ultra-low idle current Hybrid Mode.
+8.3.12.1 BD Modulation
+This is a modulation scheme that allows operation without the classic LC reconstruction filter when the amplifier
+is driving an inductive load with short speaker wires. Each output is switching from 0 volts to the supply voltage.
+The OUTPx and OUTNx are in phase with each other with no input so that there is little or no current in the
+speaker. The duty cycle of OUTPx is greater than 50% and OUTNx is less than 50% for positive output voltages.
+The duty cycle of OUTPx is less than 50% and OUTNx is greater than 50% for negative output voltages. The
+voltage across the load sits at 0V throughout most of the switching period, reducing the switching current, which
+reduces any I2R losses in the load.
+18
+Submit Documentation Feedback Copyright © 2018, Texas Instruments Incorporated
+Product Folder Links: TPA3126D2
+
+--- PAGE 19 ---
+TPA3126D2
+www.ti.com SLOS942 –APRIL 2018
+OUTP
+OUTN
+No Output
+OUTP-OUTN
+0V
+Speaker
+Current
+OUTP
+OUTN
+Positive Output
+PVCC
+0V
+OUTP-OUTN
+Speaker
+Current
+0A
+OUTP
+Negative Output
+OUTN
+OUTP-OUTN
+0V
+PVCC
+0A
+Speaker
+Current
+Figure 28. BD Mode Modulation
+Copyright © 2018, Texas Instruments Incorporated
+Submit Documentation Feedback
+19
+Product Folder Links: TPA3126D2
+
+--- PAGE 20 ---
+TPA3126D2
+SLOS942 –APRIL 2018 www.ti.com
+8.3.13 Efficiency: LC Filter Required with the Traditional Class-D Modulation Scheme
+Many traditional Class-D amplifiers are based on the AD modulation. Due to the out-of-phase nature of a BTL or
+PBTL amplifier operating in the AD modulation, if no LC filter was present, the load sees the full PWM signal
+across its terminals. This causes a high-frequency ripple current to pass through the load, which leads to high
+power dissipation, poor efficiency, and potential speaker damage. The ripple current is large in the AD
+modulation scheme, because it is proportional to voltage multiplied by the time at that voltage. The differential
+voltage swing is 2 × VCC, and the time at each voltage is half the period for the AD modulation scheme. An ideal
+LC filter is required to store the ripple current from each half cycle for the next half cycle, while any resistance
+causes power dissipation. The speaker is both resistive and reactive, whereas an LC filter is almost purely
+reactive.
+The modulation schemes implemented in the TPA3126D2 have little loss in the load even without a filter because
+the pulses are short and the change in voltage is VCC instead of 2 × VCC. As the output power increases and
+the pulses widen, the ripple current can go up. In this case, the ripple current can be filtered with an LC filter for
+increased efficiency. However, in most applications the filter is not required.
+With an LC filter, specifically as the cut-off frequency of the LC filter is smaller than the PWM switching frequency
+of the amplifier, the ripple current is reduced such that only a small residual ripple voltage is present after the LC
+filter. The filter has less resistance but higher impedance at the switching frequency than the speaker, which
+results in less power dissipation, hence increasing efficiency.
+8.3.14 Ferrite Bead Filter Considerations
+Using the Advanced Emissions Suppression Technology in the TPA3126D2, a high efficiency Class-D audio
+amplifier can be designed while minimizing interference to the surrounding circuits. Designing the amplifier can
+also be accomplished with only a low-cost ferrite bead filter. In this case the user must carefully select the ferrite
+bead used in the filter. One important aspect of the ferrite bead selection is the type of material used in the ferrite
+bead. Not all ferrite material is alike, therefore the user must select a material that is effective in the 10-MHz to
+100-MHz range which is key to the operation of the Class-D amplifier. Many of the specifications regulating
+consumer electronics have emissions limits as low as 30-MHz. The ferrite bead filter should be used to block
+radiation in the 30-MHz and above range from appearing on the speaker wires and the power supply lines which
+are good antennas for these signals. The impedance of the ferrite bead can be used along with a small capacitor
+with a value in the range of 1000-pF to reduce the frequency spectrum of the signal to an acceptable level. For
+best performance, the resonant frequency of the ferrite bead or capacitor filter should be less than 10-MHz.
+Also, the ferrite bead must be large enough to maintain its impedance at the peak currents expected for the
+amplifier. Some ferrite bead manufacturers specify the bead impedance at a variety of current levels. In this case
+it is possible to make sure the ferrite bead maintains an adequate amount of impedance at the peak current the
+amplifier will see. If these specifications are not available, the device can also estimate the bead current handling
+capability by measuring the resonant frequency of the filter output at low power and at maximum power. A
+change of resonant frequency of less than fifty percent under this condition is desirable. Examples of ferrite
+beads which have been tested and work well with the TPA3136D2 can be seen in the TPA3136D2EVM user
+guide SLOU444.
+A high quality ceramic capacitor is also required for the ferrite bead filter. A low ESR capacitor with good
+temperature and voltage characteristics will work best.
+Additional EMC improvements may be obtained by adding snubber networks from each of the Class-D outputs to
+ground. Suggested values for a simple RC series snubber network would be 18-Ω in series with a 330-pF
+capacitor, although design of the snubber network is specific to different applications and must be designed with
+the consideration of the parasitic reactance of the printed circuit board as well as the audio amp. Take care to
+evaluate the stress on the component in the snubber network especially if the amp is running at high PVCC.
+Also, verify the layout of the snubber network is tight and returns directly to the GND pins on the IC.
+Figure 29 and Figure 30 are TPA3126D2 EN55022 Radiated Emissions results uses TPA3126D2EVM with 8-Ω
+speakers.
+20
+Submit Documentation Feedback Copyright © 2018, Texas Instruments Incorporated
+Product Folder Links: TPA3126D2
+
+--- PAGE 21 ---
+TPA3126D2
+www.ti.com SLOS942 –APRIL 2018
+Figure 29. TPA3126D2 Radiated Emissions-Horizontal
+(PVCC=19V, PO=1W)
+Figure 30. TPA3126D2 Radiated Emissions-Vertical
+(PVCC=19V, PO=1W)
+8.3.15 When to Use an Output Filter for EMI Suppression
+A complete LC reconstruction filter should be added in some circuit instances. These circumstances might occur
+if there are nearby circuits which are sensitive to noise. In these cases, a classic second order Butterworth filter
+similar to those shown in Figure 31 can be used.
+Some systems have little power supply decoupling from the AC line but are also subject to line conducted
+interference (LCI) regulations. These include systems powered by "wall warts" and "power bricks." In these
+cases, LC reconstruction filters can be the lowest-cost methods to pass LCI tests. Common mode chokes using
+low frequency ferrite material can also be effective in preventing line conducted interference.
+10 µH
+OUTP
+L1
+10 µH
+OUTN
+L2
+Ferrite
+Chip Bead
+C2
+0.68 µF
+4 - 8
+C3
+0.68 µF
+OUTP
+1 nF
+4 - 8
+Ferrite
+Chip Bead
+OUTN
+1 nF
+Figure 31. Output Filters
+Copyright © 2018, Texas Instruments Incorporated
+Submit Documentation Feedback
+21
+Product Folder Links: TPA3126D2
+
+--- PAGE 22 ---
+TPA3126D2
+SLOS942 –APRIL 2018 www.ti.com
+8.3.16 AM Avoidance EMI Reduction
+Table 6. AM Frequencies
+US EUROPEAN
+SWITCHING FREQUENCY (kHz) AM2 AM1 AM0
+AM FREQUENCY (kHz) AM FREQUENCY (kHz)
+540-917 540-914 500 0 0 1
+0 1 0
+917-1125 914-1122 600 (or 400)
+0 0 0
+1125-1375 1122-1373 500 0 0 1
+0 1 0
+1375-1547 1373-1548 600 (or 400)
+0 0 0
+0 1 0
+1547-1700 1548-1701 600 (or 500)
+0 0 1
+8.4 Device Functional Modes
+TPA3126D2 can be configured in either a stereo BTL (Bridge Tied Load) mode, mono BTL mode (only one
+output BTL channel active), or in a mono PBTL (Parallel Bridge Tied Load) mode.
+8.4.1 Mono PBTL Mode
+In mono PBTL mode, the device can deliver up to 100-W output power. Configuration steps for mono PBTL
+mode are as follows:
+• Connect LINP and LINN directly to Ground (without capacitors), so the device is set in a mono PBTL mode
+during power up.
+• Connect OUTPR and OUTNR together for the positive speaker terminal, and OUTNL and OUTPL together for
+the negative speaker terminal.
+• Analog input signal is applied to RINP and RINN.
+PVCC
+RINP
+TPA3156D2
+TPA3126D2
+TPA3128D2
+TPA3129D2
+Audio
+Source
+And Control
+RIGHT
+RINN
+Power Supply
+4.5V ± 26V
+LINP
+OUTPR
+OUTNR
+LINN
+PBTL
+DETECT
+LC
+Filter
+OUTPL
+OUTNL
+Copyright © 2018, Texas Instruments Incorporated
+Figure 32. Mono PBTL Mode
+22
+Submit Documentation Feedback Product Folder Links: TPA3126D2
+Copyright © 2018, Texas Instruments Incorporated
+
+--- PAGE 23 ---
+TPA3126D2
+www.ti.com SLOS942 –APRIL 2018
+Device Functional Modes (continued)
+8.4.2 Mono BTL Mode (Single Channel Mode)
+The TPA3126D2 can be connected in mono BTL mode while cutting the idle power-loss nearly by half.
+• Connect RINP and RINN directly to Ground (without capacitors), so the device is set in mono BTL mode
+during power up.
+• Connect OUTPL to the positive speaker terminal, and OUTNL to the negative speaker terminal.
+• Analog input signal is applied to LINP and LINN.
+RINP
+RIGHT
+RINN
+MONO
+DETECT
+TPA3156D2
+TPA3126D2
+TPA3128D2
+TPA3129D2 Power Supply
+4.5V ± 26V
+OUTPR
+OUTNR
+LINP
+Audio
+Source
+And Control
+LEFT
+LINN
+OUTPL
+OUTNL
+LC
+Filter
+Copyright © 2018, Texas Instruments Incorporated
+Figure 33. Mono BTL Mode
+Copyright © 2018, Texas Instruments Incorporated
+Submit Documentation Feedback
+23
+Product Folder Links: TPA3126D2
+
+--- PAGE 24 ---
+TPA3126D2
+SLOS942 –APRIL 2018 www.ti.com
+9 Application and Implementation
+NOTE
+Information in the following applications sections is not part of the TI component
+specification, and TI does not warrant its accuracy or completeness. TI’s customers are
+responsible for determining suitability of components for their purposes. Customers should
+validate and test their design implementation to confirm system functionality.
+9.1 Application Information
+9.1.1 Typical Application
+This section describes a 2.1 Master and Slave application. The Master (U1 TPA3126D2) is configured as stereo
+BTL outputs with 400-kHz switching frequency and no power limit implemented, and the Slave (U2) is configured
+as a mono PBTL output. Both U1 and U2 are setup with a gain of 26-dB. Inputs are connected for differential
+inputs.
+Figure 34. TPA3126D2 in a 2.1 Mode ApplicationSubmit Documentation Feedback Copyright © 2018, Texas Instruments Incorporated
+Product Folder Links: TPA3126D2
+24
+
+--- PAGE 25 ---
+TPA3126D2
+www.ti.com SLOS942 –APRIL 2018
+Application Information (continued)
+9.1.1.1 Design Requirements
+DESIGN PARAMETERS EXAMPLE VALUE
+Input voltage range PVCC 4.5 V to 26 V
+PWM output frequencies 300kHz, 400 kHz, 500 kHz, 600 kHz, 1 MHz or 1.2 MHz
+Maximum output power 2 × 50 W
+9.1.1.2 Detailed Design Procedure
+The TPA3126D2 devices are very flexible and easy-to-use Class D amplifiers; therefore, the design process is
+straightforward. Before beginning the design, gather the following information regarding the audio system.
+• PVCC rail planned for the design
+• Speaker or load impedance
+• Maximum output power requirement
+• Desired PWM frequency
+9.1.1.2.1 Select the PWM Frequency
+Set the PWM frequency by using AM0, AM1 and AM2 pins.
+9.1.1.2.2 Select the Amplifier Gain and Master/Slave Mode
+To select the amplifier gain setting, the designer must determine the maximum power target and the speaker
+impedance. Once these parameters have been determined, calculate the required output voltage swing which
+delivers the maximum output power.
+Choose the lowest analog gain setting that corresponds to produce an output voltage swing greater than the
+required output swing for maximum power. The analog gain and master/slave mode can be set by selecting the
+voltage divider resistors (R1 and R2) on the Gain/SLV pin.
+9.1.1.2.3 Select Input Capacitance
+Select the bulk capacitors at the PVCC inputs for proper voltage margin and adequate capacitance to support the
+power requirements. In practice, with a well-designed power supply, two 100-μF, 50-V capacitors should be
+sufficient. One capacitor should be placed near the PVCC inputs at each side of the device. PVCC capacitors
+should be a low ESR type because they are being used in a fast-switching application.
+9.1.1.2.4 Select Decoupling Capacitors
+Good quality decoupling capacitors must be added at each of the PVCC inputs to provide good reliability, good
+audio performance, and to meet regulatory requirements. X5R or better ratings should be used in this
+application. Consider temperature, ripple current, and voltage overshoots when selecting decoupling capacitors.
+Also, these decoupling capacitors should be located near the PVCC and GND connections to the device in order
+to minimize series inductances.
+9.1.1.2.5 Select Bootstrap Capacitors
+Each of the outputs require bootstrap capacitors to provide gate drive for the high-side output FETs. For this
+design, use 0.22-μF, 25-V capacitors of X5R quality or better.
+Copyright © 2018, Texas Instruments Incorporated
+Submit Documentation Feedback
+25
+Product Folder Links: TPA3126D2
+
+--- PAGE 26 ---
+TPA3126D2
+SLOS942 –APRIL 2018 www.ti.com
+9.1.1.3 Application Curves
+THD+N (%)
+10
+5
+2
+1
+0.5
+0.2
+0.1
+0.05
+0.02
+0.01
+0.005
+0.002
+0.001
+Gain = 26dB
+PVCC = 24V
+TA = 25qC
+RL = 3:
+f = 20Hz
+Maximum Output Power (W)
+f = 1kHz
+f = 6KHz
+140
+130
+120
+110
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+0
+Gain = 26dB
+TA = 25qC
+RL = 3:
+THD+N=1%
+THD+N=10%
+0.01 0.1 1 10 50 100 200
+Output Power (W)
+D002
+4 6 8 10 12 14 16 18 20 22 24 26
+Supply Voltage (V)
+D004
+Figure 35. Total Harmonic Distortion + Noise (PBTL) vs
+Output Power
+Figure 36. Maximum Output Power (PBTL) vs Supply
+Voltage
+10 Power Supply Recommendations
+The TPA3126D2 device requires an external power supply, between 4.5 V and 26 V, for the analog circuitry
+(AVCC) and the power stage (PVCC) of the amplifier. Several on-chip regulators are included on the
+TPA3126D2 to generate the voltages necessary for the internal circuitry of the audio path. The voltage regulators
+which have been integrated are sized only to provide the current necessary to power the internal circuitry. The
+external pins are provided only as a connection point for off-chip bypass capacitors to filter the supply.
+Connecting external circuitry to these regulator outputs may result in reduced performance and damage to the
+device. The AVCC supply feeds internal LDO including GVDD. This LDO output are connected to external pins
+for filtering purposes, but should not be connected to external circuits. GVDD LDO output have been sized to
+provide current necessary for internal functions but not for external loading.
+10.1 Power Supply Mode
+The TPA3126D2 supports both single and dual power supply modes. For dual power supply mode application,
+when AVCC is supplied with 4.5-V power, PVCC is recommended to be lower than 20 V. When PVCC is
+supplied with power greater than 20 V, AVCC is recommended to be higher than 6 V.
+26
+Submit Documentation Feedback Copyright © 2018, Texas Instruments Incorporated
+Product Folder Links: TPA3126D2
+
+--- PAGE 27 ---
+TPA3126D2
+www.ti.com SLOS942 –APRIL 2018
+11 Layout
+11.1 Layout Guidelines
+The TPA3126D2 can be used with a small, inexpensive ferrite bead output filter in most applications. However,
+because the Class-D switching edges are fast, the layout of the printed circuit board must be planned carefully.
+The following suggestions helps to meet EMC requirements.
+• Decoupling capacitors — The high-frequency decoupling capacitors should be placed as close to the PVCC
+and AVCC terminals as possible. Large (100-μF or greater) bulk power supply decoupling capacitors should
+be placed near the TPA3126D2 on the PVCC supplies. Local, high-frequency bypass capacitors should be
+placed as close to the PVCC pins as possible. These caps can be connected to the IC GND pad directly for
+an excellent ground connection. Consider adding a small, good quality low ESR ceramic capacitor between
+220-pF and 1-nF, and a larger mid-frequency cap of value between 100-nF and 1-µF also of good quality to
+the PVCC connections at each end of the chip.
+• Minimize the current loop from each of the outputs through the ferrite bead filter and back to GND. The size
+of this current loop determines its effectiveness as an antenna.
+• Grounding — The PVCC decoupling capacitors should connect to GND. All ground should be connected at
+the IC GND, which should be used as a central ground connection or star ground for the TPA3126D2.
+• Output filter — The ferrite EMI filter (see Figure 31) should be placed as close to the output terminals as
+possible for the best EMI performance. The LC filter should be placed close to the outputs. The capacitors
+used in both the ferrite and LC filters should be grounded.
+For an example layout, see the TPA3126D2 Evaluation Module (TPA3126D2EVM) User Guide (SLOU506). Both
+the EVM user manual and the thermal pad application reports, SLMA002 and SLMA004, are available on the TI
+Web site at http://www.ti.com.
+Copyright © 2018, Texas Instruments Incorporated
+Submit Documentation Feedback
+27
+Product Folder Links: TPA3126D2
+
+--- PAGE 28 ---
+TPA3126D2
+SLOS942 –APRIL 2018 www.ti.com
+11.2 Layout Example
+Figure 37. Layout Example Top
+28
+Submit Documentation Feedback Copyright © 2018, Texas Instruments Incorporated
+Product Folder Links: TPA3126D2
+
+--- PAGE 29 ---
+TPA3126D2
+www.ti.com SLOS942 –APRIL 2018
+Layout Example (continued)
+Figure 38. Layout Example Bottom
+Copyright © 2018, Texas Instruments Incorporated
+Submit Documentation Feedback
+29
+Product Folder Links: TPA3126D2
+
+--- PAGE 30 ---
+TPA3126D2
+SLOS942 –APRIL 2018 www.ti.com
+11.3 Heat Sink Used on the EVM
+The heat sink (part number ATS-TI 10 OP-521-C1-R1) used on the EVM is an 14x25x50 mm extruded aluminum
+heat sink with three fins (see drawing below). For additional information on the heat sink, go to www.qats.com.
+50.00±0.38
+[1.969±.015]
+SINK LENGTH
+MACHINE THESE
+3 EDGES AFTER
+ANODIZATION
+0.00
+25.00
+–0.60
++.000
+.984
+–.024
+SINK HEIGHT
+3.00
+[.118]
+1.00
+[.118]
+6.35
+[.250]
+13.90±0.38
+[.547±.015]
+BASE WIDTH
+3.00
+[.118]
+0
+[.000]
+10.00
+[.394]
+19.50
+[.768]
+30.50
+[1.201]
+40.00
+[1.575]
+6.95
+[.274]
+5.00
+[.197]
+40.00
+[1.575] 2X 4-40 6.5 x
+Figure 39. EVM Heat Sink
+This size heat sink has shown to be sufficient for continuous output power. The crest factor of music and having
+airflow will lower the requirement for the heat sink size and smaller types can be used.
+30
+Submit Documentation Feedback Copyright © 2018, Texas Instruments Incorporated
+Product Folder Links: TPA3126D2
+
+--- PAGE 31 ---
+TPA3126D2
+www.ti.com SLOS942 –APRIL 2018
+12 Device and Documentation Support
+12.1 Device Support
+12.1.1 Development Support
+TPA3126D2 Evaluation Module User's Guide
+12.2 Receiving Notification of Documentation Updates
+To receive notification of documentation updates, navigate to the device product folder on ti.com. In the upper
+right corner, click on Alert me to register and receive a weekly digest of any product information that has
+changed. For change details, review the revision history included in any revised document.
+12.3 Related Documentation
+For related documentation see the following:
+• Overview of system-level protection in class-D audio amplifiers
+• Achieve Ultra-Low Idle Current With TPA3128D2
+12.4 Community Resources
+The following links connect to TI community resources. Linked contents are provided "AS IS" by the respective
+contributors. They do not constitute TI specifications and do not necessarily reflect TI's views; see TI's Terms of
+Use.
+TI E2E™ Online Community TI's Engineer-to-Engineer (E2E) Community. Created to foster collaboration
+among engineers. At e2e.ti.com, you can ask questions, share knowledge, explore ideas and help
+solve problems with fellow engineers.
+Design Support TI's Design Support Quickly find helpful E2E forums along with design support tools and
+contact information for technical support.
+12.5 Trademarks
+PowerPAD, E2E are trademarks of Texas Instruments.
+Bluetooth is a registered trademark of Bluetooth SIG, Inc.
+12.6 Electrostatic Discharge Caution
+These devices have limited built-in ESD protection. The leads should be shorted together or the device placed in conductive foam
+during storage or handling to prevent electrostatic damage to the MOS gates.
+12.7 Glossary
+SLYZ022 — TI Glossary.
+This glossary lists and explains terms, acronyms, and definitions.
+13 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most
+current data available for the designated devices. This data is subject to change without notice and revision of
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+Copyright © 2018, Texas Instruments Incorporated
+Submit Documentation Feedback
+31
+Product Folder Links: TPA3126D2
+
+--- PAGE 32 ---
+PACKAGE OPTION ADDENDUM
+www.ti.com 10-Nov-2025
+PACKAGING INFORMATION
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+TPA3126D2DAD Active Production HTSSOP (DAD) | 32 46 | TUBE Yes NIPDAU Level-3-260C-168 HR -40 to 85 TPA
+3126
+D2
+TPA3126D2DAD.A Active Production HTSSOP (DAD) | 32 46 | TUBE Yes NIPDAU Level-3-260C-168 HR -40 to 85 TPA
+3126
+D2
+TPA3126D2DADR Active Production HTSSOP (DAD) | 32 2000 | LARGE T&R Yes NIPDAU Level-3-260C-168 HR -40 to 85 TPA
+3126
+D2
+TPA3126D2DADR.A Active Production HTSSOP (DAD) | 32 2000 | LARGE T&R Yes NIPDAU Level-3-260C-168 HR -40 to 85 TPA
+3126
+D2
+(1) Status: For more details on status, see our product life cycle.
+(2) Material type: When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+(3) RoHS values: Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+(4) Lead finish/Ball material: column width.
+Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+(5) MSL rating/Peak reflow: The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+(6) Part marking: There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+Addendum-Page 1
+
+--- PAGE 33 ---
+PACKAGE OPTION ADDENDUM
+www.ti.com 10-Nov-2025
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+Addendum-Page 2
+
+--- PAGE 34 ---
+PACKAGE MATERIALS INFORMATION
+www.ti.com 10-Aug-2026
+TAPE AND REEL INFORMATION
+REEL DIMENSIONS
+TAPE DIMENSIONS
+K0 P1
+B0 W
+Reel
+Diameter
+Cavity
+A0
+A0
+Dimension designed to accommodate the component width
+B0
+Dimension designed to accommodate the component length
+K0
+Dimension designed to accommodate the component thickness
+W
+Overall width of the carrier tape
+P1
+Pitch between successive cavity centers
+Reel Width (W1)
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Sprocket Holes
+Q1 Q2 Q1
+Q2
+Q3 Q4 Q3
+Q4 User Direction of Feed
+Pocket Quadrants
+*All dimensions are nominal
+Device Package
+Type
+Package
+Drawing
+Pins SPQ TPA3126D2DADR HTSSOP DAD 32 2000 Reel
+Diameter
+(mm)
+330.0 Reel
+Width
+W1 (mm)
+24.4 A0
+(mm)
+8.6 B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+11.5 1.6 12.0 24.0 Q1
+Pack Materials-Page 1
+
+--- PAGE 35 ---
+PACKAGE MATERIALS INFORMATION
+www.ti.com 10-Aug-2026
+TAPE AND REEL BOX DIMENSIONS
+Width (mm)
+H
+W
+L
+*All dimensions are nominal
+Device Package Type Package Drawing Pins SPQ Length (mm) Width (mm) Height (mm)
+TPA3126D2DADR HTSSOP DAD 32 2000 350.0 350.0 43.0
+Pack Materials-Page 2
+
+--- PAGE 36 ---
+PACKAGE MATERIALS INFORMATION
+www.ti.com 10-Aug-2026
+TUBE
+T - Tube
+height
+L - Tube length
+W - Tube
+width
+B - Alignment groove width
+*All dimensions are nominal
+Device Package Name Package Type Pins SPQ L (mm) W (mm) T (µm) B (mm)
+TPA3126D2DAD DAD HTSSOP 32 46 530 11.89 3600 4.9
+TPA3126D2DAD.A DAD HTSSOP 32 46 530 11.89 3600 4.9
+Pack Materials-Page 3
+
+--- PAGE 37 ---
+
+
+--- PAGE 38 ---
+DAD0032A
+PowerPAD PACKAGE OUTLINE
+TM
+TSSOP - 1.15 mm max height
+SCALE 1.600
+PLASTIC SMALL OUTLINE
+C
+A
+8.3
+7.9 TYP
+PIN 1 ID AREA
+SEATING PLANE
+0.1 C
+30X 0.65
+1 32
+EXPOSED
+THERMAL PAD
+11.1
+10.9
+NOTE 3
+4.36
+3.26
+2X
+9.75
+16
+17
+32X 0.30
+0.19
+4.11
+3.31
+B 6.2
+6.0
+0.1 C A B
+SEE DETAIL A
+(0.15) TYP
+0.25
+GAGE PLANE
+0 - 8
+1.15
+1.00
+0.75
+0.50
+0.15
+0.05
+DETAIL A
+TYPICAL
+4222646/B 02/2020
+PowerPAD is a trademark of Texas Instruments.
+NOTES:
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+exceed 0.15 mm per side.
+4. Reference JEDEC registration MO-153.
+www.ti.com
+
+--- PAGE 39 ---
+DAD0032A
+EXAMPLE BOARD LAYOUT
+PowerPAD TM
+TSSOP - 1.15 mm max height
+PLASTIC SMALL OUTLINE
+32X (1.5)
+32X (0.45)
+SEE DETAILS
+SYMM
+1
+32
+30X (0.65)
+SYMM
+(R0.05) TYP
+16 17
+(7.5)
+LAND PATTERN EXAMPLE
+SCALE:8X
+SOLDER MASK
+OPENING
+METAL
+SOLDER MASK METAL UNDER
+OPENING
+SOLDER MASK
+0.05 MAX
+AROUND
+NON SOLDER MASK
+DEFINED
+0.05 MIN
+AROUND
+SOLDER MASK
+DEFINED
+SOLDER MASK DETAILS
+NOT TO SCALE
+4222646/B 02/2020
+NOTES: (continued)
+5. Publication IPC-7351 may have alternate designs.
+6. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+www.ti.com
+
+--- PAGE 40 ---
+DAD0032A
+PowerPAD EXAMPLE STENCIL DESIGN
+TM
+TSSOP - 1.15 mm max height
+PLASTIC SMALL OUTLINE
+32X (1.5)
+SYMM
+1
+32
+32X (0.45)
+30X (0.65)
+SYMM
+(R0.05) TYP
+16 17
+(7.5)
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+SCALE:8X
+4222646/B 02/2020
+NOTES: (continued)
+7. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+design recommendations.
+8. Board assembly site may have different recommendations for stencil design.
+www.ti.com
+
+--- PAGE 41 ---
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS”
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025

@@ -1,0 +1,213 @@
+{
+  "board_sha256": "f55b97839a3e0499e077eaa92f60fd1be3d07afef4eeeb04d4c15ca69b5df641",
+  "U1_origin_mm": [
+    148.6875,
+    115.223
+  ],
+  "sink_bounds_mm": [
+    138.6875,
+    106.223,
+    158.6875,
+    124.223
+  ],
+  "guide_bounds_mm": [
+    136.6875,
+    104.223,
+    160.6875,
+    126.223
+  ],
+  "assumptions": "Heatsink centred on U1, 20 mm along X, 18 mm along Y, flat underside confirmed by user. Body bounds use saved F.Fab geometry, not a measured 3D model.",
+  "nearby_components": [
+    {
+      "reference": "C12",
+      "value": "2u2 / 10V",
+      "layer": "F.Cu",
+      "body_bounds_mm": [
+        126.615772,
+        126.756,
+        128.615772,
+        128.006
+      ],
+      "min_plan_gap_to_sink_mm": 10.3854,
+      "body_overlaps_sink": false
+    },
+    {
+      "reference": "C27",
+      "value": "220nF",
+      "layer": "F.Cu",
+      "body_bounds_mm": [
+        154.702,
+        118.247,
+        156.702,
+        119.497
+      ],
+      "min_plan_gap_to_sink_mm": 0.0,
+      "body_overlaps_sink": true
+    },
+    {
+      "reference": "L2",
+      "value": "2 x 10u / 3A5",
+      "layer": "F.Cu",
+      "body_bounds_mm": [
+        166.474,
+        109.485,
+        174.274,
+        118.08500000000001
+      ],
+      "min_plan_gap_to_sink_mm": 7.7865,
+      "body_overlaps_sink": false
+    },
+    {
+      "reference": "C19",
+      "value": "2n7 C0G",
+      "layer": "F.Cu",
+      "body_bounds_mm": [
+        126.615772,
+        118.553,
+        128.615772,
+        119.803
+      ],
+      "min_plan_gap_to_sink_mm": 10.0717,
+      "body_overlaps_sink": false
+    },
+    {
+      "reference": "R2",
+      "value": "470R",
+      "layer": "F.Cu",
+      "body_bounds_mm": [
+        126.615772,
+        122.617,
+        128.615772,
+        123.867
+      ],
+      "min_plan_gap_to_sink_mm": 10.0717,
+      "body_overlaps_sink": false
+    },
+    {
+      "reference": "U1",
+      "value": "TPA3126D2DADR",
+      "layer": "F.Cu",
+      "body_bounds_mm": [
+        145.6375,
+        109.723,
+        151.7375,
+        120.723
+      ],
+      "min_plan_gap_to_sink_mm": 0.0,
+      "body_overlaps_sink": true
+    },
+    {
+      "reference": "R3",
+      "value": "470R",
+      "layer": "F.Cu",
+      "body_bounds_mm": [
+        126.615772,
+        120.585,
+        128.615772,
+        121.835
+      ],
+      "min_plan_gap_to_sink_mm": 10.0717,
+      "body_overlaps_sink": false
+    },
+    {
+      "reference": "C16",
+      "value": "2n7 C0G",
+      "layer": "F.Cu",
+      "body_bounds_mm": [
+        126.615772,
+        124.649,
+        128.615772,
+        125.899
+      ],
+      "min_plan_gap_to_sink_mm": 10.0807,
+      "body_overlaps_sink": false
+    },
+    {
+      "reference": "C24",
+      "value": "220nF",
+      "layer": "F.Cu",
+      "body_bounds_mm": [
+        154.702,
+        110.119,
+        156.702,
+        111.369
+      ],
+      "min_plan_gap_to_sink_mm": 0.0,
+      "body_overlaps_sink": true
+    },
+    {
+      "reference": "L3",
+      "value": "2 x 10u / 3A5",
+      "layer": "F.Cu",
+      "body_bounds_mm": [
+        166.474,
+        120.407,
+        174.274,
+        129.007
+      ],
+      "min_plan_gap_to_sink_mm": 7.7865,
+      "body_overlaps_sink": false
+    },
+    {
+      "reference": "C10",
+      "value": "22u / 25V",
+      "layer": "F.Cu",
+      "body_bounds_mm": [
+        125.623772,
+        107.530888,
+        130.623772,
+        112.530888
+      ],
+      "min_plan_gap_to_sink_mm": 8.0637,
+      "body_overlaps_sink": false
+    },
+    {
+      "reference": "C25",
+      "value": "220nF",
+      "layer": "F.Cu",
+      "body_bounds_mm": [
+        154.702,
+        113.167,
+        156.702,
+        114.417
+      ],
+      "min_plan_gap_to_sink_mm": 0.0,
+      "body_overlaps_sink": true
+    },
+    {
+      "reference": "C26",
+      "value": "220nF",
+      "layer": "F.Cu",
+      "body_bounds_mm": [
+        154.702,
+        115.453,
+        156.702,
+        116.703
+      ],
+      "min_plan_gap_to_sink_mm": 0.0,
+      "body_overlaps_sink": true
+    }
+  ],
+  "proposed_offset_mount": {
+    "offset_from_U1_centre_mm": [
+      -5,
+      0
+    ],
+    "heatsink_centre_mm": [
+      143.6875,
+      115.223
+    ],
+    "heatsink_body_bounds_mm": [
+      133.6875,
+      106.223,
+      153.6875,
+      124.223
+    ],
+    "nominal_gap_to_C24_C27_bodies_mm": 1.0144999999999982,
+    "gap_to_C10_saved_FFab_mm": 3.0637279999999976,
+    "gap_to_L2_L3_saved_FFab_mm": 12.78649999999999,
+    "full_maximum_top_pad_envelope_covered": true,
+    "not_applied_to_PCB": true,
+    "note": "Manual mounting proposal; the 2 mm assembly guide overlaps the capacitor region. Actual body clearance is about 1 mm. Check placement/size tolerances and tilt/retention."
+  }
+}

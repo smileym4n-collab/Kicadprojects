@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-22",
+  "all_unrelated_net_memberships_preserved": true,
+  "gpio": "GPIO34 / ADC1_CH6 / module pin6",
+  "pot_connector": {
+    "2": "GND",
+    "3": "wiper via R39",
+    "4": "3V3-ESP"
+  },
+  "components": [
+    {
+      "reference": "R39",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder",
+      "mpn": "RK73B2ATTD103J",
+      "inventory_id": "194"
+    },
+    {
+      "reference": "R40",
+      "value": "22k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder",
+      "mpn": "RR1220P-223-D",
+      "inventory_id": "511"
+    },
+    {
+      "reference": "C58",
+      "value": "100n / 50V",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder",
+      "mpn": "C1206C104K5RACTU",
+      "inventory_id": "157"
+    }
+  ],
+  "ADC_nominal_fullscale_V": 2.26875,
+  "ADC_worst_high_V_reference1p5pct_R39_5pct_R40_0p5pct": 2.3428486238532105,
+  "GPIO_R40_openwiper_RC_seconds": 0.0021999999999999997,
+  "firmware": "ADC1 highest attenuation; average/filter; calibrate endpoints; pot low/disconnected wiper = mute; control PCM5122 master volume",
+  "ERC_errors": 0,
+  "ERC_warnings": 31,
+  "ERC_warning_change": "Removed isolated VOL-ADC label warning; identical existing endpoint_off_grid warnings remain",
+  "protected_files_unchanged": {
+    "Power.kicad_sch": true,
+    "DAC.kicad_sch": true,
+    "TPA3126.kicad_sch": true,
+    "Amp.kicad_sch": true,
+    "TPA3126.kicad_pcb": true,
+    "TPA3126.kicad_pro": true,
+    "TPA3126.kicad_prl": true
+  }
+}
