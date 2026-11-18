@@ -236,7 +236,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:Conn_01x08_Socket"
+		(symbol "Connector:Conn_01x10_Socket"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -247,7 +247,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at 0 10.16 0)
+				(at 0 12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -256,8 +256,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x08_Socket"
-				(at 0 -12.7 0)
+			(property "Value" "Conn_01x10_Socket"
+				(at 0 -15.24 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -288,7 +288,7 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x08, script generated"
+			(property "Description" "Generic connector, single row, 01x10, script generated"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -331,7 +331,19 @@
 					)
 				)
 			)
-			(symbol "Conn_01x08_Socket_1_1"
+			(symbol "Conn_01x10_Socket_1_1"
+				(polyline
+					(pts
+						(xy -1.27 10.16) (xy -0.508 10.16)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(polyline
 					(pts
 						(xy -1.27 7.62) (xy -0.508 7.62)
@@ -420,6 +432,30 @@
 					(pts
 						(xy -1.27 -10.16) (xy -0.508 -10.16)
 					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -12.7) (xy -0.508 -12.7)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 9.652)
+					(mid -0.5058 10.16)
+					(end 0 10.668)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -524,8 +560,20 @@
 						(type none)
 					)
 				)
+				(arc
+					(start 0 -13.208)
+					(mid -0.5058 -12.7)
+					(end 0 -12.192)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(pin passive line
-					(at -5.08 7.62 0)
+					(at -5.08 10.16 0)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -543,7 +591,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 5.08 0)
+					(at -5.08 7.62 0)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -561,7 +609,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at -5.08 5.08 0)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -579,7 +627,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -5.08 2.54 0)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -597,7 +645,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -2.54 0)
+					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_5"
 						(effects
@@ -615,7 +663,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -5.08 0)
+					(at -5.08 -2.54 0)
 					(length 3.81)
 					(name "Pin_6"
 						(effects
@@ -633,7 +681,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -7.62 0)
+					(at -5.08 -5.08 0)
 					(length 3.81)
 					(name "Pin_7"
 						(effects
@@ -651,7 +699,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -10.16 0)
+					(at -5.08 -7.62 0)
 					(length 3.81)
 					(name "Pin_8"
 						(effects
@@ -661,6 +709,42 @@
 						)
 					)
 					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -10.16 0)
+					(length 3.81)
+					(name "Pin_9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -12.7 0)
+					(length 3.81)
+					(name "Pin_10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2328,6 +2412,12 @@
 		(uuid "286d499c-ec95-4286-8c6c-db4518d9652d")
 	)
 	(junction
+		(at 46.99 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3aad8133-2644-4d51-918a-adc92168a55c")
+	)
+	(junction
 		(at 186.69 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2709,6 +2799,16 @@
 	)
 	(wire
 		(pts
+			(xy 40.64 69.85) (xy 48.26 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "324edc38-de4a-4c6e-9a95-c219283690ca")
+	)
+	(wire
+		(pts
 			(xy 166.37 82.55) (xy 186.69 82.55)
 		)
 		(stroke
@@ -2876,6 +2976,16 @@
 			(type default)
 		)
 		(uuid "5c71ec3a-5008-478f-8cfe-5b2762b2a424")
+	)
+	(wire
+		(pts
+			(xy 46.99 72.39) (xy 46.99 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d908584-f5a1-4ec5-a6ef-bcdec3677d2b")
 	)
 	(wire
 		(pts
@@ -3539,6 +3649,16 @@
 	)
 	(wire
 		(pts
+			(xy 40.64 72.39) (xy 46.99 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6f710ca-50b7-4782-9767-67e1c2fa8cc0")
+	)
+	(wire
+		(pts
 			(xy 166.37 39.37) (xy 186.69 39.37)
 		)
 		(stroke
@@ -3974,6 +4094,17 @@
 			(justify right)
 		)
 		(uuid "6092d117-1427-459c-9748-6c8946ea119a")
+	)
+	(hierarchical_label "PWR_SW"
+		(shape output)
+		(at 48.26 69.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7907719f-4d11-463f-b79b-c62b1ffc38f0")
 	)
 	(hierarchical_label "BCK"
 		(shape output)
@@ -5514,6 +5645,110 @@
 			(project "TPA3126"
 				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3/4ba27b83-2308-490d-84d6-f80db0a3c95c"
 					(reference "#PWR501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x10_Socket")
+		(at 35.56 82.55 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4b102225-0987-4875-b18a-d693b98733b8")
+		(property "Reference" "J1"
+			(at 36.195 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SYSTEM CONNECTOR"
+			(at 36.195 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_B10B-XH-A_1x10_P2.50mm_Vertical"
+			(at 35.56 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 35.56 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x10, script generated"
+			(at 35.56 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "d1960d12-6710-43d6-80ec-9a44354e9f98")
+		)
+		(pin "4"
+			(uuid "54bf7d8e-874e-4f3d-a64e-60063d8674e0")
+		)
+		(pin "5"
+			(uuid "d98ad3e3-1ff1-4786-991d-f8d443727ecc")
+		)
+		(pin "1"
+			(uuid "a1a84f99-2e49-4df5-83b6-f358581e981a")
+		)
+		(pin "7"
+			(uuid "82a0feb0-e4f5-4365-a5a9-f34dded5a6e3")
+		)
+		(pin "9"
+			(uuid "3549da5b-c92a-4c7e-9f07-93ec2f2affaf")
+		)
+		(pin "10"
+			(uuid "b54b4086-e746-49d4-9025-534b7478f284")
+		)
+		(pin "6"
+			(uuid "7463078f-9c7d-478f-8617-fb97f2d133fe")
+		)
+		(pin "2"
+			(uuid "ddb01a42-6c2e-465d-88ae-876246e5be8d")
+		)
+		(pin "8"
+			(uuid "9069d612-56b8-45c7-82ba-54fdacf0081d")
+		)
+		(instances
+			(project "TPA3126"
+				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3/4ba27b83-2308-490d-84d6-f80db0a3c95c"
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -7198,148 +7433,6 @@
 			(project "TPA3126"
 				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3/4ba27b83-2308-490d-84d6-f80db0a3c95c"
 					(reference "R33")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x08_Socket")
-		(at 35.56 85.09 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b0257e30-c696-4ef1-a84e-be2401df066d")
-		(property "Reference" "J2"
-			(at 36.195 69.85 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SYSTEM CONNECTOR"
-			(at 36.195 72.39 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_JST:JST_XH_B8B-XH-A_1x08_P2.50mm_Vertical"
-			(at 35.56 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
-			(at 35.56 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x08, script generated"
-			(at 35.56 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "B8B-XH-A(LF)(SN)"
-			(at 35.56 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" "JST"
-			(at 35.56 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" "B8B-XH-A(LF)(SN)"
-			(at 35.56 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Assembly_Note" "8-position top-entry XH, 2.50 mm pitch, matching retained footprint. Mating housing XHP-8 with suitable SXH contacts. No MCP stock match for B8B-XH-A."
-			(at 35.56 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "8"
-			(uuid "a628b9f8-9c5f-462c-a1f9-2c874da892af")
-		)
-		(pin "1"
-			(uuid "256386e1-333b-49e5-85d7-4a569e0e1635")
-		)
-		(pin "2"
-			(uuid "42ea48fe-8ecf-42cf-991a-2848cbcb08e9")
-		)
-		(pin "3"
-			(uuid "d17b81a6-d41b-4f3d-95e4-e18e1aed8d7d")
-		)
-		(pin "4"
-			(uuid "94861835-51cf-40b6-931b-58f8eeea9535")
-		)
-		(pin "5"
-			(uuid "aba31042-6999-4a16-ae48-96a5fbc34070")
-		)
-		(pin "6"
-			(uuid "16f8d87f-ed9a-4940-8266-08ae7a970950")
-		)
-		(pin "7"
-			(uuid "e3431278-a2a0-4e9a-be7a-73aeff61bc88")
-		)
-		(instances
-			(project "TPA3126"
-				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3/4ba27b83-2308-490d-84d6-f80db0a3c95c"
-					(reference "J2")
 					(unit 1)
 				)
 			)
