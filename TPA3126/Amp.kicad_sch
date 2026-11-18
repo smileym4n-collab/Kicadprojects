@@ -6,9 +6,9 @@
 	(paper "A3")
 	(title_block
 		(title "TPA3126D2 - stereo BTL / C21 bypass")
-		(date "2026-10-23")
-		(rev "Pre-order B")
-		(comment 1 "Schematic completion only - PCB unchanged")
+		(date "2026-11-18")
+		(rev "Pre-order C")
+		(comment 1 "Rev C: PLIMIT to GVDD, switched 19 V input, 5.0 V pre-regulator")
 	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x02"
@@ -1901,7 +1901,7 @@
 		)
 		(uuid "ca3ce5ca-48bd-4232-95db-3eeab68a11bd")
 	)
-	(text "15 W / CHANNEL TARGET AT 16 V"
+	(text "15 W / CHANNEL TARGET (DSP-LIMITED), PVDD UP TO 19 V"
 		(exclude_from_sim no)
 		(at 119.38 200.66 0)
 		(effects
@@ -1934,7 +1934,7 @@
 		)
 		(uuid "e04d687e-88b1-4459-b6f7-7e1a52793e97")
 	)
-	(text "PLIMIT: 3V3-ESP -> R19 10k / C29 1u RC; no lower divider resistor.\nTI peak-rail model ~19W unclipped / 4 ohm nominal.\nHeadroom for 15W; not an exact 15W protection limit.\nInput pad 1k2 / 1k5 plus DAC 470R -> 0.466 gain.\n15W / 4 ohm = 7.75Vrms: calibrate DSP per channel.\nPower derates below 16V; measure clipping / thermals."
+	(text "PLIMIT tied to GVDD (U1 pins 6-7): no power limit, per TI.\nOutput level is set by the DSP, not by PLIMIT.\nInput pad 1k2 / 1k5 plus DAC 470R -> 0.466 gain.\n15W / 4 ohm = 7.75Vrms: calibrate DSP per channel.\nFull-scale DAC drive needs ~16 V PVDD to avoid clipping; measure clipping / thermals."
 		(exclude_from_sim no)
 		(at 119.38 207.01 0)
 		(effects

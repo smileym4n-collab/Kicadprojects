@@ -5,10 +5,10 @@
 	(uuid "6f1f4c2e-5b1a-4d2e-9c61-7a0e3b5d9a10")
 	(paper "A3")
 	(title_block
-		(title "Power - protected input, 4.30 V, 3.3 V")
-		(date "2026-10-23")
-		(rev "Pre-order B")
-		(comment 1 "Schematic completion only - PCB unchanged")
+		(title "Power - switched protected input, 5.0 V, 3.3 V")
+		(date "2026-11-18")
+		(rev "Pre-order C")
+		(comment 1 "Rev C: PLIMIT to GVDD, switched 19 V input, 5.0 V pre-regulator")
 	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x02_Socket"
@@ -2662,7 +2662,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "SOFT START (C2 = Css)\nC2 feeds back VOUT to GATE through D3, so VOUT ramps at a fixed rate:\n  dV/dt ~ [(VIN - Vp)/R2 - Vp/R1] / C2,  Vp ~ 2.5-3 V (DMP4025LSD plateau, check on scope)\n  Inrush ~ C_load x dV/dt.  Ramp time ~ VIN / (dV/dt).\nWith R2 47k, R1 100k, C2 220nF into 680 uF:\n  12 V: ~0.8 V/ms, ~15 ms, ~0.55 A    19 V: ~1.5 V/ms, ~13 ms, ~1.0 A\nC2 100nF = ~2x faster/higher inrush; 470nF = ~2x slower/lower.\nD3 blocks the Miller path at turn-off (fast off, ~1 ms); R4 resets C2 (~0.2 s)."
+	(text "SOFT START (C43 = Css)\nC43 feeds back PVDD to GATE through D5, so PVDD ramps at a fixed rate:\n  dV/dt ~ [(VIN - Vp)/R19 - Vp/R36] / C43,  Vp ~ 2.5-3 V (DMP4025LSD plateau, check on scope)\n  Inrush ~ C_load x dV/dt.  Ramp time ~ VIN / (dV/dt).\nWith R19 47k, R36 100k, C43 220nF into ~680 uF on PVDD:\n  12 V: ~0.8 V/ms, ~15 ms, ~0.55 A    19 V: ~1.5 V/ms, ~13 ms, ~1.0 A\nC43 100nF = ~2x faster/higher inrush; 470nF = ~2x slower/lower.\nD5 blocks the Miller path at turn-off (fast off, ~1 ms); R37 resets C43 (~0.2 s)."
 		(exclude_from_sim no)
 		(at 303.022 49.53 0)
 		(effects
@@ -2684,7 +2684,7 @@
 		)
 		(uuid "03fa99a8-6c7d-4421-8ff6-20b239568650")
 	)
-	(text "LAYOUT\nQ1: both drains (pins 5-8) carry full current - use copper pours.\nPins 1 and 3 (S1, S2) join on the PCB as VS.\nD2 close to Q1, short GND return. C2/D3/R4 close to Q1 pin 4."
+	(text "LAYOUT\nQ2: both drain pairs (pins 5-8) carry full current - use copper pours.\nPins 1 and 3 (S1, S2) join on the PCB as VS.\nD4 close to Q2, short GND return. C43/D5/R37 close to Q2 pin 4."
 		(exclude_from_sim no)
 		(at 304.546 71.628 0)
 		(effects
@@ -2706,7 +2706,7 @@
 		)
 		(uuid "3a91b976-5c29-450b-801d-2d918cfac343")
 	)
-	(text "PROTECTION\nReverse input: Q1A body diode blocks; GATE ends up positive so both FETs stay off.\nD2 sits on VS, behind Q1A, so it never sees reverse polarity and F1 does not blow.\nSurge: Q1A body diode passes it to VS where D2 clamps (32.4 V at full pulse current).\nWrong adapter (> 22 V) will overload D2 and blow F1 - this circuit has no OV cut-off.\nQ1 VDS 40 V; VGS limited to 10 V by D1."
+	(text "PROTECTION\nReverse input: Q2 unit A body diode blocks; GATE ends up positive so both FETs stay off.\nD4 sits on VS, behind Q2 unit A, so it never sees reverse polarity and F1 does not blow.\nSurge: Q2 unit A body diode passes it to VS where D4 clamps (32.4 V at full pulse current).\nWrong adapter (> 22 V) will overload D4 and blow F1 - this circuit has no OV cut-off.\nQ2 VDS 40 V; VGS limited to 10 V by D3."
 		(exclude_from_sim no)
 		(at 302.768 32.258 0)
 		(effects
@@ -2728,7 +2728,7 @@
 		)
 		(uuid "6296d29f-8e7a-4f95-9cd7-63e322577736")
 	)
-	(text "U3 retained: 3 A, 500 kHz forced PWM. 0.6 x (1 + 100k/16k2) = 4.304 V.\nL1 6u8: ripple ~0.93 A p-p at 16 V, nominal 500 kHz. Local ceramics at VIN/SW.\nC45 10u / 50V X5R: ~3u typical at 16V; estimated VIN ripple ~0.13Vpp at 1A output.\nFeeds both 3.3 V LDOs. Do not substitute the PFM LMR51430X version.\nVIN_SENSE is advisory: mute/shut down early during a falling input; verify hold-up on bench."
+	(text "U3: 3 A, 500 kHz forced PWM (LMR51430XF). 0.6 x (1 + 100k/13k7) = 4.98 V.\nR24 is 13k7, changed from 16k2 (4.30 V) because U3 did not start with 16k2.\nL1 6u8: ripple ~1.0 A p-p at 16-19 V, nominal 500 kHz. Local ceramics at VIN/SW.\nC45 10u / 50V X5R: ~3u effective at 16 V, less at 19 V; check VIN ripple on bench.\nFeeds both 3.3 V LDOs. Do not substitute the PFM LMR51430X version.\nVIN_SENSE is advisory: mute/shut down early during a falling input; verify hold-up on bench."
 		(exclude_from_sim no)
 		(at 250.19 203.2 0)
 		(effects
@@ -2739,7 +2739,7 @@
 		)
 		(uuid "b40fd449-2b08-454a-8c41-97a55ebe8d49")
 	)
-	(text "19 V max in (SMBJ20A). Q1 = DMP4025LSD dual P-FET: unit A blocks reverse input, unit B is the switch.\nClose J2 (or bridge JP1) to turn on: R2 pulls GATE low, both FETs turn on, D1 limits |VGS| to 10 V.\nSwitch current < 0.5 mA. Open: R1 pulls GATE to VS and both FETs turn off."
+	(text "19 V max in (SMBJ20A). Q2 = DMP4025LSD dual P-FET: unit A blocks reverse input, unit B is the switch.\nPWR_SW (system connector J1 pin 10) to GND turns on: R19 pulls GATE low, both FETs turn on, D3 limits |VGS| to 10 V.\nSwitch current < 0.5 mA; PWR_SW sits near VIN when open. Open: R36 pulls GATE to VS and both FETs turn off."
 		(exclude_from_sim no)
 		(at 302.514 23.622 0)
 		(effects
@@ -2750,7 +2750,7 @@
 		)
 		(uuid "ebfb2e4a-4b41-4a74-8dd9-0830129e5279")
 	)
-	(text "TLV1117LV33: 1 A; tab = output. Retained topology, reduced input voltage.\nAt 0.25 A: ~0.25 W; at 0.5 A: ~0.50 W; at 1 A: ~1.00 W.\nUse copper heat spreading. C52 10u ceramic plus C55 22u at ESP32.\nTPS7A2033 on DAC sheet supplies only the DAC."
+	(text "TLV1117LV33: 1 A; tab = output. Input 5.0 V from U3 (1.7 V drop).\nAt 0.25 A: ~0.43 W; at 0.5 A: ~0.85 W; at 1 A: ~1.7 W.\nUse copper heat spreading. C52 10u ceramic plus C55 22u at ESP32.\nTPS7A2033 on DAC sheet supplies only the DAC."
 		(exclude_from_sim no)
 		(at 250.19 224.79 0)
 		(effects
@@ -4062,7 +4062,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Name" "Yageo"
+		(property "Manufacturer_Name" ""
 			(at 331.47 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -4073,7 +4073,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Part_Number" "RC0603FR-07100KL"
+		(property "Manufacturer_Part_Number" ""
 			(at 331.47 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -4084,7 +4084,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL"
+		(property "MPN" ""
 			(at 331.47 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -4095,7 +4095,7 @@
 				)
 			)
 		)
-		(property "Assembly_Note" "100k / 1%, 1608; owned 2012 resistors do not match retained footprint."
+		(property "Assembly_Note" "100k 1%, 0805. Buck feedback top. MPN to be chosen (previous MPN was an 0603 part)."
 			(at 331.47 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -4264,7 +4264,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Name" "Yageo"
+		(property "Manufacturer_Name" ""
 			(at 331.47 195.58 0)
 			(hide yes)
 			(show_name no)
@@ -4275,7 +4275,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Part_Number" "RC0603FR-0716K2L"
+		(property "Manufacturer_Part_Number" ""
 			(at 331.47 195.58 0)
 			(hide yes)
 			(show_name no)
@@ -4286,7 +4286,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-0716K2L"
+		(property "MPN" ""
 			(at 146.05 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -4297,7 +4297,7 @@
 				)
 			)
 		)
-		(property "Assembly_Note" "16k2 / 1%, 1608; no matching MCP record."
+		(property "Assembly_Note" "13k7 1%, 0805. Buck feedback bottom: 0.6 x (1 + 100k/13k7) = 4.98 V. Changed from 16k2 because U3 did not start with 16k2. MPN to be chosen."
 			(at 331.47 195.58 0)
 			(hide yes)
 			(show_name no)
@@ -4389,7 +4389,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Name" "Yageo"
+		(property "Manufacturer_Name" ""
 			(at 270.51 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -4400,7 +4400,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Part_Number" "RC0603FR-07100KL"
+		(property "Manufacturer_Part_Number" ""
 			(at 270.51 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -4411,7 +4411,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL"
+		(property "MPN" ""
 			(at 270.51 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -4422,7 +4422,7 @@
 				)
 			)
 		)
-		(property "Assembly_Note" "100k / 1%, 1608; owned 2012 resistors do not match retained footprint."
+		(property "Assembly_Note" "100k 1%, 0805. VIN_SENSE divider top (with R28 10k = /11). MPN to be chosen (previous MPN was an 0603 part)."
 			(at 270.51 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -6089,7 +6089,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Name" "Multicomp Pro"
+		(property "Manufacturer_Name" ""
 			(at 176.53 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -6100,7 +6100,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Part_Number" "MC0805B104K500CT"
+		(property "Manufacturer_Part_Number" ""
 			(at 176.53 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -6111,7 +6111,7 @@
 				)
 			)
 		)
-		(property "MPN" "MC0805B104K500CT"
+		(property "MPN" ""
 			(at 176.53 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -6122,7 +6122,7 @@
 				)
 			)
 		)
-		(property "Assembly_Note" "100 nF 50 V X7R input decoupling at VS."
+		(property "Assembly_Note" "100 nF 50 V X7R, 1206. Input decoupling at VS. MPN to be chosen (previous MPN was an 0805 part)."
 			(at 176.53 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -7668,7 +7668,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Name" "Multicomp Pro"
+		(property "Manufacturer_Name" ""
 			(at 309.88 179.07 90)
 			(hide yes)
 			(show_name no)
@@ -7679,7 +7679,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Part_Number" "MC0603B104K500CT"
+		(property "Manufacturer_Part_Number" ""
 			(at 309.88 179.07 90)
 			(hide yes)
 			(show_name no)
@@ -7690,7 +7690,7 @@
 				)
 			)
 		)
-		(property "MPN" "MC0603B104K500CT"
+		(property "MPN" ""
 			(at 309.88 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -7701,7 +7701,7 @@
 				)
 			)
 		)
-		(property "Inventory_ID" "698"
+		(property "Inventory_ID" ""
 			(at 309.88 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -7712,7 +7712,7 @@
 				)
 			)
 		)
-		(property "Assembly_Note" "100n / 50 V X7R, 1608 metric; exact inventory record has zero."
+		(property "Assembly_Note" "100 nF 50 V X7R, 1206. Buck bootstrap. MPN to be chosen (previous MPN was an 0603 part)."
 			(at 309.88 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -7958,7 +7958,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Name" "Multicomp Pro"
+		(property "Manufacturer_Name" ""
 			(at 262.89 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -7969,7 +7969,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Part_Number" "MC0603B104K500CT"
+		(property "Manufacturer_Part_Number" ""
 			(at 262.89 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -7980,7 +7980,7 @@
 				)
 			)
 		)
-		(property "MPN" "MC0603B104K500CT"
+		(property "MPN" ""
 			(at 262.89 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -7991,7 +7991,7 @@
 				)
 			)
 		)
-		(property "Inventory_ID" "698"
+		(property "Inventory_ID" ""
 			(at 262.89 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -8002,7 +8002,7 @@
 				)
 			)
 		)
-		(property "Assembly_Note" "100n / 50 V X7R, 1608 metric; exact inventory record has zero."
+		(property "Assembly_Note" "100 nF 50 V X7R, 1206. MPN to be chosen (previous MPN was an 0603 part)."
 			(at 262.89 187.96 0)
 			(hide yes)
 			(show_name no)

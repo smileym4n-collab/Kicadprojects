@@ -6,9 +6,9 @@
 	(paper "A4")
 	(title_block
 		(title "ESP32-WROVER-IE - retained firmware GPIOs")
-		(date "2026-10-23")
-		(rev "Pre-order B")
-		(comment 1 "Schematic completion only - PCB unchanged")
+		(date "2026-11-18")
+		(rev "Pre-order C")
+		(comment 1 "Rev C: PLIMIT to GVDD, switched 19 V input, 5.0 V pre-regulator")
 	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x03_Socket"
@@ -2371,7 +2371,7 @@
 		)
 		(uuid "949741fb-b866-4ed5-98eb-144d63195807")
 	)
-	(text "VOLUME POT: J2 pins 1 or 5=GND, 3=wiper, 4=3V3. Use 10k linear.\nR39/R41 scale full travel to ~2.27V; C58 filters ADC noise.\nGPIO34 = ADC1_CH6. Firmware: highest ADC attenuation, average readings;\ncalibrate endpoints / taper and map low or disconnected wiper to mute."
+	(text "VOLUME POT: J1 pins 1 or 5=GND, 3=wiper, 4=3V3. Use 10k linear.\nR39/R41 scale full travel to ~2.27V; C58 filters ADC noise.\nGPIO34 = ADC1_CH6. Firmware: highest ADC attenuation, average readings;\ncalibrate endpoints / taper and map low or disconnected wiper to mute."
 		(exclude_from_sim no)
 		(at 25.4 169.545 0)
 		(effects
@@ -2382,7 +2382,7 @@
 		)
 		(uuid "9874274e-61d9-4d9d-a69c-95e439f22cb7")
 	)
-	(text "Preserved: LED Wi-Fi=32, BT=33; LRCK=25, BCK=26, DIN=13; SCL=19, SDA=21.\nAdded: SDZ enable=27; MUTE command=23 (HIGH=mute); FAULTZ=35 (input only); DAC_XSMT=18.\nGPIO36 ADC1 monitors PVDD/11. Volume pot: GPIO34 / ADC1_CH6 (module pin 6). GPIO0 BOOT pull-up; EN reset has 10k/1u RC.\nGPIO6-11 / GPIO16-17 reserved for internal flash/PSRAM: no external use.\nJ2: 1=GND, 2=MODEBTN, 3=pot wiper, 4=3V3, 5=GND.\nJ2: 6=BT LED drive, 7=GND, 8=Wi-Fi LED drive (both drives via 1k).\nMODEBTN: GPIO22 / module pin 36, R35=10k pull-up; switch pin 2 to pin 5 GND.\nDebounce in firmware. J3 is 3.3 V UART; module pads 39-47 are GND.\nIE module requires an external antenna; keep RF feed away from switch nodes."
+	(text "Preserved: LED Wi-Fi=32, BT=33; LRCK=25, BCK=26, DIN=13; SCL=19, SDA=21.\nAdded: SDZ enable=27; MUTE command=23 (HIGH=mute); FAULTZ=35 (input only); DAC_XSMT=18.\nGPIO36 ADC1 monitors PVDD/11. Volume pot: GPIO34 / ADC1_CH6 (module pin 6). GPIO0 BOOT pull-up; EN reset has 10k/1u RC.\nGPIO6-11 / GPIO16-17 reserved for internal flash/PSRAM: no external use.\nJ1: 1=GND, 2=MODEBTN, 3=pot wiper, 4=3V3, 5=GND.\nJ1: 6=BT LED drive, 7=GND, 8=Wi-Fi LED drive (both drives via 1k), 9=GND.\nJ1: 10=PWR_SW, switch to GND = power on (sits near VIN when open).\nMODEBTN: GPIO22 / module pin 36, R35=10k pull-up; switch pin 2 to pin 5 GND.\nDebounce in firmware. J4 PROG is the 3.3 V UART: 1=GND, 2=RX, 3=TX (no 3V3).\nIE module requires an external antenna; keep RF feed away from switch nodes."
 		(exclude_from_sim no)
 		(at 25.4 144.78 0)
 		(effects

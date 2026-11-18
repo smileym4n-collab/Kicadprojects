@@ -6,9 +6,9 @@
 	(paper "A3")
 	(title_block
 		(title "Bluetooth / Snapcast active speaker")
-		(date "2026-10-23")
-		(rev "Pre-order B")
-		(comment 1 "Schematic completion only - PCB unchanged")
+		(date "2026-11-18")
+		(rev "Pre-order C")
+		(comment 1 "Rev C: PLIMIT to GVDD, switched 19 V input, 5.0 V pre-regulator")
 	)
 	(lib_symbols
 		(symbol "Mechanical:Heatsink"
@@ -363,7 +363,7 @@
 		)
 		(uuid "a3df961b-bdc2-44c6-9385-a30a6a6bdd27")
 	)
-	(text "12-16 V DC -> protected PVDD -> stereo BTL amplifier.\nPVDD -> 4.30 V FPWM buck -> ESP32 3.3 V LDO + DAC 3.3 V low-noise LDO.\nPCM5122 LEFT = tweeter / J17; RIGHT = woofer / J16. Both speaker returns are active.\nC21: onboard 47u / 50V bipolar Nichicon UES; JP1 shorts it for stereo use.\nNo passive crossover. DSP crossover/EQ/limiting remains a firmware and acoustic task."
+	(text "19 V max DC -> fused, reverse-protected, soft-start switched PVDD -> stereo BTL amplifier.\nPVDD -> 5.0 V FPWM buck -> ESP32 3.3 V LDO + DAC 3.3 V low-noise LDO.\nPCM5122 LEFT = tweeter / J17; RIGHT = woofer / J16. Both speaker returns are active.\nC21: onboard 47u / 50V bipolar Nichicon UES; JP1 shorts it for stereo use.\nNo passive crossover. DSP crossover/EQ/limiting remains a firmware and acoustic task."
 		(exclude_from_sim no)
 		(at 124.46 30.48 0)
 		(effects
