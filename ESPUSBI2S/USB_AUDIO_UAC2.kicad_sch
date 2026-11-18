@@ -1,0 +1,1413 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "86d47d33-6721-53b2-91ba-e8d83d713e6f")
+	(paper "A4")
+	(title_block
+		(title "USB_AUDIO_UAC2")
+		(date "2026-11-15")
+		(rev "2.0")
+		(company "Tom Watson Audio")
+		(comment 1 "ESP32-S3-PICO-1 USB Audio Class 2.0 to I2S bridge")
+		(comment 2 "Schematic for review - PCB NOT routed, hardware NOT verified")
+	)
+	(lib_symbols)
+	(text "Grounds: GND (standard symbol) = local / audio ground.  GND_USB = USB host-side ground (separate net when the isolator is fitted).\nRails 3V3_CLK and 3V3_ISO stay inside their sheets.  Only GND and GND_USB are global nets."
+		(exclude_from_sim no)
+		(at 20.32 19.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "2136095f-ed5d-57c9-9c35-97c90229b1c2")
+	)
+	(text "To integrate into another project: copy USB_AUDIO_UAC2.kicad_sch + the four child sheets + ESPUSBI2S.kicad_sym / .pretty,\nadd this sheet to the host schematic and connect the pins above.  No connectors are inside the block."
+		(exclude_from_sim no)
+		(at 20.32 180.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "65815bf8-a85c-59e2-8dc4-23ee51610dd8")
+	)
+	(text "USB_AUDIO_UAC2  -  reusable USB Audio Class 2.0 to I2S block"
+		(exclude_from_sim no)
+		(at 20.32 12.7 0)
+		(effects
+			(font
+				(size 2.2 2.2)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "901d91ed-c597-5fe4-80b2-bfbe7e43e902")
+	)
+	(junction
+		(at 180.34 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "468c7e77-9590-54c6-936a-87ef6c1c2439")
+	)
+	(junction
+		(at 175.26 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "54bf10d7-e172-599e-8b66-9dd360e9c0d4")
+	)
+	(junction
+		(at 172.72 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "61212bd0-516e-54c7-b9fa-afd548b30148")
+	)
+	(junction
+		(at 177.8 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6631b774-6a17-55fe-8d33-576e97e44be7")
+	)
+	(junction
+		(at 170.18 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f526520e-b7e8-5ded-8173-5d969684028a")
+	)
+	(wire
+		(pts
+			(xy 228.6 68.58) (xy 254 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "018520eb-0bde-5653-8134-8eb97c331069")
+	)
+	(wire
+		(pts
+			(xy 157.48 71.12) (xy 187.96 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05c4d9cd-54ae-5cb6-b131-725977a32c00")
+	)
+	(wire
+		(pts
+			(xy 157.48 45.72) (xy 180.34 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08e6c7e0-58b7-5870-b7f9-b8872244f46d")
+	)
+	(wire
+		(pts
+			(xy 175.26 50.8) (xy 175.26 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ddc7035-ec89-5a85-82df-e8ed97039fe0")
+	)
+	(wire
+		(pts
+			(xy 177.8 48.26) (xy 254 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1099e0d0-ae6f-54f2-ac27-54402ebf4390")
+	)
+	(wire
+		(pts
+			(xy 86.36 63.5) (xy 116.84 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1141b956-44dd-5699-b69b-b7e8a87d9d72")
+	)
+	(wire
+		(pts
+			(xy 177.8 48.26) (xy 177.8 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d6b67b5-b1d3-54b2-8013-134454e996bf")
+	)
+	(wire
+		(pts
+			(xy 157.48 66.04) (xy 187.96 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1fc7da77-4239-57c3-b86f-0814eb1ad374")
+	)
+	(wire
+		(pts
+			(xy 177.8 83.82) (xy 187.96 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "241e116c-cabf-519f-ac66-82baf8f7e2ca")
+	)
+	(wire
+		(pts
+			(xy 157.48 124.46) (xy 187.96 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "289dea93-6dd2-5765-a979-ace399062b16")
+	)
+	(wire
+		(pts
+			(xy 157.48 149.86) (xy 254 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e849233-93b6-51a0-be80-df4aec49be56")
+	)
+	(wire
+		(pts
+			(xy 172.72 88.9) (xy 187.96 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d978836-1a39-534a-9321-5232fe326dd3")
+	)
+	(wire
+		(pts
+			(xy 157.48 48.26) (xy 177.8 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3dc9f545-6044-5245-a6dd-bdef91407013")
+	)
+	(wire
+		(pts
+			(xy 170.18 55.88) (xy 254 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f46834a-b78b-5839-bcbe-8dab4169c7ac")
+	)
+	(wire
+		(pts
+			(xy 157.48 157.48) (xy 254 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42f1514f-75b1-5396-bfc3-71b986b25857")
+	)
+	(wire
+		(pts
+			(xy 22.86 55.88) (xy 45.72 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5683910a-5313-5645-b8a1-b323601feb01")
+	)
+	(wire
+		(pts
+			(xy 187.96 99.06) (xy 182.88 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60502482-d0f2-5e9e-9960-4b35d1160e45")
+	)
+	(wire
+		(pts
+			(xy 170.18 55.88) (xy 170.18 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ee3ec93-c0ea-5189-8c32-6f2047fbe47a")
+	)
+	(wire
+		(pts
+			(xy 157.48 121.92) (xy 187.96 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74e240db-225b-5435-8811-91b28e943f5c")
+	)
+	(wire
+		(pts
+			(xy 116.84 71.12) (xy 111.76 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8056b4c8-f144-5ef4-b69d-0aeed0228d5c")
+	)
+	(wire
+		(pts
+			(xy 157.48 154.94) (xy 254 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91fbf6b2-b960-5d99-b83f-de6a90034349")
+	)
+	(wire
+		(pts
+			(xy 187.96 134.62) (xy 182.88 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96d11b28-c923-5ab1-921b-52fef2d7fc85")
+	)
+	(wire
+		(pts
+			(xy 170.18 91.44) (xy 187.96 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a603483-be90-563d-b0ba-421a6e76395e")
+	)
+	(wire
+		(pts
+			(xy 157.48 53.34) (xy 172.72 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b3fae7e-6882-516b-aa12-704329f2f2a5")
+	)
+	(wire
+		(pts
+			(xy 45.72 76.2) (xy 40.64 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae444245-e975-518b-9b75-97afcc1c590b")
+	)
+	(wire
+		(pts
+			(xy 228.6 66.04) (xy 254 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af6630db-da73-5102-b45d-19118ea3160f")
+	)
+	(wire
+		(pts
+			(xy 157.48 109.22) (xy 254 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afc3b3d7-fdb9-54c3-bc67-4f889dcc4875")
+	)
+	(wire
+		(pts
+			(xy 180.34 45.72) (xy 254 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b72c9c08-7d38-5ea2-b50d-60225f44ec27")
+	)
+	(wire
+		(pts
+			(xy 86.36 53.34) (xy 116.84 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc6ec06c-a0b7-5312-a00e-12700b173286")
+	)
+	(wire
+		(pts
+			(xy 86.36 55.88) (xy 116.84 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca8bbc5d-1917-51fb-835c-31f10a9a4652")
+	)
+	(wire
+		(pts
+			(xy 180.34 45.72) (xy 180.34 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb218490-92d6-5a36-b190-d81cedf1c687")
+	)
+	(wire
+		(pts
+			(xy 157.48 68.58) (xy 187.96 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7787a40-700b-548c-8e2a-92e76c083bef")
+	)
+	(wire
+		(pts
+			(xy 22.86 48.26) (xy 45.72 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7c70d04-377e-5aa8-9ecc-56721d20ae5b")
+	)
+	(wire
+		(pts
+			(xy 157.48 55.88) (xy 170.18 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3bbd723-a519-5e50-b73f-523b21d9adca")
+	)
+	(wire
+		(pts
+			(xy 157.48 147.32) (xy 254 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e505efdc-5d50-57d4-8a42-93dd3179de38")
+	)
+	(wire
+		(pts
+			(xy 172.72 53.34) (xy 254 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e71c9b90-2fc3-5b9c-8770-11dbecee3bbc")
+	)
+	(wire
+		(pts
+			(xy 180.34 81.28) (xy 187.96 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7e0401e-9446-53a8-b07e-6f7569c09fcb")
+	)
+	(wire
+		(pts
+			(xy 175.26 50.8) (xy 254 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7e5e141-9d78-54b5-9d16-2d2262924210")
+	)
+	(wire
+		(pts
+			(xy 172.72 53.34) (xy 172.72 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7ef8d50-1a63-58a9-83a0-584d04ccfebb")
+	)
+	(wire
+		(pts
+			(xy 22.86 71.12) (xy 45.72 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebf722eb-67a3-5d4a-8230-24c9c7db96bf")
+	)
+	(wire
+		(pts
+			(xy 228.6 71.12) (xy 254 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edff25ed-393c-57ec-9db8-2927b6fc8d54")
+	)
+	(wire
+		(pts
+			(xy 157.48 50.8) (xy 175.26 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0ef9f29-fa9b-54a8-ae37-49bdadf383d6")
+	)
+	(wire
+		(pts
+			(xy 175.26 86.36) (xy 187.96 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3f75ac9-93a0-5a6e-83fd-365074c05498")
+	)
+	(wire
+		(pts
+			(xy 22.86 53.34) (xy 45.72 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f70b0455-0818-5031-ab71-84989899952f")
+	)
+	(wire
+		(pts
+			(xy 157.48 160.02) (xy 254 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc7ff794-c045-5484-8207-e619b44196e4")
+	)
+	(wire
+		(pts
+			(xy 228.6 121.92) (xy 254 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe57dc66-caea-5333-98b0-a414e8dfcca9")
+	)
+	(label "3V3_MCU"
+		(at 182.88 99.06 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "996003b7-df4d-5b11-b7cd-c39953c7e66c")
+	)
+	(label "3V3_MCU"
+		(at 40.64 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9bedf6e5-2eac-5677-b5da-ef544a3b41c0")
+	)
+	(label "5V_IN"
+		(at 182.88 134.62 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b1d327cc-baf4-51fd-992c-63c7e4dc7f3f")
+	)
+	(label "5V_IN"
+		(at 111.76 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ba207fd6-37f8-56b3-a19a-a65dd7ea0a44")
+	)
+	(hierarchical_label "I2S_LRCK"
+		(shape output)
+		(at 254 68.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "051be356-7db3-5530-95c8-4f8b60e46579")
+	)
+	(hierarchical_label "MCLK_DAC"
+		(shape output)
+		(at 254 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "05a7dac3-1a78-55f6-a98e-96128660b7d0")
+	)
+	(hierarchical_label "I2C_SDA"
+		(shape bidirectional)
+		(at 254 154.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0d24c529-b61e-5f7c-b7bf-51aaecdc63bc")
+	)
+	(hierarchical_label "AUX_UART_TX"
+		(shape output)
+		(at 254 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1a1c9688-a5f5-5ff0-9563-3fd0289d8673")
+	)
+	(hierarchical_label "USB_VBUS"
+		(shape input)
+		(at 22.86 48.26 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1f763397-25e8-5950-a335-c524dd71f778")
+	)
+	(hierarchical_label "5V_IN"
+		(shape input)
+		(at 22.86 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "21a42105-cd5b-5d60-b7a1-b9b6dfb08da1")
+	)
+	(hierarchical_label "F2"
+		(shape output)
+		(at 254 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3237d0c5-8ed3-520a-8e82-c4e3aa33f80d")
+	)
+	(hierarchical_label "UART_RX"
+		(shape input)
+		(at 254 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "50327f66-b295-5146-adfd-c74c54374133")
+	)
+	(hierarchical_label "I2S_DATA"
+		(shape output)
+		(at 254 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "54bb0285-8919-5637-a1e4-39167445354f")
+	)
+	(hierarchical_label "UART_TX"
+		(shape output)
+		(at 254 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "578adfc9-e8de-50c6-be2b-cecdae9aab31")
+	)
+	(hierarchical_label "F3"
+		(shape output)
+		(at 254 48.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7eb9250e-8ae4-5fa6-adc6-1305432dcdae")
+	)
+	(hierarchical_label "F0"
+		(shape output)
+		(at 254 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "803a9f4b-3d68-53a2-b388-53b5934bf08e")
+	)
+	(hierarchical_label "3V3_MCU"
+		(shape output)
+		(at 254 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "910149d8-48e1-5971-8e68-37ee1b3f291a")
+	)
+	(hierarchical_label "USB_DP"
+		(shape bidirectional)
+		(at 22.86 55.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "91ab2303-d3a5-52d3-8d1d-1659b932538e")
+	)
+	(hierarchical_label "MUTE"
+		(shape output)
+		(at 254 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b0edb522-993f-59fe-b6cc-f7164af39bc7")
+	)
+	(hierarchical_label "I2S_BCLK"
+		(shape output)
+		(at 254 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b73891aa-bb2e-58ac-9b3c-3e4ce5ca63d6")
+	)
+	(hierarchical_label "I2C_SCL"
+		(shape bidirectional)
+		(at 254 157.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c4f531dc-e80c-5391-83a2-dc8fcc7e445c")
+	)
+	(hierarchical_label "USB_DM"
+		(shape bidirectional)
+		(at 22.86 53.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "da5499dd-6126-5264-babb-1caa114a5bd6")
+	)
+	(hierarchical_label "F1"
+		(shape output)
+		(at 254 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ee1571df-e7c3-517c-89f8-8790748dffaf")
+	)
+	(sheet
+		(at 45.72 38.1)
+		(size 40.64 45.72)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 225 1)
+		)
+		(uuid "66e24e46-225d-5407-b0e7-70a8d0c16e7b")
+		(property "Sheetname" "USB_INTERFACE"
+			(at 45.72 37.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.6 1.6)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "USB_INTERFACE.kicad_sch"
+			(at 45.72 84.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "USB_VBUS" input
+			(at 45.72 48.26 180)
+			(uuid "ef5fac88-4baa-59f0-8646-66331a1642e2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USB_DM" bidirectional
+			(at 45.72 53.34 180)
+			(uuid "0c44ea86-fea3-5774-ab6b-49fd012cbe2b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USB_DP" bidirectional
+			(at 45.72 55.88 180)
+			(uuid "3dcee277-2bd8-5ef5-b86f-11a865e46ce3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "5V_IN" input
+			(at 45.72 71.12 180)
+			(uuid "f3a90abd-2614-594e-b454-deface062c44")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "3V3_MCU" input
+			(at 45.72 76.2 180)
+			(uuid "9669eef2-c821-54b4-a5d4-6e9b33333437")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USB_DM_MCU" bidirectional
+			(at 86.36 53.34 0)
+			(uuid "23658b8e-71ed-5641-9858-74d64bdccbdc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "USB_DP_MCU" bidirectional
+			(at 86.36 55.88 0)
+			(uuid "1fac22b5-51f3-5ba1-8e12-fe700010813e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VBUS_DET" output
+			(at 86.36 63.5 0)
+			(uuid "d8ff15a9-6d9e-519b-a6d4-c9637e137d53")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "ESPUSBI2S"
+				(path "/4e8ba15a-9575-47ae-b6a2-ab0ac9268e83/86d47d33-6721-53b2-91ba-e8d83d713e6f"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 116.84 38.1)
+		(size 40.64 127)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 225 1)
+		)
+		(uuid "a8da35a5-6db2-57cd-962a-e382a4448b33")
+		(property "Sheetname" "ESP32_UAC2"
+			(at 116.84 37.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.6 1.6)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ESP32_UAC2.kicad_sch"
+			(at 116.84 165.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "USB_DM_MCU" bidirectional
+			(at 116.84 53.34 180)
+			(uuid "8a5b2242-30d0-54cd-9a6c-982d62b7b611")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USB_DP_MCU" bidirectional
+			(at 116.84 55.88 180)
+			(uuid "7643fc3d-36f0-5004-bf49-472933397230")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VBUS_DET" input
+			(at 116.84 63.5 180)
+			(uuid "9cdd6a14-b193-5325-98e7-debd42d5a7c2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "5V_IN" input
+			(at 116.84 71.12 180)
+			(uuid "ed0a20d7-dfd5-5b5b-8832-7c7744c990da")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MUTE" output
+			(at 157.48 45.72 0)
+			(uuid "abee865a-42d3-53ea-83f6-1a4cdb3b1c1a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "F3" output
+			(at 157.48 48.26 0)
+			(uuid "ca04c334-76f4-5b81-8846-cad15461075a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "F2" output
+			(at 157.48 50.8 0)
+			(uuid "d3044a78-4bc0-5a43-a814-b2373f71b28f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "F1" output
+			(at 157.48 53.34 0)
+			(uuid "0f7e87b0-37c3-5be6-8c88-3099bdc7cfbb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "F0" output
+			(at 157.48 55.88 0)
+			(uuid "68bf6ece-be80-5e3c-a4d1-c865a13158eb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "BCLK_MCU" output
+			(at 157.48 66.04 0)
+			(uuid "eb094a90-4ace-5af0-acef-94052b695e87")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "LRCK_MCU" output
+			(at 157.48 68.58 0)
+			(uuid "38863856-40ff-56cd-aba4-9d39daea852f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DATA_MCU" output
+			(at 157.48 71.12 0)
+			(uuid "d2ea639a-423a-56dc-a6e5-f379ed0728b5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "3V3_MCU" output
+			(at 157.48 109.22 0)
+			(uuid "57174b67-8bb8-5bc6-8251-97fe3b86fb53")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CLK_SEL" output
+			(at 157.48 121.92 0)
+			(uuid "0f8e44e4-0d56-5d04-a0c9-9b30e4bc0f43")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "MCLK_ESP" input
+			(at 157.48 124.46 0)
+			(uuid "2d73e033-03bf-5538-bde5-b6106485c850")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "UART_TX" output
+			(at 157.48 147.32 0)
+			(uuid "0c0fe8d8-88a0-506c-a34f-fdeaa2a2e197")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "UART_RX" input
+			(at 157.48 149.86 0)
+			(uuid "2d597958-57ac-52e7-abe8-72f21e4df7db")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "I2C_SDA" bidirectional
+			(at 157.48 154.94 0)
+			(uuid "1bf59c8c-fc0c-5eaa-b519-0e3149f60ef1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "I2C_SCL" bidirectional
+			(at 157.48 157.48 0)
+			(uuid "a54b52c8-ebfa-5bef-bf97-998bc07ae415")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "AUX_UART_TX" output
+			(at 157.48 160.02 0)
+			(uuid "2609ec37-7546-5000-9e55-afdcb4c9258b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "ESPUSBI2S"
+				(path "/4e8ba15a-9575-47ae-b6a2-ab0ac9268e83/86d47d33-6721-53b2-91ba-e8d83d713e6f"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 187.96 114.3)
+		(size 40.64 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 225 1)
+		)
+		(uuid "b9df4275-5d49-5cd2-9230-0d863b93099a")
+		(property "Sheetname" "AUDIO_CLOCK"
+			(at 187.96 113.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.6 1.6)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "AUDIO_CLOCK.kicad_sch"
+			(at 187.96 140.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CLK_SEL" input
+			(at 187.96 121.92 180)
+			(uuid "2d0cdd08-0e21-52d7-a0d8-61a4a15a7637")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MCLK_ESP" output
+			(at 187.96 124.46 180)
+			(uuid "1a5cfe7a-c38e-5355-8fe8-9c3e7462c60a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "5V_IN" input
+			(at 187.96 134.62 180)
+			(uuid "cfd2ebfe-dbc2-5588-bdaf-0d895ef0c015")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MCLK_DAC" output
+			(at 228.6 121.92 0)
+			(uuid "84e9416a-115b-5dcb-a5cb-4e0d0f4feb09")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "ESPUSBI2S"
+				(path "/4e8ba15a-9575-47ae-b6a2-ab0ac9268e83/86d47d33-6721-53b2-91ba-e8d83d713e6f"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 187.96 60.96)
+		(size 40.64 43.18)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 225 1)
+		)
+		(uuid "c811d90e-4cea-5273-ad89-9ac02cbd1cd7")
+		(property "Sheetname" "OUTPUT_INTERFACE"
+			(at 187.96 60.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.6 1.6)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "OUTPUT_INTERFACE.kicad_sch"
+			(at 187.96 104.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "BCLK_MCU" input
+			(at 187.96 66.04 180)
+			(uuid "c75cb334-34ad-5c2d-8e16-6eb641318df9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "LRCK_MCU" input
+			(at 187.96 68.58 180)
+			(uuid "9469c8c7-3de4-58b1-b817-b1cd502ad0fd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DATA_MCU" input
+			(at 187.96 71.12 180)
+			(uuid "a16d640b-92be-5cc9-ad58-3625aef61484")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MUTE" passive
+			(at 187.96 81.28 180)
+			(uuid "84a0cb8e-f55d-548b-a678-0c750357299a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "F3" passive
+			(at 187.96 83.82 180)
+			(uuid "8ca18a8f-2863-561a-b398-dc5caad9c266")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "F2" passive
+			(at 187.96 86.36 180)
+			(uuid "d6dd53bd-9f5b-5367-b8b6-94e974436142")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "F1" passive
+			(at 187.96 88.9 180)
+			(uuid "2facf34a-66f8-5dfd-bd2b-a0b04e420a48")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "F0" passive
+			(at 187.96 91.44 180)
+			(uuid "7aefa4ca-5ca6-5cf1-97cd-4d61ba33aba3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "3V3_MCU" input
+			(at 187.96 99.06 180)
+			(uuid "c4f9c631-6f18-51ca-8064-31c1ba272620")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "I2S_BCLK" output
+			(at 228.6 66.04 0)
+			(uuid "367f3ac1-1f82-5e5c-a0f7-5049728468be")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "I2S_LRCK" output
+			(at 228.6 68.58 0)
+			(uuid "cc7ce105-60e8-54bc-989b-3a165e9a0bb5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "I2S_DATA" output
+			(at 228.6 71.12 0)
+			(uuid "6a33c93e-731e-5048-b5d4-fbe9d89c84da")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "ESPUSBI2S"
+				(path "/4e8ba15a-9575-47ae-b6a2-ab0ac9268e83/86d47d33-6721-53b2-91ba-e8d83d713e6f"
+					(page "5")
+				)
+			)
+		)
+	)
+)

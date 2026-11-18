@@ -1,0 +1,49 @@
+Refs,Qty,Value,MPN,Footprint,Config A (isolated),Config B (non-isolated),In stock,Source,Description
+U1,1,ISOUSB211DPR,ISOUSB211DPR,ESPUSBI2S:ISOUSB211_DP0028A_SSOP-28_7.5x10.3mm_P0.65mm,FIT,DNP,0,BUY,"Isolated USB 2.0 HS/FS/LS repeater, 28-SSOP (DP)"
+U2,1,USBLC6-2SC6,USBLC6-2SC6,Package_TO_SOT_SMD:SOT-23-6,FIT,FIT,5,inventory,"Very low capacitance ESD protection diode, 2 data-line, SOT-23-6"
+C1 C26 C27 C28 C30 C35 C36 C38 C39 C40 C41 C43,12,100n,MC0603B104K500CT,Capacitor_SMD:C_0603_1608Metric,FIT,FIT,961,inventory,5 V input HF decoupling (as original board) - 100 nF 50 V X7R 1608
+C2 C14,2,4u7,CL21A475KAQNNNE,Capacitor_SMD:C_0805_2012Metric,FIT,DNP,37,inventory,3V3_ISO LDO input 4.7 uF 16 V X7R - 4.7 uF 25 V X5R 2012
+C3 C4 C6 C9 C11 C16 C19,7,100n,MC0603B104K500CT,Capacitor_SMD:C_0603_1608Metric,FIT,DNP,961,inventory,"V1P8V2 decoupling at pin 18 (TI 8.3: 2 uF + 0.1 uF + 10 nF, smallest closest) - 100 nF 50 V X7R 1608"
+C5 C8 C17 C20,4,2u2,CL21B225KPFNNNE,Capacitor_SMD:C_0805_2012Metric,FIT,DNP,54,inventory,"V1P8V2 decoupling at pin 18 (TI 8.3: 2 uF + 0.1 uF + 10 nF, smallest closest) - 2.2 uF 10 V X7R 2012"
+C7 C10 C15 C18,4,10n,0805B103K500CT,Capacitor_SMD:C_0805_2012Metric,FIT,DNP,13,inventory,"V1P8V2 decoupling at pin 18 (TI 8.3: 2 uF + 0.1 uF + 10 nF, smallest closest) - 10 nF 50 V X7R 2012"
+U3,1,TPS7A2033PDBVR,TPS7A2033PDBVR,Package_TO_SOT_SMD:SOT-23-5,FIT,DNP,6,inventory,"300 mA LDO, fixed 3.3 V (ISOUSB211 local side only)"
+C12,1,1u,C0805C105K3RACTU,Capacitor_SMD:C_0805_2012Metric,FIT,DNP,87,inventory,VBUS2 / VCC2 decoupling - 1 uF 25 V X7R 2012
+C13,1,10u,TMK316B7106KL-TD,Capacitor_SMD:C_1206_3216Metric,FIT,DNP,43,inventory,3V3_ISO LDO output 10 uF 10 V X7R - 10 uF 25 V X7R 3216
+R1 R2 R3 R4 R11,5,0R,RK73Z2ATTD,Resistor_SMD:R_0805_2012Metric,FIT,DNP,64,inventory,VBUS_DET source select: ISOUSB211 V1OK (config A)
+R5 R6 R7 R8 R9 R10 R15,7,0R,RK73Z2ATTD,Resistor_SMD:R_0805_2012Metric,DNP,FIT,64,inventory,VBUS_DET source select: divider + buffer (config B)
+R12,1,100k,RK73B2ATTE104J,Resistor_SMD:R_0805_2012Metric,FIT,FIT,44,inventory,VBUS_DET pull-down (defined LOW with no source link fitted)
+U4,1,74LVC1G17,SN74LVC1G17DBVR,Package_TO_SOT_SMD:SOT-23-5,DNP,FIT,1,inventory,Schmitt buffer with Ioff (no back-feed into the MCU rail when local power is off)
+R13,1,33k,MCWR08X3302FTL,Resistor_SMD:R_0805_2012Metric,DNP,FIT,100,inventory,VBUS divider top (the only part bridging the barrier in config B)
+R14,1,47k,RMCF0805FT47K0,Resistor_SMD:R_0805_2012Metric,DNP,FIT,93,inventory,"VBUS divider bottom (ratio 0.588: 4.35 V -> 2.56 V, 5.5 V -> 3.23 V)"
+C21,1,10n,0805B103K500CT,Capacitor_SMD:C_0805_2012Metric,DNP,FIT,13,inventory,VBUS detect filter - 10 nF 50 V X7R 2012
+C22,1,100n,MC0603B104K500CT,Capacitor_SMD:C_0603_1608Metric,DNP,FIT,961,inventory,74LVC1G17 decoupling - 100 nF 50 V X7R 1608
+U5,1,ESP32-S3-PICO-1-N8R2,ESP32-S3-PICO-1-N8R2,ESPUSBI2S:ESP32-S3-PICO-1_LGA-56-1EP_7x7mm_P0.4mm,FIT,FIT,,BUY,"ESP32-S3 SiP, 8 MB quad flash, 2 MB quad PSRAM, 40 MHz crystal, LGA56 7x7 mm"
+U6,1,AP7361C-33SP-13,AP7361C-33SP-13,Package_SO:Diodes_SO-8EP,FIT,FIT,,BUY,"1 A LDO, fixed 3.3 V, enable, SO-8EP"
+C23 C25 C33,3,10u,TMK316B7106KL-TD,Capacitor_SMD:C_1206_3216Metric,FIT,FIT,43,inventory,10 uF 10 V X7R - 10 uF 25 V X7R 3216
+C24,1,22u,EMK316BB7226ML-T,Capacitor_SMD:C_1206_3216Metric,FIT,FIT,,BUY,22 uF 16 V X7R 3216 (regulator output) - 22 uF 16 V X7R 3216
+C29 C31 C34 C37,4,1u,C0805C105K3RACTU,Capacitor_SMD:C_0805_2012Metric,FIT,FIT,87,inventory,1 uF 16 V X7R - at VDDO pin 5 - 1 uF 25 V X7R 2012
+R16 R17 R21 R22 R23 R25 R31 R32 R42 R44 R46 R48,12,10k,RC0603FR-0710KL,Resistor_SMD:R_0603_1608Metric,FIT,FIT,53,inventory,Sample-rate line pull-down: 0000 (inactive) while the MCU is in reset (new in rev 2)
+R18 R19 R24 R26 R29 R30 R37 R38 R39,9,22R,RK73B1JTTD220J,Resistor_SMD:R_0603_1608Metric,FIT,FIT,139,inventory,I2S source termination - place at the MCU pin (as original board)
+R20,1,470R,ASC0805-470RFT5,Resistor_SMD:R_0805_2012Metric,FIT,FIT,86,inventory,U0TXD series resistor (Espressif guideline suggests 499R; 470R from stock)
+U7,1,TPS7A2033PDBVR,TPS7A2033PDBVR,Package_TO_SOT_SMD:SOT-23-5,FIT,FIT,6,inventory,"300 mA low-noise LDO, fixed 3.3 V (clock rail only)"
+C32,1,4u7,CL21A475KAQNNNE,Capacitor_SMD:C_0805_2012Metric,FIT,FIT,37,inventory,4.7 uF 16 V X7R - 4.7 uF 25 V X5R 2012
+U8,1,Si53307-B-GM,Si53307-B-GM,ESPUSBI2S:Si53307_QFN-16-1EP_3x3mm_P0.5mm_EP1.8x1.8mm,FIT,FIT,,BUY,"2:1 glitchless clock mux + 2-output universal buffer, low additive jitter, 16-QFN 3x3 mm"
+Y1,1,22.5792MHz,ASELJ-E-22.5792MHZ-L-R-T,ESPUSBI2S:Abracon_ASELJ_3.2x2.5mm,FIT,FIT,,BUY,"Low-jitter 3.3 V CMOS crystal oscillator, 3.2 x 2.5 mm, OE active high (open = enabled)"
+Y2,1,24.576MHz,ASELJ-E-24.576MHZ-L-R-T,ESPUSBI2S:Abracon_ASELJ_3.2x2.5mm,FIT,FIT,,BUY,"Low-jitter 3.3 V CMOS crystal oscillator, 3.2 x 2.5 mm, OE active high (open = enabled)"
+R27 R28,2,1k,RC0603FR-101KL,Resistor_SMD:R_0603_1608Metric,FIT,FIT,99,inventory,CLK0b/CLK1b bias divider to VDD/2 (Si5330x Fig 2.2)
+R33 R35,2,0R,RK73Z2ATTD,Resistor_SMD:R_0805_2012Metric,FIT,FIT,64,inventory,SFOUT1 strap HIGH (fitted): LVCMOS 12 mA drive with SFOUT[1:0] = 11
+R34 R36,2,0R,RK73Z2ATTD,Resistor_SMD:R_0805_2012Metric,DNP (option),DNP (option),64,inventory,SFOUT1 strap LOW (alternative drive strength) - DNP
+R40 R41 R43 R45 R47 R49,6,2k2,RC0603JR-072K2L,Resistor_SMD:R_0603_1608Metric,FIT,FIT,37,inventory,LED current limit (as original board)
+D1,1,MUTE,KP-2012EC,LED_SMD:LED_0805_2012Metric,FIT,FIT,9,inventory,"Red indicator LED 2012, Kingbright KP-2012EC (optional - DNP for integrated use)"
+D2,1,F3,KP-2012EC,LED_SMD:LED_0805_2012Metric,FIT,FIT,9,inventory,"Red indicator LED 2012, Kingbright KP-2012EC (optional - DNP for integrated use)"
+D3,1,F2,KP-2012EC,LED_SMD:LED_0805_2012Metric,FIT,FIT,9,inventory,"Red indicator LED 2012, Kingbright KP-2012EC (optional - DNP for integrated use)"
+D4,1,F1,KP-2012EC,LED_SMD:LED_0805_2012Metric,FIT,FIT,9,inventory,"Red indicator LED 2012, Kingbright KP-2012EC (optional - DNP for integrated use)"
+D5,1,F0,KP-2012EC,LED_SMD:LED_0805_2012Metric,FIT,FIT,9,inventory,"Red indicator LED 2012, Kingbright KP-2012EC (optional - DNP for integrated use)"
+J1,1,I2S OUT,,Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical,FIT,FIT,,not tracked in inventory,Connector (pin-out unchanged from the original board)
+J2,1,STATUS / UART,,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,FIT,FIT,,not tracked in inventory,Connector (pin-out unchanged from the original board)
+J6,1,COMM,,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,FIT,FIT,,not tracked in inventory,Connector (pin-out unchanged from the original board)
+J7,1,BOOT,,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,FIT,FIT,,not tracked in inventory,"BOOT jumper: 2-pin 2.54 mm header, GPIO0 to GND; fit shunt while applying power for ROM download mode"
+J4,1,USB CONNECTOR,,Custom:USBC,FIT,FIT,,not tracked in inventory,USB receptacle (footprint and pin mapping unchanged from the original board)
+R50,1,1M,RC0603FR-101ML,Resistor_SMD:R_0603_1608Metric,FIT,FIT,90,inventory,USB shield bleed to GND_USB (as original board)
+J3,1,POWER IN 5V,,Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,FIT,FIT,,not tracked in inventory,"Regulated 5 V DC input (pin 1 GND, pin 2 +5 V - unchanged)"
+C42,1,220u,EEUFR1C221B,Capacitor_THT:CP_Radial_D6.3mm_P2.50mm,FIT,FIT,10,inventory,"5 V input reservoir 220 uF 16 V Panasonic FR, 6.3 x 11.2 mm (as original board)"

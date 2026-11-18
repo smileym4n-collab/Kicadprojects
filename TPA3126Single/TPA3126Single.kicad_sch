@@ -583,25 +583,81 @@
 		)
 		(uuid "ecbd92ed-bfd5-45a6-88d2-b025db941aaf")
 	)
+	(junction
+		(at 99.06 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "def0b673-0830-43b0-8797-0e22563b1a87")
+	)
 	(wire
 		(pts
-			(xy 109.22 119.38) (xy 177.8 119.38)
+			(xy 93.98 114.3) (xy 109.22 114.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4ec604a3-4270-4fae-80dd-26616f3a29ec")
+		(uuid "26fd8b81-6ca9-4a42-a46c-d712287a90a9")
 	)
 	(wire
 		(pts
-			(xy 99.06 114.3) (xy 99.06 124.46)
+			(xy 99.06 111.76) (xy 109.22 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3232f652-5b00-45fb-963c-e0ad39ef273f")
+	)
+	(wire
+		(pts
+			(xy 129.54 114.3) (xy 163.83 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5640d3c1-b447-4fb8-bb6c-493167165af5")
+	)
+	(wire
+		(pts
+			(xy 99.06 111.76) (xy 99.06 124.46)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "5a931ea3-f1d5-46ed-8e3a-3928b53b0755")
+	)
+	(wire
+		(pts
+			(xy 129.54 111.76) (xy 135.89 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "611937b5-08d3-4f6f-82c2-e811ad158ce9")
+	)
+	(wire
+		(pts
+			(xy 129.54 109.22) (xy 177.8 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "666e77ef-9f90-480d-8720-fb0fa5903f1a")
+	)
+	(wire
+		(pts
+			(xy 93.98 111.76) (xy 99.06 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "696a1927-3803-41a7-9c32-a0bff296e3ea")
 	)
 	(wire
 		(pts
@@ -625,23 +681,13 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 109.22) (xy 177.8 109.22)
+			(xy 163.83 114.3) (xy 163.83 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9592fc15-13f6-4145-a02c-9b4694840b89")
-	)
-	(wire
-		(pts
-			(xy 109.22 111.76) (xy 109.22 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b3abbc64-b6b1-4c9a-804c-81cefe811b68")
+		(uuid "a73d562d-77a1-4b82-9d62-1298b32cd2d9")
 	)
 	(wire
 		(pts
@@ -655,23 +701,33 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 111.76) (xy 109.22 111.76)
+			(xy 93.98 109.22) (xy 109.22 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c758e639-46f9-4334-ac4d-fe8e91d840b5")
+		(uuid "d58ef75e-ea40-4b18-806b-b226b6faccec")
 	)
 	(wire
 		(pts
-			(xy 93.98 114.3) (xy 99.06 114.3)
+			(xy 135.89 111.76) (xy 135.89 124.46)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cc66ca4c-97dd-4113-9499-b0d8f6260e24")
+		(uuid "d70fa8f9-a6ba-48e2-bf8f-282a6edbf777")
+	)
+	(wire
+		(pts
+			(xy 163.83 119.38) (xy 177.8 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbcf8428-022c-4c9b-b8c3-5c6bb3f45fbb")
 	)
 	(label "AMP_ENABLE"
 		(at 228.6 92.71 90)
@@ -774,6 +830,81 @@
 			(project "TPA3126Single"
 				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3"
 					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 135.89 124.46 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "07b9e2be-f8f4-4c4b-a560-e5c62bcfa11e")
+		(property "Reference" "#PWR0607"
+			(at 135.89 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 135.89 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 135.89 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1277aef3-a3e6-48ad-a86d-f0579a5a807d")
+		)
+		(instances
+			(project "TPA3126Single"
+				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3"
+					(reference "#PWR0607")
 					(unit 1)
 				)
 			)
@@ -1039,6 +1170,120 @@
 			(project "TPA3126Single"
 				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3"
 					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x03")
+		(at 124.46 111.76 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9c69414f-b732-4363-a26e-e80b1e14678a")
+		(property "Reference" "J4"
+			(at 121.92 103.505 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "FROM POT"
+			(at 121.92 106.045 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical"
+			(at 124.46 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 124.46 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 124.46 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "B3B-XH-A(LF)(SN)"
+			(at 124.46 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "B3B-XH-A(LF)(SN)"
+			(at 124.46 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "JST"
+			(at 124.46 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8408e7f9-2fd3-4937-9f60-e7b092294e81")
+		)
+		(pin "2"
+			(uuid "9883ca44-700b-4bf5-8b72-aa87c058849a")
+		)
+		(pin "3"
+			(uuid "ef6c5680-c791-4e9d-9031-f991c3963e0b")
+		)
+		(instances
+			(project "TPA3126Single"
+				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3"
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -1316,6 +1561,120 @@
 			)
 		)
 	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x03")
+		(at 114.3 111.76 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f82a554e-7b2a-4d32-b4b4-c4344b48c313")
+		(property "Reference" "J3"
+			(at 116.84 120.015 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TO POT"
+			(at 116.84 117.475 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical"
+			(at 114.3 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 114.3 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "B3B-XH-A(LF)(SN)"
+			(at 114.3 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "B3B-XH-A(LF)(SN)"
+			(at 114.3 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "JST"
+			(at 114.3 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "487af718-fe28-40ec-939f-b1d5665d8ecc")
+		)
+		(pin "2"
+			(uuid "69683acb-2255-490a-80e2-0eab6c8944e7")
+		)
+		(pin "3"
+			(uuid "ed507ee6-d6c0-4af7-8c93-f813b6245ecd")
+		)
+		(instances
+			(project "TPA3126Single"
+				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(sheet
 		(at 177.8 33.02)
 		(size 63.5 40.64)
@@ -1492,4 +1851,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )
