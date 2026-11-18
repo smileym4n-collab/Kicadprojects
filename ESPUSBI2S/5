@@ -1,0 +1,972 @@
+
+=====PAGE 1=====
+A
+B
+C
+D
+1 2 3 4 5 6
+ESPUSBI2S rev 2 - stand-alone board: connectors (unchanged pin-outs) + USB_AUDIO_UAC2 block
+A
+USB_AUDIO_UAC2
+J4 USB CONNECTOR
+VBUS 1
+D+ 3
+D- 2
+GND
+5
+4 Shield
+GND_USB
+J1
+USB_VBUS
+USB_DP
+USB_DM
+I2S_LRCK
+I2S_DATA
+I2S_BCLK
+MCLK_DAC
+1
+2
+3
+4
+5
+6
+C41
+C41
+R50
+R50
+100n 1
+100n
+1M
+1M
+UART_RX
+UART_TX
+2
+3V3_MCU
+3
+GND_USB
+GND_USB
+GND_USB GND_USB
+F0
+4
+F1
+5
+F2
+6
+F3
+7
+MUTE
+8
+9
+10
+I2C_SDA
+I2C_SCL
+AUX_UART_TX
+1
+2
+3
+4
+5V_IN
+1 GND 2 GND 3 LRCK 4 DATA 5 BCLK 6 MCLK
+I2S OUT
+J2
+1 RX (U0RXD)
+2 TX (U0TXD)
+3 3V3 4 F0 5 F1 6 F2 7 F3 8 MUTE 9 GND 10 GND
+STATUS / UART
+J6
+1 GND 2 SDA 3 SCL 4 UART (GPIO10)
+COMM
+B
+C42
+C42
+220u
+220u
+C43
+C43
+100n
+100n
+J3
+1 GND 2 +5V
+1
+2
+POWER IN 5V
+H1 H3
+H2 H4
+POPULATION OPTIONS (details + full table: docs/REV2_DESIGN_NOTES.md)
+A ISOLATED USB (as drawn) - ISOUSB211 fitted, GND_USB separate from GND
+B NON-ISOLATED USB - ISOUSB211 omitted, 0R bypass + ground bridge fitted
+Schematic for review. PCB not yet updated - do not fabricate.
+C
+File: USB_AUDIO_UAC2.kicad_sch
+Schematic for review - PCB NOT routed, hardware NOT verified
+ESP32-S3-PICO-1 USB Audio Class 2.0 to I2S bridge
+Tom Watson Audio
+Sheet: /
+File: ESPUSBI2S.kicad_sch
+D
+Title: ESP32-S3 USB to I2S bridge - stand-alone board
+Size: A4
+Date: 2026-11-15
+Rev: 2.0
+KiCad E.D.A. 10.0.5
+Id: 1/6
+1 2 3 4 5 6
+=====PAGE 2=====
+A
+1 2 3 4 5 6
+USB_AUDIO_UAC2 - reusable USB Audio Class 2.0 to I2S block
+Grounds: GND (standard symbol) = local / audio ground. GND_USB = USB host-side ground (separate net when the isolator is fitted).
+Rails 3V3_CLK and 3V3_ISO stay inside their sheets. Only GND and GND_USB are global nets.
+USB_INTERFACE
+ESP32_UAC2
+A
+USB_VBUS
+USB_DM
+USB_DP
+5V_IN
+3V3_MCU
+USB_VBUS
+USB_DM
+USB_DP
+5V_IN
+3V3_MCU
+USB_DM_MCU
+USB_DP_MCU
+VBUS_DET
+5V_IN
+USB_DM_MCU
+USB_DP_MCU
+VBUS_DET
+5V_IN
+MUTE
+F3
+F2
+F1
+F0
+BCLK_MCU
+LRCK_MCU
+DATA_MCU
+OUTPUT_INTERFACE
+MUTE
+F3
+F2
+F1
+F0
+I2S_BCLK
+I2S_LRCK
+I2S_DATA
+B
+File: USB_INTERFACE.kicad_sch
+3V3_MCU
+BCLK_MCU
+LRCK_MCU
+DATA_MCU
+MUTE
+F3
+F2
+F1
+F0
+3V3_MCU
+I2S_BCLK
+I2S_LRCK
+I2S_DATA
+B
+File: OUTPUT_INTERFACE.kicad_sch
+C
+3V3_MCU
+CLK_SEL
+MCLK_ESP
+UART_TX
+UART_RX
+I2C_SDA
+I2C_SCL
+AUX_UART_TX
+AUDIO_CLOCK
+3V3_MCU
+MCLK_DAC
+5V_IN
+CLK_SEL
+MCLK_ESP
+5V_IN
+MCLK_DAC
+C
+File: AUDIO_CLOCK.kicad_sch
+UART_TX
+UART_RX
+I2C_SDA
+I2C_SCL
+AUX_UART_TX
+File: ESP32_UAC2.kicad_sch
+To integrate into another project: copy USB_AUDIO_UAC2.kicad_sch + the four child sheets + ESPUSBI2S.kicad_sym / .pretty,
+add this sheet to the host schematic and connect the pins above. No connectors are inside the block.
+Schematic for review - PCB NOT routed, hardware NOT verified
+ESP32-S3-PICO-1 USB Audio Class 2.0 to I2S bridge
+Tom Watson Audio
+D
+Sheet: /USB_AUDIO_UAC2/
+File: USB_AUDIO_UAC2.kicad_sch
+D
+Title: USB_AUDIO_UAC2
+Size: A4
+Date: 2026-11-15
+Rev: 2.0
+KiCad E.D.A. 10.0.5
+Id: 2/6
+1 2 3 4 5 6
+=====PAGE 3=====
+A
+B
+C
+D
+E
+F
+1 2 3 4 5 6 7 8
+USB_INTERFACE - ESD protection, optional ISOUSB211 galvanic isolation (TI Fig 8-6), 0R bypass, VBUS detection
+CONFIG A - ISOLATED (as drawn): ISOUSB211 + all its decoupling + 3V3_ISO LDO fitted; UD/DD 0R links fitted; V1OK link fitted.
+BYPASS links, GROUND BRIDGE, VBUS divider + Schmitt buffer NOT fitted.
+CONFIG B - NON-ISOLATED: ISOUSB211, its decoupling and the 3V3_ISO LDO NOT fitted; 4 x BYPASS 0R + 2 x GROUND BRIDGE 0R fitted;
+VBUS divider + Schmitt buffer + its link fitted. Never fit both link sets.
+USB VBUS is never connected to the local 5 V rail. Functional isolation only - not a safety barrier.
+Ground symbols on this sheet: thick bar = GND_USB (USB host side) triangle = GND (local / audio side)
+at pin 11
+C5
+C5
+2u2 A only
+2u2 A only
+C6
+C6
+C7
+C7
+100n A only
+100n A only
+10n A only
+10n A only
+at pin 4
+V1P8V1
+C8
+C8
+2u2 A only
+2u2 A only
+C9
+C9
+C10
+C10
+100n A only
+100n A only
+10n A only
+10n A only
+V3P3V1
+C4
+C4
+100n A only
+100n A only
+TP1 USB_VBUS
+TP1 USB_VBUS
+USB_VBUS
+C1
+C1
+100n
+100n
+3V3_ISO LDO (config A only): powers VBUS2 + V3P3V2 + VCC2, internal 1.8 V LDOs used (TI Fig 8-6)
+at pin 25
+at pin 18
+V1P8V2
+C15
+C15
+10n A only
+10n A only
+C16
+C16
+C17
+C17
+100n A only
+100n A only
+2u2 A only
+2u2 A only
+C18
+C18
+10n A only
+10n A only
+C19
+C19
+C20
+C20
+100n A only
+100n A only
+2u2 A only
+2u2 A only
+3V3_ISO
+C11
+C11
+100n A only
+100n A only
+C12
+C12
+1u A only
+1u A only
+U3 TPS7A2033PDBVR
+5
+2
+5V_IN
+USB_DM
+USB_DP
+5
+6
+4
+2
+U2
+1
+3
+USBLC6-2SC6
+C2
+C2
+4u7 A only
+4u7 A only
+C3
+C3
+100n A only
+100n A only
+A only
+A only
+R2 0R
+R2 0R
+R1 0R
+R1 0R
+A only
+A only
+EQ = 00: no equalisation (short traces)
+CDPENZ1/2 HIGH: BC1.2 CDP advertising off
+V2OK not used
+TP2 3V3_ISO
+TP2 3V3_ISO
+C13
+C13
+10u A only
+10u A only
+OUT
+IN 1
+EN 3
+GND
+C14
+C14
+4u7 A only
+4u7 A only
+7
+8
+6
+9
+10
+14 GROUND BRIDGE (config B only)
+GND_USB
+VBUS1 1
+VCC1 5
+UD-
+UD+
+V2OK
+EQ10
+EQ11
+NC
+GND1
+3
+12 CDPENZ1 13
+V3P3V1 2
+V1P8V1 4
+V1P8V1 11
+GND1
+V1P8V2 18
+V1P8V2 25
+U1
+ISOUSB211DPR
+26 V3P3V2 27
+CDPENZ2 16
+VCC2 24
+VBUS2 28
+GND2
+GND2
+17
+DD- 22
+DD+ 21
+V1OK 23
+EQ20 20
+EQ21 19
+NC 15
+ISOLATION BARRIER
+B only
+R9 0R
+R10 0R
+B only
+A only
+R3 0R
+R4 0R
+A only
+A only
+R11 0R
+100k
+100k
+R12
+R12
+USB_DM_MCU
+USB_DP_MCU
+VBUS_DET
+ISOLATED VBUS DETECT (config A): V1OK is HIGH only while side 1 (VBUS) is above its UVLO.
+Push-pull from 3V3_ISO, active HIGH - same polarity as config B.
+GND
+B only
+R5 0R
+B only
+R7 0R
+R6 0R
+B only
+R8 0R
+B only
+BYPASS D- / D+ (config B only - 4 x 0R, DNP when isolated). Route as a 90 ohm pair; links at both ends keep stubs short.
+3V3_MCU
+NON-ISOLATED VBUS DETECT (config B only)
+33k / 47k divider -> Schmitt buffer (VT+ <= 2.1 V at pin = 3.6 V at VBUS).
+Divider returns to local GND: valid only with the ground bridge fitted.
+All parts DNP when isolated - nothing resistive crosses the barrier.
+B only
+R13 33k
+USB_VBUS
+U4 74LVC1G17
+U4 74LVC1G17
+B only
+B only
+R15 0R
+R15 0R
+4
+4
+R14
+R14
+47k
+47k
+C22
+C22
+100n
+100n
+2
+2
+C21
+C21
+10n
+10n
+VCC 5
+VCC 5
+GND
+GND
+3
+3
+KiCad E.D.A. 10.0.5
+1 2 3 4 5 6 7 8
+Id: 3/6
+Schematic for review - PCB NOT routed, hardware NOT verified
+ESP32-S3-PICO-1 USB Audio Class 2.0 to I2S bridge
+Tom Watson Audio
+Sheet: /USB_AUDIO_UAC2/USB_INTERFACE/
+File: USB_INTERFACE.kicad_sch
+Title: USB_INTERFACE
+Size: A3
+Date: 2026-11-15
+Rev: 2.0
+A
+B
+C
+D
+E
+F
+=====PAGE 4=====
+1 2 3 4 5 6 7 8
+ESP32_UAC2 - ESP32-S3-PICO-1-N8R2 (USB Audio Class 2.0 device, I2S master clocked from external MCLK), boot / reset, 3V3_MCU LDO
+A
+A
+B
+B
+5V_IN
+C
+U6 AP7361C-33SP-13
+8
+IN
+OUT 1
+TP3 3V3_MCU
+C23
+C23
+10u
+10u
+2
+EN
+GND
+EP
+4
+9
+C24
+C24
+22u
+22u
+AP7361C: EN tied to IN. Exposed pad = GND, thermal vias to In1 ground plane.
+C31
+C31
+1u
+1u
+BOOT: fit jumper on J7, then apply power = ROM download mode.
+Remove jumper and power-cycle to run. RESET = power cycle (or short TP4 to GND).
+3V3_MCU 3V3_MCU
+R16
+10k
+R17
+10k
+J7
+BOOT
+1u + 100n -> VDDA (55,56)
+TP4 EN
+U5 ESP32-S3-PICO-1-N8R2
+VDD3P3 2
+VDD3P3 3
+VDD3P3_RTC 20
+D
+Download mode: hold BOOT, tap RESET.
+No capacitor on GPIO0 (Espressif guideline).
+Native USB (FS): GPIO20 = D+, GPIO19 = D-
+UART0 recovery / debug
+(test pads + status header)
+Straps left at chip defaults:
+GPIO3 float (JTAG source: eFuse default = USB-Serial-JTAG)
+GPIO45 int. pull-down -> VDD_SPI = 3.3 V
+GPIO46 int. pull-down -> download boot allowed
+LNA_IN open: RF not used - firmware must NOT start Wi-Fi / BT
+(Espressif HW guidelines: the RF pin may float
+if the RF stack is never initialised)
+VDD_SPI: internal flash / PSRAM supply, decoupled
+inside the SiP - leave open.
+SPICS1 + pins 30-35, 53, 54: internal, no connection.
+TP5 IO0
+1
+2
+R18 22R
+USB_DP_MCU
+USB_DM_MCU
+UART_TX
+UART_RX
+R19 22R
+TP6 TX
+R20 470R
+TP7 RX
+4
+5
+26
+25 49
+50
+8
+51
+52
+1
+29
+28 30
+31
+32
+33
+34
+35
+53
+54
+E
+CHIP_PU
+GPIO0
+GPIO20/USB_D+
+GPIO19/USB_D-
+U0TXD/GPIO43
+U0RXD/GPIO44
+GPIO3
+GPIO45
+GPIO46
+LNA_IN
+VDD_SPI
+SPICS1/GPIO26
+NC
+NC
+NC
+NC
+NC
+NC
+NC
+NC
+VDD3P3_CPU 46
+VDDA 55
+VDDA 56
+Decoupling (place at the pins): 10u + 100n -> VDD3P3 (2,3) 100n -> VDD3P3_RTC (20) 100n -> VDD3P3_CPU (46) 3V3_MCU
+C25
+C25
+10u
+10u
+C26
+C26
+100n
+100n
+C27
+C27
+100n
+100n
+C28
+C28
+100n
+100n
+C29
+C29
+1u
+1u
+C30
+C30
+100n
+100n
+BCLK_MCU
+LRCK_MCU
+DATA_MCU
+CLK_SEL
+MCLK_ESP
+MUTE
+F3
+F2
+F1
+F0
+VBUS_DET
+I2C_SDA
+I2C_SCL
+AUX_UART_TX
+I2S (Philips, 32-bit slots)
+GPIO4 BCLK / GPIO5 LRCK / GPIO6 DATA
+GPIO7 oscillator select (LOW = 22.5792 MHz)
+GPIO15 external MCLK input from Si53307 Q0
+GPIO35 MUTE (active HIGH)
+GPIO36 F3 / GPIO37 F2 / GPIO38 F1 / GPIO39 F0
+(= firmware Kconfig defaults; no power-up glitch on these pins.
+Original PCB used GPIO16/17/18 for MUTE/F3/F2.)
+GPIO13 VBUS detect (active HIGH)
+GPIO8 SDA / GPIO9 SCL / GPIO10 ATtiny status UART TX
+(COMM header, as original board)
+GPIO4 9
+GPIO5 10
+GPIO6 11
+GPIO7 12
+XTAL_32K_P/GPIO15 21
+GPIO35 40
+GPIO36 41
+GPIO37 42
+GPIO38 43
+MTCK/GPIO39 44
+GPIO13 18
+GPIO8 13
+GPIO9 14
+GPIO10 15
+GPIO1 6
+GPIO2 7
+GPIO11 16
+GPIO12 17
+GPIO14 19
+XTAL_32K_N/GPIO16 22
+GPIO17 23
+GPIO18 24
+GPIO21 27
+GPIO33 38
+GPIO34 39
+MTDO/GPIO40 45
+MTDI/GPIO41 47
+MTMS/GPIO42 48
+SPICLK_P/GPIO47 37
+SPICLK_N/GPIO48 36
+C
+TP8 VBUS_DET
+3V3_MCU
+R21 10k
+3V3_MCU
+R22 10k
+D
+Unused GPIO: no connection.
+GPIO35-37 are used for MUTE/F3/F2: free on the N8R2
+(quad PSRAM) but NOT on an N8R8 part - do not substitute.
+GND
+E
+57
+Pad 57 = GND (4 x 4 mm exposed pad, 3 x 3 paste windows, 4 ground vias in footprint)
+Schematic for review - PCB NOT routed, hardware NOT verified
+ESP32-S3-PICO-1 USB Audio Class 2.0 to I2S bridge
+Tom Watson Audio
+F
+Sheet: /USB_AUDIO_UAC2/ESP32_UAC2/
+File: ESP32_UAC2.kicad_sch
+Title: ESP32_UAC2
+KiCad E.D.A. 10.0.5
+1 2 3 4 5 6 7 8
+Rev: 2.0
+Id: 4/6
+F
+Size: A3
+Date: 2026-11-15
+=====PAGE 5=====
+1 2 3 4 5 6
+OUTPUT_INTERFACE - I2S source termination, MUTE default, sample-rate indication (XMOS-compatible)
+3V3_MCU
+3V3_MCU
+R37 22R
+A
+TP14 BCLK
+BCLK_MCU
+LRCK_MCU
+DATA_MCU
+R38 22R
+TP15 LRCK
+R39 22R TP16 DATA
+I2S_BCLK
+I2S_LRCK
+I2S_DATA
+A
+MCLK_DAC is terminated at the Si53307 (AUDIO_CLOCK sheet) and goes straight to the header.
+R40 2k2
+3V3_MCU
+TP17 MUTE
+B
+C
+MUTE
+F3
+F2
+F1
+F0
+MUTE: active HIGH (HIGH = muted). Pull-up holds HIGH during reset;
+2k2 pull-up against LED + 2k2 gives about 2.6 V at the header in reset.
+R41 2k2
+D1 MUTE
+B
+TP18 F3
+R42 10k
+R42 10k
+R43 2k2
+D2 F3
+TP19 F2
+F3 F2 F1 F0 (from firmware, unchanged):
+0 0 0 0 inactive / muted / no USB
+0 0 0 1 44.1 kHz
+0 0 1 0 48 kHz
+0 0 1 1 88.2 kHz
+0 1 0 0 96 kHz
+R44 10k
+R44 10k
+R45 2k2
+D3 F2
+TP20 F1
+R46 10k
+R46 10k
+R47 2k2
+D4 F1
+C
+TP21 F0
+R48 10k
+R48 10k
+R49 2k2
+D5 F0
+Schematic for review - PCB NOT routed, hardware NOT verified
+ESP32-S3-PICO-1 USB Audio Class 2.0 to I2S bridge
+Tom Watson Audio
+D
+Sheet: /USB_AUDIO_UAC2/OUTPUT_INTERFACE/
+File: OUTPUT_INTERFACE.kicad_sch
+D
+Title: OUTPUT_INTERFACE
+Size: A4
+Date: 2026-11-15
+Rev: 2.0
+Id: 5/6
+KiCad E.D.A. 10.0.5
+1 2 3 4 5 6
+=====PAGE 6=====
+A
+1 2 3 4 5 6 7 8
+AUDIO_CLOCK - low-jitter audio master clocks: 2 x Abracon ASELJ + Si53307 2:1 mux / fan-out buffer, dedicated 3V3_CLK LDO
+CLK_SEL LOW = CLK0 = 22.5792 MHz (44.1 / 88.2 kHz) HIGH = CLK1 = 24.576 MHz (48 / 96 kHz)
+Polarity is identical to the original 74LVC1G157 board (GPIO7 LOW = 22.5792 MHz). 10k pull-down = 22.5792 MHz during MCU reset.
+5V_IN
+C32
+C32
+4u7
+4u7
+U7 TPS7A2033PDBVR
+1
+IN
+3 OUT 5
+EN
+GND
+2
+TP9 3V3_CLK
+3V3_CLK
+C33
+C33
+10u
+10u
+3V3_CLK feeds ONLY U (Si53307) and the two oscillators.
+Typ. 82 mA / 0.14 W. Upper bound 0.20 A / 0.39 W -> see design notes (thermal check).
+B
+Y1 22.5792MHz
+VDD (pin 1): 1u + 100n
+3V3_CLK
+3V3_CLK
+C38
+C38
+100n
+100n
+R23
+10k
+4
+1
+Vdd
+OE
+R24 22R
+TP10 OSC_22M5792
+OUT 3
+C34
+C34
+1u
+1u
+C35
+C35
+100n
+100n
+GND
+2
+C
+CLK0b / CLK1b = VDD/2
+(single-ended LVCMOS input,
+Si5330x Fig 2.2 - NOT grounded)
+VDD 1
+VDD 1
+3V3_CLK
+R27
+R27
+1k
+1k
+C40
+C40
+100n
+100n
+R28
+R28
+1k
+1k
+6
+6
+CLK0
+CLK0
+7
+7
+CLK0b
+CLK0b
+3
+3
+2 CLK1b
+2 CLK1b
+CLK1
+CLK1
+D
+3V3_CLK
+C39
+C39
+100n
+100n
+R25
+10k
+Y2 24.576MHz
+4
+1
+2
+Vdd
+OE
+GND
+OUT 3
+R26 22R
+TP11 OSC_24M576
+VDDO (pin 5): 100n + 1u
+C36
+C36
+100n
+100n
+C37
+C37
+1u
+1u
+U8 Si53307-B-GM
+U8 Si53307-B-GM
+VDDO 5
+VDDO 5
+Q0 12
+Q0 12
+Q0b 11
+Q0b 11
+Q1 10
+Q1 10
+Q1b 9
+Q1b 9
+CLK_SEL 14
+CLK_SEL 14
+OE 16
+OE 16
+SFOUT0 13
+SFOUT0 13
+GND
+GND
+GND
+GND
+GND_PAD
+GND_PAD
+SFOUT1 8
+SFOUT1 8
+R29 22R
+R29 22R
+TP12 MCLK
+MCLK_ESP
+R30 22R
+R30 22R
+MCLK_DAC
+Q0b / Q1b: unused LVCMOS outputs left open (datasheet 2.11)
+TP13 CLK_SEL
+CLK_SEL
+R31 10k
+R31 10k
+R32 10k
+R32 10k
+3V3_CLK
+R33 0R
+R33 0R
+3V3_CLK
+SFOUT[1:0] = 1,1 -> LVCMOS 12 mA (as fitted)
+Other options (Si5330x Table 2.4): 0,1 = 24 mA Never fit both resistors on one SFOUT pin.
+1,0 = 18 mA open,0 = 6 mA (Rs = 0R)
+R34 0R
+R34 0R
+R35 0R
+R35 0R
+3V3_CLK
+R36 0R
+R36 0R
+Si53307 exposed pad (17) = GND. Stencil: 2 x 2 array of 0.65 mm openings.
+4
+4
+15
+15
+17
+17
+E
+Schematic for review - PCB NOT routed, hardware NOT verified
+ESP32-S3-PICO-1 USB Audio Class 2.0 to I2S bridge
+Tom Watson Audio
+Sheet: /USB_AUDIO_UAC2/AUDIO_CLOCK/
+File: AUDIO_CLOCK.kicad_sch
+Title: AUDIO_CLOCK
+Size: A3
+Date: 2026-11-15
+Rev: 2.0
+F
+KiCad E.D.A. 10.0.5
+1 2 3 4 5 6 7 8
+Id: 6/6
+A
+B
+C
+D
+E
+F

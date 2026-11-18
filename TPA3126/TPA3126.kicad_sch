@@ -486,7 +486,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 78.74) (xy 149.86 71.12)
+			(xy 149.86 35.56) (xy 149.86 78.74)
 		)
 		(stroke
 			(width 0)
@@ -496,7 +496,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 35.56) (xy 83.82 35.56)
+			(xy 76.2 35.56) (xy 149.86 35.56)
 		)
 		(stroke
 			(width 0)
@@ -733,26 +733,6 @@
 			(justify right bottom)
 		)
 		(uuid "570816f7-97da-401b-a63d-0abe26cd72ca")
-	)
-	(label "4V_PRE"
-		(at 83.82 35.56 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9cd8595e-dc62-4168-9a8d-faaa62322b73")
-	)
-	(label "4V_PRE"
-		(at 149.86 71.12 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a6fb65dc-06e8-440a-ae3c-c5f9ed558202")
 	)
 	(label "VIN_SENSE"
 		(at 25.4 93.98 180)
@@ -1411,16 +1391,6 @@
 				(justify right)
 			)
 		)
-		(pin "4V_PRE" output
-			(at 76.2 35.56 0)
-			(uuid "7f106eb4-de9f-4e9b-8f2f-ffe1f4918599")
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify right)
-			)
-		)
 		(pin "3V3-ESP" output
 			(at 76.2 43.18 0)
 			(uuid "b9466892-6385-4a1b-977c-28aa11207578")
@@ -1437,6 +1407,16 @@
 			(effects
 				(font
 					(size 1 1)
+				)
+				(justify right)
+			)
+		)
+		(pin "5V_PRE" output
+			(at 76.2 35.56 0)
+			(uuid "b5638646-a7a5-4a1a-995f-75152e3d5593")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(justify right)
 			)
@@ -1567,12 +1547,12 @@
 				(justify right)
 			)
 		)
-		(pin "4V_PRE" input
+		(pin "5V_PRE" input
 			(at 149.86 78.74 90)
-			(uuid "01299fe8-8ad8-4f0a-97ca-25f18edc2faf")
+			(uuid "2d1df7cb-d775-48e9-93ed-fcb4a7fad480")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.27 1.27)
 				)
 				(justify right)
 			)

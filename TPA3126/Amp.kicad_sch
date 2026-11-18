@@ -1994,12 +1994,6 @@
 		(uuid "2a4d934e-6654-410c-9b21-61ccb2e127d8")
 	)
 	(junction
-		(at 45.72 217.17)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2b49fa23-e60a-4390-85ff-36570906a163")
-	)
-	(junction
 		(at 251.46 116.84)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2165,16 +2159,6 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 212.09) (xy 45.72 217.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "02a46703-6daf-4a3d-97e5-1fbd12383d0c")
-	)
-	(wire
-		(pts
 			(xy 303.53 113.03) (xy 303.53 95.25)
 		)
 		(stroke
@@ -2322,16 +2306,6 @@
 			(type default)
 		)
 		(uuid "18d9d2fb-6d7d-42df-ae00-1a87946bf12e")
-	)
-	(wire
-		(pts
-			(xy 45.72 229.87) (xy 45.72 233.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "19378746-c4d9-4bcc-ae29-ab66cfd93cd5")
 	)
 	(wire
 		(pts
@@ -2692,16 +2666,6 @@
 			(type default)
 		)
 		(uuid "53f43e46-b21a-4262-988e-d607a489a24f")
-	)
-	(wire
-		(pts
-			(xy 45.72 217.17) (xy 45.72 222.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "57998d72-9950-40ec-8147-67430803c130")
 	)
 	(wire
 		(pts
@@ -3355,16 +3319,6 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 204.47) (xy 45.72 200.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c3608274-6786-4a00-9b36-f7ea3f14441a")
-	)
-	(wire
-		(pts
 			(xy 167.64 81.28) (xy 176.53 81.28)
 		)
 		(stroke
@@ -3512,16 +3466,6 @@
 			(type default)
 		)
 		(uuid "d899fc79-5b5d-45bf-a4d3-dbe0db8b807a")
-	)
-	(wire
-		(pts
-			(xy 45.72 217.17) (xy 59.69 217.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d979a693-144e-4dd7-8b29-d2453aca0905")
 	)
 	(wire
 		(pts
@@ -3793,26 +3737,6 @@
 		)
 		(uuid "383604fc-3ad8-408c-9fc7-50cc4e43f370")
 	)
-	(label "PLIMIT"
-		(at 59.69 217.17 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "3d9692fc-26af-4262-ae3f-7cdb3a08efd3")
-	)
-	(label "3V3-ESP"
-		(at 45.72 200.66 90)
-		(effects
-			(font
-				(size 1 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "5b34a732-bf9a-465e-b52d-7b7ff7af0566")
-	)
 	(label "AMP_LINN"
 		(at 104.14 96.52 180)
 		(effects
@@ -3883,7 +3807,7 @@
 		)
 		(uuid "8b8b69bd-f43d-42f9-a6bc-e528fc162494")
 	)
-	(label "PLIMIT"
+	(label "GVDD"
 		(at 104.14 106.68 180)
 		(effects
 			(font
@@ -3891,7 +3815,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "a08d64c6-c3cd-4366-a53f-7b3c1ee2921f")
+		(uuid "918db2de-4946-4db9-89ee-5e929bb9823e")
 	)
 	(label "AMP_LINP"
 		(at 104.14 93.98 180)
@@ -7314,96 +7238,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 45.72 233.68 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5807335f-0eab-490f-9292-e19b78f586bc")
-		(property "Reference" "#PWR547"
-			(at 45.72 237.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 45.72 237.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 49.22 233.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" ""
-			(at 49.22 233.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" ""
-			(at 45.72 233.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" ""
-			(at 49.22 233.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify left)
-			)
-		)
-		(pin "1"
-			(uuid "2c538c6a-7bf5-4889-8885-34c0a4013c7e")
-		)
-		(instances
-			(project "TPA3126"
-				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3/ed6a9e5d-2e37-4710-8314-5ad0c926fdf2"
-					(reference "#PWR547")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Jumper:Jumper_2_Open")
 		(at 314.96 135.89 0)
 		(unit 1)
@@ -9552,133 +9386,6 @@
 			(project "TPA3126"
 				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3/ed6a9e5d-2e37-4710-8314-5ad0c926fdf2"
 					(reference "C57")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 45.72 226.06 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8eea162a-2619-4990-85d7-b6287122796c")
-		(property "Reference" "C29"
-			(at 49.53 224.79 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1uF"
-			(at 49.53 227.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
-			(at 49.22 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" ""
-			(at 49.22 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" ""
-			(at 45.72 226.06 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CL31B105KBHNFNE"
-			(at 49.22 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify left)
-			)
-		)
-		(property "Inventory_ID" "181"
-			(at 45.72 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" "Multicomp Pro"
-			(at 45.72 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" "MCMHR50V105M4X7"
-			(at 45.72 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0c62d1fa-181d-4dec-a652-d9542d47d747")
-		)
-		(pin "2"
-			(uuid "c7ce4ea1-e1b9-4387-8d87-f91f1900bdf5")
-		)
-		(instances
-			(project "TPA3126"
-				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3/ed6a9e5d-2e37-4710-8314-5ad0c926fdf2"
-					(reference "C29")
 					(unit 1)
 				)
 			)
@@ -12462,144 +12169,6 @@
 			(project "TPA3126"
 				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3/ed6a9e5d-2e37-4710-8314-5ad0c926fdf2"
 					(reference "R14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 45.72 208.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "dbc63f85-429a-4cf2-ac87-ccdb744c2916")
-		(property "Reference" "R19"
-			(at 49.53 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10K"
-			(at 49.53 209.55 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 49.22 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" ""
-			(at 49.22 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" ""
-			(at 45.72 208.28 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RK73B2ATTD103J"
-			(at 49.22 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify left)
-			)
-		)
-		(property "Inventory_ID" "194"
-			(at 45.72 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Assembly_Note" "10k 5% RC filter from regulated 3V3-ESP to PLIMIT; inventory ID194."
-			(at 45.72 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" "KOA Speer"
-			(at 45.72 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" "660-RK73B2ATTD103J"
-			(at 45.72 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e92a81d5-783d-48e3-b15c-ba4c93e8cb82")
-		)
-		(pin "2"
-			(uuid "c3bafcaf-9274-4c3e-b01f-7852f18674c8")
-		)
-		(instances
-			(project "TPA3126"
-				(path "/2d28c68d-56c4-4741-9a6a-addc853f62c3/ed6a9e5d-2e37-4710-8314-5ad0c926fdf2"
-					(reference "R19")
 					(unit 1)
 				)
 			)

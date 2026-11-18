@@ -5,7 +5,7 @@
 	(uuid "bcb626db-c25e-435d-8cfd-e1479e305623")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Connector:Conn_01x06_Socket"
+		(symbol "Connector:Conn_01x10_Socket"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -16,7 +16,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at 0 7.62 0)
+				(at 0 12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -25,8 +25,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x06_Socket"
-				(at 0 -10.16 0)
+			(property "Value" "Conn_01x10_Socket"
+				(at 0 -15.24 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -57,7 +57,7 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x06, script generated"
+			(property "Description" "Generic connector, single row, 01x10, script generated"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -100,10 +100,10 @@
 					)
 				)
 			)
-			(symbol "Conn_01x06_Socket_1_1"
+			(symbol "Conn_01x10_Socket_1_1"
 				(polyline
 					(pts
-						(xy -1.27 5.08) (xy -0.508 5.08)
+						(xy -1.27 10.16) (xy -0.508 10.16)
 					)
 					(stroke
 						(width 0.1524)
@@ -113,345 +113,6 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy -1.27 2.54) (xy -0.508 2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy -0.508 0)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -2.54) (xy -0.508 -2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -5.08) (xy -0.508 -5.08)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -7.62) (xy -0.508 -7.62)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 4.572)
-					(mid -0.5058 5.08)
-					(end 0 5.588)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 2.032)
-					(mid -0.5058 2.54)
-					(end 0 3.048)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -0.508)
-					(mid -0.5058 0)
-					(end 0 0.508)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -3.048)
-					(mid -0.5058 -2.54)
-					(end 0 -2.032)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -5.588)
-					(mid -0.5058 -5.08)
-					(end 0 -4.572)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -8.128)
-					(mid -0.5058 -7.62)
-					(end 0 -7.112)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 5.08 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -7.62 0)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Connector:Conn_01x08_Socket"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 10.16 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x08_Socket"
-				(at 0 -12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x08, script generated"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_01x08_Socket_1_1"
 				(polyline
 					(pts
 						(xy -1.27 7.62) (xy -0.508 7.62)
@@ -540,6 +201,30 @@
 					(pts
 						(xy -1.27 -10.16) (xy -0.508 -10.16)
 					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -12.7) (xy -0.508 -12.7)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 9.652)
+					(mid -0.5058 10.16)
+					(end 0 10.668)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -644,8 +329,20 @@
 						(type none)
 					)
 				)
+				(arc
+					(start 0 -13.208)
+					(mid -0.5058 -12.7)
+					(end 0 -12.192)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(pin passive line
-					(at -5.08 7.62 0)
+					(at -5.08 10.16 0)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -663,7 +360,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 5.08 0)
+					(at -5.08 7.62 0)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -681,7 +378,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at -5.08 5.08 0)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -699,7 +396,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -5.08 2.54 0)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -717,7 +414,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -2.54 0)
+					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_5"
 						(effects
@@ -735,7 +432,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -5.08 0)
+					(at -5.08 -2.54 0)
 					(length 3.81)
 					(name "Pin_6"
 						(effects
@@ -753,7 +450,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -7.62 0)
+					(at -5.08 -5.08 0)
 					(length 3.81)
 					(name "Pin_7"
 						(effects
@@ -771,7 +468,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -10.16 0)
+					(at -5.08 -7.62 0)
 					(length 3.81)
 					(name "Pin_8"
 						(effects
@@ -781,6 +478,42 @@
 						)
 					)
 					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -10.16 0)
+					(length 3.81)
+					(name "Pin_9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -12.7 0)
+					(length 3.81)
+					(name "Pin_10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1090,7 +823,7 @@
 			(pin_names
 				(offset 1.016)
 			)
-			(exclude_from_sim yes)
+			(exclude_from_sim no)
 			(in_bom no)
 			(on_board yes)
 			(in_pos_files yes)
@@ -1302,10 +1035,22 @@
 		)
 	)
 	(junction
-		(at 245.11 80.01)
+		(at 220.98 39.37)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "02f7a276-0ca0-47f8-8620-37df3bad1ea2")
+		(uuid "3287adcd-fd8f-4c15-81d0-10a1b3a4fc3e")
+	)
+	(junction
+		(at 248.92 29.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "41a3be3b-fb89-4ff7-8946-7239ab6f3b0c")
+	)
+	(junction
+		(at 248.92 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4253f812-7209-4a55-aa11-cc527f528024")
 	)
 	(junction
 		(at 76.2 36.83)
@@ -1320,28 +1065,10 @@
 		(uuid "58015b70-5a7c-4a53-bfe5-5939d2463a18")
 	)
 	(junction
-		(at 245.11 74.93)
+		(at 248.92 34.29)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "bbd93400-bd2a-4b4e-bfe1-f0c3d9bc4255")
-	)
-	(junction
-		(at 245.11 39.37)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c8e085df-bdb5-4df0-aa47-e852338f4c80")
-	)
-	(junction
-		(at 245.11 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e60e24ea-f745-4959-8bf4-eb9f86343d0c")
-	)
-	(junction
-		(at 214.63 64.77)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f855b5dd-a537-4017-a08e-8e6353cb9dc5")
+		(uuid "6ea333fd-376b-4ee7-b11e-6058c84dcfe5")
 	)
 	(wire
 		(pts
@@ -1355,26 +1082,6 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 34.29) (xy 245.11 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "06d28df5-b3f2-4481-ad3f-8f816af973c3")
-	)
-	(wire
-		(pts
-			(xy 242.57 62.23) (xy 252.73 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "07fa322d-6ac6-4895-8fd8-2750f0a2b964")
-	)
-	(wire
-		(pts
 			(xy 41.91 91.44) (xy 41.91 58.42)
 		)
 		(stroke
@@ -1385,13 +1092,23 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 64.77) (xy 214.63 64.77)
+			(xy 215.9 39.37) (xy 220.98 39.37)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "0811c4a3-0f3a-4d0b-9274-2df50b8f1907")
+	)
+	(wire
+		(pts
+			(xy 248.92 29.21) (xy 248.92 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a03c048-a2b7-4b15-aecb-79a1dbf79323")
 	)
 	(wire
 		(pts
@@ -1415,6 +1132,16 @@
 	)
 	(wire
 		(pts
+			(xy 248.92 24.13) (xy 255.27 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "107e44b3-683c-4156-91d9-8dbaea2a5f29")
+	)
+	(wire
+		(pts
 			(xy 160.02 118.11) (xy 160.02 134.62)
 		)
 		(stroke
@@ -1435,13 +1162,23 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 26.67) (xy 252.73 26.67)
+			(xy 54.61 50.8) (xy 54.61 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "196d09cf-2775-4c2a-a2b1-29bf37b5ee4c")
+		(uuid "18cc66c8-085b-47ef-aed3-ac0feab4691c")
+	)
+	(wire
+		(pts
+			(xy 248.92 53.34) (xy 248.92 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "192739e6-e516-4844-8b48-9d2655f65bde")
 	)
 	(wire
 		(pts
@@ -1475,23 +1212,13 @@
 	)
 	(wire
 		(pts
-			(xy 252.73 39.37) (xy 245.11 39.37)
+			(xy 25.4 45.72) (xy 25.4 50.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "22c082e3-aa5e-42e8-9764-00dfb3100ee8")
-	)
-	(wire
-		(pts
-			(xy 242.57 77.47) (xy 252.73 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "25b740fb-e72c-41a9-9f0a-6258b3963462")
+		(uuid "26271639-8cfd-412f-bba4-6f3c589784aa")
 	)
 	(wire
 		(pts
@@ -1505,13 +1232,13 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 34.29) (xy 252.73 34.29)
+			(xy 248.92 34.29) (xy 248.92 29.21)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2a921717-df24-4e00-9cba-1a01c848bbf0")
+		(uuid "2ab556d2-87c6-4f7d-ba2c-6c986f6787e7")
 	)
 	(wire
 		(pts
@@ -1545,16 +1272,6 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 80.01) (xy 252.73 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2ff1fc34-8e5a-47b7-818f-8f226d3fe409")
-	)
-	(wire
-		(pts
 			(xy 194.31 13.97) (xy 101.6 13.97)
 		)
 		(stroke
@@ -1562,16 +1279,6 @@
 			(type default)
 		)
 		(uuid "34fe013e-5f1d-442d-94d3-fa0e112b0473")
-	)
-	(wire
-		(pts
-			(xy 245.11 39.37) (xy 245.11 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "37300cec-43c4-4499-b6a5-38f7faec5654")
 	)
 	(wire
 		(pts
@@ -1595,23 +1302,13 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 64.77) (xy 220.98 64.77)
+			(xy 220.98 39.37) (xy 223.52 39.37)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "3debbb68-d6e8-4ef7-bb76-4f0ff1ad2c89")
-	)
-	(wire
-		(pts
-			(xy 242.57 67.31) (xy 252.73 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4524eb00-baa4-4395-be50-99be09aa5a86")
 	)
 	(wire
 		(pts
@@ -1625,13 +1322,33 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 64.77) (xy 214.63 67.31)
+			(xy 220.98 39.37) (xy 220.98 41.91)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "46d40f3c-403e-4227-944e-de08a8302900")
+	)
+	(wire
+		(pts
+			(xy 243.84 36.83) (xy 255.27 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "485434ae-b6fb-4daa-b37f-3ae9a9c779d9")
+	)
+	(wire
+		(pts
+			(xy 248.92 44.45) (xy 255.27 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a33904c-8a77-4be8-be2b-4e224809ecc6")
 	)
 	(wire
 		(pts
@@ -1665,13 +1382,13 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 74.93) (xy 245.11 80.01)
+			(xy 248.92 29.21) (xy 255.27 29.21)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5a73ae25-864e-4bc0-a9dc-eccebed9488c")
+		(uuid "58a5f7c7-86e8-47c5-96b5-8a7e3360659c")
 	)
 	(wire
 		(pts
@@ -1695,13 +1412,13 @@
 	)
 	(wire
 		(pts
-			(xy 252.73 29.21) (xy 245.11 29.21)
+			(xy 243.84 41.91) (xy 255.27 41.91)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5e639f52-718e-47bf-92e7-d333a5df0404")
+		(uuid "5dfb8583-8c0b-46ae-839b-6d602971b3ca")
 	)
 	(wire
 		(pts
@@ -1715,23 +1432,13 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 29.21) (xy 245.11 34.29)
+			(xy 243.84 31.75) (xy 255.27 31.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "619818ff-5b1f-492d-8586-1f5ef9f7652b")
-	)
-	(wire
-		(pts
-			(xy 228.6 64.77) (xy 252.73 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "61cdaa6d-1707-4907-bd9a-986df37665d5")
+		(uuid "608c5a54-08a3-440f-aa57-b22bfa5299af")
 	)
 	(wire
 		(pts
@@ -1752,16 +1459,6 @@
 			(type default)
 		)
 		(uuid "679f5ba0-32af-4900-b8ac-12eb39c167cc")
-	)
-	(wire
-		(pts
-			(xy 241.3 31.75) (xy 252.73 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6e2ce1f7-10ae-453b-93d9-8c7484a8f39b")
 	)
 	(wire
 		(pts
@@ -1805,7 +1502,17 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 74.93) (xy 214.63 82.55)
+			(xy 248.92 44.45) (xy 248.92 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7508dfda-578c-481b-84c2-408513d58b10")
+	)
+	(wire
+		(pts
+			(xy 220.98 49.53) (xy 220.98 57.15)
 		)
 		(stroke
 			(width 0)
@@ -1835,16 +1542,6 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 72.39) (xy 252.73 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7e8205d3-5a66-4755-bf07-cc3b336a6841")
-	)
-	(wire
-		(pts
 			(xy 138.43 25.4) (xy 148.59 25.4)
 		)
 		(stroke
@@ -1855,26 +1552,6 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 69.85) (xy 252.73 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "83db1c85-daf6-4bc0-9d2c-6a9ecd794fa9")
-	)
-	(wire
-		(pts
-			(xy 241.3 36.83) (xy 252.73 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "854612f7-88f1-4adc-9f9b-e08289295ccb")
-	)
-	(wire
-		(pts
 			(xy 82.55 27.94) (xy 107.95 27.94)
 		)
 		(stroke
@@ -1882,6 +1559,16 @@
 			(type default)
 		)
 		(uuid "87c4f96d-4121-4948-bcad-1d224e6bef06")
+	)
+	(wire
+		(pts
+			(xy 25.4 50.8) (xy 54.61 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cba3a39-423c-4be6-9bb6-405f79515e5a")
 	)
 	(wire
 		(pts
@@ -1902,6 +1589,16 @@
 			(type default)
 		)
 		(uuid "8fea72ff-b013-4c6e-976c-d14dbb6f27b2")
+	)
+	(wire
+		(pts
+			(xy 243.84 21.59) (xy 255.27 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96ca5fae-b83f-4cae-b693-d8a0bbb98f25")
 	)
 	(wire
 		(pts
@@ -1965,6 +1662,16 @@
 	)
 	(wire
 		(pts
+			(xy 248.92 34.29) (xy 255.27 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa870dd1-a168-4ca0-866d-492717fc98dc")
+	)
+	(wire
+		(pts
 			(xy 96.52 73.66) (xy 96.52 39.37)
 		)
 		(stroke
@@ -2005,16 +1712,6 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 80.01) (xy 245.11 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aff90d0d-fa38-4bcd-8f45-bc80ff50f814")
-	)
-	(wire
-		(pts
 			(xy 138.43 41.91) (xy 187.96 41.91)
 		)
 		(stroke
@@ -2032,6 +1729,16 @@
 			(type default)
 		)
 		(uuid "c8754e10-c6b8-4722-be07-bcd5ceb0db0b")
+	)
+	(wire
+		(pts
+			(xy 231.14 39.37) (xy 255.27 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d64fcddd-ec1c-4fe0-952d-fad4dde0860a")
 	)
 	(wire
 		(pts
@@ -2065,6 +1772,16 @@
 	)
 	(wire
 		(pts
+			(xy 48.26 33.02) (xy 107.95 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6fc762b-604b-4c22-b14b-7525015ce581")
+	)
+	(wire
+		(pts
 			(xy 138.43 30.48) (xy 148.59 30.48)
 		)
 		(stroke
@@ -2072,16 +1789,6 @@
 			(type default)
 		)
 		(uuid "e73e9192-7e46-41b1-8069-3a75b239f2e6")
-	)
-	(wire
-		(pts
-			(xy 252.73 74.93) (xy 245.11 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e942c835-9683-49ab-acec-60995f34218d")
 	)
 	(wire
 		(pts
@@ -2115,6 +1822,16 @@
 	)
 	(wire
 		(pts
+			(xy 243.84 26.67) (xy 255.27 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f195e157-0266-4c30-894f-47a24a65ca1b")
+	)
+	(wire
+		(pts
 			(xy 101.6 25.4) (xy 107.95 25.4)
 		)
 		(stroke
@@ -2133,18 +1850,18 @@
 		)
 		(uuid "0e2969f6-e098-40a6-a6b6-e401a5d9a81f")
 	)
-	(label "POWER-IN"
-		(at 241.3 26.67 180)
+	(label "POWER-SW1"
+		(at 243.84 26.67 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "11fea2ed-05bd-4ccf-862a-5680b394c7ca")
+		(uuid "14e6b30c-489d-41f8-ae29-53df00c71fd9")
 	)
 	(label "BT-LED"
-		(at 242.57 77.47 180)
+		(at 243.84 41.91 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2154,7 +1871,7 @@
 		(uuid "1a10e6a6-972d-4a06-99ee-bbc758a5ac5c")
 	)
 	(label "VOL-ADC"
-		(at 209.55 64.77 180)
+		(at 215.9 39.37 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2223,15 +1940,15 @@
 		)
 		(uuid "4cc881d4-b942-42d4-b503-a19a0d9a55ea")
 	)
-	(label "POWER-SW1"
-		(at 241.3 31.75 180)
+	(label "POWER-IN"
+		(at 243.84 21.59 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "56977305-974a-475e-9cb7-0dbeb4781b94")
+		(uuid "51cac70e-7699-4bb2-b59c-af874e0e352d")
 	)
 	(label "BT-LED"
 		(at 148.59 20.32 0)
@@ -2253,16 +1970,6 @@
 		)
 		(uuid "5c8124c4-f0b7-4668-8b99-401a0d912ade")
 	)
-	(label "POWER-LED"
-		(at 241.3 36.83 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "712f8cb4-72a7-46a4-b854-9485b362849f")
-	)
 	(label "ENC-B"
 		(at 226.06 107.95 270)
 		(effects
@@ -2273,18 +1980,8 @@
 		)
 		(uuid "7e236c42-6697-429c-93aa-94c42efc3466")
 	)
-	(label "ENC-A"
-		(at 242.57 67.31 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "91ee2254-8b0b-4fbf-8cd3-c79abeccd1f4")
-	)
 	(label "ESP-3V3"
-		(at 242.57 62.23 180)
+		(at 243.84 36.83 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2303,25 +2000,15 @@
 		)
 		(uuid "db1ef65f-e35c-4be5-9b5a-ef691ce1e87a")
 	)
-	(label "ENC-B"
-		(at 242.57 69.85 180)
+	(label "POWER-LED"
+		(at 243.84 31.75 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "ed7420fe-f8bd-49a1-baec-4a4d4b73e19d")
-	)
-	(label "ENC-BTN"
-		(at 242.57 72.39 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f15acf14-dc94-4d85-a80f-3bdc6ab00517")
+		(uuid "e536e71e-30db-45cc-a728-f2325d247841")
 	)
 	(label "ENC-BTN"
 		(at 218.44 107.95 270)
@@ -2364,84 +2051,8 @@
 		(uuid "ffcfcde4-0980-4d84-afee-5429436e86d1")
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 267.97 113.03 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "018340eb-0a58-4c37-9f10-8d813f70e551")
-		(property "Reference" "H1"
-			(at 270.51 111.7599 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 270.51 114.2999 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
-			(at 267.97 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 267.97 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 267.97 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "BluetoothClassD-2"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623"
-					(reference "H1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 224.79 64.77 90)
+		(at 227.33 39.37 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2451,7 +2062,7 @@
 		(dnp no)
 		(uuid "08ce874c-1730-4967-91da-77cbd9198138")
 		(property "Reference" "R28"
-			(at 224.79 59.69 90)
+			(at 227.33 34.29 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2461,7 +2072,7 @@
 			)
 		)
 		(property "Value" "1K"
-			(at 224.79 62.23 90)
+			(at 227.33 36.83 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2471,7 +2082,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 224.79 66.548 90)
+			(at 227.33 41.148 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2482,7 +2093,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 224.79 64.77 0)
+			(at 227.33 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2493,7 +2104,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 224.79 64.77 0)
+			(at 227.33 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2519,19 +2130,19 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 214.63 71.12 0)
+		(lib_id "Mechanical:MountingHole")
+		(at 260.35 115.57 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "943bae4d-0dde-4df6-92ed-6ed1f11fb06e")
-		(property "Reference" "C40"
-			(at 218.44 69.8499 0)
+		(uuid "0ca13138-b758-42b0-8f7f-3d35a7b97eeb")
+		(property "Reference" "H3"
+			(at 262.89 114.2999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2541,8 +2152,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF"
-			(at 218.44 72.3899 0)
+		(property "Value" "MountingHole"
+			(at 262.89 116.8399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2552,8 +2163,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
-			(at 215.5952 74.93 0)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 260.35 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2564,7 +2175,417 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 214.63 71.12 0)
+			(at 260.35 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 260.35 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "BluetoothClassD-2"
+				(path "/bcb626db-c25e-435d-8cfd-e1479e305623"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 260.35 110.49 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "20c92b35-c535-4e24-9eae-949ca93b722c")
+		(property "Reference" "H2"
+			(at 262.89 109.2199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 262.89 111.7599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 260.35 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 260.35 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 260.35 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "BluetoothClassD-2"
+				(path "/bcb626db-c25e-435d-8cfd-e1479e305623"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 260.35 120.65 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5ecc5199-3ff4-4bfd-826f-c8f3583da1de")
+		(property "Reference" "H4"
+			(at 262.89 119.3799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 262.89 121.9199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 260.35 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 260.35 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 260.35 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "BluetoothClassD-2"
+				(path "/bcb626db-c25e-435d-8cfd-e1479e305623"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 260.35 105.41 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "79847afb-f5e1-4bd9-a95a-12ddad63d54f")
+		(property "Reference" "H1"
+			(at 262.89 104.1399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 262.89 106.6799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 260.35 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 260.35 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 260.35 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "BluetoothClassD-2"
+				(path "/bcb626db-c25e-435d-8cfd-e1479e305623"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x10_Socket")
+		(at 260.35 31.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8afd0b59-e39d-479c-be88-aa039b3413d3")
+		(property "Reference" "J5"
+			(at 261.62 31.7499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SYSTEM CONNECTOR"
+			(at 261.62 34.2899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_B10B-XH-A_1x10_P2.50mm_Vertical"
+			(at 260.35 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 260.35 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x10, script generated"
+			(at 260.35 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "6"
+			(uuid "4d6b44d8-b295-4c32-8015-c4195cd039a5")
+		)
+		(pin "5"
+			(uuid "d1bb6b0e-ddf1-40e4-918f-262708c5749e")
+		)
+		(pin "4"
+			(uuid "324d83d2-584f-4a03-954c-a803f853961e")
+		)
+		(pin "3"
+			(uuid "2e5a7a18-05cc-47d3-9622-9c14d1902dbb")
+		)
+		(pin "2"
+			(uuid "dfd27ca5-a970-411f-8f4c-90bc13e4f61f")
+		)
+		(pin "1"
+			(uuid "cea3587b-af9a-4879-b1a4-863ad6cd4fe6")
+		)
+		(pin "10"
+			(uuid "4a1aaf35-c5da-458a-b0b5-3b39bc0e1580")
+		)
+		(pin "9"
+			(uuid "602276f0-aace-446f-a105-4501639a1a7f")
+		)
+		(pin "8"
+			(uuid "9abd09a4-ec69-4b14-8f6d-e3848d178582")
+		)
+		(pin "7"
+			(uuid "f53f0639-72f3-4c2d-8638-55b4e6f0da82")
+		)
+		(instances
+			(project "BluetoothClassD-2"
+				(path "/bcb626db-c25e-435d-8cfd-e1479e305623"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 220.98 45.72 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "943bae4d-0dde-4df6-92ed-6ed1f11fb06e")
+		(property "Reference" "C40"
+			(at 224.79 44.4499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 224.79 46.9899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 221.9452 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 220.98 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2575,7 +2596,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 214.63 71.12 0)
+			(at 220.98 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2595,82 +2616,6 @@
 			(project "BluetoothClassD-2"
 				(path "/bcb626db-c25e-435d-8cfd-e1479e305623"
 					(reference "C40")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 267.97 128.27 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9ad596b4-0a0f-4f40-bba7-2d3160d354a3")
-		(property "Reference" "H4"
-			(at 270.51 126.9999 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 270.51 129.5399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
-			(at 267.97 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 267.97 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 267.97 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "BluetoothClassD-2"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623"
-					(reference "H4")
 					(unit 1)
 				)
 			)
@@ -2758,8 +2703,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x06_Socket")
-		(at 257.81 31.75 0)
+		(lib_id "power:GND")
+		(at 248.92 53.34 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2768,31 +2713,30 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "a6386887-c812-4434-9839-0526ea047237")
-		(property "Reference" "J1"
-			(at 259.08 31.7499 0)
+		(uuid "ba6d6f46-6ef5-4be1-a976-0a3fc16395bc")
+		(property "Reference" "#PWR049"
+			(at 248.92 59.69 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "SYSTEM CONNECTOR 1"
-			(at 259.08 34.2899 0)
+		(property "Value" "GND"
+			(at 248.92 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical"
-			(at 257.81 31.75 0)
+		(property "Footprint" ""
+			(at 248.92 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2803,7 +2747,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 257.81 31.75 0)
+			(at 248.92 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2813,8 +2757,8 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x06, script generated"
-			(at 257.81 31.75 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 248.92 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2823,129 +2767,14 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "6"
-			(uuid "a445a947-8e43-4524-aa15-d83c2a65db92")
 		)
 		(pin "1"
-			(uuid "b060eab0-89cc-4e65-bd2b-308eb900bc12")
-		)
-		(pin "2"
-			(uuid "54bc4460-6e14-4fe4-86d8-87f9cdd87cb4")
-		)
-		(pin "3"
-			(uuid "b4c712ef-c7c1-4635-85bf-ed2ecad59b35")
-		)
-		(pin "4"
-			(uuid "9a17f739-7f57-4967-a4d6-45efcb8c3db7")
-		)
-		(pin "5"
-			(uuid "fc9f71c1-9124-4224-a782-fb7846ddab17")
+			(uuid "7da085ff-b8e8-40dc-a265-127ad973f2c0")
 		)
 		(instances
 			(project "BluetoothClassD-2"
 				(path "/bcb626db-c25e-435d-8cfd-e1479e305623"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x08_Socket")
-		(at 257.81 69.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b91d41b8-f48d-4eaf-89d3-5bfabbe56ad1")
-		(property "Reference" "J6"
-			(at 259.08 69.8499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SYSTEM CONNECTOR 2"
-			(at 259.08 72.3899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_JST:JST_XH_B8B-XH-A_1x08_P2.50mm_Vertical"
-			(at 257.81 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 257.81 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x08, script generated"
-			(at 257.81 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "7"
-			(uuid "f6b52d82-9c43-4b09-b32e-d224da42cfb0")
-		)
-		(pin "6"
-			(uuid "5da03d1f-6f91-4cfb-9b84-d0109150db3d")
-		)
-		(pin "1"
-			(uuid "a412c3ad-1b63-4ad6-8af7-be3429cdab31")
-		)
-		(pin "5"
-			(uuid "bca46edf-ae35-4ba4-a6ff-3d1ed3a80dd6")
-		)
-		(pin "4"
-			(uuid "1cdb868f-66d6-4b41-97d8-5f47964fe19e")
-		)
-		(pin "8"
-			(uuid "78f3cd3e-cce8-4022-9eeb-8b7d56c2a87a")
-		)
-		(pin "2"
-			(uuid "b70c5392-ae88-483c-94eb-2e15539f612c")
-		)
-		(pin "3"
-			(uuid "cc81da24-7b1a-47c7-a0ec-181ec2e85f81")
-		)
-		(instances
-			(project "BluetoothClassD-2"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623"
-					(reference "J6")
+					(reference "#PWR049")
 					(unit 1)
 				)
 			)
@@ -3033,82 +2862,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 267.97 118.11 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c8e7b522-70ba-4706-b1f0-cf4817ca95cf")
-		(property "Reference" "H2"
-			(at 270.51 116.8399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 270.51 119.3799 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
-			(at 267.97 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 267.97 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 267.97 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "BluetoothClassD-2"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623"
-					(reference "H2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 226.06 99.06 0)
 		(unit 1)
@@ -3190,162 +2943,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 267.97 123.19 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d704e426-0de1-4e81-b313-173d611fc683")
-		(property "Reference" "H3"
-			(at 270.51 121.9199 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 270.51 124.4599 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
-			(at 267.97 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 267.97 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 267.97 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "BluetoothClassD-2"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623"
-					(reference "H3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 245.11 83.82 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f432093d-a31a-4587-b9ae-160fd6a581be")
-		(property "Reference" "#PWR042"
-			(at 245.11 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 245.11 88.9 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 245.11 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 245.11 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 245.11 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ce304fe0-f0db-4040-b13a-2e6208dca22e")
-		)
-		(instances
-			(project "BluetoothClassD-2"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623"
-					(reference "#PWR042")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 214.63 82.55 0)
+		(at 220.98 57.15 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3356,7 +2955,7 @@
 		(fields_autoplaced yes)
 		(uuid "f537ea2e-ec12-4e42-af0d-247beab93057")
 		(property "Reference" "#PWR048"
-			(at 214.63 88.9 0)
+			(at 220.98 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3367,7 +2966,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 214.63 87.63 0)
+			(at 220.98 62.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3377,7 +2976,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 214.63 82.55 0)
+			(at 220.98 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3388,7 +2987,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 214.63 82.55 0)
+			(at 220.98 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3399,7 +2998,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 214.63 82.55 0)
+			(at 220.98 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3974,46 +3573,6 @@
 				)
 			)
 		)
-	)
-	(wire
-		(pts
-			(xy 48.26 33.02) (xy 107.95 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e6fc762b-604b-4c22-b14b-7525015ce581")
-	)
-	(wire
-		(pts
-			(xy 25.4 45.72) (xy 25.4 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "26271639-8cfd-412f-bba4-6f3c589784aa")
-	)
-	(wire
-		(pts
-			(xy 25.4 50.8) (xy 54.61 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8cba3a39-423c-4be6-9bb6-405f79515e5a")
-	)
-	(wire
-		(pts
-			(xy 54.61 50.8) (xy 54.61 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "18cc66c8-085b-47ef-aed3-ac0feab4691c")
 	)
 	(sheet_instances
 		(path "/"

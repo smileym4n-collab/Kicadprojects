@@ -666,6 +666,172 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:D_Zener"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Zener"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Zener diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "D_Zener_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Zener_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:Fuse"
 			(pin_numbers
 				(hide yes)
@@ -1461,172 +1627,23 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:D_Zener"
-			(pin_numbers
-				(hide yes)
+	)
+	(text "4S Li-ion input (12.0-16.8 V), BMS required.\nQ2: reverse polarity. Q1: power switch (J1.3 to GND = on).\nD1 clamps gate-source to 10 V. D2: PVCC transient clamp.\nR65/R66: VBAT/7.67 to ESP32 IO36 (2.19 V at 16.8 V)."
+		(exclude_from_sim no)
+		(at 30.48 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "D_Zener"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Zener diode"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "D_Zener_0_1"
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "D_Zener_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
+			(justify left bottom)
 		)
+		(uuid "695396da-02e6-45c8-964b-c62d179d314e")
+	)
+	(junction
+		(at 85.09 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "06a323b5-71df-466f-9054-5490b7fd7eac")
 	)
 	(junction
 		(at 171.45 87.63)
@@ -1653,10 +1670,34 @@
 		(uuid "2338baea-7af7-47e6-87fe-4b189a5937ba")
 	)
 	(junction
+		(at 85.09 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "38adecb6-1684-450b-a852-8e6d695fd92f")
+	)
+	(junction
 		(at 191.77 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a5d0789f-719e-478e-b775-9ad122acd6c1")
+	)
+	(junction
+		(at 85.09 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b19520ce-6276-4dea-bca6-8c823d1e47fb")
+	)
+	(junction
+		(at 165.1 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b27ab450-c571-404c-a8b4-53cb1f8d3879")
+	)
+	(junction
+		(at 85.09 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b7e9d2a7-716d-4df9-81e1-6ab1abe59b41")
 	)
 	(junction
 		(at 139.7 85.09)
@@ -1671,16 +1712,40 @@
 		(uuid "bc6b2d62-594a-44bb-b932-9ab2cd66f311")
 	)
 	(junction
+		(at 68.58 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "be331dc9-6f82-43ea-a187-2bf465150eef")
+	)
+	(junction
+		(at 68.58 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c5a7418f-6e82-45aa-801d-07f88d378c4c")
+	)
+	(junction
 		(at 121.92 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d03b2b87-4d2e-433d-8953-3071683cb51e")
 	)
 	(junction
+		(at 101.6 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d7650136-123e-4745-aaea-08a51120436f")
+	)
+	(junction
 		(at 116.84 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ecaab594-caa5-4c34-bd96-a3aef338ec59")
+	)
+	(junction
+		(at 154.94 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eec1ce47-091b-48f5-846d-e921682b87a0")
 	)
 	(junction
 		(at 237.49 87.63)
@@ -1693,6 +1758,32 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f0df7086-e790-4615-954f-de0cd7cec955")
+	)
+	(junction
+		(at 68.58 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f32a656f-b9d7-43ce-b7f1-669bf7c1157c")
+	)
+	(wire
+		(pts
+			(xy 58.42 116.84) (xy 85.09 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04a2d609-9926-4500-b5b3-d688177546b3")
+	)
+	(wire
+		(pts
+			(xy 85.09 92.71) (xy 85.09 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a5b983f-1739-462f-856c-dbc8da52845d")
 	)
 	(wire
 		(pts
@@ -1716,6 +1807,46 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 96.52) (xy 68.58 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11954f96-d229-4c13-a36a-d847c75b3a24")
+	)
+	(wire
+		(pts
+			(xy 154.94 132.08) (xy 154.94 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11f901e4-3495-4c55-95a3-2a84d9fa6e7d")
+	)
+	(wire
+		(pts
+			(xy 68.58 85.09) (xy 80.01 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1371e1a6-8d4f-4c86-b808-12ad169dbafe")
+	)
+	(wire
+		(pts
+			(xy 68.58 113.03) (xy 72.39 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bb083ea-8985-4d3f-a66b-0ac6ae0b2885")
+	)
+	(wire
+		(pts
 			(xy 143.51 90.17) (xy 139.7 90.17)
 		)
 		(stroke
@@ -1723,6 +1854,16 @@
 			(type default)
 		)
 		(uuid "1c4f88b5-8036-4827-8182-519c8d198cc8")
+	)
+	(wire
+		(pts
+			(xy 165.1 124.46) (xy 172.72 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c8ac68e-f77a-4efb-a7c0-2d4d27ef3183")
 	)
 	(wire
 		(pts
@@ -1766,6 +1907,26 @@
 	)
 	(wire
 		(pts
+			(xy 101.6 85.09) (xy 109.22 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29043458-3030-44e9-8b77-e77deffcfdd9")
+	)
+	(wire
+		(pts
+			(xy 85.09 96.52) (xy 85.09 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2cd7396a-ee72-455e-a988-546a8aef2cd7")
+	)
+	(wire
+		(pts
 			(xy 133.35 100.33) (xy 133.35 111.76)
 		)
 		(stroke
@@ -1783,6 +1944,46 @@
 			(type default)
 		)
 		(uuid "2fb86cb8-64b6-44f7-866c-f56ae43ad460")
+	)
+	(wire
+		(pts
+			(xy 101.6 85.09) (xy 101.6 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32cfb125-5075-4fb4-988d-a308e8ce9a42")
+	)
+	(wire
+		(pts
+			(xy 95.25 85.09) (xy 101.6 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a52947c-e876-4bd5-9091-37e567e96fa5")
+	)
+	(wire
+		(pts
+			(xy 80.01 96.52) (xy 85.09 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fa5b041-a35b-43bd-b7b2-0184d257f961")
+	)
+	(wire
+		(pts
+			(xy 154.94 124.46) (xy 165.1 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fb182e9-5ca2-47f9-a558-e9f517b8deb8")
 	)
 	(wire
 		(pts
@@ -1826,6 +2027,16 @@
 	)
 	(wire
 		(pts
+			(xy 85.09 113.03) (xy 85.09 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a6ac2a9-8405-4da3-81a6-7f2e2306c82f")
+	)
+	(wire
+		(pts
 			(xy 191.77 97.79) (xy 191.77 100.33)
 		)
 		(stroke
@@ -1846,6 +2057,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 85.09) (xy 68.58 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e861a8d-1963-4ede-a8d6-ab9cae722123")
+	)
+	(wire
+		(pts
 			(xy 109.22 85.09) (xy 109.22 92.71)
 		)
 		(stroke
@@ -1863,6 +2084,26 @@
 			(type default)
 		)
 		(uuid "5ec837b6-1563-4ab9-b683-2822c3c92193")
+	)
+	(wire
+		(pts
+			(xy 85.09 127) (xy 85.09 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62bf461a-258a-4a1d-a194-d03cae935c76")
+	)
+	(wire
+		(pts
+			(xy 58.42 92.71) (xy 58.42 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67691a35-06ad-4701-8cf9-db6325981653")
 	)
 	(wire
 		(pts
@@ -1913,6 +2154,36 @@
 			(type default)
 		)
 		(uuid "85a8ea8f-94f4-488e-b955-a2faf457ad28")
+	)
+	(wire
+		(pts
+			(xy 68.58 96.52) (xy 72.39 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8afa417a-dd30-4bb4-8fa5-76199fe0ab6a")
+	)
+	(wire
+		(pts
+			(xy 63.5 85.09) (xy 68.58 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c0ea5ec-31c1-49e2-a9f2-c0e71c3e1d58")
+	)
+	(wire
+		(pts
+			(xy 80.01 104.14) (xy 85.09 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c625f55-262b-447c-aed5-cf82f7394efc")
 	)
 	(wire
 		(pts
@@ -1976,6 +2247,16 @@
 	)
 	(wire
 		(pts
+			(xy 151.13 124.46) (xy 154.94 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a51cbd4-952f-47e3-a05f-69186b0d758a")
+	)
+	(wire
+		(pts
 			(xy 153.67 95.25) (xy 153.67 111.76)
 		)
 		(stroke
@@ -2016,6 +2297,16 @@
 	)
 	(wire
 		(pts
+			(xy 139.7 124.46) (xy 143.51 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2714601-31df-48e7-9814-067d1bc773ee")
+	)
+	(wire
+		(pts
 			(xy 139.7 90.17) (xy 139.7 85.09)
 		)
 		(stroke
@@ -2023,6 +2314,26 @@
 			(type default)
 		)
 		(uuid "b4dc725f-342b-402f-a11c-afc250881e37")
+	)
+	(wire
+		(pts
+			(xy 101.6 100.33) (xy 101.6 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bab2c132-3cc7-46a7-b034-942cc6c38fe2")
+	)
+	(wire
+		(pts
+			(xy 85.09 116.84) (xy 85.09 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf06c3df-5cf4-4cf7-b8c6-9d4c3d32911c")
 	)
 	(wire
 		(pts
@@ -2086,6 +2397,26 @@
 	)
 	(wire
 		(pts
+			(xy 85.09 104.14) (xy 85.09 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e47b7829-cf57-4315-8476-694938c52783")
+	)
+	(wire
+		(pts
+			(xy 72.39 104.14) (xy 68.58 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e51f2789-5055-450e-90ed-4600c00cd8f5")
+	)
+	(wire
+		(pts
 			(xy 191.77 87.63) (xy 213.36 87.63)
 		)
 		(stroke
@@ -2093,6 +2424,26 @@
 			(type default)
 		)
 		(uuid "e583c663-6f78-4ca0-b6a3-44b516803e23")
+	)
+	(wire
+		(pts
+			(xy 165.1 132.08) (xy 165.1 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7378e0a-3013-48a1-ad6e-7d0d43f6ff9f")
+	)
+	(wire
+		(pts
+			(xy 80.01 113.03) (xy 85.09 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebb1b267-cb71-4688-8aa4-5f504d851368")
 	)
 	(wire
 		(pts
@@ -2123,6 +2474,26 @@
 			(type default)
 		)
 		(uuid "ef968a5d-8e49-4688-add7-b7be633eb351")
+	)
+	(wire
+		(pts
+			(xy 68.58 104.14) (xy 68.58 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1aa41bf-050b-4b93-8c13-caeb38e31342")
+	)
+	(wire
+		(pts
+			(xy 45.72 85.09) (xy 48.26 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4c014b3-a93a-4a77-be15-f6466954f2fe")
 	)
 	(wire
 		(pts
@@ -2169,6 +2540,17 @@
 	)
 	(hierarchical_label "AMP-POWER"
 		(shape output)
+		(at 139.7 124.46 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "aaefc344-9c0d-47c1-b315-97bb4e44512f")
+	)
+	(hierarchical_label "AMP-POWER"
+		(shape output)
 		(at 116.84 74.93 90)
 		(effects
 			(font
@@ -2177,6 +2559,17 @@
 			(justify left)
 		)
 		(uuid "e099c3e1-afa6-4749-950e-51dcbfdb370d")
+	)
+	(hierarchical_label "VBAT-SENSE"
+		(shape output)
+		(at 172.72 124.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "eceb00e9-773e-4493-bf0e-9f37e5d95298")
 	)
 	(hierarchical_label "POWER-IN"
 		(shape input)
@@ -2302,7 +2695,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 80.01 112.0648 0)
 			(hide yes)
 			(show_name no)
@@ -2373,7 +2766,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2200uF"
+		(property "Value" "1000uF"
 			(at 113.03 96.9009 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2384,7 +2777,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D13.0mm_P5.00mm"
 			(at 110.1852 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -2927,6 +3320,185 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D_Zener")
+		(at 76.2 104.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "37af8788-0f2d-43e0-8d7e-8e8917793fff")
+		(property "Reference" "D1"
+			(at 76.2 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BZX85C10"
+			(at 76.2 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+			(at 76.2 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Zener 10 V 1 W, Q1/Q2 gate-source clamp"
+			(at 76.2 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "BZX85C10"
+			(at 76.2 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "onsemi"
+			(at 76.2 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b6805ad9-064d-4178-9efe-297737f0bda5")
+		)
+		(pin "2"
+			(uuid "6e713d47-b4fa-4599-9182-430c363689aa")
+		)
+		(instances
+			(project "BluetoothClassD-2"
+				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 154.94 135.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "45fbad5d-d906-440f-b930-836604fbc915")
+		(property "Reference" "#PWR0101"
+			(at 154.94 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 154.94 140.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.94 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 154.94 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "45c11fdb-6943-40da-b4c8-30d647e22777")
+		)
+		(instances
+			(project "BluetoothClassD-2"
+				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
+					(reference "#PWR0101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 229.87 64.77 90)
 		(unit 1)
@@ -3001,6 +3573,110 @@
 			(project "BluetoothClassD-2"
 				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
 					(reference "R40")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 147.32 124.46 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "525ff3e3-e22c-4eda-b4ca-58159c1dd788")
+		(property "Reference" "R65"
+			(at 147.32 119.634 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100K"
+			(at 147.32 122.174 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 145.542 124.46 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, thin film 0.5%, battery sense divider top"
+			(at 147.32 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RT0805DRE07100KL"
+			(at 147.32 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "Yageo"
+			(at 147.32 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3112a868-c022-4d4c-a87b-a20e00b8044c")
+		)
+		(pin "2"
+			(uuid "7779e42d-c82d-4d56-9148-415680b7fa03")
+		)
+		(instances
+			(project "BluetoothClassD-2"
+				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
+					(reference "R65")
 					(unit 1)
 				)
 			)
@@ -3089,6 +3765,188 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 154.94 128.27 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5f844ccc-55e0-4814-ae51-e1512ea30d39")
+		(property "Reference" "R66"
+			(at 157.48 127 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "15K"
+			(at 157.48 129.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 153.162 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, thin film 0.5%, battery sense divider bottom"
+			(at 154.94 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RR1220P-153-D"
+			(at 154.94 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "Susumu"
+			(at 154.94 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4a819e47-70b6-4df9-b530-a3c51b96fe59")
+		)
+		(pin "2"
+			(uuid "3d560e34-8daf-4118-88f2-f13ebb2790df")
+		)
+		(instances
+			(project "BluetoothClassD-2"
+				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
+					(reference "R66")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 165.1 135.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "71f2b104-e117-482b-a319-8c3bf883bcb4")
+		(property "Reference" "#PWR0102"
+			(at 165.1 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 165.1 140.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 165.1 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 165.1 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7dfd46bf-b2d7-4b91-8522-fdbaa139b1be")
+		)
+		(instances
+			(project "BluetoothClassD-2"
+				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
+					(reference "#PWR0102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 171.45 74.93 0)
 		(unit 1)
@@ -3165,6 +4023,84 @@
 			(project "BluetoothClassD-2"
 				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
 					(reference "C48")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 101.6 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7278a41a-b954-4772-b7c2-38f5215bc0fd")
+		(property "Reference" "#PWR0100"
+			(at 101.6 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 101.6 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 101.6 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0f40b192-6ada-4aab-a8b3-690362bcb7de")
+		)
+		(instances
+			(project "BluetoothClassD-2"
+				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
+					(reference "#PWR0100")
 					(unit 1)
 				)
 			)
@@ -3796,6 +4732,189 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D_Zener")
+		(at 101.6 96.52 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c5925023-db6a-409f-b377-792ea9f848b3")
+		(property "Reference" "D2"
+			(at 98.425 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMBJ18A"
+			(at 95.885 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMB"
+			(at 101.6 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "TVS 18 V standoff, unidirectional, PVCC clamp"
+			(at 101.6 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SMBJ18A"
+			(at 101.6 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "Littelfuse"
+			(at 101.6 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b98cd786-0d5a-4041-99d9-67d53d71e992")
+		)
+		(pin "2"
+			(uuid "eb30119d-916b-4885-9f4d-8eebc2ea4bef")
+		)
+		(instances
+			(project "BluetoothClassD-2"
+				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 165.1 128.27 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c5c639b0-be72-4597-92e4-3177a03b54bc")
+		(property "Reference" "C62"
+			(at 167.64 127 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 167.64 129.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 166.0652 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Battery sense ADC filter"
+			(at 165.1 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "82e9d649-2c58-4396-9d57-628f695af373")
+		)
+		(pin "2"
+			(uuid "f5ccac89-5906-44f4-8cbb-78cc38c0e8f6")
+		)
+		(instances
+			(project "BluetoothClassD-2"
+				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
+					(reference "C62")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 133.35 96.52 0)
 		(unit 1)
@@ -4029,6 +5148,162 @@
 			(project "BluetoothClassD-2"
 				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
 					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:DMP4015SK3-13")
+		(at 58.42 92.71 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e068ea8f-1bc3-4dcb-8e46-4dab96833768")
+		(property "Reference" "Q2"
+			(at 60.452 81.026 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DMP4015"
+			(at 60.452 78.486 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:DMP4015SK313"
+			(at 57.15 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com//assets/Datasheets/DMP4015SK3.pdf"
+			(at 54.61 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "Reverse polarity protection: P-MOSFET, drain to battery, source common with Q1"
+			(at 58.42 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" "Diodes Inc DMP4015SK3-13 P-channel MOSFET Transistor, 11 A, -40 V, 3-Pin TO-252"
+			(at 52.07 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Height" "2.52"
+			(at 49.53 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Farnell Part Number" ""
+			(at 46.99 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Farnell Price/Stock" ""
+			(at 44.45 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Manufacturer_Name" "Diodes Incorporated"
+			(at 41.91 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Manufacturer_Part_Number" "DMP4015SK3-13"
+			(at 39.37 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "2"
+			(uuid "81efe925-9197-4245-b34a-919c7c479918")
+		)
+		(pin "3"
+			(uuid "331f9d0e-ea5d-432f-aa14-a74b34b243f6")
+		)
+		(pin "1"
+			(uuid "9e0d8f7d-76a3-4ff4-a6ea-7947f43e8bcd")
+		)
+		(instances
+			(project "BluetoothClassD-2"
+				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -4275,1280 +5550,5 @@
 				)
 			)
 		)
-	)
-	(wire
-		(pts
-			(xy 68.58 85.09) (xy 80.01 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1371e1a6-8d4f-4c86-b808-12ad169dbafe")
-	)
-	(wire
-		(pts
-			(xy 68.58 85.09) (xy 68.58 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4e861a8d-1963-4ede-a8d6-ab9cae722123")
-	)
-	(wire
-		(pts
-			(xy 68.58 96.52) (xy 68.58 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11954f96-d229-4c13-a36a-d847c75b3a24")
-	)
-	(wire
-		(pts
-			(xy 68.58 104.14) (xy 68.58 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f1aa41bf-050b-4b93-8c13-caeb38e31342")
-	)
-	(wire
-		(pts
-			(xy 68.58 96.52) (xy 72.39 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8afa417a-dd30-4bb4-8fa5-76199fe0ab6a")
-	)
-	(wire
-		(pts
-			(xy 68.58 113.03) (xy 72.39 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1bb083ea-8985-4d3f-a66b-0ac6ae0b2885")
-	)
-	(wire
-		(pts
-			(xy 85.09 92.71) (xy 85.09 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0a5b983f-1739-462f-856c-dbc8da52845d")
-	)
-	(wire
-		(pts
-			(xy 85.09 96.52) (xy 85.09 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2cd7396a-ee72-455e-a988-546a8aef2cd7")
-	)
-	(wire
-		(pts
-			(xy 85.09 104.14) (xy 85.09 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e47b7829-cf57-4315-8476-694938c52783")
-	)
-	(wire
-		(pts
-			(xy 85.09 113.03) (xy 85.09 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4a6ac2a9-8405-4da3-81a6-7f2e2306c82f")
-	)
-	(wire
-		(pts
-			(xy 85.09 116.84) (xy 85.09 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf06c3df-5cf4-4cf7-b8c6-9d4c3d32911c")
-	)
-	(wire
-		(pts
-			(xy 80.01 96.52) (xy 85.09 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3fa5b041-a35b-43bd-b7b2-0184d257f961")
-	)
-	(wire
-		(pts
-			(xy 80.01 113.03) (xy 85.09 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ebb1b267-cb71-4688-8aa4-5f504d851368")
-	)
-	(wire
-		(pts
-			(xy 85.09 127) (xy 85.09 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "62bf461a-258a-4a1d-a194-d03cae935c76")
-	)
-	(symbol
-		(lib_id "Custom:DMP4015SK3-13")
-		(at 58.42 92.71 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e068ea8f-1bc3-4dcb-8e46-4dab96833768")
-		(property "Reference" "Q2"
-			(at 60.452 81.026 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "DMP4015"
-			(at 60.452 78.486 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Custom:DMP4015SK313"
-			(at 57.15 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "https://www.diodes.com//assets/Datasheets/DMP4015SK3.pdf"
-			(at 54.61 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "Reverse polarity protection: P-MOSFET, drain to battery, source common with Q1"
-			(at 58.42 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description_1" "Diodes Inc DMP4015SK3-13 P-channel MOSFET Transistor, 11 A, -40 V, 3-Pin TO-252"
-			(at 52.07 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Height" "2.52"
-			(at 49.53 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Farnell Part Number" ""
-			(at 46.99 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Farnell Price/Stock" ""
-			(at 44.45 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer_Name" "Diodes Incorporated"
-			(at 41.91 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer_Part_Number" "DMP4015SK3-13"
-			(at 39.37 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "2"
-			(uuid "81efe925-9197-4245-b34a-919c7c479918")
-		)
-		(pin "3"
-			(uuid "331f9d0e-ea5d-432f-aa14-a74b34b243f6")
-		)
-		(pin "1"
-			(uuid "9e0d8f7d-76a3-4ff4-a6ea-7947f43e8bcd")
-		)
-		(instances
-			(project "BluetoothClassD-2"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 45.72 85.09) (xy 48.26 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4c014b3-a93a-4a77-be15-f6466954f2fe")
-	)
-	(wire
-		(pts
-			(xy 63.5 85.09) (xy 68.58 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8c0ea5ec-31c1-49e2-a9f2-c0e71c3e1d58")
-	)
-	(wire
-		(pts
-			(xy 58.42 92.71) (xy 58.42 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "67691a35-06ad-4701-8cf9-db6325981653")
-	)
-	(wire
-		(pts
-			(xy 58.42 116.84) (xy 85.09 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "04a2d609-9926-4500-b5b3-d688177546b3")
-	)
-	(symbol
-		(lib_id "Device:D_Zener")
-		(at 76.2 104.14 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "37af8788-0f2d-43e0-8d7e-8e8917793fff")
-		(property "Reference" "D1"
-			(at 76.2 99.06 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "BZX85C10"
-			(at 76.2 101.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 76.2 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 76.2 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Zener 10 V 1 W, Q1/Q2 gate-source clamp"
-			(at 76.2 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" "BZX85C10"
-			(at 76.2 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" "onsemi"
-			(at 76.2 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b6805ad9-064d-4178-9efe-297737f0bda5")
-		)
-		(pin "2"
-			(uuid "6e713d47-b4fa-4599-9182-430c363689aa")
-		)
-		(instances
-			(project "BluetoothClassD-2"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 72.39 104.14) (xy 68.58 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e51f2789-5055-450e-90ed-4600c00cd8f5")
-	)
-	(wire
-		(pts
-			(xy 80.01 104.14) (xy 85.09 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8c625f55-262b-447c-aed5-cf82f7394efc")
-	)
-	(symbol
-		(lib_id "Device:D_Zener")
-		(at 101.6 96.52 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c5925023-db6a-409f-b377-792ea9f848b3")
-		(property "Reference" "D2"
-			(at 98.425 96.52 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SMBJ18A"
-			(at 95.885 96.52 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SMB"
-			(at 101.6 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "TVS 18 V standoff, unidirectional, PVCC clamp"
-			(at 101.6 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" "SMBJ18A"
-			(at 101.6 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" "Littelfuse"
-			(at 101.6 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b98cd786-0d5a-4041-99d9-67d53d71e992")
-		)
-		(pin "2"
-			(uuid "eb30119d-916b-4885-9f4d-8eebc2ea4bef")
-		)
-		(instances
-			(project "BluetoothClassD-2"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 101.6 85.09) (xy 101.6 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "32cfb125-5075-4fb4-988d-a308e8ce9a42")
-	)
-	(wire
-		(pts
-			(xy 101.6 100.33) (xy 101.6 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bab2c132-3cc7-46a7-b034-942cc6c38fe2")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 101.6 111.76 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7278a41a-b954-4772-b7c2-38f5215bc0fd")
-		(property "Reference" "#PWR0100"
-			(at 101.6 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 101.6 116.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 101.6 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 101.6 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0f40b192-6ada-4aab-a8b3-690362bcb7de")
-		)
-		(instances
-			(project "BluetoothClassD-2"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
-					(reference "#PWR0100")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(hierarchical_label "AMP-POWER"
-		(shape output)
-		(at 139.7 124.46 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "aaefc344-9c0d-47c1-b315-97bb4e44512f")
-	)
-	(hierarchical_label "VBAT-SENSE"
-		(shape output)
-		(at 172.72 124.46 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "eceb00e9-773e-4493-bf0e-9f37e5d95298")
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 147.32 124.46 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "525ff3e3-e22c-4eda-b4ca-58159c1dd788")
-		(property "Reference" "R65"
-			(at 147.32 119.634 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100K"
-			(at 147.32 122.174 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 145.542 124.46 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 147.32 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, thin film 0.5%, battery sense divider top"
-			(at 147.32 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" "RT0805DRE07100KL"
-			(at 147.32 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" "Yageo"
-			(at 147.32 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3112a868-c022-4d4c-a87b-a20e00b8044c")
-		)
-		(pin "2"
-			(uuid "7779e42d-c82d-4d56-9148-415680b7fa03")
-		)
-		(instances
-			(project "BluetoothClassD-2"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
-					(reference "R65")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 154.94 128.27 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5f844ccc-55e0-4814-ae51-e1512ea30d39")
-		(property "Reference" "R66"
-			(at 157.48 127 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "15K"
-			(at 157.48 129.54 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 153.162 128.27 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 154.94 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, thin film 0.5%, battery sense divider bottom"
-			(at 154.94 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" "RR1220P-153-D"
-			(at 154.94 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" "Susumu"
-			(at 154.94 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4a819e47-70b6-4df9-b530-a3c51b96fe59")
-		)
-		(pin "2"
-			(uuid "3d560e34-8daf-4118-88f2-f13ebb2790df")
-		)
-		(instances
-			(project "BluetoothClassD-2"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
-					(reference "R66")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 165.1 128.27 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c5c639b0-be72-4597-92e4-3177a03b54bc")
-		(property "Reference" "C62"
-			(at 167.64 127 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100nF"
-			(at 167.64 129.54 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
-			(at 166.0652 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Battery sense ADC filter"
-			(at 165.1 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "82e9d649-2c58-4396-9d57-628f695af373")
-		)
-		(pin "2"
-			(uuid "f5ccac89-5906-44f4-8cbb-78cc38c0e8f6")
-		)
-		(instances
-			(project "BluetoothClassD-2"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
-					(reference "C62")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 139.7 124.46) (xy 143.51 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b2714601-31df-48e7-9814-067d1bc773ee")
-	)
-	(wire
-		(pts
-			(xy 151.13 124.46) (xy 154.94 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9a51cbd4-952f-47e3-a05f-69186b0d758a")
-	)
-	(wire
-		(pts
-			(xy 154.94 124.46) (xy 165.1 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3fb182e9-5ca2-47f9-a558-e9f517b8deb8")
-	)
-	(wire
-		(pts
-			(xy 165.1 124.46) (xy 172.72 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c8ac68e-f77a-4efb-a7c0-2d4d27ef3183")
-	)
-	(wire
-		(pts
-			(xy 154.94 132.08) (xy 154.94 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11f901e4-3495-4c55-95a3-2a84d9fa6e7d")
-	)
-	(wire
-		(pts
-			(xy 165.1 132.08) (xy 165.1 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e7378e0a-3013-48a1-ad6e-7d0d43f6ff9f")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 154.94 135.89 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "45fbad5d-d906-440f-b930-836604fbc915")
-		(property "Reference" "#PWR0101"
-			(at 154.94 142.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 154.94 140.97 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 154.94 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 154.94 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 154.94 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "45c11fdb-6943-40da-b4c8-30d647e22777")
-		)
-		(instances
-			(project "BluetoothClassD-2"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
-					(reference "#PWR0101")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 165.1 135.89 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "71f2b104-e117-482b-a319-8c3bf883bcb4")
-		(property "Reference" "#PWR0102"
-			(at 165.1 142.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 165.1 140.97 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 165.1 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 165.1 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7dfd46bf-b2d7-4b91-8522-fdbaa139b1be")
-		)
-		(instances
-			(project "BluetoothClassD-2"
-				(path "/bcb626db-c25e-435d-8cfd-e1479e305623/96a03bc1-4e85-4d14-90b2-e6f1632422bd"
-					(reference "#PWR0102")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(text "4S Li-ion input (12.0-16.8 V), BMS required.\nQ2: reverse polarity. Q1: power switch (J1.3 to GND = on).\nD1 clamps gate-source to 10 V. D2: PVCC transient clamp.\nR65/R66: VBAT/7.67 to ESP32 IO36 (2.19 V at 16.8 V)."
-		(exclude_from_sim no)
-		(at 30.48 55.88 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "695396da-02e6-45c8-964b-c62d179d314e")
-	)
-	(wire
-		(pts
-			(xy 95.25 85.09) (xy 101.6 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3a52947c-e876-4bd5-9091-37e567e96fa5")
-	)
-	(wire
-		(pts
-			(xy 101.6 85.09) (xy 109.22 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "29043458-3030-44e9-8b77-e77deffcfdd9")
-	)
-	(junction
-		(at 101.6 85.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d7650136-123e-4745-aaea-08a51120436f")
-	)
-	(junction
-		(at 68.58 85.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c5a7418f-6e82-45aa-801d-07f88d378c4c")
-	)
-	(junction
-		(at 68.58 96.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f32a656f-b9d7-43ce-b7f1-669bf7c1157c")
-	)
-	(junction
-		(at 68.58 104.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "be331dc9-6f82-43ea-a187-2bf465150eef")
-	)
-	(junction
-		(at 85.09 96.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "06a323b5-71df-466f-9054-5490b7fd7eac")
-	)
-	(junction
-		(at 85.09 104.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "38adecb6-1684-450b-a852-8e6d695fd92f")
-	)
-	(junction
-		(at 85.09 113.03)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b7e9d2a7-716d-4df9-81e1-6ab1abe59b41")
-	)
-	(junction
-		(at 85.09 116.84)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b19520ce-6276-4dea-bca6-8c823d1e47fb")
-	)
-	(junction
-		(at 154.94 124.46)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "eec1ce47-091b-48f5-846d-e921682b87a0")
-	)
-	(junction
-		(at 165.1 124.46)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b27ab450-c571-404c-a8b4-53cb1f8d3879")
 	)
 )
